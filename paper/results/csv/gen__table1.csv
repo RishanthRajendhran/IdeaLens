@@ -1,0 +1,7 @@
+Arm,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+clean human,human ideas (FPR),"3,055",0.5,0.0,0.0,0.9,0.0,0.2,0.0,0.1,0.0
+clean AI (model-written),model ideas (TPR),"4,046",95.8,98.4,99.7,83.4,72.8,98.9,70.9,19.6,99.8
+"model-edited (7 categories, adding_detail excluded)","human ideas, AI prose (FPR)","14,086",14.0,26.3,59.9,10.7,17.3,45.4,33.7,23.6,56.8
+adding_detail (model-edited),"mixed, human-leaning (fire rate)","1,915",36.4,75.2,93.6,27.3,50.5,83.7,46.4,56.3,67.5
+"AUC, clean AI vs clean human",,,0.992,0.997,1.000,0.983,0.983,1.000,1.000,0.693,1.000
+"AUC, clean AI vs clean human + model-edited",,,0.978,0.979,0.965,0.944,0.889,0.931,0.791,0.411,0.961

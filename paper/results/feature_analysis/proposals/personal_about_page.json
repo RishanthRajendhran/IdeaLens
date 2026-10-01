@@ -1,0 +1,301 @@
+{
+ "features": [
+  {
+   "name": "external_resolvability",
+   "description": "Measures how precisely the central assertion identifies an event, object, or state of affairs that an outside reader could investigate.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess the identifying information attached to the central assertion, rather than counting names, dates, or numbers.",
+   "rationale": "Human examples often preserve record-level commitments, whereas AI examples frequently substitute broad achievement descriptions. Human item 434 identifies a particular award and acceptance speech; AI item 1157 asserts multiple honors without identifying them. This is a candidate tendency in the contrast set, not a validated authorship test."
+  },
+  {
+   "name": "mechanism_bearing_detail",
+   "description": "Measures whether concrete details explain how an action, process, or effect actually works rather than merely making its description appear specific.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Apply a counterfactual deletion test to details supporting an explicit functional or causal relationship.",
+   "rationale": "Human accounts frequently retain details acquired through doing the work, including dependencies and failure modes. AI accounts more often attach technical labels to generalized benefits. Human item 4816 explains a hardware-specific workaround; AI item 1918 promises efficient results through unspecified customized procedures."
+  },
+  {
+   "name": "traceable_evidentiary_attribution",
+   "description": "Measures whether an assertion is attributed to an identifiable evidentiary source with a recoverable connection to the claim.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify the evidentiary provider and assess whether the item specifies what that provider contributes.",
+   "rationale": "Human-source items often retain the actual origin of an endorsement, finding, or correction. AI-source items frequently assert that reviewers, experts, or audiences approve without preserving comparable provenance. The distinction is attribution quality, not the presence of a particular institution or citation format."
+  },
+  {
+   "name": "evidence_discriminates_alternatives",
+   "description": "Measures whether reported evidence distinguishes competing explanations or possibilities rather than merely accompanying a conclusion.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess the inferential work performed by an observation, comparison, test, or documentary finding.",
+   "rationale": "Human items frequently preserve the discovery that changed an understanding, including failed predictions and competing accounts. For example, human items 1769 and 3395 connect evidence to rejected claims. AI examples more often describe research or experience as generally validating competence or progress."
+  },
+  {
+   "name": "localized_epistemic_limits",
+   "description": "Measures whether uncertainty or limited knowledge is attached to a specific unresolved question and constrains the assertion.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Rate the substantive precision and consequences of acknowledged uncertainty, not the amount of tentative language.",
+   "rationale": "Human accounts often distinguish what has been established from what remains unknown, as in human items 458 and 3672. AI accounts more frequently supply generalized caution or confident completion. Generic disclaimers can occur on either side and should not receive the strongest score."
+  },
+  {
+   "name": "quantitative_interpretability",
+   "description": "Measures whether reported quantities have sufficient definitions, reference frames, and conditions to support meaningful interpretation.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Evaluate the relationship between a substantive quantity, its measured entity, and its denominator, comparator, or measurement conditions.",
+   "rationale": "Human examples often report quantities as parts of usable records, including denominators and comparison periods. Human item 1216 specifies a return interval and benchmark; AI item 4692 gives broad treatment success percentages without defining success. Numeric presence or precision alone is not the signal."
+  },
+  {
+   "name": "unsupported_quantified_attribution",
+   "description": "Measures whether numerical improvements are used to certify an intervention's effectiveness without an interpretable local basis for that attribution.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess numerical success claims for the gap between the stated improvement and the evidence connecting it to the intervention.",
+   "rationale": "Several AI items attach impressive percentage gains directly to broad intervention descriptions, such as items 985, 1395, and 1617. Human metrics are often more integrated with bounded records. This feature concerns unsupported quantitative persuasion, not whether a number is rounded or a client is anonymous."
+  },
+  {
+   "name": "prestige_substitutes_for_identification",
+   "description": "Measures whether favorable status descriptions substitute for identifying the institution, credential, achievement, or authority doing evidentiary work.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Determine whether claimed prestige fills an informational gap in a purported source of credibility.",
+   "rationale": "AI items repeatedly describe unnamed schools, employers, awards, and achievements as distinguished or exceptional. Human examples more often provide the relevant credential or bounded recognition. The behavioral distinction is completing missing facts with prestige, not using favorable language."
+  },
+  {
+   "name": "consequence_scope_inflation",
+   "description": "Measures how far claimed consequences extend beyond the scale or kind of support supplied within the item.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Compare the reach of the conclusion with the reach of its stated supporting facts or mechanism.",
+   "rationale": "AI examples frequently promote ordinary work or unspecified success into field-wide transformation and permanent influence. Human influence claims more often identify a particular adoption, citation, beneficiary, or institutional change, as in human item 699 versus AI item 3190."
+  },
+  {
+   "name": "certainty_about_uncontrolled_outcomes",
+   "description": "Measures whether contingent outcomes involving other people, systems, or the future are presented as assured.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Rate substantive guarantees after distinguishing them from intentions, bounded observations, and commitments within the actor's control.",
+   "rationale": "AI-source items often convert desirable aims into assured client outcomes, audience responses, or enduring recognition. Human examples more often describe completed events, conditional expectations, or operational commitments. The feature does not equate confident factual reporting with overconfidence."
+  },
+  {
+   "name": "disposition_as_causal_explanation",
+   "description": "Measures whether generalized personal or organizational virtues are treated as sufficient explanations for specific achievements.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Examine the causal link between attributed dispositions and the outcome the item explains.",
+   "rationale": "Many AI biographies explain advancement through perseverance, curiosity, supportive upbringing, or dedication without showing the intervening decisions. Human accounts more often preserve contingent opportunities and operational causes. The signal is explanatory substitution, not any particular personality trait."
+  },
+  {
+   "name": "automatic_adversity_redemption",
+   "description": "Measures whether difficulty is converted into generalized improvement without preserving its specific costs or explaining the transformation.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess how an item connects adversity to growth, distinguishing demonstrated learning from automatic positive reframing.",
+   "rationale": "AI items such as 386 and 1143 treat unspecified difficulties as reliable engines of development. Human examples more often leave setbacks as setbacks or explain a limited lesson through a particular experience. Positive recovery itself is not diagnostic; the unsupported conversion is."
+  },
+  {
+   "name": "abstract_complementarity_as_mechanism",
+   "description": "Measures whether combining desirable approaches or qualities is presented as an explanation of success without specifying their interaction.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess whether a claimed synthesis includes an actual division of function, interaction, or constraint.",
+   "rationale": "AI examples repeatedly explain excellence through combinations such as technical capability and imagination or established practice and innovation. Human examples more often state how components interact or why a particular combination was necessary. The constituent topics themselves are irrelevant."
+  },
+  {
+   "name": "portable_moral_generalization",
+   "description": "Measures whether a particular life, event, or achievement is converted into a broadly reusable motivational or moral lesson.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Evaluate the inferential move from an individual example to a general principle of success, identity, or human conduct.",
+   "rationale": "AI examples frequently present a person's trajectory as proof that dedication, authenticity, or compassion produces success. Human examples more often retain the bounded significance of an event. This is a distinction within explanatory and evaluative acts, not a feature based on their rhetorical labels."
+  },
+  {
+   "name": "contingent_action_trigger",
+   "description": "Measures whether an action or change is explained by a concrete, situation-specific trigger rather than an enduring generalized motivation.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify the proximate cause of an action and assess its situational specificity and causal relevance.",
+   "rationale": "Human items preserve catalysts such as a received message, a failed tool, a chance encounter, or an unexpected surplus. Human items 343, 1773, and 3264 illustrate these contingent origins. AI items more often explain action through pre-existing passion or broad societal needs."
+  },
+  {
+   "name": "binding_constraint_and_response",
+   "description": "Measures whether a concrete limitation restricts available actions and explains an actual adaptation or remaining impediment.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Rate the specificity of a binding limitation and its demonstrated effect on what can be done.",
+   "rationale": "Human accounts frequently preserve the friction of maintaining, producing, or participating in something. Human items 4, 1989, and 4275 connect particular limitations to practical responses. AI examples more often mention challenges without specifying how they constrain the available choices."
+  },
+  {
+   "name": "residual_tradeoff",
+   "description": "Measures whether a decision preserves a genuine disadvantage or foregone benefit instead of presenting every objective as jointly satisfied.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify an explicit choice among competing goods and assess whether its residual cost is acknowledged and explained.",
+   "rationale": "Human items often report compromises that remain imperfect, such as the noisier but otherwise preferable bearings in item 4914. AI examples frequently promise simultaneous optimization of all desirable dimensions. Merely discussing balance is not the same as acknowledging a tradeoff."
+  },
+  {
+   "name": "discriminating_applicability_conditions",
+   "description": "Measures whether the item specifies conditions or exceptions that materially change the applicability of its rule, method, or claim.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess whether explicit distinctions tell a reader when an assertion or recommended action does and does not apply.",
+   "rationale": "Human examples often encode experience-derived boundaries, including configuration restrictions and narrowly defined exceptions. AI examples more often promise broadly customized suitability without stating actual decision rules. The feature can apply equally to advice, findings, policies, and resource descriptions."
+  },
+  {
+   "name": "adverse_or_mixed_result_preserved",
+   "description": "Measures whether the item retains a specific unfavorable, null, or heterogeneous result rather than reducing the account to undifferentiated success.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Rate the substantive specificity of results that limit, complicate, or contradict a favorable summary.",
+   "rationale": "Human examples preserve incomplete work, unsuccessful attempts, uneven performance, and differentiated findings. Human items 25, 1084, and 2613 illustrate this. AI examples more often resolve outcomes into accomplishment, growth, or broad benefit, even when obstacles are acknowledged."
+  },
+  {
+   "name": "bounded_credit_allocation",
+   "description": "Measures whether responsibility for an outcome is apportioned precisely among contributors or explicitly limited for the focal actor.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess the specificity of contribution boundaries, rather than counting collaborators or expressions of gratitude.",
+   "rationale": "Human accounts often retain who supplied which component and where the author's responsibility stops, as in human items 74 and 790. AI accounts frequently praise collaboration without allocating work, or credit broad transformations to the focal figure without limits."
+  },
+  {
+   "name": "noninstrumental_particularity",
+   "description": "Measures whether concrete particulars preserve the local texture of an experience without being converted into credentials, benefits, or generalized lessons.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify contingent details whose informational value is the particular experience itself rather than an explicit persuasive payoff.",
+   "rationale": "Human items often retain personally salient details that do not optimize an idealized persona, such as cake distribution in item 192 or the remembered cowbell dispute in item 681. AI particulars are more frequently made to demonstrate creativity, balance, resilience, or professional value."
+  },
+  {
+   "name": "proposition_specific_rebuttal",
+   "description": "Measures whether disagreement targets a definite proposition and provides a reason that bears directly on its validity.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify the disputed claim and evaluate the specificity of the counterargument supplied within the item.",
+   "rationale": "Human-source criticism frequently contests an exact premise, inference, or implementation, as in items 96, 115, and 2341. AI criticism more often consists of generalized objections, balanced reservations, or developmental suggestions. No ideological position or degree of hostility is inherently scored."
+  },
+  {
+   "name": "consequential_normative_boundary",
+   "description": "Measures whether an expressed preference or principle rules out a concrete option and carries practical consequences.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess what the commitment excludes or requires, rather than its emotional intensity or ideological content.",
+   "rationale": "Human examples often state boundaries that could inconvenience the author or disappoint part of the audience. AI examples more often endorse broadly agreeable ideals without specifying exclusions. The same scoring applies to any ideology, preference, commercial policy, or personal commitment."
+  },
+  {
+   "name": "missing_information_motive_inference",
+   "description": "Measures whether unavailable information is explained by attributing an intention or admirable disposition that the item does not independently establish.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "operationalization": "Detect an unsupported inference from an informational absence to the subject's reasons for that absence.",
+   "rationale": "AI examples often turn missing biographical information into deliberate discretion, humility, or dedication, as illustrated by items 193 and 1123. Human disclosures more often state the actual limitation or directly report a policy. The distinction is the inference from absence, not the subject of privacy."
+  }
+ ],
+ "uncomputable": [
+  "localized_epistemic_limits: proposes a structural property that cannot be computed from a single item",
+  "consequence_scope_inflation: proposes a structural property that cannot be computed from a single item",
+  "disposition_as_causal_explanation: proposes a structural property that cannot be computed from a single item",
+  "proposition_specific_rebuttal: proposes a structural property that cannot be computed from a single item",
+  "consequential_normative_boundary: proposes a structural property that cannot be computed from a single item",
+  "missing_information_motive_inference: proposes a structural property that cannot be computed from a single item"
+ ],
+ "contrast": {
+  "unit": "item",
+  "label_source": "model",
+  "format": "Personal About Page",
+  "format_agnostic": false,
+  "role_matched": true,
+  "per_side": 5000,
+  "n_cells": 63,
+  "stamp": {
+   "generated": "2026-09-08T19:20:35",
+   "git_revision": "7c0bf67",
+   "config": {
+    "model": "gpt-5.6-sol",
+    "effort": "max",
+    "per_side": 5000,
+    "match_roles": true,
+    "seed": 0,
+    "schema": "feature_discovery/feature.schema.json",
+    "consolidate": true,
+    "name": "Item-level discovery, our outline-trained model labels",
+    "unit": "item",
+    "label_source": "model",
+    "format_agnostic": false,
+    "notes": "This is a variant of the corpus-labels feature, but with labels derived from our trained model rather than the corpus. The model is a detector trained on outlines, and the labels are determined for each idea. The idea is to see which features of each idea the model relies on when making AI vs. human detection decisions.\n",
+    "score_keys": [
+     "nemotron_1m_fullitem"
+    ]
+   },
+   "config_source": "configs/features/_base.yaml",
+   "eval": "indomain"
+  }
+ },
+ "usage": {
+  "completion_tokens": 12241,
+  "prompt_tokens": 536539,
+  "total_tokens": 548780,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": 0,
+   "audio_tokens": 0,
+   "reasoning_tokens": 8543,
+   "rejected_prediction_tokens": 0,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": 0,
+   "cache_write_tokens": 536536,
+   "cached_tokens": 0,
+   "image_tokens": null,
+   "text_tokens": null
+  }
+ },
+ "stamp": {
+  "generated": "2026-09-09T21:14:50",
+  "git_revision": "94b7ff4",
+  "config": {
+   "model": "gpt-6-astra",
+   "effort": "xhigh",
+   "per_side": 5000,
+   "match_roles": true,
+   "seed": 0,
+   "schema": "feature_discovery/feature.schema.json",
+   "consolidate": true,
+   "name": "Item-level discovery, our outline-trained model labels",
+   "unit": "item",
+   "label_source": "model",
+   "format_agnostic": false,
+   "notes": "This is a variant of the corpus-labels feature, but with labels derived from our trained model rather than the corpus. The model is a detector trained on outlines, and the labels are determined for each idea. The idea is to see which features of each idea the model relies on when making AI vs. human detection decisions.\n",
+   "score_keys": [
+    "nemotron_1m_fullitem"
+   ]
+  },
+  "config_source": "configs/features/_base.yaml"
+ }
+}

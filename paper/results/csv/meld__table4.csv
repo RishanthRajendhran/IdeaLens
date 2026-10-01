@@ -1,0 +1,7 @@
+Attack,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+homoglyph,ai_adversarial (6 attacks),"1,533",86.5,64.9,48.8,71.5,0.0,95.8,4.0,0.0,100.0
+number,ai_adversarial (6 attacks),"1,553",84.4,95.6,99.4,71.2,77.3,94.7,96.1,40.7,100.0
+synonym,ai_adversarial (6 attacks),"1,543",76.3,71.8,91.7,66.6,40.6,80.6,43.6,0.7,100.0
+upper_lower,ai_adversarial (6 attacks),"1,564",86.4,97.3,97.8,72.3,63.2,91.4,82.4,0.0,100.0
+whitespace,ai_adversarial (6 attacks),"1,556",85.5,97.5,96.9,71.5,63.9,91.2,89.6,5.1,100.0
+zero_width_space,ai_adversarial (6 attacks),"1,500",86.4,0.1,0.0,72.6,0.0,0.0,0.0,0.3,100.0

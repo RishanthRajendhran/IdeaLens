@@ -300,6 +300,14 @@ OpenAI, Anthropic); not every model is served by it.
 The vLLM backend checks that the weights fit before it starts, and stops with a message otherwise. Use
 `tensor_parallel_size` (`Detector(..., tensor_parallel_size=2)`) to spread a model over two smaller GPUs.
 
+## The paper's code, prompts and results
+
+[`paper/`](paper/) holds what the paper's appendix points to: the full result table of every evaluation
+([`paper/results/`](paper/results/)), the prompts, role vocabularies and worked examples
+([`paper/prompts/`](paper/prompts/)), and the research code that built the corpus, trained the models and ran the
+evaluations ([`paper/code/`](paper/code/)). The package above is the way to run the detectors; `paper/code/` documents
+exactly what ran for the paper.
+
 ## Development
 
 ```bash

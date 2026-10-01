@@ -1,0 +1,57 @@
+FORMAT: {{FORMAT}}
+
+Below are {{N}} HUMAN-source items and {{N}} AI-source items, ALL from this single format, so format is held constant.
+
+The two sides are ROLE-MATCHED: every role_name contributes the same number of items to each side. Differences in role usage are therefore ZERO by construction and cannot be a feature. Do not propose "AI uses more X items" -- it is false here.
+
+Read them as contrast sets, then propose discriminating features of INDIVIDUAL ITEMS.
+
+=== HUMAN-SOURCE ITEMS ===
+{{HUMAN}}
+
+=== AI-SOURCE ITEMS ===
+{{AI}}
+
+Propose features that separate a single human-source item from a single AI-source item.
+
+For each feature give:
+  - name            : short snake_case identifier.
+  - description     : one sentence, what it measures.
+  - direction       : "ai" if higher values indicate an AI-source item, "human" otherwise.
+  - tier            : "programmatic" if computable from the item text by deterministic
+                      rule, "judgment" if it needs a model to read and rate the idea.
+  - output_type     : "binary" | "count" | "scale_0_3" | "fraction".
+  - scope           : "universal" -- it must compute on an item from ANY prose format.
+  - spec            : the full scoring instruction, written to be handed verbatim to a
+                      scoring model. Define every anchor level explicitly (what earns 0,
+                      1, 2, 3, or yes vs no). Handle edge cases: very short items,
+                      items that are pure paratext, items with no verifiable content.
+                      Err on the side of MORE detail.
+  - rationale       : the human/AI writing-behaviour reason you expect this.
+
+RULES
+- SINGLE-ITEM ONLY. No feature may reference other items, position, ordering, document
+  length, or counts across a document. If it cannot be computed from this one item's
+  role_name and content alone, it is out of scope.
+- ROLE IS CONTROLLED. The sides are role-matched. A feature may CONDITION on role
+  ("among Evaluation items, ...") but may not simply BE role frequency.
+- NO SURFACE / LEXICAL FEATURES. These items are paraphrased, so word choice, exact
+  phrasing, and keyword-spotting will NOT survive and are banned. Do NOT propose
+  features that match specific words or phrases (e.g. "contains 'notably' or
+  'furthermore'"). Key on the epistemic and semantic nature of the idea.
+- TOPIC-INVARIANCE (the one hard rule): a feature must NOT depend on the item's SUBJECT
+  or DOMAIN. "Mentions elections", "is about health" encode WHAT the item is about -- a
+  confound, since the sides differ in topic mix -- and are banned. But HOW the idea is
+  asserted, warranted, qualified, quantified or scoped IS authorship signal and is
+  exactly what we want.
+    GOOD: "rate 0-3 how checkable the item's central claim is by an outside reader";
+          "does the item attribute its claim to a named source, yes/no".
+    BAD:  "mentions a company"; "is about science".
+- FORMAT-AGNOSTIC FORM: write each feature so it computes on an item from ANY prose
+  format. This bank is reused across all formats, so a feature whose definition only
+  makes sense for one of them is out of scope even if it separates the classes there.
+- DIVERSITY: aim across specificity/concreteness, evidential warrant and attribution,
+  epistemic stance and hedging, claim scope and generality, quantification, and the
+  kind of reasoning move the idea performs.
+
+Return ONLY JSON: {"features": [ ... ]}.

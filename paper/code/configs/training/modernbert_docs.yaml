@@ -1,0 +1,10 @@
+extends: modernbert_full.yaml
+name: ModernBERT-large, raw documents (counterfactual control)
+setting: docs
+notes: >
+  The document-trained counterfactual that appears in the main results as a
+  control. If it tracks prose where the outline arms track ideas, the
+  representation is doing the work rather than the data. Without this arm the
+  central claim is untested.
+
+probes: 4          # the document model was probed 4 times (the outline model 10)

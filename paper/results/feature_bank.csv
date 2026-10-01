@@ -1,0 +1,80 @@
+no,feature,gloss,proposed_direction,observed_direction,fire_rate_pct,score,ci95_low,ci95_high
+16,information_lineage_detail,How the information was handled,Human,Human,1.06,0.70,0.65,0.74
+10,contingent_exception,An exception caused by a past event,Human,Human,0.92,0.69,0.64,0.73
+31,bounded_credit_allocation,Credit only for one's own part,Human,Human,6.71,0.68,0.66,0.71
+3,evidence_traceability,A source you could find,Human,Human,14.59,0.67,0.64,0.69
+15,reconstructible_evidence_procedure,How the evidence was gathered,Human,Human,1.27,0.66,0.61,0.72
+27,incidental_contingency,Details that serve no purpose,Human,Human,3.93,0.66,0.63,0.69
+0,claim_adjudicability,Claims you could check,Human,Human,84.78,0.66,0.64,0.68
+1,contingent_factual_anchoring,Details that pin down one case,Human,Human,56.44,0.65,0.63,0.67
+13,diagnostic_evidence_bridge,Showing how evidence supports the claim,Human,Human,7.98,0.65,0.63,0.67
+12,discriminating_counterevidence,Evidence that rules out an explanation,Human,Human,1.21,0.65,0.61,0.69
+33,public_private_motive_divergence,Stated reason vs. real reason,Human,Human,1.51,0.64,0.60,0.67
+9,inherited_constraint_dependence,The past limits the present,Human,Human,3.87,0.63,0.60,0.66
+35,comparison_baseline_resolution,Comparisons with named alternatives,Human,Human,9.61,0.63,0.61,0.65
+14,situated_experiential_warrant,An opinion backed by a specific experience,Human,Human,10.43,0.63,0.59,0.66
+22,quantitative_inference_load,Numbers used to reason,Human,Human,3.03,0.62,0.58,0.66
+4,evidence_access_calibration,"Seen, heard, or guessed",Human,Human,8.70,0.62,0.60,0.64
+28,particularized_micro_observation,Small observed details,Human,Human,8.53,0.62,0.59,0.64
+21,quantitative_interpretability,Numbers you can interpret,Human,Human,10.47,0.62,0.59,0.64
+2,load_bearing_specificity,Details that change the conclusion,Human,Human,42.60,0.61,0.60,0.63
+18,inferential_non_equivalence,Keeping similar things apart,Human,Human,2.03,0.61,0.57,0.64
+8,constraint_conditioned_choice,An obstacle shapes the choice,Human,Human,7.37,0.61,0.59,0.63
+20,expectation_observation_discrepancy,What was expected vs. what was found,Human,Human,4.77,0.60,0.57,0.64
+34,structural_analogy_yield,Comparisons that explain,Human,Human,0.49,0.60,0.54,0.66
+6,boundary_condition_precision,When it applies and when it does not,Human,Human,13.34,0.60,0.58,0.62
+29,costly_self_implication,Admitting one's own fault,Human,Human,0.62,0.60,0.54,0.65
+26,unresolved_inquiry_residue,Questions left unanswered,Human,Human,2.06,0.59,0.56,0.63
+30,interest_bearing_source_relation,Who has a stake,Human,Human,3.61,0.59,0.56,0.62
+11,contingent_action_trigger,A specific event started it,Human,Human,13.01,0.59,0.57,0.61
+32,represented_knowledge_asymmetry,People know different things,Human,Human,2.55,0.59,0.55,0.63
+5,localized_uncertainty,Uncertainty tied to a specific unknown,Human,Human,0.82,0.58,0.51,0.66
+23,exclusionary_evaluative_priority,A priority that decides,Human,Human,7.78,0.58,0.56,0.61
+24,explicit_tradeoff_cost,A cost that stays a cost,Human,Human,4.28,0.58,0.55,0.61
+19,condition_linked_heterogeneity,Mixed results kept in,Human,Human,5.57,0.58,0.55,0.61
+17,warranted_belief_revision,Changing course because of evidence,Human,Human,1.12,0.57,0.53,0.61
+25,residual_practical_friction,Problems that remain,Human,Human,8.10,0.57,0.54,0.60
+7,mechanism_specificity,How the cause produces the effect,Human,Human,27.42,0.56,0.54,0.57
+36,answerable_information_gap,A question that can be answered,Human,Unclear,0.58,0.54,0.48,0.60
+56,constructed_example_as_validation,A made-up example used as proof,AI,AI,0.01,0.11,0.09,0.13
+54,nonselective_analytic_agenda,A study that covers everything,AI,AI,0.85,0.18,0.14,0.23
+60,elaboration_despite_missing_referent,Talking around an unknown,AI,AI,0.01,0.19,0.03,0.39
+49,abstract_complementarity_as_mechanism,Combining good things as the explanation,AI,AI,1.00,0.22,0.18,0.26
+55,unearned_legacy_magnitude,Legacy with no evidence,AI,AI,0.89,0.25,0.21,0.30
+73,attention_as_substance,People will be watching,AI,AI,0.19,0.27,0.18,0.36
+48,guaranteed_independent_cobenefits,Every benefit at once,AI,AI,2.44,0.27,0.24,0.30
+43,circular_evaluative_warrant,The reason repeats the claim,AI,AI,0.57,0.30,0.24,0.37
+69,uninstantiated_change_account,A history with no real events,AI,AI,1.61,0.31,0.27,0.35
+72,outcome_restating_condition,Success depends on succeeding,AI,AI,0.39,0.31,0.24,0.39
+62,central_semantic_undercommitment,The key event is never said,AI,AI,5.21,0.31,0.29,0.34
+71,unbounded_future_extension,Forecasts that cannot be wrong,AI,AI,0.81,0.32,0.26,0.38
+47,costless_tradeoff_resolution,Conflict settled for free,AI,AI,0.62,0.33,0.27,0.39
+51,interchangeable_remedy_bundle,Advice that fits any problem,AI,AI,2.43,0.33,0.30,0.37
+70,projection_without_dependency,Forecasts with no conditions,AI,AI,1.37,0.34,0.29,0.39
+50,goals_substituted_for_operations,A method that restates the goal,AI,AI,4.45,0.35,0.32,0.37
+63,subject_interchangeability,Could be about anything,AI,AI,21.90,0.35,0.33,0.37
+53,boundary_free_construct,Definitions that include everything,AI,AI,1.56,0.35,0.30,0.41
+39,nondiscriminating_hedging,Caveats that change nothing,AI,Unclear,0.03,0.36,0.16,0.65
+58,lesson_template_anecdote,Examples that fit the lesson perfectly,AI,AI,0.76,0.37,0.31,0.43
+66,automatic_social_convergence,Conflict ends once people understand,AI,Unclear,0.24,0.37,0.23,0.51
+44,generic_symbolic_lesson,A lesson that fits any story,AI,AI,3.47,0.37,0.34,0.41
+68,deferred_rule_content,Where permitted,AI,Unclear,0.11,0.38,0.25,0.54
+64,contingent_outcome_assurance,Guaranteed and lasting success,AI,AI,2.35,0.38,0.35,0.42
+46,moralized_causal_shortcut,Good character explains success,AI,AI,2.06,0.39,0.35,0.43
+40,inferential_scope_inflation,One case turned into a sweeping claim,AI,AI,3.46,0.39,0.36,0.42
+45,generic_redemptive_reframing,Hardship turned into growth,AI,AI,1.68,0.39,0.34,0.44
+65,intrinsic_value_supersession,The real reward was friendship,AI,AI,1.01,0.41,0.35,0.45
+38,unanchored_effect_quantification,Numbers with no comparison point,AI,Unclear,0.10,0.41,0.28,0.56
+41,warrant_strength_upgrade,Weak evidence treated as proof,AI,AI,2.06,0.42,0.38,0.45
+67,unlocated_collective_reaction,Everyone loves it,AI,AI,3.06,0.42,0.38,0.46
+57,schematic_case_warrant,Success stories used as proof,AI,AI,0.90,0.42,0.36,0.48
+42,non_diagnostic_support,Evidence about something else,AI,Unclear,0.32,0.43,0.34,0.52
+52,framework_as_topic_catalog,A framework that is only a list,AI,Unclear,0.33,0.44,0.33,0.54
+77,thin_analogical_warrant,Comparisons that only share a theme,AI,Unclear,0.21,0.45,0.34,0.56
+78,unsupported_benign_rationalization,Failures explained away kindly,AI,Unclear,0.25,0.51,0.41,0.61
+37,authority_as_substitute,Reputation instead of findings,AI,Unclear,1.13,0.53,0.48,0.59
+75,categorical_homogenization,Groups described as all alike,AI,Human,0.98,0.56,0.50,0.62
+74,gap_filling_from_archetype,Filling gaps with a stereotype,AI,Unclear,0.07,0.56,0.28,0.86
+59,merit_substituted_for_rebuttal,Criticism answered with praise,AI,Unclear,0.11,0.57,0.39,0.72
+76,missing_information_motive_inference,A motive for missing information,AI,Unclear,0.10,0.57,0.44,0.69
+61,nominal_quantification_gap,Formulas with undefined parts,AI,Unclear,0.02,0.59,0.33,0.74

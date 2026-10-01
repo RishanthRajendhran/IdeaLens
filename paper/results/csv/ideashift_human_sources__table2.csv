@@ -1,0 +1,14 @@
+Arm · length,Label,n,IdeaLens · outline (paraphrased),IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline (paraphrased),IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+source (the person's document) · >= 500,clear human (FPR),237,3.4,3.4,2.1,0.8,2.1,2.5,2.5,0.8,0.4
+level 0 (type line) · < 500,model ideas (TPR),1,100.0,100.0,100.0,0.0,0.0,100.0,100.0,0.0,100.0
+level 0 (type line) · >= 500,model ideas (TPR),236,94.9,98.7,99.2,74.2,93.6,99.6,68.2,0.0,100.0
+level 1 (topic line) · < 500,model ideas (TPR),1,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,100.0
+level 1 (topic line) · >= 500,model ideas (TPR),236,91.1,98.3,99.6,69.1,92.4,99.6,59.3,0.4,100.0
+level 2 (themes) · < 500,"mixed, AI-leaning (fire rate)",5,80.0,80.0,100.0,60.0,60.0,80.0,60.0,0.0,100.0
+level 2 (themes) · >= 500,"mixed, AI-leaning (fire rate)",232,86.2,97.4,98.7,65.9,89.2,99.1,56.9,0.0,100.0
+level 3 (themes and structure) · < 500,"mixed, AI-leaning (fire rate)",3,33.3,66.7,100.0,0.0,0.0,33.3,0.0,0.0,66.7
+level 3 (themes and structure) · >= 500,"mixed, AI-leaning (fire rate)",234,79.5,97.9,99.6,64.5,91.5,99.1,54.7,0.0,100.0
+level 4 (themes and full outline) · < 500,"mixed, human-leaning (fire rate)",6,33.3,50.0,83.3,0.0,0.0,16.7,33.3,0.0,83.3
+level 4 (themes and full outline) · >= 500,"mixed, human-leaning (fire rate)",231,23.4,75.8,95.2,16.5,49.8,97.4,29.4,0.0,98.7
+level 5 (the source's outline) · < 500,"human ideas, AI prose (FPR)",13,7.7,15.4,46.2,0.0,7.7,23.1,15.4,0.0,58.3
+level 5 (the source's outline) · >= 500,"human ideas, AI prose (FPR)",224,6.7,56.7,88.8,7.1,37.9,81.7,16.1,0.0,94.2

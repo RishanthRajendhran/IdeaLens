@@ -1,0 +1,21 @@
+Generator,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+deepseek-v3,English · ai_none,"1,839",92.4,99.6,100.0,72.1,88.5,99.0,95.2,6.8,99.9
+gemini-2.5-flash,English · ai_none,"1,852",76.8,95.8,100.0,55.1,78.9,97.1,92.1,7.1,99.8
+gpt-4o,English · ai_none,"1,850",90.6,99.7,100.0,71.6,89.2,98.1,88.8,4.9,99.6
+qwen-max,English · ai_none,"1,910",89.4,99.1,99.9,70.6,84.5,96.3,95.7,83.6,99.6
+deepseek-v3,English · ai_adversarial,"1,167",89.8,93.9,97.3,66.3,78.3,92.4,88.5,4.5,97.9
+gemini-2.5-flash,English · ai_adversarial,"1,464",75.6,90.6,97.1,57.7,68.7,91.9,78.8,7.1,97.8
+gpt-4o,English · ai_adversarial,"1,218",88.1,94.8,97.5,69.0,81.7,91.1,83.6,4.8,98.3
+qwen-max,English · ai_adversarial,"1,447",83.5,93.4,96.5,65.7,74.4,88.6,86.5,58.4,97.7
+deepseek-v3,English · human,"1,779",4.6,3.9,11.5,2.4,1.0,6.2,1.0,11.6,2.8
+gemini-2.5-flash,English · human,"1,778",5.8,4.6,11.4,3.0,1.5,6.9,1.1,12.8,3.3
+gpt-4o,English · human,"1,773",3.9,3.5,11.2,2.0,0.8,5.8,0.7,10.3,3.3
+qwen-max,English · human,"1,839",4.9,4.5,11.0,2.1,1.2,5.5,1.1,10.8,3.6
+deepseek-v3,non-English · ai_none,"1,731",85.9,95.0,99.8,69.6,–,–,75.8,0.1,100.0
+gemini-2.5-flash,non-English · ai_none,"1,685",82.4,95.3,99.9,65.8,–,–,64.5,0.0,99.6
+gpt-4o,non-English · ai_none,"1,752",88.4,96.3,99.8,78.8,–,–,70.9,0.1,98.5
+qwen-max,non-English · ai_none,"1,697",90.3,96.1,99.9,78.6,–,–,83.9,15.8,95.8
+deepseek-v3,non-English · human,"1,660",0.1,0.0,0.1,0.1,–,–,0.0,0.0,0.0
+gemini-2.5-flash,non-English · human,"1,620",0.4,0.1,0.2,0.3,–,–,0.1,0.0,0.0
+gpt-4o,non-English · human,"1,674",0.3,0.1,0.2,0.4,–,–,0.0,0.0,0.0
+qwen-max,non-English · human,"1,640",0.2,0.1,0.2,0.4,–,–,0.0,0.0,0.1

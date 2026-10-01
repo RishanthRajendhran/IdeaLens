@@ -1,0 +1,722 @@
+{
+ "format_slug": "nonfiction_writing",
+ "n_roles": 42,
+ "source": "role discovery, consolidation pass (role_consolidation_xhigh.json)",
+ "final_roles": [
+  {
+   "assignment_test": "Select Explanation when removing the item would eliminate the account of how or why a condition, event, process, or pattern arises or operates.",
+   "definition": "Content that makes a phenomenon intelligible by identifying causes, mechanisms, processes, reasons, or functional relationships.",
+   "distinguished_from": "Unlike Interpretation, Explanation accounts for causation or operation rather than meaning, and unlike Description it explains relationships rather than depicting a state.",
+   "examples": [
+    {
+     "doc": "human:6fd99db4fa3de9abcc7999abba8ed29beeb2a5ec56eacf59e5dfe193f705eac4",
+     "excerpt": "Interfaces fail when their conceptual model conflicts substantially with users’ existing mental models of how things should work.",
+     "item_id": 14
+    }
+   ],
+   "name": "Explanation",
+   "subsumes": [
+    "B15"
+   ]
+  },
+  {
+   "assignment_test": "Select Recommendation when removing the item would eliminate an advocated choice, policy, practice, response, or course of action.",
+   "definition": "Content that advocates a course of action or decision as desirable, preferable, or necessary.",
+   "distinguished_from": "Unlike Instruction, Recommendation proposes what should be done without chiefly operationalizing how to do it, and unlike Evaluation it prescribes rather than judges.",
+   "examples": [
+    {
+     "doc": "ai:9516960019f6849867237489cbf5a0b096536293fa381ae24e9977fb6f864d3f",
+     "excerpt": "Sports organizations seeking growth and monetization should follow Instagram's rules, use platform features strategically, maintain meaningful audience relationships, and remain adaptable to new opportunities for long-term success.",
+     "item_id": 31
+    }
+   ],
+   "name": "Recommendation",
+   "subsumes": [
+    "B25"
+   ]
+  },
+  {
+   "assignment_test": "Select Evidence when removing the item would chiefly weaken the grounds offered for accepting, rejecting, or assessing another proposition.",
+   "definition": "Content that supplies verifiable facts, records, observations, data, or sourced information as grounds for assessing another proposition.",
+   "distinguished_from": "Unlike Illustration, Evidence is offered primarily as warrant rather than clarification, and unlike Source Documentation it performs support within the discourse rather than recording a citation trail.",
+   "examples": [
+    {
+     "doc": "human:bc8212728dfc480b70f46e513b6653386bbd716b09442a3b2566ef40d0c26e80",
+     "excerpt": "An extraction-centered strategy confronts China’s dominant position: China supplies 60% of global rare earth elements, leads refining for 19 of 20 strategic minerals with an average 70% market share, and has represented two-thirds of global battery-recycling capacity growth since 2020.",
+     "item_id": 10
+    }
+   ],
+   "name": "Evidence",
+   "subsumes": [
+    "B12"
+   ]
+  },
+  {
+   "assignment_test": "Select Event Account when removing the item would eliminate the report of a substantively unified occurrence or sequence of actions.",
+   "definition": "Content that recounts what happened, including relevant participants, actions, chronology, and immediate consequences.",
+   "distinguished_from": "Unlike Background, Event Account advances an occurrence rather than contextualizing it, and unlike Finding it reports events rather than a result established by inquiry.",
+   "examples": [
+    {
+     "doc": "human:670e11da038650a87997de7744d30fc11c52a402bf0ee9a1214c8695fa096ca2",
+     "excerpt": "Keith Jenkin recalls that the Somerset and Dorset Railway’s last public trains ran on Saturday, 5 March 1966; prompted by Sir John Betjeman’s television coverage, he traveled from Calne via Chippenham to Bath Green Park, where his camera and companion Barry Lucas’s recorder initially failed.",
+     "item_id": 3
+    }
+   ],
+   "name": "Event Account",
+   "subsumes": [
+    "B09"
+   ]
+  },
+  {
+   "assignment_test": "Select Illustration when removing the item would eliminate the concrete instance used chiefly to make a broader idea, pattern, or mechanism intelligible.",
+   "definition": "Content that clarifies or exemplifies a broader point through a particular case, anecdote, scenario, or analogy.",
+   "distinguished_from": "Unlike Evidence, Illustration primarily aids understanding rather than proof, and unlike Event Account its instance is subordinate to the general point it exemplifies.",
+   "examples": [
+    {
+     "doc": "ai:0aa13833c3d76feb98d1153cbefb79ffb4cfa5b552fa56661cf71d49fd7eaba0",
+     "excerpt": "Modern bayanihan is illustrated by volunteers forming human chains to clear destruction caused by Typhoon Rai in 2021, including a Davao resident’s account of moving three houses without machinery.",
+     "item_id": 13
+    }
+   ],
+   "name": "Illustration",
+   "subsumes": [
+    "B13"
+   ]
+  },
+  {
+   "assignment_test": "Select Framing when removing the item would eliminate the governing scope, premise, lens, or concern through which surrounding material should be approached.",
+   "definition": "Content that establishes the scope, lens, premise, governing concern, or terms through which other material is to be understood.",
+   "distinguished_from": "Unlike Background, Framing establishes interpretive or rhetorical parameters rather than supplying prior context, and unlike Transition it governs material rather than merely connecting parts.",
+   "examples": [
+    {
+     "doc": "human:afcf262ddef7f7c2ec4700f5b2e8d751890ad9e6b8862dd1f1a78a11853e46ef",
+     "excerpt": "The pandemic abruptly transformed daily life, but the discussion focuses on employment because continued work supports households and ordinary financial obligations.",
+     "item_id": 1
+    }
+   ],
+   "name": "Framing",
+   "subsumes": [
+    "B02"
+   ]
+  },
+  {
+   "assignment_test": "Select Synthesis when removing the item would eliminate a higher-order conclusion or insight formed by integrating multiple strands of material.",
+   "definition": "Content that integrates claims, evidence, events, perspectives, or themes into a higher-order understanding or takeaway.",
+   "distinguished_from": "Unlike Summarization, Synthesis generates an integrative insight rather than merely condensing content, and unlike Resolution it closes conceptual rather than narrative strands.",
+   "examples": [
+    {
+     "doc": "ai:148433390e363d847ada9e10b6eb218ddd3941c85044e2922bb2e9483ec19a47",
+     "excerpt": "The custom-agent marketplace marks a transition from chatbot novelty to practical, integrated specialization, with community-built applications rather than raw model capabilities increasingly defining AI’s value across fields.",
+     "item_id": 18
+    }
+   ],
+   "name": "Synthesis",
+   "subsumes": [
+    "B29"
+   ]
+  },
+  {
+   "assignment_test": "Select Instruction when removing the item would eliminate actionable guidance for performing a task, reaching a result, or complying with a process.",
+   "definition": "Content that provides actionable steps, methods, conditions, or cautions for carrying out a task or reaching a goal.",
+   "distinguished_from": "Unlike Recommendation, Instruction operationalizes action rather than merely advocating it, and unlike Explanation its primary purpose is successful performance rather than understanding.",
+   "examples": [
+    {
+     "doc": "human:6fd99db4fa3de9abcc7999abba8ed29beeb2a5ec56eacf59e5dfe193f705eac4",
+     "excerpt": "Touch interfaces should be finger-friendly, place actions within comfortable reach, account for hand-obscured areas and larger screens, and use adequate targets; Apple recommends at least 44 by 44 pixels, while Microsoft recommends 34 pixels with a 26-pixel minimum.",
+     "item_id": 22
+    }
+   ],
+   "name": "Instruction",
+   "subsumes": [
+    "B26"
+   ]
+  },
+  {
+   "assignment_test": "Select Evaluation when removing the item would eliminate a reasoned determination of a subject's quality, worth, effectiveness, fairness, significance, or performance.",
+   "definition": "Content that renders a reasoned judgment about a subject according to relevant criteria or values.",
+   "distinguished_from": "Unlike Claim, Evaluation is specifically organized around judgment, and unlike Comparison it reaches an assessment rather than merely relating subjects.",
+   "examples": [
+    {
+     "doc": "ai:643d5210157e7d1924c1a0bf6636a177e00bb3f7adacef617cd69c073aeae75c",
+     "excerpt": "Although the four-layer process requires more early effort than keyword filtering and CV scoring, it produces more reliable evidence and saves later hiring-manager time by removing polished but incapable candidates sooner.",
+     "item_id": 20
+    }
+   ],
+   "name": "Evaluation",
+   "subsumes": [
+    "B18"
+   ]
+  },
+  {
+   "assignment_test": "Select Description when removing the item would chiefly eliminate an account of what something is like, how it appears, or what condition it is in.",
+   "definition": "Content that depicts the observable features, composition, state, or qualities of a subject without primarily narrating change or judging value.",
+   "distinguished_from": "Unlike Characterization, Description inventories or evokes qualities without constructing an interpretive portrait, and unlike Event Account it does not center on what happened.",
+   "examples": [
+    {
+     "doc": "human:6e6e58d9055424d3acfe8ae87f855d09c5dc0c6c266605a35005af71675e8a63",
+     "excerpt": "Orderly settlements use roof gardens, durable surfaces, and tree-divided roads; small electric curricles carry passengers rapidly and quietly while slower, more powerful vehicles use separate lanes under safety restrictions.",
+     "item_id": 33
+    }
+   ],
+   "name": "Description",
+   "subsumes": [
+    "B07"
+   ]
+  },
+  {
+   "assignment_test": "Select Background when removing the item would eliminate antecedent or surrounding context needed to situate the focal subject, entity, event, or argument.",
+   "definition": "Content that supplies historical, institutional, social, biographical, relational, or other preexisting context that situates the focal material.",
+   "distinguished_from": "Unlike Scene Setting, Background supplies broader or antecedent context rather than an immediate environment for action, and unlike Characterization it contextualizes rather than constructs a portrait from defining traits.",
+   "examples": [
+    {
+     "doc": "ai:75858a6b46a5c2aa82e3ff21fca155697ab3bfc78217e67f78db59781e73bd7b",
+     "excerpt": "Federal and state residents’ rights protect nursing-home occupants from abuse, neglect, and unnecessary restraint and entitle them to dignity, autonomy, treatment information, refusal of interventions, and participation in care planning.",
+     "item_id": 10
+    },
+    {
+     "doc": "human:7128214d409f78e41d66cb4ad742e10979e72d911edbe78fd828bf582e98842a",
+     "excerpt": "Born September 21, 1931, in the Town of Lincoln, he was survived by wife Dorothy (Delebreau) Cochart and children Lee Ann (Roger) Ross, Lynn Malfroid, Lori (Bob) Parker, and Chad (Karen) Cochart.",
+     "item_id": 2
+    },
+    {
+     "doc": "human:37748f4b4c21c2304e721beb8010ce69bccfe098941e0523d9e013a8e102e1e9",
+     "excerpt": "A closing organizational identification describes Foretell Reality as a VR platform serving professional communication and business collaboration.",
+     "item_id": 15
+    }
+   ],
+   "name": "Background",
+   "subsumes": [
+    "B04",
+    "I-human:7128214d409f78e41d66cb4ad742e10979e72d911edbe78fd828bf582e98842a-01",
+    "I-human:37748f4b4c21c2304e721beb8010ce69bccfe098941e0523d9e013a8e102e1e9-02"
+   ]
+  },
+  {
+   "assignment_test": "Select Interpretation when removing the item would eliminate an account of what reported or invoked material means, reveals, symbolizes, or implies.",
+   "definition": "Content that draws out the meaning, significance, implications, or thematic import of events, evidence, experiences, or other material.",
+   "distinguished_from": "Unlike Explanation, Interpretation addresses meaning rather than mechanism, and unlike Claim it is specifically grounded in construing material already presented or invoked.",
+   "examples": [
+    {
+     "doc": "human:961f7c5b273a5cbe2a27ab9b0eddc09fb63a841ffb4248963eebee8f8e970444",
+     "excerpt": "The 276-year interval between the patent and the statue exemplifies an invented tradition: a comparatively recent symbol designed to project continuity and shared identity into the distant past.",
+     "item_id": 9
+    }
+   ],
+   "name": "Interpretation",
+   "subsumes": [
+    "B16"
+   ]
+  },
+  {
+   "assignment_test": "Select Forecast when removing the item would eliminate a reasoned projection of what is likely, expected, planned, or possible in the future.",
+   "definition": "Content that projects future events, conditions, consequences, or trends from present knowledge or stated assumptions.",
+   "distinguished_from": "Unlike Claim, Forecast is specifically future-directed, and unlike Recommendation it predicts what may happen rather than prescribing what should be done.",
+   "examples": [
+    {
+     "doc": "human:c169d93aa0a6e2b6f7b56601d0e5c35a3d1e4d5d641235f6381f1b631b46d898",
+     "excerpt": "Harris sees an emerging analytics replacement cycle favoring HR-specific, embedded, and enterprise business-intelligence systems that combine data mapping with visualization.",
+     "item_id": 18
+    }
+   ],
+   "name": "Forecast",
+   "subsumes": [
+    "B24"
+   ]
+  },
+  {
+   "assignment_test": "Select Problem when removing the item would eliminate the identification of an adverse condition, contradiction, unmet need, failure, or obstacle requiring attention.",
+   "definition": "Content that identifies and characterizes a condition as deficient, harmful, unresolved, or otherwise requiring explanation, remedy, or decision.",
+   "distinguished_from": "Unlike Inquiry, Problem asserts that a consequential condition exists rather than posing something to be answered, and unlike Complication it need not function within a narrative progression.",
+   "examples": [
+    {
+     "doc": "human:7d50856656d49b11c103e199a91feff821c9d324a293a4c14e9f3ddce8886bd0",
+     "excerpt": "A defining conflict arises when someone longs for trust, disclosure, and support but retreats as intimacy grows because greater involvement also creates the possibility of disappointment.",
+     "item_id": 3
+    }
+   ],
+   "name": "Problem",
+   "subsumes": [
+    "B19"
+   ]
+  },
+  {
+   "assignment_test": "Select Claim when removing the item would eliminate a contestable proposition advanced by the document and no more specific argumentative role better explains it.",
+   "definition": "Content that asserts a contestable proposition forming part of the document's explanatory, interpretive, or persuasive line.",
+   "distinguished_from": "Unlike Evidence, Claim is the proposition being advanced rather than its support, and unlike Evaluation or Forecast it is not defined by judgment or futurity.",
+   "examples": [
+    {
+     "doc": "human:3bb61c98b178a4a95b4a4159ca1760be8938e48b00235f4644d0100557df377c",
+     "excerpt": "Oracle is shifting from a direct-sales-centered software supplier toward a partner-oriented producer of integrated systems such as Exadata and Exalytics, whose jointly engineered hardware and software are intended to provide an appliance-like enterprise experience comparable to Apple’s consumer integration.",
+     "item_id": 8
+    }
+   ],
+   "name": "Claim",
+   "subsumes": [
+    "B11"
+   ]
+  },
+  {
+   "assignment_test": "Select Comparison when removing the item would eliminate the systematic relation of subjects along shared dimensions that reveals similarities, differences, or relative positions.",
+   "definition": "Content that systematically relates two or more subjects along shared dimensions to clarify their similarities, differences, or relative positions.",
+   "distinguished_from": "Unlike Evaluation, Comparison need not rank or judge the subjects, and unlike Illustration neither subject is necessarily subordinate as an example of the other.",
+   "examples": [
+    {
+     "doc": "ai:86ea79e40ab333196f37ee0d2473a938cb00dbe440f6549fe679452341730961",
+     "excerpt": "LED bulbs convert more energy into visible light and produce less waste heat than halogens, reducing electrical demand and replacement costs; claimed lifespans reach 30,000–50,000 hours, versus roughly 500–1,000 hours for halogen bulbs.",
+     "item_id": 4
+    }
+   ],
+   "name": "Comparison",
+   "subsumes": [
+    "B17"
+   ]
+  },
+  {
+   "assignment_test": "Select Stakes when removing the item would eliminate why the subject matters, including what may be gained, lost, affected, or made urgent.",
+   "definition": "Content that establishes a subject's importance by identifying its consequences, affected interests, urgency, or broader significance.",
+   "distinguished_from": "Unlike Problem, Stakes establishes why a condition matters rather than chiefly identifying the condition, and unlike Interpretation it specifically motivates concern through consequences or affected interests.",
+   "examples": [
+    {
+     "doc": "ai:ad25cb2e720b3a5dc0154d6f6257bffd389f3f8bd55a9c1ffeed27690e9a3935",
+     "excerpt": "Choosing a business platform in this category affects brand presentation, campaign efficiency, audience engagement, and performance measurement.",
+     "item_id": 1
+    }
+   ],
+   "name": "Stakes",
+   "subsumes": [
+    "B20"
+   ]
+  },
+  {
+   "assignment_test": "Select Characterization when removing the item would eliminate a coherent portrait of a subject's identity, disposition, motives, habits, reputation, or defining traits.",
+   "definition": "Content that selectively portrays a person, group, institution, or other agent to establish a recognizable identity or disposition.",
+   "distinguished_from": "Unlike Description, Characterization organizes selected qualities into a portrait, while unlike Evaluation it need not render an explicit judgment of merit or success.",
+   "examples": [
+    {
+     "doc": "human:d676861bde636c3b343a958d137a1f1a0476b988a2e1b221eba93ae29e1dc9c0",
+     "excerpt": "They generally keep their publishing and online success inconspicuous at college, surprising people who discover it, while their roommates sometimes receive leftover baked goods.",
+     "item_id": 9
+    }
+   ],
+   "name": "Characterization",
+   "subsumes": [
+    "B08"
+   ]
+  },
+  {
+   "assignment_test": "Select Finding when removing the item would eliminate the substantive result established by a study, investigation, observation, analysis, or reporting process.",
+   "definition": "Content that states a substantive result produced by systematic inquiry, reporting, research, observation, or analysis.",
+   "distinguished_from": "Unlike Evidence, Finding presents the result itself rather than chiefly using information to support another claim, and unlike Method it reports what was established rather than how the inquiry was conducted.",
+   "examples": [
+    {
+     "doc": "human:4de36c3637fb80a632632d96e9880e6ed09a2e9cd2f9e3b2eb7b9551934d4268",
+     "excerpt": "Project birds displayed sharply different winter movement strategies: some remained near one location in Minnesota, New York, or Wisconsin, while others traveled hundreds of miles within days around the Great Lakes and Atlantic Coast.",
+     "item_id": 9
+    }
+   ],
+   "name": "Finding",
+   "subsumes": [
+    "B14"
+   ]
+  },
+  {
+   "assignment_test": "Select Definition when removing the item would eliminate the locally operative meaning, boundary, or usage of a term, concept, category, or distinction.",
+   "definition": "Content that fixes or clarifies the meaning, boundaries, or usage of a term, concept, category, or distinction within the exposition.",
+   "distinguished_from": "Unlike Reference Organization, Definition directly advances the local exposition rather than serving chiefly as part of a reusable lookup resource.",
+   "examples": [
+    {
+     "doc": "ai:89663135caa4051b804142d740e8758d8931598f805d178dff70db00db6d20a7",
+     "excerpt": "A sub-brand is defined as an offering within a larger parent brand that retains distinct identity, audience, and pricing, allowing the owner to address multiple market segments without weakening its principal brand.",
+     "item_id": 4
+    }
+   ],
+   "name": "Definition",
+   "subsumes": [
+    "B05"
+   ]
+  },
+  {
+   "assignment_test": "Select Qualification when removing the item would eliminate a limit, exception, condition, uncertainty, or caveat governing the document's own assertion.",
+   "definition": "Content that narrows the scope, certainty, applicability, or force of another claim or conclusion through limits, exceptions, conditions, uncertainty, or caveats.",
+   "distinguished_from": "Unlike Counterposition, Qualification modifies the document's own commitment rather than presenting an opposing line, and unlike Rebuttal it does not primarily refute another view.",
+   "examples": [
+    {
+     "doc": "ai:5e56d592e9e98573fbb118d8a616a477826149d5cc02110f0e6df449af0799fd",
+     "excerpt": "Retrieval improves safety only when its corpus is curated and policy checks remain active after documents are retrieved; risky requests must still be refused unless authorized policy explicitly permits the requested detail.",
+     "item_id": 15
+    }
+   ],
+   "name": "Qualification",
+   "subsumes": [
+    "B23"
+   ]
+  },
+  {
+   "assignment_test": "Select Rebuttal when removing the item would eliminate the document's direct answer to, weakening of, correction of, or rejection of an identified opposing position.",
+   "definition": "Content that responds directly to a counterposition by disputing its assumptions, evidence, reasoning, or implications.",
+   "distinguished_from": "Unlike Counterposition, Rebuttal supplies the response rather than the challenge, and unlike Qualification it resists an opposing view rather than limiting the document's own claim.",
+   "examples": [
+    {
+     "doc": "ai:de4a824a656be7e95acafcfe5d471e95085d2b38830de55b1e97db1a3bad944b",
+     "excerpt": "States defend chemical agents as less-lethal substitutes for gunfire, but the essay rejects this as a false choice that portrays inflicted chemical pain as merciful and thereby normalizes its use against minor misconduct.",
+     "item_id": 8
+    }
+   ],
+   "name": "Rebuttal",
+   "subsumes": [
+    "B22"
+   ]
+  },
+  {
+   "assignment_test": "Select Summarization when removing the bounded component would eliminate a condensed preview, overview, or recap without eliminating a new substantive conclusion.",
+   "definition": "A bounded component that condenses other document content to provide a rapid preview, overview, or recap.",
+   "distinguished_from": "Unlike Synthesis, Summarization compresses existing material without chiefly generating a new integrative insight, and unlike Navigation it conveys content rather than routes.",
+   "examples": [
+    {
+     "doc": "ai:2c06833804c3436476cf6fb9dac965f952f60a38821c04eaa885cc3153a91527",
+     "excerpt": "An opening key-facts panel highlights the rapid post-2016 rise, Studio Bones’ production role, the setting’s roughly 80% Quirk prevalence, and recurring criticism of Deku’s characterization and first-year narrative compression.",
+     "item_id": 4
+    }
+   ],
+   "name": "Summarization",
+   "subsumes": [
+    "B31"
+   ]
+  },
+  {
+   "assignment_test": "Select Perspective when removing the item would eliminate how a situated participant, witness, narrator, or affected party experiences or understands the subject.",
+   "definition": "Content that presents a distinct situated viewpoint or lived apprehension as part of the document's account.",
+   "distinguished_from": "Unlike Evidence, Perspective need not warrant another proposition, and unlike Counterposition it need not challenge the document's prevailing line.",
+   "examples": [
+    {
+     "doc": "ai:5b178070ab0a11e15ea47554d65295ef5d09513d527135436e4c1ed9fc10f5fb",
+     "excerpt": "In interviews, Quaid acknowledges the advantages of having famous parents while emphasizing his effort to earn professional respect through his own work.",
+     "item_id": 15
+    }
+   ],
+   "name": "Perspective",
+   "subsumes": [
+    "B10"
+   ]
+  },
+  {
+   "assignment_test": "Select Complication when removing the item would eliminate an obstacle, reversal, conflict, delay, or uncertainty that changes the conditions of an unfolding account.",
+   "definition": "Content that changes narrative conditions by creating or intensifying difficulty, tension, conflict, delay, reversal, or uncertainty.",
+   "distinguished_from": "Unlike Problem, Complication functions as a development within an unfolding narrative, and unlike Counterposition it need not take the form of an opposing argument.",
+   "examples": [
+    {
+     "doc": "human:9b1913d8593982b1b86e5ed873e0008dd392ffd523cb57757cffc34017c3b8db",
+     "excerpt": "Within two weeks, New York City had thousands of cases and infections appeared in every state, forcing Trump to confront the kind of decisive turning point Xi had faced earlier.",
+     "item_id": 18
+    }
+   ],
+   "name": "Complication",
+   "subsumes": [
+    "B27"
+   ]
+  },
+  {
+   "assignment_test": "Select Petition when removing the item would chiefly eliminate a direct or represented appeal to an addressed agent for aid, intervention, protection, transformation, or another desired outcome.",
+   "definition": "Content that appeals to an addressed agent to grant aid, intervene, act, or bring about a desired condition for the speaker or others.",
+   "distinguished_from": "Unlike Recommendation, Petition requests action from an addressee within an appeal rather than advocating to readers what course they should adopt.",
+   "examples": [
+    {
+     "doc": "ai:b2f2b33d8cea51dffb07a003fc8f874ce455f82b42de2b5bfc02e6fba29e6c1d",
+     "excerpt": "The prayer seeks emotional and psychological healing, freedom from bitterness and anxiety, a hopeful outlook, and a secure identity as beloved children of God who can rise above cruelty.",
+     "item_id": 21
+    }
+   ],
+   "name": "Petition",
+   "subsumes": [
+    "I-ai:b2f2b33d8cea51dffb07a003fc8f874ce455f82b42de2b5bfc02e6fba29e6c1d-01"
+   ]
+  },
+  {
+   "assignment_test": "Select Resolution when removing the item would eliminate how an unfolding conflict, pursuit, uncertainty, or consequential sequence reached closure or a settled state.",
+   "definition": "Content that closes or substantially settles an unfolding narrative problem, conflict, pursuit, or uncertainty by reporting its disposition.",
+   "distinguished_from": "Unlike Event Account, Resolution is defined by its closure function, and unlike Synthesis it settles an unfolding arc rather than integrating ideas into a takeaway.",
+   "examples": [
+    {
+     "doc": "human:34203702ac8bf582ab663824c5543fef97fffa3ef649beb0e521fa6e4fdf3958",
+     "excerpt": "Although cooperation among independent farmers was difficult, their agreement to form the association enabled Apple Hill to recover collectively from agricultural disaster.",
+     "item_id": 23
+    }
+   ],
+   "name": "Resolution",
+   "subsumes": [
+    "B28"
+   ]
+  },
+  {
+   "assignment_test": "Select Contributor Record when removing the bounded component would erase who created or contributed to the document, what responsibility they held, or the background establishing their relationship or authority.",
+   "definition": "A bounded component that records a document contributor's identity, responsibility, or relevant biographical and professional context.",
+   "distinguished_from": "Unlike Source Documentation, Contributor Record concerns people responsible for the document rather than external materials, and unlike Background its contributor context serves authorship transparency rather than the focal subject's exposition.",
+   "examples": [
+    {
+     "doc": "human:73a678012f66788ede901eac07086ce6391e3a0682de3bda176ed469dfccaa77",
+     "excerpt": "A byline attributes the article to Mark Gillespie.",
+     "item_id": 16
+    },
+    {
+     "doc": "human:65050d3c67055525867caafdbe50fb6abdaaaea79df490a0f6a3ae85f2a29a10",
+     "excerpt": "A contributor biography establishes Mary Ebeling as a Drexel University sociology professor whose research examines collective work across scientific, commercial, and artistic settings, and documents her publications, arts, journalism, and sociology education, research support, Fulbright Fellowship, and Beta-Local residency.",
+     "item_id": 13
+    }
+   ],
+   "name": "Contributor Record",
+   "subsumes": [
+    "B37",
+    "I-human:65050d3c67055525867caafdbe50fb6abdaaaea79df490a0f6a3ae85f2a29a10-01"
+   ]
+  },
+  {
+   "assignment_test": "Select Reference Organization when removing the bounded component would eliminate a reusable lookup resource rather than one local substantive move.",
+   "definition": "A bounded component that collects and organizes facts, entities, answers, chronology, resources, or term meanings for efficient consultation and retrieval.",
+   "distinguished_from": "Unlike Navigation, Reference Organization supplies information to consult rather than routes to destinations, and unlike Definition it organizes reusable reference material rather than advancing one local clarification.",
+   "examples": [
+    {
+     "doc": "ai:75858a6b46a5c2aa82e3ff21fca155697ab3bfc78217e67f78db59781e73bd7b",
+     "excerpt": "A frequently asked questions component gives direct practical answers about actionable restraint, lawful use, warning signs, proof, and reporting channels.",
+     "item_id": 20
+    }
+   ],
+   "name": "Reference Organization",
+   "subsumes": [
+    "B38",
+    "B34"
+   ]
+  },
+  {
+   "assignment_test": "Select Inquiry when removing the item would eliminate the unresolved question, uncertainty, or puzzle that directs the surrounding investigation.",
+   "definition": "Content that formulates a question, uncertainty, or puzzle whose investigation organizes subsequent material.",
+   "distinguished_from": "Unlike Problem, Inquiry establishes something to be answered rather than an adverse condition to be remedied, and unlike Framing it directs attention through unresolvedness.",
+   "examples": [
+    {
+     "doc": "human:9c8051974cdadce541fba42c3853910029e471c7ad9f1d4bcdf84776ffd14e60",
+     "excerpt": "The article examines whether media reporting from family courts should be permitted and whether transparency orders can protect families who are already under considerable stress.",
+     "item_id": 1
+    }
+   ],
+   "name": "Inquiry",
+   "subsumes": [
+    "B03"
+   ]
+  },
+  {
+   "assignment_test": "Select Counterposition when removing the item would eliminate a substantive alternative, objection, or opposing account that the document acknowledges or must address.",
+   "definition": "Content that presents a viewpoint, explanation, or argument in tension with the document's prevailing line.",
+   "distinguished_from": "Unlike Perspective, Counterposition is defined by opposition to the prevailing line, and unlike Rebuttal it states the challenge rather than answering it.",
+   "examples": [
+    {
+     "doc": "ai:296c5a15464ad4508085cb9678fc54c3d6a13cbd54b1cef399fe2593827281a5",
+     "excerpt": "Critics dispute whether a 40 percent throughput increase at one facility can yield a 15 percent improvement across the complete cycle, whether investment costs will defeat the promised $30,000 price, and whether uneven EV enthusiasm can support an electric pickup.",
+     "item_id": 21
+    }
+   ],
+   "name": "Counterposition",
+   "subsumes": [
+    "B21"
+   ]
+  },
+  {
+   "assignment_test": "Select Engagement when removing the item would chiefly eliminate the move that captures attention or creates curiosity rather than necessary exposition, argument, or narrative development.",
+   "definition": "Content whose primary function is to secure reader interest through surprise, immediacy, suspense, provocation, humor, or another attention-directing move.",
+   "distinguished_from": "Unlike Illustration or Scene Setting, Engagement is primary when attracting or sustaining attention matters more than clarifying a point or situating action.",
+   "examples": [
+    {
+     "doc": "human:6e6e58d9055424d3acfe8ae87f855d09c5dc0c6c266605a35005af71675e8a63",
+     "excerpt": "An 1885 prediction that humans would eventually have enlarged brains but no natural teeth introduces an era when technological progress reached Santa Rosa slowly: regional telephone service arrived after larger cities, and downtown electric lighting did not appear until 1892.",
+     "item_id": 1
+    }
+   ],
+   "name": "Engagement",
+   "subsumes": [
+    "B01"
+   ]
+  },
+  {
+   "assignment_test": "Select Navigation when removing the bounded component would impair readers' ability to locate, sequence, or move efficiently among document parts or directly connected resources.",
+   "definition": "A bounded component that organizes routes through the document or its directly connected materials so readers can locate and move among relevant destinations.",
+   "distinguished_from": "Unlike Reference Organization, Navigation directs readers to destinations rather than supplying information for lookup, and unlike Supplementation its primary function is routing rather than ancillary enrichment.",
+   "examples": [
+    {
+     "doc": "ai:c3f138244577407afa3ce56a4754d8a9bd4ed1081023ee09cbd6723acd6e197c",
+     "excerpt": "A related-reading component directs readers to supplementary guidance on modern platform buying, shared cross-channel identifiers, outcome-based procurement, vendor dependency, and governance of structured metadata.",
+     "item_id": 31
+    }
+   ],
+   "name": "Navigation",
+   "subsumes": [
+    "B32"
+   ]
+  },
+  {
+   "assignment_test": "Select Scene Setting when removing the item would eliminate the immediate temporal, spatial, social, or sensory environment in which an event or encounter unfolds.",
+   "definition": "Content that situates action in a concrete temporal, spatial, social, or sensory environment so the reader can enter a scene.",
+   "distinguished_from": "Unlike Description, Scene Setting primarily prepares an environment for action, and unlike Background it concerns the immediate narrative situation rather than broader context.",
+   "examples": [
+    {
+     "doc": "ai:9cf650eed0d58a1e4c552e337ff6a178fa10ed647472db38205b492f43d98aeb",
+     "excerpt": "Waterfront food stalls, grilled oysters, clam chowder, fish tacos, live music, and communal picnic areas create a lively coastal setting centered on locally sourced seafood.",
+     "item_id": 2
+    }
+   ],
+   "name": "Scene Setting",
+   "subsumes": [
+    "B06"
+   ]
+  },
+  {
+   "assignment_test": "Select Disclosure when removing the bounded item would conceal circumstances readers need to assess the document's independence, provenance, reliability, limitations, or current validity.",
+   "definition": "A bounded component that makes relevant interests, sponsorship, methods, limitations, corrections, or other trust-affecting circumstances transparent.",
+   "distinguished_from": "Unlike Source Documentation, Disclosure reveals circumstances affecting interpretation or trust rather than cataloguing sources, and unlike Publication Documentation it goes beyond basic issuance or version provenance.",
+   "examples": [
+    {
+     "doc": "human:9fd6d37b16d077e8dad4750d74550f80f9631169833577646216a604e772d65d",
+     "excerpt": "A correction clarifies that Anna in the Tropics premiered at New Theatre in Coral Gables, Florida, which commissioned it, rather than at McCarter Theatre Center.",
+     "item_id": 33
+    }
+   ],
+   "name": "Disclosure",
+   "subsumes": [
+    "B36"
+   ]
+  },
+  {
+   "assignment_test": "Select Transition when removing the item would disrupt a local movement, redirection, juxtaposition, or reorientation between otherwise distinct lines of material.",
+   "definition": "Content whose main function is to manage movement between topics, times, scenes, perspectives, or stages of an argument.",
+   "distinguished_from": "Unlike Framing, Transition manages a local shift between existing parts rather than establishing the governing lens, and it yields to a substantive role when the item independently advances content.",
+   "examples": [
+    {
+     "doc": "human:cb2b4d9f2b01c6692f564526ee7cc3194281c77dacb7aa61321363e04e4e639e",
+     "excerpt": "The discussion shifts from the numerous benefits of welcoming birds to the practical drawbacks of maintaining a birdhouse.",
+     "item_id": 11
+    }
+   ],
+   "name": "Transition",
+   "subsumes": [
+    "B30"
+   ]
+  },
+  {
+   "assignment_test": "Select Source Documentation when removing the bounded component would erase the provenance, retrievability, or citation trail of external materials used by the document.",
+   "definition": "A bounded component that records external sources and citation relationships so the document's informational basis can be traced or verified.",
+   "distinguished_from": "Unlike Evidence, Source Documentation records where support comes from rather than itself advancing that support, and unlike Contributor Record it concerns external materials rather than responsibility for producing the document.",
+   "examples": [
+    {
+     "doc": "human:396747154ab7b2606315c41e04cb388d1baf2b36cdb7dc50dad5080d58def6c1",
+     "excerpt": "A brief source section documents books by Jonathan Harvey, A.K. Davidson, Kiyoshi Seiko, Masanobu Kudō, David H. Engel, and Stephen Batchelor that support the essay’s musical, horticultural, and Buddhist discussion.",
+     "item_id": 11
+    }
+   ],
+   "name": "Source Documentation",
+   "subsumes": [
+    "B33"
+   ]
+  },
+  {
+   "assignment_test": "Select Supplementation when removing the bounded component would reduce optional depth or utility without deleting a core substantive move or a primary routing function.",
+   "definition": "A bounded component that extends the main document with useful but nonessential material providing ancillary depth, context, or practical utility.",
+   "distinguished_from": "Unlike Navigation, Supplementation contributes optional enrichment rather than chiefly routing readers, and unlike Reference Organization it is not primarily arranged for repeated lookup.",
+   "examples": [
+    {
+     "doc": "ai:6778290afd29c6903c76fb324c5bdbfaa344fd8fe5eb05d6249f9c641986b67a",
+     "excerpt": "A simple starter recipe is announced as a practical component, but no recoverable ingredients or method are supplied beyond an isolated reference to seasonings.",
+     "item_id": 9
+    }
+   ],
+   "name": "Supplementation",
+   "subsumes": [
+    "B35"
+   ]
+  },
+  {
+   "assignment_test": "Select Publication Documentation when removing the bounded component would erase the document's publication identity, chronology, edition, venue, or revision status.",
+   "definition": "A bounded component that records when, where, or in what version the document was issued or revised, thereby preserving publication provenance.",
+   "distinguished_from": "Unlike Contributor Record, Publication Documentation records issuance and version status rather than creative responsibility, and unlike Disclosure it does not chiefly reveal broader trust-affecting circumstances.",
+   "examples": [
+    {
+     "doc": "human:152ae2d16f21229dca8d3a37231efc1fd8c602020dfb018b9f72888e55d8214a",
+     "excerpt": "A closing publication note documents that the profile first appeared in the 2016 yearbook The Low Countries, issue 24, pages 134–141.",
+     "item_id": 30
+    }
+   ],
+   "name": "Publication Documentation",
+   "subsumes": [
+    "B40"
+   ]
+  },
+  {
+   "assignment_test": "Select Method when removing the item would eliminate the account of how an inquiry, study, analysis, or reporting process was designed, delimited, or conducted.",
+   "definition": "Content that describes the data, assumptions, materials, participants, measures, procedures, or analytical design used to conduct an inquiry or produce a result.",
+   "distinguished_from": "Unlike Instruction, Method documents how knowledge was produced rather than directing readers to perform a task, and unlike Finding it reports procedure rather than result.",
+   "examples": [
+    {
+     "doc": "human:37748f4b4c21c2304e721beb8010ce69bccfe098941e0523d9e013a8e102e1e9",
+     "excerpt": "The first study, published before COVID-19, compared whether simulated and physical nature similarly improve emotional well-being by having healthy undergraduates either walk six minutes in woods or view 360-degree VR footage of the same setting, then measuring skin conductivity, perceived restoration, and mood.",
+     "item_id": 2
+    },
+    {
+     "doc": "human:c21858be66fc52456d20e1cbc5dd97304f749bfb04d2db7e51e75eb2c7a574d0",
+     "excerpt": "The projections treat each student’s pre-pandemic POL as the best expected post-pandemic rate, assume an average COVID-related loss of 90 learning days, and estimate outcomes under scenarios providing varying numbers of additional school years.",
+     "item_id": 5
+    },
+    {
+     "doc": "ai:9dbd199a4b9968aa28f84bfc32409a19e7c918b13a07d5983c97084b20937b30",
+     "excerpt": "The report examines nearly 180,000 UK-domiciled first-degree graduates 15 months after completing their studies in 2022/23 to describe emerging early-career patterns.",
+     "item_id": 2
+    }
+   ],
+   "name": "Method",
+   "subsumes": [
+    "I-human:37748f4b4c21c2304e721beb8010ce69bccfe098941e0523d9e013a8e102e1e9-01",
+    "I-human:c21858be66fc52456d20e1cbc5dd97304f749bfb04d2db7e51e75eb2c7a574d0-01",
+    "I-ai:9dbd199a4b9968aa28f84bfc32409a19e7c918b13a07d5983c97084b20937b30-01"
+   ]
+  },
+  {
+   "assignment_test": "Select Acknowledgment when removing the item would chiefly eliminate explicit recognition or thanks for assistance, participation, or support connected to an undertaking.",
+   "definition": "Content that recognizes or thanks people or groups for assistance, participation, support, or service in an undertaking discussed by the document.",
+   "distinguished_from": "Unlike Contributor Record, Acknowledgment expresses recognition for support or participation rather than documenting responsibility for producing the document.",
+   "examples": [
+    {
+     "doc": "human:3dbdcb2efb9549d520a68f20b3379deeb6366e5ee6173bdd21cb95cbbde1e129",
+     "excerpt": "Magie thanks Mayor Daniel Mahler, council members Robert Pettet and Dominick Cortallessa, American Legion representative John Kaminski, Police Chief Keith Spillane, Sergeant Ashley Higgins, and the wider community, emphasizing that their coordinated participation makes the event successful.",
+     "item_id": 10
+    }
+   ],
+   "name": "Acknowledgment",
+   "subsumes": [
+    "I-human:3dbdcb2efb9549d520a68f20b3379deeb6366e5ee6173bdd21cb95cbbde1e129-01"
+   ]
+  },
+  {
+   "assignment_test": "Select Promotion when removing the item would chiefly eliminate a solicitation to purchase, subscribe to, attend, or otherwise engage with an offering for promotional benefit.",
+   "definition": "Content or a bounded component whose primary function is to encourage audience uptake of a product, service, publication, subscription, event, or affiliated opportunity.",
+   "distinguished_from": "Unlike Recommendation, Promotion chiefly seeks uptake of an offering rather than prescribing a substantive response, and unlike Navigation it persuades engagement rather than merely enabling movement to material.",
+   "examples": [
+    {
+     "doc": "human:e21a98938fa2913157cc6d23fae2bb9dc17b990677e3f2f5159723f5b92d2785",
+     "excerpt": "A newsletter subscription component offers weekly organizational insights and states that subscriber details will not be shared and subscriptions may be canceled at any time.",
+     "item_id": 16
+    },
+    {
+     "doc": "human:f01f68d196260835eac2160bf37dbcf98cf4486090b229bc84500b045734ff9d",
+     "excerpt": "A closing promotional call directs readers to the publisher’s current ranking of recommended casinos.",
+     "item_id": 11
+    },
+    {
+     "doc": "ai:939e1e1a44c45330db28ffd1db627f88b8ffa65dac3468645717fd3b241054c8",
+     "excerpt": "A closing promotional call to action directs readers to the author’s book, Love and Relationship Workbook for Couples.",
+     "item_id": 24
+    }
+   ],
+   "name": "Promotion",
+   "subsumes": [
+    "I-human:e21a98938fa2913157cc6d23fae2bb9dc17b990677e3f2f5159723f5b92d2785-01",
+    "I-human:f01f68d196260835eac2160bf37dbcf98cf4486090b229bc84500b045734ff9d-01",
+    "I-ai:939e1e1a44c45330db28ffd1db627f88b8ffa65dac3468645717fd3b241054c8-01"
+   ]
+  }
+ ]
+}

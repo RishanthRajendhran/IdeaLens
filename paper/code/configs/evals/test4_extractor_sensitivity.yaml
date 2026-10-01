@@ -1,0 +1,37 @@
+extends: _base.yaml
+name: Extractor sensitivity
+number: 4
+group: Pipeline ablations
+asks: >
+  Swap the model that builds the outline. Does the verdict survive?
+upstream: "Our own construction: the evaluation core re-extracted by other models."
+data_dir: test4_extractor_sensitivity
+legacy_npz_stem: test4   # the stem this eval's predictions were written under
+                        # before this repository existed; read by
+                        # scripts/data/import_results.py
+
+arms:
+  # Swapped at TEST TIME ONLY -- the detector is not retrained per extractor.
+  extractors:
+    - {id: flash_6shot, model: gemini-3.7-flash, n_shots: 6}
+    - {id: pro_0shot,   model: gemini-3.1-pro-preview, n_shots: 0}
+    - {id: sol,         model: gpt-5.6-sol, n_shots: 6}
+  # The shot-count ablation rides on the same axis and has direct budget
+  # consequences: extraction prompt tokens are roughly 93% of pipeline spend and
+  # are dominated by the exemplars. If 3-shot holds, the saving is large.
+  shot_counts: [6, 3, 2, 0]
+
+report:
+  group_by: [extractor, format]
+  extra:
+    - extractor_to_extractor outline agreement (do they produce the same items?)
+    - score-distribution shift per extractor at the deployed cut
+
+notes: >
+  Load-bearing, not a robustness footnote. A classifier given ONLY role labels,
+  with every word of content stripped, reaches AUC 0.877 -- and role labels are
+  assigned by the extractor. This test is what distinguishes "AI documents have
+  different rhetorical structure" (on thesis) from "the extractor behaves
+  differently on AI input" (an artifact that would caveat the whole method).
+  If an arm degrades, the mitigation to try is training one variant on
+  mixed-extractor outlines and showing the gap closes.

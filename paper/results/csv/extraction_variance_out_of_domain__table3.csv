@@ -1,0 +1,6 @@
+logit distance from the cut,documents,any flip
+below -2,133,3.0%
+"[-2, -0.5)",94,57.4%
+"[-0.5, +0.5)",29,100.0%
+"[+0.5, +2)",23,78.3%
+above +2,121,1.7%

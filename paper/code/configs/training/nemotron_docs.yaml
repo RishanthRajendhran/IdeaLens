@@ -1,0 +1,8 @@
+extends: nemotron_full.yaml
+name: Nemotron 30B LoRA, raw documents (counterfactual control)
+setting: docs
+notes: >
+  THE COUNTERFACTUAL ARM. Same corpus, same recipe, raw document text as input.
+  Its system prompt says "document" rather than "outline" because the outline
+  wording would misdescribe its input; structure, verbs and answer tokens
+  otherwise mirror the full arm exactly, so the INPUT is the only variable.

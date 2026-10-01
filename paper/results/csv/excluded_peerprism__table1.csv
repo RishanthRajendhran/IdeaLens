@@ -1,0 +1,7 @@
+Arm,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+synthetic_reviews,model ideas (TPR),798,63.3 / 82.1,86.7 / 97.9,99.0 / 99.6,57.8 / 70.9,69.7 / 96.9,97.2 / 99.0,33.5 / 91.6,15.0 / –,87.1
+rewritten,"human ideas, AI prose (FPR)","1,500",7.6 / 14.8,8.8 / 27.8,76.3 / 92.1,11.5 / 18.7,15.7 / 44.3,69.7 / 90.9,58.0 / 89.7,4.7 / –,76.3
+extract_regenerate,"human ideas, AI prose (FPR)","1,499",61.0 / 77.9,81.9 / 90.2,90.6 / 90.9,74.5 / 82.2,86.1 / 90.5,90.7 / 90.9,86.6 / 91.1,16.5 / –,89.3
+human,human ideas (FPR),671,1.0 / 2.1,1.5 / 3.3,2.8 / 3.9,3.1 / 4.5,2.5 / 6.7,2.4 / 4.8,1.5 / 11.0,0.7 / –,0.4
+"AUC, synthetic vs human",,,0.983,0.993,0.995,0.954,0.977,0.991,0.966,0.647,0.970
+"AUC, synthetic vs human + rewritten + extract_regenerate",,,0.769,0.755,0.715,0.682,0.648,0.594,0.385,0.474,0.684

@@ -1,0 +1,9 @@
+Arm,Model,0.1%,0.5%,2%,5%
+full document · AI,IdeaLens · outline (raw),80.0,93.3,98.8,99.6
+full document · AI,IdeaLens-ModernBERT-L · outline (raw),57.9,80.4,96.2,98.7
+500-word excerpt · AI,IdeaLens · outline (raw),63.1,85.1,96.2,98.3
+500-word excerpt · AI,IdeaLens-ModernBERT-L · outline (raw),32.6,58.6,86.1,94.9
+full document · human,IdeaLens · outline (raw),0.6,2.3,4.6,6.9
+full document · human,IdeaLens-ModernBERT-L · outline (raw),0.2,1.6,4.9,9.1
+500-word excerpt · human,IdeaLens · outline (raw),0.3,1.5,4.4,6.4
+500-word excerpt · human,IdeaLens-ModernBERT-L · outline (raw),0.0,0.9,3.6,8.0

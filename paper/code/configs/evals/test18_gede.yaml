@@ -1,0 +1,33 @@
+extends: _base.yaml
+name: GEDE — an independently built contribution ladder
+number: 18
+group: Idea provenance
+asks: An external group graded how much of each essay the student supplied. Does the verdict track it?
+metric: fire
+positive: mixed
+upstream: GEDE. `prompt_mode` grades student contribution while holding the writing model fixed.
+data_dir: test18_gede
+legacy_item_stem: gede   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: not_run   # STAGE 2 HAS NOT BEEN RUN ON THIS SET. Scores come
+                         # from UNTREATED outlines: an upper bound that partly
+                         # measures wording lifted from the source, and not
+                         # comparable with the de-leaked sets until it runs.
+                         # Fix with: scripts/pipeline/run_pipeline.py --stage 2
+report:
+  rung_caption: "ordered by how much of the essay the student supplied"
+  metric: fire
+  group_by: [arm]
+notes: >
+  A COLLABORATION LADDER BUILT BY SOMEONE ELSE, for their own reasons, which makes
+  it the closest thing to an external replication of Test 3. Ordered by student
+  contribution: the student writing it, the model editing their text, the model
+  regenerating from a summary of it, and the model given only the assignment prompt.
+
+  Our mapping follows CONTENT origin, never surface: the summary conditions are
+  labelled AI because a summary carries the gist only — the model still invents
+  the structure and every specific.
+caveats:
+  - >
+    THE DE-LEAK PARAPHRASE HAS NOT BEEN RUN ON THIS SET. Untreated outlines only;
+    not comparable with the de-leaked benchmarks until it runs.

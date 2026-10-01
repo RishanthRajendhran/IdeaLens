@@ -1,0 +1,16 @@
+Corpus,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+BAWE,human,439,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+argument-annotated-essays,human,402,0.2,0.0,0.0,3.2,0.0,1.7,0.0,0.2,0.0
+persuade,human,74,0.0,0.0,0.0,1.4,0.0,1.4,0.0,0.0,0.0
+BAWE,"model rewrites of the student's essay (improve-human, rewrite-human)","1,754",1.0,0.3,30.0,1.0,0.3,13.6,9.7,6.4,61.7
+argument-annotated-essays,"model rewrites of the student's essay (improve-human, rewrite-human)","1,597",1.9,1.1,91.6,6.9,3.1,79.2,48.4,20.5,87.7
+persuade,"model rewrites of the student's essay (improve-human, rewrite-human)",297,3.0,5.4,85.5,8.8,6.7,58.6,34.0,31.6,79.1
+BAWE,"task (assignment only; task, task+resource)",878,99.5,100.0,100.0,94.3,98.1,100.0,100.0,95.9,100.0
+argument-annotated-essays,"task (assignment only; task, task+resource)",802,99.4,99.9,100.0,92.3,99.6,100.0,100.0,99.5,100.0
+persuade,"task (assignment only; task, task+resource)",190,98.4,100.0,100.0,92.6,100.0,100.0,100.0,88.9,100.0
+BAWE,"from the student's summary (summary, task+summary)","1,735",98.2,99.5,100.0,88.5,93.9,100.0,100.0,86.3,100.0
+argument-annotated-essays,"from the student's summary (summary, task+summary)","1,515",91.8,99.5,100.0,85.3,95.6,100.0,100.0,97.8,99.7
+persuade,"from the student's summary (summary, task+summary)",300,91.0,99.7,100.0,78.3,90.0,100.0,100.0,93.0,100.0
+BAWE,"attacks (dipper, rewrite_attack)","1,713",94.5,81.7,98.4,86.2,72.5,84.9,63.5,85.6,99.7
+argument-annotated-essays,"attacks (dipper, rewrite_attack)","1,606",82.4,70.2,98.5,76.8,62.5,79.8,57.0,89.2,95.3
+persuade,"attacks (dipper, rewrite_attack)",285,89.8,82.1,99.6,74.4,70.2,93.3,63.9,87.0,97.5

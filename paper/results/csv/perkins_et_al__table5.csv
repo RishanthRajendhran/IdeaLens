@@ -1,0 +1,12 @@
+Arm,Description,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+adv_decrease_complexity,adversarial (6 techniques),15,93.3,100.0,100.0,73.3,73.3,93.3,100.0,40.0,100.0
+adv_increase_burstiness,adversarial (6 techniques),15,86.7,100.0,100.0,86.7,100.0,100.0,100.0,40.0,100.0
+adv_increase_complexity,adversarial (6 techniques),14,92.9,92.9,100.0,85.7,100.0,100.0,100.0,28.6,100.0
+adv_non_native_style,adversarial (6 techniques),15,93.3,100.0,100.0,93.3,40.0,80.0,93.3,6.7,100.0
+adv_paraphrase,adversarial (6 techniques),15,93.3,100.0,100.0,73.3,33.3,93.3,80.0,13.3,80.0
+adv_spelling_errors,adversarial (6 techniques),12,100.0,100.0,100.0,91.7,83.3,100.0,91.7,41.7,100.0
+ai_bard,"ai (Bard, Claude, GPT-4)",5,80.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ai_claude,"ai (Bard, Claude, GPT-4)",5,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,100.0
+ai_gpt4,"ai (Bard, Claude, GPT-4)",5,100.0,100.0,100.0,60.0,100.0,100.0,100.0,100.0,100.0
+human_faculty,"human (faculty, students)",5,40.0,20.0,40.0,40.0,20.0,20.0,20.0,0.0,40.0
+human_student,"human (faculty, students)",5,40.0,20.0,20.0,60.0,20.0,20.0,0.0,0.0,0.0

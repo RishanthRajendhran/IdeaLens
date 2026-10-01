@@ -1,0 +1,57 @@
+Format,Arm,n,IdeaLens · outline (paraphrased),IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline (paraphrased),IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+Academic Writing,source (a model's document),36,100.0,100.0,100.0,100.0,94.4,97.2,80.6,88.9,66.7
+Creative Writing,source (a model's document),35,100.0,100.0,100.0,97.1,100.0,100.0,71.4,85.7,88.6
+Knowledge Article,source (a model's document),31,96.8,96.8,100.0,77.4,100.0,100.0,67.7,38.7,71.0
+News Article,source (a model's document),38,97.4,94.7,100.0,97.4,92.1,100.0,81.6,52.6,78.9
+Nonfiction Writing,source (a model's document),31,93.5,100.0,100.0,83.9,96.8,96.8,80.6,32.3,83.9
+Personal About Page,source (a model's document),29,96.6,96.6,100.0,82.8,75.9,100.0,82.8,44.8,55.2
+Personal Blog,source (a model's document),36,100.0,100.0,100.0,100.0,100.0,100.0,77.8,44.4,72.2
+User Reviews,source (a model's document),27,100.0,100.0,100.0,96.3,92.6,100.0,74.1,29.6,66.7
+Academic Writing,level 0 (type line),36,100.0,100.0,100.0,80.6,97.2,100.0,88.9,0.0,100.0
+Creative Writing,level 0 (type line),35,91.4,100.0,100.0,51.4,82.9,100.0,40.0,0.0,100.0
+Knowledge Article,level 0 (type line),31,100.0,100.0,100.0,93.5,100.0,100.0,93.5,0.0,100.0
+News Article,level 0 (type line),38,94.7,97.4,100.0,84.2,92.1,100.0,71.1,0.0,100.0
+Nonfiction Writing,level 0 (type line),31,100.0,100.0,100.0,90.3,100.0,100.0,67.7,0.0,100.0
+Personal About Page,level 0 (type line),29,100.0,100.0,100.0,89.7,100.0,100.0,93.1,0.0,100.0
+Personal Blog,level 0 (type line),36,100.0,100.0,100.0,97.2,100.0,100.0,88.9,0.0,100.0
+User Reviews,level 0 (type line),27,100.0,100.0,100.0,92.6,100.0,100.0,55.6,0.0,100.0
+Academic Writing,level 1 (topic line),36,100.0,100.0,100.0,88.9,97.2,100.0,83.3,0.0,100.0
+Creative Writing,level 1 (topic line),35,91.4,100.0,100.0,54.3,88.6,100.0,51.4,0.0,100.0
+Knowledge Article,level 1 (topic line),31,100.0,100.0,100.0,90.3,100.0,100.0,93.5,0.0,100.0
+News Article,level 1 (topic line),38,100.0,100.0,100.0,97.4,92.1,100.0,76.3,0.0,100.0
+Nonfiction Writing,level 1 (topic line),31,100.0,100.0,100.0,100.0,100.0,100.0,61.3,0.0,100.0
+Personal About Page,level 1 (topic line),29,100.0,100.0,100.0,89.7,96.6,100.0,82.8,0.0,100.0
+Personal Blog,level 1 (topic line),36,100.0,100.0,100.0,97.2,100.0,100.0,69.4,0.0,100.0
+User Reviews,level 1 (topic line),27,96.3,100.0,100.0,96.3,100.0,100.0,63.0,0.0,100.0
+Academic Writing,level 2 (themes),36,100.0,100.0,100.0,86.1,97.2,100.0,75.0,0.0,100.0
+Creative Writing,level 2 (themes),35,94.3,100.0,100.0,60.0,91.4,100.0,51.4,0.0,100.0
+Knowledge Article,level 2 (themes),31,100.0,100.0,100.0,83.9,93.5,100.0,87.1,0.0,100.0
+News Article,level 2 (themes),38,100.0,100.0,100.0,100.0,94.7,100.0,81.6,0.0,100.0
+Nonfiction Writing,level 2 (themes),31,100.0,100.0,100.0,87.1,100.0,100.0,51.6,0.0,100.0
+Personal About Page,level 2 (themes),29,100.0,100.0,100.0,93.1,96.6,100.0,93.1,0.0,100.0
+Personal Blog,level 2 (themes),36,100.0,100.0,100.0,100.0,100.0,100.0,83.3,0.0,100.0
+User Reviews,level 2 (themes),27,100.0,100.0,100.0,96.3,96.3,100.0,85.2,0.0,100.0
+Academic Writing,level 3 (themes and structure),36,97.2,100.0,100.0,80.6,94.4,100.0,80.6,0.0,100.0
+Creative Writing,level 3 (themes and structure),35,82.9,100.0,100.0,60.0,91.4,100.0,60.0,0.0,100.0
+Knowledge Article,level 3 (themes and structure),31,96.8,100.0,100.0,90.3,96.8,100.0,74.2,0.0,100.0
+News Article,level 3 (themes and structure),38,97.4,100.0,100.0,97.4,100.0,100.0,84.2,0.0,100.0
+Nonfiction Writing,level 3 (themes and structure),31,100.0,100.0,100.0,93.5,100.0,100.0,77.4,0.0,100.0
+Personal About Page,level 3 (themes and structure),29,100.0,100.0,100.0,100.0,100.0,100.0,86.2,0.0,100.0
+Personal Blog,level 3 (themes and structure),36,100.0,100.0,100.0,100.0,100.0,100.0,75.0,0.0,100.0
+User Reviews,level 3 (themes and structure),27,100.0,100.0,100.0,96.3,100.0,100.0,66.7,0.0,100.0
+Academic Writing,level 4 (themes and full outline),36,100.0,100.0,100.0,97.2,97.2,100.0,83.3,0.0,100.0
+Creative Writing,level 4 (themes and full outline),35,97.1,100.0,100.0,80.0,97.1,100.0,57.1,0.0,100.0
+Knowledge Article,level 4 (themes and full outline),31,96.8,100.0,100.0,96.8,100.0,100.0,87.1,0.0,100.0
+News Article,level 4 (themes and full outline),38,100.0,100.0,100.0,100.0,94.7,100.0,78.9,0.0,100.0
+Nonfiction Writing,level 4 (themes and full outline),31,96.8,100.0,100.0,83.9,100.0,100.0,74.2,0.0,100.0
+Personal About Page,level 4 (themes and full outline),29,100.0,100.0,100.0,96.6,96.6,100.0,86.2,0.0,100.0
+Personal Blog,level 4 (themes and full outline),36,100.0,100.0,100.0,100.0,100.0,100.0,86.1,0.0,100.0
+User Reviews,level 4 (themes and full outline),27,100.0,100.0,100.0,96.3,96.3,100.0,74.1,0.0,100.0
+Academic Writing,level 5 (the source's outline),36,100.0,100.0,100.0,100.0,91.7,100.0,88.9,0.0,100.0
+Creative Writing,level 5 (the source's outline),35,97.1,100.0,100.0,88.6,100.0,100.0,57.1,0.0,97.1
+Knowledge Article,level 5 (the source's outline),31,100.0,100.0,100.0,96.8,100.0,100.0,80.6,0.0,100.0
+News Article,level 5 (the source's outline),38,97.4,100.0,100.0,89.5,94.7,100.0,76.3,0.0,97.4
+Nonfiction Writing,level 5 (the source's outline),31,93.5,100.0,100.0,80.6,100.0,100.0,71.0,0.0,100.0
+Personal About Page,level 5 (the source's outline),29,100.0,100.0,100.0,93.1,93.1,100.0,86.2,0.0,100.0
+Personal Blog,level 5 (the source's outline),36,100.0,100.0,100.0,100.0,100.0,100.0,97.2,0.0,100.0
+User Reviews,level 5 (the source's outline),27,100.0,100.0,100.0,100.0,100.0,100.0,81.5,0.0,100.0

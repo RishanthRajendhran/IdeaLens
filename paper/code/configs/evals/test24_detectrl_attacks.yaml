@@ -1,0 +1,38 @@
+extends: _base.yaml
+name: DetectRL-X attack sweep — eleven surface attacks on the model side
+number: 24
+group: Adversarial robustness
+asks: >
+  Which surface attacks actually defeat a detector, and does reading the outline
+  instead of the prose change the answer?
+metric: fire
+positive: mixed
+upstream: WUJUNCHAO/DetectRL-X, unattacked condition plus all eleven attack files.
+data_dir: test24_detectrl_attacks
+legacy_item_stem: detectrl2   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: not_run   # STAGE 2 HAS NOT BEEN RUN ON THIS SET. Scores come
+                         # from UNTREATED outlines: an upper bound that partly
+                         # measures wording lifted from the source, and not
+                         # comparable with the de-leaked sets until it runs.
+                         # Fix with: scripts/pipeline/run_pipeline.py --stage 2
+report:
+  metric: fire
+  group_by: [attack]
+  paired: true
+  pair_on: pair_id
+notes: >
+  PAIRED BY CONSTRUCTION. 550 human/model pairs are taken under the unattacked
+  condition and under every attack, so each attacked document has its own
+  unattacked source in the table and every delta is WITHIN document rather than
+  across two samples. At this n, an unpaired delta would carry the variance of
+  both samples and swamp the effects being measured.
+
+  The human side is byte-identical across attack files and is therefore scored
+  once, which fixes one operating point for all twelve columns. Attacks perturb
+  the MODEL side only — verified by diffing each attack file against the base —
+  so every attack arm is model ideas in model prose.
+caveats:
+  - >
+    THE DE-LEAK PARAPHRASE HAS NOT BEEN RUN ON THIS SET. Untreated outlines only;
+    an upper bound, not comparable with the de-leaked benchmarks until it runs.

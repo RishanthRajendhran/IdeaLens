@@ -1,0 +1,136 @@
+# THE FOUR-QUADRANT LENS, as a machine-readable map from (eval, arm) to cell.
+#
+# The two axes of the task: who CONCEIVED the content, and who WROTE the
+# sentences. Every eval arm whose construction fixes both axes lands in one of
+# four cells; arms where the idea axis is genuinely mixed land in `mixed` and are
+# reported on their own row, never folded into a quadrant (docs/CONVENTIONS.md,
+# "The labelling rule").
+#
+#   HH   human ideas, human prose      label human   -> a fire is a false positive
+#   HA   human ideas, AI prose         label human   -> a fire is a false positive
+#   AH   AI ideas, human prose         label AI      -> a fire is a true positive
+#   AA   AI ideas, AI prose            label AI      -> a fire is a true positive
+#
+# HA and AH are the cells the task exists for: a surface reader must fail HA (it
+# sees model prose over a person's ideas) and must fail AH (it sees human prose
+# over a model's ideas). HH and AA are the cells conventional detection already
+# covers.
+#
+# SOURCE OF RECORD for these assignments is the label-mapping table in the
+# paper, which cites each
+# benchmark's own construction. Changing a cell here changes a headline claim;
+# do it against that table, not against a script's convenience.
+#
+# `default` catches arms not named explicitly. An eval with no `default` and an
+# unnamed arm raises rather than silently dropping rows.
+
+quadrants:
+  HH: {ideas: human, prose: human, label: human}
+  HA: {ideas: human, prose: ai,    label: human}
+  AH: {ideas: ai,    prose: human, label: ai}
+  AA: {ideas: ai,    prose: ai,    label: ai}
+
+evals:
+
+  test11_opai_bench:
+    note: nine successive AI rewrites of one human draft; the ideas never change
+    arms:
+      v0: HH            # the untouched human seed
+      v1: HA
+      v2: HA
+      v3: HA
+      v4: HA
+      v5: HA
+      v6: HA
+      v7: HA
+      v8: HA
+
+  test16_lamp:
+    note: a model drafts, a professional editor rewrites; both arms are the model's ideas
+    arms:
+      preedit: AA
+      postedit: AH     # model ideas, prose rewritten by a person
+
+  test17_arb:
+    arms:
+      human: HH
+      h2l: HA
+      free_llm: AA
+      llm2l: AA
+
+  test18_gede:
+    arms:
+      human: HH
+      improve-human: HA
+      rewrite-human: HA
+      summary: mixed          # a student's summary drives a model draft
+      task+summary: mixed
+      task: AA
+      task+resource: AA
+      rewrite_attack: AA
+      dipper: AA
+
+  test19_perkins:
+    note: every adversarial variant is a surface edit of an already model-written sample
+    default: AA
+    arms:
+      human_faculty: HH
+      human_student: HH
+
+  test20_hart:
+    arms:
+      human: HH
+      h2l_rephrase: HA
+      ai_human_edited: AH
+      ai_plain: AA
+      ai_humanized: AA
+      ai_tool_humanized: AA
+
+  test21_epoch_style_imitation:
+    default: AA
+    arms:
+      human: HH
+
+  test22_coconuts:
+    arms:
+      hw: HH
+      hwmp: HA
+      hwmt: HA
+      hwmg: mixed             # the benchmark's own explicit mix class
+      mg: AA
+      mgmp: AA
+
+  test23_peerprism:
+    arms:
+      human: HH
+      extract_regenerate: HA
+      rewritten: HA
+      synthetic_reviews: AA
+      expanded: AA
+      hybrid: AA
+
+  test24_detectrl_attacks:
+    default: AA
+    arms:
+      human: HH
+
+  test25_ellipse:
+    note: second-language writers; every row is human-written and human-conceived
+    default: HH
+
+  test26_research_ideas_ideation:
+    note: the authors LLM-standardised the prose of every proposal, so no arm has human prose
+    arms:
+      expert_idea: HA
+      model_idea: AA
+      model_idea_reranked: AA
+
+  test27_research_ideas_execution:
+    note: a researcher wrote every paper; only the idea's origin differs
+    arms:
+      paper_from_expert_idea: HH
+      paper_from_model_idea: AH
+
+  test28_research_ideas_reviews:
+    note: a human expert wrote every review; the arm names what the review is ABOUT
+    default: HH

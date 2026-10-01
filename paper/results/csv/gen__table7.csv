@@ -1,0 +1,20 @@
+Domain,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+arxiv,clean human,"1,000",0.0,0.0,0.0,0.1,0.0,0.3,0.0,0.0,0.0
+reddit,clean human,55,1.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+story_generation,clean human,998,1.4,0.0,0.0,2.5,0.0,0.3,0.0,0.1,0.0
+wikihow,clean human,10,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+wikipedia,clean human,992,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.0
+arxiv,clean AI (model-written),81,19.8,37.0,85.2,24.7,17.3,64.2,23.5,0.0,92.6
+reddit,clean AI (model-written),335,94.9,99.1,99.4,81.5,64.2,99.4,77.0,30.4,100.0
+story_generation,clean AI (model-written),"3,212",98.5,99.8,100.0,88.4,75.9,99.8,70.9,16.5,100.0
+wikipedia,clean AI (model-written),418,90.2,99.3,100.0,57.2,66.7,98.6,75.6,39.0,100.0
+arxiv,"model-edited (7 categories, adding_detail excluded)","3,988",4.2,12.8,40.8,2.5,5.7,25.4,22.4,3.1,62.9
+reddit,"model-edited (7 categories, adding_detail excluded)","2,413",15.1,24.7,83.5,8.8,12.6,58.8,56.9,39.8,81.0
+story_generation,"model-edited (7 categories, adding_detail excluded)","3,946",19.9,36.9,73.1,19.7,26.8,66.3,28.7,34.4,52.2
+wikihow,"model-edited (7 categories, adding_detail excluded)",300,13.7,27.7,75.7,8.9,21.0,55.3,53.3,41.7,75.0
+wikipedia,"model-edited (7 categories, adding_detail excluded)","3,439",18.0,30.9,49.1,11.3,22.9,34.4,34.4,21.9,36.6
+arxiv,adding_detail (model-edited),555,30.3,57.3,95.7,23.6,38.0,82.7,52.3,43.8,72.6
+reddit,adding_detail (model-edited),331,41.7,78.5,92.7,23.2,39.3,81.9,61.6,65.6,70.4
+story_generation,adding_detail (model-edited),571,34.7,82.1,92.3,32.1,56.9,87.0,25.4,59.5,62.7
+wikihow,adding_detail (model-edited),58,45.5,84.5,91.4,32.7,56.9,82.8,58.6,56.9,74.1
+wikipedia,adding_detail (model-edited),400,41.7,86.2,93.8,28.0,67.0,81.8,54.0,61.3,63.7

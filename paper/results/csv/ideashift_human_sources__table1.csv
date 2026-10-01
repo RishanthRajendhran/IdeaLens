@@ -1,0 +1,9 @@
+Arm,Label,n,IdeaLens · outline (paraphrased),IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline (paraphrased),IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+source (the person's document),clear human (FPR),237,3.4,3.4,2.1,0.8,2.1,2.5,2.5,0.8,0.4
+level 0 (type line),model ideas (TPR),237,94.9,98.7,99.2,73.8,93.2,99.6,68.4,0.0,100.0
+level 1 (topic line),model ideas (TPR),237,91.1,98.3,99.6,69.2,92.4,99.6,59.5,0.4,100.0
+level 2 (themes),"mixed, AI-leaning (fire rate)",237,86.1,97.0,98.7,65.8,88.6,98.7,57.0,0.0,100.0
+level 3 (themes and structure),"mixed, AI-leaning (fire rate)",237,78.9,97.5,99.6,63.7,90.3,98.3,54.0,0.0,99.6
+level 4 (themes and full outline),"mixed, human-leaning (fire rate)",237,23.6,75.1,94.9,16.0,48.5,95.4,29.5,0.0,98.3
+level 5 (the source's outline),"human ideas, AI prose (FPR)",237,6.8,54.4,86.5,6.8,36.3,78.5,16.0,0.0,92.4
+"AUC, levels 0-1 vs source",,,0.991,0.998,0.999,0.964,0.991,0.997,0.980,0.425,0.998

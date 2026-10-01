@@ -1,0 +1,19 @@
+extends: _base.yaml
+name: LAMP — professional writers editing model prose
+number: 16
+group: Idea provenance
+asks: A model drafts, an expert rewrites it. Does editing by a professional defeat the verdict?
+upstream: LAMP. Paired pre-edit and post-edit documents, expert editors.
+data_dir: test16_lamp
+legacy_item_stem: lamp   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: done
+report:
+  group_by: [arm]
+  paired: true
+notes: >
+  BOTH ARMS ARE THE MODEL'S IDEAS, so both are AI and every cell is a detection
+  rate rather than a mixed comparison. The question is the DROP from pre-edit to
+  post-edit: how much does professional rewriting cost the detector?
+
+  Every document is under 500 words, so there is no length contrast to read here.

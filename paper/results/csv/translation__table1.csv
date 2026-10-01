@@ -1,0 +1,4 @@
+Arm,Rate,IdeaLens,ProseLens,Pangram 4
+Human pages,FPR,3/1200 -> 3/1197,0/1200 -> 3/1197,0/1198 -> 26/1197
+Level 0 (model ideas),TPR,1141/1200 -> 1130/1200,896/1200 -> 1178/1200,942/1200 -> 1200/1200
+"Level 5 (human ideas, model prose)",FPR,13/1200 -> 9/1197,419/1200 -> 571/1197,616/1200 -> 1161/1197

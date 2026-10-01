@@ -1,0 +1,9 @@
+Set,Draw,Condition,documents,same verdict in all 5 runs,pairwise agreement,mean per-document SD of P(AI),TPR range over runs,FPR range over runs
+DetectRL-X,near,(a) extractor,60,65.0%,84.0%,0.100,75.0–86.4,18.8–25.0
+DetectRL-X,random,(a) extractor,60,91.7%,95.7%,0.037,86.7–100.0,0.0–0.0
+MELD,near,(a) extractor,80,32.5%,65.8%,0.118,52.7–68.9,0.0–66.7
+MELD,random,(a) extractor,80,93.8%,97.3%,0.018,82.5–92.5,0.0–0.0
+Saha,near,(a) extractor,60,66.7%,83.7%,0.064,84.7–91.5,0.0–0.0
+Saha,random,(a) extractor,60,96.7%,98.3%,0.007,96.7–100.0,0.0–0.0
+all sets,random,(a) extractor,200,94.0%,97.1%,0.021,,
+all sets,near,(a) extractor,200,52.5%,76.6%,0.096,,

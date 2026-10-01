@@ -1,0 +1,15 @@
+Editor or generator,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+gemma3-12B,clean AI (model-written),745,99.5,100.0,100.0,89.7,98.4,100.0,80.4,0.0,100.0
+gemma3-27B,clean AI (model-written),742,100.0,100.0,100.0,87.2,98.5,100.0,68.5,0.0,100.0
+gpt-oss-120B,clean AI (model-written),532,95.1,99.8,100.0,61.3,83.3,98.9,74.8,73.9,100.0
+gpt-oss-20B,clean AI (model-written),372,83.1,85.5,96.8,61.3,17.2,90.1,49.5,0.0,98.4
+llama3.1-8B,clean AI (model-written),347,93.1,99.7,99.7,87.0,41.5,100.0,51.6,0.0,100.0
+llama3.3-70B,clean AI (model-written),338,95.6,99.1,99.7,90.2,72.5,99.4,74.0,20.4,99.7
+qwen2.5-72B,clean AI (model-written),562,98.6,99.8,100.0,96.3,85.9,100.0,91.3,58.7,100.0
+qwen2.5-7B,clean AI (model-written),408,92.6,99.3,100.0,87.3,25.0,100.0,58.3,0.5,100.0
+gpt-oss-120B,"model-edited (7 categories, adding_detail excluded)","3,826",8.9,16.5,54.8,6.8,11.1,40.0,13.5,1.6,56.5
+llama3.3-70B,"model-edited (7 categories, adding_detail excluded)","5,175",16.4,31.1,65.5,12.4,20.1,49.7,41.7,32.7,57.2
+qwen2.5-72B,"model-edited (7 categories, adding_detail excluded)","5,085",15.4,28.9,58.1,11.8,19.1,45.1,40.6,30.8,56.6
+gpt-oss-120B,adding_detail (model-edited),513,26.5,60.0,91.8,15.8,34.1,81.9,20.7,19.7,86.0
+llama3.3-70B,adding_detail (model-edited),673,37.0,79.8,93.8,28.7,55.9,81.1,49.2,64.3,53.5
+qwen2.5-72B,adding_detail (model-edited),729,42.4,81.8,94.8,33.6,57.1,87.2,62.0,74.6,67.4

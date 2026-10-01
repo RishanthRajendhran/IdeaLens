@@ -1,0 +1,38 @@
+Below is a JSON array of {{N}} raw candidate features. Each has: raw_name, source (a format name or "AGNOSTIC"), direction (human|ai), tier (programmatic|judgment), output_type, description, operationalization.
+
+=== RAW FEATURES ===
+{{BANKS}}
+
+TASK
+Produce a consolidated bank. Steps:
+
+1. CLUSTER raw features that measure the SAME underlying construct, even when named or worded differently and even across different formats. Merge each cluster into ONE canonical feature.
+   - Merge true synonyms aggressively. "recap redundancy", "semantic_restatement", "internal_redundancy" -> one feature.
+   - Do NOT merge features that are merely related but measure different things (e.g. "terminal synthesis ending" vs "generic moralizing closure" are distinct). When unsure, keep them separate -- losing a real tell is worse than a near-duplicate surviving.
+   - If a per-format tell matches a feature from the agnostic pass, merge them and BUILD ON the agnostic version (it is already format-general).
+
+2. For each canonical feature output:
+   - name              : canonical snake_case handle
+   - description        : 1-2 sentence summary
+   - direction          : "human" or "ai" (if sources conflict, take the majority and set direction_conflict=true)
+   - tier               : "programmatic" or "judgment"
+   - output_type        : "fraction_0_1" | "binary_0_1" | "ordinal_0_3" | "count"
+   - scope              : "universal" if the construct is format-independent -- proposed by the agnostic pass and/or by three or more distinct formats, or it clearly computes the same way on any prose; "format_specific" if it only makes sense for particular formats (e.g. an encyclopedia-section template, a newsroom correction notice).
+   - source_formats     : the distinct sources that proposed it (dedup; include "AGNOSTIC" if any)
+   - operationalization : a SINGLE, COMPLETE, FORMAT-AGNOSTIC scoring spec, synthesized as the best version across the cluster. A separate model given ONLY this text plus one outline (ordered list of {role_name, content, verbatim} items) must produce the exact value with no further guidance. You MUST:
+                            * strip format-specific hardcoding (specific role-name sets that only exist in one format) and restate it in general terms (role CATEGORIES or content judgments) so it computes on any format; keep a role name only if that role is genuinely cross-format;
+                            * define every category, threshold, and aggregation explicitly;
+                            * handle edge cases (empty/short outline, zero eligible items);
+                            * for judgment rubrics, fully define each 0/1/2/3 (or yes/no) anchor.
+   - subsumes           : the raw_names merged into this feature.
+   - direction_conflict : true only if sources disagreed on direction.
+
+3. Keep format_specific tells rather than discarding them -- tag them and list their formats.
+
+RULES
+- Prefer format-agnostic operationalizations; only retain a format-specific spec when the tell is inherently format-bound.
+- Preserve the programmatic/judgment distinction. If a cluster contains BOTH a deterministic (programmatic) computation and a genuinely different reading-based (judgment) computation of the same idea, you may emit TWO canonical features (one per tier) -- but only when they truly differ in HOW they compute; otherwise keep the more robust single version.
+- NO surface/lexical features (word-list matching on content) -- the outlines are paraphrased; drop or reformulate any that slipped through.
+- Every canonical feature must be topic-invariant (never about the document's subject/domain).
+
+Return ONLY JSON: {"canonical_features": [ ... ]}.

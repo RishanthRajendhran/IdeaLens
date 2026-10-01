@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "required": ["features"],
+  "additionalProperties": false,
+  "properties": {
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "description", "direction", "tier", "output_type", "operationalization", "rationale"],
+        "properties": {
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "direction": {"enum": ["human", "ai"]},
+          "tier": {"enum": ["programmatic", "judgment"]},
+          "output_type": {"enum": ["fraction_0_1", "binary_0_1", "ordinal_0_3", "count"]},
+          "operationalization": {"type": "string"},
+          "rationale": {"type": "string"}
+        }
+      }
+    }
+  }
+}

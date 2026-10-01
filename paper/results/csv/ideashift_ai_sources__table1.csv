@@ -1,0 +1,8 @@
+Arm,Label,n,IdeaLens · outline (paraphrased),IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline (paraphrased),IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+source (a model's document),clear AI (TPR),263,98.1,98.5,100.0,92.4,94.3,99.2,77.2,53.6,73.4
+level 0 (type line),clear AI (TPR),263,98.1,99.6,100.0,84.4,96.2,100.0,74.9,0.0,100.0
+level 1 (topic line),clear AI (TPR),263,98.5,100.0,100.0,89.0,96.6,100.0,72.6,0.0,100.0
+level 2 (themes),clear AI (TPR),263,99.2,100.0,100.0,88.2,96.2,100.0,75.7,0.0,100.0
+level 3 (themes and structure),clear AI (TPR),263,96.6,100.0,100.0,89.4,97.7,100.0,75.7,0.0,100.0
+level 4 (themes and full outline),clear AI (TPR),263,98.9,100.0,100.0,93.9,97.7,100.0,78.3,0.0,100.0
+level 5 (the source's outline),clear AI (TPR),263,98.5,100.0,100.0,93.5,97.3,100.0,79.8,0.0,99.2

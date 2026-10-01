@@ -1,0 +1,80 @@
+defaults:
+  pooling: logit_mean
+  batch_size: 32
+models:
+  nemotron_1m_full:
+    name: Nemotron 30B
+    backend: nemotron_tinker
+    setting: full
+    corpus: deleaked_outlines_1m
+    weights: ${IDEADET_NEMO_1M_FULL_WEIGHTS:-}
+    detail: 'LoRA rank 64, one epoch, trained on de-leaked outlines. The headline arm. `weights` is a Tinker sampler path;
+      export IDEADET_NEMO_1M_FULL_WEIGHTS or set it here.
+
+      '
+  modernbert_1m_full:
+    name: ModernBERT-large
+    backend: hf_encoder
+    setting: full
+    corpus: deleaked_outlines_1m
+    checkpoint: ${IDEADET_MB_1M_FULL_CKPT:-}
+    human_index: 0
+    max_length: 8192
+    detail: 'Trained end to end on de-leaked outlines. The replication arm: a second architecture on the same corpus, so a
+      result that appears in only one of them is an architecture artifact.
+
+      '
+  modernbert_1m_docs:
+    name: ModernBERT-large (document-trained)
+    backend: hf_encoder
+    setting: docs
+    corpus: deleaked_outlines_1m
+    checkpoint: ${IDEADET_MB_1M_DOCS_CKPT:-}
+    human_index: 0
+    max_length: 8192
+    detail: 'THE COUNTERFACTUAL. Same corpus, same recipe, trained on raw document text instead of outlines. If it tracks
+      prose where the outline arms track ideas, the representation is doing the work rather than the data.
+
+      '
+  nemotron_1m_docs:
+    name: Nemotron 30B (document-trained)
+    backend: nemotron_tinker
+    setting: docs
+    corpus: deleaked_outlines_1m
+    weights: ${IDEADET_NEMO_1M_DOCS_WEIGHTS:-}
+    detail: 'The counterfactual at the other architecture: same corpus and recipe, trained on raw document text. Paired with
+      modernbert_1m_docs so the control is not a single-architecture result either.
+
+      '
+  logistic_1m_full:
+    name: Logistic (text-embedding-3-large)
+    backend: logistic
+    setting: full
+    corpus: deleaked_outlines_1m
+    checkpoint: ${IDEADET_LOGISTIC_1M_CKPT:-}
+    embedding_model: text-embedding-3-large
+    embedding_cache: ${IDEADET_CACHE_ROOT:-.scratch/cache}/embeddings_1m.npz
+    human_index: 1
+    detail: 'Cheap, transparent, and multilingual for free because the embedding is -- the only arm that can attempt fully
+      source-language classification with no English step.
+
+      '
+  pangram_4:
+    name: Pangram 4
+    backend: pangram
+    setting: docs
+    pangram_model: pangram-4
+    detail: The surface-detector baseline, and the source the training corpus's labels are distilled from. The paper counts
+      a text as AI when its AI fraction plus half its AI-assisted fraction is at least 0.5.
+  qwen_1m_full:
+    name: Qwen (local decoder)
+    backend: qwen_local
+    setting: full
+    corpus: deleaked_outlines_1m
+    checkpoint: ${IDEADET_QWEN_1M_CKPT:-}
+    max_length: 8192
+    batch_size: 8
+    detail: 'Local decoder arm under the same generative scoring contract. The only arm whose memory is genuinely bounded
+      by input length.
+
+      '

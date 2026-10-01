@@ -1,0 +1,7 @@
+Rows · length,Label,n,IdeaLens: % unchanged,IdeaLens-ModernBERT-L: % unchanged
+all · < 500,AI + human,60,95.0,100.0
+all · >= 500,AI + human,"2,434",98.6,96.5
+AI · < 500,AI,20,100.0,100.0
+AI · >= 500,AI,"1,274",97.9,94.1
+human · < 500,human,40,92.5,100.0
+human · >= 500,human,"1,160",99.5,99.2

@@ -1,0 +1,7 @@
+Target ratio,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+30,"model-edited (7 categories, adding_detail excluded)","4,166",6.8,13.9,40.9,5.0,8.4,29.4,16.4,12.5,36.8
+50,"model-edited (7 categories, adding_detail excluded)","2,410",9.3,20.8,55.4,7.2,13.2,39.4,22.9,14.4,53.8
+70,"model-edited (7 categories, adding_detail excluded)","7,510",19.5,35.0,71.9,14.9,23.6,56.3,46.7,32.6,68.9
+30,adding_detail (model-edited),351,21.3,53.0,77.8,16.0,35.0,60.1,28.8,37.0,45.0
+50,adding_detail (model-edited),400,30.2,69.8,96.0,20.2,39.2,84.8,38.2,44.8,69.8
+70,adding_detail (model-edited),"1,164",42.9,83.8,97.6,33.0,59.0,90.4,54.6,66.1,73.5

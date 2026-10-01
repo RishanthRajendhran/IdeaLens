@@ -1,0 +1,29 @@
+extends: _base.yaml
+name: DetectionAI
+number: 10
+group: Out of domain
+asks: Human, AI, and AI put through a commercial humanizer.
+upstream: UChicago DetectionAI. Human / AI / humanised arms.
+data_dir: test10_detectionai
+legacy_item_stem: detectionai   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+legacy_npz_stem: detectionai   # the stem this eval's predictions were written under
+                        # before this repository existed; read by
+                        # scripts/data/import_results.py
+
+report:
+  group_by: [arm]
+  in_set: true
+
+caveats:
+  - >
+    Only about 11% of the corpus is human (1,909 of 17,178). Any FPR estimated
+    from it rests on that slice, so print n beside every rate.
+  - >
+    The released format encoder failed badly on this corpus -- thousands of
+    novel excerpts labelled "News Article" and news articles labelled
+    "Structured Data" at median confidence around 0.2. Use the LLM format
+    backend here.
+  - >
+    The under-50-words split is structurally impossible for an outline-based
+    detector. State the exclusion rather than posting a bad number.

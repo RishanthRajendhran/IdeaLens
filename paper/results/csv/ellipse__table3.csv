@@ -1,0 +1,9 @@
+Arm,Model,0.1%,0.5%,2%,5%
+all essays,IdeaLens · outline,0.0,0.3,1.4,9.8
+all essays,IdeaLens · document,0.0,0.0,0.0,16.2
+all essays,ProseLens,0.0,0.0,0.0,5.5
+all essays,IdeaLens-ModernBERT-L · outline,0.1,1.7,9.6,27.8
+all essays,IdeaLens-ModernBERT-L · document,0.0,0.0,0.0,5.7
+all essays,ProseLens-ModernBERT-L,0.0,0.0,0.8,8.9
+all essays,EditLens-Llama-3B (cal.),0.0,0.0,0.0,0.1
+all essays,Binoculars (cal.),0.0,0.4,5.5,14.2

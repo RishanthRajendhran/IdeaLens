@@ -1,0 +1,31 @@
+Generator,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+claude-3-5-sonnet-20241022,English · clear AI (ai_plain),767,96.2,97.5,100.0,78.4,84.7,99.9,98.8,66.9,100.0
+gemini-1.5-pro-002,English · clear AI (ai_plain),703,97.4,97.9,99.9,82.1,91.9,99.4,98.3,87.2,99.9
+gpt-3.5-turbo-0125,English · clear AI (ai_plain),685,98.5,99.6,100.0,95.2,91.1,99.7,97.5,59.9,100.0
+gpt-4o-2024-11-20,English · clear AI (ai_plain),583,95.0,96.6,100.0,84.0,70.0,99.7,90.7,26.6,100.0
+llama-3.3-70b-instruct,English · clear AI (ai_plain),548,94.7,95.1,100.0,83.8,84.9,98.7,93.2,86.9,100.0
+qwen2.5-72b-instruct,English · clear AI (ai_plain),667,96.7,99.1,100.0,84.1,85.5,99.9,96.0,77.4,100.0
+claude-3-5-sonnet-20241022,English · attacked AI (humanized),711,84.2,84.0,94.1,66.1,58.9,87.2,73.4,4.9,95.1
+gemini-1.5-pro-002,English · attacked AI (humanized),636,83.6,82.1,93.6,67.6,59.9,87.1,69.3,9.6,93.9
+gpt-3.5-turbo-0125,English · attacked AI (humanized),607,86.7,85.0,94.4,79.6,67.1,87.0,74.6,12.0,96.0
+gpt-4o-2024-11-20,English · attacked AI (humanized),540,82.0,79.4,92.2,73.9,57.0,84.1,69.6,7.4,94.6
+llama-3.3-70b-instruct,English · attacked AI (humanized),486,82.5,75.7,92.2,69.3,55.6,82.9,67.1,17.3,94.0
+qwen2.5-72b-instruct,English · attacked AI (humanized),612,87.7,84.2,94.3,73.0,58.2,88.4,70.8,13.4,95.8
+claude-3-5-sonnet-20241022,non-English · clear AI (ai_plain),737,92.8,90.2,99.6,80.1,–,–,94.8,17.6,100.0
+gemini-1.5-pro-002,non-English · clear AI (ai_plain),685,95.3,90.7,99.4,89.1,–,–,95.2,35.9,99.9
+gpt-3.5-turbo-0125,non-English · clear AI (ai_plain),547,91.8,85.0,96.7,88.1,–,–,83.9,26.0,99.6
+gpt-4o-2024-11-20,non-English · clear AI (ai_plain),689,96.7,97.0,100.0,90.4,–,–,93.3,10.0,100.0
+llama-3.3-70b-instruct,non-English · clear AI (ai_plain),463,90.5,85.3,98.3,83.8,–,–,82.3,67.4,98.5
+qwen2.5-72b-instruct,non-English · clear AI (ai_plain),756,90.6,88.9,99.7,80.7,–,–,83.9,20.0,99.9
+claude-3-5-sonnet-20241022,non-English · attacked AI (humanized),681,79.1,70.5,87.1,64.8,–,–,62.4,1.8,88.5
+gemini-1.5-pro-002,non-English · attacked AI (humanized),604,80.8,71.7,87.4,72.2,–,–,62.7,3.1,89.2
+gpt-3.5-turbo-0125,non-English · attacked AI (humanized),523,80.9,72.8,88.5,76.3,–,–,68.5,1.9,90.2
+gpt-4o-2024-11-20,non-English · attacked AI (humanized),609,80.8,77.5,88.0,76.8,–,–,64.2,1.0,89.7
+llama-3.3-70b-instruct,non-English · attacked AI (humanized),427,77.3,69.1,86.9,72.8,–,–,66.5,6.6,85.7
+qwen2.5-72b-instruct,non-English · attacked AI (humanized),692,76.6,71.7,86.4,67.3,–,–,64.0,1.7,87.6
+claude-3-5-sonnet-20241022,English · ai_human_edited (a person rewrote model content),44,97.7,95.5,100.0,84.1,72.7,86.4,75.0,15.9,100.0
+gemini-1.5-pro-002,English · ai_human_edited (a person rewrote model content),51,96.1,94.1,98.0,74.5,66.7,90.2,64.7,25.5,100.0
+gpt-3.5-turbo-0125,English · ai_human_edited (a person rewrote model content),50,96.0,96.0,100.0,92.0,84.0,96.0,80.0,24.0,100.0
+gpt-4o-2024-11-20,English · ai_human_edited (a person rewrote model content),31,100.0,90.3,100.0,80.6,67.7,93.5,64.5,9.7,100.0
+llama-3.3-70b-instruct,English · ai_human_edited (a person rewrote model content),34,85.3,85.3,100.0,79.4,64.7,94.1,61.8,35.3,100.0
+qwen2.5-72b-instruct,English · ai_human_edited (a person rewrote model content),38,97.4,97.4,100.0,86.8,76.3,94.7,65.8,23.7,100.0

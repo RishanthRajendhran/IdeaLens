@@ -1,0 +1,22 @@
+Generator,Arm,n,IdeaLens · outline (paraphrased),IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline (paraphrased),IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+gpt-5.6-luna,source (a model's document),65,98.5,98.5,100.0,90.8,93.8,98.5,76.9,61.5,72.3
+gpt-5.6-sol,source (a model's document),131,98.5,97.7,100.0,93.1,95.4,99.2,80.2,50.4,71.8
+gpt-5.6-terra,source (a model's document),67,97.0,100.0,100.0,92.5,92.5,100.0,71.6,52.2,77.6
+gpt-5.6-luna,level 0 (type line),65,98.5,100.0,100.0,87.7,96.9,100.0,81.5,0.0,100.0
+gpt-5.6-sol,level 0 (type line),131,97.7,99.2,100.0,86.3,95.4,100.0,68.7,0.0,100.0
+gpt-5.6-terra,level 0 (type line),67,98.5,100.0,100.0,77.6,97.0,100.0,80.6,0.0,100.0
+gpt-5.6-luna,level 1 (topic line),65,100.0,100.0,100.0,89.2,98.5,100.0,84.6,0.0,100.0
+gpt-5.6-sol,level 1 (topic line),131,99.2,100.0,100.0,91.6,95.4,100.0,69.5,0.0,100.0
+gpt-5.6-terra,level 1 (topic line),67,95.5,100.0,100.0,83.6,97.0,100.0,67.2,0.0,100.0
+gpt-5.6-luna,level 2 (themes),65,98.5,100.0,100.0,90.8,95.4,100.0,84.6,0.0,100.0
+gpt-5.6-sol,level 2 (themes),131,99.2,100.0,100.0,88.5,96.2,100.0,70.2,0.0,100.0
+gpt-5.6-terra,level 2 (themes),67,100.0,100.0,100.0,85.1,97.0,100.0,77.6,0.0,100.0
+gpt-5.6-luna,level 3 (themes and structure),65,98.5,100.0,100.0,93.8,98.5,100.0,84.6,0.0,100.0
+gpt-5.6-sol,level 3 (themes and structure),131,94.7,100.0,100.0,90.8,97.7,100.0,68.7,0.0,100.0
+gpt-5.6-terra,level 3 (themes and structure),67,98.5,100.0,100.0,82.1,97.0,100.0,80.6,0.0,100.0
+gpt-5.6-luna,level 4 (themes and full outline),65,100.0,100.0,100.0,93.8,96.9,100.0,84.6,0.0,100.0
+gpt-5.6-sol,level 4 (themes and full outline),131,99.2,100.0,100.0,93.9,97.7,100.0,76.3,0.0,100.0
+gpt-5.6-terra,level 4 (themes and full outline),67,97.0,100.0,100.0,94.0,98.5,100.0,76.1,0.0,100.0
+gpt-5.6-luna,level 5 (the source's outline),65,100.0,100.0,100.0,98.5,96.9,100.0,81.5,0.0,100.0
+gpt-5.6-sol,level 5 (the source's outline),131,98.5,100.0,100.0,93.9,99.2,100.0,79.4,0.0,100.0
+gpt-5.6-terra,level 5 (the source's outline),67,97.0,100.0,100.0,88.1,94.0,100.0,79.1,0.0,97.0

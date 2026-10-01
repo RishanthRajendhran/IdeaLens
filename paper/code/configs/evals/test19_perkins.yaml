@@ -1,0 +1,25 @@
+extends: _base.yaml
+name: Perkins et al. — six surface evasion techniques
+number: 19
+group: Adversarial robustness
+asks: Six published techniques for defeating a detector, all of them surface edits.
+metric: fire
+positive: ai
+upstream: Perkins et al. 15 baseline plus 89 adversarially manipulated documents. Small enough to run entire.
+data_dir: test19_perkins
+legacy_item_stem: perkins   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: done
+report:
+  metric: fire
+  group_by: [arm]
+notes: >
+  EVERY ADVERSARIAL VARIANT IS A SURFACE EDIT applied to an already model-written
+  sample, so all of them stay AI — which is the point: our claim is that surface
+  edits should not move an idea-level verdict. The technique is kept per row so
+  the six can be read separately.
+caveats:
+  - >
+    The human arm is 10 documents, far below the 25-document floor for any
+    threshold fitted on this set. Perkins can report detection rates against
+    calibration-derived cuts and NOTHING ELSE.

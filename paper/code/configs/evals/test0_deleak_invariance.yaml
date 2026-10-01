@@ -1,0 +1,28 @@
+extends: _base.yaml
+name: De-leak invariance
+number: 0
+group: Pipeline ablations
+asks: >
+  Does removing the wording lifted from the source change the verdict?
+upstream: Our own construction, over held-out source documents.
+data_dir: test0_deleak_invariance
+legacy_npz_stem: test_orig   # the stem this eval's predictions were written under
+                        # before this repository existed; read by
+                        # scripts/data/import_results.py
+
+scoring:
+  # The point of this eval is the PAIR, so both stages are scored on the same
+  # documents and read as a paired shift.
+  stage: both
+  models: [nemotron_1m_full, modernbert_1m_full]
+
+report:
+  paired: true
+  pair_on: id                       # pair by document id, never by row position
+  group_by: [format]
+
+notes: >
+  A pipeline sanity check, not a result: present it early and keep it short.
+  Report label agreement at the deployed cut, the mean signed score shift,
+  Spearman, and paired CIs on both dTPR and dFPR -- the AI side is needed or
+  dFPR cannot be reported at all.

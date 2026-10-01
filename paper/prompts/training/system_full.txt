@@ -1,0 +1,1 @@
+Given a role-labelled outline of a document, answer with one word: human if the source document was human-written, ai if it was AI-generated.

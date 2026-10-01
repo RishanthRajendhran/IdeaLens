@@ -1,0 +1,1025 @@
+{
+ "format_slug": "user_reviews",
+ "n_roles": 45,
+ "source": "role discovery, consolidation pass (role_consolidation_xhigh.json)",
+ "final_roles": [
+  {
+   "assignment_test": "Select this role when removing the item would leave readers unable to determine exactly which entity, offering, location, version, or variant the review evaluates.",
+   "definition": "A bounded identifying component establishes the specific subject to which the review and its evaluations apply.",
+   "distinguished_from": "Unlike Factual Description or Reference Aid, it establishes the review target itself rather than characterizing it or organizing supplementary facts about it.",
+   "examples": [
+    {
+     "doc": "ai:326a4e0346f7bb0fb9f40739f9041d7d487fb1c65a579b8fc43378fec7af308e",
+     "excerpt": "A title identifies Eurostars Danube Budapest.",
+     "item_id": 1
+    },
+    {
+     "doc": "human:a7854cd91e93a69d00d878449c81da775d576133d55d0febef297ba12d015eca",
+     "excerpt": "Taylor Medical Wellness, Weight Loss and Aesthetic Group is listed at 5901 Peachtree Dunwoody Rd C25, Atlanta, Georgia 30328.",
+     "item_id": 1
+    }
+   ],
+   "name": "Target Identification",
+   "subsumes": [
+    "B01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate relevant information about the reviewer's situation, aims, needs, prior familiarity, expectations, or intended experiential perspective.",
+   "definition": "This role supplies circumstances, purposes, needs, expectations, or prior experience that frame the perspective from which the review is given.",
+   "distinguished_from": "Unlike Review Framing, it explains the reviewer's perspective or situation rather than defining the document's agenda or interpretive purpose.",
+   "examples": [
+    {
+     "doc": "ai:a925881238e73e060c53167abbc2c9380242699701455269fa99888063354321",
+     "excerpt": "The reviewer assesses Jeslot88 Club from a serious player's perspective, prioritizing payment speed, game quality, stability, and convenience; the platform initially appears to be a balanced gaming hub for active players, with slots, live games, and region-dependent sportsbook options rather than a bonus-led promotion site.",
+     "item_id": 1
+    },
+    {
+     "doc": "human:c8a9456bbe9b7942b9be755a2dcd503eafe5f52b3ade155f66e740d4bd3e354b",
+     "excerpt": "The writer will test the products in her hair and later report their actual performance.",
+     "item_id": 9
+    }
+   ],
+   "name": "Contextual Framing",
+   "subsumes": [
+    "B02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an explicit framing of what review discourse or a review collection is for, will cover, centrally ask, or invite readers to consider.",
+   "definition": "This role establishes the organizing purpose, planned coverage, central inquiry, or interpretive lens of a review or assembled review collection.",
+   "distinguished_from": "Unlike Contextual Framing, it frames the document or collection rather than the reviewer's circumstances, and unlike Navigation Aid, it states the agenda rather than providing wayfinding.",
+   "examples": [
+    {
+     "doc": "human:4258af1fe0c937e31ab1c5bd8aee093670f6c06ad29bf7f6433c228a3d761d00",
+     "excerpt": "The evaluation considers free and paid functionality and prices, audience and profile authenticity, design and usability, safety and privacy, and the likelihood of securing an encounter.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:accb73322b6495e79e4550aafecb5dd1cc9fecbf1d650650536a60b57ba8459a",
+     "excerpt": "The collection opens by presenting personal testimonies about Jesus as prompts for readers to reflect on their own experiences, become humble, and feel profound gratitude.",
+     "item_id": 1
+    },
+    {
+     "doc": "ai:f99cd0659d93986859ba91613d8236c38d096a369ee9101309e04a9dbd50a94c",
+     "excerpt": "The review proposes an impartial assessment of Legacy Healing Center’s care, facilities, staff, and overall experience to determine whether it merits distinction.",
+     "item_id": 3
+    }
+   ],
+   "name": "Review Framing",
+   "subsumes": [
+    "I-human:1f78f8f45d071e8074af5ea86b762fbd299d97f15574ee2dede898a24e214b96-01",
+    "I-human:accb73322b6495e79e4550aafecb5dd1cc9fecbf1d650650536a60b57ba8459a-01",
+    "I-human:4258af1fe0c937e31ab1c5bd8aee093670f6c06ad29bf7f6433c228a3d761d00-01",
+    "I-human:afd99ac68aee5ca630d1f70c29e530ac34c297912104c48c4eedf947278027ad-01",
+    "I-human:b6d01a8188fb3c177266c4727498f851bd5bdb8f048b6e5738a390c853047695-01",
+    "I-ai:00bb5332a33f5c41c5487351df52e2b8eb578e8b3740496c720688091a6537e4-01",
+    "I-ai:078a0e60f156c9bdc237e4cd1f97b9d3e7575c3bd8e2ed23519c6d657bca2ffe-01",
+    "I-ai:20d4d2ef3768863ceedb25f655a35bd75b54bb44e4f9ed994feee23c5b76231c-01",
+    "I-ai:4126229421d78d057b3c963e34d7ee8878c8057854e716ed227962df86e25d70-01",
+    "I-ai:56e6407c7394c2f95fd98cef338af8ee04a3bc2a1831e0062c259c6f7921fae4-01",
+    "I-ai:591d97a0f0d1614d35964eda9522abc1ad7e4a0fad22681f32fb6621c6b219c2-01",
+    "I-ai:61b220a0aa435a66e1ce1f53b72088be320475c08f7fff694f1561a48d3eae05-01",
+    "I-ai:93f04a4c889081ff81d8e567dbfff04a8a1f54815d39242e94a618a95a6aa289-01",
+    "I-ai:eb257bff4ba355aa025159109f84d8dd0ec22aa84afb51ff352a129db6982519-01",
+    "I-ai:f99cd0659d93986859ba91613d8236c38d096a369ee9101309e04a9dbd50a94c-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate historical, creator-related, developmental, or design background explaining how the reviewed subject reached its present form.",
+   "definition": "This role supplies the reviewed subject's origins, creator context, development history, or design intentions to explain its present form.",
+   "distinguished_from": "Unlike Factual Description, it explains origins or development rather than current characteristics, and unlike Contextual Framing, it concerns the subject rather than the reviewer.",
+   "examples": [
+    {
+     "doc": "human:59c1b5481e51396ea91b4ce90952fce3b1ae5f09251b7288b63a258cf8e0d75b",
+     "excerpt": "Space Cat Audio Technologies began in the UK with Arron Courts and Abegael Saward modifying vintage instruments, then developed original performance-oriented devices with circuit designers John W Oram and Dave Cherry, combining practical live control with experimental circuit-bending influences.",
+     "item_id": 2
+    },
+    {
+     "doc": "human:ce725520588a375dcaf612b72d4698afec5fc6d33a3117895083cdf385f6694c",
+     "excerpt": "The Fort Worth municipal course began as a nine-hole country club in 1924, entered city ownership in 1938, was redesigned in the early 1960s, and reopened after its 2024 centennial following a multimillion-dollar renovation lasting more than two years.",
+     "item_id": 1
+    },
+    {
+     "doc": "ai:632a5801c91e8f36e7cbb45179de20f7617905160df1c0476dbf5fe1ceeb8f14",
+     "excerpt": "The company is said to have been founded by parents who wanted mobility after having children to be less restrictive, leading them to create baby gear that folds rapidly, packs compactly, and works reliably in varied settings.",
+     "item_id": 10
+    }
+   ],
+   "name": "Subject Background",
+   "subsumes": [
+    "I-human:59c1b5481e51396ea91b4ce90952fce3b1ae5f09251b7288b63a258cf8e0d75b-01",
+    "I-human:ce725520588a375dcaf612b72d4698afec5fc6d33a3117895083cdf385f6694c-01",
+    "I-human:ed2b72231e5dbeed52418224f4d8aad934465dafb7e843081003727ee4de4bc4-01",
+    "I-ai:632a5801c91e8f36e7cbb45179de20f7617905160df1c0476dbf5fe1ceeb8f14-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item is primarily present to state what the subject, setting, feature, condition, operation, or recurring process is like without organizing that information as evaluation, interpretation, or a specific episode.",
+   "definition": "This role reports non-evaluative characteristics, features, conditions, arrangements, operations, or recurring processes associated with the reviewed subject.",
+   "distinguished_from": "Unlike Aspect Evaluation, it does not chiefly assign quality or value, and unlike Experience Account, it is not organized around a particular event or interaction.",
+   "examples": [
+    {
+     "doc": "human:8f9f798b11716c7ff2bfc3d54311295b3cbffa4416419eb4241868b0b6e63df9",
+     "excerpt": "The brand’s website offers one unit for €59.99 at a claimed 50% discount, or three for €164.99 with two additional units as gifts, described as a 72% discount.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:013a223bb7117919097506853d90c303f49f464ff350ee47bfe1b6d286357c88",
+     "excerpt": "Selected Arabica seed spends one year in a nursery before transplantation into straight field rows spaced three meters apart with 1.5-meter row widths; the initial harvest occurs after 18 months and is termed a fly crop.",
+     "item_id": 8
+    }
+   ],
+   "name": "Factual Description",
+   "subsumes": [
+    "B03",
+    "I-human:013a223bb7117919097506853d90c303f49f464ff350ee47bfe1b6d286357c88-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a non-evaluative summary of the narrative, arguments, subject matter, scope, or internal progression represented within a reviewed work.",
+   "definition": "This role summarizes the narrative, arguments, subject matter, scope, or internal progression of a content-bearing reviewed work.",
+   "distinguished_from": "Unlike Factual Description, it condenses what a work presents internally, and unlike Experience Account, it does not recount an episode undergone by the reviewer.",
+   "examples": [
+    {
+     "doc": "human:ed2b72231e5dbeed52418224f4d8aad934465dafb7e843081003727ee4de4bc4",
+     "excerpt": "The book’s largest part, comprising 11 chapters across about 80 pages, examines supposed truths, partial truths, and myths involving Heinrich’s triangle, zero-accident aspirations, human error, priorities, numerical indicators, and attempts to measure safety.",
+     "item_id": 5
+    },
+    {
+     "doc": "human:3a91decf328285f0b0f94263e5b9fa708a2f2adbfc2edac2429d8c03abaf3b73",
+     "excerpt": "San Francisco police lieutenant Ed Cullen is secretly involved with wealthy married Lois Frazer; after Lois fatally shoots her estranged husband Howard when he returns to rob her home, Ed protects her by moving the body to an airport parking lot.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:9fff9841cf87ea73c5efd055392aed816cfee2f77ba5755fb1e32e877c6a4aed",
+     "excerpt": "A paired expectation-setting summary promises practical knowledge about choosing or building smokers, managing fire and smoke, buying quality meat, 11 restaurant recipes, espresso, and beer, while clarifying that readers will not receive hundreds of secret recipes or easy shortcuts.",
+     "item_id": 16
+    }
+   ],
+   "name": "Content Synopsis",
+   "subsumes": [
+    "I-human:ed2b72231e5dbeed52418224f4d8aad934465dafb7e843081003727ee4de4bc4-02",
+    "I-ai:662ee39fe8301db3c1d8caeda0babffb12dc3df8041da283a3994c39db310db6-01",
+    "I-human:3a91decf328285f0b0f94263e5b9fa708a2f2adbfc2edac2429d8c03abaf3b73-01",
+    "I-human:fa485e90bdf7ce0c8cf1883e34448879178c7a8a996aa03ec6122cfd4b8135c9-01",
+    "I-human:c048ccf8f43b69b85785079a9d9f5a567e4a364e9ace562492875ef37a4f4bbe-01",
+    "I-human:b54a847a73ac128abf923a18fb725b97c333b738dc294d9632425ec4e6ebfd01-01",
+    "I-human:d4fa28b308c8b3df2635caf904cc3d8703ed383646086489c1b82766ae1a443d-01",
+    "I-human:f4f862151e8f3828a43df2d1b2418248645478911adf629b00e0e9e199d9c667-02",
+    "I-human:9fff9841cf87ea73c5efd055392aed816cfee2f77ba5755fb1e32e877c6a4aed-02",
+    "I-ai:078a0e60f156c9bdc237e4cd1f97b9d3e7575c3bd8e2ed23519c6d657bca2ffe-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a coherent account of what the reviewer encountered, did, received, or experienced over time.",
+   "definition": "This role recounts a substantively unified event, interaction, use episode, transaction, or sequence from the reviewer's experience.",
+   "distinguished_from": "Unlike Factual Description, it is organized around a particular episode, and unlike Outcome Report, it emphasizes what happened rather than chiefly the resulting change or endpoint.",
+   "examples": [
+    {
+     "doc": "human:017d6b5917dc66ed8515b1ae18f6632e2c9e3c0f21e3a6ba33fd8e31b55ba40d",
+     "excerpt": "M reports in April 2023 that James made her first sexual experience painless and taught her how to please him, leaving her feeling transformed into a woman.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:7be0e72786be56e81841b49b15ebee3c69ef4c137820420a1d41dbf2926e4094",
+     "excerpt": "Removing gluten, dairy, sugar, and other foods initially improved her condition enough that she tapered off medication, believing nutritional health might provide the answer.",
+     "item_id": 6
+    }
+   ],
+   "name": "Experience Account",
+   "subsumes": [
+    "B04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a reported result, change, or consequential state produced through engagement with the reviewed subject, without primarily removing a developed episode or evaluative argument.",
+   "definition": "This role reports a result, change, or consequential state produced through engagement with the reviewed subject or service.",
+   "distinguished_from": "Unlike Experience Account, it centers on the resulting change or endpoint, and unlike Evaluation Rationale, it reports that outcome as the primary information rather than chiefly as support for a judgment.",
+   "examples": [
+    {
+     "doc": "human:15146bd699eb7e6f8f7cf345e636105a81a4997d18a8df696f7e2a0fca7770d5",
+     "excerpt": "After nine months, Sonya had fallen from 247 to 188 pounds; although her goal is 150 pounds, she expects to reach and maintain it with support from Dr. Majid’s team.",
+     "item_id": 7
+    },
+    {
+     "doc": "human:15146bd699eb7e6f8f7cf345e636105a81a4997d18a8df696f7e2a0fca7770d5",
+     "excerpt": "A brief postoperative progress report records a decline from 271 pounds on October 1 to 256 after two weeks on a liquid diet and 187 four months after surgery.",
+     "item_id": 10
+    }
+   ],
+   "name": "Outcome Report",
+   "subsumes": [
+    "I-human:15146bd699eb7e6f8f7cf345e636105a81a4997d18a8df696f7e2a0fca7770d5-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the reviewer's derivation of meaning, thematic significance, explanatory principle, conceptual relationship, or broader implication from the subject or associated evidence.",
+   "definition": "This role derives or explains a meaning, theme, causal principle, symbolic pattern, conceptual relationship, or broader significance conveyed by the reviewed subject or experience.",
+   "distinguished_from": "Unlike Factual Description, it infers significance beyond direct characteristics, and unlike Evaluation Rationale, its main purpose is explanation or interpretation rather than warranting a quality judgment.",
+   "examples": [
+    {
+     "doc": "human:9fff9841cf87ea73c5efd055392aed816cfee2f77ba5755fb1e32e877c6a4aed",
+     "excerpt": "After considering secret recipes, unusual skills, privileged meat sources, and special wood as possible explanations for Franklin’s success, the reviewer concludes that passion and exceptionally hard work are decisive.",
+     "item_id": 6
+    },
+    {
+     "doc": "ai:6adeb42374d666469fb953e15655bd0cf0e6639c81957699ff62dd2276b75dc6",
+     "excerpt": "New York and Singapore externalize different dimensions of Lucie’s identity: New York enables freedom and reinvention, while Singapore embodies family, history, belonging, communal judgment, and tradition.",
+     "item_id": 14
+    },
+    {
+     "doc": "human:eb3f7d10862051da81c8b2f81073dccf3a09d8d63443a17d937f9289401ba83f",
+     "excerpt": "The campground's legacy is said to demonstrate local demand for well-managed, conveniently located places where Michigan residents can enjoy nature and spend time with loved ones.",
+     "item_id": 6
+    }
+   ],
+   "name": "Interpretation",
+   "subsumes": [
+    "I-human:9fff9841cf87ea73c5efd055392aed816cfee2f77ba5755fb1e32e877c6a4aed-01",
+    "I-human:f4f862151e8f3828a43df2d1b2418248645478911adf629b00e0e9e199d9c667-01",
+    "I-human:fa485e90bdf7ce0c8cf1883e34448879178c7a8a996aa03ec6122cfd4b8135c9-02",
+    "I-ai:b32e5e337d15ee1883345f13baebde470dc1c98b6100a1379fc108ff8919ca8b-01",
+    "I-ai:69b8561a8d93106915cb012936df830953b71bc2466ca5e63d86b5a616faed56-01",
+    "I-ai:6adeb42374d666469fb953e15655bd0cf0e6639c81957699ff62dd2276b75dc6-01",
+    "I-human:3a91decf328285f0b0f94263e5b9fa708a2f2adbfc2edac2429d8c03abaf3b73-02",
+    "I-human:de42705a554477e14dc28970912419bd2a8c1711c18fb7c516ddef748c5b392f-01",
+    "I-human:eb3f7d10862051da81c8b2f81073dccf3a09d8d63443a17d937f9289401ba83f-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate standards, principles, conditions, or indicators established for judging the subject, before any primary judgment applying them is made.",
+   "definition": "This role establishes the criteria, principles, conditions, or indicators by which the reviewed subject or one of its aspects should be judged.",
+   "distinguished_from": "Unlike Comparative Assessment, it establishes a benchmark without chiefly applying it, and unlike Review Framing, it defines standards of judgment rather than merely naming areas the review will cover.",
+   "examples": [
+    {
+     "doc": "ai:20d4d2ef3768863ceedb25f655a35bd75b54bb44e4f9ed994feee23c5b76231c",
+     "excerpt": "Trust should be assessed through visible licensing information, responsible-gaming tools, and account protections; missing or obscure disclosures warrant greater caution.",
+     "item_id": 11
+    },
+    {
+     "doc": "ai:2380d89efcadd16bfa7f716db95aa9f15f58abdd1377efb4b7475cc34d0749d7",
+     "excerpt": "Responsible guidance should foster honest communication, mutual respect, and authenticity rather than manipulation or self-alteration undertaken solely to satisfy a partner.",
+     "item_id": 11
+    }
+   ],
+   "name": "Evaluation Criteria",
+   "subsumes": [
+    "I-ai:20d4d2ef3768863ceedb25f655a35bd75b54bb44e4f9ed994feee23c5b76231c-02",
+    "I-ai:2380d89efcadd16bfa7f716db95aa9f15f58abdd1377efb4b7475cc34d0749d7-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the setup, procedure, inputs, measurements, or controlled variations used to generate and interpret evaluative observations.",
+   "definition": "This role describes the setup, procedure, inputs, measurements, or controlled conditions used to test and assess the reviewed subject.",
+   "distinguished_from": "Unlike Evaluation Rationale, it explains how observations were produced rather than presenting those observations as grounds for a judgment, and unlike Basis Documentation, it is substantive method description rather than a bounded provenance record.",
+   "examples": [
+    {
+     "doc": "human:59c1b5481e51396ea91b4ce90952fce3b1ae5f09251b7288b63a258cf8e0d75b",
+     "excerpt": "A Korg MS-20 Mini test deliberately varies loud oscillator combinations, relative phase, detuning, filter sweeps, and resonance to expose how the unit responds to changing harmonic complexity and reduced synthesizer headroom.",
+     "item_id": 9
+    },
+    {
+     "doc": "human:6fc6a71445819738a00a882f9600cb9e651e8b64d0853c6290af2dedace29a05",
+     "excerpt": "Because 12V kettles are slower than mains models and may drain leisure batteries, Practical Caravan tests the time and battery capacity required to boil 300ml, equivalent to a large mug.",
+     "item_id": 5
+    }
+   ],
+   "name": "Testing Method",
+   "subsumes": [
+    "I-human:59c1b5481e51396ea91b4ce90952fce3b1ae5f09251b7288b63a258cf8e0d75b-02",
+    "I-human:6fc6a71445819738a00a882f9600cb9e651e8b64d0853c6290af2dedace29a05-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's central commitment is a positive, negative, or mixed judgment about a particular feature, quality, interaction, or dimension of the reviewed subject.",
+   "definition": "This role judges the quality, value, adequacy, appeal, or performance of a specific aspect of the reviewed subject or experience.",
+   "distinguished_from": "Unlike Overall Verdict, it evaluates a bounded aspect rather than the subject as a whole, and unlike Comparative Assessment, its judgment does not depend on an explicit benchmark or alternative.",
+   "examples": [
+    {
+     "doc": "human:b54a847a73ac128abf923a18fb725b97c333b738dc294d9632425ec4e6ebfd01",
+     "excerpt": "Discovering how areas connect and revisiting them for hidden rewards makes exploration exceptionally absorbing and difficult to stop playing.",
+     "item_id": 14
+    },
+    {
+     "doc": "ai:61937db3ab6b7e37b3cf41d9023676820a458e273da87b5df947384470703239",
+     "excerpt": "Users also commend the smooth central focusing wheel for fast, precise adjustment and the multi-coated lenses for better light transmission and brightness. A forum reviewer says, “The focus wheel is very smooth and easy to adjust, and the image quality is consistently excellent thanks to the high-quality coatings.”",
+     "item_id": 7
+    }
+   ],
+   "name": "Aspect Evaluation",
+   "subsumes": [
+    "B05"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary judgment depends on explicitly relating the subject to an alternative, expectation, claim, standard, representation, or prior condition.",
+   "definition": "This role evaluates the reviewed subject by explicitly contrasting it with a benchmark, alternative, expectation, representation, or prior condition.",
+   "distinguished_from": "Unlike Aspect Evaluation, the relative relationship is essential to its judgment, and unlike Evaluation Criteria, it applies rather than merely establishes the benchmark.",
+   "examples": [
+    {
+     "doc": "human:4258af1fe0c937e31ab1c5bd8aee093670f6c06ad29bf7f6433c228a3d761d00",
+     "excerpt": "The generic, dated home page resembles competing hookup sites, although profiles shown there were also visibly active in the service's feed.",
+     "item_id": 9
+    },
+    {
+     "doc": "ai:4062ec139025f9ab71a704d24f18368c55015b51a24b9b1877d626885858d7bb",
+     "excerpt": "Users reportedly create slides 60% faster than with PowerPoint because automated design decisions reduce formatting work and leave more attention for accuracy and narrative structure.",
+     "item_id": 8
+    }
+   ],
+   "name": "Comparative Assessment",
+   "subsumes": [
+    "B08"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's principal reason for inclusion is to make an evaluative claim credible or intelligible by supplying its observations, examples, causes, consequences, or other grounds.",
+   "definition": "This role supplies reasons, observations, examples, consequences, or causal explanations intended chiefly to support an evaluative claim.",
+   "distinguished_from": "Unlike Factual Description, Experience Account, or Outcome Report, it is selected when supporting an evaluation is the item's dominant purpose rather than independently describing, recounting, or reporting.",
+   "examples": [
+    {
+     "doc": "ai:9c71c131c657e620a8fd6e9a8e3a057f6f0497db94a0cd4b8e70238b56a4bdc2",
+     "excerpt": "Torn curtains, a damaged headboard, and pervasive wear showed that visible maintenance problems had not been corrected before occupancy.",
+     "item_id": 13
+    },
+    {
+     "doc": "ai:fc7c5191bbee32b35d395f74cd2723f3663ee1263c3610d0da8ef7b5a3998aa0",
+     "excerpt": "AskGamblers and CasinoFreak commonly report delayed payouts and unresponsive support, while Wizard of Odds warns about excessively slow payments and poor service; the reviewer stops short of calling the casino fraudulent but advises guarded participation.",
+     "item_id": 7
+    }
+   ],
+   "name": "Evaluation Rationale",
+   "subsumes": [
+    "B07"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly communicates the reviewer's integrated bottom-line assessment of the entire reviewed subject or total experience.",
+   "definition": "This role states or synthesizes the reviewer's overall judgment of the reviewed subject or total experience.",
+   "distinguished_from": "Unlike Aspect Evaluation, it integrates the subject at the whole-review level, and unlike Recommendation, it concludes what the reviewer thinks rather than directing what readers should do.",
+   "examples": [
+    {
+     "doc": "ai:8787c5b26e01e0f444b5899b4b6cb43b5a2f54f407af647dc3aac121b8644aeb",
+     "excerpt": "The overall assessment presents LimaMAR as a compelling provider of dependable, economical, and efficient global freight forwarding because of its comprehensive services, customer focus, and effective technology use.",
+     "item_id": 13
+    },
+    {
+     "doc": "ai:2380d89efcadd16bfa7f716db95aa9f15f58abdd1377efb4b7475cc34d0749d7",
+     "excerpt": "Leo Man Secrets may be useful but is not a guaranteed solution; its value depends on realistic expectations, selective application, personal judgment, and integration with lived relationship experience.",
+     "item_id": 16
+    }
+   ],
+   "name": "Overall Verdict",
+   "subsumes": [
+    "B06"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily tells prospective users whether to choose, avoid, continue with, or consider the subject, including the audiences or conditions for which that advice applies.",
+   "definition": "This role advises prospective users whether, when, or for whom the reviewed subject is an appropriate choice.",
+   "distinguished_from": "Unlike Overall Verdict, it directs a future choice, and unlike Practical Guidance, it addresses whether or for whom to choose rather than how to proceed.",
+   "examples": [
+    {
+     "doc": "ai:9c71c131c657e620a8fd6e9a8e3a057f6f0497db94a0cd4b8e70238b56a4bdc2",
+     "excerpt": "The hotel is unsuitable for guests prioritizing sleep, people sensitive to musty odors, special-occasion travelers, those expecting normal Marriott upkeep, visitors using their room extensively, and anyone troubled by conspicuous damage.",
+     "item_id": 20
+    },
+    {
+     "doc": "ai:8bca5ba166845778896ee3eb8c817b4a276616fc38d532c203883778ac68efb9",
+     "excerpt": "The review recommends Nanonets as a serious option for organizations seeking less manual entry and more automated workflows, balancing its usability, accuracy, integrations, and support against potentially high pricing and input-dependent performance; it is presented as suitable for both small teams and larger operations.",
+     "item_id": 7
+    }
+   ],
+   "name": "Recommendation",
+   "subsumes": [
+    "B09"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate actionable know-how for obtaining, visiting, operating, navigating, or improving an interaction with the reviewed subject.",
+   "definition": "This role gives actionable tips, precautions, workarounds, logistical particulars, or usage advice for engaging with the reviewed subject.",
+   "distinguished_from": "Unlike Recommendation, it explains how to proceed rather than whether to choose, and unlike Risk Warning, its primary commitment is actionable know-how rather than identification of a possible harm.",
+   "examples": [
+    {
+     "doc": "human:ce725520588a375dcaf612b72d4698afec5fc6d33a3117895083cdf385f6694c",
+     "excerpt": "The 580-yard sixth reverses the former fourth and is the course’s longest hole. A right bunker creates a distance-versus-position dilemma, wind and a brook complicate the likely three-shot route, and an obscured landing area left of the green provides room for an aggressive attempt in two.",
+     "item_id": 9
+    },
+    {
+     "doc": "ai:55a46b9d23e4b3e605be405e3e90e9734de2187b0986762aa6921371ef354336",
+     "excerpt": "A practical information block gives the location as 10300 W Charleston Blvd, Las Vegas, NV 89135, with hours of 11 AM–9:30 PM Monday through Friday and 11 AM–10 PM Saturday and Sunday.",
+     "item_id": 17
+    }
+   ],
+   "name": "Practical Guidance",
+   "subsumes": [
+    "B10"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary function is to alert prospective users to a concrete harm, loss, vulnerability, adverse outcome, or failure of recourse associated with engagement.",
+   "definition": "This role warns prospective users about harms, losses, vulnerabilities, adverse outcomes, or failures of recourse that may result from engaging with the reviewed subject.",
+   "distinguished_from": "Unlike Practical Guidance, it primarily identifies what may go wrong rather than explaining how to proceed, and unlike Evaluation Rationale, the warning to users is itself the principal function.",
+   "examples": [
+    {
+     "doc": "human:afd99ac68aee5ca630d1f70c29e530ac34c297912104c48c4eedf947278027ad",
+     "excerpt": "Customers risk being charged without ever receiving a package.",
+     "item_id": 14
+    },
+    {
+     "doc": "human:afd99ac68aee5ca630d1f70c29e530ac34c297912104c48c4eedf947278027ad",
+     "excerpt": "Customers may have their card information compromised, leading to unauthorized purchases, overcharging, or repeated deductions.",
+     "item_id": 16
+    }
+   ],
+   "name": "Risk Warning",
+   "subsumes": [
+    "I-human:afd99ac68aee5ca630d1f70c29e530ac34c297912104c48c4eedf947278027ad-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary contribution is to identify other products, services, resources, or courses of action capable of addressing the relevant need without chiefly ranking or endorsing them.",
+   "definition": "This role identifies alternative products, services, resources, or courses of action that could address the need associated with the reviewed subject.",
+   "distinguished_from": "Unlike Recommendation, it expands the available choice set without chiefly advising which option to select, and unlike Comparative Assessment, it need not judge alternatives against one another.",
+   "examples": [
+    {
+     "doc": "ai:2380d89efcadd16bfa7f716db95aa9f15f58abdd1377efb4b7475cc34d0749d7",
+     "excerpt": "Alternatives include personalized relationship counseling, professional compatibility readings, books on communication and intimacy, and direct conversations with the partner about his needs and desires.",
+     "item_id": 15
+    }
+   ],
+   "name": "Alternatives",
+   "subsumes": [
+    "I-ai:2380d89efcadd16bfa7f716db95aa9f15f58abdd1377efb4b7475cc34d0749d7-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a substantive proposal to change the reviewed subject in order to remedy a deficiency or improve future performance or usefulness.",
+   "definition": "This role proposes a change to the reviewed subject intended to remedy a shortcoming or improve its design, performance, value, usability, or operation.",
+   "distinguished_from": "Unlike Aspect Evaluation, it advocates what should be changed rather than merely judging the current state, and unlike Remedial Action, it is a reviewer's proposal rather than a responsible party's corrective commitment.",
+   "examples": [
+    {
+     "doc": "human:4258af1fe0c937e31ab1c5bd8aee093670f6c06ad29bf7f6433c228a3d761d00",
+     "excerpt": "The reviewer recommends automated selections of suitable profiles delivered by email to reduce the time users must spend configuring and browsing the feed.",
+     "item_id": 28
+    },
+    {
+     "doc": "human:8f95b86feea64aeab4f56200f309cc3a169461b1eb25fb8a96e21c769203f987",
+     "excerpt": "A replaceable battery and better main camera would improve the device, although removable-battery packaging would probably enlarge the phone or reduce capacity; camera quality may be easier to improve in a future model or possibly through software.",
+     "item_id": 29
+    }
+   ],
+   "name": "Improvement Proposal",
+   "subsumes": [
+    "I-human:4258af1fe0c937e31ab1c5bd8aee093670f6c06ad29bf7f6433c228a3d761d00-02",
+    "I-human:8f95b86feea64aeab4f56200f309cc3a169461b1eb25fb8a96e21c769203f987-03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary contribution is a forecast or extrapolation about how the reviewed subject or its relevant domain may develop, perform, or gain significance.",
+   "definition": "This role projects likely future developments, trajectories, performance, adoption, or transformations relevant to the reviewed subject or its broader domain.",
+   "distinguished_from": "Unlike Overall Verdict, it predicts what may happen rather than synthesizing present quality, and unlike Contextual Framing, it projects beyond current circumstances.",
+   "examples": [
+    {
+     "doc": "human:8f95b86feea64aeab4f56200f309cc3a169461b1eb25fb8a96e21c769203f987",
+     "excerpt": "Exponential technological improvement will move beyond the present balance of size, cost, capability, and utility as gesture recognition, wearable computing, energy harvesting, and three-dimensional eyewear increasingly integrate personal computers with their users.",
+     "item_id": 22
+    },
+    {
+     "doc": "ai:e11c22e32a8a2b2ce6b6702ae811d800cc334109398ad45e1ce9f2cc0fe978a8",
+     "excerpt": "The review closes by projecting that continued improvement could make Meoo an industry-standard tool for AI-assisted cloud development.",
+     "item_id": 13
+    }
+   ],
+   "name": "Future Outlook",
+   "subsumes": [
+    "I-human:8f95b86feea64aeab4f56200f309cc3a169461b1eb25fb8a96e21c769203f987-02",
+    "I-ai:e11c22e32a8a2b2ce6b6702ae811d800cc334109398ad45e1ce9f2cc0fe978a8-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a limitation on the certainty, scope, applicability, universality, or generalizability of another claim or evaluation.",
+   "definition": "This role limits or calibrates a claim or evaluation by identifying uncertainty, subjectivity, scope conditions, or constraints on its applicability.",
+   "distinguished_from": "Unlike Factual Description, it primarily constrains how another claim should be interpreted, and unlike Contextual Framing, it qualifies the force of a claim rather than establishing the reviewer's perspective.",
+   "examples": [
+    {
+     "doc": "human:1f48d003b8f13fc056d674221fbcd01b207b556b0e814e53b6c563b4d8ba4825",
+     "excerpt": "A closing qualification states that system range varies with factors including battery power, rider weight, terrain, riding style and speed, tyre pressure, and the selected assistance level.",
+     "item_id": 11
+    },
+    {
+     "doc": "ai:89a9c957520d60fd2b276bafe8b041877d6208b8f31284f130b13a01ad0a6b9c",
+     "excerpt": "Because numerical ratings depend on personal taste and evaluators' criteria, no universal score is asserted, though the product has acquired substantial recognition and a significant following.",
+     "item_id": 7
+    }
+   ],
+   "name": "Claim Qualification",
+   "subsumes": [
+    "I-human:1f48d003b8f13fc056d674221fbcd01b207b556b0e814e53b6c563b4d8ba4825-01",
+    "I-ai:89a9c957520d60fd2b276bafe8b041877d6208b8f31284f130b13a01ad0a6b9c-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary effect is to restore hope, confidence, or resolve in readers facing fear, discouragement, or apparent defeat.",
+   "definition": "This role reassures or emboldens readers by countering hopelessness, defeat, or fear and affirming that improvement or meaningful action remains possible.",
+   "distinguished_from": "Unlike Recommendation, it primarily changes the reader's outlook or resolve rather than advising whether to choose the reviewed subject, and unlike Practical Guidance, it need not prescribe a procedure.",
+   "examples": [
+    {
+     "doc": "human:7be0e72786be56e81841b49b15ebee3c69ef4c137820420a1d41dbf2926e4094",
+     "excerpt": "Shoshi discloses that her former hopelessness included suicidal thoughts and urges people suffering from PTSD or diagnostic labels not to assume they are beyond recovery.",
+     "item_id": 20
+    },
+    {
+     "doc": "human:7be0e72786be56e81841b49b15ebee3c69ef4c137820420a1d41dbf2926e4094",
+     "excerpt": "The testimonial closes by emphasizing how psychological distress can immobilize people and prevent desired lives, while assuring readers that help and hope remain available, urging them to reach out, and affirming that the effort is worthwhile.",
+     "item_id": 25
+    }
+   ],
+   "name": "Encouragement",
+   "subsumes": [
+    "I-human:7be0e72786be56e81841b49b15ebee3c69ef4c137820420a1d41dbf2926e4094-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly eliminate a reviewer's direct expression of gratitude, affection, or appreciative regard toward the reviewed party or its representatives.",
+   "definition": "This role directly expresses the reviewer's gratitude, affection, or appreciative recognition toward the reviewed subject or people associated with it.",
+   "distinguished_from": "Unlike Feedback Acknowledgment, it conveys appreciation from the reviewer toward the reviewed party rather than responsively recognizing a review or concern.",
+   "examples": [
+    {
+     "doc": "human:7d03c10edda1fbb15d5c1ded832d208196cc92ea053868cad057622847a5866c",
+     "excerpt": "Henry’s family thanks the staff for doing everything possible during his illness and says its compassion when he had to be put to rest will remain unforgettable.",
+     "item_id": 12
+    },
+    {
+     "doc": "human:017d6b5917dc66ed8515b1ae18f6632e2c9e3c0f21e3a6ba33fd8e31b55ba40d",
+     "excerpt": "R offers affectionate thanks to James in August 2018.",
+     "item_id": 38
+    },
+    {
+     "doc": "human:c9dfef3a44af0ab67c7e1ad213b090c8ed64eabf3f275c10fe9e19296e53a57c",
+     "excerpt": "The parents of Anany Kumar Rai, an L.K.G. Blue student, open by expressing gratitude to the school and his class teacher, Mrs. Priyanka Sinha.",
+     "item_id": 1
+    }
+   ],
+   "name": "Reviewer Appreciation",
+   "subsumes": [
+    "I-human:7d03c10edda1fbb15d5c1ded832d208196cc92ea053868cad057622847a5866c-01",
+    "I-human:017d6b5917dc66ed8515b1ae18f6632e2c9e3c0f21e3a6ba33fd8e31b55ba40d-02",
+    "I-human:c9dfef3a44af0ab67c7e1ad213b090c8ed64eabf3f275c10fe9e19296e53a57c-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main communicative job is to recognize a review or reviewer through thanks, apology, empathy, validation, regret, or similar responsive acknowledgment.",
+   "definition": "This role acknowledges a prior review or concern and manages the interpersonal relationship by expressing recognition, gratitude, regret, empathy, or validation.",
+   "distinguished_from": "Unlike Reviewer Appreciation, it responds to feedback from the reviewed party's side, and unlike Remedial Action, it does not chiefly report or promise a corrective measure.",
+   "examples": [
+    {
+     "doc": "human:4009c71afe974b8c26d71c3203387aa6d7f186d387376568eead5d70f7ca88df",
+     "excerpt": "The page frames the testimonials as a recent selection of client feedback that the firm values, appreciates, and willingly publishes.",
+     "item_id": 2
+    },
+    {
+     "doc": "human:ef87f98cd0e5e042194cf95ebacf8634d972ec770df3647e32f009a7190f958b",
+     "excerpt": "The developer expresses appreciation and invites the customer to request further assistance.",
+     "item_id": 2
+    }
+   ],
+   "name": "Feedback Acknowledgment",
+   "subsumes": [
+    "B11"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's chief purpose is to solicit information, contact, a response, a return visit, or another step that enables continued engagement or resolution.",
+   "definition": "This role asks a participant to provide information, initiate contact, revisit an issue, or take another step that enables continued engagement or resolution.",
+   "distinguished_from": "Unlike Practical Guidance or Recommendation, it solicits action from a participant in the exchange rather than advising prospective users, and unlike Ancillary Promotion, it does not chiefly seek uptake of a separate offering.",
+   "examples": [
+    {
+     "doc": "human:f646745a23cc42a4e952d18d5652bc50c86721e6a638ef6fc4fdbe62d37ffea5",
+     "excerpt": "Prospective clients are invited to schedule a complimentary, pressure-free Zoom or Skype conversation about their health and life goals and whether working together would be a suitable fit.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:67a6e334d018c9238d98b10a498d8a5004919cb0d1395b80cb4a6895e652cbdf",
+     "excerpt": "Readers are invited to report changed or additional stall information in the comments so the publication can verify and update its listing as part of a shared Singapore food-news community.",
+     "item_id": 13
+    }
+   ],
+   "name": "Engagement Request",
+   "subsumes": [
+    "B14"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate provider- or affiliate-authored favorable positioning intended chiefly to build audience interest or confidence in the reviewed offering.",
+   "definition": "This role promotes the reviewed provider or subject through favorable self-presentation, claimed qualifications, commitments, capabilities, or affiliated endorsement.",
+   "distinguished_from": "Unlike Aspect Evaluation or Recommendation, it advances favorable promotional positioning from the provider or an affiliate rather than an independent reviewer's judgment.",
+   "examples": [
+    {
+     "doc": "human:6b9277ca8dfb773e0dbb63d3f6087b69c0e9d39e857ce20f0fd34327ba2d295c",
+     "excerpt": "The operator invites travelers to explore the Patagonian fjords and Fuegian channels, grounding its approach in more than 20 years of tourism operations, nearly 30 years of collaborative research, and a goal of fostering respectful, meaningful connections with the region.",
+     "item_id": 1
+    },
+    {
+     "doc": "human:90d5360182c6453a06cd4c8ecada2be03a47b8db87a02c2feb120de1206cd31f",
+     "excerpt": "The company claims five years of operating in Colorado’s Rocky Mountains, where professionally trained chauffeurs uphold high standards and provide punctual, guest-focused service in all weather, promising dependable and memorable transportation during visits to Aspen Snowmass.",
+     "item_id": 1
+    },
+    {
+     "doc": "human:de42705a554477e14dc28970912419bd2a8c1711c18fb7c516ddef748c5b392f",
+     "excerpt": "Laura Main said: “I’ve been waiting a long time for an adventure like this to come along and now that it has I am ready to swap the surgery for the swamp in one of my favourite musicals. Shrek has made a believer out of me and I can’t wait for this fairytale to take me across the country.”",
+     "item_id": 17
+    }
+   ],
+   "name": "Provider Promotion",
+   "subsumes": [
+    "I-human:6b9277ca8dfb773e0dbb63d3f6087b69c0e9d39e857ce20f0fd34327ba2d295c-01",
+    "I-human:90d5360182c6453a06cd4c8ecada2be03a47b8db87a02c2feb120de1206cd31f-01",
+    "I-human:de42705a554477e14dc28970912419bd2a8c1711c18fb7c516ddef748c5b392f-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary job is to present or encourage uptake of a separate offer, service, program, membership, referral, or participation opportunity associated with the review.",
+   "definition": "This role presents or promotes an ancillary commercial, reciprocal, donation, membership, referral, or participation opportunity to encourage audience uptake.",
+   "distinguished_from": "Unlike Recommendation, it seeks uptake of an ancillary opportunity rather than advising about the reviewed target, and unlike Engagement Request, its primary purpose is participation or conversion rather than continued dialogue or resolution.",
+   "examples": [
+    {
+     "doc": "human:c5f5867bf813d7019af2f200687ae91eeb70a7ca83904d0ee46f5c5ac042c473",
+     "excerpt": "Through the free reader program, the author offers any reader a complimentary copy for an honest review; the parties arrange the copy format and review sites through private email.",
+     "item_id": 1
+    },
+    {
+     "doc": "ai:edf3ac36eb359619f779797fda7ebd066508da23669160a655c2f7ebae330979",
+     "excerpt": "A health-assessment offer associated with Dr. Ryan Goodkin promises a rapid evaluation, personalized wellness report, and recommendations while disclaiming medical-advice status.",
+     "item_id": 2
+    },
+    {
+     "doc": "ai:9c71c131c657e620a8fd6e9a8e3a057f6f0497db94a0cd4b8e70238b56a4bdc2",
+     "excerpt": "A promotional callout encourages readers to buy Walt Disney World tickets through Expedia to earn One Key Cash rewards, receive member hotel pricing, and obtain other travel benefits.",
+     "item_id": 26
+    }
+   ],
+   "name": "Ancillary Promotion",
+   "subsumes": [
+    "I-human:c5f5867bf813d7019af2f200687ae91eeb70a7ca83904d0ee46f5c5ac042c473-01",
+    "I-ai:edf3ac36eb359619f779797fda7ebd066508da23669160a655c2f7ebae330979-01",
+    "I-human:c51bdbb351f37918d97ddc52e4b2198a6fdc5406405a46168770905a7fd06fde-01",
+    "I-ai:5e757d5f8336c1864b639a8f4c38959c8f5580d2542b852b66cc58b7e7a71524-02",
+    "I-ai:6104fe53eb2087ef43656148d8ecdec614151bc52542ba5ca07e3ef00a0133cd-03",
+    "I-ai:9c71c131c657e620a8fd6e9a8e3a057f6f0497db94a0cd4b8e70238b56a4bdc2-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting a bounded commercial component would remove the document's direct opportunity, channel, or current terms for acquiring the reviewed subject.",
+   "definition": "A bounded commercial component facilitates acquisition of the reviewed subject by presenting a direct purchase opportunity, transactional access, current price, or availability.",
+   "distinguished_from": "Unlike Recommendation, it enables or presents a transaction rather than advising whether to buy, and unlike Reference Aid, it facilitates acquisition rather than merely organizing terms for lookup.",
+   "examples": [
+    {
+     "doc": "human:1d3416fbf556f6fa63045e4ff122bd852fd94e4bb65640935793cd023ac809ce",
+     "excerpt": "A purchase prompt offers the Bagsmart six-piece Compression Packing Cube Set for $39.99, reduced from its usual $42.99 price.",
+     "item_id": 8
+    }
+   ],
+   "name": "Purchase Facilitation",
+   "subsumes": [
+    "I-human:1d3416fbf556f6fa63045e4ff122bd852fd94e4bb65640935793cd023ac809ce-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily asks readers to provide financial, material, promotional, or comparable support for the publisher, platform, organization, or community presenting the review.",
+   "definition": "This role solicits financial, material, promotional, or other support intended to sustain or expand the publisher, platform, organization, or community presenting the review.",
+   "distinguished_from": "Unlike Engagement Request, it seeks support for the presenting organization or its mission rather than a response continuing the review exchange, and unlike Ancillary Promotion, the requested benefit flows principally to the publisher or community.",
+   "examples": [
+    {
+     "doc": "human:1107e24ea12da95ca79166d6d08ac6611bd8dbee28d0952c5aaa6b0c1d51f899",
+     "excerpt": "A fundraising appeal explains that SabersEdge depends on readers and requests support through Patreon, social-media sharing, affiliate book purchases, wish-list donations, or gifts mailed to PO Box 433, Leavenworth, KS 66048; these actions are framed as helping expand the site and mobilize Western patriots.",
+     "item_id": 5
+    }
+   ],
+   "name": "Support Solicitation",
+   "subsumes": [
+    "I-human:1107e24ea12da95ca79166d6d08ac6611bd8dbee28d0952c5aaa6b0c1d51f899-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary contribution is to end the review with a stylistic farewell, catchphrase, joke, aphorism, or comparable closing flourish.",
+   "definition": "This role provides rhetorical closure through a farewell, catchphrase, joke, aphorism, or comparable concluding flourish.",
+   "distinguished_from": "Unlike Overall Verdict, it closes the discourse stylistically rather than synthesizing the reviewer's substantive assessment.",
+   "examples": [
+    {
+     "doc": "human:b6d01a8188fb3c177266c4727498f851bd5bdb8f048b6e5738a390c853047695",
+     "excerpt": "The review ends with the ironic moderation maxim, “Everything in moderation, folks, including moderation.”",
+     "item_id": 13
+    }
+   ],
+   "name": "Sign-Off",
+   "subsumes": [
+    "I-human:b6d01a8188fb3c177266c4727498f851bd5bdb8f048b6e5738a390c853047695-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when a bounded component is included chiefly to give an at-a-glance synthesis of the review's evaluative stance rather than to develop the judgment in ordinary discourse.",
+   "definition": "A bounded summary component compresses the reviewer's judgment into standardized ratings, category assessments, or concise strengths and weaknesses for rapid interpretation.",
+   "distinguished_from": "Unlike Overall Verdict, it performs a document-level synopsis function, and unlike Reference Aid, it chiefly condenses evaluative stance rather than organizing mixed factual or practical information.",
+   "examples": [
+    {
+     "doc": "ai:5caf1fdd58b0148c0ac8084d8c7b4f6dd7cca3ebcffc51d5dabae939d997aae2",
+     "excerpt": "A concise advantages-and-disadvantages summary praises the balanced asymmetrical design, three-day movement, gold-and-champagne styling, everyday comfort, durability, and timelessness, while noting scarce availability and the possibility that manual winding will deter buyers who prefer automatic watches.",
+     "item_id": 10
+    },
+    {
+     "doc": "ai:6ecf1f695aab8284fcbadbea9656b4d0758e1cca279d5f704a27a5e58093ad65",
+     "excerpt": "A condensed assessment adds Bitcoin exposure, an accessible interface, and a relatively low cash-out minimum as benefits, while warning that survey value is inconsistent, offer walls can feel repetitive or spam-like, and earnings are unsuitable as reliable full-time income.",
+     "item_id": 23
+    }
+   ],
+   "name": "Evaluation Synopsis",
+   "subsumes": [
+    "B15"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main purpose is transparency about a relationship, incentive, conflict, responsibility, or condition that could materially affect how readers assess the review's independence or trustworthiness.",
+   "definition": "This role reveals incentives, relationships, conflicts, responsibilities, or other relevant conditions needed to interpret the review's independence or trustworthiness.",
+   "distinguished_from": "Unlike Basis Documentation, it exposes potentially consequential interests or responsibilities rather than recording the review's experiential provenance, and unlike Content Status, it does not chiefly explain publication state.",
+   "examples": [
+    {
+     "doc": "human:8f24a8720fd58c0784279a0f9a283b88b3ae420c964421d11c1a80697faa3447",
+     "excerpt": "Broker compensation and compensation-sharing arrangements are not established or directed by law, REALTOR associations, multiple listing services, or other listing services; each broker independently sets negotiable fees.",
+     "item_id": 1
+    },
+    {
+     "doc": "ai:8ba4a383f1fa88b050423b4d4099b2efaee3b2b75b6610f93dc060ef1a369498",
+     "excerpt": "An affiliate disclosure states that Consumer Ability participates in the Amazon Associates Program and receives compensation from qualifying purchases.",
+     "item_id": 14
+    }
+   ],
+   "name": "Transparency Disclosure",
+   "subsumes": [
+    "B18"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when a bounded credit is chiefly present to establish who supplied the review or response or who created, originated, or supplied reviewed or referenced material.",
+   "definition": "A bounded attribution component records who supplied a review or response or created, originated, or supplied reviewed or referenced material so responsibility and provenance are clear.",
+   "distinguished_from": "Unlike Target Identification, it records responsibility for a contribution or material rather than what is being reviewed, and unlike Basis Documentation, it documents authorship rather than the underlying experience or test basis.",
+   "examples": [
+    {
+     "doc": "ai:68723f52903e372b8158e57ba9a3d3f82982dac1d164bc791c163bd1cdbf0d6a",
+     "excerpt": "A closing source note attributes the review to Bard, Google AI, and records both publication and access on January 24, 2024.",
+     "item_id": 9
+    },
+    {
+     "doc": "human:d4fa28b308c8b3df2635caf904cc3d8703ed383646086489c1b82766ae1a443d",
+     "excerpt": "A closing credit attributes the source short film to Thijs Meuwese and Kris Patmo.",
+     "item_id": 8
+    }
+   ],
+   "name": "Attribution",
+   "subsumes": [
+    "B17",
+    "I-human:d4fa28b308c8b3df2635caf904cc3d8703ed383646086489c1b82766ae1a443d-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting a bounded record would remove documented facts about the timing, type, duration, verification, equipment, or other provenance of the experience or transaction underlying the review.",
+   "definition": "A bounded reference component documents the timing, type, duration, verification, equipment, or other provenance of the experience or transaction underlying the review.",
+   "distinguished_from": "Unlike Contextual Framing, it records the review's basis for reference rather than developing the reviewer's perspective, and unlike Testing Method, it documents provenance rather than explaining an assessment procedure.",
+   "examples": [
+    {
+     "doc": "human:36afde7deb5af41a4ee199a8f5870a818927bc88445e30814e6951474eb54fdb",
+     "excerpt": "The Premium products arrived in a large box with an information card; the reviewed shipment was version 22, weighed 2.80 pounds, and included access to March BoxyLuxe spoilers.",
+     "item_id": 4
+    },
+    {
+     "doc": "human:9951d3d0eb6ce6b3f65bbafa95efd1fa20addb56136fe6903dfee85535bd42c5",
+     "excerpt": "An associated-equipment component documents the reviewer’s reference speakers, headphones, amplification, converters, computer sources, cables, interconnects, digital link, and power conditioner.",
+     "item_id": 23
+    }
+   ],
+   "name": "Basis Documentation",
+   "subsumes": [
+    "B16"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the extracted item represents a bounded addition whose main document-level purpose is to extend, illustrate, or substantiate the review with inspectable ancillary material.",
+   "definition": "A bounded supplementary component provides supporting, illustrative, or elaborative material beyond the main review discourse.",
+   "distinguished_from": "Unlike Evaluation Rationale, it labels the ancillary component's document-level function rather than a substantive supporting observation, and unlike Source Documentation, it does not chiefly record external works consulted.",
+   "examples": [
+    {
+     "doc": "human:4258af1fe0c937e31ab1c5bd8aee093670f6c06ad29bf7f6433c228a3d761d00",
+     "excerpt": "An embedded video review supplements the written assessment before the article turns to comparison with an alternative service.",
+     "item_id": 29
+    },
+    {
+     "doc": "human:eb3f7d10862051da81c8b2f81073dccf3a09d8d63443a17d937f9289401ba83f",
+     "excerpt": "An appended user-review collection supplies firsthand positive and negative accounts of the campground's facilities, location, value, and management practices.",
+     "item_id": 17
+    }
+   ],
+   "name": "Supplementary Material",
+   "subsumes": [
+    "B19"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when a bounded notice is included chiefly to explain why review content is available, unavailable, altered, translated, filtered, removed, revised, or otherwise presented in its current state.",
+   "definition": "A bounded status component communicates the review's accessibility, translation, revision, publication, or moderation condition so readers can interpret the content instance they can see.",
+   "distinguished_from": "Unlike Transparency Disclosure, it explains the content's operational or publication state rather than interests or responsibilities, and unlike Basis Documentation, it does not document the reviewed experience.",
+   "examples": [
+    {
+     "doc": "human:ed2b72231e5dbeed52418224f4d8aad934465dafb7e843081003727ee4de4bc4",
+     "excerpt": "The document is an English translation of the reviewer’s original assessment published in NVVK Info 2018/02 in May 2018.",
+     "item_id": 2
+    },
+    {
+     "doc": "ai:320973d38fe29ac9bd6fa1c936005ed4f2a7f68b7eb51d3973461765193ac535",
+     "excerpt": "A currency note records that the review was last updated on July 23, 2025.",
+     "item_id": 21
+    }
+   ],
+   "name": "Content Status",
+   "subsumes": [
+    "B21"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting a bounded component would remove an organized collection of multiple participants' substantive reviews, testimonials, experiences, suggestions, or other feedback.",
+   "definition": "A bounded collection component assembles and organizes multiple participants' substantive reviews, testimonials, experiences, or feedback as a browsable body of user commentary.",
+   "distinguished_from": "Unlike Evaluation Synopsis, it preserves distinct participant accounts rather than compressing their judgments, and unlike Reception Record, it presents reviews of the subject rather than reactions to the review document.",
+   "examples": [
+    {
+     "doc": "human:017d6b5917dc66ed8515b1ae18f6632e2c9e3c0f21e3a6ba33fd8e31b55ba40d",
+     "excerpt": "A reverse-chronological collection presents dated testimonials from individual and coupled clients about their experiences with James.",
+     "item_id": 1
+    },
+    {
+     "doc": "human:90d5360182c6453a06cd4c8ecada2be03a47b8db87a02c2feb120de1206cd31f",
+     "excerpt": "A review component reports an Excellent rating from 50 Google reviews and presents dated testimonials praising George and his team for knowledgeable drivers, rapid last-minute accommodations, flight monitoring, schedule flexibility, clean spacious vehicles, child seats, punctuality, safety, comfort, and reliable airport, hotel, and activity transfers despite limited alternatives and difficult mountain conditions.",
+     "item_id": 2
+    },
+    {
+     "doc": "human:c6238a91f7fe7505c32d74beb80481fca21aa1984e711feb20502aec2ec62c3e",
+     "excerpt": "A reverse-chronological guestbook (2006–2024) presents attributed reader comments praising usability, spiritual encouragement, and sovereign-grace teaching; recording practical interests and suggestions; disputing George Ella’s account of NCT; and quoting “Beginning with Moses and all the prophets, He explained to them what was said in all the Scriptures concerning Himself,” (Luke 24:27).",
+     "item_id": 2
+    }
+   ],
+   "name": "Review Collection",
+   "subsumes": [
+    "I-human:017d6b5917dc66ed8515b1ae18f6632e2c9e3c0f21e3a6ba33fd8e31b55ba40d-01",
+    "I-human:40f39980f79383ad00690ac21fa6e16d61360561566bcf0e4e95a41951713152-01",
+    "I-human:90d5360182c6453a06cd4c8ecada2be03a47b8db87a02c2feb120de1206cd31f-02",
+    "I-human:c6238a91f7fe7505c32d74beb80481fca21aa1984e711feb20502aec2ec62c3e-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting a bounded component would remove document-level wayfinding to portions of the review, associated content, canonical instances, related reviews, or external resources.",
+   "definition": "A bounded navigation component provides locators or pathways that help readers find and move among portions of the review or continue to related, canonical, comparative, or otherwise relevant content.",
+   "distinguished_from": "Unlike Review Framing, it enables access or movement rather than merely previewing coverage, and unlike Supplementary Material, it routes readers to content rather than itself supplying the ancillary material.",
+   "examples": [
+    {
+     "doc": "human:f646745a23cc42a4e952d18d5652bc50c86721e6a638ef6fc4fdbe62d37ffea5",
+     "excerpt": "A timestamped viewing guide directs readers to the video’s three successive points: altered neurophysiology from 0:00, changed cerebellar connectivity from 0:12, and associated improvements in objective well-being measures from 0:26.",
+     "item_id": 2
+    },
+    {
+     "doc": "ai:4126229421d78d057b3c963e34d7ee8878c8057854e716ed227962df86e25d70",
+     "excerpt": "Readers are directed to the clean main review page as the canonical source, while referral-page versions may be shared for affiliate attribution if they point back to that main page.",
+     "item_id": 10
+    },
+    {
+     "doc": "ai:40d43ae9355bc0ec766d4fb49f8cf70ebcbd74628f83e3efd47129bba50ca26f",
+     "excerpt": "A navigational callout directs readers seeking additional help to a separate, extensive strategy guide for Forbidden Desert.",
+     "item_id": 5
+    }
+   ],
+   "name": "Navigation Aid",
+   "subsumes": [
+    "I-ai:4126229421d78d057b3c963e34d7ee8878c8057854e716ed227962df86e25d70-02",
+    "I-human:e44ab661d97a08ffdf2c19e545312b91876dc4b0aeb58989f30866a4d4412cef-01",
+    "I-human:f646745a23cc42a4e952d18d5652bc50c86721e6a638ef6fc4fdbe62d37ffea5-01",
+    "I-ai:1f539848d96fc34894f1f6ed604363a8e5877f9f32569ee554ef44f713a9cd2d-01",
+    "I-ai:40d43ae9355bc0ec766d4fb49f8cf70ebcbd74628f83e3efd47129bba50ca26f-01",
+    "I-ai:5e757d5f8336c1864b639a8f4c38959c8f5580d2542b852b66cc58b7e7a71524-01",
+    "I-ai:6104fe53eb2087ef43656148d8ecdec614151bc52542ba5ca07e3ef00a0133cd-02",
+    "I-ai:632a5801c91e8f36e7cbb45179de20f7617905160df1c0476dbf5fe1ceeb8f14-01",
+    "I-ai:bc2618741b53d7c2ee82c37858bc55d1134edc125c9bd96faadeb250ac27f446-01",
+    "I-ai:c1ab75c042ec3073c8a53d94a9be793554faec81848f5f1ee950faa8c50fae49-01",
+    "I-ai:edf3ac36eb359619f779797fda7ebd066508da23669160a655c2f7ebae330979-03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting a bounded component would remove a dedicated quick-lookup resource that consolidates subject facts, logistics, specifications, acquisition terms, comparisons, common answers, or unresolved audience questions.",
+   "definition": "A bounded reference component organizes key factual, logistical, technical, acquisition, comparative, or question-oriented information for efficient consultation outside the main review discourse.",
+   "distinguished_from": "Unlike Factual Description or Practical Guidance, it performs a document-level lookup function, and unlike Evaluation Synopsis, it does not chiefly compress the reviewer's evaluative stance.",
+   "examples": [
+    {
+     "doc": "human:4d4d8c6711bb2beb7916a33c52402033fe88d7744799ab580d79fb5f44d95a3c",
+     "excerpt": "A practical information block credits Dan Souter with the 1925 design and Alister MacKenzie with a 1926 bunkering plan; notes private status and $300 AUD access for reciprocal and international visitors; and provides membership and official-site resources, +61 3 8558 2700, and the Cheltenham, Victoria address.",
+     "item_id": 2
+    },
+    {
+     "doc": "human:bc9201bc287b458b270b78e3e717f9ca03f25ff234efb57b86ce58166cd73232",
+     "excerpt": "A bounded comparison display provides a quick feature-by-feature view of the available mobile editions.",
+     "item_id": 12
+    },
+    {
+     "doc": "ai:6104fe53eb2087ef43656148d8ecdec614151bc52542ba5ca07e3ef00a0133cd",
+     "excerpt": "A frequently asked questions component reiterates the protein sources, competitive serving-level nutrition, and suitability for active lifestyles; acknowledges taste and texture concerns; states that the product is dairy- and soy-free while advising sensitivity checks; and directs buyers to selected online retailers and the official site for premium-priced purchasing.",
+     "item_id": 7
+    }
+   ],
+   "name": "Reference Aid",
+   "subsumes": [
+    "I-ai:6104fe53eb2087ef43656148d8ecdec614151bc52542ba5ca07e3ef00a0133cd-01",
+    "I-human:4258af1fe0c937e31ab1c5bd8aee093670f6c06ad29bf7f6433c228a3d761d00-03",
+    "I-human:4d4d8c6711bb2beb7916a33c52402033fe88d7744799ab580d79fb5f44d95a3c-01",
+    "I-human:8f95b86feea64aeab4f56200f309cc3a169461b1eb25fb8a96e21c769203f987-01",
+    "I-human:9951d3d0eb6ce6b3f65bbafa95efd1fa20addb56136fe6903dfee85535bd42c5-01",
+    "I-human:e44ab661d97a08ffdf2c19e545312b91876dc4b0aeb58989f30866a4d4412cef-02",
+    "I-human:e595acd28fc8bee03b6562e1210f983cf419e3f1431a26287e75a584d5852df9-01",
+    "I-human:fbf3931b8305fe66a32aec703d6c34593643fb1480d1bcd3c7829ff39c7491ac-01",
+    "I-human:12043049413ef57b330e79ecc8a632f0d93e222d189fafc42cf42bd3d7ab8bad-01",
+    "I-human:bc9201bc287b458b270b78e3e717f9ca03f25ff234efb57b86ce58166cd73232-01",
+    "I-ai:033e3e7bf7da33d162bbf385343ae78c11ef39265d560a97129f1cccb233b687-01",
+    "I-ai:20d4d2ef3768863ceedb25f655a35bd75b54bb44e4f9ed994feee23c5b76231c-03",
+    "I-ai:2380d89efcadd16bfa7f716db95aa9f15f58abdd1377efb4b7475cc34d0749d7-03",
+    "I-ai:2f779449c2ed6444aefb4ac3a7ddde01747ce46350c2d1057c7f7be3a76cb0d7-01",
+    "I-ai:57ec6f4fb2231b2fefead86995f2c7f9f45171dbb0eb31e8d425c94fb4f85dd8-01",
+    "I-ai:6ecf1f695aab8284fcbadbea9656b4d0758e1cca279d5f704a27a5e58093ad65-01",
+    "I-ai:a925881238e73e060c53167abbc2c9380242699701455269fa99888063354321-01",
+    "I-ai:edf3ac36eb359619f779797fda7ebd066508da23669160a655c2f7ebae330979-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting a bounded component would remove the controlling meaning, criteria, or constituent elements assigned to a key term, concept, classification, or model.",
+   "definition": "A bounded reference component establishes the meaning, criteria, or constituent elements of a key term, concept, classification, or model for consistent interpretation.",
+   "distinguished_from": "Unlike Factual Description, it establishes a controlling conceptual meaning rather than characterizing the reviewed subject, and unlike Reference Aid, definition rather than general lookup is its primary function.",
+   "examples": [
+    {
+     "doc": "human:1107e24ea12da95ca79166d6d08ac6611bd8dbee28d0952c5aaa6b0c1d51f899",
+     "excerpt": "A bounded four-part definition of manhood is introduced, but the four propositions themselves are not recoverable from the supplied document.",
+     "item_id": 23
+    }
+   ],
+   "name": "Reference Definition",
+   "subsumes": [
+    "I-human:1107e24ea12da95ca79166d6d08ac6611bd8dbee28d0952c5aaa6b0c1d51f899-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting a bounded component would remove the document's organized, traceable record of external works, resources, or authorities supporting, informing, or extending the review.",
+   "definition": "A bounded source component records external works, resources, or authorities consulted, cited, or offered for further reading so readers can trace or extend the review's informational basis.",
+   "distinguished_from": "Unlike Basis Documentation, it records external informational sources rather than the experience underlying the review, and unlike Supplementary Material, documentation of source provenance is its primary purpose.",
+   "examples": [
+    {
+     "doc": "ai:2380d89efcadd16bfa7f716db95aa9f15f58abdd1377efb4b7475cc34d0749d7",
+     "excerpt": "A five-entry bibliography documents general self-help works concerning finding love, love languages, sustaining marriage, gendered relationship communication, and recovery from harmful parenting.",
+     "item_id": 20
+    },
+    {
+     "doc": "ai:320973d38fe29ac9bd6fa1c936005ed4f2a7f68b7eb51d3973461765193ac535",
+     "excerpt": "A source section lists preparedness resources from the American Red Cross, FEMA, and DHS alongside Alton Brown’s 2009 book Gear Up: Ultimate Kitchen Kit.",
+     "item_id": 19
+    }
+   ],
+   "name": "Source Documentation",
+   "subsumes": [
+    "I-ai:2380d89efcadd16bfa7f716db95aa9f15f58abdd1377efb4b7475cc34d0749d7-04",
+    "I-ai:320973d38fe29ac9bd6fa1c936005ed4f2a7f68b7eb51d3973461765193ac535-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item is chiefly intended to correct, contest, disambiguate, or materially contextualize a claim made or implied in a prior review.",
+   "definition": "This role reactively supplies information that corrects, disputes, disambiguates, or materially contextualizes an earlier account or evaluation.",
+   "distinguished_from": "Unlike Factual Description, its defining function is corrective engagement with a prior claim, and unlike Feedback Acknowledgment, it changes or challenges the informational account rather than merely recognizing it.",
+   "examples": [],
+   "name": "Corrective Clarification",
+   "subsumes": [
+    "B12"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary contribution is to document a corrective measure, resolution step, compensation, change, or commitment prompted by a reported problem.",
+   "definition": "This role reports, offers, or promises action intended to correct a problem, remedy harm, resolve a complaint, or prevent recurrence.",
+   "distinguished_from": "Unlike Improvement Proposal, it records action by a responsible participant rather than a reviewer's suggested change, and unlike Engagement Request, it states what has been or will be done rather than asking another participant to act.",
+   "examples": [],
+   "name": "Remedial Action",
+   "subsumes": [
+    "B13"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting a bounded component would remove the document's record of how other users received, rated, endorsed, or otherwise appraised the review itself.",
+   "definition": "A bounded reception component records audience responses to the review, such as helpfulness assessments, reactions, endorsements, or aggregate engagement signals.",
+   "distinguished_from": "Unlike Review Collection, it documents reception of the review document rather than reviews of the subject, and unlike Feedback Acknowledgment, it records reception rather than expressing a substantive responsive message.",
+   "examples": [],
+   "name": "Reception Record",
+   "subsumes": [
+    "B20"
+   ]
+  }
+ ]
+}

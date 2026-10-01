@@ -1,0 +1,867 @@
+{
+ "format_slug": "knowledge_article",
+ "n_roles": 47,
+ "source": "role discovery, consolidation pass (role_consolidation_xhigh.json)",
+ "final_roles": [
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a description of what the subject is like, contains, does, or is related to without removing its core definition or an explanatory account.",
+   "definition": "An item that describes salient properties, components, states, features, behaviors, or relationships of the subject.",
+   "distinguished_from": "Unlike Definition it elaborates attributes rather than core meaning, unlike Explanation it does not chiefly account for causes or operation, and unlike Identification it does not primarily supply recognition criteria.",
+   "examples": [
+    {
+     "doc": "human:6a1e875a238d6d37e5b16db5b513c677fe8d30e9ac68ed3e051a6485b07da06e",
+     "excerpt": "Its upgrades include 32,768 simultaneous colors, scaling, rotation, additional 3D capability, and richer PWM audio; contrary to a common belief, a Hitachi CPU performs the 3D rendering because the graphics hardware is essentially a double framebuffer.",
+     "item_id": 4
+    }
+   ],
+   "name": "Characterization",
+   "subsumes": [
+    "B06"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily tells readers which choice, action, practice, or priority they should adopt or avoid.",
+   "definition": "An item that advises a preferred choice, action, practice, or course based on stated or implicit reasons or criteria.",
+   "distinguished_from": "Unlike Evaluation it directs a choice rather than only judging merit, unlike Procedure it does not chiefly detail execution, and unlike Commercial Promotion its advice is not primarily a sales appeal.",
+   "examples": [
+    {
+     "doc": "ai:a6daa1f7d3fdf5cbef67c4ba406e98cdc1a0649fd38d75821e61cbbb987ac856",
+     "excerpt": "Both varieties work in many dishes, but cooks should select between them according to the flavor and texture desired.",
+     "item_id": 9
+    }
+   ],
+   "name": "Recommendation",
+   "subsumes": [
+    "B22"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the causal, logical, or operational account that makes an occurrence, behavior, or process understandable.",
+   "definition": "An item that accounts for how or why something occurs, behaves, or works by connecting causes, mechanisms, principles, or reasoning.",
+   "distinguished_from": "Unlike Evidence it explains rather than substantiates a proposition, and unlike Impact it centers on production or operation rather than resulting consequences.",
+   "examples": [
+    {
+     "doc": "ai:799c35881df390bb5422c69592eacf51e23b36737d5af0b2fc5318002cdfca44",
+     "excerpt": "Local gambling laws, banking restrictions, and infrastructure may block international providers or limit access to e-wallets and cryptocurrencies, requiring some users to rely on bank transfers or cash-based alternatives and making location compatibility an important platform-selection criterion.",
+     "item_id": 10
+    }
+   ],
+   "name": "Explanation",
+   "subsumes": [
+    "B09"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's organizing commitment is to reconstruct events, changes, or development through their temporal sequence.",
+   "definition": "An item that reconstructs events or development over time to provide a temporally organized account of the subject.",
+   "distinguished_from": "Unlike Background the temporal sequence is central rather than merely contextual, and unlike Forecast it recounts what has already unfolded rather than projecting what may occur.",
+   "examples": [
+    {
+     "doc": "ai:622e9007577f1ab7b3e98904c4ae00fc9fb2c48d0ef4dee3811db6e8965e74c8",
+     "excerpt": "Since decimalisation, the central bank has periodically revised notes and coins to strengthen counterfeit protection and incorporate representations of national culture, landscapes, and historical figures, balancing usability with security and design innovation.",
+     "item_id": 4
+    }
+   ],
+   "name": "Chronological Account",
+   "subsumes": [
+    "B10"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the account of what changed, followed, or was produced as a consequence of something.",
+   "definition": "An item that reports effects, consequences, or outcomes produced by a subject, event, condition, decision, or action.",
+   "distinguished_from": "Unlike Explanation it centers on resulting consequences rather than their production, unlike Significance it reports effects rather than interpreting importance, and unlike Forecast it concerns established rather than anticipated outcomes.",
+   "examples": [
+    {
+     "doc": "ai:555e2f696b466a55310d80416e38683456d9a0c9c131123aec1bbf81a6add3d4",
+     "excerpt": "Recognition and supportive feedback increase motivation, job satisfaction, engagement, ownership, and purpose by showing that work matters and creating dialogue about accomplishments, challenges, and development.",
+     "item_id": 7
+    }
+   ],
+   "name": "Impact",
+   "subsumes": [
+    "B16"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the actions or ordered method needed to perform a task, carry out a technique, or produce a result.",
+   "definition": "An item that specifies actions or an ordered method for completing a task, carrying out a technique, or producing a result.",
+   "distinguished_from": "Unlike Recommendation it explains how to act rather than which action is preferable, and unlike Prerequisite it supplies execution rather than readiness conditions.",
+   "examples": [
+    {
+     "doc": "ai:342a3c6f3fd0b5263f399eaeecc45d1613d4e2760d524b7f0ee08dc18f79f4aa",
+     "excerpt": "Stone from specialized quarries including Tura and Aswan was extracted and shaped with copper chisels, wooden wedges, and dolerite pounders, then moved on sledges, rollers, ramps, or low-friction tracks; evidence that dampened sand eased hauling demonstrates practical innovation.",
+     "item_id": 8
+    }
+   ],
+   "name": "Procedure",
+   "subsumes": [
+    "B19"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is to establish what a term, concept, entity, or practice means or is.",
+   "definition": "An item that establishes the meaning or core identity of something so it can be understood consistently in the surrounding article.",
+   "distinguished_from": "Unlike Characterization it establishes core identity rather than elaborating attributes, and unlike Terminology Reference it is a substantive definitional commitment rather than a collective lookup aid.",
+   "examples": [
+    {
+     "doc": "human:10ef3e485474bcdfba3801b857f775d3a12333507e39ca45abe182b36430df7e",
+     "excerpt": "Laser welding uses a focused, high-energy-density beam to heat metals or nonmetals locally to a molten or partially molten state, after which rapid cooling and solidification join them.",
+     "item_id": 16
+    }
+   ],
+   "name": "Definition",
+   "subsumes": [
+    "B02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the high-level conceptual or thematic frame through which readers understand the subject and ensuing material.",
+   "definition": "A concise framing item that establishes a high-level conceptual or thematic lens for understanding the subject and the article's ensuing coverage.",
+   "distinguished_from": "Unlike Engagement Hook it supplies an interpretive frame rather than chiefly attracting attention, and unlike Synthesis it prepares readers for material rather than integrating already developed content.",
+   "examples": [
+    {
+     "doc": "ai:df73635ae248c7d11d77f00858b55a9f00dd70a81da77bdb34b5cda2a373a464",
+     "excerpt": "The article frames re-drops as an increasingly important slot-game innovation and sets out to explain their operation, design role, and effect on player experience through contemporary examples, especially LEPHARAOH (OFFICIAL).",
+     "item_id": 1
+    },
+    {
+     "doc": "human:4fed3dcbb9de99da73810962c787deef5120f8506592b38d94e707f5fde40e62",
+     "excerpt": "An epigraph frames the ensuing operations through Grant's directive, “Wherever the enemy goes let our troops go also,” sent to Halleck on 1 August 1864.",
+     "item_id": 1
+    }
+   ],
+   "name": "Orientation",
+   "subsumes": [
+    "B01",
+    "I-human:4fed3dcbb9de99da73810962c787deef5120f8506592b38d94e707f5fde40e62-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily reaches or supports a judgment about a subject's merit, quality, effectiveness, strength, or weakness.",
+   "definition": "An item that assesses a subject, option, method, or outcome against explicit or implicit criteria.",
+   "distinguished_from": "Unlike Assessment Framework it applies rather than establishes evaluative standards, unlike Comparison it makes a judgment rather than only showing differences, and unlike Recommendation it need not advise action.",
+   "examples": [
+    {
+     "doc": "ai:d5546f6580dbb1ad4a1aa7c75e2b5cd517a52381cf959e14dafa629e7982a256",
+     "excerpt": "Because P/FCF does not adequately reflect debt, interest obligations, or the cost of capital, it may provide an incomplete view of financial health.",
+     "item_id": 5
+    }
+   ],
+   "name": "Evaluation",
+   "subsumes": [
+    "B14"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily tells readers what the subject is used for or where it is practically employed without explaining execution.",
+   "definition": "An item that identifies the purposes, functions, or practical contexts for which a subject, method, or resource is used.",
+   "distinguished_from": "Unlike Procedure it identifies use rather than execution steps, and unlike Impact it concerns intended employment rather than resulting effects.",
+   "examples": [
+    {
+     "doc": "ai:85871d136b0bd8f59f1c20deff702e8ff16dfe8693e8bde02a277426e14fe139",
+     "excerpt": "Marketing mix modeling estimates content’s aggregate incremental sales contribution while controlling for other channels, promotions, seasonality, competitors, and external influences, avoiding dependence on incomplete individual tracking.",
+     "item_id": 2
+    }
+   ],
+   "name": "Application",
+   "subsumes": [
+    "B08"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily integrates developed material into a conclusion, answer, or takeaway rather than adding a new line of detail.",
+   "definition": "An item that integrates preceding material into a consolidated conclusion, answer, or takeaway.",
+   "distinguished_from": "Unlike Content Recap it derives an integrated conclusion rather than merely condensing prior points for review, and unlike Orientation it follows rather than prepares for developed material.",
+   "examples": [
+    {
+     "doc": "ai:76102ad2399364da2347e613e38b3e1788642f147aed2894329c298e2fe84afe",
+     "excerpt": "The grassroots account concludes that community knowledge, volunteering, collaboration, technology, partnerships, and culture enable resilient movements to address immediate problems while contributing to long-term social transformation.",
+     "item_id": 22
+    }
+   ],
+   "name": "Synthesis",
+   "subsumes": [
+    "B24"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is to reveal similarities, differences, trade-offs, or relative positions across shared dimensions.",
+   "definition": "An item that systematically juxtaposes subjects, options, or approaches on common dimensions to clarify similarities, differences, or trade-offs.",
+   "distinguished_from": "Unlike Classification it relates alternatives without primarily constructing categories, and unlike Evaluation it need not judge which alternative is better.",
+   "examples": [
+    {
+     "doc": "ai:85871d136b0bd8f59f1c20deff702e8ff16dfe8693e8bde02a277426e14fe139",
+     "excerpt": "Performance content generates readily measured near-term conversions, whereas brand content builds durable awareness and affinity that improve all marketing, creating a strategic trade-off between immediate results and sustainable growth.",
+     "item_id": 40
+    }
+   ],
+   "name": "Comparison",
+   "subsumes": [
+    "B13"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate observations, data, findings, records, or testimony used to substantiate a proposition.",
+   "definition": "An item that presents observations, data, findings, records, or testimony whose primary function is to substantiate or verify a proposition.",
+   "distinguished_from": "Unlike Illustration it supports acceptance rather than chiefly clarifying a general point, and unlike Source Documentation it provides substantive support rather than documenting provenance.",
+   "examples": [
+    {
+     "doc": "ai:961680e8aa28bfea4d0f60fdbe9e0a00f8a9cc1cb5848af68c0d386fe29098bd",
+     "excerpt": "Rear-mounted radar supports blind-spot warnings through mirror alerts; NHTSA studies are cited for a 14% reduction in lane-change collisions.",
+     "item_id": 29
+    }
+   ],
+   "name": "Evidence",
+   "subsumes": [
+    "B11"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly explains why the subject, finding, or developed material matters in a wider context.",
+   "definition": "An item that interprets the importance, meaning, relevance, or broader implications of the subject or preceding material.",
+   "distinguished_from": "Unlike Impact it interprets importance rather than merely reporting consequences, and unlike Evaluation it does not primarily judge quality or effectiveness against criteria.",
+   "examples": [
+    {
+     "doc": "ai:568eceb3aeaed69e3d0960786c58330178f61bc8a8863123f8f1ca6868e80c1f",
+     "excerpt": "Tort law is presented as promoting accountability and compensating injured parties, while knowledge of its liability grounds helps people manage disputes and pursue redress.",
+     "item_id": 6
+    }
+   ],
+   "name": "Significance",
+   "subsumes": [
+    "B17"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is to prevent a particular proposition from being read as more certain, general, or applicable than warranted.",
+   "definition": "An item that narrows the certainty, generality, interpretation, or applicability of a proposition by stating a caveat, exception, constraint, or uncertainty.",
+   "distinguished_from": "Unlike Scope it qualifies a particular substantive commitment rather than setting overall boundaries, and unlike Risk Warning its central purpose is precision rather than protection from harm.",
+   "examples": [
+    {
+     "doc": "ai:79426e066bd2d9295b38c8b24fdb0d23efcd875ebe49d88168f4c4792e57851f",
+     "excerpt": "Highway-speed impacts generally produce more severe outcomes, but low-speed collisions can also cause lasting harm when sudden force or body position produces injury.",
+     "item_id": 8
+    }
+   ],
+   "name": "Qualification",
+   "subsumes": [
+    "B18"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's central purpose is to protect readers by foregrounding a material hazard and the conduct needed to avoid, mitigate, or respond to it.",
+   "definition": "An item that alerts readers to a material hazard or adverse outcome and communicates necessary avoidance, precaution, or response.",
+   "distinguished_from": "Unlike Qualification it manages harm rather than calibrating a claim, and unlike Recommendation its directive force arises primarily from danger or loss.",
+   "examples": [
+    {
+     "doc": "human:646f4866e876865979bfb0e73bde338aae2ab6249ad51d4e725d8ab55564b392",
+     "excerpt": "A teenager receiving inappropriate, harassing, or soliciting messages should not reply and should immediately inform a trusted adult, because engagement may intensify the situation or prompt regrettable responses.",
+     "item_id": 7
+    }
+   ],
+   "name": "Risk Warning",
+   "subsumes": [
+    "B23"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would deprive later material of prior circumstances, foundational concepts, or situational context needed for understanding.",
+   "definition": "An item that supplies prior circumstances, foundational concepts, or situational context needed to understand the subject or subsequent discussion.",
+   "distinguished_from": "Unlike Chronological Account temporal sequence is not its main organizing purpose, and unlike Explanation it does not primarily account for how or why something occurs.",
+   "examples": [
+    {
+     "doc": "ai:2f4373e2dd46ac44e466613a59e6579ff422b5545569b04f172fca4240dcdcfa",
+     "excerpt": "Motivations including heredity research and investigation of radiation effects converged in the late 1980s into a project intended to sequence human DNA, stimulate technology, and prepare genomic medicine, with a projected 15-year schedule and budget exceeding $3 billion.",
+     "item_id": 14
+    }
+   ],
+   "name": "Background",
+   "subsumes": [
+    "B05"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily establishes the unresolved problem, question, gap, or practical need that makes the ensuing discussion necessary.",
+   "definition": "An item that articulates the problem, question, knowledge gap, or practical need motivating the article's attention.",
+   "distinguished_from": "Unlike Orientation it motivates attention through an unresolved issue rather than a general frame, and unlike Diagnosis it presents the problem rather than determining its nature or cause.",
+   "examples": [
+    {
+     "doc": "human:207720d2f690d09c4723877cb9adb9028bf543aa4901122a6b1c56bda9d2b97b",
+     "excerpt": "A VFD system needs energy management when an overhauling load or commanded deceleration makes the motor regenerate power into the drive, because undissipated energy raises the DC-bus voltage and can cause nuisance overvoltage faults or hardware damage.",
+     "item_id": 10
+    }
+   ],
+   "name": "Issue Framing",
+   "subsumes": [
+    "B04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when a concrete instance, case, or scenario is included chiefly to make an abstract or general point easier to understand.",
+   "definition": "An item that supplies a concrete instance, case, or scenario to clarify a broader concept, pattern, or method.",
+   "distinguished_from": "Unlike Evidence it primarily improves intelligibility rather than proving a proposition, and unlike Application it exemplifies a general point rather than identifying practical uses.",
+   "examples": [
+    {
+     "doc": "human:acb75ad49bd88b8abf3960f0ca26e1e693c2287bb977f15d5eb5c61680a58a93",
+     "excerpt": "Soaring Eagle, Four Winds New Buffalo, and FireKeepers illustrate the scale of leading tribal resorts through gaming floors of 107,000–200,000 square feet, thousands of slots, numerous table games, and amenities including poker, hotels, dining, and entertainment.",
+     "item_id": 17
+    }
+   ],
+   "name": "Illustration",
+   "subsumes": [
+    "B12"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is a principled grouping of subject matter into categories or types.",
+   "definition": "An item that organizes subject matter into categories or types according to relevant distinctions or criteria.",
+   "distinguished_from": "Unlike Comparison it establishes a grouping scheme rather than merely juxtaposing alternatives, and unlike Characterization it organizes instances rather than describing one subject.",
+   "examples": [
+    {
+     "doc": "ai:555e2f696b466a55310d80416e38683456d9a0c9c131123aec1bbf81a6add3d4",
+     "excerpt": "Positive feedback reinforces strengths and motivation, constructive feedback couples improvement needs with specific suggestions, and negative feedback identifies problems but is more useful when reframed constructively.",
+     "item_id": 4
+    }
+   ],
+   "name": "Classification",
+   "subsumes": [
+    "B07"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove a stable lookup resource for key facts, values, identifiers, profiles, or recurring data.",
+   "definition": "A bounded structural component that organizes key facts, values, identifiers, profiles, or other recurring data into a stable resource for quick reference.",
+   "distinguished_from": "Unlike Characterization it is included chiefly for lookup rather than as one descriptive move, unlike Terminology Reference it is not limited to vocabulary, and unlike Content Recap it need not condense previously developed material.",
+   "examples": [
+    {
+     "doc": "human:5be9a233c20227907176eaa9c0b585c418a4ddfbebc3a834d721d337858be72d",
+     "excerpt": "A trivia section identifies Taurus as her zodiac sign; dates her music debut to the 2014 Radio Disney and iTunes release of “Can’t Blame a Girl for Trying”; notes the January 2015 single and February video for “We’ll Be the Stars”; and dates her acting debut to 2011.",
+     "item_id": 15
+    }
+   ],
+   "name": "Reference Compilation",
+   "subsumes": [
+    "B28"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly maps who holds which interpretation or position, especially where views differ or remain contested.",
+   "definition": "An item that neutrally presents attributed, competing, or historically significant interpretations, positions, or controversies surrounding the subject.",
+   "distinguished_from": "Unlike Evaluation it maps viewpoints rather than issuing the article's own judgment, and unlike Evidence it reports positions rather than primarily establishing which proposition is true.",
+   "examples": [
+    {
+     "doc": "human:f6644c4dd230a9063a3cee8b74b6c02f2dba3054ebbd9442746148561c7dfcaf",
+     "excerpt": "Analyst opinion remained mixed but constructive: Mizuho reaffirmed Outperform on April 13, and 15–27 analysts collectively indicated Moderate Buy with average targets of $271–274, over 25% above roughly $215, although earlier reductions attributed to macroeconomic pressures had contributed to peer underperformance.",
+     "item_id": 6
+    }
+   ],
+   "name": "Perspective Survey",
+   "subsumes": [
+    "B15"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would erase the general assumptions, inclusions, exclusions, or boundary conditions governing coverage or applicability.",
+   "definition": "An item that delimits coverage or applicability by specifying governing assumptions, inclusions, exclusions, or boundary conditions.",
+   "distinguished_from": "Unlike Qualification it establishes general boundaries rather than limiting one proposition, unlike Prerequisite it does not primarily establish operational readiness, and unlike Disclosure it concerns substantive coverage rather than document-level reliance conditions.",
+   "examples": [
+    {
+     "doc": "human:538f886694c96995c9fbbaeaa73b6ccc4e93ad77616cc84e065c9142bd418eae",
+     "excerpt": "Although bourbon was formerly required to originate in Bourbon County, geographic origin no longer determines eligibility; the designation instead depends on strict production standards.",
+     "item_id": 6
+    }
+   ],
+   "name": "Scope",
+   "subsumes": [
+    "B03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily states what must be available, true, completed, known, or authorized before an action or intended result is possible.",
+   "definition": "An item that identifies conditions, resources, permissions, knowledge, or preparation required before a procedure or intended outcome.",
+   "distinguished_from": "Unlike Procedure it establishes readiness rather than execution, unlike Scope it concerns operational preconditions rather than general applicability, and unlike Governing Rule its primary function is enabling a subsequent action.",
+   "examples": [
+    {
+     "doc": "human:5d489bd23123d5b7d623b582e4d19da8f31f0a06285871b4e41d41e9a00a7f03",
+     "excerpt": "A beginner’s essential setup comprises a tungsten electrode, welding machine, torch or electrode holder, and shielding-gas supply.",
+     "item_id": 2
+    }
+   ],
+   "name": "Prerequisite",
+   "subsumes": [
+    "B20"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item or bounded component would eliminate a pathway or practical arrangement for obtaining or consulting related material, tools, services, or collections beyond the article's development.",
+   "definition": "An item or bounded component that directs readers to related material, tools, services, or collections and may state practical conditions for obtaining or consulting them.",
+   "distinguished_from": "Unlike Source Documentation it enables further access rather than verifying current claims, unlike Navigation Support it points beyond the current content structure, and unlike Commercial Promotion it need not persuasively solicit a transaction.",
+   "examples": [
+    {
+     "doc": "ai:2263058afbcb03e1ed9c37a3dd8426c47bbb6dd913238e19e39b0dac42c300f2",
+     "excerpt": "A related-reading prompt attributes Soviet naval defeat broadly to strategic errors and technological disadvantages and directs readers to an external article for additional discussion of opposing strategies and decisive moments.",
+     "item_id": 14
+    },
+    {
+     "doc": "human:365015e8c2f0a63f17bfc22527cc3a4ef331da17c7708a2d3289a0924ae7fdc7",
+     "excerpt": "Consultation requires prior arrangement and remains subject to copyright restrictions. Researchers should contact uml.special-collections@manchester.ac.uk about using the archive and David Butler at david.g.butler@manchester.ac.uk for its history and future plans.",
+     "item_id": 13
+    }
+   ],
+   "name": "Resource Access",
+   "subsumes": [
+    "B29",
+    "I-human:365015e8c2f0a63f17bfc22527cc3a4ef331da17c7708a2d3289a0924ae7fdc7-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is to infer or identify the nature, category, severity, or likely cause of a problem from observed indicators.",
+   "definition": "An item that uses signs, symptoms, tests, or observed conditions to identify the nature, category, severity, or likely cause of a problem.",
+   "distinguished_from": "Unlike Issue Framing it determines what a problem is rather than merely presenting it, and unlike Identification it diagnoses a problematic condition rather than recognizing an ordinary entity or type.",
+   "examples": [
+    {
+     "doc": "ai:f9117cebef3a37df44c1020030af9abdd3d045ecf5bd300389dd2ffd89aaaf79",
+     "excerpt": "Severity assessment distinguishes active cracks that continue changing from dormant ones; uses orientation to diagnose lateral pressure or settlement; checks moisture for drainage problems; and treats multiple parallel cracks as evidence of potentially serious soil movement or structural deficiencies requiring comprehensive remediation.",
+     "item_id": 7
+    }
+   ],
+   "name": "Diagnosis",
+   "subsumes": [
+    "B21"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove the claim-to-source provenance needed to verify the article's content.",
+   "definition": "A bounded documentary component that records external sources and claim-to-source provenance so readers can verify the article's content.",
+   "distinguished_from": "Unlike Evidence it documents where support comes from rather than presenting the support itself, and unlike Resource Access it serves verification rather than further exploration.",
+   "examples": [
+    {
+     "doc": "human:4a9197db1aaf8c1829d9b74c785f35bcf25bd91022aac05f6efac482b999336e",
+     "excerpt": "A reference section documents technical histories, early display demonstrations, AFFS research, and environmental toxicity research through four scholarly sources.",
+     "item_id": 36
+    }
+   ],
+   "name": "Source Documentation",
+   "subsumes": [
+    "B26"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove routes, locators, or organizational cues needed to move efficiently through the article or its associated collection.",
+   "definition": "A bounded structural component that provides routes, locators, or organizational cues for moving through the article or an associated content collection.",
+   "distinguished_from": "Unlike Orientation it facilitates movement rather than conceptual understanding, and unlike Resource Access it organizes access to existing content rather than directing readers to additional resources.",
+   "examples": [
+    {
+     "doc": "ai:799c35881df390bb5422c69592eacf51e23b36737d5af0b2fc5318002cdfca44",
+     "excerpt": "A contents component provides navigation to discussions of transaction speed, security, regional availability, costs, and emerging payment technologies.",
+     "item_id": 2
+    }
+   ],
+   "name": "Navigation Support",
+   "subsumes": [
+    "B25"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would erase formal credit or recognition for who created, adapted, reviewed, contributed to, assisted with, or participated in the presented work or reported activity.",
+   "definition": "A documentary or ceremonial item that records or formally recognizes authorship, adaptation, review, contribution, assistance, participation, or responsibility connected with presented work or a reported activity.",
+   "distinguished_from": "Unlike Source Documentation it credits people or contributions rather than authorities supporting claims, and unlike Disclosure it recognizes involvement rather than revealing interests or reliance conditions.",
+   "examples": [
+    {
+     "doc": "ai:06e3e897fdad5150c5c77868464d6d69d6fa50a1b0b2596b7459813676772c9b",
+     "excerpt": "An author profile attributes the article to a senior editor and pediatric wellness specialist and additionally describes editorial and content-strategy work covering technology, design, and digital media.",
+     "item_id": 31
+    },
+    {
+     "doc": "human:d5479578f85d86780a60cce82a7a0fb27b22c0d26fa51e1f7082d528116bbc16",
+     "excerpt": "The co-conveners thanked government representatives and invited participants from the COP28 Presidency, UN climate institutions, energy organizations, the UN Foundation, and the body addressing loss-and-damage funding arrangements.",
+     "item_id": 2
+    }
+   ],
+   "name": "Contribution Credit",
+   "subsumes": [
+    "B31",
+    "I-human:d5479578f85d86780a60cce82a7a0fb27b22c0d26fa51e1f7082d528116bbc16-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the bounded component primarily reveals document-level circumstances readers need to judge independence, responsibility, or appropriate reliance.",
+   "definition": "A bounded documentary component that reveals sponsorship, affiliations, conflicts, responsibility limits, regulatory status, or other circumstances materially affecting interpretation or trust.",
+   "distinguished_from": "Unlike Qualification it concerns circumstances surrounding the article rather than narrowing a substantive proposition, and unlike Contribution Credit it reveals interests or reliance conditions rather than recognizing participation.",
+   "examples": [
+    {
+     "doc": "ai:beaec38387b77dc3f9508617f0e44ded6c7571c27a71c913e0cece99d70f324a",
+     "excerpt": "A legal disclaimer characterizes the guide as general information rather than legal advice, warns that laws and their application can change or depend on individual facts, and recommends consulting a qualified legal professional about specific circumstances.",
+     "item_id": 11
+    }
+   ],
+   "name": "Disclosure",
+   "subsumes": [
+    "B32"
+   ]
+  },
+  {
+   "assignment_test": "Select this role only when the item primarily extends the document with useful ancillary material and no more specific substantive, documentary, summary, or reference function better explains it.",
+   "definition": "A bounded auxiliary component that preserves useful ancillary detail or supporting material outside the article's main development without changing its central line.",
+   "distinguished_from": "Unlike Reference Compilation it is not chiefly designed for repeated lookup, and unlike substantive roles such as Evidence or Illustration its primary commitment is auxiliary extension.",
+   "examples": [
+    {
+     "doc": "ai:d7a602cdff9921ee698af27f67d8417ad6bd7f680b541317015561c118c9e05e",
+     "excerpt": "A practical FAQ revisits the main issue and expands on acidity, dilution, bacterial species, prevention, preservation uses, health risks, and testing.",
+     "item_id": 10
+    }
+   ],
+   "name": "Supplementation",
+   "subsumes": [
+    "B30"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the bounded component would eliminate a reusable lookup aid for interpreting the article's specialized vocabulary, symbols, abbreviations, or naming conventions.",
+   "definition": "A bounded reference component that defines or standardizes a collection of terms, symbols, abbreviations, or naming conventions for repeated lookup.",
+   "distinguished_from": "Unlike Definition it serves as a collective lookup aid rather than one substantive definitional commitment, and unlike Reference Compilation its organizing purpose is specifically terminological.",
+   "examples": [
+    {
+     "doc": "human:374c92dc7c61cf2f8a8e0dd9783f1cb4de1d1e8174cd605b9436933b12b8336d",
+     "excerpt": "A closing glossary consolidates definitions of bond breakers, chemical and physical sealants, log-home wool, splines, and log-home tape, emphasizing their forms, placement, and roles in accommodating movement and blocking drafts, water, and insects.",
+     "item_id": 21
+    }
+   ],
+   "name": "Terminology Reference",
+   "subsumes": [
+    "B27"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove the documentary basis for judging when the article was published, reviewed, changed, or superseded.",
+   "definition": "A bounded documentary component that records publication, review, update, or version history to establish the article's currency and change status.",
+   "distinguished_from": "Unlike Contribution Credit it documents temporal status rather than personal responsibility, and unlike Chronological Account it records the document's lifecycle rather than the subject's history.",
+   "examples": [
+    {
+     "doc": "human:4ef994892ff9d9f1a65c604b4c00fb724b3ce7c02b106cd40323a601aaea9847",
+     "excerpt": "An editor's note dated February 23, 2023 records that the article was revised to clarify that some Christian denominations observe holidays on different dates.",
+     "item_id": 12
+    }
+   ],
+   "name": "Revision Record",
+   "subsumes": [
+    "B33"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a substantive projection of a likely or possible future state, trend, event, capability, or outcome.",
+   "definition": "An item that projects a likely or possible future state, trend, event, capability, or outcome from expectations, indicators, models, or current trajectories.",
+   "distinguished_from": "Unlike Chronological Account it anticipates rather than reconstructs developments, unlike Impact it concerns outcomes not yet established, and unlike Planned Activity it expresses expectation rather than a documented plan or commitment.",
+   "examples": [
+    {
+     "doc": "ai:98d9f2e4f74ed443f9dfa1f6430d569ee3b60d32751b020cd9b89375b6693023",
+     "excerpt": "By 2026, streaming services are expected to make greater use of AI-generated personalization, higher-quality audio, and integration across platforms.",
+     "item_id": 14
+    },
+    {
+     "doc": "ai:3cd6a3dba56786c0c5d4401a1ac01a60bfeb98085fbee5978c3e03f136400c4f",
+     "excerpt": "Growth in decentralized renewable generation will increase the need for flexible loads, positioning adaptable mining operations for integration with future smart grids as storage, transmission, and forecasting technologies improve.",
+     "item_id": 20
+    },
+    {
+     "doc": "ai:df73635ae248c7d11d77f00858b55a9f00dd70a81da77bdb34b5cda2a373a464",
+     "excerpt": "Machine learning and adaptive algorithms could personalize re-drop opportunities according to player behavior, skill, or engagement, allowing the mechanic to evolve and potentially improve long-term retention.",
+     "item_id": 24
+    }
+   ],
+   "name": "Forecast",
+   "subsumes": [
+    "I-human:f6644c4dd230a9063a3cee8b74b6c02f2dba3054ebbd9442746148561c7dfcaf-01",
+    "I-ai:98d9f2e4f74ed443f9dfa1f6430d569ee3b60d32751b020cd9b89375b6693023-01",
+    "I-ai:3cd6a3dba56786c0c5d4401a1ac01a60bfeb98085fbee5978c3e03f136400c4f-01",
+    "I-ai:740caf14b868ff235f0a91221616ff89f599c40f8cf7188398cb67f5e1232726-01",
+    "I-ai:df73635ae248c7d11d77f00858b55a9f00dd70a81da77bdb34b5cda2a373a464-01",
+    "I-ai:0cea260fb3065b6bd3d32d30aba578df59533172b6f6a11a7f5d84b9770dac30-01",
+    "I-ai:799c35881df390bb5422c69592eacf51e23b36737d5af0b2fc5318002cdfca44-01",
+    "I-ai:815a9b0cd38dcb230fa4dab360045ad09f6d272a64a5e7b2b1abd04db6b8f9f5-01",
+    "I-ai:b14158a0d47c44e1b4cde76515b19138c68c66d697c36ac46e7762f19846d470-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the substantive account of what an authoritative framework requires, permits, prohibits, entitles, limits, or provides as a remedy.",
+   "definition": "An item that states binding or officially established requirements, permissions, prohibitions, rights, duties, limits, or remedies governing conduct or circumstances.",
+   "distinguished_from": "Unlike Recommendation it reports authoritative obligations or permissions rather than preferred conduct, and unlike Prerequisite its primary function is to state the governing framework rather than establish readiness for a later action.",
+   "examples": [
+    {
+     "doc": "ai:beaec38387b77dc3f9508617f0e44ded6c7571c27a71c913e0cece99d70f324a",
+     "excerpt": "Virginia Code § 55.1-1220 requires habitable, code-compliant rentals with functioning essential systems, sound weatherproof structures, safe common areas, and waste disposal; after written repair notice, landlords must respond immediately to emergencies and within 14 days for non-emergencies, or tenants may seek escrow, repair-and-deduct relief, or termination.",
+     "item_id": 4
+    },
+    {
+     "doc": "human:bbdfd3353e8d330e681c456ecabc59350116adcf973aa94d87b7f5144c54c469",
+     "excerpt": "A forward-looking non-GAAP measure needs no quantitative reconciliation, but the same document must disclose its historical equivalent, thereby triggering the full historical-measure requirements for that equivalent.",
+     "item_id": 14
+    },
+    {
+     "doc": "human:e678472ec4bf2a6ec4233e96aaf2e2b4f9e2e0ebb49f7d7105613f884d1addab",
+     "excerpt": "Test-day rules prohibit giving or receiving assistance, possessing calculators, phones, watches, notes, or dictionaries, and disturbing examination equipment; candidates must present an accepted government-issued identification document whose name matches their registration.",
+     "item_id": 10
+    }
+   ],
+   "name": "Governing Rule",
+   "subsumes": [
+    "I-human:bbdfd3353e8d330e681c456ecabc59350116adcf973aa94d87b7f5144c54c469-01",
+    "I-ai:beaec38387b77dc3f9508617f0e44ded6c7571c27a71c913e0cece99d70f324a-01",
+    "I-human:e678472ec4bf2a6ec4233e96aaf2e2b4f9e2e0ebb49f7d7105613f884d1addab-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove an at-a-glance condensation of material developed elsewhere without removing a newly derived conclusion.",
+   "definition": "A bounded structural component that condenses selected material developed elsewhere in the document into a convenient recap.",
+   "distinguished_from": "Unlike Synthesis it restates developed points rather than deriving an integrated conclusion, and unlike Reference Compilation its organizing purpose is review of the document's developed content rather than general lookup.",
+   "examples": [
+    {
+     "doc": "ai:a1511217417d38a8787d62ddded1cbd1418708b200e443b93f6656a1ef33eb75",
+     "excerpt": "A compact scientific summary display collates reported risk elevations, placental and neurological mechanisms, reproductive effects, supporting epidemiological, biomarker, and animal evidence, and the field’s mixed conclusions.",
+     "item_id": 12
+    },
+    {
+     "doc": "ai:a1511217417d38a8787d62ddded1cbd1418708b200e443b93f6656a1ef33eb75",
+     "excerpt": "A legal-status summary display documents the active litigation, dismissal and appeal risks, estimated compensation range, expert-witness controversy, principal scientific sources, and continuing judicial scrutiny.",
+     "item_id": 21
+    }
+   ],
+   "name": "Content Recap",
+   "subsumes": [
+    "I-ai:a1511217417d38a8787d62ddded1cbd1418708b200e443b93f6656a1ef33eb75-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a vivid, provocative, humorous, narrative, or directly involving appeal whose primary purpose is to generate interest in the material.",
+   "definition": "An item that primarily captures reader interest through vivid, provocative, humorous, narrative, or directly involving presentation.",
+   "distinguished_from": "Unlike Orientation it primarily generates attention and involvement rather than establishing a conceptual frame, and unlike Illustration its concrete material is not chiefly used to clarify a general proposition.",
+   "examples": [
+    {
+     "doc": "human:538f886694c96995c9fbbaeaa73b6ccc4e93ad77616cc84e065c9142bd418eae",
+     "excerpt": "After discovering that the narrator had driven at least 100 miles south into the hurricane, Matthew says, “I cannot believe that anyone would be drinking bourbon while driving a convertible into a hurricane.” The narrator replies, “I can't believe anyone wouldn't?”",
+     "item_id": 4
+    },
+    {
+     "doc": "ai:0f134b61264923bd9c11148766d4a1ac5a49ce6f533a8a2b389e2ed8372b212e",
+     "excerpt": "The opening invites readers to imagine watching coastal harvesters and tasting freshly gathered Galician percebes, framing the experience as an exciting encounter with the sea.",
+     "item_id": 1
+    }
+   ],
+   "name": "Engagement Hook",
+   "subsumes": [
+    "I-human:538f886694c96995c9fbbaeaa73b6ccc4e93ad77616cc84e065c9142bd418eae-01",
+    "I-ai:0f134b61264923bd9c11148766d4a1ac5a49ce6f533a8a2b389e2ed8372b212e-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the criteria, standards, benchmarks, or dimensions governing how subsequent judgments are organized or reached.",
+   "definition": "An item that establishes the criteria, standards, benchmarks, or dimensions by which subjects or options are to be assessed.",
+   "distinguished_from": "Unlike Evaluation it supplies the basis for judgment rather than applying that basis to reach or support a judgment.",
+   "examples": [
+    {
+     "doc": "human:c3a787c8fb3d136cc3199ec46deb72911178503ac6448f72ae2442fc6ecd01dc",
+     "excerpt": "The grading framework measures the administration against three broad categories derived from longstanding U.S. laws, policies, funding practices, and official statements.",
+     "item_id": 4
+    },
+    {
+     "doc": "ai:053ead5b6e4845e151f44298a2efa75cc6e702aae667ce29b3ed7af325e24564",
+     "excerpt": "A dedicated purchasing guide organizes lead-shot evaluation around six performance-related criteria: size, material purity and consistency, hardness, shape uniformity, weight and density, and coating or lubrication.",
+     "item_id": 31
+    }
+   ],
+   "name": "Assessment Framework",
+   "subsumes": [
+    "I-human:c3a787c8fb3d136cc3199ec46deb72911178503ac6448f72ae2442fc6ecd01dc-01",
+    "I-ai:053ead5b6e4845e151f44298a2efa75cc6e702aae667ce29b3ed7af325e24564-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate observable criteria or recognition guidance needed to identify or distinguish an entity, instance, or type.",
+   "definition": "An item that provides observable criteria, diagnostic traits, or recognition guidance for identifying or distinguishing an entity, instance, or type.",
+   "distinguished_from": "Unlike Characterization its traits are selected chiefly to enable recognition, and unlike Diagnosis it identifies an entity or type rather than the nature or cause of a problem.",
+   "examples": [
+    {
+     "doc": "ai:66315f77211582db9d972d1fe7a0caf65b4372d54d93c030a12d20f94ab324fe",
+     "excerpt": "The spider is recognizable by its yellow-and-black, wasp-like abdomen and large web; its coloration may warn predators and accounts for the common name wasp spider.",
+     "item_id": 2
+    },
+    {
+     "doc": "ai:66315f77211582db9d972d1fe7a0caf65b4372d54d93c030a12d20f94ab324fe",
+     "excerpt": "Within a British context, the spider can be distinguished from other possible Argiope visitors by the combined evidence of its strongly yellow, ribbed abdominal pattern and characteristic web form.",
+     "item_id": 20
+    }
+   ],
+   "name": "Identification",
+   "subsumes": [
+    "I-ai:66315f77211582db9d972d1fe7a0caf65b4372d54d93c030a12d20f94ab324fe-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a primarily promotional appeal or incentive intended to generate favorable consideration, uptake, purchase, or engagement with a commercially interested offering or provider.",
+   "definition": "An item that promotes a commercially interested provider, product, program, or service through persuasive claims, credentials, solicitations, guarantees, incentives, or offers.",
+   "distinguished_from": "Unlike Recommendation it primarily advances a commercial interest, and unlike Resource Access it seeks conversion or favorable consideration rather than chiefly supplying a neutral pathway to a resource.",
+   "examples": [
+    {
+     "doc": "ai:36b261947f8daf7de457b7a728b0f37cf47c6c97a3f3e395f6f30143bacfd3c5",
+     "excerpt": "A promotional callout connects legacy performance bottlenecks to higher hosting costs and poor customer experience, then offers a free consultation for a dedicated modernization service intended to reduce cloud spending and improve performance.",
+     "item_id": 15
+    },
+    {
+     "doc": "human:100f09875330b7d430526dcfcc30b8d69b380e04365c0678898a09585c1a898c",
+     "excerpt": "Readers are prompted to model the effect of adding 160 SAT points or 4 ACT points, followed by a promotion for PrepScholar’s program guaranteeing those improvements or a refund and offering further information or a five-day free trial.",
+     "item_id": 13
+    },
+    {
+     "doc": "ai:dd2eaa40f57bed42bff9c8a228911fea4003935c6aecbd6dbb83bfd0f263ae1c",
+     "excerpt": "A concluding promotional offer provides a $10 credit on a first transfer when the customer applies promo code BLOG, subject to terms and conditions.",
+     "item_id": 15
+    }
+   ],
+   "name": "Commercial Promotion",
+   "subsumes": [
+    "I-ai:36b261947f8daf7de457b7a728b0f37cf47c6c97a3f3e395f6f30143bacfd3c5-01",
+    "I-human:100f09875330b7d430526dcfcc30b8d69b380e04365c0678898a09585c1a898c-01",
+    "I-ai:8c9a063c3622aea93a972c197465e98133b0ea5f8ece100dbdcd65f2d4d4863c-01",
+    "I-ai:dd2eaa40f57bed42bff9c8a228911fea4003935c6aecbd6dbb83bfd0f263ae1c-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the actual remedy, design, product, or response selected, introduced, or implemented to address an established problem or need.",
+   "definition": "An item that reports a remedy, design, product, or response selected, introduced, or implemented for an established problem or unmet need.",
+   "distinguished_from": "Unlike Recommendation it reports an actual response rather than advising one, and unlike Procedure it identifies the implemented remedy rather than detailing how to execute it.",
+   "examples": [
+    {
+     "doc": "human:910cd22aa9e54fc0a894b7ba924ac89c2c229f5fa4543d44d2a3ca27124c7741",
+     "excerpt": "Electrolube developed a pre-measured 50 ml twin-syringe cartridge with a static mixing nozzle, preserving simple mixing while improving precision on delicate LEDs, reducing waste, and limiting operator contact with the resin.",
+     "item_id": 12
+    }
+   ],
+   "name": "Implemented Solution",
+   "subsumes": [
+    "I-human:910cd22aa9e54fc0a894b7ba924ac89c2c229f5fa4543d44d2a3ca27124c7741-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a documented schedule, intention, commitment, agenda, or active investigative direction rather than a prediction or recommendation.",
+   "definition": "An item that records a scheduled, intended, committed, or actively pursued action, event, development, milestone, or investigation.",
+   "distinguished_from": "Unlike Forecast it documents an established plan, schedule, commitment, or agenda rather than an extrapolated expectation, and unlike Recommendation it reports intended activity rather than advising it.",
+   "examples": [
+    {
+     "doc": "human:365015e8c2f0a63f17bfc22527cc3a4ef331da17c7708a2d3289a0924ae7fdc7",
+     "excerpt": "Planned archival work will connect the contents of audio files with corresponding paper records.",
+     "item_id": 12
+    },
+    {
+     "doc": "human:9827afeec6f267adbcd4a995d551b35f4931b3e6d8209a4193356c2919db53dd",
+     "excerpt": "The researchers seek to determine how elevated CO2 alters plant mineral composition and are investigating natural genetic variation that might support breeding crops with better nutritional value under future atmospheric conditions.",
+     "item_id": 7
+    },
+    {
+     "doc": "human:d5479578f85d86780a60cce82a7a0fb27b22c0d26fa51e1f7082d528116bbc16",
+     "excerpt": "The co-conveners announced that the eighth Ministerial meeting on Climate Action would be held in China in 2024.",
+     "item_id": 21
+    }
+   ],
+   "name": "Planned Activity",
+   "subsumes": [
+    "I-human:365015e8c2f0a63f17bfc22527cc3a4ef331da17c7708a2d3289a0924ae7fdc7-02",
+    "I-human:9827afeec6f267adbcd4a995d551b35f4931b3e6d8209a4193356c2919db53dd-01",
+    "I-human:a8b11bb39b27e0f8c9c2c11f3192065ba1ba3cc2862e7aa0b4d75aea646bd658-01",
+    "I-human:d5479578f85d86780a60cce82a7a0fb27b22c0d26fa51e1f7082d528116bbc16-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove the permissions, obligations, or restrictions governing copying, adaptation, distribution, or other reuse of the presented material.",
+   "definition": "A bounded documentary component that records licensing terms, reuse permissions, compliance obligations, or rights restrictions governing the presented material.",
+   "distinguished_from": "Unlike Contribution Credit it governs how material may be reused rather than merely identifying creators or contributors, and unlike Governing Rule it performs a document-level licensing function rather than explaining an external regulatory framework.",
+   "examples": [
+    {
+     "doc": "human:03c270313f15eee6e20766fbec8245f046fa020b82216645a27ea796283842a1",
+     "excerpt": "A closing provenance and licensing notice attributes the article’s adaptation from Wikipedia to New World Encyclopedia contributors and Wikimedia volunteers, permits reuse under CC BY-SA 3.0 with proper attribution, links to contribution histories and citation guidance, and notes that separately licensed images may carry additional restrictions.",
+     "item_id": 25
+    }
+   ],
+   "name": "Reuse Terms",
+   "subsumes": [
+    "I-human:03c270313f15eee6e20766fbec8245f046fa020b82216645a27ea796283842a1-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded questions or exercises would remove the document's means for readers to test, retrieve, apply, or reinforce their understanding of developed content.",
+   "definition": "A bounded instructional component that prompts readers to retrieve, explain, or apply developed article content in order to test or reinforce understanding.",
+   "distinguished_from": "Unlike Synthesis it elicits the reader's demonstration of understanding rather than itself consolidating conclusions, and unlike Reader Solicitation it seeks a learning response rather than editorial input.",
+   "examples": [
+    {
+     "doc": "human:599abdd821e0f08383b3b56e4e49896f6993f6b560cca76aa92f13c589e03aa0",
+     "excerpt": "A pedagogical question set asks readers to explain how rural debt protests influenced constitutional drafting, why delegates considered but rejected legislative presidential selection, and how Americans have proposed reforming the Electoral College.",
+     "item_id": 14
+    }
+   ],
+   "name": "Learning Check",
+   "subsumes": [
+    "I-human:599abdd821e0f08383b3b56e4e49896f6993f6b560cca76aa92f13c589e03aa0-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an invitation or channel for readers to submit corrections, omissions, questions, or other contributions to the publication process.",
+   "definition": "A bounded item that solicits reader-submitted corrections, omissions, questions, feedback, or other input for future content or article maintenance.",
+   "distinguished_from": "Unlike Recommendation it requests audience input rather than advising subject-related conduct, and unlike Resource Access it solicits incoming contributions rather than directing readers outward.",
+   "examples": [
+    {
+     "doc": "human:5be9a233c20227907176eaa9c0b585c418a4ddfbebc3a834d721d337858be72d",
+     "excerpt": "A closing feedback invitation asks readers to report errors or missing information through comments or a contact channel.",
+     "item_id": 17
+    },
+    {
+     "doc": "human:9201756b1ac47120a22eaf2692eb14f054698b1019e6af0ecd1b80d664e94e91",
+     "excerpt": "Readers are invited to submit additional general-knowledge questions in the comments for possible treatment in a future article.",
+     "item_id": 17
+    }
+   ],
+   "name": "Reader Solicitation",
+   "subsumes": [
+    "I-human:5be9a233c20227907176eaa9c0b585c418a4ddfbebc3a834d721d337858be72d-01",
+    "I-human:9201756b1ac47120a22eaf2692eb14f054698b1019e6af0ecd1b80d664e94e91-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary function is to end direct engagement with readers through thanks, farewell, or goodwill without supplying a substantive conclusion or documentary credit.",
+   "definition": "A concluding rhetorical item that closes direct engagement with readers through acknowledgment, farewell, or goodwill.",
+   "distinguished_from": "Unlike Synthesis it closes the audience interaction rather than integrating developed material, and unlike Contribution Credit it addresses readers rather than documenting responsibility or assistance.",
+   "examples": [
+    {
+     "doc": "human:deee90a7fb30d01507a6c25f9decd11f76ad03a37ff374ad7d2fcef68269d7d3",
+     "excerpt": "The authors thank readers for accompanying the visit, express hope that they learned from it, and close with a travel-safety wish and the names Mike and Kellye.",
+     "item_id": 23
+    }
+   ],
+   "name": "Reader Closure",
+   "subsumes": [
+    "I-human:deee90a7fb30d01507a6c25f9decd11f76ad03a37ff374ad7d2fcef68269d7d3-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the local rhetorical bridge signaling how the discussion moves from one stage, topic, stance, or line of development to the next.",
+   "definition": "A rhetorical item that connects adjacent stages of an article by explicitly signaling a change in topic, stance, focus, or phase of development.",
+   "distinguished_from": "Unlike Orientation it connects local stages of an already developing discussion, and unlike Navigation Support it advances prose-level conceptual progression rather than providing bounded routes or locators.",
+   "examples": [
+    {
+     "doc": "human:ea5383102ca7695023e2a804c947088d32a9107f7deca2d28ea4d7b281b19025",
+     "excerpt": "The discussion shifts from the system’s benefits to practical objections and implementation difficulties.",
+     "item_id": 17
+    },
+    {
+     "doc": "ai:69158c3cded60482de7a2b2dfb951ee35897d81950642e800269dcfdee75e0b9",
+     "excerpt": "The discussion announces a transition from general benefits to the styles, features, and technologies distinguishing electric-bike types.",
+     "item_id": 8
+    }
+   ],
+   "name": "Transition",
+   "subsumes": [
+    "I-human:ea5383102ca7695023e2a804c947088d32a9107f7deca2d28ea4d7b281b19025-01",
+    "I-ai:69158c3cded60482de7a2b2dfb951ee35897d81950642e800269dcfdee75e0b9-01"
+   ]
+  }
+ ]
+}

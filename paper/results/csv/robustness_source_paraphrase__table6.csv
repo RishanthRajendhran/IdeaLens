@@ -1,0 +1,17 @@
+Format,Rows,n,IdeaLens: % unchanged,IdeaLens-ModernBERT-L: % unchanged
+Academic Writing,AI,189,99.5,97.9
+Creative Writing,AI,140,97.1,95.7
+Knowledge Article,AI,149,98.7,87.2
+News Article,AI,147,95.2,94.6
+Nonfiction Writing,AI,162,96.3,90.1
+Personal About Page,AI,177,97.7,93.8
+Personal Blog,AI,165,100.0,96.4
+User Reviews,AI,165,98.2,97.0
+Academic Writing,human,126,98.4,97.6
+Creative Writing,human,171,98.2,98.2
+Knowledge Article,human,162,100.0,100.0
+News Article,human,165,98.2,99.4
+Nonfiction Writing,human,150,100.0,99.3
+Personal About Page,human,132,99.2,99.2
+Personal Blog,human,147,100.0,100.0
+User Reviews,human,147,100.0,100.0

@@ -1,0 +1,430 @@
+root: ${AUX_DIR}/detector/evals
+sources:
+  test0_deleak_invariance:
+    path: ${AUX_DIR}/detector/evals/test_orig
+  test3b_evaders:
+    path: ${AUX_DIR}/detector/evals/test3b_v2
+  test8_storyscope:
+    path: ${AUX_DIR}/detector/evals/storyscope
+  test33_ai_ideated_prose:
+    path: ${AUX_DIR}/detector/evals/ai_ideated_prose
+  test34_storyscope_new_generators:
+    path: ${AUX_DIR}/detector/evals/storyscope_new_generators
+extra:
+  test3_collaboration_ladder_human_control:
+    path: ${AUX_DIR}/detector/evals/test3_human
+    note: 'Condition 0 -- the same source documents'' own de-leaked outlines. Test 3 otherwise contains no humans, so without
+      this arm no realised FPR is measurable on it and every per-rung fire rate floats at an unknown operating point.
+
+      '
+  test6_saha_table2:
+    path: ${AUX_DIR}/detector/evals/saha_t2
+    note: The benchmark's own Table-2 cells (easy/hard x level), for a direct entry.
+  test6_second_draw:
+    path: ${AUX_DIR}/detector/evals/aipr_x2
+    note: A second independent draw with the same construction; pool for n.
+flat_sources:
+  indomain:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: indomain_test_outlines_full.jsonl
+      as: extract.jsonl
+    - from: indomain_test_deleaked_full.jsonl
+      as: deleak.jsonl
+  test1_source_paraphrase:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: t1p_outlines.jsonl
+      as: extract.jsonl
+    - from: t1p_deleaked.jsonl
+      as: deleak.jsonl
+  test3_collaboration_ladder:
+    path: ${WORK_DIR}/final_corpora/outlines
+    members:
+    - from: t3_rungs0to5_outlines.jsonl
+      as: extract.jsonl
+    - from: t3_rungs0to5_deleaked.jsonl
+      as: deleak.jsonl
+  test4_extractor_sensitivity:
+    path: ${WORK_DIR}/final_corpora/outlines
+    members:
+    - from: t4_with_reference_outlines.jsonl
+      as: extract.jsonl
+    - from: t4_with_reference_deleaked.jsonl
+      as: deleak.jsonl
+  test5_peer_review:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: intel2_outlines.jsonl
+      as: extract.jsonl
+  test6_ai_peer_review:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: saha2_outlines.jsonl
+      as: extract.jsonl
+  test7_detectrl:
+    path: ${WORK_DIR}/final_corpora/outlines
+    members:
+    - from: drlx2_planAB_outlines.jsonl
+      as: extract.jsonl
+  test9_multilingual:
+    path: ${WORK_DIR}/final_corpora/outlines
+    members:
+    - from: multiling9_outlines.jsonl
+      as: extract.jsonl
+  test10_detectionai:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: detectionai_outlines.jsonl
+      as: extract.jsonl
+    - from: detectionai_deleaked.jsonl
+      as: deleak.jsonl
+  test11_opai_bench:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: opaifull_outlines.jsonl
+      as: extract.jsonl
+    - from: opaifull_deleaked.jsonl
+      as: deleak.jsonl
+  test12_semdetect:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: semdetect2_final_outlines.jsonl
+      as: extract.jsonl
+  test13_meld:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: meld2_final_outlines.jsonl
+      as: extract.jsonl
+  test14_partial_documents:
+    path: ${WORK_DIR}/final_corpora/outlines
+    members:
+    - from: t5_partial_with_full_outlines.jsonl
+      as: extract.jsonl
+    - from: t5_partial_original_deleaked.jsonl
+      as: deleak.jsonl
+  test15_personal_style_postedit:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: pstyle3_outlines.jsonl
+      as: extract.jsonl
+  test16_lamp:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: lamp3_outlines.jsonl
+      as: extract.jsonl
+  test17_arb:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: arb_outlines.jsonl
+      as: extract.jsonl
+  test18_gede:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: gede_outlines.jsonl
+      as: extract.jsonl
+  test19_perkins:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: perkins_outlines.jsonl
+      as: extract.jsonl
+    - from: perkins_deleaked.jsonl
+      as: deleak.jsonl
+  test20_hart:
+    path: ${WORK_DIR}/final_corpora/outlines
+    members:
+    - from: hart_test_dev_outlines.jsonl
+      as: extract.jsonl
+  test21_epoch_style_imitation:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: epochimit_outlines.jsonl
+      as: extract.jsonl
+  test22_coconuts:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: coconut12_final_outlines.jsonl
+      as: extract.jsonl
+  test23_peerprism:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: peerprism12_final_outlines.jsonl
+      as: extract.jsonl
+  test24_detectrl_attacks:
+    path: ${WORK_DIR}/final_corpora/outlines
+    members:
+    - from: drlx2_planC_outlines.jsonl
+      as: extract.jsonl
+  test25_ellipse:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: ellipse1_outlines.jsonl
+      as: extract.jsonl
+  test26_research_ideas_ideation:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: airesearch1_outlines.jsonl
+      as: extract.jsonl
+    - from: airesearch1_deleaked.jsonl
+      as: deleak.jsonl
+  test27_research_ideas_execution:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: airesearch2_outlines.jsonl
+      as: extract.jsonl
+    - from: airesearch2_deleaked.jsonl
+      as: deleak.jsonl
+  test28_research_ideas_reviews:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: airreviews_outlines.jsonl
+      as: extract.jsonl
+    - from: airreviews_deleaked.jsonl
+      as: deleak.jsonl
+  test37_academic_integrity:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: acadint1_outlines.jsonl
+      as: extract.jsonl
+  test38_nirvana:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: nirvana1b_outlines.jsonl
+      as: extract.jsonl
+  test39_multilingual_ladder24:
+    path: ${WORK_DIR}/multiling
+    members:
+    - from: ladder24_final_outlines.jsonl
+      as: extract.jsonl
+  test40_fineweb2_humans24:
+    path: ${WORK_DIR}/multiling
+    members:
+    - from: scaleup2_outlines.jsonl
+      as: extract.jsonl
+  test41_gen_ai_writers_editors:
+    path: ${WORK_DIR}/final_corpora/outlines
+    members:
+    - from: gen_outlines.jsonl
+      as: extract.jsonl
+raw_sources:
+  test11_opai_bench:
+    path: ${WORK_DIR}/opai_full
+    members:
+    - from: .
+      as: raw
+  test12_semdetect:
+    path: ${WORK_DIR}/semdetect
+    members:
+    - from: .
+      as: raw
+  test13_meld:
+    path: ${WORK_DIR}/meld
+    members:
+    - from: .
+      as: raw
+  test17_arb:
+    path: ${WORK_DIR}/external/Adversarial-Paraphrasing
+    members:
+    - from: .
+      as: raw
+  test18_gede:
+    path: ${WORK_DIR}/gede
+    members:
+    - from: .
+      as: raw
+  test19_perkins:
+    path: ${WORK_DIR}/perkins
+    members:
+    - from: .
+      as: raw
+  test20_hart:
+    path: ${WORK_DIR}/hart
+    members:
+    - from: .
+      as: raw
+  test25_ellipse:
+    path: ${WORK_DIR}/external/ELLIPSE-Corpus
+    members:
+    - from: .
+      as: raw
+  test26_research_ideas_ideation:
+    path: ${WORK_DIR}/external/airesearcher
+    members:
+    - from: .
+      as: raw
+  test27_research_ideas_execution:
+    path: ${WORK_DIR}/external/airesearcher
+    members:
+    - from: .
+      as: raw
+  test28_research_ideas_reviews:
+    path: ${WORK_DIR}/external/AI-Researcher
+    members:
+    - from: .
+      as: raw
+corpus_sources:
+  indomain:
+    path: ${WORK_DIR}/final_corpora
+    members:
+    - from: indomain_test.jsonl
+      as: corpus.jsonl
+  test0_deleak_invariance:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: t0raw_format_input.jsonl
+      as: corpus.jsonl
+  test1_source_paraphrase:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: t1p_extract_input.jsonl
+      as: corpus.jsonl
+  test3_collaboration_ladder:
+    path: ${WORK_DIR}/final_corpora
+    members:
+    - from: t3_rungs0to5.jsonl
+      as: corpus.jsonl
+  test4_extractor_sensitivity:
+    path: ${WORK_DIR}/final_corpora
+    members:
+    - from: t4_sources.jsonl
+      as: corpus.jsonl
+  test5_peer_review:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: intel2_format_input.jsonl
+      as: corpus.jsonl
+  test6_ai_peer_review:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: saha2_format_input.jsonl
+      as: corpus.jsonl
+  test7_detectrl:
+    path: ${WORK_DIR}/final_corpora
+    members:
+    - from: drlx2_planAB.jsonl
+      as: corpus.jsonl
+  test9_multilingual:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: multiling_docs.jsonl
+      as: corpus.jsonl
+  test10_detectionai:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: detectionai_format_input.jsonl
+      as: corpus.jsonl
+  test11_opai_bench:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: opaifull_format_input.jsonl
+      as: corpus.jsonl
+  test12_semdetect:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: semdetect2_format_input.jsonl
+      as: corpus.jsonl
+  test13_meld:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: meld2_format_input.jsonl
+      as: corpus.jsonl
+  test14_partial_documents:
+    path: ${WORK_DIR}/final_corpora
+    members:
+    - from: t5_partial_with_full.jsonl
+      as: corpus.jsonl
+  test15_personal_style_postedit:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: pstyle_format_input.jsonl
+      as: corpus.jsonl
+  test16_lamp:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: lamp_format_input.jsonl
+      as: corpus.jsonl
+  test17_arb:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: arb_format_input.jsonl
+      as: corpus.jsonl
+  test18_gede:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: gede_format_input.jsonl
+      as: corpus.jsonl
+  test19_perkins:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: perkins_format_input.jsonl
+      as: corpus.jsonl
+  test20_hart:
+    path: ${WORK_DIR}/final_corpora
+    members:
+    - from: hart_test_dev.jsonl
+      as: corpus.jsonl
+  test21_epoch_style_imitation:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: epochimit_format_input.jsonl
+      as: corpus.jsonl
+  test22_coconuts:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: coconut1_format_input.jsonl
+      as: corpus.jsonl
+  test23_peerprism:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: peerprism1_format_input.jsonl
+      as: corpus.jsonl
+  test24_detectrl_attacks:
+    path: ${WORK_DIR}/final_corpora
+    members:
+    - from: drlx2_planC.jsonl
+      as: corpus.jsonl
+  test25_ellipse:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: ellipse1_extract_input.jsonl
+      as: corpus.jsonl
+  test26_research_ideas_ideation:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: airesearch1_extract_input.jsonl
+      as: corpus.jsonl
+  test27_research_ideas_execution:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: airesearch2_extract_input.jsonl
+      as: corpus.jsonl
+  test28_research_ideas_reviews:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: airreviews_extract_input.jsonl
+      as: corpus.jsonl
+  test37_academic_integrity:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: acadint1_format_input.jsonl
+      as: corpus.jsonl
+  test38_nirvana:
+    path: ${WORK_DIR}/newevals
+    members:
+    - from: nirvana1b_extract_input.jsonl
+      as: corpus.jsonl
+  test39_multilingual_ladder24:
+    path: ${WORK_DIR}/baselines
+    members:
+    - from: ladder24_text.jsonl
+      as: corpus.jsonl
+  test40_fineweb2_humans24:
+    path: ${WORK_DIR}/baselines
+    members:
+    - from: ladder24_human_text.jsonl
+      as: corpus.jsonl
+  test41_gen_ai_writers_editors:
+    path: ${WORK_DIR}/final_corpora
+    members:
+    - from: gen_corpus.jsonl
+      as: corpus.jsonl

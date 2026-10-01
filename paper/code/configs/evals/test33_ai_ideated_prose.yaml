@@ -1,0 +1,71 @@
+extends: _base.yaml
+name: AI ideas, human prose
+number: 33
+group: Idea provenance
+asks: >
+  When a person writes the prose but a model supplied every idea, does the
+  detector still credit the model?
+positive: ai
+# One true label on the set until the human-idea control arm is built, so this is
+# a fire rate. Flip to `tpr` when that arm lands and an FPR becomes defined.
+metric: fire
+upstream: >
+  Our own construction. No public release carries this class. It is the exact
+  mirror of Test 2 (human ideas, AI prose) and the class the labelling rule
+  commits us to calling `ai`, so its absence was the largest hole in the suite.
+data_dir: test33_ai_ideated_prose
+
+generation:
+  # Stage A only. The prompt is the literal thing a user would type, sent with no
+  # system message, so the ideas are the model's and not a construction prompt of
+  # ours. 25 genres, which is the ONLY axis of variation: 25 genres is not 25
+  # independent ideas, and StoryScope prompts are the intended second axis.
+  prompt: eval_generation/twicetold_story
+  model: gpt-5.6-sol
+  reasoning_effort: high
+  inputs: [genre]
+  # A FLOOR, not a band. Test 2 matches a source length; there is no source here,
+  # so the only constraint is staying above the ~500-word extraction floor. Short
+  # draws are RESAMPLED with the identical prompt, never re-prompted to be longer.
+  min_words: 500
+
+arms:
+  ai_prose:    {level: ai_ideas_ai_prose,    written_by: gpt-5.6-sol, built: true}
+  human_prose: {level: ai_ideas_human_prose, written_by: team,        built: false}
+
+audits:
+  # The same audit Test 2 runs, and here it doubles as the fidelity measure for
+  # the human writers: re-extract from the written prose, align to the outline
+  # they were handed. Report TPR against alignment rather than pooling a writer
+  # who followed the outline with one who used it as a jumping-off point.
+  alignment: {required: true, expect: high, min_score: 0.5}
+  length_matching: false      # no source document to match against
+
+report:
+  schemes: [global]           # global 1% only for the pilot; a per-format Creative
+                              # Writing cut exists (n=10,000) if it is wanted later
+  primary_fpr: 0.01
+  group_by: [level]
+
+scoring:
+  # `nemotron_1m_full_on_document` in thresholds.json is a THRESHOLD KEY, not a
+  # model: it is this same arm read with `--stage document`. The document arm is
+  # therefore run as
+  #   score.py --model nemotron_1m_full --stage document \
+  #            --run-id nemotron_1m_full_on_document
+  # so the output directory matches the cut it will be read against.
+  # `nemotron_1m_docs` is a DIFFERENT model, trained on documents; do not confuse.
+  models: [nemotron_1m_full]
+
+notes: >
+  STATE: stage A only. The `ai_prose` arm exists as an upper bound -- if the
+  detector cannot flag these outlines in their AI-written form, human rewriting
+  can only move them further toward human and the human study is not worth
+  running. Until the `human_prose` arm lands there is one true label on the set,
+  so `metric` reads as a fire rate and a TPR here would be a category error.
+
+  A human-IDEA control arm, written by the same people from outlines extracted
+  the same way out of human short stories, is not built and is not optional: with
+  only this arm a high fire rate cannot be told apart from "prose written to a
+  word target from a supplied outline reads as non-human regardless of who
+  ideated". It is also the target-domain human set the cuts should be refitted on.

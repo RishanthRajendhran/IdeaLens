@@ -1,0 +1,936 @@
+{
+ "format_slug": "creative_writing",
+ "n_roles": 50,
+ "source": "role discovery, consolidation pass (role_consolidation_xhigh.json)",
+ "final_roles": [
+  {
+   "assignment_test": "Select this role when removing the item would deprive the reader of the immediate temporal, spatial, social, or circumstantial coordinates needed to enter the current scene or lyric situation.",
+   "definition": "Establishes the immediate coordinates through which the reader enters a scene or lyric situation.",
+   "distinguished_from": "Contextual Exposition supplies broader background, while Sensory Evocation chiefly creates perceptual or atmospheric experience.",
+   "examples": [
+    {
+     "doc": "human:e879b6571ccb7e076e76fafd23e14a1b7f1a8109f51d62e054a916bbff051124",
+     "excerpt": "A muscular, attractively anthropomorphized LORD God strolls through the lush Garden and discovers the naked Man hiding behind a cedar.",
+     "item_id": 1
+    }
+   ],
+   "name": "Situational Orientation",
+   "subsumes": [
+    "B01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is establishing who perceives or tells the material and the stance through which it is mediated.",
+   "definition": "Establishes the narrator's, speaker's, or focal figure's relationship to represented material as the governing perspective through which it is perceived.",
+   "distinguished_from": "Subjective Expression conveys particular inward content, while Interpretive Framing supplies a document-level lens rather than a mediating consciousness.",
+   "examples": [
+    {
+     "doc": "ai:0361eea8897b38111d481f6d8fb65610180c6e35f55da377aaa0238e3ea5e322",
+     "excerpt": "The speaker greets the audience as an oracle of pure consciousness and adopts the symbolic form of a sacred dove representing peace and purity.",
+     "item_id": 1
+    }
+   ],
+   "name": "Perspective Framing",
+   "subsumes": [
+    "B02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate background knowledge needed to understand present circumstances rather than the present circumstances themselves.",
+   "definition": "Supplies prior events, world conditions, social arrangements, or other background that makes the current creative situation intelligible.",
+   "distinguished_from": "Situational Orientation establishes immediate coordinates, while Subject Explanation directly explains the subject itself rather than its contextual background.",
+   "examples": [
+    {
+     "doc": "ai:4df7a9bcfdef148a62b9413554b63dbbe0954cdf7c5299aa6e9c0ddedfef6ae5",
+     "excerpt": "The sabotage destroys Nancy’s belief in their reconciliation and revives memories of Sadie’s childhood cruelty, family competition for attention, and Nancy’s learned impulse to diminish herself.",
+     "item_id": 6
+    }
+   ],
+   "name": "Contextual Exposition",
+   "subsumes": [
+    "B03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is a deeper understanding of who a figure is rather than what presently happens or is felt.",
+   "definition": "Develops understanding of a figure's identity, traits, motives, values, dispositions, or relationships.",
+   "distinguished_from": "Subjective Expression articulates an immediate inner state, while Event Progression primarily changes the represented situation.",
+   "examples": [
+    {
+     "doc": "ai:6bd31bbd1c286722a04b73b019587bf3f702fd6a42f50c4a5131d24abbb37d2e",
+     "excerpt": "Drawing on Sogmian traditions of resilience, Valerian orders defensive preparations but insists that the crew respond as compassionate representatives rather than surrendering either courage or empathy.",
+     "item_id": 13
+    }
+   ],
+   "name": "Character Revelation",
+   "subsumes": [
+    "B04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly erase the articulation of a consciousness's present inward experience or stance.",
+   "definition": "Articulates a speaker's, narrator's, or character's immediate thoughts, feelings, desires, attitudes, or emotional responses.",
+   "distinguished_from": "Character Revelation develops a figure more generally, Thematic Reflection draws broader significance, and Addressee Engagement directs an utterance outward.",
+   "examples": [
+    {
+     "doc": "human:936ca55e128fe879c36c70535329c98a3076ff539da22fde3af71d1e8a8af088",
+     "excerpt": "The narrator doubts a worker’s claim that distant markings are inaccessible ruins, identifies visible palms as an Oudiane oasis, and considers returning by that route.",
+     "item_id": 4
+    }
+   ],
+   "name": "Subjective Expression",
+   "subsumes": [
+    "B05"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary contribution is an occurrence or action that changes the represented state or advances the temporal sequence.",
+   "definition": "Represents a locally bounded action or occurrence that changes the story state and advances the temporal chain of events.",
+   "distinguished_from": "Narrative Compression advances through an extended or repeated span, while Conflict Pressure and Turning Point are defined by their effects on tension or trajectory.",
+   "examples": [
+    {
+     "doc": "ai:f00e16e1cf721376039ef35c4099ade34b86c217dfb8e0949dff87175114cb43",
+     "excerpt": "Inside the neglected, silent church, the narrator discovers an initially statue-like woman wearing a black bridal dress and veil and holding wilted white lilies.",
+     "item_id": 3
+    }
+   ],
+   "name": "Event Progression",
+   "subsumes": [
+    "B06"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item is primarily a reciprocal communicative encounter whose significance lies in how participants affect one another.",
+   "definition": "Develops reciprocal communication among figures in a way that changes their knowledge, alignment, intentions, or relationship.",
+   "distinguished_from": "Addressee Engagement is primarily one-directional, while Event Progression covers happenings whose main function is not communicative exchange.",
+   "examples": [
+    {
+     "doc": "ai:404c97f9f62c509dbc222084465dc3b8c784adaa44ab073656ae21cbf425bf0f",
+     "excerpt": "The children react with disbelief and ask whether their unknown uncle knows about them or is still alive, although their father’s evident sincerity tempers their doubts.",
+     "item_id": 3
+    }
+   ],
+   "name": "Interpersonal Exchange",
+   "subsumes": [
+    "B07"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's central purpose is to establish or alter a relationship with an addressed presence rather than merely reveal a private state or prescribe a procedure.",
+   "definition": "Directs an utterance toward an addressed presence to seek contact, response, judgment, recognition, or change.",
+   "distinguished_from": "Interpersonal Exchange requires reciprocal interaction, while Subjective Expression remains inward and Action Guidance chiefly tells a recipient what to do.",
+   "examples": [
+    {
+     "doc": "human:ddc5cc66dddf883a47185087c88db1275b138f3e7571239b2b3811589ef2835d",
+     "excerpt": "An attributed postscript from Mike Blue urges readers to adopt comparable animals from shelters, citing his three rescue dogs as evidence that rescued animals recognize their reprieve and become exceptionally loyal companions.",
+     "item_id": 26
+    }
+   ],
+   "name": "Addressee Engagement",
+   "subsumes": [
+    "B08"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly eliminate an obstacle, threat, uncertainty, opposition, constraint, or increase in stakes.",
+   "definition": "Creates or intensifies opposition, danger, uncertainty, constraint, or stakes that place pressure on figures or desired outcomes.",
+   "distinguished_from": "Event Progression need only change the situation, while Turning Point decisively redirects it and Foreshadowing mainly prepares later significance.",
+   "examples": [
+    {
+     "doc": "ai:550da6302e7adcdab0539563528a49b51131241da580c56d40d75da909164745",
+     "excerpt": "Despite age, injuries, traffic, and exhaustion, Toby carries the infant across the waking city and pushes through the hospital entrance amid emergency-room chaos.",
+     "item_id": 4
+    }
+   ],
+   "name": "Conflict Pressure",
+   "subsumes": [
+    "B09"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main reason for inclusion is to prepare the reader for a later development without yet delivering it.",
+   "definition": "Plants a cue whose primary function is to create anticipation and acquire fuller significance through a later development.",
+   "distinguished_from": "Conflict Pressure heightens present difficulty, while Misdirection induces a plausible inference that a later development overturns.",
+   "examples": [
+    {
+     "doc": "ai:ac875fdcc8ae3a5204d74c4fd70074d73aa6a8474e9838a5e5f2c3da45a58509",
+     "excerpt": "Claire finds a red lipstick mark on Mr. Whitman’s shirt, knows it cannot belong to his wife, and removes it while grieving that her kind employer may be facing betrayal.",
+     "item_id": 5
+    }
+   ],
+   "name": "Foreshadowing",
+   "subsumes": [
+    "B10"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item marks the decisive moment after which the prior trajectory, understanding, or course of action no longer continues unchanged.",
+   "definition": "Presents a decisive choice, discovery, reversal, or realization that redirects the narrative, emotional, or thematic trajectory.",
+   "distinguished_from": "Event Progression advances the sequence without necessarily redirecting it, while Conflict Pressure intensifies difficulty without requiring a decisive change of course.",
+   "examples": [
+    {
+     "doc": "ai:ea9443c3a825badb8a0ece9984c86fd02835cf4c58bbfdc8f768996b05c83dfd",
+     "excerpt": "Asked what he wants, the boy demands the return of what was taken and produces an old leather tag bearing the bull’s original name, which prompts another unmistakable response of recognition.",
+     "item_id": 11
+    }
+   ],
+   "name": "Turning Point",
+   "subsumes": [
+    "B11"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly advances the work across a substantial duration or repeated sequence by condensation rather than moment-by-moment representation.",
+   "definition": "Condenses extended time, repeated actions, or numerous related developments into a unified move that efficiently advances the narrative.",
+   "distinguished_from": "Event Progression represents a more locally bounded occurrence, while Content Summary recapitulates material from outside the main creative sequence.",
+   "examples": [
+    {
+     "doc": "ai:f2b15db7ff1db5b445c54e2f18782db5ed22f690f11fa713c70f67e2890793dc",
+     "excerpt": "Orson hires the narrator to help develop his café menu, where her paprika chicken becomes a bestseller and gives her pride in her abilities, work, and decisions.",
+     "item_id": 12
+    }
+   ],
+   "name": "Narrative Compression",
+   "subsumes": [
+    "B12"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would make a shift between compositional states abrupt, confusing, or discontinuous.",
+   "definition": "Bridges a shift in time, place, perspective, speaker, scene, or expressive mode so the document remains coherent across the change.",
+   "distinguished_from": "Situational Orientation establishes substantive coordinates, while Juxtaposition makes the relationship between distinct elements meaning-bearing.",
+   "examples": [
+    {
+     "doc": "human:32a5a249745ba61d1317b9e1abd3680d149db2874edb359354640ca9c8093e5f",
+     "excerpt": "Having secured European advancement, Heynckes can redirect Fiorentina’s attention to domestic competition, beginning with Lazio’s November 17 visit for the eleventh Serie A round.",
+     "item_id": 13
+    }
+   ],
+   "name": "Transition",
+   "subsumes": [
+    "B13"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary contribution is the felt perceptual, bodily, tonal, or atmospheric experience it creates rather than factual orientation or interpretation.",
+   "definition": "Creates a vivid perceptual, bodily, tonal, or atmospheric experience through concrete descriptive detail.",
+   "distinguished_from": "Situational Orientation locates the reader, while Figurative Development generates layered meaning through nonliteral relations.",
+   "examples": [
+    {
+     "doc": "human:e7665ebf4a62c3d002d9ae2e0f150fa94e7a01e308afefed13d4e618787475c5",
+     "excerpt": "Bert describes the nearby Pacific as unusually calm and warm and notes that a short walk from camp leads from rocky shoreline to a nearly deserted sandy beach where he and Shari swim for half an hour.",
+     "item_id": 15
+    }
+   ],
+   "name": "Sensory Evocation",
+   "subsumes": [
+    "B14"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's central work is to create or extend a nonliteral relation whose implications exceed literal description or action.",
+   "definition": "Creates or extends a metaphorical, symbolic, or otherwise nonliteral relation that produces layered meaning.",
+   "distinguished_from": "Sensory Evocation chiefly creates perceptual presence, while Thematic Reflection more directly states or interprets an idea.",
+   "examples": [
+    {
+     "doc": "ai:e764222968413485707c4fc867d60c04bdb8c45d6eaf23e4810c9a481d1c1439",
+     "excerpt": "Heartbreak may bruise the inner self while also adding beauty to personal development.",
+     "item_id": 9
+    }
+   ],
+   "name": "Figurative Development",
+   "subsumes": [
+    "B15"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily interprets experience or integrates developed material into a broader insight, question, judgment, value, or consolidated understanding.",
+   "definition": "Interprets experience or synthesizes developed material into a broader insight, question, judgment, value, or unified understanding.",
+   "distinguished_from": "Subjective Expression voices an immediate personal state, Subject Explanation clarifies a subject directly, and Aesthetic Closure chiefly creates an endpoint.",
+   "examples": [
+    {
+     "doc": "human:eeadf879234672b10db7bfd7e621f787e93539a0473db04c286857867ef02662",
+     "excerpt": "Granting a self-learning, immensely powerful machine authority over another species is characterized as genocidal madness and a pathological expression of authority.",
+     "item_id": 24
+    },
+    {
+     "doc": "ai:60a7ebb027fa4034722ccef3c2608b6941f13ba8c9f23ae40ed4cc50ec12038d",
+     "excerpt": "The conclusion synthesizes the Gesamt as an ancient, rear-positioned orchestrator whose vulnerability necessitates Massig protection without diminishing its collective cosmic threat.",
+     "item_id": 8
+    }
+   ],
+   "name": "Thematic Reflection",
+   "subsumes": [
+    "B16",
+    "I-ai:60a7ebb027fa4034722ccef3c2608b6941f13ba8c9f23ae40ed4cc50ec12038d-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution depends on the meaningful relation created by placing distinct images, scenes, voices, conditions, or perspectives together.",
+   "definition": "Places distinct images, scenes, voices, conditions, or perspectives in parallel or opposition so their relationship generates meaning.",
+   "distinguished_from": "Transition connects successive material for continuity, while Event Progression is primarily organized by causal or temporal change.",
+   "examples": [
+    {
+     "doc": "ai:725cbea54d40ad1ec44ea53d653174cd2ac52c40483511942966d7f80794e3c9",
+     "excerpt": "The disappearance of the last Arctic sea ice is imagined as the creation of an investment zone for drilling and luxury speculation, contrasting scientists’ concern over lost climate protection with investors’ enthusiasm for oil extraction.",
+     "item_id": 4
+    }
+   ],
+   "name": "Juxtaposition",
+   "subsumes": [
+    "B17"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when a return or variation is the main reason the item appears and its removal would weaken a designed pattern of cohesion, emphasis, accumulation, or transformation.",
+   "definition": "Returns to and potentially varies earlier wording, imagery, sound, ideas, or structures so recurrence supplies cohesion, emphasis, accumulation, or transformation.",
+   "distinguished_from": "Figurative Development does not require repetition, while Aesthetic Closure may echo earlier material but is selected for its endpoint function.",
+   "examples": [
+    {
+     "doc": "ai:725cbea54d40ad1ec44ea53d653174cd2ac52c40483511942966d7f80794e3c9",
+     "excerpt": "NASA’s long-term strategy for a human presence in space is interpreted as an emergency alternative to Earth, extending the satire of technological escape.",
+     "item_id": 17
+    }
+   ],
+   "name": "Patterned Recurrence",
+   "subsumes": [
+    "B18"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily answers a governing conflict, goal, question, or uncertainty and establishes the resulting state.",
+   "definition": "Settles a central conflict, goal, question, or uncertainty and establishes its consequences or new equilibrium.",
+   "distinguished_from": "Aesthetic Closure creates a sense of ending without necessarily settling a governing problem, while Turning Point redirects a trajectory that continues.",
+   "examples": [
+    {
+     "doc": "ai:4535d088a5cde1d15d73b44a13cf52295d6cf4d35ee8be103f25f044a1832f87",
+     "excerpt": "The reels finally align and reveal the jackpot, resolving the narrator's night-long quest in a dramatic surge of excitement.",
+     "item_id": 9
+    }
+   ],
+   "name": "Resolution",
+   "subsumes": [
+    "B19"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary contribution is making the work feel deliberately complete even though no governing conflict or question must be settled.",
+   "definition": "Creates a felt or formal endpoint through culmination, return, release, suspension, or resonant final emphasis.",
+   "distinguished_from": "Resolution settles a governing conflict or question, while Patterned Recurrence may provide cohesion without serving as the endpoint.",
+   "examples": [
+    {
+     "doc": "human:efd580e149cf4d215d4226cfe7cb22128d513ce62f019d03d1ae2cb7b0e1e334",
+     "excerpt": "Their newly formalized courtesy becomes comically domestic when Turnbull offers MacIan a cigar through the cab’s trap and MacIan politely accepts it.",
+     "item_id": 19
+    }
+   ],
+   "name": "Aesthetic Closure",
+   "subsumes": [
+    "B20"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omission of the bounded item would remove a deliberate lens, premise, or contextual cue governing how adjacent creative material is read.",
+   "definition": "Supplies a bounded document-level lens, premise, or cue that shapes the interpretation of adjacent or ensuing creative material.",
+   "distinguished_from": "Perspective Framing establishes a mediating consciousness, while Work Identification chiefly supplies the work's stable name.",
+   "examples": [
+    {
+     "doc": "ai:93d311d95cadd791a105e89254b0be2b549998e716f83f0d7f55afe6f0d8f6e1",
+     "excerpt": "The title frames the ranch as concealing a disturbing secret.",
+     "item_id": 1
+    }
+   ],
+   "name": "Interpretive Framing",
+   "subsumes": [
+    "B21"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the bounded item's primary purpose is to provide the stable identity by which the creative work is named and referenced.",
+   "definition": "Provides a bounded identifying component that names and distinguishes the creative work as an object of reference.",
+   "distinguished_from": "Interpretive Framing chiefly shapes how the work is read, while Structural Navigation identifies or maps internal portions.",
+   "examples": [
+    {
+     "doc": "ai:81f1c0a3ec13c3ab74937c4e454d97e89d7a696f35986b78d02ae109f321f409",
+     "excerpt": "The title frames Benjamin and Debora as discovering a religious tradition, although the narrative itself centers on Benjamin and does not identify Debora.",
+     "item_id": 1
+    }
+   ],
+   "name": "Work Identification",
+   "subsumes": [
+    "B22"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the bounded component would impair the reader's ability to locate, sequence, distinguish, or revisit internal portions of the work.",
+   "definition": "Maps or marks the work's internal organization so readers can locate, sequence, distinguish, or revisit its constituent portions.",
+   "distinguished_from": "Transition substantively bridges a change within the creative flow, while Work Identification names the work as a whole.",
+   "examples": [
+    {
+     "doc": "human:5812f5064fc3627fa861ce5f92b185b1cd8036115b1cdd19c4d88c46774a1f4a",
+     "excerpt": "The installment is identified as Chapter 229.",
+     "item_id": 2
+    }
+   ],
+   "name": "Structural Navigation",
+   "subsumes": [
+    "B23"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the bounded component's main purpose is to preserve a record of responsibility for creating or materially shaping the work.",
+   "definition": "Records responsibility for creating or materially contributing to the work as a bounded document-level attribution.",
+   "distinguished_from": "Source Documentation records externally derived material, while Recognition expresses dedication, gratitude, or honor without assigning creative responsibility.",
+   "examples": [
+    {
+     "doc": "human:499a86fe9dd1a201cd7b2cbf14ce039bb9178d5ba830ef993bb3ccd6b92e139c",
+     "excerpt": "A closing byline attributes the piece to Deanna M. Lehman.",
+     "item_id": 11
+    }
+   ],
+   "name": "Contribution Attribution",
+   "subsumes": [
+    "B24"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omission of the bounded component would remove the record of external origins, permissions, or borrowed material connected to the work.",
+   "definition": "Documents the external origins, permissions, textual provenance, or credited derivation of material used by or connected to the work.",
+   "distinguished_from": "Contribution Attribution identifies responsibility for producing the work, while Recognition records gratitude or dedication rather than documentary provenance.",
+   "examples": [
+    {
+     "doc": "ai:725cbea54d40ad1ec44ea53d653174cd2ac52c40483511942966d7f80794e3c9",
+     "excerpt": "A compact source-attribution component identifies Inside Climate News, the Los Angeles Times, NOAA, The New York Times, and Yale Environment 360 as the underlying news sources.",
+     "item_id": 2
+    }
+   ],
+   "name": "Source Documentation",
+   "subsumes": [
+    "B25"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the bounded component is included chiefly to preserve an act of dedication, gratitude, honor, or acknowledgment.",
+   "definition": "Records a dedication, expression of gratitude, acknowledgment of support, or act of honor as a bounded document-level commitment.",
+   "distinguished_from": "Contribution Attribution assigns creative responsibility, while Source Documentation establishes provenance or permission for external material.",
+   "examples": [
+    {
+     "doc": "human:eb8ee8405ce23459f5e066048ca0f22aae05cb6b71196ccfe4f6d8757f9e7aa5",
+     "excerpt": "A closing note thanks everyone at Reach Out To The Community, especially Steph for sharing the tribute and authorizing its reproduction, and discloses that the deceased’s real name has not been used.",
+     "item_id": 14
+    }
+   ],
+   "name": "Recognition",
+   "subsumes": [
+    "B26"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the bounded component primarily enables later consultation of stable explanatory, identifying, production, or character information rather than continuous reading.",
+   "definition": "Organizes stable explanatory or identifying information for consultation apart from the main creative reading sequence.",
+   "distinguished_from": "Supplementary Context provides ancillary expansion for reading, while substantive exposition or characterization carries the main creative commitment directly.",
+   "examples": [
+    {
+     "doc": "ai:93d311d95cadd791a105e89254b0be2b549998e716f83f0d7f55afe6f0d8f6e1",
+     "excerpt": "A closing character guide profiles Sam as intelligent, compassionate, gentle, and secretive; Hawk as charismatic, confident, mysterious, and potentially sinister; and Emily as athletic, determined, brave, independent, and vulnerable.",
+     "item_id": 13
+    }
+   ],
+   "name": "Reference Aid",
+   "subsumes": [
+    "B27"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omission of the bounded component would remove a useful ancillary contextual or biographical expansion while leaving the main creative progression structurally intact.",
+   "definition": "Provides a bounded ancillary expansion about the work, its production, its subject, or its creator without advancing the main creative sequence or being organized chiefly for lookup.",
+   "distinguished_from": "Contextual Exposition functions within the main composition, Reference Aid is organized for consultation, and Contribution Attribution merely records responsibility.",
+   "examples": [
+    {
+     "doc": "human:ca9ca65a2095229acc89598b144b17e5b2873076fdd7e3dfeb70c5f0f8d101cc",
+     "excerpt": "A brief author note identifies Samantha Baldwin as the mother of two children.",
+     "item_id": 25
+    },
+    {
+     "doc": "human:3536150d1bf20032941212dcd5dcab26ad11f61a60f33880a5e1fd989a5d85a1",
+     "excerpt": "The personal biography notes that Slayer spends time with her husband, son, three dogs, and three cats; enjoys art, music, racing, and especially football; and actively supports the Friends of the Keystone-LaGrange Public Library.",
+     "item_id": 9
+    }
+   ],
+   "name": "Supplementary Context",
+   "subsumes": [
+    "B28",
+    "I-human:3536150d1bf20032941212dcd5dcab26ad11f61a60f33880a5e1fd989a5d85a1-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the bounded component's main purpose is to alert readers to consequential conditions, limitations, status, rights, or production circumstances affecting reception or use.",
+   "definition": "Discloses content conditions, fictional status, rights, limitations, or production circumstances that readers should know apart from the creative substance.",
+   "distinguished_from": "Supplementary Context enriches understanding, while Source Documentation establishes provenance or permission for external material.",
+   "examples": [
+    {
+     "doc": "ai:1ce1e92482d178de9d89215f55e3b19149814a04c150d6b2544fc7fbea43882d",
+     "excerpt": "The tale explicitly presents an entirely fictional account of Maine Coon cats Bartholomew, Clementine, and Reginald plotting to infiltrate the first Thanksgiving feast and privately imagining that their success changed history.",
+     "item_id": 1
+    }
+   ],
+   "name": "Disclosure",
+   "subsumes": [
+    "B29"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the bounded item would eliminate an intended delivery, visual realization, or presentation instruction rather than creative language or represented action.",
+   "definition": "Directs the vocal, musical, visual, embodied, or presentational realization of creative material without itself supplying the represented utterance or action.",
+   "distinguished_from": "Action Guidance helps a recipient pursue an external or interactive result, while Event Progression represents action within the creative world rather than directing its realization.",
+   "examples": [
+    {
+     "doc": "ai:81f1c0a3ec13c3ab74937c4e454d97e89d7a696f35986b78d02ae109f321f409",
+     "excerpt": "A supplementary cast guide describes Pharaoh as a severe ruler in a golden headdress, Benjamin as a kind and attentive seven-year-old in casual clothing, and Moses as a kindly white-robed elder; it specifies consistent watercolor picture-book imagery, soft warm lighting, natural proportions, and a cozy Jewish home atmosphere.",
+     "item_id": 12
+    }
+   ],
+   "name": "Performance Guidance",
+   "subsumes": [
+    "B30"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly eliminate the offered grounds, investigative assessment, or corroborating material for accepting, testing, or constraining another proposition.",
+   "definition": "Presents observations, records, testimony, examples, methods, measurements, or reasons primarily to support, test, corroborate, or constrain a proposition.",
+   "distinguished_from": "Contextual Exposition supplies background, while Exemplification clarifies an idea through a case without primarily establishing its factual warrant.",
+   "examples": [
+    {
+     "doc": "human:4c03537c8e7aade5982a0731c950fdfc9b94f2d9f125f95c200292e4ccd7cddd",
+     "excerpt": "W. C. Steadman tells Parliament of a Stepney widow supporting six children through lodgers and casual domestic work whose weekly rent rose from fourteen to eighteen shillings; she had no alternative because every nearby dwelling was occupied and overcrowded.",
+     "item_id": 20
+    },
+    {
+     "doc": "ai:c5630453e896b312993d67361b16708a9001fd5511d247ea47a7620ad454df9a",
+     "excerpt": "Continuing research uses scanning through calcite, micro-CT mapping, enamel chemistry, uranium-series dating, and cave-growth comparisons to recover additional information; the author argues that these methods increasingly secure the central conjunction of great age and near-human anatomy.",
+     "item_id": 14
+    },
+    {
+     "doc": "human:8a57f90bffd4abf171071ae6081be68d0603c8ffb3d5453c23d9ec4cd9454a18",
+     "excerpt": "The family’s prisoner-of-war documents and photographs show the father arriving exhausted after his forced march and appearing markedly changed by the end of five years in captivity.",
+     "item_id": 7
+    }
+   ],
+   "name": "Evidence",
+   "subsumes": [
+    "I-human:4c03537c8e7aade5982a0731c950fdfc9b94f2d9f125f95c200292e4ccd7cddd-01",
+    "I-ai:c5630453e896b312993d67361b16708a9001fd5511d247ea47a7620ad454df9a-01",
+    "I-human:5722555305461e6c7c7aca3ad2a7f9a5388f3f44ada811e5fef813670bc54212-01",
+    "I-human:8a57f90bffd4abf171071ae6081be68d0603c8ffb3d5453c23d9ec4cd9454a18-01",
+    "I-human:fe4f8c2ea15c8145797f4cc8d39d717ab91749d6a7c9ee1ec8c808c8c77b35d4-04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the governing story-world setup, central configuration, constraints, and dramatic possibility from which a distinct narrative unit proceeds.",
+   "definition": "Establishes the governing story-world setup, central figures or relationships, initiating conditions, and generative dramatic possibility of a distinct narrative unit.",
+   "distinguished_from": "Situational Orientation supplies immediate scene coordinates, while Content Summary condenses the scope or trajectory of an already defined work.",
+   "examples": [
+    {
+     "doc": "ai:a6069da9f078aff81a2a4bb2085994f2585834ec2fe70be9ec5fa024235fac7c",
+     "excerpt": "The master of an enclosure must impregnate captive kemonomimi women before releasing them, confronting their distinct personalities, desires, emotions, and physical limitations throughout the breeding process.",
+     "item_id": 4
+    },
+    {
+     "doc": "ai:b1b5f90ccc411cce3aa976771e48592bd84d592662e364d14de0f2462df9f105",
+     "excerpt": "A bound female Fenrir, formerly a wolf feared by the gods and now a half-human creature driven by destruction, tries to persuade the protagonist to free her so she can devour them and initiate Ragnarok; danger and attraction complicate the encounter.",
+     "item_id": 5
+    }
+   ],
+   "name": "Narrative Premise",
+   "subsumes": [
+    "I-ai:a6069da9f078aff81a2a4bb2085994f2585834ec2fe70be9ec5fa024235fac7c-01",
+    "I-ai:b1b5f90ccc411cce3aa976771e48592bd84d592662e364d14de0f2462df9f105-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly reduce irrelevant or weakly connected textual bulk without eliminating coherent creative or communicative development.",
+   "definition": "Supplies excessive, fragmentary, or weakly relevant material chiefly to add bulk, simulate substance, or host unrelated insertions rather than sustain coherent development.",
+   "distinguished_from": "Event Progression advances a meaningful represented sequence, while Semantic Disruption makes interpretive breakdown itself the creative effect.",
+   "examples": [
+    {
+     "doc": "human:8d9588b44368849e751725564cc399fb9eddd3060d00da3972f8e66773e9e61b",
+     "excerpt": "Further filler abruptly alternates among professional football, human–robot conflict, advanced weapons, infrastructure construction, political reform, strategic bombing, and contemporary military operations involving China, Japan, and neighboring powers.",
+     "item_id": 7
+    },
+    {
+     "doc": "human:7a6d372837f3abbe84f9178564fb8541a4f6b54997a3d6d295ff451c9e62c089",
+     "excerpt": "The filler abruptly moves to twentieth-century Chinese wartime fiction involving the Eighth Route Army, Japanese and puppet forces, guerrillas, military planning, international diplomacy, and disputes between Nationalist and Communist authorities.",
+     "item_id": 5
+    }
+   ],
+   "name": "Content Padding",
+   "subsumes": [
+    "I-human:8d9588b44368849e751725564cc399fb9eddd3060d00da3972f8e66773e9e61b-02",
+    "I-human:7a6d372837f3abbe84f9178564fb8541a4f6b54997a3d6d295ff451c9e62c089-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the bounded component would chiefly eliminate language inserted to match anticipated external searches rather than genuine creative substance or an internal reader-facing function.",
+   "definition": "Uses query formulations, keywords, or commercially salient phrases primarily to attract or match external searches rather than contribute creative substance.",
+   "distinguished_from": "Structural Navigation organizes internal portions, Promotion solicits audience action, and Work Identification supplies a stable name rather than retrieval-oriented keyword coverage.",
+   "examples": [
+    {
+     "doc": "human:a36871b30751dd9b1278fdf800784e01a7174ee725ffe4365cef3d92877c851a",
+     "excerpt": "A standalone heading targets the location-based search “Cbd Oil Kansas City Mo”.",
+     "item_id": 15
+    },
+    {
+     "doc": "human:8d9588b44368849e751725564cc399fb9eddd3060d00da3972f8e66773e9e61b",
+     "excerpt": "The page immediately inserts another standalone unanswered query: “What are the side effects of taking male enhancement pills?”",
+     "item_id": 14
+    },
+    {
+     "doc": "human:ca246d564609382a589ff0f0f8536aa7c412ae9015d45f40b72df6300934abb4",
+     "excerpt": "An introductory keyword list targets searches for free erectile-dysfunction pills, over-the-counter drugs, enhancement products, retail availability, and a product marketed to women.",
+     "item_id": 2
+    }
+   ],
+   "name": "Search Targeting",
+   "subsumes": [
+    "I-human:a36871b30751dd9b1278fdf800784e01a7174ee725ffe4365cef3d92877c851a-01",
+    "I-human:8d9588b44368849e751725564cc399fb9eddd3060d00da3972f8e66773e9e61b-01",
+    "I-human:7a6d372837f3abbe84f9178564fb8541a4f6b54997a3d6d295ff451c9e62c089-01",
+    "I-human:ca246d564609382a589ff0f0f8536aa7c412ae9015d45f40b72df6300934abb4-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly erase an appeal that an audience or collective adopt, reject, or carry out a specified public, social, political, or ethical course.",
+   "definition": "Urges an audience or represented collective to adopt, reject, or carry out a course of action, policy, or conduct.",
+   "distinguished_from": "Action Guidance chiefly helps recipients achieve a result, while Normative Direction establishes conduct as required within an authoritative framework.",
+   "examples": [
+    {
+     "doc": "human:eeadf879234672b10db7bfd7e621f787e93539a0473db04c286857867ef02662",
+     "excerpt": "Humanity should seize this opportunity to reorganize society so every person receives education suited to their fullest abilities and can cooperate in solving shared problems.",
+     "item_id": 30
+    }
+   ],
+   "name": "Advocacy",
+   "subsumes": [
+    "I-human:eeadf879234672b10db7bfd7e621f787e93539a0473db04c286857867ef02662-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly erase a targeted comic or critical exposure produced through exaggeration, parody, distortion, stereotype, or incongruous imitation.",
+   "definition": "Constructs a comic or critical representation that exposes the absurdity, emptiness, hypocrisy, or pretension of a person, institution, discourse, object, or convention.",
+   "distinguished_from": "Figurative Development creates layered nonliteral meaning, while Juxtaposition depends chiefly on the relation between placed elements rather than targeted ridicule.",
+   "examples": [
+    {
+     "doc": "human:fe4f8c2ea15c8145797f4cc8d39d717ab91749d6a7c9ee1ec8c808c8c77b35d4",
+     "excerpt": "Trainspotting is reimagined as a silent French-German musical about addicts counting the 19:23 Newcastle service; its leading figure, Sophie, is portrayed by Ewan McGreggor as a curly person uninterested in trains who prefers staying home and covering herself with honey.",
+     "item_id": 5
+    },
+    {
+     "doc": "human:b30a231d3479f78a0a8b30df211572b74e355547fbbc264888715f1e65a5c830",
+     "excerpt": "A proposed policy is declared obviously beneficial through compressed references to value, ambitious ideation, outsourced knowledge processes, and practical execution, without supplying a coherent supporting argument.",
+     "item_id": 5
+    }
+   ],
+   "name": "Satirical Critique",
+   "subsumes": [
+    "I-human:fe4f8c2ea15c8145797f4cc8d39d717ab91749d6a7c9ee1ec8c808c8c77b35d4-01",
+    "I-human:b30a231d3479f78a0a8b30df211572b74e355547fbbc264888715f1e65a5c830-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly eliminate actionable help about what to do, how to choose, how to interact, or how to refine something to achieve an intended result.",
+   "definition": "Provides directions, recommendations, strategies, governing practical principles, or actionable feedback intended to help a recipient achieve a practical, experiential, interactive, or creative result.",
+   "distinguished_from": "Advocacy seeks commitment to a broader course, Normative Direction imposes a requirement, Subject Explanation states how a system works, and Performance Guidance directs creative realization.",
+   "examples": [
+    {
+     "doc": "human:26028bdf12325dc3e2394e0efe3ce61189dadd670214b5dd8ed36ead09730d69",
+     "excerpt": "Dab foundation onto the cheeks, nose, and forehead, blend downward to smooth facial hairs, apply and blend under-eye concealer, add naturally colored blush to the cheeks, and finish with matching powder after tapping excess from the brush; allow the makeup to settle before blending again from the center downward.",
+     "item_id": 5
+    },
+    {
+     "doc": "ai:a664700dde18e7bf0070a35a37276bbf6a8dabc03e0b27fe084acb8321f83283",
+     "excerpt": "High stakes and careless play create danger, so the narrator sets limits, monitors results, and proceeds cautiously; responsible discipline identifies threats and allows the gambling activity to continue more safely.",
+     "item_id": 8
+    },
+    {
+     "doc": "human:18173471e903ccebc7d67f2178a88bd0cef7801e14e87e7fcec27db3baece7c5",
+     "excerpt": "Another argues that the bank’s plausibility and usefulness depend on the monetary and tax systems, asking about coinage, paper money, inflation, deflation, and taxation, and suggesting automatic asset taxes as a game mechanism for limiting player wealth.",
+     "item_id": 14
+    }
+   ],
+   "name": "Action Guidance",
+   "subsumes": [
+    "I-ai:d912e54328294a37a33657f037ab4147f5a8203845d55892c54987938e45788c-01",
+    "I-human:26028bdf12325dc3e2394e0efe3ce61189dadd670214b5dd8ed36ead09730d69-02",
+    "I-ai:975e84a9dff1846ff885b363ae4fbcbaf74a47a13703a698c31caa233488c52c-01",
+    "I-ai:a664700dde18e7bf0070a35a37276bbf6a8dabc03e0b27fe084acb8321f83283-01",
+    "I-ai:6973103a8d402d2b8867148b637c23a17782c487538e89b2a56fe8abfc04f3fb-01",
+    "I-human:18173471e903ccebc7d67f2178a88bd0cef7801e14e87e7fcec27db3baece7c5-01",
+    "I-human:26028bdf12325dc3e2394e0efe3ce61189dadd670214b5dd8ed36ead09730d69-01",
+    "I-human:8d0731b2a0580fab9f8acf11e498ed4d46fe100281ded34442666c9e04b88b5d-01",
+    "I-human:e0548be0712cf600bf7f601b2fa4bde5f6f6066e0eccda7c02053386a14e2584-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a substantive command, requirement, or expectation governing what an addressee must or is obligated to do.",
+   "definition": "Establishes specified conduct as commanded, required, or expected within a represented normative or authoritative framework.",
+   "distinguished_from": "Action Guidance recommends effective means toward a result, while Advocacy persuasively urges adoption of a broader course rather than establishing an obligation.",
+   "examples": [
+    {
+     "doc": "human:4f1773d1f4d7760693c7b5344bc5bab1f892279babd20410f225ac21f9e17f8e",
+     "excerpt": "Because God has now commanded these statutes and judgments, the people must perform them wholeheartedly and completely.",
+     "item_id": 10
+    }
+   ],
+   "name": "Normative Direction",
+   "subsumes": [
+    "I-human:4f1773d1f4d7760693c7b5344bc5bab1f892279babd20410f225ac21f9e17f8e-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an explicit challenge to a misconception, rumor, trope, or disputed account and its replacement with an assertedly more accurate understanding.",
+   "definition": "Explicitly contests an existing representation, misconception, rumor, or disputed account and replaces or refines it with an assertedly more accurate understanding.",
+   "distinguished_from": "Contextual Exposition supplies background without necessarily disputing anything, while Evidence supplies grounds for a proposition rather than making correction the primary move.",
+   "examples": [
+    {
+     "doc": "human:230bae74eac2f9724b4d2d24a073e219933948badd69b12b34095ff06184010b",
+     "excerpt": "The narrator disputes a published story claiming he asked, “If I break two, will you give me 2nd dan?” before breaking two bricks.",
+     "item_id": 31
+    },
+    {
+     "doc": "human:958ee53f0e9c9c1a6567effe5773663138cc0aaa409911f15bc9953f2f078eab",
+     "excerpt": "The narrator refutes a story that she helped conceal an encounter between Pompadour and Choiseul, explains their legitimate meeting over parliamentary business, and argues that Pompadour admired Choiseul’s talents without becoming his lover; his continuing devotion included concern that melancholy might kill her.",
+     "item_id": 58
+    }
+   ],
+   "name": "Correction",
+   "subsumes": [
+    "I-human:230bae74eac2f9724b4d2d24a073e219933948badd69b12b34095ff06184010b-01",
+    "I-human:958ee53f0e9c9c1a6567effe5773663138cc0aaa409911f15bc9953f2f078eab-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly eliminate a subject-focused account of what something is, how it is classified or operates, why a pattern occurs, or what conditions limit that account.",
+   "definition": "Directly explains a subject's identifying properties, classifications, operational or causal relations, and relevant limiting conditions as the object of exposition.",
+   "distinguished_from": "Contextual Exposition supplies circumstances around a current situation, Evidence warrants another proposition, and Action Guidance tells a recipient how to act.",
+   "examples": [
+    {
+     "doc": "human:9a653287e7f0453b75aae1dc51d3a9c725c615d9dfc88d0809ac8b949b48e0a1",
+     "excerpt": "Although its horse-like head explains its name, a seahorse cannot be ridden, lives in the sea rather than on land, and is actually a small fish.",
+     "item_id": 17
+    },
+    {
+     "doc": "human:8d0731b2a0580fab9f8acf11e498ed4d46fe100281ded34442666c9e04b88b5d",
+     "excerpt": "Landing at least three Furious Hatter scatter symbols awards free spins, while at least three Twiddle Twins trigger a bonus game with rewards ranging from twice to 10,000 times the original stake.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:fe4f8c2ea15c8145797f4cc8d39d717ab91749d6a7c9ee1ec8c808c8c77b35d4",
+     "excerpt": "Ireland is presented as an exception to the westward Viking-delay pattern, possibly because permanent holidays and northern liquor volcanoes protect it despite its position west of Britain and south of the Fractious Republic.",
+     "item_id": 8
+    }
+   ],
+   "name": "Subject Explanation",
+   "subsumes": [
+    "I-human:9a653287e7f0453b75aae1dc51d3a9c725c615d9dfc88d0809ac8b949b48e0a1-01",
+    "I-human:eeadf879234672b10db7bfd7e621f787e93539a0473db04c286857867ef02662-02",
+    "I-human:8d0731b2a0580fab9f8acf11e498ed4d46fe100281ded34442666c9e04b88b5d-02",
+    "I-human:8a57f90bffd4abf171071ae6081be68d0603c8ffb3d5453c23d9ec4cd9454a18-02",
+    "I-human:e0548be0712cf600bf7f601b2fa4bde5f6f6066e0eccda7c02053386a14e2584-02",
+    "I-human:fe4f8c2ea15c8145797f4cc8d39d717ab91749d6a7c9ee1ec8c808c8c77b35d4-02",
+    "I-human:fe4f8c2ea15c8145797f4cc8d39d717ab91749d6a7c9ee1ec8c808c8c77b35d4-03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly eliminate a concrete case that makes a broader idea, theme, norm, trait, pattern, or category intelligible or tangible.",
+   "definition": "Presents a concrete person, event, scenario, or representation primarily to clarify, embody, demonstrate, or test a broader idea, theme, norm, trait, pattern, or category.",
+   "distinguished_from": "Thematic Reflection directly articulates broader significance, Evidence chiefly establishes warrant, and Event Progression advances an occurrence for its own narrative consequences.",
+   "examples": [
+    {
+     "doc": "ai:db7fb849282dd1d5de768f54926e7e86b05086e8eb704b0ed006ebbb1e6d055b",
+     "excerpt": "Bublé and the Panthers’ effort to raise $1 million for cancer research exemplifies a purposeful second chance in which survival produces clarity and motivates action beyond returning to ordinary success.",
+     "item_id": 9
+    },
+    {
+     "doc": "human:a335362f7159080fb4ef4963f1936e351cef2dd8b633e67ca590427d37f33ffc",
+     "excerpt": "A tree demonstrates that one object supports many representations: biological labels; food, material, medicinal, and fuel uses; measurements of 26 feet, 8 feet, and 2,000 pounds or 907 kilograms; or classification as a premium Christmas tree worth $250–300, raising questions about selection and omission.",
+     "item_id": 2
+    },
+    {
+     "doc": "human:429a631ae4672172cf88de4ecfb28841e6af61b9bfbe0dcf59c5811a539c4ed9",
+     "excerpt": "The General performs this aristocratic ideal by staking 300 francs on black, leaving successive winnings in place, losing 1,200 francs when red appears, and departing with a smile despite the narrator’s certainty that the loss pains him.",
+     "item_id": 10
+    }
+   ],
+   "name": "Exemplification",
+   "subsumes": [
+    "I-ai:db7fb849282dd1d5de768f54926e7e86b05086e8eb704b0ed006ebbb1e6d055b-01",
+    "I-human:a335362f7159080fb4ef4963f1936e351cef2dd8b633e67ca590427d37f33ffc-01",
+    "I-human:429a631ae4672172cf88de4ecfb28841e6af61b9bfbe0dcf59c5811a539c4ed9-01",
+    "I-human:e0548be0712cf600bf7f601b2fa4bde5f6f6066e0eccda7c02053386a14e2584-03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly eliminate an explicit intended course of future action by which figures organize, coordinate, or evaluate what follows.",
+   "definition": "Establishes an explicit intended course of future action that organizes participants' conduct and the reader's expectations about ensuing developments.",
+   "distinguished_from": "Foreshadowing indirectly prepares readers for later significance, while Event Progression represents action already occurring rather than the organizing plan for future action.",
+   "examples": [
+    {
+     "doc": "human:57993a1a8595aabdd0a2c04595243cb278c295536e13da7ac17f1ab24873e626",
+     "excerpt": "The defensive plan permits an armored thunder run to enter the streets before attacking it, then channels dismounted forces through buildings, draws additional troops forward, and destroys them with prepared demolitions; the Marines must compel the Australians to follow this progression.",
+     "item_id": 2
+    }
+   ],
+   "name": "Plan Establishment",
+   "subsumes": [
+    "I-human:57993a1a8595aabdd0a2c04595243cb278c295536e13da7ac17f1ab24873e626-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove an extratextual effort to secure audience discovery, participation, acquisition, subscription, following, or material support.",
+   "definition": "Encourages audience discovery of, participation in, acquisition of, subscription to, following of, or material support for a work, creator, campaign, or external offering.",
+   "distinguished_from": "Addressee Engagement operates within a represented or lyric relationship, while Search Targeting seeks external discoverability by matching queries without necessarily soliciting an audience action.",
+   "examples": [
+    {
+     "doc": "human:3536150d1bf20032941212dcd5dcab26ad11f61a60f33880a5e1fd989a5d85a1",
+     "excerpt": "A closing promotional resource block directs readers to the author’s website, newsletter subscription, and Amazon author page.",
+     "item_id": 10
+    },
+    {
+     "doc": "ai:43b81dd85f08cfe91954a3ac7cd07ac10a1d641271ab13cbcfa4c57455076145",
+     "excerpt": "Readers are urged to support and revisit the LuminaSociety story collection through SatinLovers at patreon.com/SatinLovers, with subscription framed as reciprocal generosity granting continued access to the promised fantasy experience.",
+     "item_id": 20
+    },
+    {
+     "doc": "ai:d35541f50bf25f854697d0291d7703872fe85e5a3044e6fd95b31bffce2e38ea",
+     "excerpt": "A closing promotional note recommends “Before Our Eyes” from The Golden Thread and credits Mirelda on lead vocals, Aphrodite on lead guitar and vocals, Athena on rhythm guitar, Hera on bass, and Caelia on drums.",
+     "item_id": 13
+    }
+   ],
+   "name": "Promotion",
+   "subsumes": [
+    "I-human:3536150d1bf20032941212dcd5dcab26ad11f61a60f33880a5e1fd989a5d85a1-01",
+    "I-ai:43b81dd85f08cfe91954a3ac7cd07ac10a1d641271ab13cbcfa4c57455076145-01",
+    "I-ai:975e84a9dff1846ff885b363ae4fbcbaf74a47a13703a698c31caa233488c52c-02",
+    "I-ai:d35541f50bf25f854697d0291d7703872fe85e5a3044e6fd95b31bffce2e38ea-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove a concise overview or recovery of the work's premise, contents, trajectory, or previously presented developments.",
+   "definition": "Provides a bounded synopsis or recap that condenses a work's premise, contents, trajectory, or prior developments apart from experiencing the full creative sequence.",
+   "distinguished_from": "Narrative Compression advances the main story through condensed elapsed developments, while Structural Navigation maps portions without chiefly summarizing their substance.",
+   "examples": [
+    {
+     "doc": "human:ca9ca65a2095229acc89598b144b17e5b2873076fdd7e3dfeb70c5f0f8d101cc",
+     "excerpt": "A recap states that Mandy’s sons disclosed extensive sexual, ritual, and organized abuse; delayed examination found anal scarring but little other physical evidence, and Mandy had to insist on hair sampling to investigate alleged drugging.",
+     "item_id": 2
+    },
+    {
+     "doc": "human:c38794e42170b70970ef09dae317f0cb224f20e40b3632f21cec213af656c863",
+     "excerpt": "An introductory synopsis frames Partis as a longtime spectator of elite football whose devotion to his spouse leads him unexpectedly through Blundell Park and the Humber landscape into belonging to Grimsby.",
+     "item_id": 2
+    }
+   ],
+   "name": "Content Summary",
+   "subsumes": [
+    "I-human:ca9ca65a2095229acc89598b144b17e5b2873076fdd7e3dfeb70c5f0f8d101cc-01",
+    "I-human:c38794e42170b70970ef09dae317f0cb224f20e40b3632f21cec213af656c863-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a deliberate breakdown of recoverable semantic or syntactic continuity that constitutes the creative effect.",
+   "definition": "Deliberately frustrates coherent interpretation through lexical incongruity, malformed syntax, or discontinuous fragments as the primary creative effect.",
+   "distinguished_from": "Juxtaposition generates meaning through a recoverable relationship between distinct elements, while Content Padding is incoherent chiefly because it supplies dispensable bulk.",
+   "examples": [
+    {
+     "doc": "human:17c6454fe0f303d429731bfd1430f46c8be9c1bfd1c5a69256a00339c95772be",
+     "excerpt": "A sustained sequence of unrelated words and broken clause-like fragments produces deliberately unrecoverable prose, while several heading-like phrases interrupt the flow without establishing meaningful topics or an intelligible progression.",
+     "item_id": 1
+    }
+   ],
+   "name": "Semantic Disruption",
+   "subsumes": [
+    "I-human:17c6454fe0f303d429731bfd1430f46c8be9c1bfd1c5a69256a00339c95772be-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly eliminate an aesthetic imitation of a recognizable discourse mode that does not perform that mode's ordinary substantive function.",
+   "definition": "Imitates the form, register, or progression of a recognizable discourse mode as creative material without delivering its conventionally associated claims or information.",
+   "distinguished_from": "Semantic Disruption breaks recoverable continuity, while Interpretive Framing supplies a genuine lens rather than making the semblance of discourse the creative effect.",
+   "examples": [
+    {
+     "doc": "human:1a9e261c95c8f005364bd3d4f1fe2fe4ccd51b70cb4ff437840150aaa5b9787b",
+     "excerpt": "Several paragraphs imitate an explanatory progression and repeatedly mention valuation, appraisal, purchasing, and risk, but they establish no recoverable claims, evidence, instructions, examples, or conclusions.",
+     "item_id": 1
+    }
+   ],
+   "name": "Discursive Mimicry",
+   "subsumes": [
+    "I-human:1a9e261c95c8f005364bd3d4f1fe2fe4ccd51b70cb4ff437840150aaa5b9787b-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary function is to provide a formal assurance that specified actions, conditions, or requirements have been fulfilled.",
+   "definition": "Formally certifies that specified actions, conditions, obligations, or requirements are true, completed, or satisfied.",
+   "distinguished_from": "Normative Direction states what must be done, while Disclosure alerts readers to reception or use conditions rather than certifying fulfillment.",
+   "examples": [
+    {
+     "doc": "human:4f1773d1f4d7760693c7b5344bc5bab1f892279babd20410f225ac21f9e17f8e",
+     "excerpt": "After distributing the third-year tithe, the worshiper must declare complete obedience: all sacred portions were given to the required recipients, none were consumed while mourning, used while unclean, or offered for the dead, and no command was neglected.",
+     "item_id": 8
+    }
+   ],
+   "name": "Attestation",
+   "subsumes": [
+    "I-human:4f1773d1f4d7760693c7b5344bc5bab1f892279babd20410f225ac21f9e17f8e-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a deliberately induced false expectation that conceals and amplifies a later disclosure or reversal.",
+   "definition": "Establishes a plausible but mistaken inference about represented circumstances so that a later correction gains surprise or revelatory force.",
+   "distinguished_from": "Foreshadowing prepares a later development through a meaningful cue, whereas Misdirection steers the reader toward an inference the later development overturns.",
+   "examples": [
+    {
+     "doc": "human:5c895b214debbeef96769edb3c9496f3ced2f421367a0599445f795c71c0dd3c",
+     "excerpt": "At departure, the group loads its purchases and mocks Yoda for apparently obtaining only a worn stock header.",
+     "item_id": 7
+    }
+   ],
+   "name": "Misdirection",
+   "subsumes": [
+    "I-human:5c895b214debbeef96769edb3c9496f3ced2f421367a0599445f795c71c0dd3c-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item explicitly states the controlling proposition that the surrounding composition is organized to establish, explain, argue, or develop.",
+   "definition": "States a central proposition that governs the composition's ensuing or surrounding explanation, argument, or imaginative development.",
+   "distinguished_from": "Thematic Reflection articulates broader significance, while Evidence supplies grounds for accepting a proposition rather than stating the controlling proposition itself.",
+   "examples": [
+    {
+     "doc": "human:eeadf879234672b10db7bfd7e621f787e93539a0473db04c286857867ef02662",
+     "excerpt": "The document states its central technical thesis: “The Operating System of a Quantum Computer is Artificial Intelligence”.",
+     "item_id": 22
+    }
+   ],
+   "name": "Thesis Assertion",
+   "subsumes": [
+    "I-human:eeadf879234672b10db7bfd7e621f787e93539a0473db04c286857867ef02662-03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded questions or tasks would remove the document's means of evaluating readers' recall, comprehension, or interpretation of the creative work.",
+   "definition": "Provides a bounded set of questions or tasks whose document-level function is to evaluate readers' recall, comprehension, or interpretation of creative material.",
+   "distinguished_from": "Reference Aid organizes information for consultation, while Comprehension Assessment actively tests understanding rather than supplying information.",
+   "examples": [
+    {
+     "doc": "ai:2233e179e826313aacc17be45c558ba33be8751c0e6c6d030dd2328bd648de37",
+     "excerpt": "A 17-question reading-comprehension exercise tests recall of the company, Sam’s background, interview events and analogies, the panel’s reactions, the hiring rationale, and interpretation of the concluding symbolism.",
+     "item_id": 9
+    }
+   ],
+   "name": "Comprehension Assessment",
+   "subsumes": [
+    "I-ai:2233e179e826313aacc17be45c558ba33be8751c0e6c6d030dd2328bd648de37-01"
+   ]
+  }
+ ]
+}

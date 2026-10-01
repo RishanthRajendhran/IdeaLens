@@ -1,0 +1,21 @@
+# The only file with machine-specific paths in it.
+#
+# Every root can also be overridden per-run with an environment variable, e.g.
+#   IDEADET_SCRATCH_ROOT=/fast/disk python scripts/eval/score.py ...
+# Relative values resolve against the repository root.
+#
+# `scratch` holds large regenerable intermediates: checkpoints, token caches,
+# raw batch payloads. Nothing that must survive belongs there — on most clusters
+# scratch is not backed up and expires. `data` and `outputs` must be durable.
+
+roots:
+  data: data
+  outputs: outputs
+  prompts: ../prompts
+  configs: configs
+  scripts: scripts
+
+  # Point these at a large, fast filesystem. The defaults keep everything inside
+  # the repo so a fresh clone runs without editing anything.
+  scratch: .scratch
+  cache: .scratch/cache

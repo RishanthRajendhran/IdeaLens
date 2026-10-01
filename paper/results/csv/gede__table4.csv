@@ -1,0 +1,10 @@
+Arm,Description,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+human,human,915,0.1,0.0,0.0,1.5,0.0,0.9,0.0,0.1,0.0
+improve-human,"model rewrites of the student's essay (improve-human, rewrite-human)","1,818",0.5,0.1,45.8,2.4,0.4,31.2,7.8,5.4,54.6
+rewrite-human,"model rewrites of the student's essay (improve-human, rewrite-human)","1,830",2.6,2.0,77.1,6.0,3.7,60.6,49.3,23.8,94.3
+task,"task (assignment only; task, task+resource)","1,830",99.5,99.9,100.0,93.2,98.9,100.0,100.0,97.4,100.0
+task+resource,"task (assignment only; task, task+resource)",40,95.0,100.0,100.0,95.0,100.0,100.0,100.0,67.5,100.0
+summary,"from the student's summary (summary, task+summary)","1,775",96.2,99.9,100.0,88.6,96.8,100.0,100.0,92.7,100.0
+task+summary,"from the student's summary (summary, task+summary)","1,775",93.5,99.2,100.0,83.9,91.9,100.0,100.0,90.8,99.8
+dipper,"attacks (dipper, rewrite_attack)","1,773",77.6,52.6,97.1,68.1,36.3,66.0,20.0,79.3,95.1
+rewrite_attack,"attacks (dipper, rewrite_attack)","1,831",99.6,99.9,100.0,93.7,98.5,100.0,100.0,95.1,100.0

@@ -1,0 +1,23 @@
+{
+ "base_model_tinker": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+ "base_model_qwen": "Qwen/Qwen3.5-9B",
+ "label_tokens": {
+  "human": 50755,
+  "ai": 2464
+ },
+ "positive_class": "ai",
+ "stored_y": "1 = HUMAN (so training label is 1-y, and p_human = softmax[...,0])",
+ "settings": {
+  "full": "one string per document: '[Role] content' joined by NEWLINE",
+  "docs": "the raw document"
+ },
+ "max_len_tokens": {
+  "tinker": 65536,
+  "qwen": 8192
+ },
+ "input_source": "paraphrased outline for training (the extracted outline at inference), never the source document; ProseLens reads the source document",
+ "chat_template": "<|im_start|>system\n{SYSTEM}<|im_end|>\n<|im_start|>user\n{TEXT}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+ "suffix": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+ "WARNING_trailing_whitespace": "chat_template.txt and system_*.txt are byte-exact with NO trailing newline: the template already ends in two newlines and they are part of the prompt. Read with read_bytes/read_text and do NOT strip.",
+ "assistant_suffix": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+}

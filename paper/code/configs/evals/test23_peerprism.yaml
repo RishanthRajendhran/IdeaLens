@@ -1,0 +1,33 @@
+extends: _base.yaml
+name: PeerPrism — idea origin and text origin labelled as a pair
+number: 23
+group: Idea provenance
+asks: The benchmark that states the two axes outright. Does the verdict track the ideas or the surface?
+metric: fire
+positive: mixed
+upstream: PeerPrism. A stratified slice of 20,690 reviews, ICLR and NeurIPS 2021-2024, across eight venue-years and eleven generators. Every record carries `idea_origin` and `text_origin` separately.
+data_dir: test23_peerprism
+legacy_item_stem: peerprism1   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: done
+report:
+  rung_caption: "idea origin x text origin"
+  metric: fire
+  group_by: [idea_origin, text_origin]
+  in_set: true
+notes: >
+  THE DIRECT TEST OF THE THESIS, on someone else's data: both axes are labelled,
+  so the quadrant figure can be drawn from ground truth rather than construction.
+
+  Their `extract_regenerate` arm is our own pipeline used as a data-generation
+  step — ideas pulled out, review rewritten without the original wording — so it
+  is the arm where our method and theirs meet, and it should be reported with
+  that noted rather than as an ordinary arm.
+caveats:
+  - >
+    The condition name leaked into the text: 42.7% of `rewritten`, 50.6% of
+    `expanded` and 49.9% of `hybrid` opened with a markdown header naming their
+    own condition. Left in place, that is the arm label written into the
+    document, and the benchmark would measure header parsing rather than
+    provenance. Our build strips leading headers and verifies the leak is gone;
+    any baseline run on the raw release may be inflated by it.

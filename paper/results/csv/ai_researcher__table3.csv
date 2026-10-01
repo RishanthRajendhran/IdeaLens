@@ -1,0 +1,13 @@
+Level,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+proposals from model ideas · mean,"model ideas, AI prose",97,97.4,99.7,99.9,93.6,99.7,99.9,–,–,99.7
+proposals from model ideas · median,"model ideas, AI prose",97,98.8,99.7,99.9,98.1,99.8,100.0,–,–,100.0
+papers from a model idea · mean,"mixed, human-leaning",24,48.7,59.1,16.4,49.3,54.1,40.0,–,–,30.4
+papers from a model idea · median,"mixed, human-leaning",24,49.7,75.3,0.2,43.7,57.3,1.8,–,–,26.3
+papers from a model idea · min,"mixed, human-leaning",24,0.0,0.8,0.0,0.0,0.0,0.0,–,–,0.0
+papers from a model idea · max,"mixed, human-leaning",24,99.7,98.9,84.6,99.8,99.7,99.8,–,–,87.0
+proposals from expert ideas · mean,"human ideas, AI prose",48,29.6,30.7,15.7,37.0,33.8,26.1,–,–,18.4
+proposals from expert ideas · median,"human ideas, AI prose",48,15.0,14.8,0.3,17.9,16.9,3.6,–,–,6.9
+papers from an expert idea · mean,"human ideas, human prose",19,22.7,53.2,10.6,26.6,43.2,32.2,–,–,23.7
+papers from an expert idea · median,"human ideas, human prose",19,8.9,55.7,0.0,2.8,22.6,1.8,–,–,24.5
+reviews · mean,human ideas,504,28.5,19.6,4.3,40.3,19.9,7.5,–,–,2.7
+reviews · median,human ideas,504,20.8,13.7,0.5,34.3,10.2,0.2,–,–,0.0

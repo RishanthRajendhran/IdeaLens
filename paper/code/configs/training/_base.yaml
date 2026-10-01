@@ -1,0 +1,23 @@
+# Shared training defaults.
+#
+# ONE EPOCH IS ENOUGH for every arm measured so far, and val->test retention runs
+# 0.64 / 0.72 / 0.80 across the three architectures, so a long schedule buys
+# overfitting rather than accuracy.
+#
+# CHECKPOINT SELECTION uses `sel_metric` = mean TPR at {0.5%, 1%, 2%}. TPR at a
+# single operating point is too noisy to rank correlated checkpoints from one
+# epoch. Selection runs on the val-select slice ONLY; the test slice is never
+# used for selection, and the calibration slice is never used for either.
+
+corpus: deleaked_outlines_1m
+setting: full
+epochs: 1
+seed: 0
+selection:
+  metric: sel_metric
+  fpr_targets: [0.005, 0.01, 0.02]
+  split: val
+# Keep a checkpoint at every probe step. Scratch is cheap; re-running a 30B LoRA
+# is not, and the best step is rarely the last one.
+save_every_probe: true
+probes: 25

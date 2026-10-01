@@ -1,0 +1,1 @@
+Write me a 500 word story in {{GENRE}}

@@ -1,0 +1,25 @@
+Domain,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+arxiv,English · clear AI (ai_plain),987,97.9,99.0,100.0,76.7,84.8,99.7,98.2,73.9,100.0
+essay,English · clear AI (ai_plain),999,95.6,98.5,100.0,88.8,93.5,99.9,99.5,77.3,100.0
+news,English · clear AI (ai_plain),971,95.6,94.1,99.9,84.7,75.6,98.8,96.0,58.9,99.9
+writing,English · clear AI (ai_plain),996,97.1,99.2,100.0,87.8,86.1,99.9,90.6,61.2,100.0
+arxiv,English · attacked AI (humanized),914,86.5,82.9,93.4,67.0,54.3,86.7,75.1,11.2,97.3
+essay,English · attacked AI (humanized),916,76.0,75.2,92.0,68.1,61.9,83.2,72.6,12.9,92.4
+news,English · attacked AI (humanized),829,87.0,81.7,93.2,73.5,57.3,85.5,73.0,8.1,95.9
+writing,English · attacked AI (humanized),933,89.0,88.2,95.4,77.3,64.6,89.7,63.8,9.4,94.3
+arxiv,English · rephrase (h2l_rephrase),991,1.7,1.6,10.8,1.3,1.0,11.6,15.8,0.6,41.3
+essay,English · rephrase (h2l_rephrase),980,9.6,11.8,86.7,12.1,14.3,63.9,48.5,21.9,81.6
+news,English · rephrase (h2l_rephrase),944,5.0,3.0,33.1,3.8,1.5,23.4,11.1,3.4,31.8
+writing,English · rephrase (h2l_rephrase),989,3.3,3.0,47.3,6.3,3.0,39.4,4.8,1.5,16.5
+arxiv,English · clear human,999,0.7,0.6,1.1,0.9,0.3,0.8,1.0,0.5,0.2
+essay,English · clear human,992,0.2,0.0,0.0,0.7,0.0,0.0,0.0,0.2,0.0
+news,English · clear human,933,0.3,0.0,0.2,0.3,0.0,0.0,0.2,0.3,0.1
+writing,English · clear human,998,1.3,0.0,0.1,2.6,0.0,0.7,0.0,0.2,0.0
+news,non-English · clear AI (ai_plain),"3,877",93.1,89.9,99.1,85.2,–,–,89.5,27.1,99.7
+news,non-English · attacked AI (humanized),"3,536",79.2,72.3,87.4,71.3,–,–,64.5,2.5,88.6
+news,non-English · rephrase (h2l_rephrase),"3,800",1.8,0.7,12.8,1.3,–,–,3.9,0.7,14.9
+news,non-English · clear human,"3,806",0.6,0.0,0.0,0.4,–,–,0.0,0.2,0.0
+arxiv,English · ai_human_edited (a person rewrote model content),58,96.6,96.6,98.3,72.4,56.9,89.7,70.7,6.9,100.0
+essay,English · ai_human_edited (a person rewrote model content),62,91.9,90.3,100.0,79.0,75.8,93.5,75.8,35.5,100.0
+news,English · ai_human_edited (a person rewrote model content),64,98.4,90.6,100.0,93.8,76.6,95.3,73.4,18.8,100.0
+writing,English · ai_human_edited (a person rewrote model content),64,95.3,96.9,100.0,85.9,79.7,90.6,57.8,28.1,100.0

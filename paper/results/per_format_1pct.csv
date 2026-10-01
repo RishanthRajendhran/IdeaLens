@@ -1,0 +1,85 @@
+evaluation,arm,quadrant,role,n,IdeaLens (outline) global,IdeaLens (outline) per-format,IdeaLens (document) global,IdeaLens (document) per-format,ProseLens global,ProseLens per-format,EditLens-Llama-3B (cal.) global,EditLens-Llama-3B (cal.) per-format
+academic_integrity,"human ideas + AI prose (refined, refined with the article, fresh from the article)",4,pool,867,8.19,16.15,3.69,26.30,83.85,97.46,69.43,90.66
+academic_integrity,humanized (the four humanized versions),4,hum,1156,0.87,2.34,0.09,0.43,0.69,2.77,0.43,2.08
+academic_integrity,human (original abstract),1,pool,289,0.35,1.04,0.00,0.00,0.00,2.08,0.00,0.00
+ai_researcher,"proposals from model ideas (model_idea, model_idea_reranked)",3,pool,97,95.88,100.00,100.00,100.00,100.00,100.00,93.81,100.00
+ai_researcher,proposals from expert ideas,4,pool,48,10.42,18.75,12.50,37.50,14.58,33.33,25.00,62.50
+ai_researcher,reviews (all),1,pool,504,2.58,12.10,2.18,25.40,2.18,19.44,3.17,13.69
+arb,free_llm,3,pool,6904,97.87,96.83,97.26,96.02,99.97,99.93,98.36,97.47
+arb,llm2l,3,att,7043,97.52,96.05,96.49,94.01,99.90,99.86,98.13,96.08
+arb,h2l,4,pool,7027,1.94,4.75,0.54,17.01,40.29,46.95,3.26,19.33
+arb,human,1,pool,1752,0.51,1.88,0.00,4.45,0.06,2.80,0.06,0.11
+coconuts,"AI (mg, mgmp)",3,pool,1400,92.07,97.14,98.86,100.00,100.00,100.00,99.00,99.93
+coconuts,hwmp (model-polished),4,pool,1497,12.16,19.10,12.02,26.72,60.99,79.09,62.93,87.24
+coconuts,hwmt (model-translated into English),4,pool,1493,0.07,0.47,0.00,0.07,0.47,7.23,1.34,27.19
+coconuts,hw,1,pool,1194,0.00,0.08,0.00,0.00,0.00,0.00,0.00,0.25
+detectionai,ai,3,pool,7707,90.28,93.67,93.66,98.24,99.74,99.95,94.67,96.90
+detectionai,stealth (humanized),3,att,7706,57.85,69.34,32.43,72.94,64.09,87.31,4.93,29.41
+detectionai,human,1,pool,1927,0.00,0.57,0.00,2.28,0.05,3.79,0.00,0.05
+detectrl_x,English · ai_none,3,pool,7451,87.32,83.41,98.55,95.44,99.99,99.89,92.94,77.96
+detectrl_x,English · ai_adversarial,3,att,5296,83.76,80.42,93.07,89.37,97.07,96.49,84.14,70.75
+detectrl_x,non-English · ai_none,3,show,6865,86.77,82.72,95.64,93.14,99.85,99.66,73.78,52.16
+detectrl_x,English · human,1,pool,7169,4.80,5.40,4.14,6.65,11.26,11.37,1.00,1.41
+detectrl_x,non-English · human,1,show,6594,0.26,0.33,0.06,0.21,0.18,0.24,0.02,0.79
+ellipse,all essays,1,pool,3909,0.41,2.20,0.00,0.56,0.00,0.03,0.00,0.00
+epoch_author_imitation,vanilla,3,pool,297,97.64,98.65,100.00,98.99,100.00,100.00,93.94,82.49
+epoch_author_imitation,human,1,pool,495,0.00,0.81,0.00,0.00,0.00,1.62,0.00,5.45
+gede,"task (assignment only; task, task+resource)",3,pool,1870,99.36,97.33,99.95,98.34,100.00,100.00,100.00,98.24
+gede,"from the student's summary (summary, task+summary)",3,show,3550,94.85,86.65,99.55,87.92,100.00,100.00,100.00,96.37
+gede,"attacks (dipper, rewrite_attack)",3,att,3604,88.73,81.41,76.64,69.23,98.56,92.43,60.65,60.29
+gede,"model rewrites of the student's essay (improve-human, rewrite-human)",4,pool,3648,1.56,2.36,1.07,2.99,61.49,68.01,28.62,28.95
+gede,human,1,pool,915,0.11,0.33,0.00,0.00,0.00,0.11,0.00,0.00
+gen,clean AI (model-written),3,pool,4046,95.80,96.54,98.44,98.74,99.65,99.85,70.91,86.73
+gen,"model-edited (7 categories, adding_detail excluded)",4,pool,14086,14.02,17.04,26.35,33.64,59.91,65.88,33.67,39.53
+gen,clean human,1,pool,3055,0.49,1.31,0.00,0.20,0.00,0.13,0.00,0.00
+hart,English · clear AI (ai_plain),3,pool,3953,96.53,95.37,97.72,96.61,99.97,99.97,96.05,95.29
+hart,English · attacked AI (humanized),3,att,3592,84.58,84.27,82.04,84.19,93.54,94.43,71.02,73.25
+hart,non-English · clear AI (ai_plain),3,show,3877,93.09,89.24,89.91,90.66,99.10,98.81,89.45,85.58
+hart,non-English · attacked AI (humanized),3,show,3536,79.24,75.45,72.31,73.59,87.36,86.71,64.48,64.31
+hart,English · ai_human_edited (a person rewrote model content),,pool,248,95.56,93.95,93.55,90.32,99.60,99.60,69.35,75.00
+hart,English · rephrase (h2l_rephrase),4,pool,3904,4.89,7.15,4.87,14.75,44.49,54.23,20.08,29.84
+hart,non-English · rephrase (h2l_rephrase),4,show,3800,1.79,1.16,0.66,0.79,12.79,10.68,3.89,5.82
+hart,English · clear human,1,pool,3922,0.64,1.68,0.15,1.89,0.36,1.84,0.31,0.79
+hart,non-English · clear human,1,show,3806,0.58,0.26,0.00,0.00,0.00,0.00,0.00,0.05
+ai_peer_review_detection,ai,3,pool,8334,73.82,85.34,84.73,94.56,98.62,99.77,94.50,98.85
+ai_peer_review_detection,human,1,pool,1622,0.06,0.43,0.00,0.00,0.00,0.74,0.06,0.62
+lamp,preedit,3,pool,1057,98.30,99.15,100.00,99.91,100.00,100.00,99.81,99.15
+lamp,postedit,,pool,1053,88.03,92.40,89.55,95.73,96.01,98.01,80.53,88.41
+meld,ai_none,3,pool,1546,88.10,88.49,97.02,96.83,99.87,99.55,97.99,90.94
+meld,ai_adversarial (6 attacks),3,att,9249,84.23,84.90,71.64,76.44,72.93,73.47,53.09,54.81
+meld,human,1,pool,3918,0.18,0.43,0.00,0.31,0.00,0.15,0.00,0.79
+ideashift_x,high-resource · level 0,3,show,3729,94.23,94.23,98.34,98.47,99.62,99.76,29.15,52.64
+ideashift_x,mid-resource · level 0,3,show,2971,96.40,96.40,96.74,96.97,97.04,97.11,14.68,36.28
+ideashift_x,low-resource · level 0,3,show,3452,95.42,94.61,49.86,53.30,51.56,51.22,1.07,12.54
+ideashift_x,All languages · level 0,3,pool,10152,95.27,95.00,81.38,82.67,82.53,82.48,15.37,34.22
+ideashift_x,high-resource · level 5,4,show,3721,0.75,1.21,6.34,18.38,79.33,80.54,3.41,34.64
+ideashift_x,mid-resource · level 5,4,show,2965,0.84,1.11,3.74,12.31,50.86,50.29,1.08,23.51
+ideashift_x,low-resource · level 5,4,show,3430,0.61,0.64,0.03,1.66,1.17,4.05,0.03,8.92
+ideashift_x,All languages · level 5,4,pool,10116,0.73,0.99,3.44,10.93,44.48,45.74,1.58,22.66
+ideashift_x,high-resource · human,1,show,3729,0.00,0.03,0.00,0.00,0.00,0.59,0.05,2.47
+ideashift_x,mid-resource · human,1,show,2976,0.03,0.07,0.00,0.03,0.00,0.00,0.00,1.58
+ideashift_x,low-resource · human,1,show,3455,0.17,0.17,0.03,0.03,0.03,0.03,0.00,0.96
+ideashift_x,All languages · human,1,pool,10160,0.07,0.09,0.01,0.02,0.01,0.23,0.02,1.69
+opai_bench,v0: the human seed,1,pool,4145,0.31,0.80,0.00,0.05,0.00,0.00,0.00,0.43
+opai_bench,v1 to v8: AI-edited versions,4,pool,33163,0.43,1.19,0.01,1.70,12.13,20.51,0.87,6.08
+perkins_et_al,adversarial (6 techniques),3,att,86,93.02,89.53,98.84,93.02,100.00,100.00,94.19,67.44
+ai_in_peer_review_saha,AI-BP,3,pool,4920,64.78,77.74,82.89,97.15,100.00,100.00,88.25,99.15
+ai_in_peer_review_saha,AI-EP,3,pool,4530,70.93,81.72,84.83,97.73,100.00,100.00,91.55,99.32
+ai_in_peer_review_saha,AI-BP-humanized,3,att,200,86.00,93.00,87.00,100.00,99.00,100.00,0.00,20.00
+ai_in_peer_review_saha,H-AI,4,pool,15118,0.64,2.33,0.17,2.81,47.88,78.73,37.88,78.22
+ai_in_peer_review_saha,H-AI-humanized,4,hum,718,1.53,3.76,1.11,18.25,68.94,94.29,0.56,9.19
+ai_in_peer_review_saha,H,1,pool,2621,0.04,0.34,0.00,0.00,0.00,0.57,0.04,0.27
+sem_detect,ai,3,pool,6767,71.38,85.68,95.94,99.88,100.00,100.00,65.24,95.15
+sem_detect,human,1,pool,3061,0.16,0.69,0.00,0.03,0.00,0.07,0.00,0.88
+sem_detect,rewrite,4,pool,12318,8.23,15.23,11.78,25.04,64.65,90.79,65.99,93.52
+storyscope,"AI, five StoryScope models",3,pool,6911,97.04,98.48,99.83,99.93,99.78,99.90,21.65,91.85
+storyscope,human,1,pool,1380,0.07,0.67,0.00,0.00,0.00,0.00,0.00,0.07
+ideashift_ai_sources,level 0 (type line),3,pool,263,98.10,98.86,99.62,99.62,100.00,100.00,74.90,76.43
+ideashift_ai_sources,level 1 (topic line),3,pool,263,98.48,98.86,100.00,100.00,100.00,100.00,72.62,76.81
+ideashift_ai_sources,level 2 (themes),3,pool,263,99.24,99.62,100.00,100.00,100.00,100.00,75.67,78.33
+ideashift_ai_sources,level 3 (themes and structure),3,pool,263,96.58,97.72,100.00,100.00,100.00,100.00,75.67,77.57
+ideashift_ai_sources,level 4 (themes and full outline),3,pool,263,98.86,98.86,100.00,100.00,100.00,100.00,78.33,78.33
+ideashift_ai_sources,level 5 (the source's outline),3,pool,263,98.48,97.72,100.00,100.00,100.00,100.00,79.85,78.33
+ideashift_human_sources,level 0 (type line),3,pool,237,94.94,95.78,98.73,99.16,99.16,99.16,68.35,73.00
+ideashift_human_sources,level 1 (topic line),3,pool,237,91.14,91.14,98.31,98.73,99.58,99.58,59.49,68.78
+ideashift_human_sources,level 5 (the source's outline),4,pool,237,6.75,8.02,54.43,63.29,86.50,87.76,16.03,43.46

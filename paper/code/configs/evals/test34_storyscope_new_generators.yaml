@@ -1,0 +1,65 @@
+extends: _base.yaml
+name: StoryScope, new generators
+number: 34
+group: Out of domain
+asks: >
+  Does a newer generator evade the detector on the same prompts an older one
+  fails on?
+positive: ai
+# Only AI rows live here. The human control is Test 8's own human arm on the same
+# prompts, joined on pair_id, so it is a fire rate on this set and a TPR only once
+# joined. Do not report a TPR off this file alone.
+metric: fire
+upstream: >
+  Our own construction over the StoryScope test set. Authors 7 and 8 on a 10%
+  sample of the 1,384 prompts, alongside the human and five models Test 8 carries.
+data_dir: test34_storyscope_new_generators
+
+generation:
+  models: {gpt_5_6_sol: gpt-5.6-sol, gpt_6_astra: gpt-6-astra}
+  reasoning_effort: high
+  frac: 0.10
+  seed: 0
+  inputs: [storyscope_prompt]
+  # NO length enforcement, deliberately, and this is the exception to the rule the
+  # other generated sets follow. 1,165 of 1,384 StoryScope prompts state their own
+  # target, and the five existing model arms were built by sending the prompt
+  # as-is: their medians run 2,659 (deepseek) to 6,569 (gpt_5_4) against 4,965 for
+  # the human. Enforcing length on our two arms alone would make them the only
+  # length-controlled rows in a set that exists for cross-author comparison.
+  length_enforcement: none
+
+pipeline:
+  # `format` stays inherited: it names a classifier CONFIG and nothing here should
+  # shadow it. The policy below is advisory and read by people, not code.
+  format_policy: assert     # Creative Writing throughout, as in Test 8, and already
+                            # set on every corpus row. Do NOT run classify_format on
+                            # this set: Test 8 asserted the format for all 8,291 of
+                            # its rows, and classifying only these two arms would put
+                            # them on a different footing from the five they exist to
+                            # be compared against. run_pipeline reads `format` off the
+                            # corpus row, so it needs no classification pass.
+
+report:
+  group_by: [model]
+  pair_on: pair_id          # joins to test8_storyscope: same prompt, human + 5 models
+  schemes: [global]
+  primary_fpr: 0.01
+
+scoring:
+  models: [nemotron_1m_full]
+  # The prose-reading arm is a STAGE, not a model: `--stage document` with
+  # nemotron_1m_full, which is what the thresholds file calls
+  # `nemotron_1m_full_on_document`. `nemotron_1m_docs` is a different thing (a
+  # model actually trained on documents) and is not what we want here.
+
+notes: >
+  Built to follow up the Test 33 genre pilot, where at the global 1% cut on raw
+  outlines gpt-5.6-sol was flagged at 96% (24/25) and gpt-6-astra at 56% (14/25),
+  with astra reading more human in 22 of 25 genres (sign test p < 0.001) and no
+  difference in outline length to explain it (11.0 vs 11.6 items). Twenty-five
+  genre prompts is thin evidence for a claim about a generator, which is what this
+  set exists to strengthen or kill.
+
+  Ids follow build_storyscope.py exactly, sha1("storyscope|<pid>|<model>")[:24],
+  so they cannot collide with the 8,291 existing rows.

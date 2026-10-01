@@ -1,0 +1,9 @@
+Genre,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+abstracts,v0: the human seed,"1,120",0.3,0.0,0.0,1.9,0.0,0.4,0.0,0.4,0.0
+essays,v0: the human seed,942,1.1,0.0,0.0,4.4,0.0,0.2,0.0,0.4,0.0
+news,v0: the human seed,864,0.0,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.0
+reports,v0: the human seed,"1,219",0.0,0.0,0.0,0.1,0.0,0.0,0.0,0.0,0.0
+abstracts,v1 to v8: AI-edited versions,"8,965",0.3,0.0,2.6,1.6,0.0,1.8,0.3,0.1,23.0
+essays,v1 to v8: AI-edited versions,"7,535",1.5,0.1,37.8,4.8,0.0,15.0,3.5,0.1,28.1
+news,v1 to v8: AI-edited versions,"6,911",0.0,0.0,13.0,0.2,0.0,0.3,0.0,0.0,7.7
+reports,v1 to v8: AI-edited versions,"9,752",0.0,0.0,0.4,0.1,0.1,0.3,0.0,0.0,6.7

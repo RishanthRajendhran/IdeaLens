@@ -1,0 +1,25 @@
+Arm,Model,0.1%,0.5%,2%,5%
+human (original abstract),IdeaLens · outline,0.0,0.0,1.0,3.5
+human (original abstract),IdeaLens · document,0.0,0.0,0.0,3.1
+human (original abstract),ProseLens,0.0,0.0,1.4,10.0
+human (original abstract),IdeaLens-ModernBERT-L · outline,0.3,1.7,9.0,23.9
+human (original abstract),IdeaLens-ModernBERT-L · document,0.0,0.0,2.4,42.6
+human (original abstract),ProseLens-ModernBERT-L,1.4,4.2,8.7,46.0
+human (original abstract),EditLens-Llama-3B (cal.),0.0,0.0,0.0,4.5
+human (original abstract),Binoculars (cal.),0.0,0.0,9.0,13.8
+"human ideas + AI prose (refined, refined with the article, fresh from the article)",IdeaLens · outline,1.6,5.2,13.8,24.1
+"human ideas + AI prose (refined, refined with the article, fresh from the article)",IdeaLens · document,0.2,1.7,17.1,43.7
+"human ideas + AI prose (refined, refined with the article, fresh from the article)",ProseLens,52.5,72.3,94.9,99.3
+"human ideas + AI prose (refined, refined with the article, fresh from the article)",IdeaLens-ModernBERT-L · outline,0.7,5.0,19.3,43.4
+"human ideas + AI prose (refined, refined with the article, fresh from the article)",IdeaLens-ModernBERT-L · document,0.1,1.2,28.4,82.9
+"human ideas + AI prose (refined, refined with the article, fresh from the article)",ProseLens-ModernBERT-L,7.2,31.5,91.5,99.8
+"human ideas + AI prose (refined, refined with the article, fresh from the article)",EditLens-Llama-3B (cal.),0.0,33.3,90.3,99.1
+"human ideas + AI prose (refined, refined with the article, fresh from the article)",Binoculars (cal.),0.2,2.5,20.8,37.0
+humanized (the four humanized versions),IdeaLens · outline,0.1,0.6,2.0,5.2
+humanized (the four humanized versions),IdeaLens · document,0.0,0.0,0.2,3.0
+humanized (the four humanized versions),ProseLens,0.1,0.3,1.6,9.4
+humanized (the four humanized versions),IdeaLens-ModernBERT-L · outline,0.3,1.7,9.0,25.5
+humanized (the four humanized versions),IdeaLens-ModernBERT-L · document,0.0,0.0,2.5,36.5
+humanized (the four humanized versions),ProseLens-ModernBERT-L,0.7,1.5,6.7,32.3
+humanized (the four humanized versions),EditLens-Llama-3B (cal.),0.0,0.1,1.9,7.5
+humanized (the four humanized versions),Binoculars (cal.),0.3,1.8,12.3,21.5

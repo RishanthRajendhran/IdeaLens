@@ -1,0 +1,9 @@
+Arm,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,Pangram 4
+original__raw,3.6 / 0.2,0.7 / 0.1,0.2 / 0.0,23.1 / 10.0,7.1 / 1.1,7.3 / 0.1,0.2 / 0.0
+refine_abstract_only__raw,13.4 / 1.2,12.6 / 0.9,68.9 / 85.1,32.6 / 17.6,30.6 / 13.6,66.4 / 76.8,63.4 / 50.0
+refine_abstract_article__raw,14.6 / 1.5,13.6 / 1.1,74.5 / 92.1,34.2 / 19.7,30.7 / 13.8,68.6 / 82.6,69.1 / 58.5
+new_article_only__raw,31.2 / 12.2,32.4 / 16.4,89.2 / 98.9,48.6 / 48.4,46.2 / 45.2,81.8 / 93.5,94.8 / 100.0
+original__humanized,2.7 / 0.3,0.7 / 0.1,0.2 / 0.0,23.2 / 8.4,6.1 / 0.9,5.5 / 0.1,2.8 / 0.0
+refine_abstract_only__humanized,5.6 / 0.3,1.6 / 0.1,1.8 / 0.0,24.7 / 8.3,9.4 / 1.7,8.9 / 0.1,8.1 / 0.0
+refine_abstract_article__humanized,4.8 / 0.3,0.3 / 0.0,0.7 / 0.0,21.5 / 7.9,5.4 / 0.7,4.5 / 0.0,8.4 / 0.0
+new_article_only__humanized,6.2 / 0.4,0.2 / 0.0,0.3 / 0.0,24.8 / 9.5,5.4 / 0.9,1.2 / 0.0,16.7 / 0.0

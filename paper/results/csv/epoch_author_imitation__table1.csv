@@ -1,0 +1,4 @@
+Arm,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+vanilla,model ideas (TPR),297,97.6 / 98.7,100.0 / 99.0,100.0 / 100.0,65.7 / 62.6,85.2 / 91.9,99.7 / 99.7,93.9 / 82.5,3.0 / –,100.0
+human,human ideas (FPR),495,0.0 / 0.8,0.0 / 0.0,0.0 / 1.6,0.0 / 0.4,0.0 / 0.2,0.0 / 2.4,0.0 / 5.5,0.0 / –,0.0
+"AUC, vanilla vs human",,,1.000,1.000,1.000,0.985,1.000,1.000,1.000,0.836,1.000

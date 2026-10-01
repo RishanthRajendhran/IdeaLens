@@ -1,0 +1,26 @@
+extends: _base.yaml
+name: Qwen local decoder, full outlines
+backend: qwen_local
+base_model: ${IDEADET_QWEN_BASE:-Qwen/Qwen3.5-9B}
+setting: full
+lr: 1.0e-5
+# Effective batch is pinned and grad accumulation is derived from WORLD_SIZE, so
+# the 4-GPU and 8-GPU launchers train identically.
+effective_batch: 64
+per_device_batch: 2
+max_length: 8192
+probes: 12
+resume: true
+
+slurm:
+  partition: <gpu-partition>
+  gpus: 4
+  constraint: <bf16-capable-gpu>
+  time: "08:00:00"
+  mem: 200G
+  cpus: 16
+
+notes: >
+  `--resume` continues from the newest checkpoint, so one long run can be chained
+  across several short jobs -- which is how it fits a preemptible partition.
+  Every launcher validates its real argv with --dry-run before starting torchrun.

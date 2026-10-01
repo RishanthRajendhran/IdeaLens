@@ -1,0 +1,765 @@
+# TASK
+
+Infer the document's latent composition and structural plan and express it
+as a flat, ordered, ROLE-LABELLED OUTLINE.
+
+The latent plan is the document-implied model of what the writer chose to
+say, do, and include, and in what order, before those choices were realized
+as particular sentences, formatting, markup, and document components.
+
+It is an analytical representation of the document, not a claim about the
+writer's actual psychological process.
+
+The outline must capture:
+
+- substantive content commitments;
+- rhetorical progression;
+- functionally meaningful structural commitments;
+- the single primary function performed by each item;
+
+while excluding extraction artifacts and abstracting away from surface
+realization.
+
+
+# FORMAT
+
+Format: {{FORMAT}}
+
+Description: {{FORMAT_DESCRIPTION}}
+
+Use this format context to interpret document conventions and choose roles.
+The document itself remains authoritative.
+
+Do not infer content or components merely because they are conventional for
+the format.
+
+
+# ROLE VOCABULARY
+
+The following is the role vocabulary for {{FORMAT}}:
+
+{{ROLES_BLOCK}}
+
+Use only:
+
+- the exact role names supplied above;
+- or the reserved role `Other`.
+
+Do not:
+
+- invent a role;
+- rename a role;
+- combine role names;
+- subdivide a role;
+- assign multiple roles to one item.
+
+
+# TARGET REPRESENTATION
+
+A competent writer given only the outline should be able to produce a
+substantively, rhetorically, and structurally equivalent document.
+
+The reconstruction must preserve:
+
+- claims, facts, events, examples, evidence, decisions, contrasts,
+  objections, responses, consequences, conclusions, and other substantive
+  commitments;
+- the order in which those commitments are introduced;
+- significant analogies, metaphors, and descriptions when they carry
+  substantive meaning;
+- load-bearing names, quantities, dates, identifiers, quotations, and
+  exact wording;
+- distinctions between the writer's claims and attributed material;
+- bounded components that perform meaningful organizational, navigational,
+  attributional, documentary, interpretive, supplementary, legal, or other
+  communicative functions.
+
+The reconstruction need not preserve:
+
+- original wording or syntax except when exact wording is substantive;
+- sentence, clause, line, paragraph, section, or stanza boundaries;
+- transitional phrasing;
+- repetition used only for rhythm or emphasis;
+- incidental examples or descriptive details;
+- stylistic ornament without substantive function;
+- purely visual formatting;
+- exact heading, numbering, citation, reference, or markup style;
+- commands or notation controlling only rendering or layout;
+- administrative metadata without a substantive, rhetorical, or structural
+  function;
+- artifacts introduced by scraping, conversion, OCR, markup exposure,
+  interface capture, or file extraction.
+
+
+# WHAT COUNTS AS AN ITEM
+
+An item represents one locally continuous commitment in the latent plan.
+
+A commitment may be:
+
+1. SUBSTANTIVE: a claim, fact, event, example, method, finding, decision,
+   recommendation, or other content contribution;
+
+2. RHETORICAL: a move that frames, motivates, qualifies, supports,
+   contrasts, interprets, or concludes other content;
+
+3. STRUCTURAL: a bounded component included to organize, navigate,
+   attribute, document, supplement, disclose, or otherwise support the
+   document's communicative function.
+
+Possible structural commitments include:
+
+- an abstract or executive summary;
+- a contents or navigation component;
+- a glossary or collection of defined terms;
+- a source or reference section;
+- an appendix or supplementary section;
+- an acknowledgments, disclosure, attribution, or contribution section;
+- a bounded collection of notes;
+- a table, figure, code block, equation group, or data display contributing
+  information as a unified component.
+
+An item is not necessarily one sentence, clause, fact, action, image,
+paragraph, section, or stanza. It may contain several details when they
+jointly perform the same governing move or structural function.
+
+Give a supporting example, evidentiary case, event, explanation, or
+consequence its own item when it makes an independently meaningful
+contribution.
+
+Keep details that merely complete, qualify, restate, justify, facilitate,
+or implement one governing move within that move's item.
+
+
+# GOVERNING-QUESTION PRINCIPLE
+
+An item should normally answer one practical, narrative, descriptive,
+argumentative, documentary, or structural question, such as:
+
+- What happened?
+- What claim is being advanced?
+- What evidence supports or challenges it?
+- What rule applies?
+- What should the reader do?
+- What caused this result?
+- What does this example demonstrate?
+- How is something characterized?
+- What conclusion follows?
+- What bounded component is included, and what function does it perform?
+- What material is documented, attributed, summarized, supplemented, or
+  made available for reference?
+
+Keep conditions, exceptions, rationales, incidental examples, resources,
+indicators, and implementation together when they answer the same immediate
+question.
+
+Split when the document begins answering a different question or makes a
+separately planned contribution, even if both concern the same broad topic.
+
+
+# CANONICAL GRANULARITY
+
+When multiple segmentations are plausible:
+
+- represent one governing point with its conditions, exceptions, rationale,
+  consequences, resources, indicators, and implementation as one item;
+- represent one bounded component with its internal entries as one item
+  when those entries jointly perform one documentary function;
+- split a distinct claim, action, case, event, decision, objection,
+  response, conclusion, or structural component when it performs an
+  independently meaningful function.
+
+Do not create one item per entry in a collection unless an entry is itself
+discussed, evaluated, quoted, contrasted, or otherwise foregrounded.
+
+When uncertain, choose the least fragmented segmentation that preserves
+every independently meaningful substantive, rhetorical, and structural
+commitment.
+
+
+# ROLE-AWARE SEGMENTATION
+
+The role vocabulary may help identify boundaries, but roles do not
+determine boundaries by themselves.
+
+First identify candidate commitments using meaning, contiguity, governing
+questions, and independence. Then use the vocabulary to test those
+candidates.
+
+A likely change in primary role supports a boundary only when the document
+also introduces an independently meaningful commitment.
+
+Do not split merely because:
+
+- one unified move has several secondary effects;
+- several roles could plausibly describe the move;
+- a condition, exception, rationale, or illustration has a different
+  secondary function;
+- splitting would make role assignment easier;
+- splitting would avoid assigning `Other`.
+
+Do not merge merely because:
+
+- adjacent moves would receive the same role;
+- they concern the same topic;
+- they contribute to the same broad purpose;
+- merging would avoid assigning `Other`.
+
+If a candidate appears to perform multiple functions, ask:
+
+"Does this region contain multiple independently planned commitments, or
+one commitment with a primary function and secondary effects?"
+
+Split only in the first case. Otherwise, keep it unified and assign the role
+representing its primary function.
+
+
+# PARAPHRASE AND STRUCTURAL INVARIANCE
+
+Two versions differing only in wording, syntax, sentence boundaries,
+paragraphing, formatting, markup, numbering, or citation style should
+produce equivalent outlines with approximately the same:
+
+- items;
+- order;
+- boundaries;
+- granularity;
+- global themes;
+- role assignments.
+
+Therefore:
+
+- do not use grammatical or formatting boundaries alone to define items;
+- do not split because material appears in separate sentences or blocks;
+- do not merge because distinct moves appear in one sentence or section;
+- do not let headings determine item count;
+- do not treat rendering syntax, numbering, or citation style as content;
+- do not assign roles from surface wording or formatting;
+- do treat addition or removal of a functionally meaningful component as a
+  possible structural change.
+
+For every boundary and role assignment, ask whether it would remain the
+same if the commitment were expressed with entirely different wording and
+formatting.
+
+
+# STEP 0 — FILTER EXTRACTION AND INGESTION ARTIFACTS
+
+Treat the input as a potentially noisy representation of the intended
+document.
+
+Ignore material clearly introduced by scraping, conversion, OCR, markup
+exposure, interface capture, or file extraction, including:
+
+- raw rendering tags and isolated markup tokens;
+- CSS, scripts, tracking parameters, and hidden implementation details;
+- bare navigational URLs;
+- image filenames, asset paths, placeholders, and broken-image notices;
+- duplicated headers, footers, menus, controls, and interface text;
+- text duplicated by extraction or responsive layout;
+- OCR noise, broken encoding, and nonsensical fragments;
+- page markers, line numbers, page numbers, and conversion metadata;
+- unrelated or automatically inserted captions, alt text, and media labels;
+- detached fragments with no recoverable function.
+
+Do not create items for artifacts, label them `Other`, or let them affect
+item boundaries, document description, global themes, or role assignments.
+
+When markup surrounds genuine content, discard the markup but preserve and
+interpret the content.
+
+For ambiguous material, ask:
+
+"Would a reader of the intended document, rather than its scraped or
+converted representation, regard this as substantive content or a
+meaningful component?"
+
+If not, ignore it. If duplicated by extraction, keep only the genuine
+occurrence.
+
+Artifact filtering takes precedence over structural coverage and role
+assignment.
+
+
+# STEP 1 — IDENTIFY CANDIDATE COMMITMENTS
+
+Read the artifact-filtered document in order and identify its substantive,
+rhetorical, and structural commitments.
+
+Preserve differences among:
+
+- assertion and uncertainty;
+- fact and allegation;
+- the writer's position and an attributed source's position;
+- actuality, possibility, prediction, and hypothetical illustration;
+- cause and correlation;
+- recommendation, requirement, permission, and decision;
+- general rule and particular case;
+- past, present, and anticipated events;
+- substantive content and components that organize, attribute, document, or
+  supplement it.
+
+Do not assign final roles yet. First identify candidate commitments from the
+document itself.
+
+
+# STEP 2 — SEGMENT INTO ITEMS
+
+## A. CONTIGUITY AND ORDER
+
+Each item must correspond to one bounded, continuous region.
+
+Do not combine separated occurrences merely because they share a topic,
+source, idea, function, or role.
+
+Represent a later recurrence separately when it performs a function there.
+
+Do not globally summarize markers scattered throughout the document.
+Preserve their local function within associated items.
+
+Order items by where their source material or component appears. Do not
+reorder them chronologically, causally, thematically, or logically.
+
+
+## B. INTERNAL DEVELOPMENT
+
+Keep a governing point with:
+
+- conditions and exceptions;
+- its operating mechanism;
+- immediate rationale or consequence;
+- coordinated implementation steps;
+- directly facilitating resources;
+- narrower restatements;
+- incidental illustrations;
+- explanatory signs or terminology;
+- jointly developing descriptive or figurative details;
+- local source attribution.
+
+Do not divide one procedure into items for each step or one case into items
+for each fact unless the parts perform independent jobs.
+
+
+## C. EXAMPLES, EVIDENCE, AND ACTIONS
+
+Give an example its own item when it is substantive evidence, a distinct
+case, a factual episode, a separately meaningful application, or an
+independent result.
+
+Keep it with the governing point when it merely makes that point concrete.
+Specificity alone does not make it independent.
+
+Keep actions together when they jointly answer the same immediate question.
+Split them when they pursue different objectives, apply under different
+triggers, impose independent obligations, or represent separately planned
+stages.
+
+
+## D. SOURCING AND ATTRIBUTION
+
+A citation, source marker, link, footnote marker, or cross-reference
+attached to a move normally belongs to that move.
+
+Preserve when relevant:
+
+- that a claim is attributed rather than asserted by the writer;
+- that sources are synthesized, compared, or contrasted;
+- that a source supplies evidence, terminology, a method, a disputed
+  position, or a consequential result;
+- source identity when it materially affects the move.
+
+Ignore citation keys, reference numbers, link formatting, and bibliographic
+style unless their exact form is substantive.
+
+Do not create one item per ordinary citation or reference entry.
+
+A bounded source section may receive one structural item. Give an individual
+source its own item only when independently discussed, evaluated, quoted,
+disputed, or contrasted.
+
+
+## E. STRUCTURAL COMPONENTS
+
+Create an item for a bounded component when omitting it would make the
+reconstruction structurally or communicatively different.
+
+Apply artifact filtering before treating a block as structural. Visual
+separation, a caption label, heading-like form, or extraction block does
+not by itself establish a commitment.
+
+Summarize the component's function and scope rather than every entry.
+
+Do not create structural items solely for:
+
+- individual source markers;
+- ordinary reference entries;
+- page numbers or decorative separators;
+- layout or rendering commands;
+- empty containers;
+- artifacts.
+
+A heading alone is not automatically an item. Include it only when its
+wording contributes substantive framing or it marks a meaningful bounded
+component.
+
+
+## F. MACHINE-READABLE SOURCE
+
+Distinguish source syntax from the content or component it instantiates.
+
+Preserve meaningful text, code, equations, identifiers, and component
+functions while ignoring tags and commands that only control presentation.
+
+If a command invokes content stored externally or absent from the input,
+represent only the component and function established by the document. Do
+not invent missing contents.
+
+
+## G. LITERARY AND FIGURATIVE CONTENT
+
+Preserve metaphors, images, analogies, and contrasts when they carry
+argument, characterization, or substantive meaning.
+
+Group local images that jointly realize one figurative move. Do not create
+one item per line or image unless each makes a distinct development.
+
+Preserve the conceptual figure in source-independent language. Preserve
+exact wording only when the wording itself is load-bearing.
+
+
+## H. FRAMING AND CLOSING MOVES
+
+Preserve introductions and conclusions when they establish premises,
+purposes, stakes, interpretive lenses, broader outcomes, or repetitions
+performing a new concluding role.
+
+Do not preserve formulaic announcements unless they add substantive
+information or establish a meaningful component.
+
+
+# ITEM-BOUNDARY TEST
+
+Create a boundary only when all are true:
+
+1. The later material introduces a new central point, action, case, event,
+   conclusion, or structural function rather than internal development.
+
+2. It answers a different immediate question or makes a separately planned
+   contribution.
+
+3. A writer would need to plan it separately.
+
+4. The boundary would survive changes in wording, sentence division,
+   formatting, markup, numbering, and layout.
+
+5. Keeping the material together would obscure two independently meaningful
+   commitments.
+
+Role difference may support this judgment but cannot replace it.
+
+
+# STEP 3 — FINALIZE ITEMS AND WRITE CONTENT
+
+Phrase every non-verbatim item from the meaning of the source rather than
+from its wording.
+
+The output should read as though it were produced from an abstract
+understanding of the document after the original sentences were no longer
+visible.
+
+For non-verbatim content:
+
+- use your own vocabulary and sentence construction;
+- reorganize clauses when meaning and emphasis remain intact;
+- replace source-specific idioms and rhetorical phrasing with direct,
+  neutral language;
+- prefer concise proposition-like plan notes;
+- preserve the function and force of the move rather than its style.
+
+Do not:
+
+- copy or lightly edit source sentences;
+- mirror source clause order by default;
+- preserve unusual diction merely because it is memorable;
+- imitate the source's voice, cadence, or syntax;
+- reproduce slogans, rhetorical questions, repetition, or emphasis unless
+  their exact form is substantive.
+
+Retain:
+
+- the governing commitment;
+- load-bearing names, values, and dates;
+- conditions, exceptions, alternatives, and modality;
+- substantive evidence or examples;
+- attribution affecting ownership or evidentiary status;
+- structural scope needed to understand a component.
+
+Usually omit or compress:
+
+- implied motivation;
+- rhetorical emphasis;
+- obvious consequences;
+- interchangeable illustrations;
+- repetitive lists;
+- scene-setting without a constraining function;
+- citation, numbering, markup, and formatting syntax;
+- repetitive entries in a unified component;
+- extraction artifacts.
+
+Most items should be one compact sentence and must not exceed 60 words.
+
+
+# STEP 4 — ASSIGN PRIMARY ROLES
+
+Assign exactly one role to every finalized item.
+
+Choose the role representing the item's primary composition-level or
+structural function: the main function that would disappear at that point
+if the item were removed.
+
+Determine the role from:
+
+- the item's governing commitment;
+- its relationship to preceding and following items;
+- the document's overall progression and themes;
+- the role definitions;
+- the role assignment tests;
+- the distinctions among nearby roles.
+
+Do not choose a role based only on:
+
+- keywords;
+- topic;
+- named entities;
+- document position;
+- section name;
+- formatting or markup;
+- the presence of a citation, link, table, figure, heading, note, or
+  appendix.
+
+An item may have secondary effects. Ignore them when selecting its single
+primary role.
+
+Use the role name exactly as supplied.
+
+
+## STRUCTURAL ROLE ASSIGNMENT
+
+For an item inside a bounded component, use a substantive or rhetorical
+role when its primary commitment is a claim, finding, example, procedure,
+interpretation, or other content move.
+
+Use a structural role when its primary commitment is the inclusion and
+document-level function of the bounded component itself.
+
+Classify by function rather than container.
+
+
+## OTHER
+
+Use the reserved role `Other` only when every supplied role would materially
+mischaracterize the item's primary function.
+
+Do not use `Other` merely because:
+
+- no role describes every detail;
+- a role is broader than the item's specific content;
+- the item concerns an unusual topic or entity;
+- several roles initially appear plausible;
+- the item has secondary effects;
+- it occurs in an unusual position or component.
+
+When several named roles are plausible, choose the best-fitting role rather
+than `Other`.
+
+Do not change item boundaries to avoid `Other`.
+
+Artifacts must be removed, not labelled `Other`.
+
+
+# STEP 5 — DESCRIBE THE DOCUMENT TYPE
+
+Write a concise, content-blind description of the specific document type.
+
+Identify when inferable:
+
+- genre or format subtype;
+- likely venue or publication setting;
+- intended audience;
+- communicative register or style;
+- broad presentational convention needed to characterize the type.
+
+Do not include topic, themes, named content entities, arguments, findings,
+examples, outline structure, human-versus-AI judgments, markup, citation
+style, file format, or extraction artifacts.
+
+Use neutral, standardized language. Describe the register without imitating
+it.
+
+The description should be reusable as a writing brief for the same document
+type on an unrelated topic.
+
+
+# STEP 6 — IDENTIFY GLOBAL THEMES
+
+A global theme is the document's highest-level substantive contribution:
+its central claim, lesson, position, or purpose.
+
+Write themes in neutral, source-independent language.
+
+Include:
+
+- the essential subject or entity;
+- the central contribution;
+- only the broadest condition needed to make it meaningful.
+
+Do not include:
+
+- individual rules, steps, examples, cases, evidence, roles, or components;
+- details primarily supported by one item;
+- a table of contents;
+- structural or extraction artifacts;
+- long enumerations.
+
+Replace item-level details with their shared higher-level meaning.
+
+Return one theme unless the document makes multiple genuinely distinct,
+co-equal contributions.
+
+
+# VERBATIM
+
+Set `verbatim` to `false` by default.
+
+Set it to `true` only when exact wording is substantive, such as:
+
+- a direct quotation;
+- wording being analyzed, disputed, or interpreted;
+- an operative legal clause;
+- a formally defined phrase;
+- load-bearing wordplay.
+
+When `verbatim` is `true`, preserve the load-bearing span exactly while
+paraphrasing surrounding attribution or explanation when possible.
+
+Exact names, numbers, dates, technical terms, source names, and identifiers
+do not by themselves make an item verbatim.
+
+
+# FLAT AND UNLABELLED CONTENT
+
+Return one flat ordered item list. Never nest items.
+
+The outline is role-labelled through the `role_name` field, but the
+`content` field itself must remain unlabelled.
+
+Do not prefix `content` with labels such as:
+
+- "Claim:";
+- "Evidence:";
+- "Conclusion:";
+- the assigned role name.
+
+For substantive and rhetorical items, state the commitment directly.
+
+For structural items, describing the component is acceptable because its
+inclusion and function are the commitment.
+
+
+# SELF-CHECK
+
+Before finalizing, verify:
+
+1. Every item represents one locally continuous commitment.
+
+2. Items preserve document order.
+
+3. No unified move has been atomized unnecessarily.
+
+4. No independent moves have been merged merely because they share a role.
+
+5. No item was split merely because several roles seemed plausible.
+
+6. Every item has exactly one exact role name from the supplied vocabulary
+   or `Other`.
+
+7. `Other` is used only for a genuine vocabulary gap.
+
+8. Role assignments depend on function in context rather than keywords,
+   position, topic, or container.
+
+9. Content is source-independent except for load-bearing verbatim spans.
+
+10. Attribution, modality, conditions, alternatives, scope, and structural
+    functions are preserved.
+
+11. Meaningful bounded components are represented.
+
+12. Artifacts have been removed rather than assigned roles.
+
+13. The document description is content-blind.
+
+14. Global themes state the highest-level contribution without enumerating
+    items or roles.
+
+15. Rephrasing or reformatting the document would yield approximately the
+    same items and role assignments.
+
+
+# DECISION ORDER
+
+1. Filter extraction and ingestion artifacts.
+2. Identify candidate substantive, rhetorical, and structural commitments.
+3. Determine governing questions and candidate boundaries.
+4. Use the role vocabulary as a segmentation diagnostic.
+5. Finalize boundaries independently of role convenience.
+6. Write concise, source-independent item content.
+7. Assign one primary role to each item.
+8. Check for omitted components, surviving artifacts, and unnecessary
+   `Other` assignments.
+9. Infer the content-blind document description.
+10. Derive global themes.
+11. Apply all self-checks and revise.
+
+
+# OUTPUT FORMAT
+
+Return only valid JSON with no Markdown, commentary, or additional fields:
+
+{
+  "format": "{{FORMAT}}",
+  "document_description": "<content-blind, source-independent description of the document type, venue, audience, and register>",
+  "global_themes": [
+    "<one source-independent substantive sentence per global theme>"
+  ],
+  "items": [
+    {
+      "id": 1,
+      "content": "<source-independent statement of one substantive, rhetorical, or structural commitment>",
+      "verbatim": false,
+      "role_name": "<exact supplied role name or Other>"
+    }
+  ]
+}
+
+Requirements:
+
+- `format` must be exactly `"{{FORMAT}}"`.
+- `document_description` must be one non-empty string describing document
+  type rather than topic or content.
+- `global_themes` must be an array of non-empty strings.
+- `items` must be a non-empty array in document order.
+- Item IDs must be consecutive integers beginning with 1.
+- Every item must contain exactly `id`, `content`, `verbatim`, and
+  `role_name`.
+- `content` must not exceed 60 words.
+- `verbatim` must be a JSON boolean.
+- `role_name` must exactly match a supplied role name or `Other`.
+- Do not return empty or placeholder fields.
+
+
+# INPUT FORMAT
+
+<document>
+[DOCUMENT TO ANALYZE]
+</document>

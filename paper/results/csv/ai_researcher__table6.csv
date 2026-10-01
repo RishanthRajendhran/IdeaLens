@@ -1,0 +1,11 @@
+Arm,Description,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+model_idea,"proposals from model ideas (model_idea, model_idea_reranked)",49,98.0,100.0,100.0,77.6,98.0,100.0,95.9,98.0,100.0
+model_idea_reranked,"proposals from model ideas (model_idea, model_idea_reranked)",48,93.8,100.0,100.0,81.2,100.0,100.0,91.7,95.8,100.0
+expert_idea,proposals from expert ideas,48,10.4,12.5,14.6,14.6,16.7,18.8,25.0,8.3,12.5
+execution_review_of_ai,reviews (all),93,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+execution_review_of_human,reviews (all),84,0.0,0.0,0.0,0.0,0.0,1.2,0.0,1.2,0.0
+ideation_review_of_ai,reviews (all),102,3.9,3.9,3.9,7.8,4.9,5.9,4.9,3.9,5.9
+ideation_review_of_ai_rerank,reviews (all),108,3.7,3.7,3.7,7.4,3.7,5.6,6.5,4.6,3.7
+ideation_review_of_human,reviews (all),117,4.3,2.6,2.6,3.4,2.6,4.3,3.4,6.0,1.7
+paper_from_expert_idea,papers from an expert idea,19,5.3,10.5,10.5,10.5,15.8,31.6,0.0,0.0,5.3
+paper_from_model_idea,papers from a model idea,24,29.2,25.0,20.8,33.3,29.2,37.5,0.0,0.0,8.3

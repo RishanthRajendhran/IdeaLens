@@ -1,0 +1,50 @@
+extends: _base.yaml
+name: "Can LLMs Produce Novel Research Ideas? — execution study"
+number: 27
+group: Idea provenance
+asks: >
+  A researcher spent weeks executing an idea that came from either an expert or a
+  model, then wrote the paper themselves. Whose paper is it?
+metric: fire
+positive: mixed
+upstream: >
+  Si, Yang & Hashimoto, execution half: 43 full papers, each written by a human
+  researcher who implemented an idea drawn from either the expert or the model
+  condition of the ideation study.
+data_dir: test27_research_ideas_execution
+legacy_item_stem: airesearch2   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: not_run   # STAGE 2 HAS NOT BEEN RUN ON THIS SET. Scores come
+                         # from UNTREATED outlines: an upper bound that partly
+                         # measures wording lifted from the source, and not
+                         # comparable with the de-leaked sets until it runs.
+                         # Fix with: scripts/pipeline/run_pipeline.py --stage 2
+
+arms:
+  - {id: expert_idea, source: human, detail: "human idea, human execution and prose"}
+  - {id: model_idea, source: ai, detail: "MODEL IDEA IN A PERSON'S PROSE, at full paper length"}
+
+report:
+  rung_caption: "every paper was written by a person; only the idea's origin differs"
+  metric: fire
+  group_by: [arm]
+  baselines: [pangram_4]
+
+notes: >
+  THE SCARCEST CELL IN THE WHOLE SUITE, filled with real data. Model ideas in a
+  person's prose is the cell AI-use policy actually worries about, and almost
+  nothing in the literature contains it: our other sources for it are post-edit
+  settings, where a model drafted and a person revised, plus a set of ~141-word
+  stories. Here a person did the work and the writing over weeks, at full paper
+  length, and only the idea came from the model.
+
+  It is also the cell a surface detector cannot see at all: the prose is entirely
+  human, so a surface reader should return human on both arms, correctly for one
+  and incorrectly for the other. That makes it the mirror image of Test 26.
+
+  CONDITION IS ASSIGNED BY MATCHING each executed paper's title against the three
+  idea archives, which reproduces the study's own 24 AI / 19 human split exactly
+  — not by elimination, which would have silently absorbed every failed match
+  into one arm.
+
+  n = 43. Report it with the n printed; no threshold may be fitted on this set.

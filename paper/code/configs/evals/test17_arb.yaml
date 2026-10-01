@@ -1,0 +1,31 @@
+extends: _base.yaml
+name: ARB — content and surface origin labelled separately
+number: 17
+group: Idea provenance
+asks: The one external benchmark that labels whose ideas and whose prose independently.
+metric: fire
+positive: mixed
+upstream: Adversarial Paraphrasing benchmark (ARB), which carries `content_origin` and `surface_origin` as separate ground truth.
+data_dir: test17_arb
+legacy_item_stem: arb   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: not_run   # STAGE 2 HAS NOT BEEN RUN ON THIS SET. Scores come
+                         # from UNTREATED outlines: an upper bound that partly
+                         # measures wording lifted from the source, and not
+                         # comparable with the de-leaked sets until it runs.
+                         # Fix with: scripts/pipeline/run_pipeline.py --stage 2
+report:
+  metric: fire
+  group_by: [arm]
+notes: >
+  y follows CONTENT origin — the idea-level rule — and surface origin rides along
+  as metadata, which is exactly what the quadrant figure needs.
+
+  The human-ideas/model-prose arm is labelled HUMAN by our rule, so its fire rate
+  is an ERROR RATE and not a detection rate. ARB contains no document at all in
+  the model-ideas/human-prose cell, which is why Tests 27 and 30 exist.
+caveats:
+  - >
+    THE DE-LEAK PARAPHRASE HAS NOT BEEN RUN ON THIS SET. Current numbers are over
+    UNTREATED outlines: an upper bound that partly measures wording lifted from
+    the source, and NOT comparable with the de-leaked benchmarks until it runs.

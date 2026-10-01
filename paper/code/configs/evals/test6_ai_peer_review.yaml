@@ -1,0 +1,40 @@
+extends: _base.yaml
+name: AI in peer review (Saha benchmark)
+number: 6
+group: Idea provenance
+asks: >
+  Reviews written by AI, written by humans, and human reviews reworded by AI.
+positive: mixed
+upstream: >
+  rounaksaha12/ai-in-peer-review (arXiv 2603.20450). 48,156 reviews: 3,499 human
+  + 18,122 easy AI + 26,535 hard AI. Humans are pre-ChatGPT PeerRead. Easy subset
+  is GPT-4o and Llama-3.3-70B; hard is 158 papers across five models. Humanizer
+  is a commercial tool applied to two of the levels.
+data_dir: test6_ai_peer_review
+legacy_item_stem: aipr   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+legacy_npz_stem: aipr   # the stem this eval's predictions were written under
+                        # before this repository existed; read by
+                        # scripts/data/import_results.py
+
+levels: [AI-BP, AI-EP, AI-HI, H-AI, H]
+
+report:
+  group_by: [level, subset, humanized]
+  in_set: true
+  # No baseline RUNS needed: their Table 2 and the Pangram 4 report already
+  # publish LogLikelihood, Fast-DetectGPT, Binoculars, GPTZero and three Pangram
+  # versions on all five splits. Cite them.
+  baselines: []
+  # Adopt THEIR verdict mapping so we are held to their standard, not a laxer
+  # one: their scheme has a Mixed class we lack. On AI-* splits Mixed counts as
+  # detection; on H-AI only a clean AI verdict is a false positive; on pure human
+  # both AI and Mixed count.
+  verdict_mapping: saha
+
+notes: >
+  H-AI is the row where an idea-level detector can plausibly beat a saturated
+  surface detector on its own metric with no reframing. Report all five columns
+  so it is not cherry-picked. Check whether the release carries a pre/post
+  humanization linking id: without one, the published "drop" is a between-groups
+  difference, not a paired delta.

@@ -1,0 +1,14 @@
+extends: item_corpus_labels.yaml
+name: Item-level discovery, detector-score extremes
+label_source: model
+extreme_quantile: 0.10
+score_keys: [nemotron, modernbert]
+require_correct: true
+notes: >
+  Items BOTH item-level detectors call confidently and correctly, cut within each
+  (format, role) cell. Correctness-conditioned deliberately: confident ERRORS are
+  a different and separately interesting question.
+
+  The cut must be within-cell. Median P(human) among human items ranges from about
+  0.38 to about 0.99 across roles, so a global percentile would select roles
+  rather than items and reproduce exactly the confound role matching removes.

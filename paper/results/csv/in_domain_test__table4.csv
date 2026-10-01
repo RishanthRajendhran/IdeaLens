@@ -1,0 +1,47 @@
+Topic,Arm,n,IdeaLens · outline (paraphrased),IdeaLens-ModernBERT-L · outline (paraphrased)
+Art & Design,AI,872,96.8,92.0
+Crime & Law,AI,855,95.3,86.5
+Education & Jobs,AI,"1,062",94.1,81.3
+Entertainment,AI,"1,447",95.7,89.3
+Fashion & Beauty,AI,"1,044",97.7,90.5
+Finance & Business,AI,"1,645",94.7,81.9
+Food & Dining,AI,879,97.3,90.1
+Games,AI,"1,216",94.9,82.4
+Hardware,AI,761,97.2,90.3
+Health,AI,"1,368",93.9,80.3
+History,AI,650,97.8,94.3
+Home & Hobbies,AI,"1,105",95.6,85.7
+Industrial,AI,691,95.4,84.5
+Literature,AI,"1,994",97.2,91.3
+Politics,AI,864,95.7,87.5
+Religion,AI,"1,085",95.6,85.3
+Science & Tech.,AI,"1,110",95.5,85.9
+Social Life,AI,"1,340",95.5,85.4
+Software,AI,739,96.1,84.2
+Software Dev.,AI,666,94.1,80.5
+Sports & Fitness,AI,"1,201",96.7,92.1
+Transportation,AI,771,97.0,89.6
+Travel,AI,930,95.9,91.4
+Art & Design,human,966,2.1,2.1
+Crime & Law,human,"1,092",2.5,1.9
+Education & Jobs,human,"1,082",3.0,1.6
+Entertainment,human,"1,249",2.5,2.1
+Fashion & Beauty,human,822,2.4,2.8
+Finance & Business,human,"1,403",3.1,1.9
+Food & Dining,human,812,2.5,1.7
+Games,human,"1,227",3.7,1.7
+Hardware,human,705,2.8,1.7
+Health,human,"1,494",2.8,2.1
+History,human,"1,068",0.4,0.5
+Home & Hobbies,human,"1,058",3.9,2.9
+Industrial,human,681,3.2,2.1
+Literature,human,"1,135",0.6,0.9
+Politics,human,"1,304",0.7,0.6
+Religion,human,"1,409",2.4,1.6
+Science & Tech.,human,"1,161",3.9,3.1
+Social Life,human,"1,027",2.6,2.7
+Software,human,768,5.3,3.9
+Software Dev.,human,883,1.6,1.6
+Sports & Fitness,human,"1,206",2.3,2.6
+Transportation,human,923,2.8,2.8
+Travel,human,"1,099",2.7,2.6

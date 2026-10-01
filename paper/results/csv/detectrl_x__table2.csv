@@ -1,0 +1,11 @@
+Arm · length,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+English · ai_none · < 500,model ideas (TPR),"5,984",85.5,98.2,100.0,62.4,82.0,97.0,95.4,22.5,99.7
+English · ai_none · >= 500,model ideas (TPR),"1,467",94.9,100.0,100.0,87.5,98.8,100.0,83.0,40.9,99.9
+English · ai_adversarial · < 500,model ideas (TPR),"4,016",80.8,92.2,96.3,57.7,70.4,89.4,83.8,14.1,97.4
+English · ai_adversarial · >= 500,model ideas (TPR),"1,280",93.0,95.7,99.5,85.3,90.8,95.5,85.3,38.4,99.5
+English · human · < 500,human ideas (FPR),"5,895",5.7,5.0,13.6,2.6,1.3,7.4,1.2,13.8,4.0
+English · human · >= 500,human ideas (FPR),"1,274",0.5,0.2,0.3,1.0,0.0,0.2,0.0,0.1,0.0
+non-English · ai_none · < 500,model ideas (TPR),"5,290",84.3,94.4,99.8,70.1,–,–,81.7,2.0,98.3
+non-English · ai_none · >= 500,model ideas (TPR),"1,575",95.2,99.9,100.0,83.7,–,–,47.0,10.6,98.9
+non-English · human · < 500,human ideas (FPR),"4,928",0.2,0.0,0.1,0.3,–,–,0.0,0.0,0.0
+non-English · human · >= 500,human ideas (FPR),"1,666",0.3,0.1,0.4,0.3,–,–,0.1,0.0,0.0

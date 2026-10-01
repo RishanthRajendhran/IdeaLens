@@ -1,0 +1,49 @@
+Arm,Model,0.1%,0.5%,2%,5%
+synthetic_reviews,IdeaLens · outline,20.7 / –,50.1 / 64.5,80.3 / 90.0,93.1 / 96.2
+synthetic_reviews,IdeaLens · document,43.7 / –,72.1 / 94.6,96.5 / 99.0,99.5 / 99.6
+synthetic_reviews,ProseLens,95.2 / –,97.7 / 99.2,99.6 / 100.0,100.0 / 100.0
+synthetic_reviews,IdeaLens-ModernBERT-L · outline,18.5 / –,44.9 / 52.0,76.2 / 87.8,95.2 / 98.5
+synthetic_reviews,IdeaLens-ModernBERT-L · document,25.9 / –,51.1 / 85.2,93.4 / 100.0,100.0 / 100.0
+synthetic_reviews,ProseLens-ModernBERT-L,64.4 / –,93.1 / 98.0,99.0 / 99.9,100.0 / 100.0
+synthetic_reviews,EditLens-Llama-3B (cal.),0.0 / –,4.0 / 73.1,87.1 / 99.1,99.7 / 99.9
+synthetic_reviews,Binoculars (cal.),11.8 / –,15.2 / 19.8,23.2 / 31.0,33.3 / 37.7
+rewritten,IdeaLens · outline,1.2 / –,5.2 / 8.5,13.4 / 23.7,24.7 / 34.7
+rewritten,IdeaLens · document,2.3 / –,5.3 / 17.9,20.1 / 37.9,40.9 / 52.9
+rewritten,ProseLens,46.9 / –,64.9 / 86.7,90.5 / 96.3,97.1 / 97.7
+rewritten,IdeaLens-ModernBERT-L · outline,1.7 / –,6.5 / 10.0,21.7 / 33.4,47.4 / 60.4
+rewritten,IdeaLens-ModernBERT-L · document,3.4 / –,9.1 / 25.5,36.0 / 76.0,82.0 / 92.3
+rewritten,ProseLens-ModernBERT-L,28.0 / –,54.7 / 79.6,87.0 / 96.5,97.1 / 97.7
+rewritten,EditLens-Llama-3B (cal.),0.0 / –,21.6 / 75.0,86.3 / 97.7,98.2 / 98.3
+rewritten,Binoculars (cal.),1.7 / –,4.9 / 10.7,13.3 / 18.9,21.3 / 28.1
+extract_regenerate,IdeaLens · outline,20.2 / –,49.9 / 65.0,74.4 / 84.0,85.1 / 88.5
+extract_regenerate,IdeaLens · document,55.9 / –,74.0 / 87.8,88.7 / 90.9,90.9 / 91.1
+extract_regenerate,ProseLens,87.6 / –,90.5 / 90.8,90.9 / 90.9,90.9 / 90.9
+extract_regenerate,IdeaLens-ModernBERT-L · outline,35.3 / –,63.0 / 70.7,83.3 / 87.7,90.1 / 91.9
+extract_regenerate,IdeaLens-ModernBERT-L · document,64.4 / –,80.5 / 89.0,90.3 / 92.0,92.9 / 94.9
+extract_regenerate,ProseLens-ModernBERT-L,85.6 / –,90.0 / 90.8,90.9 / 91.2,91.4 / 92.3
+extract_regenerate,EditLens-Llama-3B (cal.),0.0 / –,66.2 / 89.2,90.8 / 91.9,92.1 / 92.7
+extract_regenerate,Binoculars (cal.),9.7 / –,16.9 / 34.3,41.3 / 55.3,58.2 / 65.4
+human,IdeaLens · outline,0.6 / –,0.9 / 1.3,1.9 / 3.3,4.3 / 7.3
+human,IdeaLens · document,0.4 / –,0.9 / 2.8,3.0 / 3.6,4.0 / 5.2
+human,ProseLens,1.5 / –,2.4 / 3.4,3.9 / 4.9,5.4 / 7.0
+human,IdeaLens-ModernBERT-L · outline,0.4 / –,1.6 / 2.2,5.1 / 9.5,20.1 / 29.2
+human,IdeaLens-ModernBERT-L · document,1.0 / –,1.6 / 4.0,5.1 / 33.1,47.2 / 69.0
+human,ProseLens-ModernBERT-L,1.0 / –,1.8 / 2.8,3.9 / 9.5,13.7 / 29.1
+human,EditLens-Llama-3B (cal.),0.0 / –,0.0 / 3.6,7.9 / 20.9,25.9 / 34.4
+human,Binoculars (cal.),0.4 / –,0.9 / 2.5,4.0 / 6.9,8.3 / 10.7
+expanded,IdeaLens · outline,6.4 / –,18.0 / 26.4,35.3 / 46.9,49.1 / 56.0
+expanded,IdeaLens · document,25.9 / –,38.9 / 56.6,59.1 / 66.4,66.7 / 68.3
+expanded,ProseLens,52.4 / –,57.6 / 64.3,65.1 / 68.2,69.3 / 70.1
+expanded,IdeaLens-ModernBERT-L · outline,5.4 / –,14.9 / 19.3,33.7 / 44.3,54.6 / 62.9
+expanded,IdeaLens-ModernBERT-L · document,14.7 / –,24.2 / 40.4,46.7 / 69.4,76.5 / 85.6
+expanded,ProseLens-ModernBERT-L,42.6 / –,53.3 / 61.6,64.3 / 69.9,71.3 / 76.6
+expanded,EditLens-Llama-3B (cal.),0.0 / –,5.0 / 41.4,54.8 / 73.0,76.6 / 79.6
+expanded,Binoculars (cal.),3.9 / –,8.3 / 13.7,16.0 / 22.7,25.7 / 32.3
+hybrid,IdeaLens · outline,22.5 / –,40.2 / 50.1,60.4 / 70.8,71.9 / 77.1
+hybrid,IdeaLens · document,46.1 / –,59.5 / 74.6,75.9 / 80.9,80.9 / 82.2
+hybrid,ProseLens,71.5 / –,76.6 / 80.4,80.5 / 81.9,82.3 / 82.4
+hybrid,IdeaLens-ModernBERT-L · outline,19.1 / –,38.8 / 44.0,61.0 / 68.1,75.3 / 80.5
+hybrid,IdeaLens-ModernBERT-L · document,35.8 / –,50.5 / 66.7,71.9 / 85.7,87.2 / 92.8
+hybrid,ProseLens-ModernBERT-L,59.6 / –,70.8 / 78.5,80.0 / 83.1,83.8 / 86.4
+hybrid,EditLens-Llama-3B (cal.),0.0 / –,18.9 / 56.7,72.2 / 83.7,85.7 / 87.0
+hybrid,Binoculars (cal.),5.9 / –,11.4 / 15.4,16.5 / 20.4,22.6 / 27.9

@@ -1,0 +1,1651 @@
+{
+ "format_slug": "personal_about_page",
+ "n_roles": 62,
+ "source": "role discovery, consolidation pass (role_consolidation_xhigh.json)",
+ "final_roles": [
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the page's clearest concise answer to who the person is.",
+   "definition": "An item that establishes the person at a glance through a concise self-characterization or profile-level introduction.",
+   "distinguished_from": "Unlike Biographical Context, it directly identifies the person rather than supplying extended history, circumstances, or formative background.",
+   "examples": [
+    {
+     "doc": "ai:88945ddf938cebc7c033f3ae80f1fda7e96ea70311c72cd1ad0b01a97fe27c06",
+     "excerpt": "Tamara Gielen, founder of The Hybrid Advantage, introduces herself as a guide with more than 25 years of experience translating complex and emerging technology into useful business value.",
+     "item_id": 6
+    },
+    {
+     "doc": "ai:905cb8966fd59326db7f04da6b292694395edfb032869616684c97ba71cc7948",
+     "excerpt": "An opening welcome identifies Ioanna Georgiou as a mathematics educator, author, and artist, introduces YoaYeo as a phonetic rendering of her name, and explains that the ΙΓ logo uses her initials in Greek.",
+     "item_id": 1
+    }
+   ],
+   "name": "Identity Introduction",
+   "subsumes": [
+    "B01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is to situate the person through relevant personal history, circumstances, visibility, or formative influences without developing a connected journey.",
+   "definition": "An item that supplies static life history, origins, education, relationships, public circumstances, or shaping influences that situate the person.",
+   "distinguished_from": "Unlike Life Narrative, it provides contextual facts or influences rather than tracing a temporally or causally connected personal development.",
+   "examples": [
+    {
+     "doc": "human:773bf6623c8b2b382fd38bbb2a3b45757c06aed4c331433fd8380ad37852cf3b",
+     "excerpt": "Jobanputra was born in Ahmedabad, received his primary education there, and earned a B.Com Honors degree from City C. U. Shah Commerce College.",
+     "item_id": 8
+    },
+    {
+     "doc": "ai:52ade401be6e2ad224fa4b11a81279837d2255e2bdea5c80a6b20655adcaef33",
+     "excerpt": "Scott’s own media presence is largely confined to church sermons, midweek broadcasts, and occasional special messages, reflecting consistent pastoral work rather than cultivation of a personal public brand.",
+     "item_id": 9
+    },
+    {
+     "doc": "ai:ffdb2f1905e44d209da618847b6e67015cf55b288dad4896bd2f141a2284dec9",
+     "excerpt": "Three major influences shaped his approach: J.R.R. Tolkien demonstrated fantasy’s mythic scale and moral seriousness, Louis L’Amour supplied frontier toughness and stoic personal codes, and Stan Lee modeled powerful heroes humanized by doubt and private struggle.",
+     "item_id": 11
+    }
+   ],
+   "name": "Biographical Context",
+   "subsumes": [
+    "B02",
+    "I-ai:52ade401be6e2ad224fa4b11a81279837d2255e2bdea5c80a6b20655adcaef33-01",
+    "I-ai:ffdb2f1905e44d209da618847b6e67015cf55b288dad4896bd2f141a2284dec9-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily uses connected experiences, transitions, or turning points to explain how the person developed or arrived at the present.",
+   "definition": "An item that narrates connected experiences, transitions, or formative moments to explain the person's development.",
+   "distinguished_from": "Unlike Biographical Context or Experience Highlight, it derives its function from developmental progression rather than static facts or a standalone episode.",
+   "examples": [
+    {
+     "doc": "ai:e206363cf1a94e539974f24e1079a0567b91ec78e389bf6095f6d70898646f8a",
+     "excerpt": "Leaving an established engineering career required overcoming accumulated effort, social expectations, uncertainty, and fear of failure, but the decision produced increasing clarity and confidence and represented a deliberate choice of happiness, inner peace, and authenticity.",
+     "item_id": 6
+    },
+    {
+     "doc": "ai:220679322999343e2835cc90a3947b2f8920a84ffcdc1e29a8baca3e945ed764",
+     "excerpt": "Kardashian expanded beyond television through KKW Beauty, KKW Fragrance, and SKIMS, whose valuation exceeded $4 billion; she used a vast social-media audience, direct consumer engagement, fashion collaborations, magazine exposure, and deliberate personal branding to become a prominent business and pop-culture figure.",
+     "item_id": 3
+    }
+   ],
+   "name": "Life Narrative",
+   "subsumes": [
+    "B03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a discrete memorable episode or curated set of experiences included to preserve or make tangible the texture of lived experience.",
+   "definition": "An item that recounts or depicts a bounded memorable experience chiefly for its personal significance, vividness, or experiential range.",
+   "distinguished_from": "Unlike Life Narrative, it presents a standalone memory or highlight rather than a connected developmental journey, and unlike Explanatory Illustration it need not clarify an abstract claim.",
+   "examples": [
+    {
+     "doc": "human:1a9b6017057d7b7ceb56347a3684fc1dd9fdee168f73ce98a172f9684b4529da",
+     "excerpt": "On March 23, 2025, Roger J recalls childhood visits to the Galbraith Road location in Cincinnati’s Finneytown neighborhood, which his family called “The Man-in-the-Moon” after its smiling-bun sign; its cheeseburgers, tangy sauce, and outdoor meals remained unmatched after the restaurant closed in the late 1960s.",
+     "item_id": 10
+    },
+    {
+     "doc": "human:0ab75bbf88c291d352858f994e7a609559e86697d326cec151bff116753af4df",
+     "excerpt": "A project visit in Mexico was memorable for its Sierra setting, local culture and food, and exploration of old workings, illustrating how mining provides access to places and cultural experiences outside conventional tourism.",
+     "item_id": 8
+    },
+    {
+     "doc": "human:7dded3f47815c77a2b78aec5282f26afadf02ca3828a7db3ec8ce41b4ff66466",
+     "excerpt": "Memorable experiences include guiding a blind man through Berlin, volunteering in Kenya on her first major trip, becoming lost on horseback at night in the Kyrgyz mountains, and humorously treating waking up today as another achievement.",
+     "item_id": 10
+    }
+   ],
+   "name": "Experience Highlight",
+   "subsumes": [
+    "I-human:1a9b6017057d7b7ceb56347a3684fc1dd9fdee168f73ce98a172f9684b4529da-01",
+    "I-human:0ab75bbf88c291d352858f994e7a609559e86697d326cec151bff116753af4df-01",
+    "I-human:34e9931669e9add38f7b8b56b45da08b76aa55903cae4f13532f7e5d6008f031-01",
+    "I-human:5d5c9d7f5f9fc976c79e5a43fd143389d7af2cec1d9674b7d12bbb88de998f18-02",
+    "I-human:7dded3f47815c77a2b78aec5282f26afadf02ca3828a7db3ec8ce41b4ff66466-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary contribution is a focused account of the person's bodily characteristics or visible presentation.",
+   "definition": "An item that describes the person's physical appearance, measurements, bodily attributes, dress, or visible presentation as profile information.",
+   "distinguished_from": "Unlike Identity Introduction or Character Portrayal, it communicates how the person looks rather than who they are overall or what their personality is like.",
+   "examples": [
+    {
+     "doc": "human:15604e55518178d264ce833ad4e50019b29c1354ea33273ccb0bde0f9c972016",
+     "excerpt": "A compact physical-profile display lists Hadid’s weight as 58 kilograms or 128 pounds, measurements as 35-25-35, blonde hair, and hazel-blue-green eyes.",
+     "item_id": 29
+    },
+    {
+     "doc": "ai:18a9ef8610847ae3a3309a9256120b3bed2725d91223da9278860a734c0afa73",
+     "excerpt": "Although described as being in his late thirties, Mowry retains a youthful screen presence marked by a medium build, expressive eyes, a bright smile, approachability, and modern style, supporting his evolution from child roles to confident adult characters.",
+     "item_id": 4
+    },
+    {
+     "doc": "ai:24c6c190556c9c89404a1598ab066379c5047b67fab3261c1268908df307410d",
+     "excerpt": "Sidora is described as 5 feet 7 inches (170 cm) tall and 66 kg (145.5 lbs), with measurements of 42-34-52 inches, black hair, and deep brown eyes; her balanced, elegant appearance is linked to her success as a fashion model and Instagram personality.",
+     "item_id": 6
+    }
+   ],
+   "name": "Physical Profile",
+   "subsumes": [
+    "I-human:15604e55518178d264ce833ad4e50019b29c1354ea33273ccb0bde0f9c972016-01",
+    "I-ai:18a9ef8610847ae3a3309a9256120b3bed2725d91223da9278860a734c0afa73-02",
+    "I-ai:20dafba716d30194d0eb99475540b0f7948fc5b6687498a4c57a079bf3851d31-01",
+    "I-ai:24c6c190556c9c89404a1598ab066379c5047b67fab3261c1268908df307410d-01",
+    "I-ai:d92e84bfb898c839604d9abc6a6fa393ee7484a38da71113220846a42f45e8b3-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the principal portrayal of a personally significant figure other than the page owner.",
+   "definition": "An item that profiles the identity, history, status, qualities, lineage, or accomplishments of a person, animal, or other figure closely associated with the page owner.",
+   "distinguished_from": "Unlike Biographical Context, it primarily portrays the associated figure rather than using that figure merely to situate the page owner.",
+   "examples": [
+    {
+     "doc": "human:5d5c9d7f5f9fc976c79e5a43fd143389d7af2cec1d9674b7d12bbb88de998f18",
+     "excerpt": "Responding to Henk’s praise, Magic’s breeder identifies her as an August 1989 homebred female combining old Draherin and predominantly Thenderin ancestry; after surviving bloat and torsion surgery at 7½, she remained the household’s senior matriarch until her death in January 2003 at 13½.",
+     "item_id": 11
+    }
+   ],
+   "name": "Associated Profile",
+   "subsumes": [
+    "I-human:5d5c9d7f5f9fc976c79e5a43fd143389d7af2cec1d9674b7d12bbb88de998f18-03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is to help readers understand what the person is like rather than what they do, believe, enjoy, or have achieved.",
+   "definition": "An item that conveys the person's personality, temperament, habits, quirks, or characteristic ways of relating to the world.",
+   "distinguished_from": "Unlike Interests Profile or Values Statement, it portrays character rather than preferred activities or guiding convictions.",
+   "examples": [
+    {
+     "doc": "human:73d32bc683b7687ff79ad98a8649f83fc3e19061cbbd1f61e2b7dcd1b4cb432f",
+     "excerpt": "He characterizes himself as attentive, treating listening, observation, questions, experience, and small details as means of becoming more receptive and versatile, reinforced by John Wooden’s quotation, “It's the little details that are vital. Little things make big things happen”.",
+     "item_id": 17
+    },
+    {
+     "doc": "ai:3d11977bca2b1d063675488cb2d8208c131bbc88dce2b56fbde38b935ad8bceb",
+     "excerpt": "The profile closes with a playful endorsement of Carpenter as a versatile teammate capable of clarifying complex strategy, organizing recreational competition, and excelling at crossword challenges.",
+     "item_id": 11
+    }
+   ],
+   "name": "Character Portrayal",
+   "subsumes": [
+    "B10"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item is mainly included to reveal what the person enjoys, follows, studies, collects, or does for personal interest.",
+   "definition": "An item that identifies the person's hobbies, tastes, enthusiasms, preferences, or recurring areas of curiosity.",
+   "distinguished_from": "Unlike Current Pursuits, it profiles affinities and enjoyment rather than active responsibilities or productive commitments.",
+   "examples": [
+    {
+     "doc": "ai:da09bc29a42846bd86d35d8ea5e42c2bccaf5636c696a5301ad12e9fae666500",
+     "excerpt": "Hawks regulates herself through trail running and finds restorative connection in making pasta with family, spending time with the family’s golden retriever, and reading; these experiences illustrate how sensory grounding can provide meaningful connection amid overwhelm.",
+     "item_id": 5
+    },
+    {
+     "doc": "ai:fe3e884844c597cc7edc0e7e0dc48ef4c1c6778c15ce0fd98afc2cbce3303552",
+     "excerpt": "His two published novels, interest in Afro-Latin dance, and ability to connect people across cultures complement his professional commitment to inclusive leadership and collaboration in diverse settings.",
+     "item_id": 4
+    }
+   ],
+   "name": "Interests Profile",
+   "subsumes": [
+    "B09"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an explicit account of the principles or convictions that guide the person's choices.",
+   "definition": "An item that states the person's guiding principles, convictions, ethical commitments, or worldview.",
+   "distinguished_from": "Unlike Motivation, it identifies what the person regards as important or right rather than explaining the impetus behind a pursuit.",
+   "examples": [
+    {
+     "doc": "ai:e317b2ba7c126ae2735276a2b4707d5587f2460be425491412d0cd5a6d43512a",
+     "excerpt": "Influence does not require being the loudest voice; thoughtful, quiet, and empathetic leaders can succeed when their message is clear.",
+     "item_id": 13
+    },
+    {
+     "doc": "ai:494c700ef7b47d2a299c8f91f848d023e869ed5aa2b74c546a6bf4a892c37152",
+     "excerpt": "Dahl maintains that meaningful growth begins with slowing down, listening carefully, and deliberately choosing the next direction.",
+     "item_id": 5
+    }
+   ],
+   "name": "Values Statement",
+   "subsumes": [
+    "B11"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly explains why the person began or maintains a pursuit or how precipitating circumstances and early choices brought that pursuit into being.",
+   "definition": "An item that explains the personal reasons, aspirations, needs, or formative circumstances driving a pursuit, commitment, or project.",
+   "distinguished_from": "Unlike Problem Framing, it centers the person's impetus or the pursuit's genesis rather than an external need, and unlike Life Narrative it need not trace broader personal development.",
+   "examples": [
+    {
+     "doc": "human:d0191ee6f0613a10945736333fe1bf7d2ad2980695170eed2965a67b16397f15",
+     "excerpt": "Parenting three young children leads Ashley to favor low-effort recipes, few dishes, and manageable ingredient lists for readers who likewise lack time for elaborate cooking.",
+     "item_id": 13
+    },
+    {
+     "doc": "human:64af96e482ddcf0f9422f0ea545e77017fb58d120e96414ba012b79e9b9184de",
+     "excerpt": "Epyrus was conceived around March or April 2022 when the author saw a need for another UXP-based email client but encountered obstacles to reviving Fossamail; the project was briefly codenamed Mercurius Civicus, then Hermopolis, before receiving its final name.",
+     "item_id": 1
+    }
+   ],
+   "name": "Motivation",
+   "subsumes": [
+    "B12",
+    "I-human:64af96e482ddcf0f9422f0ea545e77017fb58d120e96414ba012b79e9b9184de-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would obscure what the person is presently doing or actively engaged in.",
+   "definition": "An item that describes the person's current work, activities, responsibilities, projects, or ongoing commitments.",
+   "distinguished_from": "Unlike Capabilities Profile or Future Direction, it reports present activity rather than general ability or intended later action.",
+   "examples": [
+    {
+     "doc": "ai:c11edf1b3c2125bde0097121074d5608b03bc44ace5b4d7c2ec013ccd94d6551",
+     "excerpt": "John Derbyshire has served as Product Lead at hubii AS since its August 2017 ICO, applying systems design to technological solutions that address practical requirements and social considerations.",
+     "item_id": 1
+    },
+    {
+     "doc": "ai:739e6c7f53e7d07883608a36bda0c95a4ec21101529ca59284cb550cfe788f18",
+     "excerpt": "Huang’s research program develops self-healing polymers, low-dielectric materials, smart anti-icing and anticorrosion coatings, recyclable dynamic-bond networks, and gas-liquid fabrication methods for water-treatment nanomaterials, combining experiments and computational modeling to improve strength, impact resistance, thermal stability, durability, hydrophobicity, and environmental performance.",
+     "item_id": 4
+    }
+   ],
+   "name": "Current Pursuits",
+   "subsumes": [
+    "B04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily communicates what the person hopes, intends, or plans to pursue later.",
+   "definition": "An item that states the person's future goals, ambitions, intended developments, or desired directions.",
+   "distinguished_from": "Unlike Current Pursuits or Field Outlook, it concerns the person's intended activity rather than work already underway or forecasts about an external environment.",
+   "examples": [
+    {
+     "doc": "ai:41a68fb4542c820218726a62ce47f469ee8d7c4a9e2fae56cd60f64e73d8f8a3",
+     "excerpt": "Planned doctoral research will study cultural competency and inform technology-supported, culturally sensitive therapeutic programs; after graduation, the applicant intends to develop support initiatives and accessible digital resources with international organizations.",
+     "item_id": 30
+    },
+    {
+     "doc": "ai:f3c9097fd46dcdec35b3776a903692fe38bfbe35646a65eb178f13151feb4b86",
+     "excerpt": "Possible future directions include general gaming, real-world commentary, and greater activity on TikTok, Twitch, or podcasts, though these developments remain speculative.",
+     "item_id": 21
+    }
+   ],
+   "name": "Future Direction",
+   "subsumes": [
+    "B13"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main function is to communicate what the person can competently do regardless of whether those abilities are currently being exercised.",
+   "definition": "An item that presents the person's skills, expertise, specialties, or practical capacities.",
+   "distinguished_from": "Unlike Credibility Support, it states abilities themselves rather than the evidence or assurances offered to validate them.",
+   "examples": [
+    {
+     "doc": "human:d0191ee6f0613a10945736333fe1bf7d2ad2980695170eed2965a67b16397f15",
+     "excerpt": "Drawing on decades of experience, Ashley specializes in uncomplicated comfort food for families, including quick stovetop dinners, slow-cooker meals, soups, baked pasta, casseroles, and desserts.",
+     "item_id": 4
+    },
+    {
+     "doc": "human:2011604a1035b55715cee3352d54dd65c2df8838bd24f05d2b2a2cb2be938ac3",
+     "excerpt": "Drawing on 20 years in the industry, Markoski characterizes efficient, timely problem-solving as both the essence of his work and a personal strength.",
+     "item_id": 3
+    }
+   ],
+   "name": "Capabilities Profile",
+   "subsumes": [
+    "B05"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary purpose is to make the person's competence, authority, reliability, or standing more believable through evidence or explicit assurance.",
+   "definition": "An item that substantiates trust through achievements, qualifications, recognition, affiliations, results, external validation, or commitments to reliable conduct.",
+   "distinguished_from": "Unlike Capabilities Profile, it supplies grounds or assurances for trust, and unlike Comparative Positioning it does not itself make the ultimate case for preference or selection.",
+   "examples": [
+    {
+     "doc": "human:b6d94db6813caacc459de7f05ace0ac4ae39112d19aebb7a055552d15b968b8b",
+     "excerpt": "Taylor supports his qualifications with political, policy, public-sector, and nonprofit experience, including Democratic ward leadership, work for Senator Chris Coons, the German Marshall Fund, the National Defense Industrial Association, the Metropolitan Wilmington Urban League, and Network Delaware’s organizing and issue campaigns.",
+     "item_id": 12
+    },
+    {
+     "doc": "human:00bd7ed4e7c18d6f767e39f1ff3753cc95d424e25769c0bee1d793ddc9a611e4",
+     "excerpt": "A substantial collection of reviews and scholarly endorsements praises JFK for its evidentiary depth, compelling account of Kennedy’s formative years and family dynamics, correction of entrenched myths, nuanced treatment of his character, accessibility, and integration of his life with America’s rise to global power.",
+     "item_id": 7
+    },
+    {
+     "doc": "ai:19276a5eb9bcda49f1630da42d06ab8db4b8a35fe9af30430ecbe91c87730a6a",
+     "excerpt": "THE RPS LLC closes by presenting its own approach as clear, responsible, realistic, and quality-focused, without shortcuts or inflated promises.",
+     "item_id": 18
+    }
+   ],
+   "name": "Credibility Support",
+   "subsumes": [
+    "B07",
+    "I-ai:19276a5eb9bcda49f1630da42d06ab8db4b8a35fe9af30430ecbe91c87730a6a-06"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an account of a consequential action, initiative, service, or institutional contribution made by the person.",
+   "definition": "An item that reports consequential professional, civic, scientific, creative, or institutional work through which the person contributed to a field, organization, or community.",
+   "distinguished_from": "Unlike Current Pursuits, it centers a particular contribution and its consequence rather than present activity generally, and unlike Impact Assessment it reports what the person did rather than primarily what changed because of it.",
+   "examples": [
+    {
+     "doc": "ai:27b5ccde54192091a8f3f795ffc8842136f4e785448a9cbe49acaeffbe0d0bcd",
+     "excerpt": "Bhan spearheaded development of the affordable, widely accessible Rotavac vaccine in response to rotavirus, a major cause of severe diarrhea and thousands of annual deaths among infants and young children.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:eafc2a065323372bd3254147683f20aa351d6d945e0714171a7d6b8dd6f1e72a",
+     "excerpt": "Unable to finish an entry, the commenter answered Lex’s Discord request for titles and is pleased that The Orchard of the Owlfather and other suggestions became distinctive jam works.",
+     "item_id": 5
+    }
+   ],
+   "name": "Contribution Account",
+   "subsumes": [
+    "I-ai:27b5ccde54192091a8f3f795ffc8842136f4e785448a9cbe49acaeffbe0d0bcd-01",
+    "I-human:eafc2a065323372bd3254147683f20aa351d6d945e0714171a7d6b8dd6f1e72a-04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the primary account of how the person's activities have affected other people, communities, practices, institutions, or a field.",
+   "definition": "An item that presents realized or ongoing effects attributable to the person's actions, work, example, or standing.",
+   "distinguished_from": "Unlike Value Proposition, it reports influence already attributed to the person rather than a promised benefit, and unlike Legacy Assessment it need not concern enduring or historical significance.",
+   "examples": [
+    {
+     "doc": "ai:27b5ccde54192091a8f3f795ffc8842136f4e785448a9cbe49acaeffbe0d0bcd",
+     "excerpt": "Collaboration with the World Health Organization and the Bill & Melinda Gates Foundation supported Rotavac’s development and implementation; its later inclusion in India’s Universal Immunization Programme extended protection against dangerous diarrheal disease to millions of children.",
+     "item_id": 4
+    },
+    {
+     "doc": "ai:843379cfae62dd46f0d6e6c97c2af15099a2dfdbb33e03f7763d25f2b4c0ee60",
+     "excerpt": "Medhat’s prominence increased international confidence in Egypt’s startup community and made her a model for women pursuing technology entrepreneurship across the Middle East.",
+     "item_id": 11
+    },
+    {
+     "doc": "ai:92a040c5b18085e66b2bd248f6fc7f7f70e80b82e6cbdc62635bbbf286da0654",
+     "excerpt": "She has helped establish platforms supporting diversity and inclusion, enabling people from varied backgrounds to present their experiences and encouraging industry peers to adopt collaborative, supportive practices.",
+     "item_id": 14
+    }
+   ],
+   "name": "Impact Assessment",
+   "subsumes": [
+    "I-ai:92a040c5b18085e66b2bd248f6fc7f7f70e80b82e6cbdc62635bbbf286da0654-01",
+    "I-ai:27b5ccde54192091a8f3f795ffc8842136f4e785448a9cbe49acaeffbe0d0bcd-02",
+    "I-ai:82dc2062ef1b26f59de9d0be286e1c106994c7dabb126abc939a814d597d2af8-01",
+    "I-ai:843379cfae62dd46f0d6e6c97c2af15099a2dfdbb33e03f7763d25f2b4c0ee60-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary function is to assess the person's enduring influence, historical significance, prospective remembrance, or continuing effect beyond immediate achievements.",
+   "definition": "An item that evaluates the person's lasting significance, broader legacy, posthumous remembrance, or enduring influence on others or a field.",
+   "distinguished_from": "Unlike Impact Assessment, it emphasizes durable or historically framed significance, and unlike Integrative Synthesis it specifically commits to legacy rather than an overall profile takeaway.",
+   "examples": [
+    {
+     "doc": "human:e775178a6ed9aa862a6038841682f6cab48e668c735de1351d84dc89735bfede",
+     "excerpt": "The Ghana Evangelical Society significantly influenced Ghana’s charismatic movement by training leaders and modeling prayer, evangelism, and public engagement.",
+     "item_id": 45
+    },
+    {
+     "doc": "ai:82470322533177496086c2bccccd7d2fe82283c3b5d98bda9d8f1e735cc98fae",
+     "excerpt": "Based in San Francisco and continuing to lead her restaurants, Crenn is characterized as humble and devoted to her craft; her legacy combines artistic cooking, pioneering success for women, sustainability, social justice, and influence on wider debates about equality and environmental responsibility.",
+     "item_id": 7
+    },
+    {
+     "doc": "ai:ffdb2f1905e44d209da618847b6e67015cf55b288dad4896bd2f141a2284dec9",
+     "excerpt": "The David Gemmell Legend Award honored fantasy excellence from 2009 to 2019, while his novels continued influencing writers and readers by bringing moral seriousness, psychological depth, and emotional power to sword-and-sorcery narratives.",
+     "item_id": 15
+    }
+   ],
+   "name": "Legacy Assessment",
+   "subsumes": [
+    "I-human:e775178a6ed9aa862a6038841682f6cab48e668c735de1351d84dc89735bfede-04",
+    "I-ai:82470322533177496086c2bccccd7d2fe82283c3b5d98bda9d8f1e735cc98fae-01",
+    "I-ai:0acc713512036a2fe2a8eb1b12da096412bca8b0f72be7edf0f62417992dbe56-01",
+    "I-ai:badd9ec4b5d92ac0ba1504b04061533056f230b22049ddbfd2d1e036fe7038e2-02",
+    "I-ai:ffdb2f1905e44d209da618847b6e67015cf55b288dad4896bd2f141a2284dec9-03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the principal contribution is exposure to representative creations, projects, performances, or other outputs.",
+   "definition": "An item that presents selected creations, projects, performances, or other outputs to demonstrate the nature and range of the person's work.",
+   "distinguished_from": "Unlike Current Pursuits, it centers produced work, and unlike Interpretation or Credibility Support it showcases output rather than explaining its meaning or using it chiefly as validation.",
+   "examples": [
+    {
+     "doc": "ai:ad6c4713e222f68d750e79c154414995c8cb2d87cdd95beb33aaeb1f858e3737",
+     "excerpt": "The Smackcoders WordPress ecosystem includes dozens of free and paid plugins used by thousands of websites worldwide.",
+     "item_id": 5
+    },
+    {
+     "doc": "human:b95476bb4b8dcb0a15a3f1724ad353bb43943fc955fd08a51cd349b7f8d171cb",
+     "excerpt": "Her European opera career began with Susanna in Le Nozze di Figaro at L’Opéra de Monté Carlo and continued at the Royal Opera, Covent Garden; engagements in Antwerp and Ghent and other productions included Dorinda, Iris, Belinda, Servilia, and Pamina.",
+     "item_id": 2
+    }
+   ],
+   "name": "Work Showcase",
+   "subsumes": [
+    "B08"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the principal explanation of the methods, style, criteria, or operating principles that characteristically govern how the person works.",
+   "definition": "An item that explains the characteristic methods, style, decision criteria, or working principles through which the person conducts a professional, creative, technical, or personal practice.",
+   "distinguished_from": "Unlike Capabilities Profile or Current Pursuits, it explains how the person operates rather than what they can do or are presently doing, and unlike Process Description it characterizes a recurring approach rather than one bounded procedure.",
+   "examples": [
+    {
+     "doc": "human:51e10fc79a2004374e14dd2f02125439bd866c7b466ce4bc80ac5e42948eabbe",
+     "excerpt": "His investment framework requires both the potential for a multi-billion-dollar company and a preexisting structural advantage that competitors cannot readily copy, rather than merely an appealing feature, founder narrative, or market-size projection.",
+     "item_id": 4
+    },
+    {
+     "doc": "ai:a6e0751f6e8780d26677629f1f145b8e2d1a623cf6abe33c7c8a9ef16c52bc3e",
+     "excerpt": "Individual support combines a clear structure with moment-to-moment attention to bodily rhythm, response, and readiness, within a safe, ethical, and respectful framework intended to enable lasting, embodied transformation.",
+     "item_id": 10
+    },
+    {
+     "doc": "ai:83d3efd50cbe8f2204b0bf1bd314a739a7fe97d07d0b2a330129632ffa390a35",
+     "excerpt": "Personal replies, acknowledged direct messages, and sincere exchanges treat engagement as community-building rather than obligation or metric manipulation, preserving a sense of two-way intimacy as the audience grows.",
+     "item_id": 4
+    }
+   ],
+   "name": "Practice Approach",
+   "subsumes": [
+    "I-human:51e10fc79a2004374e14dd2f02125439bd866c7b466ce4bc80ac5e42948eabbe-01",
+    "I-ai:a6e0751f6e8780d26677629f1f145b8e2d1a623cf6abe33c7c8a9ef16c52bc3e-01",
+    "I-human:e44dbdda88a3ee98142c6378c034a0fa2920042831813e03cfbe16c59c741af6-01",
+    "I-ai:629fc2c32f654f5fc2ac90a0a1f38793ddc91b85b7595cdacee13a8debe6bc1d-01",
+    "I-human:7f310e9932b2ed94c776b937310f6671441c33b4a406eb47446fb0c01ea1e147-02",
+    "I-human:b85a9faaddebef0d2d820d438fc36396e50329fdee72497218a8835b7e88c172-01",
+    "I-ai:615affd6c6cb4f67d16083e0a7116e430c1e75ffeaf99dabedd542c2f62fbeea-01",
+    "I-human:64af96e482ddcf0f9422f0ea545e77017fb58d120e96414ba012b79e9b9184de-03",
+    "I-human:90c95a5291773a01f9581ecec8b80c57cfe8185fe2253180959dbefc596954c2-01",
+    "I-ai:005f0568711a16ea00ebc2eba0e0f0f45f840444799702de2af7a6577e4a5be9-01",
+    "I-ai:0cf9d96b790c628744884f73b16c76ed05fbec26c26686f2be51bbbe8ab52e62-02",
+    "I-ai:494c700ef7b47d2a299c8f91f848d023e869ed5aa2b74c546a6bf4a892c37152-01",
+    "I-ai:4a7a8547fc6928bbac3bebedde40a58eea5e366c34e10d30a400ccb58b0fca20-02",
+    "I-ai:83d3efd50cbe8f2204b0bf1bd314a739a7fe97d07d0b2a330129632ffa390a35-01",
+    "I-ai:caa75e7b3e4496a1b4f0b93f75bab9e8290512486a533395f18063daf0afd7a4-01",
+    "I-ai:389af7e66b696b034d329bf072f0bfa79ef00fdab091d6c91f09c5a669264eb0-03",
+    "I-ai:88945ddf938cebc7c033f3ae80f1fda7e96ea70311c72cd1ad0b01a97fe27c06-02",
+    "I-ai:be3a22dac9f928792ac1f3496125c3286b605413266ae87bc486aed3725e4398-04",
+    "I-ai:c05c37f0a3545bfa3475b123d2fbc621caab6278f6dc8b56944ae0817ae2b75f-01",
+    "I-ai:ffdb2f1905e44d209da618847b6e67015cf55b288dad4896bd2f141a2284dec9-01",
+    "I-ai:51513c8a1a38335e73a23e94e78b22cd12593ef688490e746b91607b9dc38276-01",
+    "I-ai:e0ccad1a28e247d7addf4a2085f41ade8904dcddaf2aba07dde97f5c931b70db-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an explanation of how a particular creative output originated, evolved, or changed in response to tools, constraints, discoveries, or feedback.",
+   "definition": "An item that explains the methods, influences, constraints, discoveries, decisions, or feedback responses through which a particular creative output was developed.",
+   "distinguished_from": "Unlike Practice Approach, it concerns the development of a specific output rather than the person's recurring working style, and unlike Work Showcase it explains making rather than displaying.",
+   "examples": [
+    {
+     "doc": "human:eafc2a065323372bd3254147683f20aa351d6d945e0714171a7d6b8dd6f1e72a",
+     "excerpt": "Character illustration is described as a central brainstorming method: creating the image prompts the artist to discover the depicted character’s identity and defining traits.",
+     "item_id": 7
+    },
+    {
+     "doc": "human:d4fcef48a316f4ce717e595d01e716caf1583b6171215177562bd9260b71a249",
+     "excerpt": "DELIRIUM comprises handmade chromogenic darkroom prints created by transferring AI-generated transformations onto color-negative film, using the artist’s earlier analog photographs of the father as source material.",
+     "item_id": 8
+    },
+    {
+     "doc": "human:eafc2a065323372bd3254147683f20aa351d6d945e0714171a7d6b8dd6f1e72a",
+     "excerpt": "The creator appreciates the feedback but probably will not make the Keep-specific work more generic; ready-made pubs could be useful, and favored P&P non-player characters might instead be adapted for broader use.",
+     "item_id": 4
+    }
+   ],
+   "name": "Creative Process",
+   "subsumes": [
+    "I-human:eafc2a065323372bd3254147683f20aa351d6d945e0714171a7d6b8dd6f1e72a-05",
+    "I-human:d4fcef48a316f4ce717e595d01e716caf1583b6171215177562bd9260b71a249-02",
+    "I-ai:33f3bcf8bb365a7aa335730b5339e0155a2c57332693efd7d621221e72ba3601-01",
+    "I-human:eafc2a065323372bd3254147683f20aa351d6d945e0714171a7d6b8dd6f1e72a-03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is to explain how a bounded procedure, program, analytical method, service, or production activity is organized or carried out.",
+   "definition": "An item that describes the stages, components, tools, operations, or sequence of a specific procedure, program, method, or course of activity.",
+   "distinguished_from": "Unlike Practice Approach, it describes a particular process rather than a person's characteristic working style, and unlike User Instruction it explains the process rather than directing the reader to perform it.",
+   "examples": [
+    {
+     "doc": "human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb",
+     "excerpt": "Rehabilitative treatment may combine chiropractic adjustments with exercises, nutrition, and changes to daily habits.",
+     "item_id": 21
+    },
+    {
+     "doc": "ai:19276a5eb9bcda49f1630da42d06ab8db4b8a35fe9af30430ecbe91c87730a6a",
+     "excerpt": "The production process coordinates print-ready artwork, dimensions and color settings, application-appropriate material, digital printing for detailed small-to-medium runs or offset printing for larger consistent runs, and precise cutting, finishing, edges, and adhesion; THE RPS LLC presents careful execution as a way to preserve quality and limit waste.",
+     "item_id": 10
+    },
+    {
+     "doc": "ai:8bc4cdb9bd9f73a31925abe5c9017d728138b7b492b24026ce324a0e58ea5445",
+     "excerpt": "The BioIntel Method combines exposure and symptom mapping, laboratory measurement of toxins and biological dysfunction, data-guided detoxification with U.S. physician collaboration when needed, and support for mitochondrial repair, immune recalibration, and metabolic stability; it is framed as applied biochemistry rather than alternative care.",
+     "item_id": 7
+    }
+   ],
+   "name": "Process Description",
+   "subsumes": [
+    "I-human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb-04",
+    "I-ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67-08",
+    "I-human:472c68b34ca4fc68382bd51db293cabcad3dfb6225157a1d1f8e0e8e1a2a4369-03",
+    "I-ai:19276a5eb9bcda49f1630da42d06ab8db4b8a35fe9af30430ecbe91c87730a6a-05",
+    "I-ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67-05",
+    "I-ai:8bc4cdb9bd9f73a31925abe5c9017d728138b7b492b24026ce324a0e58ea5445-04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the reasoning that explains why a claim, method, design choice, opportunity, or course of action is expected to work or is appropriate.",
+   "definition": "An item that justifies a claim, method, design choice, opportunity, or course of action through principles, mechanisms, benefits, constraints, comparisons, or tradeoffs.",
+   "distinguished_from": "Unlike Evidence Support, it supplies justificatory reasoning rather than chiefly empirical grounds, and unlike Practice Approach it explains why a choice is sound rather than how work is characteristically conducted.",
+   "examples": [
+    {
+     "doc": "human:472c68b34ca4fc68382bd51db293cabcad3dfb6225157a1d1f8e0e8e1a2a4369",
+     "excerpt": "Developing existing strengths is presented as a more effective way to motivate people than concentrating on correcting weaknesses.",
+     "item_id": 8
+    },
+    {
+     "doc": "human:a3011f69fdb6b724ae554f527459b7d98d2a04d5616ad9e24a8237b81fe01898",
+     "excerpt": "Although the approach is not the newest language-processing technology, it offers a favorable accuracy-to-computation ratio and can operate acceptably on inexpensive hardware without a GPU.",
+     "item_id": 15
+    },
+    {
+     "doc": "ai:41a68fb4542c820218726a62ce47f469ee8d7c4a9e2fae56cd60f64e73d8f8a3",
+     "excerpt": "The scholarship opportunity would provide mentorship, resources, practical program-development experience, access to diverse populations, and opportunities to test and extend the applicant’s methods beyond the university.",
+     "item_id": 17
+    }
+   ],
+   "name": "Rationale",
+   "subsumes": [
+    "I-human:472c68b34ca4fc68382bd51db293cabcad3dfb6225157a1d1f8e0e8e1a2a4369-01",
+    "I-human:64af96e482ddcf0f9422f0ea545e77017fb58d120e96414ba012b79e9b9184de-02",
+    "I-human:a3011f69fdb6b724ae554f527459b7d98d2a04d5616ad9e24a8237b81fe01898-06",
+    "I-ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67-03",
+    "I-ai:41a68fb4542c820218726a62ce47f469ee8d7c4a9e2fae56cd60f64e73d8f8a3-01",
+    "I-ai:a15a0b27b3eeb6d05cbce1bf2477b3d22860da7d744f3b7101350418d41dd707-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the description of an available service, experience, product, project, or defined engagement that an audience can obtain, use, or experience.",
+   "definition": "An item that describes an available service, experience, product, project, or engagement by specifying its scope, recipients, formats, activities, or functionality.",
+   "distinguished_from": "Unlike Value Proposition, it identifies what is available rather than centering the promised benefit, and unlike Service Access it describes the offering itself rather than the practical terms for obtaining it.",
+   "examples": [
+    {
+     "doc": "ai:febd06e9b25297b626b1b514c9f97dd3fe9d6d18de1e619dcf4516ff00e1e632",
+     "excerpt": "Consensual exposure play creates controlled experiences of vulnerability and apparent risk through suggestion, acknowledgment, or carefully arranged situations, balancing discretion and daring under Lady Ava’s supervision.",
+     "item_id": 4
+    },
+    {
+     "doc": "ai:389af7e66b696b034d329bf072f0bfa79ef00fdab091d6c91f09c5a669264eb0",
+     "excerpt": "Support for depression examines contributing factors while fostering self-compassion, new perspectives, and possible ways to improve well-being.",
+     "item_id": 5
+    },
+    {
+     "doc": "human:a3011f69fdb6b724ae554f527459b7d98d2a04d5616ad9e24a8237b81fe01898",
+     "excerpt": "Search supports three combinable methods: fuzzy topic matching with synonyms, grep-like exact keyword or Python-style regular-expression filtering, and URL filtering by plain-text or explicitly marked regular-expression patterns.",
+     "item_id": 4
+    }
+   ],
+   "name": "Offering Description",
+   "subsumes": [
+    "I-ai:febd06e9b25297b626b1b514c9f97dd3fe9d6d18de1e619dcf4516ff00e1e632-01",
+    "I-ai:88945ddf938cebc7c033f3ae80f1fda7e96ea70311c72cd1ad0b01a97fe27c06-01",
+    "I-ai:389af7e66b696b034d329bf072f0bfa79ef00fdab091d6c91f09c5a669264eb0-02",
+    "I-human:a3011f69fdb6b724ae554f527459b7d98d2a04d5616ad9e24a8237b81fe01898-03",
+    "I-ai:0cf9d96b790c628744884f73b16c76ed05fbec26c26686f2be51bbbe8ab52e62-03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would deprive readers of practical conditions needed to evaluate, obtain, schedule, purchase, or arrange an offered service or engagement.",
+   "definition": "An item that supplies practical access or engagement terms such as eligibility, delivery mode, location, schedule, duration, availability, travel, price, or payment conditions.",
+   "distinguished_from": "Unlike Contact Access, it states the operational terms of access rather than communication channels, and unlike Offering Description it does not primarily define the substantive service.",
+   "examples": [
+    {
+     "doc": "human:1e6cd79909e7706748a2adfc264ae8e24b1e9d735595991594cfcdb46bba9500",
+     "excerpt": "Morning, afternoon, and evening appointments are available, with waiting times minimized and same-week sessions usually possible when needed.",
+     "item_id": 1
+    },
+    {
+     "doc": "ai:389af7e66b696b034d329bf072f0bfa79ef00fdab091d6c91f09c5a669264eb0",
+     "excerpt": "In-person appointments in Central Milton Keynes are offered on Mondays and Thursdays, while online and telephone appointments are available Monday through Friday.",
+     "item_id": 20
+    },
+    {
+     "doc": "ai:f5ca29e10138b9d2f0393fb94c3b8b11d83ea1af9848ca0376d19183f2bc3586",
+     "excerpt": "Avinash Kaushik’s estimated speaking fee is $20,000–$30,000, his departure point is the Los Angeles airport system, and his primary speaking category is strategy and data analytics.",
+     "item_id": 1
+    }
+   ],
+   "name": "Service Access",
+   "subsumes": [
+    "I-human:1e6cd79909e7706748a2adfc264ae8e24b1e9d735595991594cfcdb46bba9500-01",
+    "I-ai:389af7e66b696b034d329bf072f0bfa79ef00fdab091d6c91f09c5a669264eb0-01",
+    "I-human:773bf6623c8b2b382fd38bbb2a3b45757c06aed4c331433fd8380ad37852cf3b-01",
+    "I-ai:093ecf53fa37c40494fab18435efeaa55a3c8a675507310f91d75b963e5ff71f-01",
+    "I-ai:615affd6c6cb4f67d16083e0a7116e430c1e75ffeaf99dabedd542c2f62fbeea-02",
+    "I-ai:f5ca29e10138b9d2f0393fb94c3b8b11d83ea1af9848ca0376d19183f2bc3586-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's central claim concerns the benefit or outcome that readers, clients, collaborators, or a community can receive from the person's contribution.",
+   "definition": "An item that articulates the benefit, change, or useful outcome the person's work, service, or content offers to others.",
+   "distinguished_from": "Unlike Capabilities Profile, it emphasizes value to an audience rather than ability, and unlike Offering Description it centers the outcome rather than defining what is offered.",
+   "examples": [
+    {
+     "doc": "ai:82dc2062ef1b26f59de9d0be286e1c106994c7dabb126abc939a814d597d2af8",
+     "excerpt": "His technique-focused teaching explains the purpose of skills such as kneading, browning, roasting, and emulsifying so cooks can gain independence and durable confidence.",
+     "item_id": 10
+    },
+    {
+     "doc": "ai:f83cfecc296e966baf06f45a181669291a35e9c7b6cf13b85ca586fbb8e536ab",
+     "excerpt": "FAE describes her content as a changing mix of solo performances, creative expression, personal anecdotes, reflective moments, and playful interactions designed to showcase her character and leave followers feeling inspired, connected, and uplifted.",
+     "item_id": 7
+    }
+   ],
+   "name": "Value Proposition",
+   "subsumes": [
+    "B15"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would leave unclear the composition, reach, or intended recipients of the person's work, service, site, or community.",
+   "definition": "An item that characterizes an established or intended audience through demographic, geographic, professional, behavioral, or interest-based information.",
+   "distinguished_from": "Unlike Compatibility Criteria, it describes who the audience is or whom the work serves rather than specifying mutual-fit requirements, and unlike Site Orientation it does not primarily explain the content environment.",
+   "examples": [
+    {
+     "doc": "ai:69b69bf6ad936a28a5061e0e7d06e851dfb40efcb0220ef86d87f4b651fac01f",
+     "excerpt": "His primary audience is described as people aged 18–34, predominantly male but with substantial female participation, and globally distributed with especially large followings in English-speaking countries.",
+     "item_id": 10
+    },
+    {
+     "doc": "ai:c05c37f0a3545bfa3475b123d2fbc621caab6278f6dc8b56944ae0817ae2b75f",
+     "excerpt": "Intended clients include executives, business owners, physicians, attorneys, and other highly accountable professionals, as well as people making mid-career transitions, entrepreneurs confronting business-building pressures, and leaders adapting to AI and technological change.",
+     "item_id": 14
+    }
+   ],
+   "name": "Audience Profile",
+   "subsumes": [
+    "I-ai:69b69bf6ad936a28a5061e0e7d06e851dfb40efcb0220ef86d87f4b651fac01f-01",
+    "I-ai:c05c37f0a3545bfa3475b123d2fbc621caab6278f6dc8b56944ae0817ae2b75f-03",
+    "I-ai:c69c4cb90a177ee619470b0f65ccc9eef2dd24a4319255b1ca65948bed075ee8-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary function is to define the qualities, interests, boundaries, activities, or working conditions that make a prospective collaborator, client, or participant a suitable fit.",
+   "definition": "An item that states the qualities, shared interests, boundaries, preferences, or working dynamics sought in compatible collaborators, clients, or participants.",
+   "distinguished_from": "Unlike Audience Profile, it establishes mutual-fit criteria rather than describing a recipient group, and unlike Participation Standards it concerns suitability rather than mandatory conduct after engagement.",
+   "examples": [
+    {
+     "doc": "ai:e9225fbc4cae81cf0c747bab3daad6d6288610d2628c62ea1d9d74fc19b3ce3b",
+     "excerpt": "Successful collaborators should be professional, respectful, and emotionally compatible, communicate openly about boundaries, preferences, and ideas, and share responsibility for developing an agreed creative vision.",
+     "item_id": 21
+    },
+    {
+     "doc": "human:7f310e9932b2ed94c776b937310f6671441c33b4a406eb47446fb0c01ea1e147",
+     "excerpt": "Participation implicitly requires adherence to two table rules: “The Golden Rule; Have Fun! The Silver Rule; Don't be a Jerk!/Don't interfere with other peoples' fun!”",
+     "item_id": 5
+    },
+    {
+     "doc": "human:8c6eedd014bb61421d90e65d4ad868b603d81ea63fc5a4d0ae66c3aa7bc15f51",
+     "excerpt": "She positions her ideal client as an easygoing, attentive, warmhearted parent who prioritizes family time, meaningful experiences, lasting photography, and a simple natural aesthetic without demanding perfection, and invites such readers to recognize the fit.",
+     "item_id": 7
+    }
+   ],
+   "name": "Compatibility Criteria",
+   "subsumes": [
+    "I-ai:e9225fbc4cae81cf0c747bab3daad6d6288610d2628c62ea1d9d74fc19b3ce3b-02",
+    "I-ai:d8e1bb67c05d07c63d909884ec008e1ba25e4a20ecf4802656101d99807eb067-01",
+    "I-human:7f310e9932b2ed94c776b937310f6671441c33b4a406eb47446fb0c01ea1e147-01",
+    "I-ai:f6cea660e45cb4809690ff176e0b5e53c74a774e8acbcdef5680d72f968058a1-01",
+    "I-human:8c6eedd014bb61421d90e65d4ad868b603d81ea63fc5a4d0ae66c3aa7bc15f51-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate behavioral rules, procedural requirements, or enforcement boundaries governing whether or how readers may participate or engage.",
+   "definition": "An item that establishes conduct requirements, participation procedures, behavioral boundaries, or enforcement measures governing interpersonal or community engagement.",
+   "distinguished_from": "Unlike Compatibility Criteria, it specifies rules participants must follow rather than preferred fit, and unlike Invitation it regulates engagement rather than encouraging it.",
+   "examples": [
+    {
+     "doc": "human:002ff76b66ce6f6e0e6133da6c3011d2923caa1cdf62fbcc1fd51c9fafdad506",
+     "excerpt": "She rejects generic requests and approaches treating her home merely as free lodging; applicants should demonstrate respect by reading the profile and including at least her name or another personal sentence.",
+     "item_id": 8
+    },
+    {
+     "doc": "human:1ef18b8f9ac05c9ae384caef06ec50363683e4f7220080657a76cb32902f1613",
+     "excerpt": "Alexandra firmly excludes flirting and sexual propositions, defining the platform as a place for kindness-based affection toward travel, cultures, and people rather than dating.",
+     "item_id": 1
+    },
+    {
+     "doc": "human:6c8c78d9bb96d09832d41af0c40df4da67b8f2d3208e13a9afaaee22aa7e83f7",
+     "excerpt": "Comments may be edited or removed for spam, irrelevant links, profanity, hateful or offensive material, or personal attacks; criticism should target ideas rather than people, and the owner may moderate without notice or alter the comment policy at any time.",
+     "item_id": 7
+    }
+   ],
+   "name": "Participation Standards",
+   "subsumes": [
+    "I-human:002ff76b66ce6f6e0e6133da6c3011d2923caa1cdf62fbcc1fd51c9fafdad506-01",
+    "I-human:1ef18b8f9ac05c9ae384caef06ec50363683e4f7220080657a76cb32902f1613-01",
+    "I-human:6c8c78d9bb96d09832d41af0c40df4da67b8f2d3208e13a9afaaee22aa7e83f7-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main function is to ask or encourage readers to take a particular next step in relation to the person or site.",
+   "definition": "An item that encourages readers to connect, collaborate, follow, respond, participate, commission work, or otherwise continue the relationship.",
+   "distinguished_from": "Unlike Contact Access, it motivates action rather than merely enabling communication, and unlike Recommendation it seeks relational engagement rather than advising substantive conduct.",
+   "examples": [
+    {
+     "doc": "human:8f8ea51395037374c66944c04bedac3128a94f79bb5c838f48c475e52a982da3",
+     "excerpt": "A submission invitation directs short-story writers to Tall Tale TV’s guidelines.",
+     "item_id": 5
+    },
+    {
+     "doc": "ai:005f0568711a16ea00ebc2eba0e0f0f45f840444799702de2af7a6577e4a5be9",
+     "excerpt": "A closing invitation offers a limited number of impact-based retainers to organizations seeking a transition from linear growth to peak efficiency, particularly leaders wanting a single authoritative basis for decisions.",
+     "item_id": 17
+    }
+   ],
+   "name": "Invitation",
+   "subsumes": [
+    "B17"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded item would remove the practical means by which readers can communicate with the person or responsible organization.",
+   "definition": "A bounded component that provides usable channels or instructions for reaching the person or an authorized contact.",
+   "distinguished_from": "Unlike Invitation, it enables communication rather than persuading readers to initiate it, and unlike Service Access it supplies contact channels rather than operational service terms.",
+   "examples": [
+    {
+     "doc": "ai:629fc2c32f654f5fc2ac90a0a1f38793ddc91b85b7595cdacee13a8debe6bc1d",
+     "excerpt": "A practical contact block gives the phone number 07717 515 013, the location at Berkhamsted Chiropractic Clinic, 69 High Street, Berkhamsted, HP4 2DE, and Monday-to-Friday daytime and evening availability.",
+     "item_id": 18
+    },
+    {
+     "doc": "ai:e2d4c7e4d28d9b584be94ef3653179b6eaa405028b6d20afb7a897ce5975f90c",
+     "excerpt": "Official inquiries are directed to the corporate communications desk of BlackBuck, legally identified as Zinka Logistics Solutions Private Limited; Yabaji’s personal contact details are not publicly disclosed.",
+     "item_id": 17
+    }
+   ],
+   "name": "Contact Access",
+   "subsumes": [
+    "B18"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily welcomes, appreciates, empathizes with, consoles, or expresses solidarity with readers without chiefly requesting action or correcting an invalidating belief.",
+   "definition": "A rhetorical item that creates warmth, familiarity, empathy, consolation, or interpersonal solidarity through direct relational address.",
+   "distinguished_from": "Unlike Invitation, it builds connection without chiefly requesting a next step, and unlike Emotional Validation it does not primarily counter shame, self-blame, or doubts about worth.",
+   "examples": [
+    {
+     "doc": "ai:e136370e15129c2305de507c5b2d6e73bf197216ea86228c5336bb1a6d7d0ab7",
+     "excerpt": "He thanks readers, reflects on the teenage project’s growth into an internationally used parental resource, and hopes its guidance makes choosing toys easier, better informed, and more enjoyable.",
+     "item_id": 11
+    },
+    {
+     "doc": "human:5d5c9d7f5f9fc976c79e5a43fd143389d7af2cec1d9674b7d12bbb88de998f18",
+     "excerpt": "Having lost Annie the previous February, the writer dreads another death in the same year but hopes Ranger will recover temporarily and remain with the family longer.",
+     "item_id": 15
+    }
+   ],
+   "name": "Rapport Building",
+   "subsumes": [
+    "B16",
+    "I-human:5d5c9d7f5f9fc976c79e5a43fd143389d7af2cec1d9674b7d12bbb88de998f18-05"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a direct affirmation that counters shame, self-blame, emotional invalidation, or doubts about personal worth.",
+   "definition": "An item that directly affirms a reader's feelings, needs, lovability, or worth by correcting a demeaning or self-blaming interpretation of their experience.",
+   "distinguished_from": "Unlike Rapport Building, it performs a specific corrective affirmation rather than chiefly creating general warmth or solidarity.",
+   "examples": [
+    {
+     "doc": "ai:4c9552525ab52486acea89bc65613b803d7ca6824bde769db46edda0980bea0b",
+     "excerpt": "The blog reassures readers after unexplained rejection: “You weren't ghosted because you were too much. You were ghosted because they weren't ready for someone real.”",
+     "item_id": 5
+    },
+    {
+     "doc": "ai:4c9552525ab52486acea89bc65613b803d7ca6824bde769db46edda0980bea0b",
+     "excerpt": "The closing affirmation tells readers, “You're not hard to love. You're just waiting for someone who knows how to stay.”",
+     "item_id": 10
+    }
+   ],
+   "name": "Emotional Validation",
+   "subsumes": [
+    "I-ai:4c9552525ab52486acea89bc65613b803d7ca6824bde769db46edda0980bea0b-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the definition, mechanism, distinction, framework, or indicator interpretation needed to understand a subject.",
+   "definition": "An item that defines or explains a concept, mechanism, distinction, relationship, framework, or evaluative indicator so readers can understand its meaning or operation.",
+   "distinguished_from": "Unlike Interpretation, it develops subject-matter understanding rather than deriving broader significance from established material, and unlike Process Description it need not present a bounded sequence of activity.",
+   "examples": [
+    {
+     "doc": "human:56c95337465d79a20cffe581d86f803ab0dd9aa719497fa2af26bb0f90e8503f",
+     "excerpt": "Svadhyaya means self-study and, with tapas and ishvara pranidhana, constitutes Kriya Yoga, the action-oriented part of the ancient yogic path toward samadhi.",
+     "item_id": 1
+    },
+    {
+     "doc": "human:a3011f69fdb6b724ae554f527459b7d98d2a04d5616ad9e24a8237b81fe01898",
+     "excerpt": "The system removes suffixes and searches with word stems across both languages, producing intentionally unusual suggested terms and topic labels described as Dumbrish.",
+     "item_id": 3
+    },
+    {
+     "doc": "ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67",
+     "excerpt": "A message-quality score distinguishes thoughtful questions, credible research, and constructive feedback from low-value emoji reactions and generic enthusiasm.",
+     "item_id": 13
+    }
+   ],
+   "name": "Concept Explanation",
+   "subsumes": [
+    "I-human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb-01",
+    "I-human:c488d8cec4d7262542c22cfeb1f090572e1f7f3e4cedfa4a074619d8fb572be0-01",
+    "I-human:56c95337465d79a20cffe581d86f803ab0dd9aa719497fa2af26bb0f90e8503f-01",
+    "I-human:a3011f69fdb6b724ae554f527459b7d98d2a04d5616ad9e24a8237b81fe01898-02",
+    "I-human:f7becffe4d66687f13f8b6960d0b5f07c171d78e57558c4f6c7c0a9f92257ae6-02",
+    "I-human:472c68b34ca4fc68382bd51db293cabcad3dfb6225157a1d1f8e0e8e1a2a4369-02",
+    "I-human:90c95a5291773a01f9581ecec8b80c57cfe8185fe2253180959dbefc596954c2-02",
+    "I-ai:19276a5eb9bcda49f1630da42d06ab8db4b8a35fe9af30430ecbe91c87730a6a-01",
+    "I-ai:c05c37f0a3545bfa3475b123d2fbc621caab6278f6dc8b56944ae0817ae2b75f-02",
+    "I-ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67-07"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the problem, gap, harmful condition, prevailing misconception, or case-specific need that makes a response relevant.",
+   "definition": "An item that establishes or diagnoses a problem, unmet need, risk, deficiency, harmful condition, prevailing assumption, or case circumstance that warrants attention or response.",
+   "distinguished_from": "Unlike Motivation, it establishes an external need rather than the person's internal impetus, and unlike External Context it frames a condition specifically as requiring attention or change.",
+   "examples": [
+    {
+     "doc": "ai:8bc4cdb9bd9f73a31925abe5c9017d728138b7b492b24026ce324a0e58ea5445",
+     "excerpt": "Standard bloodwork is characterized as inadequate because it seldom assesses factors affecting DNA repair, mitochondrial function, hormones, detoxification, or immune surveillance, leaving many patients treated without being biologically understood.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:8359e3fea98e3f2b3df60b94b65bb14901e6dfbf2ef0dc2a96e2576cfebb356d",
+     "excerpt": "The Social Security Administration can answer questions but cannot advise claimants, and staffing is described as being at a 50-year low; required telephone appointments and the end of office walk-ins in 2025 are said to make obtaining help difficult and time-consuming.",
+     "item_id": 1
+    },
+    {
+     "doc": "human:687410b21156d6c506170a5a71c4efbbf1c7ed8adf031b3bc9e0e42ff0bbefd9",
+     "excerpt": "Joe and Raquel Morales explain that their search for ranch land arose from Joe’s family heritage of horsemanship, attachment to rural life, and ambition to create a family legacy; after extensive research and an unproductive search elsewhere, the Sangre de Cristo Mountain views convinced them to seek land near Westcliffe.",
+     "item_id": 7
+    }
+   ],
+   "name": "Problem Framing",
+   "subsumes": [
+    "I-ai:4a7a8547fc6928bbac3bebedde40a58eea5e366c34e10d30a400ccb58b0fca20-01",
+    "I-ai:8bc4cdb9bd9f73a31925abe5c9017d728138b7b492b24026ce324a0e58ea5445-01",
+    "I-human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb-05",
+    "I-human:8359e3fea98e3f2b3df60b94b65bb14901e6dfbf2ef0dc2a96e2576cfebb356d-01",
+    "I-human:90c95a5291773a01f9581ecec8b80c57cfe8185fe2253180959dbefc596954c2-04",
+    "I-human:a3011f69fdb6b724ae554f527459b7d98d2a04d5616ad9e24a8237b81fe01898-04",
+    "I-ai:d173cd60e38bfd75b8532be2ccc18e37b1c2e88cbeddeca7c1c5288d61cf41ec-01",
+    "I-human:2011604a1035b55715cee3352d54dd65c2df8838bd24f05d2b2a2cb2be938ac3-01",
+    "I-human:687410b21156d6c506170a5a71c4efbbf1c7ed8adf031b3bc9e0e42ff0bbefd9-01",
+    "I-human:6da4409e99ea3f6ef791e7f58104ca644412dc64b5aebd85d8d57a317096c390-01",
+    "I-human:b4dd9088bc6aa71358c44dd0e5441b501cbf463bda24e22d09f20ec856bfa6a7-03",
+    "I-ai:0cf9d96b790c628744884f73b16c76ed05fbec26c26686f2be51bbbe8ab52e62-01",
+    "I-ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67-09"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the document's principal contention or its deliberate restatement.",
+   "definition": "An item that states or restates the central arguable contention the document seeks to establish.",
+   "distinguished_from": "Unlike Values Statement, it advances the document's main proposition rather than the person's guiding conviction, and unlike Integrative Synthesis it need not consolidate multiple developed conclusions.",
+   "examples": [
+    {
+     "doc": "ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67",
+     "excerpt": "CoinMinutes argues from observations across hundreds of blockchain ecosystems that authentic human relationships, rather than technical complexity or marketing expenditure, are the decisive basis of lasting project success.",
+     "item_id": 1
+    },
+    {
+     "doc": "ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67",
+     "excerpt": "Measuring cryptocurrency communities requires analysis of human behavior and cannot be reduced to counting followers.",
+     "item_id": 27
+    }
+   ],
+   "name": "Thesis Claim",
+   "subsumes": [
+    "I-ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an argued stance, opposition, commitment, or proposed remedy concerning a public, professional, community, or institutional issue.",
+   "definition": "An item that advocates or opposes a substantive policy, institutional practice, public course of action, or concrete remedy for a shared issue.",
+   "distinguished_from": "Unlike Values Statement, it advances an issue-specific course of action rather than a general conviction, and unlike Recommendation it seeks broader public or institutional change rather than chiefly guiding an individual's practical choice.",
+   "examples": [
+    {
+     "doc": "human:4075cc954f306e9673e240dd811ad9fd9bcf4d9f57cffc47803ebda58eed410e",
+     "excerpt": "Young calls for educational innovation, parental choice, support for educators, and classrooms centered on learning rather than divisive politics or age-inappropriate material, with children’s individual needs as the governing objective.",
+     "item_id": 17
+    },
+    {
+     "doc": "human:6ed438c79ad81f797230f97ca46ec87d70de56cef3dc84e9fff53e52c152ec7b",
+     "excerpt": "Environmental protection should prioritize freshwater improvement and nature-based flood management, including giving rivers more space and restoring water storage around Kāpiti’s historic dune wetlands, because these measures are more sustainable and economical than continually expanding engineered infrastructure.",
+     "item_id": 2
+    },
+    {
+     "doc": "ai:d173cd60e38bfd75b8532be2ccc18e37b1c2e88cbeddeca7c1c5288d61cf41ec",
+     "excerpt": "To address property taxes and discretionary spending that rose from $359,000 in 2023 to $1.2 million in 2025, the candidate proposes immediate nonessential cuts and dedicating 10% of each surplus to reserves until the city holds at least three months of expenses.",
+     "item_id": 10
+    }
+   ],
+   "name": "Advocacy",
+   "subsumes": [
+    "I-human:56b2958b7148ec079c2d06a1a1fb3ffccc326092d12c371974452dcebb758061-02",
+    "I-human:4075cc954f306e9673e240dd811ad9fd9bcf4d9f57cffc47803ebda58eed410e-01",
+    "I-human:6ed438c79ad81f797230f97ca46ec87d70de56cef3dc84e9fff53e52c152ec7b-01",
+    "I-ai:d173cd60e38bfd75b8532be2ccc18e37b1c2e88cbeddeca7c1c5288d61cf41ec-02",
+    "I-human:733d7dcb1f12affffcbad3d094a70cad5e4b6a55165c4412d619db83d2957f49-01",
+    "I-ai:072956816ec8ee7eb59dbffd4a1ccec09fb189378eedfdd9c0ac7f1d457c3f01-04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's principal function is to advise readers or relevant actors what to choose, avoid, prioritize, consider, or do.",
+   "definition": "An item that recommends a practical choice, priority, standard, precaution, evaluative method, or course of action intended to improve decisions or outcomes.",
+   "distinguished_from": "Unlike Invitation, it guides substantive conduct rather than relational engagement, and unlike Advocacy it does not primarily press for public, institutional, or policy change.",
+   "examples": [
+    {
+     "doc": "human:2011604a1035b55715cee3352d54dd65c2df8838bd24f05d2b2a2cb2be938ac3",
+     "excerpt": "Markoski advises buyers to remain patient in a rapidly changing process, retain truthful professionals, and follow their guidance; he also recommends prioritizing sound structure and mechanical systems over inexpensive cosmetic features, warning that attractive, costly new construction may be less sound than older homes.",
+     "item_id": 12
+    },
+    {
+     "doc": "human:f7becffe4d66687f13f8b6960d0b5f07c171d78e57558c4f6c7c0a9f92257ae6",
+     "excerpt": "New beekeepers should not plan to remain treatment-free: they should learn Varroa biology, use resistant bees and management controls, monitor infestation, and treat when necessary because high mite levels usually kill the host colony and harm nearby colonies.",
+     "item_id": 7
+    },
+    {
+     "doc": "ai:83d3efd50cbe8f2204b0bf1bd314a739a7fe97d07d0b2a330129632ffa390a35",
+     "excerpt": "A practical lesson collection advises aspiring online participants to be genuine rather than performative, publish less but with greater purpose, favor connection over broadcasting, reinforce a consistent identity, and avoid burnout by pacing themselves instead of chasing trends indiscriminately.",
+     "item_id": 7
+    }
+   ],
+   "name": "Recommendation",
+   "subsumes": [
+    "I-ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67-06",
+    "I-ai:19276a5eb9bcda49f1630da42d06ab8db4b8a35fe9af30430ecbe91c87730a6a-04",
+    "I-human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb-02",
+    "I-human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb-10",
+    "I-ai:843379cfae62dd46f0d6e6c97c2af15099a2dfdbb33e03f7763d25f2b4c0ee60-03",
+    "I-human:2011604a1035b55715cee3352d54dd65c2df8838bd24f05d2b2a2cb2be938ac3-03",
+    "I-human:eafc2a065323372bd3254147683f20aa351d6d945e0714171a7d6b8dd6f1e72a-01",
+    "I-human:f7becffe4d66687f13f8b6960d0b5f07c171d78e57558c4f6c7c0a9f92257ae6-01",
+    "I-ai:8bc4cdb9bd9f73a31925abe5c9017d728138b7b492b24026ce324a0e58ea5445-05",
+    "I-human:01f640f29b2b699659e0c5141cc59b73cb1103e1da46e4d1ffeb1569e458b5b9-01",
+    "I-human:0ab75bbf88c291d352858f994e7a609559e86697d326cec151bff116753af4df-02",
+    "I-human:34e9931669e9add38f7b8b56b45da08b76aa55903cae4f13532f7e5d6008f031-02",
+    "I-human:6da4409e99ea3f6ef791e7f58104ca644412dc64b5aebd85d8d57a317096c390-02",
+    "I-human:8359e3fea98e3f2b3df60b94b65bb14901e6dfbf2ef0dc2a96e2576cfebb356d-02",
+    "I-human:cdaf89b5a3f5ab2c5bdf064f6896428b0f3e50597236f50191e3b562d1fe4b3b-01",
+    "I-ai:20b1094509ea596cb87757060513b93f9b6835064e806ac52dec7ebe23f9921b-01",
+    "I-ai:83d3efd50cbe8f2204b0bf1bd314a739a7fe97d07d0b2a330129632ffa390a35-02",
+    "I-ai:c513e623278f23a7b70741ee6a73c0b39b94b5089bc4bf13c8cfbcb6bee18920-01",
+    "I-ai:f3c9097fd46dcdec35b3776a903692fe38bfbe35646a65eb178f13151feb4b86-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a practical directive users must follow to complete a process or use a resource effectively.",
+   "definition": "An item that directs users to perform a required operational action, supply information, or interact with a tool, service, or process in a specified way.",
+   "distinguished_from": "Unlike Recommendation, it gives procedural directions tied to using or completing something, and unlike Process Description it tells readers what to do rather than explaining how the process is structured.",
+   "examples": [
+    {
+     "doc": "human:90c95a5291773a01f9581ecec8b80c57cfe8185fe2253180959dbefc596954c2",
+     "excerpt": "Guide users must gather the priority information required by the evaluation team before it can develop the post-occupancy evaluation framework, surveys, interview guides, and observation tools.",
+     "item_id": 20
+    },
+    {
+     "doc": "human:a3011f69fdb6b724ae554f527459b7d98d2a04d5616ad9e24a8237b81fe01898",
+     "excerpt": "Queries may combine French and English keywords without full sentences; adding space-separated terms supplies more context and generally improves accuracy.",
+     "item_id": 2
+    }
+   ],
+   "name": "User Instruction",
+   "subsumes": [
+    "I-human:90c95a5291773a01f9581ecec8b80c57cfe8185fe2253180959dbefc596954c2-05",
+    "I-human:a3011f69fdb6b724ae554f527459b7d98d2a04d5616ad9e24a8237b81fe01898-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate facts, research, testimony, data, artifacts, cases, observations, or source context offered chiefly to substantiate another claim.",
+   "definition": "An item that presents or identifies empirical, documentary, testimonial, quantitative, or observational grounds used to make a substantive proposition more credible.",
+   "distinguished_from": "Unlike Credibility Support, it validates a content-level claim rather than the person's standing, and unlike Finding it deploys information as support rather than chiefly reporting the result itself.",
+   "examples": [
+    {
+     "doc": "human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb",
+     "excerpt": "The U.S. Agency for Health Care Policy and Research reportedly found serious complications from specific chiropractic adjustments rare, favored adjustment before surgery, and discouraged oral steroids, antidepressants, and colchicine for acute low-back problems.",
+     "item_id": 43
+    },
+    {
+     "doc": "human:a3011f69fdb6b724ae554f527459b7d98d2a04d5616ad9e24a8237b81fe01898",
+     "excerpt": "Searching the 78,000-page index uses 3.2 GB of RAM and takes about 0.3–0.5 seconds on a desktop; the live service typically responds within one second on shared CPU-only hosting alongside other sites and applications.",
+     "item_id": 14
+    },
+    {
+     "doc": "ai:4a7a8547fc6928bbac3bebedde40a58eea5e366c34e10d30a400ccb58b0fca20",
+     "excerpt": "The eighty-year Harvard Study of Adult Development is cited as finding that relationship quality, rather than wealth, status, or achievement, was the strongest predictor of happiness.",
+     "item_id": 5
+    }
+   ],
+   "name": "Evidence Support",
+   "subsumes": [
+    "I-human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb-08",
+    "I-ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67-04",
+    "I-human:56b2958b7148ec079c2d06a1a1fb3ffccc326092d12c371974452dcebb758061-01",
+    "I-human:5d5c9d7f5f9fc976c79e5a43fd143389d7af2cec1d9674b7d12bbb88de998f18-04",
+    "I-human:90c95a5291773a01f9581ecec8b80c57cfe8185fe2253180959dbefc596954c2-03",
+    "I-human:50b68d981182d675ce34ebdd0ddbca901474cbd2fc75d484f35bd0fc12212d78-02",
+    "I-human:a3011f69fdb6b724ae554f527459b7d98d2a04d5616ad9e24a8237b81fe01898-05",
+    "I-ai:072956816ec8ee7eb59dbffd4a1ccec09fb189378eedfdd9c0ac7f1d457c3f01-02",
+    "I-ai:8bc4cdb9bd9f73a31925abe5c9017d728138b7b492b24026ce324a0e58ea5445-03",
+    "I-human:b4dd9088bc6aa71358c44dd0e5441b501cbf463bda24e22d09f20ec856bfa6a7-01",
+    "I-ai:072956816ec8ee7eb59dbffd4a1ccec09fb189378eedfdd9c0ac7f1d457c3f01-01",
+    "I-ai:19276a5eb9bcda49f1630da42d06ab8db4b8a35fe9af30430ecbe91c87730a6a-02",
+    "I-ai:4a7a8547fc6928bbac3bebedde40a58eea5e366c34e10d30a400ccb58b0fca20-03",
+    "I-ai:be3a22dac9f928792ac1f3496125c3286b605413266ae87bc486aed3725e4398-03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly uses a concrete, hypothetical, simplified, or representative case to make a broader idea, distinction, application, or experience easier to understand.",
+   "definition": "An item that clarifies or exemplifies a broader claim, concept, capability, or practical implication through a concrete case, analogy, scenario, or anecdote.",
+   "distinguished_from": "Unlike Evidence Support, it primarily aids understanding or vividness rather than establishing that a disputed claim is true, and unlike Experience Highlight it serves a broader explanatory point.",
+   "examples": [
+    {
+     "doc": "human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb",
+     "excerpt": "A Chapter Six excerpt uses house construction as an analogy for why chiropractic care must proceed in a prescribed sequence before the spine can become stable and function correctly.",
+     "item_id": 12
+    },
+    {
+     "doc": "ai:19276a5eb9bcda49f1630da42d06ab8db4b8a35fe9af30430ecbe91c87730a6a",
+     "excerpt": "Product stickers can communicate ingredients, barcodes, safety warnings, and instructions, making accuracy essential to avoid confusion or compliance problems.",
+     "item_id": 6
+    },
+    {
+     "doc": "ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67",
+     "excerpt": "A hypothetical comparison between 100,000 passive followers and 10,000 advocates active in governance and promotion frames committed participation as more valuable than audience size.",
+     "item_id": 2
+    }
+   ],
+   "name": "Explanatory Illustration",
+   "subsumes": [
+    "I-human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb-03",
+    "I-ai:19276a5eb9bcda49f1630da42d06ab8db4b8a35fe9af30430ecbe91c87730a6a-03",
+    "I-human:2011604a1035b55715cee3352d54dd65c2df8838bd24f05d2b2a2cb2be938ac3-02",
+    "I-ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary commitment is to report a result, pattern, observation, or conclusion produced through research, evaluation, measurement, or a discrete trial.",
+   "definition": "An item that reports what was found or learned through inquiry, observation, evaluation, measurement, experimentation, or analysis.",
+   "distinguished_from": "Unlike Evidence Support, it presents the result itself as the main information rather than chiefly using that result to support a separate proposition.",
+   "examples": [
+    {
+     "doc": "human:90c95a5291773a01f9581ecec8b80c57cfe8185fe2253180959dbefc596954c2",
+     "excerpt": "A Bridgepoint Collaboratory for Research and Innovation study published in the American Journal of Infection Control found no clear guidance for cleaning wheelchairs despite their routine presence and mechanical complexity in healthcare institutions.",
+     "item_id": 22
+    },
+    {
+     "doc": "human:56b2958b7148ec079c2d06a1a1fb3ffccc326092d12c371974452dcebb758061",
+     "excerpt": "A West Virginia cave-photography experiment used long exposures and a 20-watt halogen floodlight that worked well in large passages and caverns.",
+     "item_id": 23
+    }
+   ],
+   "name": "Finding",
+   "subsumes": [
+    "I-human:90c95a5291773a01f9581ecec8b80c57cfe8185fe2253180959dbefc596954c2-06",
+    "I-human:56b2958b7148ec079c2d06a1a1fb3ffccc326092d12c371974452dcebb758061-03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main function is to judge the strengths, weaknesses, effectiveness, risks, limitations, performance, or suitability of a work, object, practice, experience, idea, or conduct.",
+   "definition": "An item that evaluates a subject by identifying its quality, effectiveness, limitations, risks, tradeoffs, performance, or suitability.",
+   "distinguished_from": "Unlike Interpretation, it makes an evaluative judgment rather than chiefly explaining meaning, and unlike Evidence Support it delivers the assessment rather than merely supplying grounds for one.",
+   "examples": [
+    {
+     "doc": "human:eafc2a065323372bd3254147683f20aa351d6d945e0714171a7d6b8dd6f1e72a",
+     "excerpt": "The Ancient Hero would feel less arbitrary and punitive if players had more ways to learn about or interact with him; the language barrier hinders his alliance and explanation before taking the time stone, though page and deadline constraints are acknowledged.",
+     "item_id": 17
+    },
+    {
+     "doc": "human:ece58944b1dfbcc290d224ec3f52b9a8058c35bd33c54fd94db79bf761cd4639",
+     "excerpt": "A later Davis Vantage Pro2 performed well for several years until its console began losing sensor connections; although never installed correctly, it adequately met the writer’s needs.",
+     "item_id": 6
+    },
+    {
+     "doc": "human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb",
+     "excerpt": "Chiropractic is characterized as comparatively safe because it uses neither drugs nor surgery and therefore avoids their associated side effects and complications.",
+     "item_id": 37
+    }
+   ],
+   "name": "Critical Evaluation",
+   "subsumes": [
+    "I-human:eafc2a065323372bd3254147683f20aa351d6d945e0714171a7d6b8dd6f1e72a-02",
+    "I-human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb-06",
+    "I-human:ece58944b1dfbcc290d224ec3f52b9a8058c35bd33c54fd94db79bf761cd4639-01",
+    "I-human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb-07",
+    "I-human:e775178a6ed9aa862a6038841682f6cab48e668c735de1351d84dc89735bfede-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the principal explanation of what established facts, experiences, identity markers, evidence, or work mean or imply.",
+   "definition": "An item that derives thematic, causal, strategic, symbolic, social, or conceptual meaning from established facts, experiences, identity choices, evidence, or work.",
+   "distinguished_from": "Unlike Concept Explanation, it interprets the significance of already presented material rather than teaching the subject itself, and unlike Integrative Synthesis it need not combine multiple profile strands.",
+   "examples": [
+    {
+     "doc": "ai:38bedd3d1210ec0a21ca2b88b404f3e4a12989fb815c55ac97414cd3207ebc5f",
+     "excerpt": "The debut’s sequence creates an emotional progression from trauma, loss, and disorientation toward healing, acceptance, and spiritual stability, turning individually readable essays into a coherent memoir journey.",
+     "item_id": 13
+    },
+    {
+     "doc": "ai:c69c4cb90a177ee619470b0f65ccc9eef2dd24a4319255b1ca65948bed075ee8",
+     "excerpt": "Anonymity is presented as enabling expression without social expectations, identity-based judgment, or personal-branding pressures, thereby supporting candid thought, creativity, and more genuine interaction.",
+     "item_id": 16
+    },
+    {
+     "doc": "ai:072956816ec8ee7eb59dbffd4a1ccec09fb189378eedfdd9c0ac7f1d457c3f01",
+     "excerpt": "The review is interpreted as evidence that comprehensive, patient-centered nurse practitioner care can improve outcomes for vulnerable populations, manage chronic illness effectively, and reduce demands on acute care services.",
+     "item_id": 6
+    }
+   ],
+   "name": "Interpretation",
+   "subsumes": [
+    "I-ai:38bedd3d1210ec0a21ca2b88b404f3e4a12989fb815c55ac97414cd3207ebc5f-01",
+    "I-human:d4fcef48a316f4ce717e595d01e716caf1583b6171215177562bd9260b71a249-01",
+    "I-ai:843379cfae62dd46f0d6e6c97c2af15099a2dfdbb33e03f7763d25f2b4c0ee60-01",
+    "I-ai:c69c4cb90a177ee619470b0f65ccc9eef2dd24a4319255b1ca65948bed075ee8-01",
+    "I-human:b4dd9088bc6aa71358c44dd0e5441b501cbf463bda24e22d09f20ec856bfa6a7-02",
+    "I-ai:c69c4cb90a177ee619470b0f65ccc9eef2dd24a4319255b1ca65948bed075ee8-03",
+    "I-ai:da1b01295d7514a65b42dbeb9077f5880e3b6ebf8018b80dedffa11e0b3eff0c-01",
+    "I-human:eafc2a065323372bd3254147683f20aa351d6d945e0714171a7d6b8dd6f1e72a-06",
+    "I-ai:072956816ec8ee7eb59dbffd4a1ccec09fb189378eedfdd9c0ac7f1d457c3f01-03",
+    "I-ai:9a7cf9a32b3b4ce972d577f4f93a5de80c0ba19ef1b66a753610bf9e5f4835c4-01",
+    "I-ai:be3a22dac9f928792ac1f3496125c3286b605413266ae87bc486aed3725e4398-02",
+    "I-ai:e317b2ba7c126ae2735276a2b4707d5587f2460be425491412d0cd5a6d43512a-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a governing lens, motif, metaphor, or concentrated formulation that shapes how surrounding material is understood.",
+   "definition": "A rhetorical item that establishes or foregrounds a memorable interpretive theme, motif, metaphor, or formulation for understanding surrounding personal or substantive material.",
+   "distinguished_from": "Unlike Interpretation, it supplies or emphasizes the lens itself rather than chiefly analyzing material through it, and unlike Values Statement it need not state a principle that guides the person.",
+   "examples": [
+    {
+     "doc": "human:42237c5424142e35a8a556656412fee803850f4f88fccc048ed34067c502f3ef",
+     "excerpt": "The essay broadens the American-dream motif to immigrants seeking better lives and presents Sophia, an outwardly ordinary person rather than a celebrity or executive, as someone whose sacrifices and achievements exemplify that ideal.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:c488d8cec4d7262542c22cfeb1f090572e1f7f3e4cedfa4a074619d8fb572be0",
+     "excerpt": "A pull quotation condenses Steffen’s current orientation: “Discontinuity is the job.”",
+     "item_id": 11
+    },
+    {
+     "doc": "ai:e206363cf1a94e539974f24e1079a0567b91ec78e389bf6095f6d70898646f8a",
+     "excerpt": "The opening motto, “Life’s too short for straight lines—so I traded my ruler for a paintbrush!”, playfully encapsulates the move from engineering to art.",
+     "item_id": 1
+    }
+   ],
+   "name": "Thematic Framing",
+   "subsumes": [
+    "I-human:42237c5424142e35a8a556656412fee803850f4f88fccc048ed34067c502f3ef-01",
+    "I-human:c488d8cec4d7262542c22cfeb1f090572e1f7f3e4cedfa4a074619d8fb572be0-02",
+    "I-ai:8bc4cdb9bd9f73a31925abe5c9017d728138b7b492b24026ce324a0e58ea5445-02",
+    "I-ai:e206363cf1a94e539974f24e1079a0567b91ec78e389bf6095f6d70898646f8a-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an overarching interpretation or takeaway that draws together multiple previously developed aspects of the profile or discussion.",
+   "definition": "A rhetorical item that integrates multiple preceding facts, experiences, qualities, activities, or conclusions into an overarching characterization, lesson, or final takeaway.",
+   "distinguished_from": "Unlike Interpretation, it consolidates several developed strands rather than interpreting one bounded subject, and unlike Legacy Assessment it need not focus on enduring significance.",
+   "examples": [
+    {
+     "doc": "ai:3c9d19fd3d7057aa73adfbe83b33654510393e4f6b5598bbc28fe8afbc8c8b6c",
+     "excerpt": "The closing reflection presents her career as evidence that perceived limitations can be challenged and that laughter, honesty, and authentic self-acceptance can inspire hope and transformation.",
+     "item_id": 16
+    },
+    {
+     "doc": "ai:220679322999343e2835cc90a3947b2f8920a84ffcdc1e29a8baca3e945ed764",
+     "excerpt": "The biography concludes that Kardashian repeatedly transformed controversy and entertainment exposure into a multibillion-dollar commercial platform and influence spanning fashion, entrepreneurship, media, and social justice, thereby reshaping the possibilities of modern celebrity on self-directed terms.",
+     "item_id": 6
+    },
+    {
+     "doc": "ai:9da4a34ad0f894252c658ea83362e0e8d22f337d2e191f4cba8e6320f16a7232",
+     "excerpt": "The profile closes by linking Issahaku’s identity, ancestral legacy, cultural commitment, Wikipedia participation, and broader educational work, presenting each contribution as part of an ongoing effort to help knowledge unite and empower people.",
+     "item_id": 8
+    }
+   ],
+   "name": "Integrative Synthesis",
+   "subsumes": [
+    "I-ai:3c9d19fd3d7057aa73adfbe83b33654510393e4f6b5598bbc28fe8afbc8c8b6c-01",
+    "I-ai:7982947d3d541304d0e94321d0c2ed7a2ea964f5dcc6ba37983f1393f0ce530c-02",
+    "I-ai:f5ea3a425f00f3aa395ce995a3b113f95ab4f5b5670e2b4e09b8e87290e1a0b9-01",
+    "I-human:86c95c074f86fbff8e031534e4a785e4c3b81d33c0777af5a06612f96970a3aa-01",
+    "I-ai:0acc713512036a2fe2a8eb1b12da096412bca8b0f72be7edf0f62417992dbe56-02",
+    "I-ai:18a9ef8610847ae3a3309a9256120b3bed2725d91223da9278860a734c0afa73-03",
+    "I-ai:19276a5eb9bcda49f1630da42d06ab8db4b8a35fe9af30430ecbe91c87730a6a-07",
+    "I-ai:20b1094509ea596cb87757060513b93f9b6835064e806ac52dec7ebe23f9921b-02",
+    "I-ai:220679322999343e2835cc90a3947b2f8920a84ffcdc1e29a8baca3e945ed764-01",
+    "I-ai:38bedd3d1210ec0a21ca2b88b404f3e4a12989fb815c55ac97414cd3207ebc5f-03",
+    "I-ai:4eea93a74cd6378a238138c59694cc4b1102ddf099d1cf229fc1c854807e6b67-10",
+    "I-ai:631969951ee6e4f3975db4bc078bb639533f397680257e35abaf808661926b31-02",
+    "I-ai:67d9c9c5b8513814d89531f6781b1a90a70d4d34566646751375553a86e74d40-01",
+    "I-ai:83d3efd50cbe8f2204b0bf1bd314a739a7fe97d07d0b2a330129632ffa390a35-03",
+    "I-ai:9a7cf9a32b3b4ce972d577f4f93a5de80c0ba19ef1b66a753610bf9e5f4835c4-02",
+    "I-ai:9da4a34ad0f894252c658ea83362e0e8d22f337d2e191f4cba8e6320f16a7232-01",
+    "I-ai:b4332401f3767e31aef6254f8b5d5f744c02f7ae28dca2434b85f95cf43a8e9c-02",
+    "I-ai:be3a22dac9f928792ac1f3496125c3286b605413266ae87bc486aed3725e4398-05",
+    "I-ai:e0ccad1a28e247d7addf4a2085f41ade8904dcddaf2aba07dde97f5c931b70db-02",
+    "I-ai:f3c9097fd46dcdec35b3776a903692fe38bfbe35646a65eb178f13151feb4b86-02",
+    "I-ai:ffdb2f1905e44d209da618847b6e67015cf55b288dad4896bd2f141a2284dec9-04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an explicit argument that the person or approach is distinctive, preferable, suitable, or deserving of selection or recognition.",
+   "definition": "An item that positions a person or approach relative to alternatives or synthesizes reasons for a favorable judgment, selection, recognition, or preference.",
+   "distinguished_from": "Unlike Credibility Support, it makes the comparative or selection judgment itself rather than merely supplying qualifications or validation, and unlike Critical Evaluation its purpose is favorable positioning.",
+   "examples": [
+    {
+     "doc": "human:b6d94db6813caacc459de7f05ace0ac4ae39112d19aebb7a055552d15b968b8b",
+     "excerpt": "Taylor claims his community presence and early work on proposed initiatives during the preceding 18 months demonstrate stronger current qualifications than Representative Bolden’s record; he respects her historic achievements and counsel but argues that those merits do not justify continued stagnation.",
+     "item_id": 9
+    },
+    {
+     "doc": "ai:739e6c7f53e7d07883608a36bda0c95a4ec21101529ca59284cb550cfe788f18",
+     "excerpt": "Huang is judged a strong candidate for the Best Research Article Award because of innovative self-healing and low-dielectric materials research, publication quality, and leadership; stronger evidence on citations, practical impact, and interdisciplinary collaboration would reinforce the case, particularly if the award values fundamental breakthroughs with application potential.",
+     "item_id": 6
+    },
+    {
+     "doc": "ai:b4332401f3767e31aef6254f8b5d5f744c02f7ae28dca2434b85f95cf43a8e9c",
+     "excerpt": "The profile distinguishes Vadali through a prevention-first approach that combines clinical rigor with everyday practicality and treats prevention as the basis of care rather than a secondary measure.",
+     "item_id": 9
+    }
+   ],
+   "name": "Comparative Positioning",
+   "subsumes": [
+    "I-human:b6d94db6813caacc459de7f05ace0ac4ae39112d19aebb7a055552d15b968b8b-01",
+    "I-ai:6af6273042771e2b0331d5deb9a0c30c13ff2398ccd12e82c2a4f6c8a83491e1-01",
+    "I-ai:739e6c7f53e7d07883608a36bda0c95a4ec21101529ca59284cb550cfe788f18-01",
+    "I-ai:a0e23ec8166ce915e27cac55b31def1b315d6300046311e8144948e1110e1a70-01",
+    "I-ai:b4332401f3767e31aef6254f8b5d5f744c02f7ae28dca2434b85f95cf43a8e9c-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a substantive factual or historical account of an external subject that is itself central to the site's content.",
+   "definition": "An item that informs readers about an external subject central to the site by presenting its facts, history, circumstances, people, or developments.",
+   "distinguished_from": "Unlike External Context, it treats the external subject as primary content rather than background used chiefly to situate the person or their work.",
+   "examples": [
+    {
+     "doc": "human:50b68d981182d675ce34ebdd0ddbca901474cbd2fc75d484f35bd0fc12212d78",
+     "excerpt": "The hotel burned down in winter 1931; accounts attribute firefighting difficulties to low hilltop water pressure, describe the distant brightness, and say students rescued belongings while Polish valuables were lost. Alliance College rebuilt there, closed in 1987, and its buildings became a women’s correctional facility.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:50b68d981182d675ce34ebdd0ddbca901474cbd2fc75d484f35bd0fc12212d78",
+     "excerpt": "Frank J. Marshall won the elite tournament undefeated and received the $1,000 first prize; he later held the official U.S. championship from 1909 through 1936 and founded the still-operating Marshall Chess Club in New York City.",
+     "item_id": 5
+    }
+   ],
+   "name": "Topical Account",
+   "subsumes": [
+    "I-human:50b68d981182d675ce34ebdd0ddbca901474cbd2fc75d484f35bd0fc12212d78-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a discrete time-sensitive report of a recent or imminent development relevant to the person, site, or subject area.",
+   "definition": "An item that briefly informs readers about a recent or forthcoming event, finding, milestone, release, image, or resource relevant to the person or site's subject matter.",
+   "distinguished_from": "Unlike Current Pursuits, it foregrounds the newsworthiness and timing of a development, and unlike Topical Account it provides a discrete update rather than a fuller subject account.",
+   "examples": [
+    {
+     "doc": "human:0363eab28aa2692db91db1891dd46225abfa6c800d597cac2f498d723a3b4843",
+     "excerpt": "A James Webb Space Telescope mid-infrared image reveals the spiral arms, disc dust, and bright core of Messier 77, a barred spiral galaxy 45 million light-years away in Cetus.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:1d58c7ec885180f347a0344202ee0f9704f566b714f06ce24b20f11a61770ca6",
+     "excerpt": "A February 2026 update announces that Molly vs The Machines will premiere that week in selected UK cinemas.",
+     "item_id": 1
+    }
+   ],
+   "name": "Topical Update",
+   "subsumes": [
+    "I-human:0363eab28aa2692db91db1891dd46225abfa6c800d597cac2f498d723a3b4843-01",
+    "I-human:1d58c7ec885180f347a0344202ee0f9704f566b714f06ce24b20f11a61770ca6-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate background about a profession, organization, institution, field, community, or broader condition needed to situate the person's work.",
+   "definition": "An item that supplies background about an external profession, organization, institution, field, community, or social condition that situates the person's activities and significance.",
+   "distinguished_from": "Unlike Biographical Context, it explains the surrounding environment rather than the person's own life circumstances, and unlike Topical Account the external subject serves primarily as context.",
+   "examples": [
+    {
+     "doc": "human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb",
+     "excerpt": "A directory identifies 18 U.S. chiropractic colleges and reports annual enrollment exceeding 14,000 students.",
+     "item_id": 60
+    },
+    {
+     "doc": "human:e775178a6ed9aa862a6038841682f6cab48e668c735de1351d84dc89735bfede",
+     "excerpt": "After several years as a prayer nucleus, the Ghana Evangelical Society was formally inaugurated at Liberation Circle on October 30, 1977, as a non-denominational Pentecostal fellowship dedicated to God and humanity.",
+     "item_id": 25
+    },
+    {
+     "doc": "human:e775178a6ed9aa862a6038841682f6cab48e668c735de1351d84dc89735bfede",
+     "excerpt": "The society was formally governed by an Executive Council that directed specialist divisions, but Agbozo’s prophetic authority meant he usually determined policy while the council managed implementation.",
+     "item_id": 42
+    }
+   ],
+   "name": "External Context",
+   "subsumes": [
+    "I-human:212e3c5539b330d062c8acbad0bdbf0a4f627d2100f51586bdca9b74255c97fb-09",
+    "I-ai:be3a22dac9f928792ac1f3496125c3286b605413266ae87bc486aed3725e4398-01",
+    "I-human:e775178a6ed9aa862a6038841682f6cab48e668c735de1351d84dc89735bfede-01",
+    "I-ai:7982947d3d541304d0e94321d0c2ed7a2ea964f5dcc6ba37983f1393f0ce530c-01",
+    "I-human:e775178a6ed9aa862a6038841682f6cab48e668c735de1351d84dc89735bfede-03",
+    "I-human:f07034f69ace45f84eaa8fe56eaac8352f9d3c8663da76aa853f92bc6058cb56-01",
+    "I-ai:b82ea971bd1f44de5d12a0dc798dcd4b5dbd281f3c48f53c28c10ec5f52c1c80-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily assesses or predicts the present condition, potential, or future trajectory of an external field, market, community, or environment.",
+   "definition": "An item that evaluates or forecasts the condition, potential, or likely development of a field, market, community, or environment relevant to the person's activities.",
+   "distinguished_from": "Unlike Future Direction, it concerns the prospects of an external environment rather than the person's own plans, and unlike External Context it makes an outlook judgment rather than supplying background.",
+   "examples": [
+    {
+     "doc": "human:bee276d2644c6ebbd2a100e64a27efee8a77fd65c8bb454e0fcd10bdd4dd4d07",
+     "excerpt": "Through collaboration with local incubators and shared workspaces, Meghnot regards Orlando’s gaming community as already vibrant and capable of substantial further growth.",
+     "item_id": 17
+    },
+    {
+     "doc": "ai:843379cfae62dd46f0d6e6c97c2af15099a2dfdbb33e03f7763d25f2b4c0ee60",
+     "excerpt": "The growing regional combination of technical competence, commercial execution, and strategic judgment is predicted to produce more venture-scale Egyptian companies and significant exits during the following decade.",
+     "item_id": 21
+    }
+   ],
+   "name": "Field Outlook",
+   "subsumes": [
+    "I-human:bee276d2644c6ebbd2a100e64a27efee8a77fd65c8bb454e0fcd10bdd4dd4d07-01",
+    "I-ai:843379cfae62dd46f0d6e6c97c2af15099a2dfdbb33e03f7763d25f2b4c0ee60-04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would leave readers unclear about what the site contains, why it exists, whom it addresses, or how its content should be understood.",
+   "definition": "An item that explains the site's purpose, scope, organizing concept, intended readership, or relationship to the person's broader activities.",
+   "distinguished_from": "Unlike Identity Introduction, it characterizes the site rather than the person, and unlike Navigation it explains the content environment rather than directing movement.",
+   "examples": [
+    {
+     "doc": "ai:e136370e15129c2305de507c5b2d6e73bf197216ea86228c5336bb1a6d7d0ab7",
+     "excerpt": "The site provides stage-based guides, Montessori and STEM recommendations, detailed practical articles, candid buying criteria, and product suggestions Eugen would personally give friends and relatives.",
+     "item_id": 9
+    },
+    {
+     "doc": "human:01f640f29b2b699659e0c5141cc59b73cb1103e1da46e4d1ffeb1569e458b5b9",
+     "excerpt": "The site now functions mainly as his blog, email server, and host for desired applications, with a tentative future role as a portfolio as his web design and development skills mature.",
+     "item_id": 7
+    }
+   ],
+   "name": "Site Orientation",
+   "subsumes": [
+    "B14"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate local rhetorical framing that signals a transition and establishes the scope or relationship of the material immediately following.",
+   "definition": "An item that frames a local section by signaling a thematic transition, defining its scope, or explaining how the following material relates to what preceded it.",
+   "distinguished_from": "Unlike Site Orientation, it organizes a local content sequence rather than the site as a whole, and unlike Navigation it frames meaning rather than providing destinations.",
+   "examples": [
+    {
+     "doc": "ai:ad6c4713e222f68d750e79c154414995c8cb2d87cdd95beb33aaeb1f858e3737",
+     "excerpt": "The profile transitions from brief current-work descriptions to fuller accounts of ventures Joseph has founded or helped develop across technology and traditional industries.",
+     "item_id": 9
+    },
+    {
+     "doc": "ai:e9225fbc4cae81cf0c747bab3daad6d6288610d2628c62ea1d9d74fc19b3ce3b",
+     "excerpt": "A second profile segment shifts from general self-presentation to explaining the fantasies, desires, and creative qualities she seeks in OnlyFans collaborations and personal connections.",
+     "item_id": 14
+    }
+   ],
+   "name": "Section Framing",
+   "subsumes": [
+    "I-ai:ad6c4713e222f68d750e79c154414995c8cb2d87cdd95beb33aaeb1f858e3737-01",
+    "I-ai:e9225fbc4cae81cf0c747bab3daad6d6288610d2628c62ea1d9d74fc19b3ce3b-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the bounded item's main document-level function is to help readers locate or move among relevant destinations.",
+   "definition": "A bounded component that guides readers to other parts of the site or to related profile, publication, project, service, or community destinations.",
+   "distinguished_from": "Unlike Work Showcase, it directs movement rather than presenting outputs, and unlike Supplementary Resources it organizes destinations rather than supplying additional material.",
+   "examples": [
+    {
+     "doc": "human:00bd7ed4e7c18d6f767e39f1ff3753cc95d424e25769c0bee1d793ddc9a611e4",
+     "excerpt": "Dedicated resource areas direct readers to Logevall’s books and media coverage about him.",
+     "item_id": 9
+    },
+    {
+     "doc": "ai:505f8e2eb42cd9f059129705f47eaeb9e578c17f5186a0b655c83aeae917a574",
+     "excerpt": "A contents component provides navigation among the profile’s principal topics.",
+     "item_id": 2
+    }
+   ],
+   "name": "Navigation",
+   "subsumes": [
+    "B19"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove a consolidated, scan-friendly means of reviewing key facts or previously presented profile material.",
+   "definition": "A bounded component that condenses key identity, biographical, professional, personal, or work-related information into an at-a-glance recap for rapid lookup.",
+   "distinguished_from": "Unlike Experience Record, it summarizes a cross-section of profile material rather than systematically recording history, and unlike Supplementary Resources it recapitulates core information rather than extending it.",
+   "examples": [
+    {
+     "doc": "ai:18a9ef8610847ae3a3309a9256120b3bed2725d91223da9278860a734c0afa73",
+     "excerpt": "A quick-reference profile records his full name, May 17, 1986 birth in Honolulu, family relationships, early-1990s-to-present career span, principal roles and media, performance specialties, and recognizable personal qualities.",
+     "item_id": 2
+    },
+    {
+     "doc": "ai:3c9d19fd3d7057aa73adfbe83b33654510393e4f6b5598bbc28fe8afbc8c8b6c",
+     "excerpt": "A concluding FAQ concisely restates Martinez’s identity, public reputation, cerebral palsy, principal achievements, and message of embracing difference, resisting stereotypes, and valuing authenticity over perfection.",
+     "item_id": 17
+    },
+    {
+     "doc": "ai:da1b01295d7514a65b42dbeb9077f5880e3b6ebf8018b80dedffa11e0b3eff0c",
+     "excerpt": "A compact comparison display recaps the four highlighted TransAngels scenes by title, release timing, and distinguishing appeal, contrasting romantic playfulness, club confidence, gamer-themed humor, and the raw energy of her debut.",
+     "item_id": 14
+    }
+   ],
+   "name": "Profile Reference",
+   "subsumes": [
+    "I-ai:18a9ef8610847ae3a3309a9256120b3bed2725d91223da9278860a734c0afa73-01",
+    "I-ai:3c9d19fd3d7057aa73adfbe83b33654510393e4f6b5598bbc28fe8afbc8c8b6c-02",
+    "I-ai:badd9ec4b5d92ac0ba1504b04061533056f230b22049ddbfd2d1e036fe7038e2-01",
+    "I-ai:d92e84bfb898c839604d9abc6a6fa393ee7484a38da71113220846a42f45e8b3-01",
+    "I-human:3d8056f0bcfd6ff67f6077fddb3fcf8809464bd31983e9798bc7eddb109a2429-01",
+    "I-human:51e10fc79a2004374e14dd2f02125439bd866c7b466ce4bc80ac5e42948eabbe-02",
+    "I-ai:0acc713512036a2fe2a8eb1b12da096412bca8b0f72be7edf0f62417992dbe56-03",
+    "I-ai:20dafba716d30194d0eb99475540b0f7948fc5b6687498a4c57a079bf3851d31-02",
+    "I-ai:24c6c190556c9c89404a1598ab066379c5047b67fab3261c1268908df307410d-02",
+    "I-ai:38bedd3d1210ec0a21ca2b88b404f3e4a12989fb815c55ac97414cd3207ebc5f-02",
+    "I-ai:52ade401be6e2ad224fa4b11a81279837d2255e2bdea5c80a6b20655adcaef33-02",
+    "I-ai:631969951ee6e4f3975db4bc078bb639533f397680257e35abaf808661926b31-01",
+    "I-ai:82470322533177496086c2bccccd7d2fe82283c3b5d98bda9d8f1e735cc98fae-02",
+    "I-ai:9f435cf29ce430da52b8cbcadd5385e419c1ca6cc9807216073979465eea1857-01",
+    "I-ai:bdc5f8fb8b8d09da987b0f8d6c5801a833cc0e22df54cd3e5195d9f22d194de7-01",
+    "I-ai:da1b01295d7514a65b42dbeb9077f5880e3b6ebf8018b80dedffa11e0b3eff0c-02",
+    "I-ai:f5ea3a425f00f3aa395ce995a3b113f95ab4f5b5670e2b4e09b8e87290e1a0b9-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item functions chiefly as an organized biographical record whose arrangement supports lookup, categorical review, or chronological review.",
+   "definition": "A bounded reference-oriented component that systematically organizes positions, education, service, relationships, or milestones into an accessible record of experience.",
+   "distinguished_from": "Unlike Biographical Context or Life Narrative, it prioritizes systematic reference over explanation or storytelling, and unlike Profile Reference it records structured history rather than a broad recap.",
+   "examples": [
+    {
+     "doc": "human:15604e55518178d264ce833ad4e50019b29c1354ea33273ccb0bde0f9c972016",
+     "excerpt": "A relationship chronology records Hadid’s reported or rumored involvement with Patrick Uretz in 2012, Nick Jonas in 2012, Cody Simpson during 2013–2014, Daniel Sharman in 2014, Lewis Hamilton in 2015 and reportedly 2018, Joe Jonas in 2015, and Malik from late 2015 through multiple separations and reunions.",
+     "item_id": 11
+    },
+    {
+     "doc": "human:40343ffca7293579ecd1b11cb207319583817609d0a5be173a76bf8782cbf6e9",
+     "excerpt": "An education entry identifies the University of Kansas School of Law.",
+     "item_id": 6
+    }
+   ],
+   "name": "Experience Record",
+   "subsumes": [
+    "B06"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove optional extending material while leaving the core self-description substantially intact.",
+   "definition": "A bounded component that supplies optional materials, fuller records, reusable assets, inventories, or extended information beyond the core profile.",
+   "distinguished_from": "Unlike Navigation, it contributes additional material rather than guiding movement, and unlike Profile Reference it extends rather than recapitulates the core profile.",
+   "examples": [
+    {
+     "doc": "ai:3144dd57528cce780c539d1ca8529081f87c50f8b06594ffee796e227458362f",
+     "excerpt": "An equipment inventory identifies Canon 1Ds Mark III, 5DS R, and R5 cameras with L-series lenses; Pro Trekker AW II and Compu Trekker Plus AW bags; Manfrotto Virtual Reality and Pan Head; National Geographic NEGH2 Hydrostatic; and Kase Revolution Professional, 95MM Master, K9 Entry Level, and Armour Entry Level kits.",
+     "item_id": 8
+    },
+    {
+     "doc": "ai:220679322999343e2835cc90a3947b2f8920a84ffcdc1e29a8baca3e945ed764",
+     "excerpt": "A concluding FAQ supplies reference answers: recent estimates place Kardashian’s net worth above $1.7 billion; she has four children—North, Saint, Chicago, and Psalm—with Kanye West; she passed California’s first-year law exam in 2021 but is not licensed; SKIMS sells inclusive shapewear and apparel; and her philanthropy emphasizes criminal justice, wrongful convictions, and legal equity.",
+     "item_id": 7
+    }
+   ],
+   "name": "Supplementary Resources",
+   "subsumes": [
+    "B20"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove the document's organized record of sources used for verification, provenance assessment, or further inquiry.",
+   "definition": "A bounded component that records the sources or provenance informing document content so readers can verify its foundations or pursue the subject further.",
+   "distinguished_from": "Unlike Evidence Support, it preserves a document-level verification trail rather than advancing one claim, and unlike Supplementary Resources its primary function is source documentation.",
+   "examples": [
+    {
+     "doc": "human:56c95337465d79a20cffe581d86f803ab0dd9aa719497fa2af26bb0f90e8503f",
+     "excerpt": "A source section documents five books on yoga philosophy, meditation, and race- and ethnicity-based stress and trauma that inform the reflection.",
+     "item_id": 8
+    },
+    {
+     "doc": "ai:8bc4cdb9bd9f73a31925abe5c9017d728138b7b492b24026ce324a0e58ea5445",
+     "excerpt": "A brief source section lists three journal citations intended to document the research basis for the page’s health claims.",
+     "item_id": 16
+    }
+   ],
+   "name": "Source Documentation",
+   "subsumes": [
+    "I-human:56c95337465d79a20cffe581d86f803ab0dd9aa719497fa2af26bb0f90e8503f-02",
+    "I-human:773bf6623c8b2b382fd38bbb2a3b45757c06aed4c331433fd8380ad37852cf3b-02",
+    "I-ai:8bc4cdb9bd9f73a31925abe5c9017d728138b7b492b24026ce324a0e58ea5445-06"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main purpose is transparency about a circumstance that materially affects trust, interpretation, expectations, limitations, or permitted use.",
+   "definition": "An item that transparently states affiliations, interests, constraints, commercial relationships, authorship conditions, limitations, or other interpretation-relevant circumstances.",
+   "distinguished_from": "Unlike Biographical Context, it is included because the circumstance affects interpretation or trust, and unlike Reuse Governance it discloses a condition rather than regulating reuse.",
+   "examples": [
+    {
+     "doc": "human:a3011f69fdb6b724ae554f527459b7d98d2a04d5616ad9e24a8237b81fe01898",
+     "excerpt": "Searches may also include user forums where the author answered questions from 2016 through 2022, but their unsupported or incorrect claims require caution.",
+     "item_id": 6
+    },
+    {
+     "doc": "human:002ff76b66ce6f6e0e6133da6c3011d2923caa1cdf62fbcc1fd51c9fafdad506",
+     "excerpt": "A second elderly cat now shares the home, and both cats may wake guests early; anyone needing quiet sleep beyond about six o’clock may find the accommodation unsuitable.",
+     "item_id": 5
+    }
+   ],
+   "name": "Relevant Disclosure",
+   "subsumes": [
+    "B21"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate permissions, conditions, attribution requirements, or objections governing reuse of the person's or site's material.",
+   "definition": "An item that grants, limits, conditions, or challenges the quotation, reproduction, adaptation, linking, or other reuse of material.",
+   "distinguished_from": "Unlike Relevant Disclosure, it regulates treatment of material rather than merely revealing an interpretation-relevant circumstance, and unlike Acknowledgment it prescribes attribution rather than recording it.",
+   "examples": [
+    {
+     "doc": "human:50b68d981182d675ce34ebdd0ddbca901474cbd2fc75d484f35bd0fc12212d78",
+     "excerpt": "Other sites may link to the material, with attribution requested.",
+     "item_id": 23
+    },
+    {
+     "doc": "human:6c8c78d9bb96d09832d41af0c40df4da67b8f2d3208e13a9afaaee22aa7e83f7",
+     "excerpt": "Because the nonprofessional site exists to circulate ideas and stimulate discussion, readers may quote or link to its work provided they acknowledge 10.2.3.248:8071/ as the source; Dave commits to similarly crediting others.",
+     "item_id": 4
+    }
+   ],
+   "name": "Reuse Governance",
+   "subsumes": [
+    "I-human:50b68d981182d675ce34ebdd0ddbca901474cbd2fc75d484f35bd0fc12212d78-03",
+    "I-human:6c8c78d9bb96d09832d41af0c40df4da67b8f2d3208e13a9afaaee22aa7e83f7-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the bounded item's primary purpose is to preserve recognition, authorship, contribution, assistance, inspiration, or thanks owed to another party.",
+   "definition": "A bounded component that records credit, authorship, contribution, assistance, inspiration, or thanks owed to other people or organizations.",
+   "distinguished_from": "Unlike Credibility Support, it recognizes others rather than validating the subject, and unlike Memorial Tribute it records contribution or thanks rather than commemoration after death.",
+   "examples": [
+    {
+     "doc": "ai:20b1094509ea596cb87757060513b93f9b6835064e806ac52dec7ebe23f9921b",
+     "excerpt": "The author credits his wife Shamila and close friend Er. Keelai Irfan with providing steadfast encouragement that sustained pursuit of his vision through adversity.",
+     "item_id": 8
+    },
+    {
+     "doc": "ai:69b69bf6ad936a28a5061e0e7d06e851dfb40efcb0220ef86d87f4b651fac01f",
+     "excerpt": "A contributor biography presents Ethan Richards as an experienced writer and researcher who studies human personalities and aims to make complex subjects clear and insightful for readers.",
+     "item_id": 14
+    }
+   ],
+   "name": "Acknowledgment",
+   "subsumes": [
+    "B22"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's principal function is to honor a deceased person, animal, or other significant figure or preserve a dedication made in their memory.",
+   "definition": "An item or bounded component that commemorates a deceased figure through tribute, remembrance, quotation, portrait, or dedication.",
+   "distinguished_from": "Unlike Acknowledgment, it preserves memory after death rather than recording contribution or thanks, and unlike Associated Profile commemoration is its primary purpose.",
+   "examples": [
+    {
+     "doc": "human:50b68d981182d675ce34ebdd0ddbca901474cbd2fc75d484f35bd0fc12212d78",
+     "excerpt": "The page is dedicated to Keith Moyar, a former Cambridge Springs resident who died prematurely.",
+     "item_id": 27
+    },
+    {
+     "doc": "human:42237c5424142e35a8a556656412fee803850f4f88fccc048ed34067c502f3ef",
+     "excerpt": "A later memorial records George Kulich’s sudden death on November 4, 2007 and dedicates the website to the memory of Sophia’s husband, business partner, and closest companion.",
+     "item_id": 23
+    },
+    {
+     "doc": "human:5d5c9d7f5f9fc976c79e5a43fd143389d7af2cec1d9674b7d12bbb88de998f18",
+     "excerpt": "A portrait commemorates Magic at age 12; she died in January 2003 at 13½, while her pictured daughter Erica has also reached 12.",
+     "item_id": 3
+    }
+   ],
+   "name": "Memorial Tribute",
+   "subsumes": [
+    "I-human:50b68d981182d675ce34ebdd0ddbca901474cbd2fc75d484f35bd0fc12212d78-04",
+    "I-human:42237c5424142e35a8a556656412fee803850f4f88fccc048ed34067c502f3ef-02",
+    "I-human:5d5c9d7f5f9fc976c79e5a43fd143389d7af2cec1d9674b7d12bbb88de998f18-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main function is to seek a specific factual answer, clarification, confirmation, explanation, or requested material.",
+   "definition": "An item that asks for factual information, clarification, confirmation, explanation, or access to particular material.",
+   "distinguished_from": "Unlike Invitation, it solicits a specific answer or item rather than encouraging open-ended engagement.",
+   "examples": [
+    {
+     "doc": "human:1a9b6017057d7b7ceb56347a3684fc1dd9fdee168f73ce98a172f9684b4529da",
+     "excerpt": "On May 13, 2025, Robert B asks whether a Henry’s operating in Brevard, North Carolina, was historically connected to the chain rather than being solely local.",
+     "item_id": 6
+    },
+    {
+     "doc": "human:eafc2a065323372bd3254147683f20aa351d6d945e0714171a7d6b8dd6f1e72a",
+     "excerpt": "The commenter asks for the explanation behind the Counselor’s tentacles.",
+     "item_id": 14
+    }
+   ],
+   "name": "Information Inquiry",
+   "subsumes": [
+    "I-human:1a9b6017057d7b7ceb56347a3684fc1dd9fdee168f73ce98a172f9684b4529da-02",
+    "I-human:eafc2a065323372bd3254147683f20aa351d6d945e0714171a7d6b8dd6f1e72a-07"
+   ]
+  }
+ ]
+}

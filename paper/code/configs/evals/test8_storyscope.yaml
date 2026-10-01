@@ -1,0 +1,27 @@
+extends: _base.yaml
+name: StoryScope
+number: 8
+group: Out of domain
+asks: Short fiction from matched prompts, human against five models.
+upstream: >
+  StoryScope creative-writing evaluation set: 1,384 prompts x 6 authors (one
+  human, five models), matched by prompt.
+data_dir: test8_storyscope
+legacy_item_stem: storyscope   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+legacy_npz_stem: storyscope   # the stem this eval's predictions were written under
+                        # before this repository existed; read by
+                        # scripts/data/import_results.py
+
+report:
+  group_by: [model]
+  in_set: true
+  # `pair_id` joins the human story and the five model responses to one prompt,
+  # which supports within-prompt analysis and a grouped split that cannot leak a
+  # prompt across folds.
+  pair_on: pair_id
+
+notes: >
+  Creative Writing throughout, and the outlines run about twice the in-domain
+  item count (roughly 28 items). It is the format that leaks least through the
+  extraction stage, which makes it a useful contrast with the entity-dense formats.

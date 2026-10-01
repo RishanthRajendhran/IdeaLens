@@ -1,0 +1,745 @@
+# TASK
+
+Using your general knowledge of {{FORMAT}}, propose an initial inventory of
+the primary functions that substantive, rhetorical, and bounded structural
+outline items commonly perform in {{FORMAT}} documents.
+
+This is a purely top-down, format-level hypothesis. You are not being shown
+any example documents, extracted outlines, or labelled items. A later pass
+will test and refine this inventory against real examples.
+
+The goal is not to describe the subject matter or surface formatting of
+{{FORMAT}}. The goal is to identify recurring communicative,
+information-bearing, rhetorical, organizational, attributional,
+documentary, and supplementary jobs performed by units in its latent
+composition and structural plan.
+
+
+# FORMAT
+
+Format: {{FORMAT}}
+
+Description: {{FORMAT_DESCRIPTION}}
+
+Treat the full description as defining the relevant format. If it includes
+multiple subtypes, account for that breadth rather than assuming that all
+documents follow the structure of one especially familiar subtype.
+
+A role need not occur in every subtype, but it should represent a recurring
+function within the format rather than a convention unique to one narrow
+subtype.
+
+
+# POSSIBLE TOPICS
+
+Documents or content instances in this format may concern many unrelated
+topics, including:
+
+{{TOPICS_LIST}}
+
+Use this breadth only as a cross-topic generality check. Do not create
+topic-specific roles from the list.
+
+A role need not occur in every document or apply equally to every topic or
+subtype. It must, however, represent a recurring function that could
+plausibly appear across multiple documents and more than one subject area.
+
+
+# DIFFERENT KINDS OF FORMAT
+
+Some formats are primarily expository or persuasive. Others may be
+narrative, instructional, interactive, conversational, promotional, legal,
+list-based, data-oriented, or incomplete.
+
+Interpret "function" in a way appropriate to the format:
+
+- In discursive documents, a role may identify what a move contributes to
+  an explanation, argument, account, or recommendation.
+- In narrative documents, a role may identify what a move contributes to
+  events, characters, setting, tension, perspective, or resolution.
+- In interactive or multi-participant documents, a role may identify what
+  a contribution does within the exchange.
+- In instructional documents, a role may identify what a move contributes
+  to a goal, procedure, condition, warning, or outcome.
+- In listings or structured information, a role may identify an item's
+  information-bearing purpose, such as identifying, defining, describing,
+  grouping, comparing, or supplying an attribute.
+- In incomplete or access-limited content, a role may identify the
+  function of the substantive material or access-related notice that is
+  actually present.
+
+In any format, a bounded structural component may also have a role when its
+inclusion performs a meaningful document-level function.
+
+Such functions may include:
+
+- summarizing content;
+- supporting navigation;
+- documenting sources;
+- defining terminology;
+- supplying supplementary material;
+- disclosing relevant information;
+- recording attribution or contribution;
+- organizing material for reference or later use.
+
+Identify the function performed by the component, not merely its
+conventional name, visual form, markup, or location.
+
+For example, the relevant function is documenting sources rather than
+merely being formatted as a source list, or supplying supplementary
+material rather than merely being labelled as an appendix.
+
+Do not force every format into the structure of a conventional essay or
+argument.
+
+For multi-author, interactive, compiled, or automatically structured
+formats, evaluate an item's function within the resulting document or
+content instance. Do not assume that the document has a single writer or a
+single unified intention.
+
+
+# UNIT BEING LABELLED
+
+The units to be labelled are composition-level and structural outline
+items.
+
+An outline item represents one locally continuous commitment in the
+document's latent composition and structural plan.
+
+A commitment may be:
+
+1. SUBSTANTIVE: a claim, fact, event, example, method, finding, decision,
+   recommendation, or other content contribution;
+
+2. RHETORICAL: a move that frames, motivates, qualifies, supports,
+   contrasts, interprets, or concludes other content;
+
+3. STRUCTURAL: a bounded document component included to organize,
+   navigate, attribute, document, supplement, disclose, or otherwise
+   support the document's communicative function.
+
+An outline item is not necessarily one:
+
+- sentence;
+- paragraph;
+- section;
+- heading;
+- speaker turn;
+- list entry;
+- data field;
+- citation or link;
+- formatting block;
+- markup command.
+
+Examples of the intended scale include:
+
+- advancing one claim together with its immediate qualification;
+- presenting one distinct example or body of support;
+- describing one action or procedure with its attached conditions;
+- reporting one substantively unified event, observation, or outcome;
+- identifying one constraint and its direct consequence;
+- characterizing or synthesizing related material around one point;
+- developing one coherent narrative or figurative move;
+- representing one bounded component whose internal entries jointly
+  perform the same documentary or structural function.
+
+These examples illustrate unit scale only. They are not a required or
+exhaustive role inventory.
+
+Every proposed role must be suitable as the primary label for a complete
+outline item at this level of granularity.
+
+Do not propose roles whose natural unit would instead be:
+
+- an individual word, marker, or phrase;
+- an entire document regardless of its internal commitments;
+- a purely visual or typographic element;
+- a formatting command or markup token;
+- a structural container considered only as a container, without regard to
+  its communicative or documentary function.
+
+A bounded component may receive a structural role when the component's
+inclusion and function are themselves part of the document plan.
+
+
+# FUNCTIONAL LENS
+
+A role names the primary substantive, rhetorical, communicative,
+information-bearing, or structural job that an outline item performs at its
+location in the document.
+
+Determine function contextually by considering:
+
+- what the item contributes;
+- why it is present at that point;
+- how it relates to nearby moves or components;
+- how it advances the document's overall communicative, informational, or
+  documentary purpose.
+
+For a bounded structural item, consider what would be lost if the component
+were omitted, not merely how the component is formatted or conventionally
+named.
+
+A role may be defined by the item's relationship to another move, another
+component, or the document's overall purpose, but the inventory does not
+need to follow any particular discourse-analysis theory.
+
+A role is not:
+
+- the item's topic or subject area;
+- the kind of entity it mentions;
+- its grammatical form;
+- its visual presentation;
+- its markup syntax;
+- its position alone;
+- the conventional name of a section or structural container without a
+  functional definition;
+- a summary of its specific content.
+
+The same kind of information may receive different roles in different
+contexts because it can be used for different purposes.
+
+For example, the same factual material could orient the reader, support a
+claim, illustrate a concept, establish a problem, provide a comparison, or
+motivate an action. The appropriate role depends on its primary function
+in context.
+
+A role may correspond to a recurring kind of bounded component when it
+names the component's function rather than its appearance.
+
+For example, a role may capture source documentation, navigation,
+supplementation, attribution, disclosure, or summarization when that
+function recurs in the format. It should not merely label an item as a
+source list, appendix, menu, footnote, table, or other surface form.
+
+
+# SINGLE PRIMARY ROLE
+
+The later labelling stage will assign exactly one primary role to each
+outline item.
+
+The role represents the item's main composition-level or structural
+function at that point in the document.
+
+An item may incidentally produce secondary effects. Do not create
+multi-label or compound roles to represent every possible effect.
+
+If two functions could be independently planned and would both be central,
+they should normally correspond to separate outline items rather than a
+compound role.
+
+If an item has one central function and secondary effects, its role should
+name only the central function.
+
+Do not propose compound role names such as:
+
+- "Background/Evidence";
+- "Claim and Recommendation";
+- "Instruction/Warning";
+- "Event plus Interpretation";
+- "Description and Evaluation";
+- "Summary/Navigation";
+- "Attribution and Evidence."
+
+Instead, define distinct roles with assignment tests that allow a later
+classifier to select the primary one.
+
+Roles need not be logically incapable of overlap, but they must support a
+principled choice of one primary label in context.
+
+Structural items also receive exactly one primary role.
+
+When a bounded component contains substantive material, choose the function
+that best explains the outline item as extracted. If the item primarily
+states a claim, reports evidence, gives instructions, narrates an event, or
+performs another substantive move, use the corresponding substantive role
+even if the material appears inside a table, note, appendix, or other
+component.
+
+Use a structural role when the item's primary commitment is the inclusion
+and document-level function of the component itself.
+
+Do not assign a structural role merely because an item has a particular
+visual form or appears inside a conventionally named section.
+
+
+# GENERALITY
+
+Every role must be a genuinely cross-topic function.
+
+A role should retain the same meaning when applied to {{FORMAT}} documents
+on substantially different subjects.
+
+If a role only makes sense for one topic, domain, named entity, specialized
+procedure, or narrow scenario, generalize it to the underlying function or
+remove it.
+
+Do not create separate roles tied only to:
+
+- a particular product, organization, person, or place;
+- one specialized procedure or technique;
+- one type of object, source, record, or dataset;
+- one legal, medical, technical, historical, commercial, or cultural
+  scenario;
+- one topic-specific kind of event or outcome.
+
+A more general role may still cover those cases when they perform the same
+function.
+
+Before retaining a candidate role, internally imagine it applying to
+outline items from at least three substantially different subject areas
+plausible for {{FORMAT}}. If its functional meaning changes across those
+applications, revise or remove it.
+
+Cross-topic generality does not mean that every role must apply across
+different formats.
+
+A structural role may be characteristic of {{FORMAT}} as long as it can
+retain the same function across different topics within that format.
+
+Do not reject a structural role merely because the corresponding component
+is conventional in only some formats or subtypes. Reject it when the
+proposed role names a surface convention rather than a recurring function.
+
+
+# FORMAT RELEVANCE
+
+Roles should be characteristic or recurrent enough in {{FORMAT}} to be
+useful for later classification.
+
+Do not include a role merely because it could theoretically occur in a
+document of this format.
+
+A role may be:
+
+- broadly common across the format;
+- characteristic of a recurring subtype named or implied by the format
+  description;
+- uncommon overall but sufficiently distinctive and recurrent to matter
+  when it appears.
+
+A role does not need to occur in every subtype. However, a role that makes
+sense only for a rare and narrowly defined scenario is too specific.
+
+Do not exclude a genuine recurring function merely because it is absent
+from the most familiar subtype of the format.
+
+For structural roles, consider whether the corresponding document-level
+function recurs often enough in the format to warrant a stable base role.
+Do not create a structural role for every component that could possibly
+appear.
+
+
+# ROLE GRANULARITY
+
+Keep roles at a comparable level of functional abstraction.
+
+A role is too broad if it collapses primary functions that a later
+classifier should distinguish.
+
+Roles such as the following are normally too broad unless the format makes
+a narrower interpretation clear:
+
+- "Information";
+- "Content";
+- "Main Material";
+- "Supporting Material";
+- "Document Component";
+- "Structure";
+- "Other."
+
+A role is too narrow if it describes:
+
+- one specialized procedure;
+- one particular type of source, record, or data;
+- one topic-specific assertion or action;
+- one narrow kind of event or outcome;
+- one purely visual, typographic, markup-specific, or platform-specific
+  realization with no distinct document-level function;
+- one named entity or object class.
+
+Prefer a parsimonious inventory that preserves the recurring functional
+distinctions needed to label outline items.
+
+Parsimony is secondary to functional distinctness. Do not create an
+umbrella role that combines several independently assignable functions
+merely to reduce the number of roles.
+
+Do not create separate roles merely because the same function:
+
+- appears in different sections or positions;
+- concerns different topics or entities;
+- uses different kinds of source material;
+- is expressed with different terminology;
+- appears in different document subtypes;
+- is realized through different surface forms;
+- appears in different kinds of containers.
+
+Do not create separate structural roles for different surface components
+when they perform the same underlying function.
+
+Conversely, do not merge a recurring structural function into a broad role
+such as "Other" or "Document Material" merely because it does not advance a
+substantive claim.
+
+
+# STRUCTURAL ROLE PRINCIPLES
+
+A structural role is appropriate when a bounded component's inclusion and
+document-level purpose are the primary commitment represented by the
+outline item.
+
+A structural role should name what the component accomplishes, such as:
+
+- orienting or summarizing;
+- enabling navigation;
+- documenting external sources;
+- supplying supplementary material;
+- defining reference terminology;
+- disclosing relevant information;
+- recording attribution or contribution;
+- collecting material for reference.
+
+These are examples of possible functions, not a mandatory role list.
+
+Do not create a structural role based only on:
+
+- a component's conventional title;
+- the presence of a heading;
+- visual separation from surrounding content;
+- a particular markup command;
+- numbering or citation syntax;
+- the use of a table, figure, note, list, or appendix form.
+
+A table may primarily report a finding, compare alternatives, present
+evidence, define values, or serve another substantive role. An appendix may
+primarily supply a method, evidence, examples, or supplementary
+documentation. Classify the item by its primary function, not its
+container.
+
+A bounded collection may receive one structural role when its entries
+jointly perform the same document-level function. Do not create one role
+per internal entry unless those entries are themselves extracted as
+independent outline items with different primary functions.
+
+
+# ROLE DISTINCTNESS
+
+Every pair of roles must support a principled single-label choice.
+
+Roles do not need to be logically incapable of overlap, but their
+definitions, assignment tests, and contrasts must explain which role should
+be primary when multiple functions appear plausible.
+
+Retain a role only if:
+
+1. it represents a recurring function in {{FORMAT}};
+2. it plausibly applies across multiple subject areas;
+3. it labels a complete composition-level or structural outline item;
+4. it is meaningfully distinguishable from every other retained role;
+5. merging it with its nearest alternative would erase a distinction that
+   matters during later labelling;
+6. if it is structural, it names a recurring document-level function rather
+   than a container, marker, or formatting convention.
+
+Merge or remove:
+
+- synonyms;
+- near-synonyms without a stable assignment difference;
+- narrower roles fully covered by another role;
+- roles distinguished only by document position;
+- roles distinguished only by topic or entity;
+- roles distinguished only by surface realization;
+- roles distinguished only by the visual or markup form of a component;
+- structural labels that do not specify what function the component
+  performs;
+- compound roles combining independently assignable functions.
+
+Do not merge roles merely because they often occur together or in
+succession. Functions that commonly co-occur may still require separate
+roles if they represent different primary jobs.
+
+Do not merge a structural role with a substantive role merely because the
+structural component contains substantive material. Distinguish them by
+the primary function of the extracted item.
+
+
+# NAMING
+
+Give each role a short name of one to three words.
+
+The name must identify the function itself rather than:
+
+- describe a narrow scenario;
+- summarize particular content;
+- name a topic, domain, or entity;
+- name a document location;
+- name a surface form without identifying its function;
+- name a markup or formatting convention;
+- combine multiple roles with a slash, ampersand, "and," or "plus."
+
+Use concise functional names in title case.
+
+Names should be interpretable across different topics within the format.
+
+For structural roles, name the document-level function rather than the
+conventional component.
+
+Prefer function-oriented names expressing purposes such as navigation,
+documentation, supplementation, attribution, disclosure, definition, or
+summarization over names that merely identify a visual container or markup
+form.
+
+Do not mechanically use these example terms as roles unless the functions
+are genuinely recurrent and distinct in {{FORMAT}}.
+
+
+# DEFINITION
+
+For each role, write one sentence defining the content or component it
+labels.
+
+The definition must:
+
+- identify the role's primary function;
+- be general across topics;
+- apply at the outline-item level;
+- avoid relying on a particular section heading or document position;
+- avoid relying on a particular entity or scenario;
+- avoid defining the role only through examples;
+- avoid treating visual or markup form as sufficient for assignment.
+
+For a structural role, the definition must state:
+
+- what document-level function the component performs;
+- what kind of bounded commitment the role labels;
+- why the function is more than formatting, position, or container type.
+
+
+# ASSIGNMENT TEST
+
+For each role, write one sentence stating when it should be selected as an
+item's single primary role.
+
+Frame the assignment test around the item's main contribution at that point
+in the document.
+
+Use this general test:
+
+"If this item were removed, what primary substantive, rhetorical, or
+structural function would disappear from the document at this point?"
+
+The assignment test should help a later classifier choose among plausible
+roles rather than merely repeat the definition.
+
+It should identify what makes the role primary, not every secondary effect
+the item may produce.
+
+For a structural role, the assignment test should explain what
+document-level function would be lost if the bounded component were
+omitted.
+
+It should also prevent the role from being selected merely because an item
+appears in a particular kind of container.
+
+
+# DISTINGUISHED FROM
+
+For each role, identify its nearest likely competitor or competitors and
+state the decisive functional difference in one sentence.
+
+Focus on distinctions that could plausibly cause disagreement during
+single-label assignment.
+
+Do not distinguish roles merely by:
+
+- wording;
+- document position;
+- topic or subject area;
+- named entities;
+- document length;
+- formatting;
+- markup syntax;
+- the presence of a quotation, citation, link, speaker tag, field name, or
+  other surface marker.
+
+For structural roles, distinguish the role from:
+
+- substantive roles that may appear inside the component;
+- other structural roles with different document-level purposes;
+- surface forms that do not independently determine function.
+
+Do not treat the presence of a source marker, link, table, heading, note,
+list, appendix, or markup command as sufficient evidence for a structural
+role.
+
+
+# INVENTORY SELF-CHECK
+
+Before returning the inventory, review it as a complete role system.
+
+
+## Coverage
+
+Would the inventory cover the major recurring substantive, rhetorical, and
+bounded structural functions found across {{FORMAT}} documents and the
+recurring subtypes indicated by the format description?
+
+In particular, consider whether the format commonly contains bounded
+components whose organizational, navigational, attributional,
+documentary, supplementary, disclosure, or reference function would not be
+covered by the substantive roles.
+
+Do not seek exhaustive coverage of every rare convention.
+
+Do not add structural roles merely to cover every possible formatting
+element or component.
+
+
+## Format breadth
+
+Has the inventory been based too heavily on one familiar subtype of
+{{FORMAT}}?
+
+If so, revise it to cover other recurring subtypes without introducing
+roles that are merely subtype labels.
+
+
+## Cross-topic generality
+
+Could every role retain the same functional meaning across several
+substantially different subjects?
+
+Remove or generalize roles that fail this test.
+
+For structural roles, test whether the same document-level function remains
+stable across different topics within the format.
+
+
+## Single-label usability
+
+Could a later classifier usually choose one primary role for an item using
+the definitions, assignment tests, and contrasts?
+
+Clarify, split, or merge roles whose boundaries remain arbitrary.
+
+Do not solve ambiguity by creating compound roles.
+
+For an item inside a bounded component, could the classifier distinguish
+between the component's structural function and the substantive function
+of its contents?
+
+
+## Non-redundancy
+
+Are any two roles synonyms, near-synonyms, or distinctions without a stable
+classification consequence?
+
+If so, merge or remove them.
+
+Are any structural roles merely alternate names for different containers
+that perform the same function?
+
+If so, merge them at the level of their shared function.
+
+
+## Functional purity
+
+Does every role name a substantive, rhetorical, communicative,
+information-bearing, or structural function rather than a topic, entity,
+position, formatting unit, markup command, or surface form?
+
+A structural role is functionally pure when it identifies what a bounded
+component accomplishes for the document rather than merely what the
+component is called or how it is displayed.
+
+Revise any role that fails this test.
+
+
+## Structural coverage
+
+Could every recurring bounded structural item likely to be produced by the
+outline extractor receive a meaningful primary role?
+
+Consider whether the format commonly contains components that:
+
+- summarize;
+- support navigation;
+- document sources;
+- define terminology;
+- provide supplementary material;
+- disclose relevant information;
+- record attribution or contribution;
+- organize material for reference.
+
+Do not require a separate role for each component type. Group components
+when they perform the same underlying function, and separate them when
+their primary document-level functions differ.
+
+
+## Comparable abstraction
+
+Are the roles at approximately the same functional level?
+
+Revise any inventory that mixes broad umbrella categories with very narrow
+scenario-specific or component-specific roles.
+
+Do not reject structural roles merely because they concern the document's
+architecture. Instead, ensure that they name functions at a level
+comparable to the substantive and rhetorical roles.
+
+
+## Minimal sufficiency
+
+Could any role be removed without losing a recurring and practically useful
+functional distinction?
+
+If yes, remove or merge it.
+
+Would merging any remaining pair erase a distinction that would matter
+during later single-label assignment?
+
+If yes, keep them separate.
+
+Could any role be divided only by introducing topic-specific,
+position-specific, subtype-specific, container-specific, or overly narrow
+distinctions?
+
+If yes, keep it unified.
+
+Parsimony does not justify merging a recurring structural function into an
+unrelated substantive role.
+
+
+# OUTPUT FORMAT
+
+Return only valid JSON. Do not include Markdown, commentary, explanations,
+or additional fields.
+
+Use exactly this structure:
+
+{
+  "format": "{{FORMAT}}",
+  "roles": [
+    {
+      "name": "<one-to-three-word functional role name>",
+      "definition": "<one sentence defining the content or component this role labels>",
+      "assignment_test": "<one sentence stating when this is the item's single primary role>",
+      "distinguished_from": "<one sentence identifying the nearest competing role or roles and the decisive difference>"
+    }
+  ]
+}
+
+Requirements:
+
+- `format` must be exactly `"{{FORMAT}}"`.
+- `roles` must be a non-empty JSON array.
+- Every role must contain exactly `name`, `definition`, `assignment_test`,
+  and `distinguished_from`.
+- Role names must be unique.
+- Do not return compound or multi-label role names.
+- Do not include hypothetical documents or examples in the output.
+- Do not choose a target number of roles merely to fill out the inventory.
+- Return a parsimonious inventory that preserves the recurring,
+  practically useful substantive, rhetorical, and structural distinctions
+  of {{FORMAT}}.

@@ -1,0 +1,16 @@
+# Shared pipeline defaults. BATCH ONLY -- never the online/synchronous path for
+# a corpus. Batch is half price and the two bulk stages are most of the spend.
+transport: vertex_batch
+gcs:
+  bucket: ${IDEADET_GCS_BUCKET:-}      # your own bucket; Vertex batch needs GCS
+  prefix: ideadet
+billing_label: ${IDEADET_BILLING_LABEL:-ideadet}
+poll_interval: 60
+# Chunking bounds the blast radius: a job that dies at 90% would otherwise take
+# its whole format down. Each chunk writes its per-document files as soon as it
+# lands and a rerun resumes from disk. 0 = one job per format.
+chunk: 0
+jobs: 1
+# Formats are processed ONE AT A TIME rather than interleaved, so concurrent jobs
+# share a system prefix instead of evicting each other's cache.
+format_jobs: 1

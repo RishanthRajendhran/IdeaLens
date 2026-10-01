@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/role-assignment.json",
+  "title": "Outline Role Assignment",
+  "description": "Single-primary-role assignments for every outline item, together with any newly invented functional roles.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "invented_roles",
+    "items"
+  ],
+  "properties": {
+    "invented_roles": {
+      "type": "array",
+      "description": "Roles invented because no base-vocabulary role correctly captured an item's primary function. May be empty.",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/inventedRole"
+      }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Exactly one primary-role assignment for every supplied outline item, in the original item order.",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/itemAssignment"
+      }
+    }
+  },
+  "$defs": {
+    "inventedRole": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "definition",
+        "assignment_test",
+        "distinguished_from"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[^\\s]+(?:\\s+[^\\s]+){0,2}$",
+          "description": "A unique one-to-three-word functional role name that does not duplicate a base-role name."
+        },
+        "definition": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "One sentence defining the content or bounded component labelled by the invented role."
+        },
+        "assignment_test": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "One sentence stating when the invented role should be selected as an item's single primary role."
+        },
+        "distinguished_from": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "One sentence identifying the nearest base or invented competitor and the decisive functional distinction."
+        }
+      }
+    },
+    "itemAssignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "role_name",
+        "is_invented"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The ID of the corresponding outline item."
+        },
+        "role_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "The exact name of either a supplied base role or a role defined in invented_roles."
+        },
+        "is_invented": {
+          "type": "boolean",
+          "description": "True exactly when role_name refers to a role defined in invented_roles."
+        }
+      }
+    }
+  }
+}

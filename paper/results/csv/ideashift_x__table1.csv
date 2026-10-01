@@ -1,0 +1,17 @@
+Arm,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+high-resource · level 0,model ideas (TPR),"3,729",94.2,98.3,99.6,70.6,–,–,29.1,0.0,100.0
+high-resource · level 5,"human ideas, AI prose (FPR)","3,721",0.8,6.3,79.3,1.2,–,–,3.4,0.0,96.6
+high-resource · human,human ideas (FPR),"3,729",0.0,0.0,0.0,0.1,–,–,0.1,0.0,0.0
+mid-resource · level 0,model ideas (TPR),"2,971",96.4,96.7,97.0,78.1,–,–,14.7,0.0,99.1
+mid-resource · level 5,"human ideas, AI prose (FPR)","2,965",0.8,3.7,50.9,1.2,–,–,1.1,0.0,80.5
+mid-resource · human,human ideas (FPR),"2,976",0.0,0.0,0.0,0.1,–,–,0.0,0.0,0.0
+low-resource · level 0,model ideas (TPR),"3,452",95.4,49.9,51.6,78.9,–,–,1.1,0.0,58.0
+low-resource · level 5,"human ideas, AI prose (FPR)","3,430",0.6,0.0,1.2,1.0,–,–,0.0,0.0,8.1
+low-resource · human,human ideas (FPR),"3,455",0.2,0.0,0.0,0.3,–,–,0.0,0.0,0.0
+All languages · level 0,model ideas (TPR),"10,152",95.3,81.4,82.5,75.6,–,–,15.4,0.0,85.4
+All languages · level 5,"human ideas, AI prose (FPR)","10,116",0.7,3.4,44.5,1.2,–,–,1.6,0.0,61.9
+All languages · human,human ideas (FPR),"10,160",0.1,0.0,0.0,0.2,–,–,0.0,0.0,0.0
+"AUC, high, level 0 vs human",,,0.998,1.000,1.000,0.988,–,–,0.987,0.267,1.000
+"AUC, mid, level 0 vs human",,,0.999,1.000,0.999,0.990,–,–,0.976,0.188,0.997
+"AUC, low, level 0 vs human",,,0.998,0.982,0.956,0.989,–,–,0.826,0.333,0.853
+"AUC, all, level 0 vs human",,,0.998,0.997,0.985,0.989,–,–,0.940,0.277,0.949

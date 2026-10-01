@@ -1,0 +1,1563 @@
+{
+ "canonical_features": [
+  {
+   "name": "claim_adjudicability",
+   "description": "Measures whether a substantive commitment is determinate enough for an independent reader to identify what would establish, contradict, or fulfill it.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "AGNOSTIC",
+    "Creative",
+    "News",
+    "Nonfiction",
+    "Personal About Page",
+    "Personal Blog"
+   ],
+   "operationalization": "Using only this item, score each substantive assertion, prediction, intention, or formal or normative commitment and return the maximum. Score 0 for empty content, no commitment, or only an unspecified topic, aspiration, atmosphere, or praise. Score 1 when the target or asserted property is identifiable but the other remains materially vague. Score 2 when both are clear but a necessary contextual, temporal, logical, or completion boundary is missing. Score 3 when the stated constraints distinguish confirmation from contradiction, or fulfillment from nonfulfillment, without inventing essential conditions. Require only information necessary for that particular commitment; names, numbers, and citations are not mandatory. Assess fictional propositions under their stated premises. Definite publication or attribution facts are eligible. Do not verify truth externally, and do not penalize brevity.",
+   "subsumes": [
+    "independently_testable_commitment",
+    "claim_adjudicability",
+    "audit_locator_specificity",
+    "bounded_empirical_commitment",
+    "externally_locatable_commitment",
+    "external_resolvability",
+    "checkable_prospective_commitment"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "contingent_factual_anchoring",
+   "description": "Measures how strongly interconnected particulars bind an assertion to a distinguishable instance, independently of whether those particulars support further reasoning.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Knowledge Article",
+    "Personal Blog"
+   ],
+   "operationalization": "Score assertions using only particulars supplied in this item, returning the maximum across assertions. Score 0 for empty content, abstractions, uninstantiated inventories, or unresolved referents. Score 1 when a subject or occasion is identified but its asserted properties remain broadly applicable. Score 2 when an identifiable instance is connected to a distinguishing action, state, relationship, or circumstance. Score 3 when interacting particulars jointly delimit what happened or which object or record is meant, such that changing a substantive detail would identify a materially different instance. Count semantic constraints, not names or numerals; one compact relationship can establish strong anchoring. Reasoning consequences are not required. Publication and authorship facts qualify when they establish specific relationships. Do not assess external truth or reward decorative precision.",
+   "subsumes": [
+    "bounded_claim_identifiability",
+    "contingent_factual_anchoring"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "load_bearing_specificity",
+   "description": "Measures whether particulars materially constrain an explanation, judgment, recommendation, or result rather than merely identifying or decorating its subject.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "AGNOSTIC",
+    "Nonfiction",
+    "User Reviews"
+   ],
+   "operationalization": "For each particular-to-conclusion relationship stated or directly entailed within this item, ask what would change if the particular changed; return the maximum score. Score 0 for empty content, no particulars, or details that only identify an object without affecting a substantive conclusion. Score 1 when particulars provide context but their effect on the conclusion is unspecified. Score 2 when a particular meaningfully changes an interpretation, expected result, applicable circumstance, or action. Score 3 when the dependency is explicit and decisive: changing it would invalidate an inference, exclude an option, alter eligibility, reverse a recommendation, or change feasibility. Do not reward technical terminology, numerical precision, or detail volume. Conditions on use or interpretation can qualify in metadata. A short conditional statement can receive 3; do not import dependencies from outside knowledge.",
+   "subsumes": [
+    "load_bearing_particulars",
+    "load_bearing_specificity",
+    "constraint_bearing_specificity"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "evidence_traceability",
+   "description": "Measures how clearly an assertion or contribution is connected to an identifiable, recoverable evidentiary or production source.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "AGNOSTIC",
+    "Creative",
+    "Knowledge Article",
+    "News",
+    "Nonfiction",
+    "Personal About Page",
+    "Personal Blog",
+    "User Reviews"
+   ],
+   "operationalization": "Identify source-to-claim or source-to-material relationships explicitly supplied in this item and return their maximum score. Score 0 for empty content, no attribution, or entities named only as subjects. Score 1 when an origin is given only as an unspecified source class, experience, investigation, or method. Score 2 when an identifiable person, organization, artifact, work, dataset, or bounded observation is connected to a particular contribution. Score 3 when that connection also supplies a useful locator or access relationship, such as an edition, passage, dated occasion, acquisition circumstance, selection condition, or derivation from identified material. An anonymized source can qualify through a distinctive relationship. Bare names, credentials, and routine bylines do not establish an evidentiary route; explicit production, funding, reproduction, or adaptation relationships can qualify. Do not verify existence or prestige. Short items receive the highest supported level.",
+   "subsumes": [
+    "traceable_provenance",
+    "evidence_traceability",
+    "attributed_evidential_access",
+    "claim_source_traceability",
+    "traceable_evidentiary_attribution",
+    "external_warrant_traceability",
+    "source_traceability"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "evidence_access_calibration",
+   "description": "Measures whether the status of a claim is calibrated to what an observer could directly observe, infer, learn secondhand, or not access.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "AGNOSTIC"
+   ],
+   "operationalization": "Using only this item, score each explicit access-to-commitment relationship and return the maximum. Score 0 for empty content or no access distinction, including simple attribution without calibration. Score 1 when indirect knowledge or incomplete access is acknowledged but its implications are unclear. Score 2 when a particular assertion is meaningfully classified as observed, inferred, secondhand, or inaccessible rather than treating these statuses as equivalent. Score 3 when that distinction determines a permissible conclusion, a conclusion that must remain unresolved, or a substitute source that must be used. First-person narration, credentials, general skepticism, and generic disclaimers earn no automatic credit. Apply the same rule to represented agents in fiction. Short statements and substantive provenance notes can receive any supported score.",
+   "subsumes": [
+    "evidence_access_calibration"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "localized_uncertainty",
+   "description": "Measures whether uncertainty is attached to a specific proposition, explained by an identifiable knowledge limitation, and given inferential or practical consequences.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "Creative",
+    "Knowledge Article",
+    "News",
+    "Nonfiction",
+    "Personal About Page",
+    "Personal Blog",
+    "User Reviews"
+   ],
+   "operationalization": "Score each explicit uncertainty episode using only this item and return the maximum. Score 0 for empty content, no uncertainty, or generalized caution that identifies no particular unknown. Score 1 when a specific uncertain proposition or attribute is identified but its evidentiary basis is unspecified. Score 2 when that unknown is tied to a concrete obstacle, such as a missing observation, unavailable record, restricted sample, confound, competing evidence, or unperformed test. Score 3 when the item additionally states what remains supportable, what must be withheld, how applicability changes, or which specified observation or decision would resolve the uncertainty. Do not infer limitations from absent citations or count hedge words. Formal, interpretive, fictional, and provenance uncertainties are eligible. A concise statement can receive 3.",
+   "subsumes": [
+    "localized_uncertainty",
+    "bounded_epistemic_uncertainty",
+    "localized_epistemic_limitation",
+    "epistemic_boundary_precision",
+    "localized_epistemic_limits",
+    "locally_bounded_uncertainty"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "boundary_condition_precision",
+   "description": "Measures whether explicit conditions distinguish cases that receive different classifications, permissions, predictions, or actions.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "AGNOSTIC",
+    "Creative",
+    "Knowledge Article",
+    "News",
+    "Nonfiction",
+    "Personal About Page",
+    "User Reviews"
+   ],
+   "operationalization": "Identify condition-to-consequence rules stated within this item and return their maximum score. Score 0 for empty content, no applicability rule, incidental identifying details, or a condition that merely restates its outcome. Score 1 when a relevant distinguishing factor is named but its application or consequence remains materially ambiguous. Score 2 when a concrete inclusion, exclusion, threshold, exception, or condition allows ordinary cases to receive a specified different treatment. Score 3 when the rule resolves a boundary case or confusable alternative, reverses a default, establishes a ranking crossover, or specifies interacting conditions with differentiated consequences. Numerical cutoffs are optional. Do not reward category lists, caveat wording, or unconditional instructions. Permissions and access conditions are eligible, as are fictional and normative rules. A short complete exception can receive 3.",
+   "subsumes": [
+    "operational_boundary_rule",
+    "boundary_condition_precision",
+    "normative_condition_and_exception",
+    "consequential_condition_mapping",
+    "scope_changing_qualifiers",
+    "condition_dependent_outcome",
+    "discriminating_applicability_conditions",
+    "operational_boundary_resolution"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "mechanism_specificity",
+   "description": "Measures whether an outcome is explained through an operative intermediate process rather than a causal label, association, or restatement of the benefit.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "AGNOSTIC",
+    "Creative",
+    "Knowledge Article",
+    "News",
+    "Personal About Page",
+    "Personal Blog"
+   ],
+   "operationalization": "Score each causal or enabling explanation explicitly supplied in this item and return the maximum. Score 0 for empty content, no explanation, mere temporal succession, purpose alone, or a cause that simply renames the outcome. Score 1 when a cause and result are associated but the intervening operation remains a broad category. Score 2 when a component, actor, rule, transfer, interaction, or intermediate change is described in a way that makes the outcome intelligible. Score 3 when the mechanism also explains a dependency, contrasting outcome, bottleneck, failure condition, counterfactual, or why a salient alternative does not follow. Technical vocabulary and complexity are not evidence by themselves. Assess social, material, psychological, institutional, and fictional mechanisms under the item's stated premises without external fact-checking. One precise sentence can receive 3.",
+   "subsumes": [
+    "mechanism_specificity",
+    "specified_causal_mechanism",
+    "mechanistic_resolution",
+    "operational_causal_resolution",
+    "mechanism_bearing_detail",
+    "causal_mechanism_resolution"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "constraint_conditioned_choice",
+   "description": "Measures whether a particular obstacle explains the selection or modification of an action and the exclusion of otherwise plausible alternatives.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "Creative",
+    "Knowledge Article",
+    "Personal About Page",
+    "Personal Blog"
+   ],
+   "operationalization": "Using only this item, score each constraint-to-response relationship and return the maximum. Score 0 for empty content, no justified choice, or generic appeals to excellence, adaptability, or improvement. Score 1 when an obstacle and a choice or modification are identifiable but their functional connection is weak or unspecified. Score 2 when a concrete limitation explicitly causes a particular selection, workaround, or adaptation. Score 3 when the item explains why that response addresses the limitation, why a plausible alternative is blocked, or what specific cost or residual restriction the workaround retains. The response may be completed, planned, conditional, or fictional. Do not infer that an approach is unusual or constrained from background knowledge. A short explicit obstacle-response relationship can receive 3.",
+   "subsumes": [
+    "constraint_conditioned_choice",
+    "decision_binding_constraints",
+    "constraint_driven_workaround",
+    "binding_constraint_and_response",
+    "constraint_driven_adaptation"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "inherited_constraint_dependence",
+   "description": "Measures whether a present option or outcome depends on a concrete pre-existing arrangement that restricts otherwise plausible alternatives.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "AGNOSTIC"
+   ],
+   "operationalization": "Score each stated dependency on a pre-existing rule, artifact, system, commitment, relationship, or material condition; return the maximum. Score 0 for empty content, no inherited arrangement, or history that supplies only chronology or inspiration. Score 1 when a prior arrangement is relevant but its restricting effect is vague. Score 2 when it clearly limits an option or explains a workaround, delay, exclusion, or uneven implementation. Score 3 when the item explains why an otherwise attractive or standard alternative cannot be adopted, or can be adopted only at a specified cost, because of that arrangement. Do not infer constraints from dates, age, duration, or historical references alone. Fictional situations and substantive preservation or compatibility notes are eligible. Use only the item; brevity does not lower the score.",
+   "subsumes": [
+    "inherited_constraint_dependence"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "contingent_exception",
+   "description": "Detects an explicit link from a particular accident, prior commitment, or procedural irregularity to an exception or unusual allocation.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "scope": "universal",
+   "source_formats": [
+    "News"
+   ],
+   "operationalization": "Return 1 if this item explicitly supplies both a particular prior commitment, accidental circumstance, legacy arrangement, procedural mismatch, or unexpected event and the resulting exception, workaround, exclusion, or unusual allocation. The relationship must be causal, not merely chronological, and the exceptional treatment must be apparent from the item itself. Otherwise return 0, including for empty content, routine responses to broad challenges, ordinary historical background, or an unexplained statement that circumstances changed. Do not infer exceptional status from unfamiliarity. One complete relationship is sufficient regardless of length. Fictional events and substantive permissions or access notes are eligible; bare names, dates, and credits are not.",
+   "subsumes": [
+    "contingent_exception"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "contingent_action_trigger",
+   "description": "Measures whether an action is explained by a concrete situation-specific trigger rather than an enduring general motivation.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Personal About Page"
+   ],
+   "operationalization": "Using only this item, score each explanation of why an action or change occurred and return the maximum. Score 0 for empty content, no action explanation, or only a general disposition, aspiration, or chronology. Score 1 when a situation-specific event is mentioned alongside the action but the triggering relationship is vague. Score 2 when a concrete encounter, observation, request, incident, or changed circumstance explicitly prompts a particular action. Score 3 when the item explains why that trigger produced this response rather than an identifiable alternative, or specifies the changed condition that made the response necessary or appropriate. A trigger need not be an obstacle or involve belief revision. Do not infer motives or causality externally. A short complete trigger-action explanation can receive 3.",
+   "subsumes": [
+    "contingent_action_trigger"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "discriminating_counterevidence",
+   "description": "Measures whether a particular observation or logical constraint distinguishes competing propositions rather than merely accompanying an endorsed conclusion.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "AGNOSTIC",
+    "Creative",
+    "Knowledge Article",
+    "News",
+    "Nonfiction",
+    "Personal About Page",
+    "Personal Blog",
+    "User Reviews"
+   ],
+   "operationalization": "Identify a tested or disputed proposition and an alternative, denial, or correction available within this item; return the maximum score across such assessments. Score 0 for empty content, no proposition-level assessment, mere preference, or an example only compatible with an account without testing it. Score 1 when a definite claim is challenged, compared, or preferred without a discriminating reason. Score 2 when a concrete observation, counterexample, comparison, rule, or proposed test meaningfully favors one position. Score 3 when the item explains why the evidence is incompatible with a rival, predicts different outcomes under alternatives, exposes a contradiction, or supplies a decisive control or exclusion. Alternatives may be directly entailed but must not be invented. Do not reward confidence, hostility, or named opponents. Logical, documentary, interpretive, and fictional tests are eligible without external fact-checking.",
+   "subsumes": [
+    "discriminating_evidence_test",
+    "discriminating_counterevidence",
+    "diagnostic_evidence_content",
+    "evidence_constrained_adjudication",
+    "proposition_level_adjudication",
+    "diagnostic_challenge_to_claim",
+    "evidence_discriminates_alternatives",
+    "proposition_specific_rebuttal",
+    "alternative_discriminating_evidence",
+    "counterevidence_engagement"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "diagnostic_evidence_bridge",
+   "description": "Measures how explicitly the content of an observation, record, or example supports the particular judgment drawn from it.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Knowledge Article",
+    "User Reviews"
+   ],
+   "operationalization": "Score evidence-to-judgment relationships contained in this item and return the maximum. Score 0 for empty content, no offered evidence, or an unsupported judgment. Score 1 when evidence is invoked without conveying its relevant contents, or the link is only that a source supports the claim. Score 2 when a specific observation, record detail, or textual feature is supplied and its relevance to the judgment is understandable. Score 3 when the item explains why that particular finding supports the precise judgment, resolves a discrepancy, or rules out a competing interpretation. An explicit rival is not required for this feature. Quotations and citations qualify only through relevant substance. Do not assess truth, source prestige, or technical density. A single observation with a clear inferential explanation can receive 3.",
+   "subsumes": [
+    "diagnostic_evidence_bridge",
+    "observation_to_judgment_link"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "situated_experiential_warrant",
+   "description": "Measures whether a viewpoint is grounded in a particular encounter or firsthand observation of the person expressing it.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "News"
+   ],
+   "operationalization": "Using only this item, score each experience-to-viewpoint relationship and return the maximum. Score 0 for empty content, no experiential warrant, credentials alone, or an interchangeable opinion attributed to a person. Score 1 for a claim of experience without a particular encounter or finding. Score 2 when a specific action, encounter, or observed result explicitly supports the person's viewpoint. Score 3 when the item identifies the cue, contrast, failed expectation, or access limitation through which that experience generated the conclusion. Do not infer firsthand access from occupation, first-person wording, or emotional intensity. The experience may be subjective or fictional; external verification is unnecessary. Biographical notes qualify only when experience is connected to the asserted judgment. Short items can receive 3.",
+   "subsumes": [
+    "situated_experiential_warrant"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "reconstructible_evidence_procedure",
+   "description": "Measures whether the production of evidence is described concretely enough to understand what the procedure could reveal and what it could miss.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "News",
+    "Nonfiction",
+    "User Reviews"
+   ],
+   "operationalization": "Score each described test, observation, interview, inquiry, or evidence-acquisition process and return the maximum. Score 0 for empty content, no process, conclusions alone, or credentials alone. Score 1 when investigation or testing is asserted or a method is named without operative conditions. Score 2 when the item specifies what was examined and a concrete operation, setting, selection rule, comparison, exclusion, or access condition affecting the evidence. Score 3 when the arrangement is sufficiently explained to establish what it could reveal or miss, or the item explicitly connects a design choice to the reach of its inference. Full reproducibility is not required. Equipment names and assurances of rigor do not substitute for procedural relationships. Use only this item and do not judge whether the procedure actually occurred. Compact descriptions can receive 3.",
+   "subsumes": [
+    "method_scope_coupling",
+    "reconstructable_observation",
+    "reconstructible_evidence_procedure"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "information_lineage_detail",
+   "description": "Measures explicit accounting for how information was obtained, transformed, retained, or lost before being used.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Knowledge Article"
+   ],
+   "operationalization": "Using only this item, score each information-processing lineage account and return the maximum. Score 0 for empty content, no acquisition or transformation account, a source name alone, or a revision timestamp alone. Score 1 when an information operation such as sampling, translation, transcription, adaptation, correction, or selection is identified. Score 2 when the item specifies what information that operation changes, omits, retains, substitutes, or combines. Score 3 when it also explains a consequence for interpretation or reliability, or a compensating source or method required because of the transformation. Physical production is ineligible unless explicitly connected to the available information. Generic assurances of checking receive at most 1. Provenance notes and short statements can receive any supported level; do not reconstruct unstated transmission stages.",
+   "subsumes": [
+    "information_lineage_detail"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "warranted_belief_revision",
+   "description": "Measures an explicit correction or reassessment whose earlier position, resulting position, and evidential reason can be recovered from the item.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "AGNOSTIC",
+    "Nonfiction",
+    "Personal Blog"
+   ],
+   "operationalization": "Score each substantive correction or reassessment described wholly within this item and return the maximum. Score 0 for empty content, ordinary chronology, routine version changes, generic learning, or promises to improve. Score 1 when an identifiable position or procedure is said to be corrected or reassessed but the prior commitment, result, or reason remains unclear. Score 2 when the earlier commitment and its distinguishable replacement, withdrawal, narrowing, or explicit retention after retesting are recoverable. Score 3 when a concrete observation, discovered error, changed circumstance, or logical reason explains that result, including why the old position failed or why retesting did not overturn it. The agent may be the author, another person, or a fictional character. A correction can challenge someone else's proposition. Do not infer a revision from item order or verify its correctness externally.",
+   "subsumes": [
+    "evidence_triggered_revision",
+    "auditable_correction",
+    "warranted_belief_revision",
+    "evidential_revision_trace",
+    "evidence_linked_self_correction"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "inferential_non_equivalence",
+   "description": "Measures an explicit separation of related concepts or statuses that blocks an otherwise tempting stronger inference.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "News"
+   ],
+   "operationalization": "Score each explicit non-equivalence within this item and return the maximum. Score 0 for empty content, no distinction, one status reported alone, or unrelated categories merely listed. Score 1 when related concepts or statuses are distinguished but the consequence is unspecified. Score 2 when the item states that establishing one does not establish the other, distinguishes necessary from sufficient conditions, or otherwise blocks an inference between adjacent evidentiary, procedural, normative, or operational statuses. Score 3 when it applies the separation to a particular case and changes the permissible conclusion or action. The distinction must concern the same claim, object, or process. Generic disclaimers and technical terminology are insufficient. Rights and provenance distinctions are eligible. Use only the stated logical relationship; a short clarification can receive 3.",
+   "subsumes": [
+    "inferential_non_equivalence",
+    "status_boundary_preservation"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "condition_linked_heterogeneity",
+   "description": "Measures concrete nonuniform outcomes that resist an undifferentiated summary of success, failure, or general applicability.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "AGNOSTIC",
+    "Personal About Page"
+   ],
+   "operationalization": "Identify differentiated reported, modeled, or explicitly predicted outcomes within a shared comparison or observation frame and return the maximum score. Score 0 for empty content, one undifferentiated result, uniformly characterized outcomes, or unrelated generic pros and cons. Score 1 when unevenness is acknowledged but the outcomes or conditions separating them remain vague. Score 2 when identifiable groups, conditions, components, or linked outcome dimensions have concretely different results, including a null effect, reversal, or exception. Score 3 when the asymmetry limits an explanation, defeats a generalization, or restricts a recommendation. Different numerical magnitudes alone do not establish 3. Do not infer that omitted results were uniform or unfavorable. Fictional comparisons and differential completeness of records are eligible when the same structure is explicit. Short items can receive 3.",
+   "subsumes": [
+    "nonuniform_outcome_commitment",
+    "condition_linked_heterogeneity",
+    "adverse_or_mixed_result_preserved"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "expectation_observation_discrepancy",
+   "description": "Measures the specificity of a mismatch between an expectation, promise, or general pattern and an observation reported in the same item.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Knowledge Article",
+    "User Reviews"
+   ],
+   "operationalization": "Score each expectation-to-observation comparison explicitly available in this item and return the maximum. Score 0 for empty content, no observed discrepancy, hypothetical risks alone, or an expectation that must be supplied from outside knowledge. Score 1 when a concrete discrepancy is mentioned but the expected state or observed difference is only loosely specified. Score 2 when the expected or represented state and a specific conflicting observation are directly contrasted. Score 3 when the item additionally specifies where or under what conditions the discrepancy occurs, its concrete extent, or how it limits reliance on the expectation. Mere disappointment without an identifiable mismatch is insufficient. The observation may be documentary, experiential, or fictional. A concise promise-versus-result comparison can receive a high score.",
+   "subsumes": [
+    "countervailing_observation_retention",
+    "claimed_observed_discrepancy"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "quantitative_interpretability",
+   "description": "Measures whether substantive quantities have the definitions and reference relationships necessary to interpret or reconstruct their meaning.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "Knowledge Article",
+    "News",
+    "Nonfiction",
+    "Personal About Page",
+    "User Reviews"
+   ],
+   "operationalization": "Score each substantive quantitative proposition using only this item and return the maximum. Exclude numbers used solely as identifiers, structural labels, or publication dates. Score 0 for empty content, no eligible quantity, or an indeterminate measured or stipulated referent. Score 1 when the referent is intelligible but essential units, denominators, comparators, coverage, or conditions are missing. Score 2 when useful reference information is supplied but a material omission still limits interpretation or reconstruction. Score 3 when all requirements genuinely necessary for the stated measurement, rate, comparison, threshold, estimate, or calculation are supplied. Not every quantity needs every requirement: an absolute price need not have a population denominator. Do not reward precision, magnitude, or source prestige, and do not verify external accuracy. A short fully specified quantitative relationship can receive 3.",
+   "subsumes": [
+    "quantitative_reconstructibility",
+    "quantitative_referent_completeness",
+    "quantitative_interpretability",
+    "interpretable_quantitative_basis",
+    "quantitative_auditability"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "quantitative_inference_load",
+   "description": "Measures the substantive reasoning performed by quantitative relationships, rather than the mere presence of interpretable numbers.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Creative",
+    "Personal Blog"
+   ],
+   "operationalization": "Using only this item, score each use of quantities and return the maximum. Score 0 for empty content, no quantities, or quantities used only as identifiers or calendar labels. Score 1 when amounts, specifications, prices, or descriptive differences are reported without a further numerical inference. Score 2 when a comparison, ratio, calculation, or threshold explicitly supports a practical or analytical conclusion. Score 3 when interacting quantities determine feasibility, expose an alternative explanation, establish a consequential constraint, explain a crossed boundary, or determine a priority. A large claimed gain does not exceed 1 merely because it is presented as impressive. Do not supply missing calculations, reward decimal precision, or use outside facts. A derivation contradicted by the arithmetic displayed in the item cannot receive 3. One compact consequential inequality can receive 3.",
+   "subsumes": [
+    "relational_quantification",
+    "quantitative_inference_load"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "exclusionary_evaluative_priority",
+   "description": "Measures whether a situated criterion genuinely selects among alternatives instead of invoking qualities that everyone could endorse.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "AGNOSTIC",
+    "Creative",
+    "Personal About Page",
+    "Personal Blog",
+    "User Reviews"
+   ],
+   "operationalization": "Score each criterion-to-evaluation relationship in this item and return the maximum. Score 0 for empty content, no evaluation, unsupported approval, or universally desirable goals that do not select among alternatives. Score 1 when a broad preference or use case is named but its effect on selection is weak or unspecified. Score 2 when a concrete task, requirement, value, habit, or constraint makes an option preferable, unsuitable, required, or excluded for a defined purpose. Score 3 when an explicit priority or threshold overrides another plausible merit, accepts a defect, rejects a conventionally attractive option, or reverses an otherwise plausible ranking. The priority need not be unusual outside the item. Do not score ideological position, emotional intensity, or specialized vocabulary. Subjective and fictional choices qualify when their selection logic is explicit. Short items can receive 3.",
+   "subsumes": [
+    "exclusionary_evaluative_priority",
+    "situated_evaluative_criterion",
+    "consequential_normative_boundary",
+    "situated_evaluation_criterion",
+    "situated_priority_commitment"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "explicit_tradeoff_cost",
+   "description": "Measures whether obtaining a benefit or pursuing a valued objective is explicitly coupled to a genuine sacrifice that remains a sacrifice.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Creative",
+    "Knowledge Article",
+    "News",
+    "Nonfiction",
+    "Personal About Page",
+    "Personal Blog",
+    "User Reviews"
+   ],
+   "operationalization": "Score each represented tradeoff using only this item and return the maximum. Score 0 for empty content, no competing benefit and cost, or an assertion that all objectives are satisfied without loss. Score 1 when competing objectives or advantages and disadvantages are named but their coupling is unclear. Score 2 when a particular choice, mechanism, or allocation produces a benefit while sacrificing another objective, capability, resource, or party's interest. Score 3 when the item explains the priority, rejected alternative, threshold, or circumstance that justifies accepting the loss, or why the valued objectives cannot all be satisfied. The cost must remain real rather than being wholly recast as beneficial. Monetary figures are unnecessary. Do not infer hidden tradeoffs. An unresolved choice can qualify when its unavoidable sacrifice is explicit; short items can receive 3.",
+   "subsumes": [
+    "unresolved_value_tradeoff",
+    "accepted_residual_cost",
+    "constraint_coupled_tradeoff",
+    "explicit_cost_or_sacrifice",
+    "residual_tradeoff",
+    "accepted_nonrecoverable_tradeoff",
+    "causal_tradeoff_accounting"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "residual_practical_friction",
+   "description": "Measures concrete impediments or losses that remain consequential rather than disappearing into a successful or uplifting account.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "AGNOSTIC",
+    "Creative",
+    "User Reviews"
+   ],
+   "operationalization": "Score each encountered limitation or loss reported in this item and return the maximum. Score 0 for empty content, no applicable difficulty, or abstract warnings about possible problems. Score 1 when a particular impediment or damage is mentioned but its continuing consequence is unspecified. Score 2 when it remains unresolved, reduces capability, consumes resources, prevents an action, or creates an unfinished obligation. Score 3 when that consequence explicitly persists despite success, improvement, a workaround, a favorable judgment, or partial repair. A wholly hypothetical risk does not qualify. A pending result qualifies only when its concrete consequence is stated. Assess fictional constraints within the represented situation, not by real-world plausibility. Do not infer hidden costs. Short statements and substantive access or completeness notes can receive any supported score.",
+   "subsumes": [
+    "residual_practical_friction",
+    "explicit_residual_cost",
+    "unresolved_process_friction"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "unresolved_inquiry_residue",
+   "description": "Measures a specifically characterized unanswered question or incomplete result left by an actual attempt to learn or accomplish something.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Personal Blog"
+   ],
+   "operationalization": "Score each attempted investigation, test, request, repair, or purposeful action described in this item and return the maximum. Score 0 for empty content, no actual attempt, a merely hypothetical issue, or a fully resolved task. Score 1 when an attempt is said to have failed or remained incomplete but its target or residual problem is vague. Score 2 when both the particular attempt and its unanswered question, failed operation, or remaining obstacle are identifiable. Score 3 when the item distinguishes what the attempt established from what it did not, or specifies a concrete consequence of the unresolved result. Rhetorical mystery and celebrations of unknowability do not qualify. Do not infer that the issue remains unresolved outside this item. One concise failed-request account can receive 3.",
+   "subsumes": [
+    "unresolved_inquiry_residue"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "incidental_contingency",
+   "description": "Measures concrete local circumstances whose value is their particularity rather than their service to a lesson, credential, or persuasive objective.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Creative",
+    "Nonfiction",
+    "Personal About Page",
+    "Personal Blog",
+    "User Reviews"
+   ],
+   "operationalization": "Using only relationships inside this item, score each incidental circumstance and return the maximum. Score 0 for empty content, no incidental detail, routine identifiers or logistics, generic atmosphere, or details entirely explained by their stated practical or symbolic purpose. Score 1 when an optional concrete circumstance appears but is conventional scene-setting or directly instantiates the main lesson. Score 2 when an individuating distraction, inconvenience, coincidence, arbitrary preference, or mixed reaction is retained without being necessary to establish the principal point. Score 3 when it interrupts, complicates, or resists the expected interpretation without being converted into evidence for that interpretation. Do not reward vivid wording, obscurity, sensational content, or detail volume. Ordinary metadata fulfills an informational purpose and normally scores 0. A short, locally incongruous circumstance can receive 3.",
+   "subsumes": [
+    "incidental_concrete_residue",
+    "unreduced_contingent_detail",
+    "noninstrumental_particularity",
+    "incidental_contingency",
+    "incidental_context_residue"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "particularized_micro_observation",
+   "description": "Measures fine-grained observable traces or small actions that distinguish an episode from a stock depiction.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "News"
+   ],
+   "operationalization": "Score each represented episode using only this item and return the maximum. Score 0 for empty content, no observable particulars, or only abstract emotion or atmosphere. Score 1 when an observable but generic action or condition is supplied. Score 2 when a fine-grained physical, behavioral, or digital trace is tied to a particular object or circumstance and meaningfully distinguishes the episode. Score 3 when at least two nonredundant fine-grained particulars are related within the same episode, forming a specific configuration rather than an inventory of stock details. Names, dates, quantities, addresses, and sensory intensifiers alone are insufficient. The details may serve a causal or persuasive purpose; incidental status is not required. Do not verify truth or firsthand access. Short descriptions and substantive captions are eligible.",
+   "subsumes": [
+    "particularized_micro_observation"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "costly_self_implication",
+   "description": "Measures an admission that materially weakens the assessor's flattering self-presentation, competence, motives, consistency, or authority.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Personal Blog",
+    "User Reviews"
+   ],
+   "operationalization": "Score each admission by the narrator or person making the assessment and return the maximum. Score 0 for empty content, no self-implication, or suffering and difficulties assigned solely to external causes. Score 1 for generic imperfection, harmless clumsiness, ordinary beginner confusion, or other low-cost vulnerability. Score 2 for a concrete avoidable mistake, biased judgment, inconsistency, or failure with meaningful adverse implications for the speaker or assessment. Score 3 for a specifically self-serving motive, knowing evasion, hypocrisy, consequential negligence, or conduct conflicting with the speaker's own stated standards. Use only implications supported by the item; do not impose an external moral code. Later learning does not erase a substantive admission. Routine sponsorship disclosure alone is ineligible. A short admission can receive 3.",
+   "subsumes": [
+    "costly_self_implication",
+    "self_implicating_admission"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "interest_bearing_source_relation",
+   "description": "Measures disclosure of a concrete relationship that gives an author or evidential source a stake in the subject being presented.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Nonfiction"
+   ],
+   "operationalization": "Using only this item, score each author-or-source relationship to a relevant stake and return the maximum. Score 0 for empty content, no such relationship, or an affiliation or credit that does not establish a stake in the subject. Score 1 when possible interests or independence are discussed only generically. Score 2 when a specific financial, ownership, professional, personal, access-provision, or advocacy relationship is disclosed. Score 3 when the item also explains an incentive, obligation, dependency, divided loyalty, or restriction on independence created by that relationship. Actual misconduct need not be alleged. Do not infer interests from names or occupations. Disclosure notes are eligible through their substantive relationship, not their label. A statement of human or AI authorship alone scores 0. Short items can receive 3.",
+   "subsumes": [
+    "interest_bearing_source_relation"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "bounded_credit_allocation",
+   "description": "Measures whether responsibility for an outcome is apportioned through specific contribution boundaries rather than generic credit or gratitude.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Personal About Page"
+   ],
+   "operationalization": "Score each allocation of responsibility within this item and return the maximum. Score 0 for empty content, no allocation, a bare author name, or collaborators merely thanked or listed. Score 1 when shared responsibility is acknowledged but contributions remain broad or undifferentiated. Score 2 when specific tasks, components, decisions, or effects are assigned to identifiable contributors. Score 3 when the allocation explicitly limits what the focal actor did, separates one contributor's work from another's, or distinguishes contribution from responsibility for the overall outcome. Proper names are unnecessary if contributors are relationally identifiable. Do not infer contribution boundaries from job titles or status. Production notes, fictional accounts, and short statements are eligible when the division itself is substantive.",
+   "subsumes": [
+    "bounded_credit_allocation"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "represented_knowledge_asymmetry",
+   "description": "Measures consequential differences between what distinct agents know, believe, or can perceive.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Creative"
+   ],
+   "operationalization": "Using only this item, score each epistemic difference between at least two agents and return the maximum. Score 0 for empty content, no difference, or agents merely having different opinions without a specified knowledge or access disparity. Score 1 when unequal knowledge or access is asserted but its content is vague. Score 2 when the particular fact, belief, mistaken inference, or perception available to one agent but not another is clear. Score 3 when that asymmetry explains a concrete action, misunderstanding, strategic advantage, delayed response, or other consequence. Do not infer what an agent must know from occupation or outside context. Agents may be real or fictional, individual or collective. A short complete knowledge-difference-and-consequence statement can receive 3.",
+   "subsumes": [
+    "represented_knowledge_asymmetry"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "public_private_motive_divergence",
+   "description": "Measures an explicit mismatch between an outward justification and the private incentive represented as governing the same behavior.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Creative"
+   ],
+   "operationalization": "Score each public-rationale/private-objective relationship contained in this item and return the maximum. Score 0 for empty content, no paired motives, or an allegation of insincerity without an identifiable mismatch. Score 1 when an outward rationale and different private objective are suggested but one remains vague. Score 2 when both are concrete and concern the same behavior, with their divergence made explicit. Score 3 when the item explains how the stated rationale conceals, enables, or is strategically used to pursue the private objective, or how the mismatch changes another agent's response. Do not infer hidden motives from skepticism or external knowledge. The private objective need not be immoral. Fictional and attributed accounts qualify under the same rules; short items can receive 3.",
+   "subsumes": [
+    "public_private_motive_divergence"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "structural_analogy_yield",
+   "description": "Measures whether an analogy generates a specific relational inference rather than transferring only atmosphere, praise, or emotional tone.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Creative"
+   ],
+   "operationalization": "Score each analogy in this item and return the maximum. Score 0 for empty content, no analogy, or a comparison serving only description, prestige, or emotional tone. Score 1 when a shared substantive feature is identified but no relational consequence is developed. Score 2 when corresponding roles or relationships across the two domains support a particular inference. Score 3 when the mapping explains a constraint, dependency, exception, or prediction and makes clear how the correspondence warrants that consequence. The analogy need not prove an empirical claim to be useful. Do not supply unstated mappings or assess external truth. A compact comparison can receive 3 if its inferential work is explicit. Merely containing figurative language does not establish eligibility.",
+   "subsumes": [
+    "structural_analogy_yield"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "comparison_baseline_resolution",
+   "description": "Measures whether a comparison identifies its alternatives and places them on a shared, interpretable comparison basis.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "User Reviews"
+   ],
+   "operationalization": "Using only this item, score each substantive comparison and return the maximum. Score 0 for empty content, no comparison, or comparative praise with neither an identifiable alternative nor a comparison axis. Score 1 when the alternatives or the axis is recognizable but the other is materially unspecified. Score 2 when the alternatives and a shared attribute or criterion are clear, allowing the stated difference to be interpreted. Score 3 when applicable reference conditions, versions, tasks, settings, or limits are also supplied sufficiently to establish a like-for-like comparison or explain a qualified difference. Numerical values are optional. Do not infer a baseline from general domain knowledge or reward the number of alternatives. Short qualitative comparisons can receive 3.",
+   "subsumes": [
+    "comparison_baseline_resolution"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "answerable_information_gap",
+   "description": "Measures whether a request seeks a specific missing fact, artifact, or solution with identifiable relevance or acceptance conditions.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Personal Blog"
+   ],
+   "operationalization": "Score explicit information-seeking questions or requests in this item and return the maximum. Score 0 for empty content, no information-seeking act, or invitations merely to subscribe, donate, celebrate, or engage. Score 1 when broad opinions, experiences, or suggestions are requested without an identifiable knowledge gap. Score 2 when a missing fact, disputed interpretation, sought artifact, or practical problem is specified so that relevant and irrelevant responses can be distinguished. Score 3 when constraints, acceptance criteria, conflicting evidence, or a decision to be informed make the request meaningfully resolvable. A narrowly constrained identification question can receive 3 without additional exposition. Do not assume an answer exists or reward topic importance. Score only the request's content, not its rhetorical position.",
+   "subsumes": [
+    "answerable_information_gap"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "authority_as_substitute",
+   "description": "Measures reliance on status, prestige, declared rigor, or good intentions in place of claim-specific support.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "AGNOSTIC",
+    "News",
+    "Personal About Page",
+    "User Reviews"
+   ],
+   "operationalization": "Identify uses of authority, acclaim, self-certification, expertise, independence, diligence, or intentions as reasons to accept a claim; return the maximum score. Score 0 for empty content, no such support relationship, bare credentials, or an assurance directly supported by bounded findings. Score 1 when unelaborated authority contributes but meaningful independent reasons or findings are also supplied. Score 2 when status, unspecified validation, unnamed prestigious achievements, or asserted rigor supplies the principal warrant without the relevant grounds. Score 3 when that substitute is treated as sufficient for proven efficacy, comprehensive correctness, exceptional superiority, safety, fairness, or another strong guarantee. A named procedure is not a demonstrated result. Do not verify authority or prestige externally. Short statements qualify only through the actual assurance relationship, not missing detail alone.",
+   "subsumes": [
+    "authority_as_substitute",
+    "assurance_without_demonstration",
+    "prestige_substitutes_for_identification",
+    "authority_without_accessible_basis"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "unanchored_effect_quantification",
+   "description": "Measures the fraction of empirical quantitative effect claims that lack essential measurement or reference information.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "fraction_0_1",
+   "scope": "universal",
+   "source_formats": [
+    "AGNOSTIC",
+    "Knowledge Article",
+    "Nonfiction",
+    "Personal About Page",
+    "Personal Blog"
+   ],
+   "operationalization": "Identify empirical quantitative propositions asserting improvement, deterioration, comparative performance, association, effectiveness, or an outcome rate used to validate an intervention. Count two endpoints of one change as one proposition and distinct outcomes separately. Exclude identifiers, dates, simple counts, prices, specifications, sample sizes, stipulated targets, and explicitly hypothetical arithmetic. Mark a proposition unanchored if interpreting its magnitude requires inventing a necessary measured meaning, unit or denominator, comparator, target population, observation window, or scoring rule. For an attributed gain, the number must also be connected to an identifiable intervention and outcome comparison. Undefined constructs assigned percentages are unanchored. Do not require full methods or citations when the number is otherwise interpretable; prestige does not supply missing definitions. Return unanchored propositions divided by eligible propositions. Return 0 for empty content or no eligible propositions. Use only this item and do not assess numerical plausibility.",
+   "subsumes": [
+    "unanchored_effect_quantification",
+    "thinly_based_quantified_gain",
+    "precision_warrant_gap",
+    "unsupported_quantified_attribution",
+    "underoperationalized_effect_size"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "nondiscriminating_hedging",
+   "description": "Measures uncertainty or qualification that fails to constrain the associated claim, distinguish outcomes, or inform a decision.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "AGNOSTIC",
+    "Knowledge Article",
+    "Nonfiction",
+    "Personal Blog",
+    "User Reviews"
+   ],
+   "operationalization": "Score explicit uncertain assessments, caveats, or acts of withholding judgment within this item and return the maximum. Score 0 for empty content, no qualification, or uncertainty that identifies a concrete limitation and genuinely restricts inference or action. Score 1 when uncertainty is broad or partly consequential but the item still favors a distinguishable possibility or supplies a useful constraint. Score 2 when generic variability, contextual dependence, multiple influences, or consultation is invoked without specifying which conclusion changes under what conditions. Score 3 when essentially every outcome remains compatible with the claim, a major admitted evidentiary gap leaves a strong assurance intact, or generalized indeterminacy replaces adjudication with assurances of significance or interest. Do not score hedge words, ordinary taste, or concrete limitations of document authority. Justified suspension of judgment scores 0. Brevity alone never raises the score.",
+   "subsumes": [
+    "nondiscriminating_hedging",
+    "nonrestrictive_qualification",
+    "nonrestrictive_uncertainty",
+    "generic_indeterminacy_move"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "inferential_scope_inflation",
+   "description": "Measures unsupported expansion from a stated local basis to broader populations, settings, duration, or practical and historical consequences.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "AGNOSTIC",
+    "Creative",
+    "Knowledge Article",
+    "News",
+    "Nonfiction",
+    "Personal About Page",
+    "User Reviews"
+   ],
+   "operationalization": "Require both a stated basis and a scope-expanding conclusion within this item; score each relationship and return the maximum. Score 0 for empty content, no such inference, a conclusion matching its basis, or a broad claim supported by a proportionate explicit mechanism. Score 1 for a modest, bounded, tentative extension whose bridge is thin. Score 2 when a particular case or limited result is made to establish a broad population property, sectoral change, cross-context effect, or extensive significance without an adequate bridge. Score 3 when the same limited basis is made to establish universal, permanent, irreversible, system-wide, or historically decisive consequences. Broadness, enthusiasm, and absent citations alone are insufficient. Exclude purely symbolic lessons unless they also assert expanded consequences. Do not count overreach that the item explicitly rejects or use outside facts.",
+   "subsumes": [
+    "inferential_scope_inflation",
+    "local_to_universal_scope_expansion",
+    "unsupported_scope_amplification",
+    "unsupported_scope_expansion",
+    "unsupported_scope_escalation",
+    "consequence_scope_inflation",
+    "significance_inflation"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "warrant_strength_upgrade",
+   "description": "Measures promotion of an explicitly limited basis into a stronger epistemic status, such as causation, necessity, proof, or sufficient assurance.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "Creative",
+    "Knowledge Article",
+    "Personal Blog",
+    "User Reviews"
+   ],
+   "operationalization": "Compare explicit bases and conclusions within this item, returning the maximum score. Score 0 for empty content, no inferential relationship, matched inferential types, or an acknowledged gap that appropriately limits the conclusion. Score 1 when a relevant basis supports a mildly stronger conclusion while substantial uncertainty is retained. Score 2 when association, compatibility, a selected example, a label, or limited validation is treated as establishing causality, objective superiority, an individual's status, or another materially stronger kind of knowledge. Score 3 when such a basis becomes definitive proof, necessity, exclusive explanation, or sufficient assurance of a broader outcome despite independent ways it could fail remaining unbridged in the item's own account. Assess certainty and logical sufficiency, not population or duration expansion alone. Do not infer error from missing citations or externally disputed facts. Short complete inferences are eligible.",
+   "subsumes": [
+    "warrant_strength_upgrade",
+    "evidence_assurance_gap",
+    "inferential_commitment_gap",
+    "partial_safeguard_as_guarantee",
+    "unsupported_epistemic_upgrade",
+    "warrant_scope_escalation"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "non_diagnostic_support",
+   "description": "Measures use of evidence about one property as support for a materially different property without a relevant connecting argument.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "News"
+   ],
+   "operationalization": "Score evidence-to-conclusion relationships explicitly adopted by this item and return the maximum. Score 0 for empty content, no offered evidence, evidence that directly bears on the conclusion, or a mismatch the item itself rejects. Score 1 when a relevant but weak proxy is used without explaining its connection to the target property. Score 2 when the evidence addresses a substantially different property, such as attention used to establish effectiveness, with no adequate bridge. Score 3 when that non-diagnostic proxy is treated as decisive validation or is explicitly unable to distinguish the competing interpretations under consideration. Accept premises provisionally and do not fact-check. A cautious modal does not remove a substantive mismatch, but an explicit limiting argument can. Bare opinions and unsupported assertions score 0; short complete inferences can score highly.",
+   "subsumes": [
+    "non_diagnostic_support"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "circular_evaluative_warrant",
+   "description": "Measures whether the offered support for an evaluation merely restates or presupposes the evaluation rather than adding an independent ground.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "AGNOSTIC",
+    "Nonfiction"
+   ],
+   "operationalization": "Identify evaluative conclusions and the reasons offered for them in this item; return the maximum score. Score 0 for empty content, no attempted justification, or a reason adding an independently assessable property, observation, criterion, or consequence. Score 1 when part of the support is repetitive but an informative independent ground remains. Score 2 when the principal support merely reasserts the evaluated quality, success, importance, or approval without adding a distinct ground. Score 3 when the entire justification is self-validating or mutually circular, so the conclusion and its supposed evidence depend only on one another. Judge semantic dependence, not repeated words. An unsupported but genuinely different reason or a distinct appeal to authority is not automatically circular. Bare endorsements, definitions, and credentials score 0. Short reason-conclusion pairs are fully eligible.",
+   "subsumes": [
+    "circular_evaluative_warrant",
+    "nonprobative_validation"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "generic_symbolic_lesson",
+   "description": "Measures conversion of a particular case into a broadly reusable moral, motivational, or existential lesson without a case-specific interpretive bridge.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "News",
+    "Nonfiction",
+    "Personal About Page",
+    "Personal Blog"
+   ],
+   "operationalization": "Score each case-to-meaning relationship explicitly asserted in this item and return the maximum. Score 0 for empty content, no such interpretation, a standalone maxim without a case, or meaning grounded in a specific relationship supplied by the item. Score 1 when a modest transferable lesson accompanies substantial case-specific reasoning or explicit limits. Score 2 when the main interpretive contribution is a broad lesson or transformative significance connected to the case chiefly by thematic association. Score 3 when the case functions almost entirely as embodiment or proof of a general truth about conduct, identity, growth, connection, or human life, and replacing it with another case would leave the reasoning essentially unchanged. Do not judge values, religious content, positivity, or sincere feelings. A declared private metaphor alone is not inflation. Short items can receive 3.",
+   "subsumes": [
+    "case_to_universal_lesson",
+    "symbolic_lesson_substitution",
+    "interchangeable_symbolic_lesson",
+    "portable_moral_generalization",
+    "extrinsic_meaning_inflation"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "generic_redemptive_reframing",
+   "description": "Measures conversion of a difficulty or ordinary experience into generalized growth or healing without a concrete learning mechanism or changed practice.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "AGNOSTIC",
+    "Personal About Page",
+    "Personal Blog",
+    "User Reviews"
+   ],
+   "operationalization": "Require an experience and its positive reinterpretation within this item; score each relationship and return the maximum. Score 0 for empty content, no reframing, an ordinary successful repair, or a concrete lesson tied to a particular mistake and changed behavior. Score 1 when a limited positive interpretation accompanies specific learning while concrete adverse consequences remain visible. Score 2 when generalized resilience, authenticity, bonding, or comparable development becomes the principal meaning without specifying the substantive learning or transformation. Score 3 when hardship or an ordinary encounter is treated as necessarily beneficial, permanently healing, identity-defining, or retrospectively justified, while concrete costs are absorbed into generic growth. Positive sentiment and perseverance advice alone do not qualify. Do not infer sincerity or eventual outcomes. Fictional and nonfictional experiences use the same anchors; short items can receive 3.",
+   "subsumes": [
+    "generic_redemptive_reframing",
+    "automatic_adversity_redemption",
+    "redemptive_setback_conversion",
+    "adversity_reframed_as_growth"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "moralized_causal_shortcut",
+   "description": "Measures use of virtue, emotional states, or adversity itself as a sufficient explanation of achievement in place of operative actions and conditions.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Creative",
+    "Nonfiction",
+    "Personal About Page"
+   ],
+   "operationalization": "Score each causal explanation linking a disposition, feeling, or hardship to a concrete result and return the maximum. Score 0 for empty content, no such causal relationship, or a quality that merely motivates a fully specified action whose operation explains the result. Score 1 when concrete learning, assistance, opportunity, or behavior mediates the outcome but a broad dispositional explanation also contributes. Score 2 when virtue, commitment, empathy, resilience, or adversity is treated as the main sufficient explanation with little intervening process. Score 3 when the moral or emotional state is presented as directly securing external success, hardship inherently produces achievement, or analogous virtues are asserted to guarantee comparable results. Do not use trait keywords, praise intensity, or external plausibility as evidence. Assess fictional mechanisms under their stated premises. Short causal claims are eligible.",
+   "subsumes": [
+    "moral_state_causal_shortcut",
+    "adversity_virtue_success_compression",
+    "disposition_as_causal_explanation"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "costless_tradeoff_resolution",
+   "description": "Measures declarations that an acknowledged tension is reconciled without an adequate mechanism, decision rule, limit, or remaining sacrifice.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "AGNOSTIC"
+   ],
+   "operationalization": "Require both a tension and an attempted reconciliation expressly represented in this item; return the maximum across instances. Score 0 for empty content, no tension, mere disagreement, or a resolution with a concrete priority, operative mechanism and limits, or acknowledged sacrifice. Score 1 when a relevant bridge is supplied but the conditions requiring compromise remain unclear. Score 2 when both objectives are declared satisfiable chiefly through generic balance, cooperation, integration, or capacity without a rule for actual conflicts. Score 3 when the purported solution merely restates both desirable objectives while claiming to eliminate the conflict or maximize both. Do not infer a tradeoff from the coexistence of favorable attributes. Numerical weights are unnecessary for a genuine adjudication rule. A real mechanism can remove a tradeoff and score 0. Short explicit reconciliations are eligible.",
+   "subsumes": [
+    "reconciliation_without_adjudication",
+    "costless_tradeoff_resolution"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "guaranteed_independent_cobenefits",
+   "description": "Measures unsupported claims that one intervention or subject jointly delivers several independently demanding benefits.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "Nonfiction",
+    "User Reviews"
+   ],
+   "operationalization": "Group benefits attributed to the same intervention, principle, or evaluated subject, treating synonyms as one outcome; return the maximum score across groups. Score 0 for empty content, fewer than two substantive benefits, or joint benefits supported by specific mechanisms or bounded observations. Score 1 when multiple benefits are linked to a plausible stated mechanism and remain conditional or only partly explained. Score 2 when independently variable desirable outcomes are jointly asserted without corresponding mechanisms, selective criteria, or meaningful conditions. Score 3 when comprehensive excellence or simultaneous attainment is presented as inherent or guaranteed despite the absence of a basis for coordinating the independent outcomes. An acknowledged conflict is not required. Do not penalize favorable measured results merely because all are positive, or count approving adjectives as separate benefits. Use only this item; short claims can receive 3.",
+   "subsumes": [
+    "guaranteed_independent_cobenefits",
+    "frictionless_value_alignment",
+    "undifferentiated_excellence"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "abstract_complementarity_as_mechanism",
+   "description": "Measures whether combining desirable approaches is offered as a causal explanation without specifying what each contributes or how they interact.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Personal About Page"
+   ],
+   "operationalization": "Score each explanation attributing an outcome to a combination of approaches or qualities and return the maximum. Score 0 for empty content, no combination-based explanation, a simple inventory, or a concrete division of function or interaction sufficient to explain the result. Score 1 when a meaningful contribution or interaction is specified for part of the combination but the remainder is broad. Score 2 when success is attributed mainly to blending favorable qualities without explaining their respective operations or connection. Score 3 when the synthesis itself is treated as sufficient for exceptional or comprehensive success although its causal content is only the co-presence of desirable labels. Do not infer conflict between the approaches or score conjunctions mechanically. Evaluate only the supplied mechanism; a short explanation can receive any level.",
+   "subsumes": [
+    "abstract_complementarity_as_mechanism"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "goals_substituted_for_operations",
+   "description": "Measures the operational deficit of purported methods or guidance: desired outcomes and broad activity labels presented in place of executable means.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "AGNOSTIC",
+    "Knowledge Article",
+    "News",
+    "Nonfiction",
+    "Personal Blog",
+    "User Reviews"
+   ],
+   "operationalization": "Evaluate each bounded instruction, implementation plan, or account purporting to specify how an action is performed; return the maximum deficit score. Score 0 for empty content, no operational claim, a pure objective or resource announcement, or operations a suitably competent intended practitioner could execute without inventing a material step. Score 1 when concrete operations are supplied but a limited implementation or selection question remains open. Score 2 when the main content consists of broad processes or dimensions whose essential targets, decisions, inputs, conditions, or transformations are missing. Score 3 when virtually all supposed means merely redescribe desirable results or dispositions, leaving execution or completion indeterminate. Judge the task actually stated, not an imagined full manual. Simple instructions need not supply numbers. Named techniques and numbered lists earn no automatic credit. Short items can receive any level.",
+   "subsumes": [
+    "goals_substituted_for_operations",
+    "procedure_goal_restatement",
+    "goal_level_prescription",
+    "actionability_deficit",
+    "scoped_procedural_executability",
+    "means_end_substitution"
+   ],
+   "direction_conflict": true
+  },
+  {
+   "name": "interchangeable_remedy_bundle",
+   "description": "Measures whether proposed remedies are substantively untailored to the stated problem and would survive replacement with an unrelated challenge.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic"
+   ],
+   "operationalization": "Score each recommendation or remedy bundle within this item and return the maximum. Score 0 for empty content, no remedy, or actions concretely fitted to a stated failure mechanism or decision boundary. Score 1 when some actions are reusable but at least one has an explicit substantive connection to the local obstacle. Score 2 when remedies are mostly general improvement activities with little explanation of which action addresses which failure. Score 3 when replacing the problem with an unrelated institutional or personal challenge would leave essentially the same substantive advice, and no causal fit, responsible decision, or implementation criterion supplies local tailoring. This is a semantic substitution test, not a search for common remedy words. Executable actions can still be untailored. A single vague exhortation can qualify; a long tailored plan can score 0.",
+   "subsumes": [
+    "interchangeable_remedy_bundle"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "framework_as_topic_catalog",
+   "description": "Measures whether an alleged explanatory framework supplies a category inventory without relationships or application rules.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic"
+   ],
+   "operationalization": "Apply to content that attempts to specify an explanatory framework or analytical architecture; return the maximum across attempts. Score 0 for empty content, no attempted specification, mere mention of a framework, or meaningful relationships, membership conditions, or application rules. Score 1 when some operative structure exists but a substantial portion remains loosely connected dimensions. Score 2 when the framework is principally broad categories without a rule for connecting, distinguishing, or applying them. Score 3 when assembling those categories is additionally presented as explanatory completeness or analytical success although the inventory constrains no inference. Ordinary contents lists are ineligible unless explicitly treated as explanatory models. Do not score category counts, disciplinary labels, or presentation format. Use only the attempted specification; short frameworks can receive any level.",
+   "subsumes": [
+    "framework_as_topic_catalog"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "boundary_free_construct",
+   "description": "Measures definitions that assign broad aspirations or virtues without distinguishing instances of a concept from noninstances.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Nonfiction",
+    "Personal Blog"
+   ],
+   "operationalization": "Score each attempt to define or characterize what a construct, category, practice, or entity denotes, returning the maximum. Score 0 for empty content, no definition attempt, or clear distinguishing properties, referents, operations, or contrasts. Score 1 when the referent is understandable and has a restricted function or criterion but some boundaries remain broad. Score 2 when desirable aims, evocative qualities, or wide applications dominate without enough information to determine membership. Score 3 when almost any relevant beneficial activity could qualify because the definition is unrestricted or circular, especially when it nevertheless claims explanatory power. Do not require numerical cutoffs or judge whether a term is familiar, established, or real. A deliberate statement of ambiguity is not an asserted all-purpose definition. Short definitions can receive any supported score.",
+   "subsumes": [
+    "nonoperational_concept_definition",
+    "boundary_free_construct"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "nonselective_analytic_agenda",
+   "description": "Measures inquiry aims that substitute broad coverage for a discriminating question or bounded evidentiary objective.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic"
+   ],
+   "operationalization": "Score stated inquiry aims or analytical scopes within this item and return the maximum. Score 0 for empty content, no inquiry aim, or an aim targeting a specific uncertainty, relationship, comparison, or bounded evidentiary problem. Score 1 when the target is recognizable but its limits or intended resolution remain broad. Score 2 when the agenda spans several independently variable aspects without specifying what would resolve the inquiry. Score 3 when general coverage itself replaces an intellectual objective, promising understanding across broad aspects without an operative question or evidence boundary. A list of distinct, precise questions scores 0 rather than being penalized for breadth. Do not score section counts, roadmap existence, or item position. Pure navigation and credits are ineligible. A short broad inquiry statement can receive 2 or 3.",
+   "subsumes": [
+    "nonselective_analytic_agenda"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "unearned_legacy_magnitude",
+   "description": "Measures extensive or enduring influence claims that lack a corresponding account of transmission or observable reach.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic"
+   ],
+   "operationalization": "Score explicit claims of influence, historical importance, persistence, or legacy and return the maximum. Score 0 for empty content, no such claim, or magnitude supported within the item by specific downstream consequences or transmission links. Score 1 when a modest influence claim identifies an effect but leaves its extent unclear. Score 2 when substantial reach or durability is asserted with only generalized effects, popularity, or thematic relevance. Score 3 when permanence, universal resonance, or decisive transformation is asserted without specific downstream changes, a transmission mechanism, or a bounded assessment criterion. Unlike a scope-jump test, this feature does not require a stated local premise. Do not score praise alone, fame, age, or particular evaluative words. Negative legacies are equally eligible. Do not infer what support exists elsewhere; short claims can receive any level.",
+   "subsumes": [
+    "unearned_legacy_magnitude"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "constructed_example_as_validation",
+   "description": "Measures treatment of an explicitly constructed illustration as empirical evidence of actual effectiveness or consequences.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic"
+   ],
+   "operationalization": "Score example-to-validation relationships within this item and return the maximum. Score 0 for empty content, no constructed example, a hypothetical used only to explain a possibility or logical relation, or interpretation confined to a fictional world. Score 1 when the example's evidentiary status is expressly ambiguous and practical effectiveness is lightly suggested rather than asserted as validated. Score 2 when explicitly imagined or illustrative material is used to substantiate actual improvement, efficacy, or real-world consequences. Score 3 when constructed material explicitly substitutes for unavailable observations and is nevertheless treated as affirmative empirical support. Do not infer fabrication from anonymity, common names, unfamiliarity, or implausibility. A composite grounded in stated observations is not automatically invented evidence. Score only the local epistemic move; short complete examples are eligible.",
+   "subsumes": [
+    "constructed_example_as_validation"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "schematic_case_warrant",
+   "description": "Measures reliance on a minimally individuated success case as evidence for a broader effectiveness or reliability claim.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Knowledge Article"
+   ],
+   "operationalization": "Require a case or anecdote used as a warrant for effectiveness, reliability, or a broader explanatory proposition; return the maximum across cases. Score 0 for empty content, no case-based warrant, a hypothetical used only for explanation, or a bounded case with concrete observations and no unwarranted extension. Score 1 when distinctive circumstances exist but provide limited support for the broader claim. Score 2 when the case mostly consists of an intervention followed by the desired result, without specifying what was observed, what changed, or what could have differed. Score 3 when such a schematic case is presented as decisive general proof, including an explicitly invented case treated as actual validation. Names, first-person framing, and numerical gains alone do not individuate a case. Do not infer fabrication. Short cases can receive 3.",
+   "subsumes": [
+    "schematic_case_warrant"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "lesson_template_anecdote",
+   "description": "Measures whether an anecdote's contents are almost entirely predictable from the general lesson it is designed to illustrate.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Personal Blog"
+   ],
+   "operationalization": "Score events or examples explicitly connected to a general principle in this item and return the maximum. Score 0 for empty content, no exemplification relationship, or an example providing substantial independent information that could constrain or complicate the principle. Score 1 when the anecdote illustrates a lesson but retains consequential circumstances not predictable from it. Score 2 when it mainly follows a generic problem, standard response, and fitting result, with individuality supplied chiefly by replaceable people, settings, or props. Score 3 when virtually the entire event can be reconstructed from the lesson alone and supplies no independently discriminating observation, limitation, or alternative outcome. Empirical validation need not be claimed. Actual and hypothetical examples receive the same treatment, and fabrication must not be inferred. Short examples can receive 3.",
+   "subsumes": [
+    "lesson_template_anecdote"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "merit_substituted_for_rebuttal",
+   "description": "Measures attempted answers to criticism that substitute unrelated merits for engagement with the objection's substance.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic"
+   ],
+   "operationalization": "Require an identifiable objection and attempted answer within this item; return the maximum across pairs. Score 0 for empty content, no rebuttal, a direct answer, or an acknowledged defect followed by an explicitly separate recommendation for another purpose. Score 1 when the answer partly addresses the objection but also relies on independent merits. Score 2 when the answer mainly asserts usefulness, popularity, inspiration, or importance without resolving the factual or logical objection. Score 3 when the objection is conceded or left untouched yet the unrelated value is presented as defeating it. Favorable judgment after a caveat is not automatically a rebuttal. A changed evaluative criterion can be responsive if the item explains why the original criterion is inappropriate. Do not adjudicate the dispute externally. Short objection-answer pairs can receive 3.",
+   "subsumes": [
+    "merit_substituted_for_rebuttal"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "elaboration_despite_missing_referent",
+   "description": "Measures substitution of definite or expansive interpretation for an answer when the same item explicitly leaves its central fact or referent unresolved.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic",
+    "Knowledge Article"
+   ],
+   "operationalization": "Apply only when this item explicitly says a requested central fact, identity, existence, or entity type is unavailable or unresolved; return the maximum across such episodes. Score 0 for empty content, no acknowledged gap, a response confined to the limit, a relevant verification route, or a clearly justified change of question. Score 1 when conditional possibilities remain directed toward resolving the missing fact. Score 2 when broad importance, meaning, or context effectively replaces the missing answer without resolving it. Score 3 when definite history, stable identity, adoption, institutional practice, technical capability, or sweeping influence is assigned despite the unresolved referent and without conditional framing. Do not infer missingness from unfamiliarity, spelling, extraction artifacts, or absent citations. Clearly fictional or hypothetical entities are not unresolved merely because they are unreal. Short items must explicitly contain both the gap and the elaboration.",
+   "subsumes": [
+    "elaboration_despite_missing_referent",
+    "unresolved_referent_elaboration"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "nominal_quantification_gap",
+   "description": "Measures proposed metrics or formulas that create an appearance of measurement without defining what their quantities and operations mean.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Academic"
+   ],
+   "operationalization": "Score attempts to specify quantitative evaluation or a computational relationship within this item and return the maximum. Score 0 for empty content, no specification attempt, mere mention of an established method or reported score, or variables and operations with adequate formal or observational meanings. Score 1 when the measured constructs are clear but a scale or coding detail is unspecified. Score 2 when indicators or operations are offered without enough information to determine what observations would change the result. Score 3 when arithmetic combines abstract constructs without defined encodings or compatible scales and is nevertheless presented as precise, comprehensive, or guaranteed assessment. Formal mathematics need not have empirical measurement if its meanings are adequate. Do not score equation typography, acronym novelty, or unfamiliar terminology. A short metric mention alone is insufficient and scores 0.",
+   "subsumes": [
+    "nominal_quantification_gap"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "central_semantic_undercommitment",
+   "description": "Measures central actions, discoveries, or changes described as important while their actual substance remains a placeholder.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Creative"
+   ],
+   "operationalization": "Identify claims that a substantive action, discovery, realization, or change occurs in this item and return the maximum undercommitment score. Score 0 for empty content, no such claim, or a clearly specified substantive event. Score 1 when the core action or finding is identifiable but a relevant aspect remains broad. Score 2 when the item identifies only a category of event or result while leaving what was done, learned, or changed materially unspecified. Score 3 when the central content consists almost entirely of assertions of importance or transformation without recoverable substantive content. Do not penalize a short but definite event report, an intentionally unanswered question, or pure navigation that does not claim to describe the event. Use only the item; do not infer missing facts from surrounding material.",
+   "subsumes": [
+    "central_semantic_undercommitment"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "subject_interchangeability",
+   "description": "Measures how little an item's substantive predicates depend on distinctive properties of its nominal subject.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Knowledge Article"
+   ],
+   "operationalization": "Assess the item's substantive assertion as a whole using a semantic substitution test. Return 0 for empty content, no substantive assertion, or an assertion dependent on a distinctive factual relationship, mechanism, definition, constraint, or record. Score 1 when the assertion is mostly general but contains a substantive differentiator that would need changing for another subject. Score 2 when only the broad subject class matters and most members could receive the same predicates without substantive alteration. Score 3 when even that class contributes little and the content is primarily a reusable statement of importance, improvement, endurance, complexity, or beneficial engagement. A precise attribution or life event is not interchangeable merely because a name could be replaced. Do not verify facts, compare against other items, or penalize brevity. Generic evaluative metadata remains eligible.",
+   "subsumes": [
+    "subject_interchangeability"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "contingent_outcome_assurance",
+   "description": "Measures assurances that contingent achievements or future states will occur or endure beyond the actor's demonstrated control.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Creative",
+    "Personal About Page"
+   ],
+   "operationalization": "Score each assertion of guaranteed attainment or durability within this item and return the maximum. Score 0 for empty content, no assurance, a bounded reported observation, an intention, a commitment within the actor's control, or an outcome secured by explicit formal or operative conditions. Score 1 when continued success is strongly expected but meaningful contingencies remain acknowledged. Score 2 when an outcome depending on other agents, systems, or future circumstances is treated as assured without adequate stated conditions. Score 3 when permanent recovery, unbreakable relationships, inexhaustible success, or another open-ended contingent state is asserted without meaningful future limitations. Do not invent remote exceptions to ordinary bounded claims. Judge semantic assurance, not certainty words, and assess fictional worlds under their explicit premises. A short categorical guarantee can receive 3.",
+   "subsumes": [
+    "contingent_state_permanence",
+    "certainty_about_uncontrolled_outcomes"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "intrinsic_value_supersession",
+   "description": "Detects explicit displacement of a material or instrumental objective by generalized inner or relational value as the genuinely important outcome.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "scope": "universal",
+   "source_formats": [
+    "Creative"
+   ],
+   "operationalization": "Return 1 when this item explicitly identifies an instrumental or material objective, such as an object, prize, status, or endpoint, and revalues the experience by subordinating that objective to learning, authenticity, affection, connection, or comparable inner value as what truly matters. Both the original objective and its supersession must be recoverable within the item. Otherwise return 0, including for empty content, values merely coexisting, an ordinary choice between concrete priorities, a general statement that relationships matter, or disappointment without revaluation. Do not judge whether the preferred value is morally desirable or whether the outcome actually occurred. One concise revaluation is sufficient. Fictional and nonfictional content use the same rule.",
+   "subsumes": [
+    "intrinsic_value_supersession"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "automatic_social_convergence",
+   "description": "Measures treatment of disclosure, empathy, or mutual acknowledgment as sufficient to resolve conflicting agents' interests.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Creative"
+   ],
+   "operationalization": "Require a represented conflict and a communicative or affective intervention within this item; return the maximum score across episodes. Score 0 for empty content, no such relationship, merely improved understanding, or agreement explained by a concrete change in incentives, terms, or implementation. Score 1 when communication helps resolve the conflict but some operative concessions or altered expectations are supplied. Score 2 when empathy, disclosure, or acknowledgment largely suffices for agreement without addressing separately stated interests or practical obstacles. Score 3 when it is presented as complete or lasting alignment despite those unresolved conflicts, with no additional negotiating or implementing mechanism. Do not assume agents have hidden opposing incentives. Assess only conflicts stated in the item, including fictional ones. A short reconciliation can receive any supported score.",
+   "subsumes": [
+    "automatic_social_convergence"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "unlocated_collective_reaction",
+   "description": "Measures collective attitudes, reactions, or endorsements asserted without a bounded observational or aggregation basis.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Knowledge Article",
+    "News"
+   ],
+   "operationalization": "Score each claim about a group's feeling, attention, endorsement, rejection, or agreement and return the maximum. Score 0 for empty content, no collective attitude claim, an identified individual's view alone, or a group claim appropriately bounded by described observations or measurement. Score 1 when the group or observation channel is bounded but the aggregation or extension beyond observations is unclear. Score 2 when a diffuse or broad group is assigned substantial sentiment, popularity, concern, or approval without an identifiable observation route. Score 3 when near-unanimity, sweeping intensity, settled consensus, or authoritative collective confirmation is asserted without such a basis. Numerical surveys are not mandatory if concrete qualitative observations substantiate the claim. A single illustrative comment does not establish population consensus. Invitations to participate are not evidence of participation. Use only the item; short group claims are eligible.",
+   "subsumes": [
+    "unlocated_collective_validation",
+    "unmeasured_collective_reaction"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "deferred_rule_content",
+   "description": "Detects purported determinations whose decisive criterion is circularly deferred to unspecified permissions or governing requirements.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "scope": "universal",
+   "source_formats": [
+    "Knowledge Article"
+   ],
+   "operationalization": "Return 1 when this item purports to determine permission, prohibition, entitlement, or eligibility but its decisive condition merely refers to being permitted, meeting unspecified requirements, or complying with whatever rules govern, without contributing a substantive boundary. Otherwise return 0. In particular, return 0 for empty content, no normative determination, an actual criterion, an identifiable governing instrument that can be retrieved, a concrete prohibited activity, or an explicit warning that a separate determination is still required. Do not label all broad or conditional rules circular. The same test applies to organizational, technical, recreational, legal, and access rules. A short circular rule can receive 1; concrete licensing conditions do not qualify. Use only the stated criterion, without external legal or technical interpretation.",
+   "subsumes": [
+    "deferred_rule_content"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "uninstantiated_change_account",
+   "description": "Measures developmental accounts that replace identifiable changes and causes with an interchangeable progression story.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Knowledge Article"
+   ],
+   "operationalization": "Score each substantive account of development, spread, maturation, decline, or change within this item and return the maximum. Score 0 for empty content, no development claim, a revision timestamp alone, or a concrete change tied to a specific event or causal process. Score 1 when a recognizable change has a substantive contextual detail but only a broad explanation. Score 2 when development is chiefly a generalized movement from modest to prominent, simple to sophisticated, or adversity to maturity without an instantiated turning point or distinctive process. Score 3 when an extensive history is supplied through an interchangeable class-level story and broad forces with no subject-specific causal connection. Dates and famous names do not rescue an otherwise empty account. Do not demand a complete history from a short bounded change report or use item position.",
+   "subsumes": [
+    "uninstantiated_change_account"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "projection_without_dependency",
+   "description": "Measures forecasts of development or improvement that lack a specified enabling pathway or meaningful dependency.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Knowledge Article"
+   ],
+   "operationalization": "Score actual forecasts of future capability, adoption, success, or development in this item and return the maximum. Score 0 for empty content, no forecast, a plan without a success prediction, or a forecast tied to a concrete mechanism and meaningful dependency. Score 1 for a narrow extension supported only by a broad directional reason. Score 2 when improvements or new applications are projected from generalized progress, demand, innovation, or enthusiasm without necessary enabling changes being identified. Score 3 when inevitable flourishing, dominance, or transformative capability is predicted without meaningful dependencies, constraints, or failure conditions. A specific date or measurable target does not itself establish a causal basis. Do not judge a technology or industry as inherently predictive. Use only the forecast's stated grounds; short forecasts can receive any level.",
+   "subsumes": [
+    "projection_without_dependency"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "unbounded_future_extension",
+   "description": "Measures future-facing claims that preserve an appearance of foresight without a discriminating outcome or recognizable failure condition.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Nonfiction"
+   ],
+   "operationalization": "Score actual predictions in this item and return the maximum. Score 0 for empty content, no prediction, a wish or navigation statement, or a distinguishable future event, threshold, outcome, or conditional development whose failure could be recognized. Score 1 when a clear direction is tied to a concrete current mechanism or assumption but its horizon remains broad. Score 2 when the prediction mainly expects continued growth, adaptation, relevance, or influence without specifying what change would establish or defeat it. Score 3 when it predicts permanent or inexhaustible significance, guarantees favorable continuation, or remains compatible with essentially every possible future while presenting itself as foresight. Do not score future tense, subject recency, or missing calendar dates by themselves. Publication schedules are ineligible unless they add such a substantive prediction. Short items use the same anchors.",
+   "subsumes": [
+    "unbounded_future_extension"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "outcome_restating_condition",
+   "description": "Measures conditionals whose supposed determinant redescribes the outcome rather than identifying an independently observable prerequisite.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "News"
+   ],
+   "operationalization": "Score explicit or clearly implied outcome-depends-on-condition relationships in this item and return the maximum. Score 0 for empty content, no such reasoning, or an independently identifiable determinant, even if obvious. Score 1 when a real determinant is named but remains broad enough to support several interpretations. Score 2 when the main conditions are generalized competence, adaptability, favorable reception, or effective execution without indicators that separate them from the outcome. Score 3 when the condition is substantially circular, so attaining the outcome depends on attaining that same outcome under a different description. Do not penalize specific necessary conditions, resource constraints, or concrete legal prerequisites merely for being unsurprising. Evaluate semantic independence, not keywords. Short conditionals and substantive access rules are eligible; bare metadata is not.",
+   "subsumes": [
+    "outcome_restating_condition"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "attention_as_substance",
+   "description": "Measures informational content consisting primarily of unspecified observers' interest, anticipation, or continued watching.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "News"
+   ],
+   "operationalization": "Assess the item's attention or anticipation claims as a whole. Score 0 for empty content, no such claim, or a concrete development, decision, result, monitoring protocol, or resolvable knowledge gap providing the substance. Score 1 when generalized interest accompanies a substantial independently informative claim. Score 2 when watching or anticipation dominates and its object is described only broadly. Score 3 when the item contributes essentially only that people watch, await, speculate, or remain interested, without a substantive development, a particular observer's criterion, or a resolvable question. Direct instructions to subscribe, submit evidence, or consult a resource are audience actions and do not qualify merely because they concern attention. Do not use item position or assume promised analysis is absent elsewhere. A very short anticipation statement can receive 3.",
+   "subsumes": [
+    "attention_as_substance"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "gap_filling_from_archetype",
+   "description": "Measures filling a visible information gap about a particular subject with assumptions drawn from its category or presumed narrative role.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Nonfiction"
+   ],
+   "operationalization": "Require a visible information gap or explicit category-to-individual inference within this item; return the maximum across instances. Score 0 for empty content, no such inference, ordinary reporting without a cited source, or a gap left unresolved. Score 1 when a possibility is clearly speculative and grounded in a subject-specific evidentiary clue. Score 2 when a particular trait, history, motive, possession, or behavior is proposed chiefly because it fits an occupation, social category, or narrative role. Score 3 when acknowledged absence of evidence is nevertheless filled with a coherent individualized portrait or confident particulars without a subject-specific basis. Do not infer fabrication from unfamiliarity or verify the supplied details externally. General category descriptions without individual gap-filling are outside this feature. Short explicit gap-and-completion statements can receive 3.",
+   "subsumes": [
+    "gap_filling_from_archetype"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "categorical_homogenization",
+   "description": "Measures treatment of broad categories as internally uniform essences that explain their members' motives, qualities, or behavior.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "Nonfiction"
+   ],
+   "operationalization": "Score category-level attributions within this item and return the maximum. Score 0 for empty content, no category attribution, a legitimate definition, a clearly bounded sample, or a comparison of specific instances. Score 1 for a broad tendency that explicitly preserves variation or meaningful scope limits. Score 2 when heterogeneous categories are assigned uniform motives, strengths, meanings, or behaviors without relevant conditions or internal variation. Score 3 when categories become comprehensive or opposed essences explaining members across multiple contexts, with membership itself serving as sufficient explanation. Do not use external facts to decide that a generalization is false, and do not penalize the identity of the categories discussed. Normative and interpretive claims are eligible when they use this reasoning structure. A short claim can receive any supported score.",
+   "subsumes": [
+    "categorical_homogenization"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "missing_information_motive_inference",
+   "description": "Detects attribution of an intention or disposition as the explanation for missing information without an independently supplied basis for that motive.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "scope": "universal",
+   "source_formats": [
+    "Personal About Page"
+   ],
+   "operationalization": "Return 1 when this item explicitly identifies unavailable or undisclosed information and explains that absence by attributing a particular intention, preference, or disposition to the subject, without independent evidence for that explanation in the item. Otherwise return 0, including for empty content, no information absence, no motive attribution, an attributed statement that establishes the subject's reason, or a clearly conditional list of possibilities not offered as the explanation. The inference must run from informational absence to the subject's reason for it; missing citations alone do not qualify. Do not infer admirable motives or hidden evidence from outside knowledge. A short complete absence-to-motive claim is sufficient.",
+   "subsumes": [
+    "missing_information_motive_inference"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "thin_analogical_warrant",
+   "description": "Detects use of an analogy as support when its only stated connection is a broad evaluative theme rather than a shared explanatory relationship.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "scope": "universal",
+   "source_formats": [
+    "User Reviews"
+   ],
+   "operationalization": "Return 1 when this item uses a comparison between domains or cases as a reason to accept a substantive judgment, but the only supplied correspondence is shared praise, disapproval, emotional tone, prestige, or another broad evaluative theme, with no relevant relational mapping. Otherwise return 0, including for empty content, no analogy, a decorative or descriptive comparison not used as support, or an analogy whose stated shared relationship bears on the inference. Do not demand empirical proof from an analogy used only to explain a possibility. Judge the inferential use represented in the item, not word similarity or outside truth. A concise analogy-based justification can receive 1.",
+   "subsumes": [
+    "thin_analogical_warrant"
+   ],
+   "direction_conflict": false
+  },
+  {
+   "name": "unsupported_benign_rationalization",
+   "description": "Measures favorable explanations of an agent's limitation or failure offered without evidence distinguishing them from competing explanations.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "scope": "universal",
+   "source_formats": [
+    "User Reviews"
+   ],
+   "operationalization": "Score each favorable or exculpatory explanation of a stated limitation, failure, or adverse behavior and return the maximum. Score 0 for empty content, no such explanation, a merely sympathetic reaction, or an explanation grounded in concrete evidence supplied by the item. Score 1 when a benign possibility is explicitly tentative and accompanied by a relevant clue or recognition of alternatives. Score 2 when the favored explanation is proposed mainly because it is charitable, without evidence discriminating it from less favorable accounts. Score 3 when the unsupported benign account is treated as established or used to dismiss the adverse evidence or objection. Do not assume malicious alternatives or judge whether the explanation is actually false. An explanation need not concern motive; situational excuses also qualify. Short complete rationalizations can receive 3.",
+   "subsumes": [
+    "unsupported_benign_rationalization"
+   ],
+   "direction_conflict": false
+  }
+ ],
+ "sources": [
+  "outputs/feature_discovery/discovery/proposals/item_model_academic_writing.json",
+  "outputs/feature_discovery/discovery/proposals/item_model_agnostic.json",
+  "outputs/feature_discovery/discovery/proposals/item_model_creative_writing.json",
+  "outputs/feature_discovery/discovery/proposals/item_model_knowledge_article.json",
+  "outputs/feature_discovery/discovery/proposals/item_model_news_article.json",
+  "outputs/feature_discovery/discovery/proposals/item_model_nonfiction_writing.json",
+  "outputs/feature_discovery/discovery/proposals/item_model_personal_about_page.json",
+  "outputs/feature_discovery/discovery/proposals/item_model_personal_blog.json",
+  "outputs/feature_discovery/discovery/proposals/item_model_user_reviews.json"
+ ],
+ "usage": {
+  "prompt_tokens": 47443,
+  "completion_tokens": 33373,
+  "total_tokens": 80816,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 47440,
+   "audio_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 10392,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0,
+   "rejected_prediction_tokens": 0
+  }
+ },
+ "stamp": {
+  "generated": "2026-09-14T16:43:11",
+  "git_revision": "0431a24",
+  "config": {
+   "model": "gpt-6-astra",
+   "effort": "xhigh",
+   "per_side": 5000,
+   "match_roles": true,
+   "seed": 0,
+   "schema": "feature_discovery/feature.schema.json",
+   "consolidate": true,
+   "name": "Item-level discovery, our outline-trained model labels",
+   "unit": "item",
+   "label_source": "model",
+   "format_agnostic": false,
+   "notes": "This is a variant of the corpus-labels feature, but with labels derived from our trained model rather than the corpus. The model is a detector trained on outlines, and the labels are determined for each idea. The idea is to see which features of each idea the model relies on when making AI vs. human detection decisions.\n",
+   "score_keys": [
+    "nemotron_1m_fullitem"
+   ]
+  },
+  "config_source": "configs/features/_base.yaml"
+ }
+}

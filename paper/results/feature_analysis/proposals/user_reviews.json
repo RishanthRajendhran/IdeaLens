@@ -1,0 +1,298 @@
+{
+ "features": [
+  {
+   "name": "constraint_bearing_specificity",
+   "description": "Measures how strongly the item's substantive details narrow the circumstances under which its assertion could be true.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess the discriminating function of details using the rubric in spec, rather than counting names, numbers, or technical terms.",
+   "rationale": "Human-source ideas often preserve particulars of an encountered object or event, whereas AI-source ideas often attach broadly applicable assertions to an identified subject; this is a candidate tendency, not proof of authorship."
+  },
+  {
+   "name": "incidental_context_residue",
+   "description": "Detects concrete incidental information that neither identifies the subject nor serves the item's main explanatory or persuasive purpose.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "operationalization": "Identify a concrete, noninstrumental circumstance using the exclusions in spec.",
+   "rationale": "Human accounts can retain incidental residue from lived circumstances; AI-generated accounts more often select details that visibly advance an intended message."
+  },
+  {
+   "name": "observation_to_judgment_link",
+   "description": "Measures whether an assessment is earned through a particular observation whose relevance is explained.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Evaluate the semantic connection between a reported particular and the conclusion drawn from it.",
+   "rationale": "Human evaluations frequently originate in a noticed peculiarity and explain its significance, whereas AI evaluations often supply a favorable conclusion with supporting descriptions that largely restate it."
+  },
+  {
+   "name": "operational_boundary_resolution",
+   "description": "Measures whether the item specifies a usable boundary separating circumstances in which a claim, rule, or capability applies from circumstances in which it does not.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Rate the precision and explanatory value of an explicitly stated applicability boundary.",
+   "rationale": "Encounter-based human ideas often contain narrow exceptions and compatibility limits, while AI ideas more often offer broadly inclusive applicability or unspecific reminders about individual differences."
+  },
+  {
+   "name": "situated_priority_commitment",
+   "description": "Measures commitment to a particular actor's noninterchangeable priorities rather than universally desirable goals.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify whether a concrete constraint or value hierarchy actually determines the actor's judgment or choice.",
+   "rationale": "Human judgments often expose situated tastes, thresholds, and inconvenient priorities; AI-generated personas commonly want the same broadly desirable combination of quality, convenience, and value."
+  },
+  {
+   "name": "unresolved_process_friction",
+   "description": "Measures whether the item preserves a concrete obstacle that constrains action or remains resistant to attempted resolution.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Rate the specificity and practical consequences of resistance encountered within the event described by the item.",
+   "rationale": "Human reporting often preserves recalcitrant details, incomplete tests, and unsuccessful workarounds, whereas AI accounts more readily resolve difficulties into a clean success."
+  },
+  {
+   "name": "claimed_observed_discrepancy",
+   "description": "Measures the specificity of a discrepancy between an explicitly stated expectation or representation and a reported observation.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Compare only the expected and observed states supplied within the item.",
+   "rationale": "Human assessments often record a specific mismatch that motivated the idea, while AI accounts commonly report exceeding expectations without identifying what exactly differed."
+  },
+  {
+   "name": "source_traceability",
+   "description": "Measures how precisely the item identifies the origin of an attributed assertion, observation, or artifact.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess source resolution and claim-source linkage without checking the source externally.",
+   "rationale": "Human-source material often preserves documentary provenance and specific attribution, whereas AI-source material frequently invokes generalized expertise or collective approval."
+  },
+  {
+   "name": "reconstructible_evidence_procedure",
+   "description": "Measures whether the item describes evidence production sufficiently concretely for another person to understand or reproduce the operation.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Evaluate procedural information rather than assertions that a procedure was rigorous or comprehensive.",
+   "rationale": "Human reports often inherit practical details from actual testing or investigation, whereas AI reports frequently establish credibility by announcing extensive testing without describing its discriminating operations."
+  },
+  {
+   "name": "quantitative_auditability",
+   "description": "Measures whether substantive quantities are attached to sufficiently defined measures, reference values, and observations to permit interpretation or arithmetic checking.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess the interpretability and auditability of quantitative claims, excluding the mere presence of numerals.",
+   "rationale": "Human quantitative ideas often retain measured values and their local reference conditions, whereas AI-generated figures can provide an appearance of precision without an operationally defined measure."
+  },
+  {
+   "name": "localized_epistemic_limitation",
+   "description": "Measures whether an acknowledged knowledge limitation is tied to a particular missing observation and a specific inference that cannot be made.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify an explicit connection between an evidentiary gap and a restricted conclusion.",
+   "rationale": "Human uncertainty often reflects a particular unperformed test, missing source, or confound; AI uncertainty is more often a general disclaimer that leaves the main assertion unchanged."
+  },
+  {
+   "name": "self_implicating_admission",
+   "description": "Detects an admission that assigns a consequential error, bias, or limitation to the person making the assessment.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "operationalization": "Identify an admission that genuinely weakens the assessor's flattering self-presentation or the authority of the assessment.",
+   "rationale": "Human accounts sometimes expose their own compromised judgment or avoidable mistakes, while AI accounts more often maintain a competent, reasonable, and ultimately vindicated narrator."
+  },
+  {
+   "name": "counterevidence_engagement",
+   "description": "Measures whether the item challenges a particular proposition by addressing the evidence or inference supporting it.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Distinguish evidentiary rebuttal from contrary sentiment or generalized disagreement.",
+   "rationale": "Human criticism often targets a precise interpretive move or factual claim; AI rebuttals more often offer an opposing overall impression or invoke contextual variability without resolving the dispute."
+  },
+  {
+   "name": "comparison_baseline_resolution",
+   "description": "Measures whether a comparison identifies its alternatives and evaluates them on a shared, interpretable basis.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Evaluate the resolution of the comparands and the common comparison axis.",
+   "rationale": "Human comparisons often arise from particular alternatives actually encountered, whereas AI comparisons frequently assert superiority over an unspecified competitive field."
+  },
+  {
+   "name": "nonrestrictive_qualification",
+   "description": "Measures whether a caveat creates an appearance of caution without meaningfully restricting the assertion it qualifies.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess the semantic effect of a qualification rather than the presence of hedging language.",
+   "rationale": "AI-generated material often combines strong endorsement with portable qualifications about preferences, effort, or variable outcomes; human caveats more often identify a specific limit with practical consequences."
+  },
+  {
+   "name": "authority_without_accessible_basis",
+   "description": "Measures reliance on asserted rigor, verification, expertise, or independence without a corresponding inspectable basis inside the item.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Evaluate the gap between an invoked epistemic credential and the evidence made available locally.",
+   "rationale": "AI writing often supplies credibility assurances as substitutes for the particulars of evidence production, while human-source ideas more often preserve the actual basis or the limits of that basis."
+  },
+  {
+   "name": "warrant_scope_escalation",
+   "description": "Measures how far an explicitly supplied warrant is promoted into a stronger or broader conclusion than it directly supports.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Compare the logical scope and evidentiary type of the stated support with those of the resulting claim.",
+   "rationale": "AI-source ideas often turn plausible mechanisms, favorable testimony, or protective features into definitive validation; human material also does this, so the signal concerns the inferential move rather than the truth of the topic."
+  },
+  {
+   "name": "undifferentiated_excellence",
+   "description": "Measures unsupported claims that a subject simultaneously satisfies numerous desirable objectives without selective criteria or acknowledged tensions.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Rate the breadth and nonselectivity of positive evaluation, not the number or intensity of approving words.",
+   "rationale": "AI evaluations frequently assemble comprehensive packages of desirable properties, whereas human judgments more often privilege particular strengths or expose tensions among objectives."
+  },
+  {
+   "name": "significance_inflation",
+   "description": "Measures an unsupported expansion from a bounded benefit or observation to sweeping personal, institutional, or societal importance.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Compare the scale of the described basis with the scale of the attributed consequence.",
+   "rationale": "AI-source items often elevate routine utility into personal transformation or field-wide progress, while human-source items more often preserve the limited scale of the observed consequence."
+  },
+  {
+   "name": "adversity_reframed_as_growth",
+   "description": "Measures the conversion of an adverse experience into an abstract lesson in personal growth, especially when the underlying harm remains unresolved.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Distinguish concrete learning from generalized moral redemption of an adverse event.",
+   "rationale": "The AI contrast set repeatedly converts poor treatment into patience, resilience, or gratitude, whereas human complaints more often retain the grievance or derive a specific protective action."
+  },
+  {
+   "name": "means_end_substitution",
+   "description": "Measures whether advice or a proposed improvement merely restates the desired outcome instead of identifying an intervention.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Separate an executable means from a description of how success should look.",
+   "rationale": "AI recommendations often produce unobjectionable improvement goals, while human proposals are more likely to arise from a concrete obstruction and identify a particular alteration or workaround."
+  },
+  {
+   "name": "thin_analogical_warrant",
+   "description": "Detects analogies used as support when their only stated connection is a broad evaluative theme rather than a shared explanatory relationship.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "operationalization": "Evaluate the inferential work performed by an analogy, excluding merely descriptive or decorative comparisons.",
+   "rationale": "AI-source ideas sometimes manufacture significance by connecting unrelated cases through generic themes such as perseverance or innovation, whereas stronger human analogies more often map a particular relationship or mechanism."
+  },
+  {
+   "name": "unsupported_benign_rationalization",
+   "description": "Measures favorable explanations of an agent's limitation or failure that are supplied without evidence distinguishing them from less favorable explanations.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Rate the evidentiary support and certainty of an exculpatory explanation.",
+   "rationale": "AI accounts often preserve a benevolent, coherent picture of an organization by explaining away gaps or failures, while human accounts more often leave the cause unsettled or demand concrete remediation."
+  },
+  {
+   "name": "causal_tradeoff_accounting",
+   "description": "Measures recognition that the same design choice, intervention, or mechanism produces both a benefit and a specific cost.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify causal coupling between an advantage and its associated disadvantage rather than independent positive and negative attributes.",
+   "rationale": "Human-source ideas often reflect negotiation with practical constraints, including improvements that damage another valued property; AI-source ideas more frequently present benefits and drawbacks as independent checklist entries."
+  }
+ ],
+ "uncomputable": [
+  "unresolved_process_friction: proposes a structural property that cannot be computed from a single item",
+  "counterevidence_engagement: proposes a structural property that cannot be computed from a single item",
+  "significance_inflation: proposes a structural property that cannot be computed from a single item"
+ ],
+ "contrast": {
+  "unit": "item",
+  "label_source": "model",
+  "format": "User Reviews",
+  "format_agnostic": false,
+  "role_matched": true,
+  "per_side": 5000,
+  "n_cells": 46,
+  "stamp": {
+   "generated": "2026-09-08T19:20:36",
+   "git_revision": "7c0bf67",
+   "config": {
+    "model": "gpt-5.6-sol",
+    "effort": "max",
+    "per_side": 5000,
+    "match_roles": true,
+    "seed": 0,
+    "schema": "feature_discovery/feature.schema.json",
+    "consolidate": true,
+    "name": "Item-level discovery, our outline-trained model labels",
+    "unit": "item",
+    "label_source": "model",
+    "format_agnostic": false,
+    "notes": "This is a variant of the corpus-labels feature, but with labels derived from our trained model rather than the corpus. The model is a detector trained on outlines, and the labels are determined for each idea. The idea is to see which features of each idea the model relies on when making AI vs. human detection decisions.\n",
+    "score_keys": [
+     "nemotron_1m_fullitem"
+    ]
+   },
+   "config_source": "configs/features/_base.yaml",
+   "eval": "indomain"
+  }
+ },
+ "usage": {
+  "completion_tokens": 14390,
+  "prompt_tokens": 498023,
+  "total_tokens": 512413,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": 0,
+   "audio_tokens": 0,
+   "reasoning_tokens": 11203,
+   "rejected_prediction_tokens": 0,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": 0,
+   "cache_write_tokens": 0,
+   "cached_tokens": 498020,
+   "image_tokens": null,
+   "text_tokens": null
+  }
+ },
+ "stamp": {
+  "generated": "2026-09-14T14:32:46",
+  "git_revision": "0431a24",
+  "config": {
+   "model": "gpt-6-astra",
+   "effort": "xhigh",
+   "per_side": 5000,
+   "match_roles": true,
+   "seed": 0,
+   "schema": "feature_discovery/feature.schema.json",
+   "consolidate": true,
+   "name": "Item-level discovery, our outline-trained model labels",
+   "unit": "item",
+   "label_source": "model",
+   "format_agnostic": false,
+   "notes": "This is a variant of the corpus-labels feature, but with labels derived from our trained model rather than the corpus. The model is a detector trained on outlines, and the labels are determined for each idea. The idea is to see which features of each idea the model relies on when making AI vs. human detection decisions.\n",
+   "score_keys": [
+    "nemotron_1m_fullitem"
+   ]
+  },
+  "config_source": "configs/features/_base.yaml"
+ }
+}

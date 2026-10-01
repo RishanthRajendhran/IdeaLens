@@ -1,0 +1,33 @@
+extends: _base.yaml
+name: DetectRL-X
+number: 7
+group: Out of domain
+asks: Length-matched pairs across four generators and several domains.
+upstream: >
+  WUJUNCHAO/DetectRL-X. NOTE: this is a DIFFERENT and newer dataset from
+  NLP2CT/DetectRL. Published Pangram and RoBERTa numbers refer to the original
+  and are NOT a head-to-head with ours.
+data_dir: test7_detectrl
+legacy_item_stem: detectrl   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+legacy_npz_stem: detectrl   # the stem this eval's predictions were written under
+                        # before this repository existed; read by
+                        # scripts/data/import_results.py
+
+report:
+  group_by: [domain, model, attack]
+  in_set: true
+
+caveats:
+  - >
+    Our build is the base split only, English, >=500 words on both sides, and is
+    roughly 87% upstream TRAIN rows -- the benchmark's own test split was not
+    respected. Fix before publishing any number from it.
+  - >
+    The dataset carries an instruction artifact: about 17.6% of HUMAN texts begin
+    with a summarisation instruction and 0% of AI texts do. Our pipeline strips
+    it (0 of 1,200 sampled outlines retain it), but any text-based baseline run
+    on this dataset may be inflated by it.
+  - >
+    Formats are mapped from the dataset's own `domain` field through a fixed
+    dictionary rather than classified. Re-classify before reporting.

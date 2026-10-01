@@ -1,0 +1,10 @@
+# Feature discovery. See src/ideadet/features/discovery.py for why each control
+# exists; the short version is that without them the model discovers the role
+# distribution, the format, or the corpus topic and calls it authorship.
+model: gpt-5.6-sol
+effort: max
+per_side: 2500
+match_roles: true
+seed: 0
+schema: feature_discovery/feature.schema.json
+consolidate: true

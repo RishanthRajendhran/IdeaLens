@@ -1,0 +1,73 @@
+# Provider rates, USD per MILLION tokens. Never hard-code a rate in a script.
+#
+# `as_of` is checked at run time: anything older than 60 days warns rather than
+# being trusted silently. Provider discounts in this space are promotional and
+# have moved more than once during this project.
+#
+# Three meters bill separately and are NOT interchangeable:
+#   input      prompt tokens
+#   output     completion tokens -- REASONING TOKENS BILL HERE TOO, and are
+#              reported separately by the API, so a cost model that reads only
+#              completions undercounts by several times at high thinking levels
+#   cached_input  repeated prefixes; roughly a tenth of the input rate, which is
+#              why batches are ordered so identical system prefixes sit adjacent
+#
+# For Tinker, poll instead of reading this file: `ideadet.llm.pricing.refresh_tinker()`.
+# Scoring bills the PREFILL meter there -- computing log-probabilities generates
+# nothing -- so costing a scoring run at the sampling rate is wrong by a lot.
+
+as_of: 2026-09-09
+source: >
+  Provider public pricing pages. Re-check before quoting any figure in a paper
+  or before authorising a sweep; see the paper's cost appendix for the trial-then-extrapolate
+  procedure this project uses.
+
+  AUDITED 2026-09-09 against ai.google.dev/pricing and
+  developers.openai.com/api/docs/pricing after projected costs stopped matching
+  the billing account. THREE ENTRIES WERE WRONG, all of them a whole row copied
+  from the wrong model:
+
+    gemini-3.7-flash        carried gemini-2.5-flash's rates (0.15/1.25 batch).
+                            Understated by 2.5x.
+    gemini-3.1-pro-preview  carried gemini-2.5-pro's rates (0.625/5.00 batch).
+                            Understated by 1.6x.
+    gpt-5.6-sol             carried gpt-5.5's rates (2.50/15.00 batch).
+                            OVERstated by 1.25x on input, 1.5x on output.
+
+  gpt-6-astra and text-embedding-3-large checked out. Every Gemini projection
+  made between 2026-09-01 and this date understates real spend; the two Gemini
+  models are the ones the pipeline actually runs on, so pipeline cost estimates
+  were low by roughly 2.5x. Reconcile against the invoice, not this file, on any
+  run over ~$1k.
+
+models:
+  # Gemini introductory rates run to 2026-12-31 and then DOUBLE, so
+  # extraction-heavy work is materially cheaper run in 2026. Gemini cached input
+  # is a tenth of the standard input rate; OpenAI cached input likewise, and
+  # OpenAI batch is a flat 50% off standard on every model.
+  gemini-3.8-flash:
+    batch:    {input: 0.375, output: 1.875, cached_input: 0.0375}
+    standard: {input: 0.75, output: 3.75, cached_input: 0.075}
+  gemini-3.7-flash:
+    batch:    {input: 0.375, output: 1.875, cached_input: 0.0375}
+    standard: {input: 0.75, output: 3.75, cached_input: 0.075}
+  gemini-3.1-pro-preview:
+    # Pro reprices above 200K INPUT tokens. `rate(..., mode="batch_long")` reads
+    # the long tier; nothing in this pipeline reaches it, but the de-leak stage
+    # would if it were ever fed whole documents instead of outlines.
+    batch:         {input: 1.00, output: 6.00, cached_input: 0.10}
+    standard:      {input: 2.00, output: 12.00, cached_input: 0.20}
+    batch_long:    {input: 2.00, output: 9.00, cached_input: 0.20}
+    standard_long: {input: 4.00, output: 18.00, cached_input: 0.40}
+  gpt-5.6-sol:
+    batch:    {input: 2.00, output: 10.00, cached_input: 0.20}
+    standard: {input: 4.00, output: 20.00, cached_input: 0.40}
+  gpt-6-astra:
+    # Long context (>272K input tokens) reprices the WHOLE request at 2x input
+    # and 1.5x output; nothing here comes close, so the base rates apply.
+    # "Fast mode" is 2x again and is not used.
+    batch:    {input: 5.00, output: 25.00, cached_input: 0.50}
+    standard: {input: 10.00, output: 50.00, cached_input: 1.00}
+  text-embedding-3-large:
+    batch:    {input: 0.065, output: 0.0}
+    standard: {input: 0.13, output: 0.0}

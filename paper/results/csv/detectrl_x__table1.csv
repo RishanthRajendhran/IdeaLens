@@ -1,0 +1,8 @@
+Arm,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+English · ai_none,model ideas (TPR),"7,451",87.3,98.6,100.0,67.3,85.3,97.6,92.9,26.1,99.7
+English · ai_adversarial,model ideas (TPR),"5,296",83.8,93.1,97.1,64.4,75.4,90.9,84.1,20.0,97.9
+English · human,human ideas (FPR),"7,169",4.8,4.1,11.3,2.4,1.1,6.1,1.0,11.4,3.3
+non-English · ai_none,model ideas (TPR),"6,865",86.8,95.6,99.9,73.2,–,–,73.8,4.0,98.5
+non-English · human,human ideas (FPR),"6,594",0.3,0.1,0.2,0.3,–,–,0.0,0.0,0.0
+"AUC, English",,,0.974,0.989,0.991,0.960,0.985,0.985,0.993,0.704,0.994
+"AUC, non-English",,,0.998,1.000,1.000,0.994,–,–,0.999,0.708,0.997

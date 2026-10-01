@@ -1,0 +1,19 @@
+extends: _base.yaml
+# Stage 0 via WebOrganizer's released encoder. Free and fast, and the label
+# source the taxonomy was defined by -- but only on English web text.
+stage: format
+backend: encoder
+model: WebOrganizer/FormatClassifier
+use_url: true          # set false, which selects the NoURL checkpoint, when the
+                       # corpus has no URLs; passing an empty URL degrades the
+                       # URL-conditioned model
+device: cuda
+batch_size: 16
+max_length: 8192
+
+notes: >
+  Records the FULL probability distribution, not just the argmax, so the per-set
+  keep rate and confidence can be judged before anything is spent on extraction.
+  Check them: on at least one corpus this encoder failed outright, labelling
+  thousands of novel excerpts "News Article" at median confidence around 0.2.
+  When it does, switch to format_llm_flash. Off-English it is unusable.

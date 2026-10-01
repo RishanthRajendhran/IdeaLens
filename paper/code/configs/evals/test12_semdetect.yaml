@@ -1,0 +1,19 @@
+extends: _base.yaml
+name: Sem-Detect — peer review reworded by a model
+number: 12
+group: Idea provenance
+asks: Model-written reviews, human reviews, and human reviews reworded by a model.
+metric: fire
+positive: mixed
+upstream: Sem-Detect (Duarte et al.), peer-review corpus. Long documents, comfortably above the extraction floor.
+data_dir: test12_semdetect
+legacy_item_stem: pilot_semdetect   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: done
+report:
+  metric: fire
+  group_by: [arm]
+  in_set: true
+notes: >
+  The reworded arm is the human-ideas/AI-prose cell in a domain where the stakes
+  are concrete.

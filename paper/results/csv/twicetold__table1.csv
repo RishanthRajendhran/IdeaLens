@@ -1,0 +1,6 @@
+Detector,Human rewrites,Model originals
+IdeaLens (outline),68.0 (34/50),96.0 (48/50)
+IdeaLens (document),6.0 (3/50),100.0 (50/50)
+ProseLens,0.0 (0/50),100.0 (50/50)
+EditLens-3B,0.0 (0/50),90.0 (45/50)
+Pangram 4,8.0 (4/50),100.0 (50/50)

@@ -1,0 +1,22 @@
+extends: _base.yaml
+# Stage 1: role-labelled outline extraction. The production configuration.
+stage: extract
+model: gemini-3.7-flash
+n_shots: 6
+thinking_level: HIGH
+template: labeled_outline_extraction_en.txt   # 2026-09-24: training template + OUTPUT LANGUAGE block
+max_output_tokens: 64000
+
+notes: >
+  Extraction is roughly 93% of pipeline spend and is dominated by the six
+  exemplars, so the shot count is the main cost lever and Test 4 measures what
+  lowering it costs. Batch requests cannot reference an explicit context cache,
+  so the exemplar block is re-sent per row; keeping one format per job means
+  every row in that job shares a byte-identical prefix, which earns the implicit
+  cached-input discount instead.
+
+  CHANGING THE EXTRACTOR IS A DISTRIBUTION CHANGE. Sets built with a different
+  extractor are mixed-extractor relative to the training corpus. That is
+  deliberate -- the detector is meant to be extractor-invariant and Test 4
+  measures the swap -- but the two must never be silently pooled, which is why
+  every output file records `extractor`.

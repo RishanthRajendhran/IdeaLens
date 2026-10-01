@@ -1,0 +1,6 @@
+Arm · length,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+free_llm · < 500,model ideas (TPR),"6,904",97.9,97.3,100.0,95.0,94.0,99.7,98.4,90.9,99.9
+llm2l · < 500,model ideas (TPR),"7,043",97.5,96.5,99.9,94.6,91.5,99.0,98.1,77.6,99.9
+h2l · < 500,"human ideas, AI prose (FPR)","7,027",1.9,0.5,40.3,2.6,0.5,22.9,3.3,5.4,53.3
+human · < 500,human ideas (FPR),"1,747",0.5,0.0,0.1,0.6,0.0,0.5,0.1,0.2,0.0
+human · >= 500,human ideas (FPR),5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

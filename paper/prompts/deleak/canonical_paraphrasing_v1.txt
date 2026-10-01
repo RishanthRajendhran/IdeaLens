@@ -1,0 +1,252 @@
+# TASK
+
+Rewrite the language of the supplied role-labelled outline while preserving
+its meaning, structure, roles, and metadata exactly.
+
+This is a source-blind canonicalization stage. You are not being shown the
+original document.
+
+The purpose is to ensure that meaning-preserving paraphrases of the same
+document produce outlines expressed in approximately the same neutral,
+canonical plan-note language.
+
+Return only the rewritten JSON.
+
+
+# INPUT OUTLINE
+
+{{LABELED_OUTLINE_JSON}}
+
+
+# STRUCTURAL INVARIANTS
+
+Return exactly the same JSON structure.
+
+Preserve exactly:
+
+- `format`;
+- the number and order of `global_themes`;
+- the number and order of `items`;
+- every item `id`;
+- every item `role_name`;
+- every item `verbatim` value;
+- the one-to-one correspondence between input and output themes;
+- the one-to-one correspondence between input and output items.
+
+Do not:
+
+- add, remove, merge, split, or reorder themes;
+- add, remove, merge, split, or reorder items;
+- renumber items;
+- change role assignments;
+- add, remove, or rename JSON fields.
+
+
+# SEMANTIC INVARIANTS
+
+Each rewritten field must preserve the meaning of its corresponding input
+field exactly.
+
+Preserve:
+
+- every proposition and event;
+- every example and evidentiary relationship;
+- every decision, recommendation, objection, response, and conclusion;
+- every structural-component function;
+- attribution and source ownership;
+- certainty, uncertainty, and other modality;
+- actuality, possibility, and prediction;
+- cause versus correlation;
+- requirements, recommendations, permissions, and prohibitions;
+- conditions, alternatives, exceptions, and negations;
+- scope and applicability;
+- temporal relationships;
+- comparisons and contrasts;
+- load-bearing names, dates, quantities, statistics, technical terms, and
+  identifiers.
+
+Do not:
+
+- add or remove a proposition;
+- make an implicit claim more explicit;
+- replace a specific example with another;
+- generalize a specific statement;
+- make a general statement more specific;
+- strengthen or weaken a claim;
+- change attribution or modality;
+- change the function of a structural item;
+- move information between items.
+
+
+# CANONICAL RE-EXPRESSION
+
+Rewrite every non-protected part of each field in independently chosen
+language.
+
+Do not lightly edit the input. Reconstruct each field from its meaning.
+
+Use:
+
+- different sentence structure;
+- different clause organization;
+- different grammatical voice when natural;
+- different information order when meaning and emphasis remain intact;
+- concise, neutral, self-contained plan-note language.
+
+Avoid retaining the input's:
+
+- sentence shape;
+- clause sequence;
+- rhetorical framing;
+- distinctive verbs or modifiers;
+- cadence;
+- stylistic phrasing.
+
+The output should read as though it were written from an abstract semantic
+representation rather than paraphrased directly from the input wording.
+
+If a reader could align your output to the input phrase-by-phrase — same multi-word 
+sequences in the same order — you have edited, not reconstructed. Rewrite it. 
+Aim to share no run of more than a few consecutive words with the input field, 
+except protected material.
+
+
+# SELF-CONTAINED ITEMS
+
+Every item must remain understandable on its own while still preserving its
+place in the ordered outline.
+
+Restate the relevant subject or entity when necessary.
+
+Do not begin an item with an unexplained reference such as:
+
+- "This";
+- "That";
+- "It";
+- "He";
+- "She";
+- "They";
+- "These findings";
+- "This approach";
+
+when the referent appears only in another item.
+
+You may restore an explicitly established subject for clarity, but do not
+add a new proposition or interpretation.
+
+
+# PROTECTED MATERIAL
+
+Preserve exactly when present:
+
+- proper nouns;
+- exact numbers, dates, quantities, percentages, and statistics;
+- technical identifiers;
+- code and API names;
+- formally fixed terms;
+- text inside quotation marks;
+- load-bearing wording in items marked `verbatim: true`.
+
+Protected material may remain unchanged because it carries identity or
+substantive content.
+
+Preserving protected material does not justify retaining the surrounding
+phrasing.
+
+
+# DOCUMENT DESCRIPTION
+
+Rewrite `document_description` in different language while preserving the
+same content-blind description of:
+
+- document subtype;
+- venue or publication context;
+- intended audience;
+- register and style;
+- broad presentational convention.
+
+Do not introduce the document's topic, entities, claims, findings, or
+themes.
+
+Use neutral, standardized language.
+
+
+# GLOBAL THEMES
+
+Rewrite each global theme independently.
+
+Preserve its central subject and highest-level contribution.
+
+Do not:
+
+- add item-level details;
+- remove an essential entity or distinction;
+- turn the theme into a topic label;
+- turn it into a table of contents;
+- combine themes;
+- divide one theme into several themes.
+
+
+# ITEM CONTENT
+
+Rewrite each item's `content` independently while considering the complete
+outline for context.
+
+Preserve the item's substantive, rhetorical, or structural commitment and
+its relationship to adjacent items.
+
+Do not:
+
+- absorb information from another item;
+- move details across item boundaries;
+- change the item's governing function;
+- mention its role name inside `content`;
+- turn a structural item into a substantive move or vice versa.
+
+
+# VERBATIM ITEMS
+
+Preserve every `verbatim` value exactly.
+
+For `verbatim: false` items, independently rewrite all non-protected
+language.
+
+For `verbatim: true` items:
+
+- preserve quoted or otherwise clearly source-exact material exactly;
+- preserve formally operative wording;
+- rewrite surrounding attribution and explanation when possible;
+- do not copy the entire item merely because one span must remain exact.
+
+
+# FINAL CHECK
+
+Before returning the result, confirm:
+
+1. The JSON fields are unchanged.
+
+2. Format, counts, order, IDs, roles, and verbatim flags are unchanged.
+
+3. Every output theme corresponds to exactly one input theme.
+
+4. Every output item corresponds to exactly one input item.
+
+5. No proposition, qualifier, hedge, negation, attribution, value, or
+   structural function has changed.
+
+6. No information has moved between items.
+
+7. Every item is self-contained.
+
+8. Non-protected language has been independently re-expressed rather than
+   lightly edited.
+
+9. Protected names, values, identifiers, quotations, and verbatim spans
+   remain exact.
+
+
+# OUTPUT
+
+Return only the rewritten JSON.
+
+Do not include Markdown, commentary, explanations, or additional fields.

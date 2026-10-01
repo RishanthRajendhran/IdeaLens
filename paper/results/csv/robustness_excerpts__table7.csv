@@ -1,0 +1,5 @@
+Format gate,Arm,n,IdeaLens · outline (raw),IdeaLens-ModernBERT-L · outline (raw)
+forced format,500-word excerpt · AI,191,91.6,64.4
+gated,500-word excerpt · AI,"1,446",93.3,73.7
+forced format,500-word excerpt · human,160,4.4,1.9
+gated,500-word excerpt · human,"1,413",2.9,1.9

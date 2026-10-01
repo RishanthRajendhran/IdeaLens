@@ -1,0 +1,21 @@
+extends: _base.yaml
+name: Personal-style post-edit — a model drafts, a person edits in their own voice
+number: 15
+group: Idea provenance
+asks: When a person edits a model's draft rather than writing from scratch, does the verdict move?
+metric: fire
+positive: mixed
+upstream: Post-edit corpus in which a model drafts and a named person revises toward their own style.
+data_dir: test15_personal_style_postedit
+legacy_item_stem: pstyle   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: done
+report:
+  metric: fire
+  group_by: [arm]
+caveats:
+  - >
+    Every document is short — 150 to 165 words at the median, none over 500 —
+    which is well below the length these detectors are calibrated at. The control
+    arm's error rate here is a FLOOR EFFECT, not a property of the writing. Read
+    the arm-to-arm difference, never the level.

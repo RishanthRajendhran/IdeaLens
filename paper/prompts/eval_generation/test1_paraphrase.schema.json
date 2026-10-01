@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": ["units"],
+  "properties": {
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text", "src"],
+        "properties": {
+          "text": {"type": "string"},
+          "src": {"type": "array", "items": {"type": "integer"}}
+        }
+      }
+    }
+  }
+}

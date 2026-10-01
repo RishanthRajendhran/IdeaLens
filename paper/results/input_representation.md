@@ -1,0 +1,13 @@
+# What the outline carries
+
+2,500 in-domain test documents; inference-time transforms of the paraphrased outline; each variant at its own matched
+1% cut. AUC and TPR / FPR (%).
+
+| Input | IdeaLens AUC | IdeaLens TPR / FPR | IdeaLens-ModernBERT-L AUC | IdeaLens-ModernBERT-L TPR / FPR |
+|---|---|---|---|---|
+| full outline (roles + content) | 0.995 | 94.7 / 2.2 | 0.990 | 87.5 / 2.0 |
+| content only (roles stripped) | 0.993 | 93.2 / 2.3 | 0.986 | 83.8 / 2.2 |
+| shuffled item order | 0.993 | 90.5 / 1.9 | 0.986 | 82.6 / 2.0 |
+| roles only (content stripped) | 0.601 | 2.4 / 0.4 | 0.603 | 2.7 / 0.5 |
+| roles-only model, trained (48,869 docs) | -- | -- | 0.913 | 39.0 / 1.5 |
+| items scored alone, logit-mean pooled | 0.972 | 60.1 / 1.2 | 0.932 | 47.4 / 1.3 |

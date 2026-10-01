@@ -1,0 +1,7 @@
+Arm,Label,n,IdeaLens · outline (raw),IdeaLens-ModernBERT-L · outline (raw)
+full document · AI,AI (TPR),"1,196",96.5,88.6
+500-word excerpt · AI,AI (TPR),"2,059",91.4,71.6
+full document · human,human (FPR),"1,153",3.1,2.8
+500-word excerpt · human,human (FPR),"2,045",2.8,2.0
+"AUC, full documents",,,0.995,0.989
+"AUC, excerpts",,,0.992,0.980

@@ -1,0 +1,720 @@
+# TASK
+
+Infer the document's latent composition and structural plan and express it
+as a flat, ordered OUTLINE.
+
+The latent plan is the document-implied model of what the writer chose to
+say, do, and include, and in what order, before those choices were realized
+as particular sentences, formatting, markup, and document components.
+
+It is an analytical representation of the document, not a claim about the
+writer's actual psychological process.
+
+The outline must capture:
+
+- substantive content commitments;
+- rhetorical progression;
+- functionally meaningful structural commitments;
+
+while excluding extraction artifacts and abstracting away from surface
+realization.
+
+
+# TARGET REPRESENTATION
+
+A competent writer given only the outline should be able to produce a
+substantively, rhetorically, and structurally equivalent document.
+
+The reconstruction must preserve:
+
+- claims, facts, events, examples, evidence, decisions, contrasts,
+  objections, responses, consequences, conclusions, and other substantive
+  commitments;
+- the order in which those commitments are introduced;
+- significant analogies, metaphors, and descriptions when they carry
+  substantive meaning;
+- load-bearing names, quantities, dates, identifiers, quotations, and
+  exact wording;
+- distinctions between the writer's claims and attributed material;
+- bounded components that perform meaningful organizational, navigational,
+  attributional, documentary, interpretive, supplementary, legal, or other
+  communicative functions.
+
+The reconstruction need not preserve:
+
+- original wording or syntax except when exact wording is substantive;
+- sentence, clause, line, paragraph, section, or stanza boundaries;
+- transitional phrasing;
+- repetition used only for rhythm or emphasis;
+- incidental examples or descriptive details;
+- stylistic ornament without substantive function;
+- purely visual formatting;
+- exact heading, numbering, citation, reference, or markup style;
+- commands or notation controlling only rendering or layout;
+- administrative metadata without a substantive, rhetorical, or structural
+  function;
+- artifacts introduced by scraping, conversion, OCR, markup exposure,
+  interface capture, or file extraction.
+
+The writer may choose new wording, syntax, transitions, formatting, markup,
+and other means of realization. The writer must not invent new substantive
+commitments or functionally meaningful components.
+
+
+# WHAT COUNTS AS AN ITEM
+
+An item represents one locally continuous commitment in the latent plan.
+
+A commitment may be:
+
+1. SUBSTANTIVE: a claim, fact, event, example, method, finding, decision,
+   recommendation, or other content contribution;
+
+2. RHETORICAL: a move that frames, motivates, qualifies, supports,
+   contrasts, interprets, or concludes other content;
+
+3. STRUCTURAL: a bounded component included to organize, navigate,
+   attribute, document, supplement, disclose, or otherwise support the
+   document's communicative function.
+
+Possible structural commitments include:
+
+- an abstract or executive summary;
+- a contents or navigation component;
+- a glossary or collection of defined terms;
+- a source or reference section;
+- an appendix or supplementary section;
+- an acknowledgments, disclosure, attribution, or contribution section;
+- a bounded collection of notes;
+- a table, figure, code block, equation group, or data display contributing
+  information as a unified component.
+
+This list is illustrative, not exhaustive.
+
+An item is not necessarily one sentence, clause, fact, action, image,
+paragraph, section, or stanza. It may contain several details when they
+jointly perform the same move or structural function.
+
+Give a supporting example, evidentiary case, event, explanation, or
+consequence its own item when it makes an independently meaningful
+contribution. Keep details that merely complete, qualify, restate, justify,
+facilitate, or implement one governing move within that move's item.
+
+
+# GOVERNING-QUESTION PRINCIPLE
+
+An item should normally answer one practical, narrative, descriptive,
+argumentative, documentary, or structural question, such as:
+
+- What happened?
+- What claim is being advanced?
+- What evidence supports or challenges it?
+- What rule applies?
+- What should the reader do?
+- What caused this result?
+- What does this example demonstrate?
+- How is something characterized?
+- What conclusion follows?
+- What bounded component is included, and what function does it perform?
+- What material is documented, attributed, summarized, supplemented, or
+  made available for reference?
+
+Keep conditions, exceptions, rationales, incidental examples, resources,
+indicators, and implementation together when they answer the same immediate
+question.
+
+Split when the document begins answering a different question or makes a
+separately planned contribution, even if both concern the same broad topic.
+
+
+# CANONICAL GRANULARITY
+
+When multiple segmentations are plausible:
+
+- represent one governing point with its conditions, exceptions, rationale,
+  consequences, resources, indicators, and implementation as one item;
+- represent one bounded component with its internal entries as one item
+  when those entries jointly perform one documentary function;
+- split a distinct claim, action, case, event, decision, objection,
+  response, conclusion, or structural component when it performs an
+  independently meaningful function.
+
+Do not create one item per entry in a collection unless an entry is itself
+discussed, evaluated, quoted, contrasted, or otherwise foregrounded.
+
+When uncertain, choose the least fragmented segmentation that preserves
+every independently meaningful substantive, rhetorical, and structural
+commitment.
+
+
+# PARAPHRASE AND STRUCTURAL INVARIANCE
+
+Two versions differing only in wording, syntax, sentence boundaries,
+paragraphing, formatting, markup, numbering, or citation style should
+produce substantively equivalent outlines with approximately the same
+items, order, boundaries, granularity, and themes.
+
+Therefore:
+
+- do not use grammatical or formatting boundaries alone to define items;
+- do not split because material appears in separate sentences or blocks;
+- do not merge because distinct moves appear in one sentence or section;
+- do not let headings determine item count;
+- do not treat rendering syntax, numbering, or citation style as content;
+- do treat addition or removal of a functionally meaningful component as a
+  possible structural change.
+
+For every boundary, ask:
+
+"Would this boundary remain meaningful if the same content and structural
+function were realized with different wording, formatting, markup,
+numbering, and layout?"
+
+If not, reconsider it.
+
+
+# STEP 0 — FILTER EXTRACTION AND INGESTION ARTIFACTS
+
+Treat the input as a potentially noisy representation of the intended
+document.
+
+Ignore material clearly introduced by scraping, conversion, OCR, markup
+exposure, interface capture, or file extraction, including:
+
+- raw rendering tags and isolated markup tokens;
+- CSS, scripts, tracking parameters, and hidden implementation details;
+- bare navigational URLs;
+- image filenames, asset paths, placeholders, and broken-image notices;
+- duplicated headers, footers, menus, controls, and interface text;
+- text duplicated by extraction or responsive layout;
+- OCR noise, broken encoding, and nonsensical fragments;
+- page markers, line numbers, page numbers, and conversion metadata;
+- unrelated or automatically inserted captions, alt text, and media labels;
+- detached fragments with no recoverable function.
+
+Do not create items for artifacts or let them affect item boundaries,
+document description, or global themes.
+
+When markup surrounds genuine content, discard the markup but preserve and
+interpret the content.
+
+For ambiguous material, ask:
+
+"Would a reader of the intended document, rather than its scraped or
+converted representation, regard this as substantive content or a
+meaningful component?"
+
+If not, ignore it. If it duplicates genuine nearby content, keep only the
+genuine occurrence.
+
+Artifact filtering takes precedence over structural coverage.
+
+
+## URLS, CAPTIONS, AND MEDIA
+
+Ignore raw URLs that provide only navigation or source access. Preserve an
+address only when it is a load-bearing instruction, identifier, or subject
+of discussion.
+
+Preserve meaningful linked text while omitting its destination unless the
+destination is load-bearing.
+
+Preserve a caption or media description when it states a substantive
+commitment, is needed to understand a meaningful component, or performs a
+documentary or interpretive function.
+
+Ignore filenames, generic labels, placeholders, duplicates, unrelated
+captions, and detached media fragments. A caption label alone does not
+create an item.
+
+
+# STEP 1 — IDENTIFY PLAN COMMITMENTS
+
+Read the artifact-filtered document in order and identify its substantive,
+rhetorical, and structural commitments.
+
+Preserve differences among:
+
+- assertion and uncertainty;
+- fact and allegation;
+- the writer's position and an attributed source's position;
+- actuality, possibility, prediction, and hypothetical illustration;
+- cause and correlation;
+- recommendation, requirement, permission, and decision;
+- general rule and particular case;
+- past, present, and anticipated events;
+- substantive content and components that organize, attribute, document, or
+  supplement it.
+
+
+# STEP 2 — SEGMENT INTO ITEMS
+
+## A. CONTIGUITY AND ORDER
+
+Each item must correspond to one bounded, continuous region.
+
+Do not combine separated occurrences merely because they share a topic,
+source, idea, or function. Represent a later recurrence separately when it
+performs a function there.
+
+Do not globally summarize markers scattered throughout the document.
+Preserve their local function within associated items.
+
+Order items by where their source material or component appears. Do not
+reorder them chronologically, causally, thematically, or logically.
+
+
+## B. ONE COMMITMENT PER ITEM
+
+Create a new item for an independently meaningful substantive, rhetorical,
+or structural commitment.
+
+Support, explanation, attribution, or dependency does not by itself require
+merging or splitting. Use the governing-question and independence tests.
+
+
+## C. INTERNAL DEVELOPMENT
+
+Keep a governing point with:
+
+- conditions and exceptions;
+- its operating mechanism;
+- immediate rationale or consequence;
+- coordinated implementation steps;
+- directly facilitating resources;
+- narrower restatements;
+- incidental illustrations;
+- explanatory signs or terminology;
+- jointly developing descriptive or figurative details;
+- local source attribution.
+
+Do not divide one procedure into items for each step or one case into items
+for each fact unless the parts perform independent jobs.
+
+
+## D. EXAMPLES, EVIDENCE, AND ACTIONS
+
+Give an example its own item when it is substantive evidence, a distinct
+case, a factual episode, a separately meaningful application, or an
+independent result.
+
+Keep an example with its governing point when it merely makes that point
+concrete. Specificity alone does not make it independent.
+
+Keep actions together when they jointly answer the same immediate question.
+Split actions when they pursue different objectives, apply under different
+triggers, impose independent obligations, or represent separately planned
+stages.
+
+
+## E. SOURCING AND ATTRIBUTION
+
+A citation, source marker, link, footnote marker, or cross-reference
+attached to a move normally belongs to that move.
+
+Preserve when relevant:
+
+- that a claim is attributed rather than asserted by the writer;
+- that sources are synthesized, compared, or contrasted;
+- that a source supplies evidence, terminology, a method, a disputed
+  position, or a consequential result;
+- source identity when it materially affects the move.
+
+Ignore citation keys, reference numbers, link formatting, and bibliographic
+style unless their exact form is substantive.
+
+Do not create one item per citation or ordinary reference entry.
+
+A bounded source section may receive one structural item. Give an individual
+source its own item only when independently discussed, evaluated, quoted,
+disputed, or contrasted.
+
+
+## F. STRUCTURAL COMPONENTS
+
+Create an item for a bounded component when omitting it would make the
+reconstruction structurally or communicatively different.
+
+Apply artifact filtering before treating a block as structural. Visual
+separation, a caption label, heading-like form, or extraction block does
+not by itself establish a commitment.
+
+Summarize the component's function and scope rather than every entry.
+
+Do not create structural items solely for:
+
+- individual source markers;
+- ordinary reference entries;
+- page numbers or decorative separators;
+- layout or rendering commands;
+- empty containers;
+- artifacts.
+
+A heading alone is not automatically an item. Include it only when its
+wording contributes substantive framing or it marks a meaningful bounded
+component.
+
+
+## G. MACHINE-READABLE SOURCE
+
+Distinguish source syntax from the content or component it instantiates.
+
+Preserve meaningful text, code, equations, identifiers, and component
+functions while ignoring tags and commands that only control presentation.
+
+If a command invokes content stored externally or absent from the input,
+represent only the component and function established by the document. Do
+not invent missing contents.
+
+
+## H. LITERARY AND FIGURATIVE CONTENT
+
+Preserve metaphors, images, analogies, and contrasts when they carry
+argument, characterization, or substantive meaning.
+
+Group local images that jointly realize one figurative move. Do not create
+one item per poetic line or image unless each makes a distinct development.
+
+Preserve the conceptual figure in source-independent language. Preserve
+exact figurative wording only when the wording itself is load-bearing.
+
+
+## I. FRAMING AND CLOSING MOVES
+
+Preserve introductions and conclusions when they establish premises,
+purposes, stakes, interpretive lenses, broader outcomes, or repetitions
+performing a new concluding role.
+
+Do not preserve formulaic announcements unless they add substantive
+information or establish a meaningful component.
+
+
+## J. FLAT AND UNLABELLED
+
+Return one flat ordered list. Never nest items.
+
+Do not prefix content with labels such as "Claim:", "Evidence:",
+"Conclusion:", or "Structural Component:".
+
+For substantive and rhetorical items, state the commitment directly.
+
+For structural items, describing the component is acceptable because its
+inclusion and function are the commitment:
+
+- "A glossary defines specialized terms used later."
+- "An appendix supplies supplementary derivations."
+- "A source section documents the external works used throughout."
+
+Describe function, not incidental formatting.
+
+
+# ITEM-BOUNDARY TEST
+
+Create a boundary only when all are true:
+
+1. The later material introduces a new central point, action, case, event,
+   conclusion, or structural function rather than internal development.
+
+2. It answers a different immediate question or makes a separately planned
+   contribution.
+
+3. A writer would need to plan it separately.
+
+4. The boundary would survive changes in wording, sentence division,
+   formatting, markup, numbering, and layout.
+
+5. Keeping the material together would obscure two independently meaningful
+   commitments.
+
+
+# STEP 3 — WRITE EACH OUTPUT FIELD
+
+## A. SOURCE-INDEPENDENT CANONICALIZATION
+
+Phrase every non-verbatim field from the meaning of the source rather than
+from its wording.
+
+The output should read as though it were produced from an abstract
+understanding of the document after the original sentences were no longer
+visible.
+
+For non-verbatim content:
+
+- use your own vocabulary and sentence construction;
+- reorganize clauses when meaning and emphasis remain intact;
+- replace source-specific idioms and rhetorical phrasing with direct,
+  neutral language;
+- prefer concise proposition-like plan notes over polished prose;
+- preserve the function and force of the move rather than its stylistic
+  presentation.
+
+Do not:
+
+- copy or lightly edit source sentences;
+- mirror source clause order by default;
+- preserve unusual diction merely because it is memorable;
+- imitate the source's voice, cadence, register, or syntax;
+- reproduce slogans, rhetorical questions, repetition, or emphasis unless
+  their exact form is substantive;
+- retain figurative phrasing when a direct semantic paraphrase would
+  preserve the same commitment.
+
+Proper names, technical terms, dates, numbers, and fixed identifiers may
+necessarily remain unchanged. Their presence does not justify copying the
+surrounding language.
+
+
+## B. CONTENT COMPRESSION
+
+Write `content` as the shortest sufficient, source-independent note for
+reconstructing the commitment.
+
+Retain:
+
+- the governing claim, event, rule, decision, recommendation, or component
+  function;
+- load-bearing names, values, and dates;
+- conditions, exceptions, alternatives, and modality;
+- substantive evidence or examples;
+- attribution affecting ownership or evidentiary status;
+- structural scope needed to understand a component.
+
+Usually omit or compress:
+
+- implied motivation;
+- rhetorical emphasis;
+- obvious consequences;
+- interchangeable illustrations;
+- repetitive lists;
+- scene-setting without a constraining function;
+- citation, numbering, markup, and formatting syntax;
+- repetitive entries in a unified component;
+- extraction artifacts.
+
+Ask of every clause:
+
+"If removed, would the reconstructed commitment be substantively,
+rhetorically, or structurally different rather than merely less detailed?"
+
+If not, remove or compress it.
+
+Most items should be one compact sentence and must not exceed 60 words.
+
+
+## C. FIDELITY
+
+Preserve:
+
+- attribution;
+- requirement versus recommendation or permission;
+- conditions, alternatives, and exceptions;
+- uncertainty and probability;
+- causal and evidentiary relationships;
+- relevant distinctions among categories;
+- whether material is the writer's result, prior work, quotation, or
+  synthesis;
+- the function and scope of bounded components.
+
+Do not add outside knowledge, invent missing contents, infer unstated
+motives or conclusions, change modality, or alter scope.
+
+
+## D. VERBATIM
+
+Set `verbatim` to `false` by default.
+
+Set it to `true` only when exact source wording is substantive, such as:
+
+- a direct quotation;
+- wording being analyzed, disputed, or interpreted;
+- an operative legal clause;
+- a formally defined phrase;
+- load-bearing wordplay.
+
+When `verbatim` is `true`:
+
+- preserve the load-bearing span exactly;
+- place direct quotations in quotation marks;
+- paraphrase surrounding attribution and explanation when possible;
+- do not copy an entire source sentence merely because one span must remain
+  exact.
+
+Exact names, numbers, dates, technical terms, source names, and identifiers
+do not by themselves make an item verbatim.
+
+Citation keys, labels, markup identifiers, and rendering commands are not
+verbatim unless their exact form is substantive.
+
+
+# STEP 4 — SELF-CHECK
+
+Before finalizing, apply these tests:
+
+1. PLAN EQUIVALENCE  
+   Could a writer reconstruct a substantively, rhetorically, and
+   structurally equivalent document without inventing commitments?
+
+2. SUFFICIENCY  
+   Does each item contain what is needed to reproduce its commitment?
+
+3. UNITY  
+   Does each item answer one governing question or perform one function?
+
+4. DISTINCTNESS  
+   Does every item contribute independently rather than fragment an
+   adjacent move?
+
+5. NON-ATOMIZATION  
+   Have any unified claims, procedures, cases, figurative moves, or
+   structural components been divided unnecessarily?
+
+6. BOUNDARY INVARIANCE  
+   Would the same item boundaries survive different wording, formatting,
+   markup, numbering, and citation style?
+
+7. SOURCE INDEPENDENCE  
+   If the source expressed the same commitment with entirely different
+   wording and syntax, would this field likely be written approximately the
+   same way? If not, rewrite it from the underlying meaning.
+
+8. STRUCTURAL COVERAGE  
+   Would a writer know which meaningful components should exist and what
+   they should do?
+
+9. ATTRIBUTION  
+   Are source ownership, synthesis, comparison, and evidentiary use
+   preserved where relevant?
+
+10. ARTIFACT CONTAMINATION  
+    Does any item derive only from scraping, conversion, OCR, interface
+    capture, exposed markup, a URL, asset label, duplicate, or detached
+    media fragment? If so, remove it.
+
+11. COMPRESSION AND FIDELITY  
+    Can any field be shortened without losing a commitment, and does it
+    preserve order, modality, scope, attribution, and distinctions?
+
+
+# STEP 5 — DESCRIBE THE DOCUMENT TYPE
+
+Write a concise, content-blind description of the specific document type.
+
+Identify when inferable:
+
+- genre or format subtype;
+- likely venue or publication setting;
+- intended audience;
+- communicative register or style;
+- broad presentational convention needed to characterize the type.
+
+Do not include topic, themes, named content entities, arguments, findings,
+examples, outline structure, human-versus-AI judgments, markup, citation
+style, file format, or extraction artifacts.
+
+Use neutral, standardized language. Describe the register without imitating
+it. Do not copy the document's title, self-description, headings, marketing
+language, or stylistic phrasing.
+
+The description should be reusable as a writing brief for the same document
+type on an unrelated topic.
+
+
+# STEP 6 — IDENTIFY GLOBAL THEMES
+
+A global theme is the document's highest-level substantive contribution:
+its central claim, lesson, position, or purpose.
+
+Write each theme in neutral, source-independent language. Do not reuse the
+document's title, thesis wording, conclusion wording, slogan, or other
+distinctive phrase unless its exact wording is essential to the
+contribution.
+
+Include:
+
+- the essential subject or entity;
+- the central contribution;
+- only the broadest condition needed to make it meaningful.
+
+Do not include:
+
+- individual rules, steps, examples, cases, evidence, or components;
+- details primarily supported by one item;
+- a table of contents;
+- structural or extraction artifacts;
+- long enumerations.
+
+Replace item-level details with their shared higher-level meaning.
+
+Return one theme unless the document makes multiple genuinely distinct,
+co-equal contributions.
+
+
+# DOCUMENT SCOPE
+
+Extract the intended substantive document and meaningful bounded
+components.
+
+Ignore external navigation, interface text, printing instructions, page
+numbers, generic copyright notices, unrelated boilerplate, decorative
+formatting, raw rendering syntax, bare navigational URLs, asset paths,
+placeholders, duplicated extraction text, detached media fragments, OCR
+noise, broken encoding, and scraper-inserted controls.
+
+Do not treat all paratext or source apparatus as administrative. Include a
+title, abstract, contents component, source section, appendix, glossary,
+disclosure, acknowledgment, contribution statement, note collection, or
+captioned display when it makes a substantive, rhetorical, structural,
+attributional, or documentary contribution.
+
+
+# DECISION ORDER
+
+1. Filter artifacts while preserving genuine content inside markup.
+2. Identify substantive, rhetorical, and structural commitments.
+3. Identify the governing question or function of each continuous region.
+4. Group internal development and unified component entries.
+5. Split independently meaningful commitments.
+6. Apply contiguity, boundary, attribution, and invariance tests.
+7. Write items in concise, source-independent, canonical language.
+8. Check for omitted components and surviving artifacts.
+9. Infer the content-blind document description in standardized language.
+10. Derive source-independent global themes.
+11. Apply all self-checks and revise.
+
+
+# OUTPUT FORMAT
+
+Return only valid JSON with no Markdown, commentary, or additional fields:
+
+{
+  "document_description": "<content-blind, source-independent description of the specific document type, venue, audience, and register>",
+  "global_themes": [
+    "<one source-independent substantive sentence per global theme>"
+  ],
+  "items": [
+    {
+      "id": 1,
+      "content": "<source-independent statement of one substantive, rhetorical, or structural commitment>",
+      "verbatim": false
+    }
+  ]
+}
+
+Requirements:
+
+- `document_description` must be one non-empty string describing document
+  type rather than topic or content.
+- `global_themes` must be an array of non-empty strings.
+- `items` must be an array in document order.
+- Item IDs must be consecutive integers beginning with 1.
+- Every item must contain exactly `id`, `content`, and `verbatim`.
+- `content` must not exceed 60 words.
+- `verbatim` must be a JSON boolean.
+- Do not return empty or placeholder fields.
+
+
+# INPUT FORMAT
+
+<document>
+[DOCUMENT TO ANALYZE]
+</document>

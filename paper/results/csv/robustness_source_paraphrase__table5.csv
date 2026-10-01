@@ -1,0 +1,7 @@
+Paraphraser,Rows,n,IdeaLens: % unchanged,IdeaLens-ModernBERT-L: % unchanged
+gpt-5.6-luna,AI,431,97.0,93.0
+gpt-5.6-sol,AI,432,97.9,94.4
+gpt-5.6-terra,AI,431,98.8,95.1
+gpt-5.6-luna,human,400,99.2,99.0
+gpt-5.6-sol,human,400,99.2,99.0
+gpt-5.6-terra,human,400,99.2,99.8

@@ -1,0 +1,7 @@
+Rows,Model,n,"fire, reference","fire, variant",fired -> not,not -> fired,"AUC, reference","AUC, variant"
+all,IdeaLens,"10,000",49.9,49.0,1.2,0.3,0.995,0.995
+all,IdeaLens-ModernBERT-L,"10,000",46.1,44.1,2.7,0.7,,
+AI,IdeaLens,"4,993",97.1,95.6,1.8,0.3,,
+AI,IdeaLens-ModernBERT-L,"4,993",89.9,86.3,4.8,1.2,,
+human,IdeaLens,"5,007",2.8,2.5,0.5,0.3,,
+human,IdeaLens-ModernBERT-L,"5,007",2.5,2.1,0.5,0.1,,

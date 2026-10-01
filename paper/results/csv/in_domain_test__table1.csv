@@ -1,0 +1,20 @@
+Arm,Label,n,IdeaLens · outline (paraphrased),IdeaLens-ModernBERT-L · outline (paraphrased)
+AI,AI (TPR),"24,295",95.8,86.9
+human,"human (FPR, realised)","24,574",2.6,2.0
+Personal Blog · AI,AI (TPR),"3,181",97.5,91.9
+Personal Blog · human,"human (FPR, realised)","3,155",1.4,1.1
+Creative Writing · AI,AI (TPR),"3,192",95.5,86.4
+Creative Writing · human,"human (FPR, realised)","3,132",0.3,0.4
+User Reviews · AI,AI (TPR),"3,148",98.0,94.3
+User Reviews · human,"human (FPR, realised)","3,151",0.6,0.6
+Nonfiction Writing · AI,AI (TPR),"3,132",94.5,83.7
+Nonfiction Writing · human,"human (FPR, realised)","3,132",6.8,5.7
+Academic Writing · AI,AI (TPR),"3,132",98.2,93.9
+Academic Writing · human,"human (FPR, realised)","3,132",0.7,0.8
+Knowledge Article · AI,AI (TPR),"3,132",93.7,73.9
+Knowledge Article · human,"human (FPR, realised)","3,132",7.7,5.3
+Personal About Page · AI,AI (TPR),"2,863",93.7,82.3
+Personal About Page · human,"human (FPR, realised)","3,103",1.0,0.7
+News Article · AI,AI (TPR),"2,515",95.2,88.7
+News Article · human,"human (FPR, realised)","2,637",1.7,1.3
+"AUC, AI vs human",,,0.995,0.990

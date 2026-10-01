@@ -1,0 +1,23 @@
+extends: _base.yaml
+# Stage 2: the de-leak paraphrase. Production configuration.
+stage: deleak
+model: gemini-3.1-pro-preview
+prompt_version: v1
+thinking_level: HIGH
+max_output_tokens: 64000
+
+notes: >
+  The paraphraser is given the OUTLINE ONLY and never the source document; that
+  is what makes this a de-leak rather than a second extraction, because it cannot
+  copy from a document it has not seen.
+
+  MANDATORY ON EVERY EVAL SET. An eval scored on untreated outlines is not
+  comparable to one scored on de-leaked outlines, and the difference is large.
+  The multilingual set is the sole documented exception, for the reason recorded
+  in its own config.
+
+  What it does and does not achieve: it blinds by homogenising toward machine
+  prose, not by making human documents read human. If the goal is
+  "indistinguishable source authorship", that is achieved; if the goal is "reads
+  human", it is not. The residue is the un-paraphrasable content -- names,
+  numbers, fixed technical terms -- plus genuine style.

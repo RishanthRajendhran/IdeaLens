@@ -1,0 +1,35 @@
+extends: _base.yaml
+name: ELLIPSE — second-language writers, false positives by proficiency
+number: 25
+group: Fairness
+asks: >
+  Surface detectors fire far more often on non-native English writing. Does
+  reading the outline remove the proficiency gradient?
+metric: fire
+positive: human
+upstream: ELLIPSE corpus. 3,909 essays by English language learners, each carrying a 1-5 holistic proficiency score plus analytic sub-scores.
+data_dir: test25_ellipse
+legacy_item_stem: ellipse1   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: not_run   # STAGE 2 HAS NOT BEEN RUN ON THIS SET. Scores come
+                         # from UNTREATED outlines: an upper bound that partly
+                         # measures wording lifted from the source, and not
+                         # comparable with the de-leaked sets until it runs.
+                         # Fix with: scripts/pipeline/run_pipeline.py --stage 2
+report:
+  metric: fire
+  group_by: [proficiency_band]
+  in_set: false
+  baselines: [pangram_4]
+notes: >
+  EVERY ROW IS HUMAN, so there is no TPR here and every flag is an error.
+
+  THE REPORTABLE QUANTITY IS THE SLOPE, NOT THE LEVEL. If outline extraction
+  discards the L2 surface markers that drive the bias, the false-positive rate
+  should be roughly FLAT across proficiency, while a surface reader's climbs as
+  proficiency falls. A flat line is a far stronger claim than a low average, and
+  unlike a low average it cannot be manufactured by a conservative threshold.
+
+  The native-writing comparison side is free: the in-domain corpus is already
+  extracted, so only this side costs anything. Match on length and format before
+  comparing.

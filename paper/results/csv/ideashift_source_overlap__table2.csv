@@ -1,0 +1,9 @@
+Level,Given to the writer,n,doc cosine,source items kept,level items traceable,ROUGE-L F1,length ratio,items (level / source)
+level 0,type + broad subject,237,0.518 / 0.527,0.301 / 0.222,0.269 / 0.176,0.122,1.190,26.5 / 19.5
+level 1,very high-level topic,237,0.572 / 0.578,0.450 / 0.440,0.405 / 0.364,0.125,1.222,27.6 / 19.5
+level 2,global themes,237,0.746 / 0.767,0.831 / 0.900,0.801 / 0.857,0.140,1.189,25.4 / 19.5
+level 3,themes + role sequence,237,0.754 / 0.781,0.835 / 0.900,0.824 / 0.900,0.138,1.156,24.1 / 19.5
+level 4,themes + full outline,237,0.842 / 0.866,0.982 / 1.000,0.969 / 1.000,0.204,1.104,24.1 / 19.5
+level 5,"full outline, realise exactly",237,0.868 / 0.884,0.990 / 1.000,0.988 / 1.000,0.237,0.958,21.8 / 19.5
+"ref: another source, same format and topic",,214,0.330 / 0.318,0.047 / 0.000,0.042 / 0.000,0.116,1.370,19.8 / 19.9
+"ref: another source, same format",,237,0.235 / 0.232,0.008 / 0.000,0.008 / 0.000,0.113,1.495,19.6 / 19.5

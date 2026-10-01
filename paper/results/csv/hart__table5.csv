@@ -1,0 +1,11 @@
+Arm,Description,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+ai_plain,English · clear AI (ai_plain),"3,953",96.5,97.7,100.0,84.5,85.1,99.6,96.1,67.9,100.0
+ai_humanized,English · attacked AI (humanized),"2,845",82.6,84.2,92.7,70.0,63.8,89.3,79.5,11.9,93.7
+ai_tool_humanized,English · attacked AI (humanized),747,92.0,73.8,96.9,77.0,43.8,74.7,38.8,5.0,99.6
+h2l_rephrase,English · rephrase (h2l_rephrase),"3,904",4.9,4.9,44.5,5.9,5.0,34.6,20.1,6.9,42.8
+human,English · clear human,"3,922",0.6,0.2,0.4,1.1,0.1,0.4,0.3,0.3,0.1
+ai_plain,non-English · clear AI (ai_plain),"3,877",93.1,89.9,99.1,85.2,–,–,89.5,27.1,99.7
+ai_humanized,non-English · attacked AI (humanized),"3,536",79.2,72.3,87.4,71.3,–,–,64.5,2.5,88.6
+h2l_rephrase,non-English · rephrase (h2l_rephrase),"3,800",1.8,0.7,12.8,1.3,–,–,3.9,0.7,14.9
+human,non-English · clear human,"3,806",0.6,0.0,0.0,0.4,–,–,0.0,0.2,0.0
+ai_human_edited,English · ai_human_edited (a person rewrote model content),248,95.6,93.5,99.6,83.1,72.6,92.3,69.4,22.6,100.0

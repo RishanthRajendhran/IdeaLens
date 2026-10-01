@@ -1,0 +1,4 @@
+SOURCE SENTENCES (numbered):
+___SENTENCES___
+
+Aggressively paraphrase the document — maximize the change in wording and sentence structure while keeping the meaning identical. Return JSON {"units":[{"text":"<paraphrase>","src":[<source sentence numbers this unit covers>]}, ...]}. Units in reading order. EVERY source number 1..___N___ must appear in at least one unit's 'src'. Merge adjacent sentences by listing multiple numbers; split one by emitting two units sharing its number. Keep all facts, names, numbers, quotes, and content-bearing terms intact and the ideas in order; change only surface form.

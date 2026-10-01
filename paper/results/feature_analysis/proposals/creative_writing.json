@@ -1,0 +1,283 @@
+{
+ "features": [
+  {
+   "name": "audit_locator_specificity",
+   "description": "Measures how precisely the item identifies a proposition and a record or occurrence against which it could be checked.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess the recoverability of the asserted fact using substantive identifiers and record locators supplied within the item.",
+   "rationale": "Human-source items often retain commitments tied to recoverable records, whereas AI-source items frequently assert discoveries or significance without comparable anchoring. Human item 750 identifies a dated communication, sender, recipient, and reported conditions. This is a candidate association, not an individual authorship verdict, and should be validated within role and topic strata on held-out source documents."
+  },
+  {
+   "name": "attributed_evidential_access",
+   "description": "Measures whether attribution explains who supplied a claim or artifact and how that source had access to it.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Distinguish attribution based merely on authority from attribution that supplies a claim-specific observation, contribution, or access pathway.",
+   "rationale": "Human-source accounts frequently preserve the circumstances of testimony and production rather than invoking expertise as a generic credential. Human item 489 gives what a witness encountered and did not encounter, while item 131 specifies translation and manuscript-comparison contributions."
+  },
+  {
+   "name": "diagnostic_evidence_content",
+   "description": "Measures whether an observation meaningfully discriminates between competing interpretations.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Evaluate the specificity of the relationship between an observed discrepancy and the interpretation it supports or contradicts.",
+   "rationale": "Human-source reasoning often turns on particular mismatches rather than the bare announcement of a revelation. Human item 1538 connects an anomalous maintenance pattern to a bounded period, and item 245 specifies findings that contradict an allegation. AI item 4513 also exhibits this feature, illustrating that it is not categorical."
+  },
+  {
+   "name": "evidence_assurance_gap",
+   "description": "Measures the gap between the conclusiveness claimed for evidence and the evidentiary substance actually conveyed by the item.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Compare the stated force of an evidentiary conclusion with the content and relevance of the supporting evidence represented in the same item.",
+   "rationale": "Generation can complete an investigative idea by asserting that evidence is decisive without inventing the evidence's discriminating content. AI items 1600 and 2376 describe successful exposure through documentation or information without specifying what establishes the offenses. Some human-source inferences also overreach, so the feature concerns conveyed warrant rather than correctness or provenance alone."
+  },
+  {
+   "name": "bounded_epistemic_uncertainty",
+   "description": "Measures how specifically an item locates and explains the limits of what an agent knows.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Rate uncertainty according to whether it concerns a defined proposition and is connected to an identifiable evidential limitation.",
+   "rationale": "Human-source items can preserve partial knowledge and its practical limits, such as the memory limitation acknowledged in human item 367 or the explicitly uncertain future assessment in item 898. AI-source uncertainty often functions as generalized mystery or anticipation rather than a bounded epistemic reservation."
+  },
+  {
+   "name": "decision_binding_constraints",
+   "description": "Measures whether concrete limitations restrict feasible actions and explain why one option is chosen over another.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify substantive constraints and determine whether they exclude options or necessitate a particular workaround.",
+   "rationale": "Human-source ideas frequently preserve the awkward restrictions under which action occurs. Human item 167 links appointment policy to waiting time and patient survival; item 700 connects a firing limitation to protecting neighboring aircraft. AI descriptions of overcoming difficulties often leave the actual restrictions unspecified."
+  },
+  {
+   "name": "specified_causal_mechanism",
+   "description": "Measures how explicitly the item explains the process connecting a cause or intervention to its result.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Separate causal labels from explanations that specify an intervention, its intermediate effect, and the resulting consequence.",
+   "rationale": "Human-source accounts often commit to how an outcome is produced, including within invented systems. Human item 532 explains how preventing a defensive posture exposes a vulnerable body region. By contrast, many AI-source victories are attributed to combined abilities or determination without an equivalent mechanism."
+  },
+  {
+   "name": "relational_quantification",
+   "description": "Measures whether quantities participate in substantive comparisons, thresholds, or calculations rather than merely decorating a claim.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Evaluate the reasoning work performed by substantive quantities while excluding structural numbering, identifiers, and document-level counts.",
+   "rationale": "Human-source items often preserve accounting, comparative, or feasibility relationships. Human item 2616 relates profit to maximum prize expenditure, while item 3916 connects losses and evacuation outcomes to a score-based result. AI-source specificity is often nominal or atmospheric rather than quantitatively consequential."
+  },
+  {
+   "name": "incidental_concrete_residue",
+   "description": "Measures whether the idea retains coherent concrete particulars that are not fully explained by its stated practical or symbolic purpose.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess concrete details whose contribution is local particularity rather than necessary causation, generic atmosphere, or an explicitly assigned moral.",
+   "rationale": "Human-source items retain particulars that do not neatly serve a lesson or plot function, such as the sock-clad auction manager in human item 1253 or the domestic drying arrangement in item 4209. AI-source detail is often more completely organized around atmosphere, characterization, or thematic affirmation."
+  },
+  {
+   "name": "situated_evaluative_criterion",
+   "description": "Measures whether an evaluation uses a concrete, locally discriminating standard instead of general approval or disapproval.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify the criterion underlying an appraisal and determine how precisely it distinguishes acceptable from unacceptable cases.",
+   "rationale": "Human-source judgments often expose particular priorities and boundaries. Human item 4032 classifies snacks by their suitability for a specific use rather than generic quality, and item 1279 distinguishes deterioration that harms an artwork from deterioration that suits its subject. Such criteria are less interchangeable than broad praise."
+  },
+  {
+   "name": "unresolved_value_tradeoff",
+   "description": "Measures whether the item preserves incompatible valued objectives and an acknowledged cost of choosing between them.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Evaluate the specificity and persistence of conflicts between motives, obligations, or desired outcomes.",
+   "rationale": "Human-source ideas often retain a tension rather than resolving it into a single approved value. Human item 142 places opposition to discriminatory membership against affection for colleagues. AI-source items frequently turn conflict into a reconciled lesson, although some explicitly maintain difficult choices."
+  },
+  {
+   "name": "represented_knowledge_asymmetry",
+   "description": "Measures whether the item specifies consequential differences between what distinct agents know, believe, or can perceive.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify an explicit difference in epistemic access and assess whether its content and behavioral consequence are specified.",
+   "rationale": "Human-source items frequently depend on locally articulated misunderstandings rather than a shared thematic understanding. Human item 405 contrasts an observer's explanation with the stated actual cause; item 401 connects performed helplessness with another person's care. AI-source examples also contain asymmetry, but often at the less specified level of hidden histories or motives."
+  },
+  {
+   "name": "public_private_motive_divergence",
+   "description": "Measures whether an expressed justification differs from a concrete private incentive governing the same behavior.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess the explicit mismatch between an outward rationale and an internally represented objective, including how the mismatch is exploited.",
+   "rationale": "Human-source ideas often depict conduct as strategic management of appearances, including minor dignity-preserving maneuvers. Human item 2421 specifies an improvised justification that conceals the reason for a food choice, and item 1486 specifies bargaining deception. This is more discriminating than merely calling someone corrupt or secretive."
+  },
+  {
+   "name": "central_semantic_undercommitment",
+   "description": "Measures how much the item's central substance remains an unspecified placeholder despite claims that an important action, discovery, or change occurs.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Determine whether the item identifies what changed or was discovered, rather than supplying only its rhetorical importance.",
+   "rationale": "AI-source items often commit to significance while leaving the significant content uninstantiated. AI item 1933 announces a confrontation exposing hidden reality without identifying that reality, and item 4926 promises a life-changing situation without describing it. Human-source items more often retain the particular object, action, or inference."
+  },
+  {
+   "name": "local_to_universal_scope_expansion",
+   "description": "Measures how far an item generalizes from a local experience or result to a broad principle without supplying a bridging explanation.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Compare the scope of the stated basis with the scope of the conclusion drawn from it.",
+   "rationale": "AI-source items repeatedly use a particular success as evidence for a general truth about humanity, relationships, or limitless possibility. AI item 780 turns a safe return into a guarantee that cooperation secures future success. The signal is the scope jump, not the subject or positivity of the conclusion."
+  },
+  {
+   "name": "contingent_state_permanence",
+   "description": "Measures the strength of assurances that an achieved contingent state will endure without meaningful future limitation.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Rate asserted durability of relationships, recovery, reputation, prosperity, or other contingent outcomes independently of where the item appears.",
+   "rationale": "AI-source items frequently convert local success into permanent harmony, enduring legend, or indestructible attachment, as in AI items 590 and 1333. Human-source outcomes more often retain bounded duration or continuing exposure to circumstances. Absolute promises also occur in human-source material and must receive the same score."
+  },
+  {
+   "name": "moral_state_causal_shortcut",
+   "description": "Measures whether a moral or emotional quality is presented as the decisive mechanism producing an external result.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Distinguish virtues motivating concrete action from virtues or feelings directly substituting for the operative solution.",
+   "rationale": "AI-source ideas often make ethical or affective alignment do the causal work. In AI item 1617, altruistic affection neutralizes a barrier; in item 4447, a mutual bond generates the force that eliminates an adversary. This differs from merely depicting kindness or courage and applies equally to nonfantastic claims of institutional or personal efficacy."
+  },
+  {
+   "name": "intrinsic_value_supersession",
+   "description": "Measures whether an instrumental or material objective is explicitly displaced by a generalized inner or relational value as the genuinely important outcome.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "operationalization": "Identify an explicit revaluation in which obtaining an object, prize, status, or endpoint is subordinated to learning, authenticity, affection, or connection.",
+   "rationale": "AI-source items repeatedly resolve an objective by redefining what counts as its real reward, as in AI items 70, 626, and 925. The feature captures the reasoning move rather than particular vocabulary, and can apply to evaluations, recommendations, explanations, or reflective statements in any prose format."
+  },
+  {
+   "name": "automatic_social_convergence",
+   "description": "Measures whether disclosure, empathy, or mutual acknowledgment is treated as sufficient to align previously conflicting agents.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess how directly a communicative or affective intervention produces agreement without resolving separately stated incentives, interests, or implementation problems.",
+   "rationale": "AI-source conflict frequently ends when an antagonist or community recognizes an emotional truth, as in AI items 890 and 1880. Human-source interactions more often retain divergent interests or practical enforcement. This feature concerns the explanatory treatment of convergence, not the mere presence of cooperation."
+  },
+  {
+   "name": "structural_analogy_yield",
+   "description": "Measures whether an analogy supports a specific relational inference rather than transferring only emotional tone or prestige.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Evaluate the inferential work performed by the correspondence between the compared domains.",
+   "rationale": "Human-source analogies can articulate a particular mechanism or rebuttal, as in human item 4754, where immediate physical torment explains narrowed attention. Many AI-source analogies instead redescribe a subject as harmonious, expansive, or transformative without adding a distinct inference. A technically elaborate metaphor does not necessarily have high inferential yield."
+  },
+  {
+   "name": "normative_condition_and_exception",
+   "description": "Measures how precisely a directive defines its applicability, exceptions, priorities, or consequences.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess the conditional structure of obligations and permissions rather than their topic, authority, or rhetorical role.",
+   "rationale": "Human-source directives often specify contingent entitlements and fallback arrangements, as in human items 2453 and 3551. AI-source recommendations more often affirm broad values or list generally desirable practices. Concrete conditionality can also appear in AI-source instructions and should be scored identically."
+  },
+  {
+   "name": "explicit_residual_cost",
+   "description": "Measures whether an improvement or apparent solution is explicitly accompanied by damage that remains uncompensated.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Look for an asserted benefit or resolution paired within the item with a persisting, reversed, or irrecoverable cost.",
+   "rationale": "Human-source outcomes often preserve what a successful intervention cannot repair. Human item 989 pairs the end of an outbreak with its deaths, and item 3199 pairs treatment success with grief for those who died immediately before it became available. AI-source outcomes more frequently convert adversity into an overall beneficial transformation."
+  }
+ ],
+ "uncomputable": [
+  "audit_locator_specificity: proposes a structural property that cannot be computed from a single item",
+  "bounded_epistemic_uncertainty: proposes a structural property that cannot be computed from a single item",
+  "specified_causal_mechanism: proposes a structural property that cannot be computed from a single item",
+  "relational_quantification: proposes a structural property that cannot be computed from a single item",
+  "represented_knowledge_asymmetry: proposes a structural property that cannot be computed from a single item",
+  "normative_condition_and_exception: proposes a structural property that cannot be computed from a single item"
+ ],
+ "contrast": {
+  "unit": "item",
+  "label_source": "model",
+  "format": "Creative Writing",
+  "format_agnostic": false,
+  "role_matched": true,
+  "per_side": 5000,
+  "n_cells": 50,
+  "stamp": {
+   "generated": "2026-09-08T19:20:32",
+   "git_revision": "7c0bf67",
+   "config": {
+    "model": "gpt-5.6-sol",
+    "effort": "max",
+    "per_side": 5000,
+    "match_roles": true,
+    "seed": 0,
+    "schema": "feature_discovery/feature.schema.json",
+    "consolidate": true,
+    "name": "Item-level discovery, our outline-trained model labels",
+    "unit": "item",
+    "label_source": "model",
+    "format_agnostic": false,
+    "notes": "This is a variant of the corpus-labels feature, but with labels derived from our trained model rather than the corpus. The model is a detector trained on outlines, and the labels are determined for each idea. The idea is to see which features of each idea the model relies on when making AI vs. human detection decisions.\n",
+    "score_keys": [
+     "nemotron_1m_fullitem"
+    ]
+   },
+   "config_source": "configs/features/_base.yaml",
+   "eval": "indomain"
+  }
+ },
+ "usage": {
+  "completion_tokens": 12306,
+  "prompt_tokens": 507489,
+  "total_tokens": 519795,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": 0,
+   "audio_tokens": 0,
+   "reasoning_tokens": 8707,
+   "rejected_prediction_tokens": 0,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": 0,
+   "cache_write_tokens": 507486,
+   "cached_tokens": 0,
+   "image_tokens": null,
+   "text_tokens": null
+  }
+ },
+ "stamp": {
+  "generated": "2026-09-09T20:40:58",
+  "git_revision": "94b7ff4",
+  "config": {
+   "model": "gpt-6-astra",
+   "effort": "xhigh",
+   "per_side": 5000,
+   "match_roles": true,
+   "seed": 0,
+   "schema": "feature_discovery/feature.schema.json",
+   "consolidate": true,
+   "name": "Item-level discovery, our outline-trained model labels",
+   "unit": "item",
+   "label_source": "model",
+   "format_agnostic": false,
+   "notes": "This is a variant of the corpus-labels feature, but with labels derived from our trained model rather than the corpus. The model is a detector trained on outlines, and the labels are determined for each idea. The idea is to see which features of each idea the model relies on when making AI vs. human detection decisions.\n",
+   "score_keys": [
+    "nemotron_1m_fullitem"
+   ]
+  },
+  "config_source": "configs/features/_base.yaml"
+ }
+}

@@ -1,0 +1,28 @@
+extends: _base.yaml
+name: Document-score calibration, 1M corpus
+input: document
+split: calibration
+n_humans: 80000
+models: [nemotron_1m_full, modernbert_1m_full, modernbert_1m_docs, nemotron_1m_docs]
+notes: >
+  Separate from the outline calibration and NOT interchangeable with it. The
+  stored outline cuts are outline scores; applying them to document scores is a
+  distribution mismatch. A cut for a document-level column has to come from
+  documents scored by the same model.
+
+  Raised to 80,000 on 2026-09-05 from the 2026-08-29 rerun, so the document
+  numbers now carry the same error bars as the outline numbers printed beside
+  them. It had been 40,000: unbiased (split-half realised FPR 0.104% / 1.007%
+  against nominal 0.1% / 1%) but with a realised-FPR 95% CI at nominal 0.1%
+  about 40% wider than at 80k.
+
+  The 40,000 ids are a strict subset of the 80,000 and the shared rows re-score
+  identically (ModernBERT arms bit-identical, mean |delta| 1e-8; the Tinker arm
+  1.8e-4 mean from sampling nondeterminism, r = 0.99998). The cuts still move,
+  because the added 40,000 documents extend the AI-looking left tail: the
+  nemotron global 1% cut goes 0.0978 -> 0.0874. That is the extra data, not a
+  scoring change -- the 80k set restricted to the original 40,000 ids gives
+  0.0968.
+
+  `nemotron_1m_docs` joins the list here. It had scores but no calibrated cut,
+  so it could previously only be reported threshold-free.

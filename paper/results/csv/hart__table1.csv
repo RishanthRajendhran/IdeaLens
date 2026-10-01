@@ -1,0 +1,11 @@
+Arm,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+English · clear AI (ai_plain),model ideas (TPR),"3,953",96.5,97.7,100.0,84.5,85.1,99.6,96.1,67.9,100.0
+English · attacked AI (humanized),model ideas (TPR),"3,592",84.6,82.0,93.5,71.4,59.6,86.3,71.0,10.4,94.9
+English · rephrase (h2l_rephrase),"human ideas, AI prose (FPR)","3,904",4.9,4.9,44.5,5.9,5.0,34.6,20.1,6.9,42.8
+English · clear human,human ideas (FPR),"3,922",0.6,0.2,0.4,1.1,0.1,0.4,0.3,0.3,0.1
+non-English · clear AI (ai_plain),model ideas (TPR),"3,877",93.1,89.9,99.1,85.2,–,–,89.5,27.1,99.7
+non-English · attacked AI (humanized),model ideas (TPR),"3,536",79.2,72.3,87.4,71.3,–,–,64.5,2.5,88.6
+non-English · rephrase (h2l_rephrase),"human ideas, AI prose (FPR)","3,800",1.8,0.7,12.8,1.3,–,–,3.9,0.7,14.9
+non-English · clear human,human ideas (FPR),"3,806",0.6,0.0,0.0,0.4,–,–,0.0,0.2,0.0
+"AUC, level 2, English (model-idea arms vs human + rephrase)",,,0.978,0.979,0.964,0.958,0.957,0.949,0.934,0.689,0.971
+"AUC, level 2, non-English",,,0.970,0.975,0.973,0.964,–,–,0.949,0.675,0.967

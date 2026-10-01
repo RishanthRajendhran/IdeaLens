@@ -1,0 +1,6 @@
+Arm,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+"proposals from model ideas (model_idea, model_idea_reranked)",model ideas (TPR),97,95.9,100.0,100.0,79.4,99.0,100.0,93.8,96.9,100.0
+proposals from expert ideas,"human ideas, AI prose (FPR)",48,10.4,12.5,14.6,14.6,16.7,18.8,25.0,8.3,12.5
+reviews (all),human ideas (FPR),504,2.6,2.2,2.2,4.0,2.4,3.6,3.2,3.4,2.4
+"AUC, proposals, model vs expert ideas",,,0.990,0.998,0.984,0.912,0.985,0.959,0.890,0.976,0.967
+"AUC, papers, model-seed vs expert-seed",,,0.704,0.605,0.561,0.684,0.583,0.516,0.568,0.594,0.599

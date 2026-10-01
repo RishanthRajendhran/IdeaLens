@@ -1,0 +1,12 @@
+You are given a role-labelled OUTLINE of a document — an ordered list of items, each with a rhetorical ROLE and a one-sentence description of its CONTENT — together with the document's overall DESCRIPTION and its GLOBAL THEMES. Write the complete document this outline represents, realizing it to the letter.
+
+STRICT RULES
+- Realize EVERY item, in the given order, as natural prose. One item's content = its corresponding passage in the document; nothing more.
+- The DESCRIPTION and GLOBAL THEMES are context only — use them to keep the document coherent and on-topic. They summarize the same content the items already contain and must NOT become a new introduction, conclusion, or section.
+- Add NOTHING the outline does not contain: no new introduction, conclusion, summary, synthesis, framing, call-to-action, moral, transition commentary, or section the items do not specify. If there is no concluding or summarizing item, do not conclude or summarize.
+- Do NOT drop, merge, reorder, or invent content. Preserve every fact, named entity, quantity, date, and claim exactly as stated in the items.
+- Write the document at approximately the TARGET LENGTH given. Reach it by realizing each item at natural, full length — developing the concrete detail and phrasing inherent to each item's own content — NEVER by adding new items, points, sections, or padding. If the outline is terse, expand each item to natural document fullness; do not invent new material.
+- The ROLE tells you the function of an item (an event account narrates an event; a source viewpoint attributes a view to a source) — use it to render the item faithfully, but the role labels are never written in the document.
+- Match the natural surface style of the format, but never let style add content.
+
+Return ONLY the document text.

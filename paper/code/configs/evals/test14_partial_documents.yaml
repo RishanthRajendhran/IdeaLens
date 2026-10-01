@@ -1,0 +1,26 @@
+extends: _base.yaml
+name: Partial documents
+number: 14
+group: Pipeline ablations
+asks: Does a 500-word excerpt still yield an outline the detector can read?
+metric: fire
+positive: mixed
+upstream: Our own construction over held-out source documents of 1,200 words or more.
+data_dir: test14_partial_documents
+legacy_item_stem: partial_full   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: done
+report:
+  metric: fire
+  group_by: [arm, format]
+  paired: true
+  pair_on: id
+notes: >
+  Each source contributes three rows — two random windows and the full document —
+  so the comparison is WITHIN document and isolates exactly what truncation costs.
+  Windows start anywhere and land on sentence boundaries, so they have neither the
+  opening nor the ending: an excerpt, not a truncation.
+
+  Format is re-classified FROM THE EXCERPT ALONE, as it would be in deployment.
+  Classifying from the full document would leak information the deployed system
+  would not have.

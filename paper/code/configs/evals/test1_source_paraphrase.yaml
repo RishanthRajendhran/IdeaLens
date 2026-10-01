@@ -1,0 +1,39 @@
+extends: _base.yaml
+name: Source paraphrase (AI rewrite of a human document)
+number: 1
+group: Idea provenance
+asks: >
+  If a human document is rewritten by an AI before extraction, whose document is
+  it? Human ideas, AI prose.
+positive: human
+upstream: >
+  Our own construction over the frozen evaluation core. Maps to Saha et al.'s
+  H-AI level, where they also label it negative.
+data_dir: test1_source_paraphrase
+legacy_npz_stem: test1   # the stem this eval's predictions were written under
+                        # before this repository existed; read by
+                        # scripts/data/import_results.py
+
+generation:
+  prompt: eval_generation/test1_paraphrase
+  # A ladder rather than a single point: one condition that happens to hold is
+  # less credible than a ladder showing where the method eventually breaks.
+  rungs: [light_copyedit, sentence_rewrite, paragraph_restructure]
+  # Saha's length control, cited rather than invented: reject any rewrite over
+  # 1.25x the original word count.
+  max_length_ratio: 1.25
+  # The rewriter sees ONLY the document. No external material: that matches H-AI's
+  # construction and keeps this a pure surface transform.
+  inputs: [document]
+
+report:
+  group_by: [format, level]
+  # This is one of the two evals where external baselines are REQUIRED. The claim
+  # is that surface detectors fire here and we do not; without them it is
+  # unsupported, and without Test 3 in the same table it is unfalsifiable.
+  baselines: [pangram_4]
+
+notes: >
+  This test carries the paper. The correct label is human under the idea-level
+  rule. Report it beside a test where the ideas ARE the AI's, or a detector that
+  answers "human" to everything wins this row for free.

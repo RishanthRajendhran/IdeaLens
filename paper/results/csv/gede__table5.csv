@@ -1,0 +1,10 @@
+Generator,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+gpt-4o-mini-2024-07-18,"model rewrites of the student's essay (improve-human, rewrite-human)","1,831",0.7,0.1,61.6,3.1,0.5,44.5,27.3,4.4,80.4
+meta-llama/Llama-3.3-70B-Instruct,"model rewrites of the student's essay (improve-human, rewrite-human)","1,817",2.4,2.1,61.4,5.3,3.5,47.4,29.9,24.9,68.5
+gpt-4o-mini-2024-07-18,"task (assignment only; task, task+resource)",934,99.9,100.0,100.0,94.8,98.9,100.0,100.0,93.7,100.0
+meta-llama/Llama-3.3-70B-Instruct,"task (assignment only; task, task+resource)",936,98.8,99.9,100.0,91.8,98.9,100.0,100.0,99.8,100.0
+gpt-4o-mini-2024-07-18,"from the student's summary (summary, task+summary)","1,776",97.6,100.0,100.0,89.7,96.3,100.0,100.0,84.1,100.0
+meta-llama/Llama-3.3-70B-Instruct,"from the student's summary (summary, task+summary)","1,774",92.1,99.1,100.0,82.9,92.3,100.0,100.0,99.5,99.8
+dipper,"attacks (dipper, rewrite_attack)","1,773",77.6,52.6,97.1,68.1,36.3,66.0,20.0,79.3,95.1
+gpt-4o-mini-2024-07-18,"attacks (dipper, rewrite_attack)",916,99.3,99.9,100.0,93.1,98.4,100.0,100.0,96.1,100.0
+meta-llama/Llama-3.3-70B-Instruct,"attacks (dipper, rewrite_attack)",915,99.8,100.0,100.0,94.2,98.6,100.0,100.0,94.2,100.0

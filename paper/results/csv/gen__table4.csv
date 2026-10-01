@@ -1,0 +1,9 @@
+Edit category,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+clarity_and_precision,"model-edited (7 categories, adding_detail excluded)","2,155",24.4,38.6,79.1,18.4,27.3,63.6,54.0,32.3,73.7
+concision,"model-edited (7 categories, adding_detail excluded)","1,946",9.5,17.7,56.1,6.2,8.5,39.6,18.8,18.5,55.4
+fluency_and_flow,"model-edited (7 categories, adding_detail excluded)","2,059",11.7,23.1,61.2,9.2,15.9,46.1,33.8,24.7,61.0
+grammar_and_mechanics,"model-edited (7 categories, adding_detail excluded)","1,678",0.7,0.3,6.6,1.0,0.3,4.5,1.0,2.4,4.1
+paraphrasing,"model-edited (7 categories, adding_detail excluded)","2,011",4.4,7.0,46.9,3.7,4.7,30.8,21.9,18.9,63.1
+structure_and_organization,"model-edited (7 categories, adding_detail excluded)","2,243",25.4,36.2,76.7,18.3,23.5,60.8,56.4,31.9,65.1
+tone_and_style,"model-edited (7 categories, adding_detail excluded)","1,994",17.9,55.4,80.6,14.9,36.4,62.9,40.0,31.0,64.2
+adding_detail,adding_detail (model-edited),"1,915",36.4,75.2,93.6,27.3,50.5,83.7,46.4,56.3,67.5

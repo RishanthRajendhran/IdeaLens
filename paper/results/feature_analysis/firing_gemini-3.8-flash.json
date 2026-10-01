@@ -1,0 +1,5502 @@
+{
+ "analysis": "firing",
+ "assignment": "outputs/feature_discovery/assign/item/assignment_batch-800docs.json",
+ "stamp": {
+  "generated": "2026-09-17T17:28:40",
+  "git_revision": "b5c1d51",
+  "config": {
+   "n_boot": 2000,
+   "seed": 42
+  },
+  "config_source": null
+ },
+ "settings": {
+  "firing_rule": {
+   "binary_0_1": "value == 1",
+   "ordinal_0_3": "value >= 2",
+   "fraction_0_1": "value > 0.5"
+  },
+  "p_human": "each item's detector score from data/indomain/deleak, used as a continuous value",
+  "chance_firing_more_human": "over every pair of one firing and one non-firing item, the share of pairs where the firing item has the higher p_human (a tie counts half). 0 to 1: 0.5 means no relation, above 0.5 the feature leans human, below 0.5 it leans AI. Equals the AUC of firing against p_human. 'within_format' pairs items only from the same format; 'pooled' pairs any two items.",
+  "leans": "human if the 95% interval of chance_firing_more_human_within_format is entirely above 0.5, ai if entirely below, otherwise no clear relation",
+  "quintiles": "items ranked by p_human within their own format and cut into 5 equal groups; the first group has the lowest p_human (most AI-like)",
+  "ci": "95% percentile interval over a doc-level bootstrap; docs resampled within each format x source cell of the sampling design (source is not used otherwise)",
+  "n_boot": 2000,
+  "seed": 42
+ },
+ "totals": {
+  "items": 13616,
+  "docs": 800,
+  "features": 79,
+  "mean_p_human": 0.461,
+  "mean_p_human_by_format": {
+   "Academic Writing": 0.4749,
+   "Creative Writing": 0.4296,
+   "Knowledge Article": 0.4734,
+   "News Article": 0.4834,
+   "Nonfiction Writing": 0.4715,
+   "Personal About Page": 0.4001,
+   "Personal Blog": 0.4743,
+   "User Reviews": 0.4715
+  },
+  "items_by_format": {
+   "Academic Writing": 1719,
+   "Creative Writing": 1576,
+   "Knowledge Article": 1704,
+   "News Article": 1381,
+   "Nonfiction Writing": 1619,
+   "Personal About Page": 1499,
+   "Personal Blog": 1801,
+   "User Reviews": 2317
+  }
+ },
+ "summary": {
+  "features_by_firing_item_rate_band": {
+   "never fires (0%)": {
+    "count": 0,
+    "features": []
+   },
+   "under 1%": {
+    "count": 30,
+    "features": [
+     "abstract_complementarity_as_mechanism",
+     "categorical_homogenization",
+     "contingent_exception",
+     "schematic_case_warrant",
+     "unearned_legacy_magnitude",
+     "nonselective_analytic_agenda",
+     "localized_uncertainty",
+     "unbounded_future_extension",
+     "lesson_template_anecdote",
+     "costly_self_implication",
+     "costless_tradeoff_resolution",
+     "answerable_information_gap",
+     "circular_evaluative_warrant",
+     "structural_analogy_yield",
+     "outcome_restating_condition",
+     "framework_as_topic_catalog",
+     "non_diagnostic_support",
+     "unsupported_benign_rationalization",
+     "automatic_social_convergence",
+     "thin_analogical_warrant",
+     "attention_as_substance",
+     "merit_substituted_for_rebuttal",
+     "deferred_rule_content",
+     "unanchored_effect_quantification",
+     "missing_information_motive_inference",
+     "gap_filling_from_archetype",
+     "nondiscriminating_hedging",
+     "nominal_quantification_gap",
+     "constructed_example_as_validation",
+     "elaboration_despite_missing_referent"
+    ]
+   },
+   "1% to under 10%": {
+    "count": 39,
+    "features": [
+     "comparison_baseline_resolution",
+     "evidence_access_calibration",
+     "particularized_micro_observation",
+     "residual_practical_friction",
+     "diagnostic_evidence_bridge",
+     "exclusionary_evaluative_priority",
+     "constraint_conditioned_choice",
+     "bounded_credit_allocation",
+     "condition_linked_heterogeneity",
+     "central_semantic_undercommitment",
+     "expectation_observation_discrepancy",
+     "goals_substituted_for_operations",
+     "explicit_tradeoff_cost",
+     "incidental_contingency",
+     "inherited_constraint_dependence",
+     "interest_bearing_source_relation",
+     "generic_symbolic_lesson",
+     "inferential_scope_inflation",
+     "unlocated_collective_reaction",
+     "quantitative_inference_load",
+     "represented_knowledge_asymmetry",
+     "guaranteed_independent_cobenefits",
+     "interchangeable_remedy_bundle",
+     "contingent_outcome_assurance",
+     "unresolved_inquiry_residue",
+     "warrant_strength_upgrade",
+     "moralized_causal_shortcut",
+     "inferential_non_equivalence",
+     "generic_redemptive_reframing",
+     "uninstantiated_change_account",
+     "boundary_free_construct",
+     "public_private_motive_divergence",
+     "projection_without_dependency",
+     "reconstructible_evidence_procedure",
+     "discriminating_counterevidence",
+     "authority_as_substitute",
+     "warranted_belief_revision",
+     "information_lineage_detail",
+     "intrinsic_value_supersession"
+    ]
+   },
+   "10% to under 50%": {
+    "count": 8,
+    "features": [
+     "load_bearing_specificity",
+     "mechanism_specificity",
+     "subject_interchangeability",
+     "evidence_traceability",
+     "boundary_condition_precision",
+     "contingent_action_trigger",
+     "quantitative_interpretability",
+     "situated_experiential_warrant"
+    ]
+   },
+   "50% or more": {
+    "count": 2,
+    "features": [
+     "claim_adjudicability",
+     "contingent_factual_anchoring"
+    ]
+   }
+  },
+  "top_10": [
+   {
+    "feature": "claim_adjudicability",
+    "firing_item_rate": 0.8478
+   },
+   {
+    "feature": "contingent_factual_anchoring",
+    "firing_item_rate": 0.5644
+   },
+   {
+    "feature": "load_bearing_specificity",
+    "firing_item_rate": 0.426
+   },
+   {
+    "feature": "mechanism_specificity",
+    "firing_item_rate": 0.2742
+   },
+   {
+    "feature": "subject_interchangeability",
+    "firing_item_rate": 0.219
+   },
+   {
+    "feature": "evidence_traceability",
+    "firing_item_rate": 0.1459
+   },
+   {
+    "feature": "boundary_condition_precision",
+    "firing_item_rate": 0.1334
+   },
+   {
+    "feature": "contingent_action_trigger",
+    "firing_item_rate": 0.1301
+   },
+   {
+    "feature": "quantitative_interpretability",
+    "firing_item_rate": 0.1047
+   },
+   {
+    "feature": "situated_experiential_warrant",
+    "firing_item_rate": 0.1043
+   }
+  ],
+  "bottom_10": [
+   {
+    "feature": "attention_as_substance",
+    "firing_item_rate": 0.0019
+   },
+   {
+    "feature": "merit_substituted_for_rebuttal",
+    "firing_item_rate": 0.0011
+   },
+   {
+    "feature": "deferred_rule_content",
+    "firing_item_rate": 0.0011
+   },
+   {
+    "feature": "unanchored_effect_quantification",
+    "firing_item_rate": 0.001
+   },
+   {
+    "feature": "missing_information_motive_inference",
+    "firing_item_rate": 0.001
+   },
+   {
+    "feature": "gap_filling_from_archetype",
+    "firing_item_rate": 0.0007
+   },
+   {
+    "feature": "nondiscriminating_hedging",
+    "firing_item_rate": 0.0003
+   },
+   {
+    "feature": "nominal_quantification_gap",
+    "firing_item_rate": 0.0002
+   },
+   {
+    "feature": "constructed_example_as_validation",
+    "firing_item_rate": 0.0001
+   },
+   {
+    "feature": "elaboration_despite_missing_referent",
+    "firing_item_rate": 0.0001
+   }
+  ],
+  "by_output_type": {
+   "binary_0_1": {
+    "features": 5,
+    "mean_firing_item_rate": 0.0047
+   },
+   "ordinal_0_3": {
+    "features": 73,
+    "mean_firing_item_rate": 0.0619
+   },
+   "fraction_0_1": {
+    "features": 1,
+    "mean_firing_item_rate": 0.001
+   }
+  },
+  "features_firing_per_item": {
+   "mean": 4.5427,
+   "median": 4.0,
+   "p90": 8.0,
+   "max": 20,
+   "share_of_items_with_none": 0.0093
+  },
+  "p_human_relation": {
+   "matches_direction": 64,
+   "contradicts_direction": 1,
+   "no_clear_relation": 14,
+   "by_direction": {
+    "ai": {
+     "features": 42,
+     "leans_ai": 28,
+     "leans_human": 1,
+     "no_clear_relation": 13
+    },
+    "human": {
+     "features": 37,
+     "leans_ai": 0,
+     "leans_human": 36,
+     "no_clear_relation": 1
+    }
+   },
+   "most_human_leaning_10": [
+    {
+     "feature": "information_lineage_detail",
+     "direction": "human",
+     "chance_firing_more_human_within_format": 0.7007
+    },
+    {
+     "feature": "contingent_exception",
+     "direction": "human",
+     "chance_firing_more_human_within_format": 0.688
+    },
+    {
+     "feature": "bounded_credit_allocation",
+     "direction": "human",
+     "chance_firing_more_human_within_format": 0.6849
+    },
+    {
+     "feature": "evidence_traceability",
+     "direction": "human",
+     "chance_firing_more_human_within_format": 0.6656
+    },
+    {
+     "feature": "reconstructible_evidence_procedure",
+     "direction": "human",
+     "chance_firing_more_human_within_format": 0.6631
+    },
+    {
+     "feature": "incidental_contingency",
+     "direction": "human",
+     "chance_firing_more_human_within_format": 0.6595
+    },
+    {
+     "feature": "claim_adjudicability",
+     "direction": "human",
+     "chance_firing_more_human_within_format": 0.6586
+    },
+    {
+     "feature": "contingent_factual_anchoring",
+     "direction": "human",
+     "chance_firing_more_human_within_format": 0.6517
+    },
+    {
+     "feature": "diagnostic_evidence_bridge",
+     "direction": "human",
+     "chance_firing_more_human_within_format": 0.6497
+    },
+    {
+     "feature": "discriminating_counterevidence",
+     "direction": "human",
+     "chance_firing_more_human_within_format": 0.6479
+    }
+   ],
+   "most_ai_leaning_10": [
+    {
+     "feature": "constructed_example_as_validation",
+     "direction": "ai",
+     "chance_firing_more_human_within_format": 0.1069
+    },
+    {
+     "feature": "nonselective_analytic_agenda",
+     "direction": "ai",
+     "chance_firing_more_human_within_format": 0.1828
+    },
+    {
+     "feature": "elaboration_despite_missing_referent",
+     "direction": "ai",
+     "chance_firing_more_human_within_format": 0.1935
+    },
+    {
+     "feature": "abstract_complementarity_as_mechanism",
+     "direction": "ai",
+     "chance_firing_more_human_within_format": 0.2157
+    },
+    {
+     "feature": "unearned_legacy_magnitude",
+     "direction": "ai",
+     "chance_firing_more_human_within_format": 0.2505
+    },
+    {
+     "feature": "attention_as_substance",
+     "direction": "ai",
+     "chance_firing_more_human_within_format": 0.2687
+    },
+    {
+     "feature": "guaranteed_independent_cobenefits",
+     "direction": "ai",
+     "chance_firing_more_human_within_format": 0.2735
+    },
+    {
+     "feature": "circular_evaluative_warrant",
+     "direction": "ai",
+     "chance_firing_more_human_within_format": 0.3001
+    },
+    {
+     "feature": "uninstantiated_change_account",
+     "direction": "ai",
+     "chance_firing_more_human_within_format": 0.3108
+    },
+    {
+     "feature": "outcome_restating_condition",
+     "direction": "ai",
+     "chance_firing_more_human_within_format": 0.311
+    }
+   ]
+  }
+ },
+ "features": [
+  {
+   "rank": 1,
+   "feature": "claim_adjudicability",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 11544,
+   "firing_item_rate": 0.8478,
+   "firing_item_rate_ci95": [
+    0.8364,
+    0.8588
+   ],
+   "value_counts": {
+    "0": 72,
+    "1": 2000,
+    "2": 7177,
+    "3": 4367
+   },
+   "mean_value": 2.1633,
+   "share_of_docs_with_any_firing_item": 1.0,
+   "mean_of_per_doc_firing_item_rates": 0.8499,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6586,
+    "chance_firing_more_human_within_format_ci95": [
+     0.6396,
+     0.6779
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6617,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6934,
+     "Creative Writing": 0.6574,
+     "Knowledge Article": 0.6832,
+     "News Article": 0.6792,
+     "Nonfiction Writing": 0.6777,
+     "Personal About Page": 0.6858,
+     "Personal Blog": 0.6845,
+     "User Reviews": 0.5847
+    },
+    "mean_p_human_when_firing": 0.482,
+    "mean_p_human_when_not_firing": 0.3445,
+    "firing_minus_not_firing": 0.1375,
+    "firing_minus_not_firing_ci95": [
+     0.1228,
+     0.1528
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.7235,
+     0.8237,
+     0.8631,
+     0.8957,
+     0.9334
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.8342,
+    "Creative Writing": 0.908,
+    "Knowledge Article": 0.858,
+    "News Article": 0.9515,
+    "Nonfiction Writing": 0.824,
+    "Personal About Page": 0.7952,
+    "Personal Blog": 0.8023,
+    "User Reviews": 0.8338
+   }
+  },
+  {
+   "rank": 2,
+   "feature": "contingent_factual_anchoring",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 7685,
+   "firing_item_rate": 0.5644,
+   "firing_item_rate_ci95": [
+    0.5416,
+    0.5853
+   ],
+   "value_counts": {
+    "0": 2030,
+    "1": 3901,
+    "2": 4958,
+    "3": 2727
+   },
+   "mean_value": 1.6156,
+   "share_of_docs_with_any_firing_item": 0.9012,
+   "mean_of_per_doc_firing_item_rates": 0.5718,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6517,
+    "chance_firing_more_human_within_format_ci95": [
+     0.6329,
+     0.671
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6174,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.662,
+     "Creative Writing": 0.6029,
+     "Knowledge Article": 0.6654,
+     "News Article": 0.6386,
+     "Nonfiction Writing": 0.6801,
+     "Personal About Page": 0.6302,
+     "Personal Blog": 0.6904,
+     "User Reviews": 0.6236
+    },
+    "mean_p_human_when_firing": 0.5052,
+    "mean_p_human_when_not_firing": 0.4039,
+    "firing_minus_not_firing": 0.1013,
+    "firing_minus_not_firing_ci95": [
+     0.0861,
+     0.1161
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.4345,
+     0.4793,
+     0.5448,
+     0.6217,
+     0.7422
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.3211,
+    "Creative Writing": 0.8299,
+    "Knowledge Article": 0.3251,
+    "News Article": 0.8798,
+    "Nonfiction Writing": 0.454,
+    "Personal About Page": 0.6951,
+    "Personal Blog": 0.4525,
+    "User Reviews": 0.6319
+   }
+  },
+  {
+   "rank": 3,
+   "feature": "load_bearing_specificity",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 5800,
+   "firing_item_rate": 0.426,
+   "firing_item_rate_ci95": [
+    0.411,
+    0.4421
+   ],
+   "value_counts": {
+    "0": 4084,
+    "1": 3732,
+    "2": 5439,
+    "3": 361
+   },
+   "mean_value": 1.1525,
+   "share_of_docs_with_any_firing_item": 0.9613,
+   "mean_of_per_doc_firing_item_rates": 0.4218,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6116,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5956,
+     0.6281
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6207,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6446,
+     "Creative Writing": 0.656,
+     "Knowledge Article": 0.6204,
+     "News Article": 0.5534,
+     "Nonfiction Writing": 0.6252,
+     "Personal About Page": 0.6574,
+     "Personal Blog": 0.643,
+     "User Reviews": 0.5543
+    },
+    "mean_p_human_when_firing": 0.5199,
+    "mean_p_human_when_not_firing": 0.4174,
+    "firing_minus_not_firing": 0.1025,
+    "firing_minus_not_firing_ci95": [
+     0.0898,
+     0.115
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.2681,
+     0.3948,
+     0.4413,
+     0.4873,
+     0.5388
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.4549,
+    "Creative Writing": 0.3674,
+    "Knowledge Article": 0.5176,
+    "News Article": 0.5301,
+    "Nonfiction Writing": 0.4775,
+    "Personal About Page": 0.1574,
+    "Personal Blog": 0.4409,
+    "User Reviews": 0.4411
+   }
+  },
+  {
+   "rank": 4,
+   "feature": "mechanism_specificity",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 3734,
+   "firing_item_rate": 0.2742,
+   "firing_item_rate_ci95": [
+    0.2608,
+    0.2876
+   ],
+   "value_counts": {
+    "0": 4467,
+    "1": 5415,
+    "2": 3677,
+    "3": 57
+   },
+   "mean_value": 0.9504,
+   "share_of_docs_with_any_firing_item": 0.8812,
+   "mean_of_per_doc_firing_item_rates": 0.2755,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5556,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5385,
+     0.5723
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.5651,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5897,
+     "Creative Writing": 0.5888,
+     "Knowledge Article": 0.5762,
+     "News Article": 0.525,
+     "Nonfiction Writing": 0.5708,
+     "Personal About Page": 0.5645,
+     "Personal Blog": 0.576,
+     "User Reviews": 0.4807
+    },
+    "mean_p_human_when_firing": 0.5009,
+    "mean_p_human_when_not_firing": 0.446,
+    "firing_minus_not_firing": 0.0549,
+    "firing_minus_not_firing_ci95": [
+     0.0418,
+     0.0685
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.19,
+     0.278,
+     0.2952,
+     0.2993,
+     0.3089
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.356,
+    "Creative Writing": 0.2665,
+    "Knowledge Article": 0.3914,
+    "News Article": 0.2686,
+    "Nonfiction Writing": 0.3533,
+    "Personal About Page": 0.0821,
+    "Personal Blog": 0.2732,
+    "User Reviews": 0.2059
+   }
+  },
+  {
+   "rank": 5,
+   "feature": "subject_interchangeability",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 2982,
+   "firing_item_rate": 0.219,
+   "firing_item_rate_ci95": [
+    0.2023,
+    0.2355
+   ],
+   "value_counts": {
+    "0": 5065,
+    "1": 5569,
+    "2": 2529,
+    "3": 453
+   },
+   "mean_value": 0.8803,
+   "share_of_docs_with_any_firing_item": 0.7312,
+   "mean_of_per_doc_firing_item_rates": 0.2129,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.347,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3271,
+     0.3667
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3475,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.3135,
+     "Creative Writing": 0.34,
+     "Knowledge Article": 0.3529,
+     "News Article": 0.3063,
+     "Nonfiction Writing": 0.321,
+     "Personal About Page": 0.314,
+     "Personal Blog": 0.3246,
+     "User Reviews": 0.4066
+    },
+    "mean_p_human_when_firing": 0.3595,
+    "mean_p_human_when_not_firing": 0.4895,
+    "firing_minus_not_firing": -0.13,
+    "firing_minus_not_firing_ci95": [
+     -0.1459,
+     -0.114
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.3513,
+     0.2743,
+     0.2148,
+     0.1638,
+     0.0905
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.2519,
+    "Creative Writing": 0.1079,
+    "Knowledge Article": 0.2248,
+    "News Article": 0.05,
+    "Nonfiction Writing": 0.2427,
+    "Personal About Page": 0.2802,
+    "Personal Blog": 0.2732,
+    "User Reviews": 0.2685
+   }
+  },
+  {
+   "rank": 6,
+   "feature": "evidence_traceability",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 1987,
+   "firing_item_rate": 0.1459,
+   "firing_item_rate_ci95": [
+    0.1333,
+    0.1587
+   ],
+   "value_counts": {
+    "0": 9714,
+    "1": 1915,
+    "2": 1840,
+    "3": 147
+   },
+   "mean_value": 0.4433,
+   "share_of_docs_with_any_firing_item": 0.6338,
+   "mean_of_per_doc_firing_item_rates": 0.1489,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6656,
+    "chance_firing_more_human_within_format_ci95": [
+     0.6431,
+     0.6869
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6596,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6643,
+     "Creative Writing": 0.6536,
+     "Knowledge Article": 0.6786,
+     "News Article": 0.6555,
+     "Nonfiction Writing": 0.6957,
+     "Personal About Page": 0.6794,
+     "Personal Blog": 0.6243,
+     "User Reviews": 0.6684
+    },
+    "mean_p_human_when_firing": 0.5788,
+    "mean_p_human_when_not_firing": 0.4409,
+    "firing_minus_not_firing": 0.1379,
+    "firing_minus_not_firing_ci95": [
+     0.1201,
+     0.1559
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0605,
+     0.1025,
+     0.1369,
+     0.1895,
+     0.2405
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.1443,
+    "Creative Writing": 0.0381,
+    "Knowledge Article": 0.0763,
+    "News Article": 0.4171,
+    "Nonfiction Writing": 0.113,
+    "Personal About Page": 0.1561,
+    "Personal Blog": 0.0872,
+    "User Reviews": 0.1722
+   }
+  },
+  {
+   "rank": 7,
+   "feature": "boundary_condition_precision",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 1816,
+   "firing_item_rate": 0.1334,
+   "firing_item_rate_ci95": [
+    0.1222,
+    0.1447
+   ],
+   "value_counts": {
+    "0": 9844,
+    "1": 1956,
+    "2": 1710,
+    "3": 106
+   },
+   "mean_value": 0.4182,
+   "share_of_docs_with_any_firing_item": 0.6763,
+   "mean_of_per_doc_firing_item_rates": 0.1344,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5984,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5787,
+     0.6193
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6078,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.643,
+     "Creative Writing": 0.6907,
+     "Knowledge Article": 0.6246,
+     "News Article": 0.5294,
+     "Nonfiction Writing": 0.5922,
+     "Personal About Page": 0.6472,
+     "Personal Blog": 0.5956,
+     "User Reviews": 0.5453
+    },
+    "mean_p_human_when_firing": 0.5404,
+    "mean_p_human_when_not_firing": 0.4488,
+    "firing_minus_not_firing": 0.0916,
+    "firing_minus_not_firing_ci95": [
+     0.0759,
+     0.1084
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0708,
+     0.1076,
+     0.1509,
+     0.1609,
+     0.1769
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.1542,
+    "Creative Writing": 0.0628,
+    "Knowledge Article": 0.257,
+    "News Article": 0.134,
+    "Nonfiction Writing": 0.1532,
+    "Personal About Page": 0.0327,
+    "Personal Blog": 0.1405,
+    "User Reviews": 0.1204
+   }
+  },
+  {
+   "rank": 8,
+   "feature": "contingent_action_trigger",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 1772,
+   "firing_item_rate": 0.1301,
+   "firing_item_rate_ci95": [
+    0.12,
+    0.1402
+   ],
+   "value_counts": {
+    "0": 11405,
+    "1": 439,
+    "2": 1760,
+    "3": 12
+   },
+   "mean_value": 0.2934,
+   "share_of_docs_with_any_firing_item": 0.575,
+   "mean_of_per_doc_firing_item_rates": 0.1303,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5907,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5666,
+     0.613
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.573,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6221,
+     "Creative Writing": 0.5656,
+     "Knowledge Article": 0.6862,
+     "News Article": 0.5187,
+     "Nonfiction Writing": 0.6329,
+     "Personal About Page": 0.6373,
+     "Personal Blog": 0.6498,
+     "User Reviews": 0.5608
+    },
+    "mean_p_human_when_firing": 0.5146,
+    "mean_p_human_when_not_firing": 0.453,
+    "firing_minus_not_firing": 0.0616,
+    "firing_minus_not_firing_ci95": [
+     0.0431,
+     0.0804
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.077,
+     0.1183,
+     0.1347,
+     0.1539,
+     0.167
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0465,
+    "Creative Writing": 0.3845,
+    "Knowledge Article": 0.0469,
+    "News Article": 0.2056,
+    "Nonfiction Writing": 0.0865,
+    "Personal About Page": 0.0714,
+    "Personal Blog": 0.1233,
+    "User Reviews": 0.1092
+   }
+  },
+  {
+   "rank": 9,
+   "feature": "quantitative_interpretability",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 1426,
+   "firing_item_rate": 0.1047,
+   "firing_item_rate_ci95": [
+    0.0956,
+    0.1141
+   ],
+   "value_counts": {
+    "0": 11378,
+    "1": 812,
+    "2": 374,
+    "3": 1052
+   },
+   "mean_value": 0.3464,
+   "share_of_docs_with_any_firing_item": 0.5725,
+   "mean_of_per_doc_firing_item_rates": 0.106,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6156,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5917,
+     0.6389
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6189,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6089,
+     "Creative Writing": 0.667,
+     "Knowledge Article": 0.669,
+     "News Article": 0.5533,
+     "Nonfiction Writing": 0.6988,
+     "Personal About Page": 0.6084,
+     "Personal Blog": 0.6596,
+     "User Reviews": 0.5687
+    },
+    "mean_p_human_when_firing": 0.5519,
+    "mean_p_human_when_not_firing": 0.4504,
+    "firing_minus_not_firing": 0.1014,
+    "firing_minus_not_firing_ci95": [
+     0.0826,
+     0.1205
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0495,
+     0.0819,
+     0.1076,
+     0.1311,
+     0.1537
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0489,
+    "Creative Writing": 0.0336,
+    "Knowledge Article": 0.1015,
+    "News Article": 0.2491,
+    "Nonfiction Writing": 0.1075,
+    "Personal About Page": 0.0961,
+    "Personal Blog": 0.0949,
+    "User Reviews": 0.1221
+   }
+  },
+  {
+   "rank": 10,
+   "feature": "situated_experiential_warrant",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 1420,
+   "firing_item_rate": 0.1043,
+   "firing_item_rate_ci95": [
+    0.0908,
+    0.1194
+   ],
+   "value_counts": {
+    "0": 11479,
+    "1": 717,
+    "2": 1407,
+    "3": 13
+   },
+   "mean_value": 0.2622,
+   "share_of_docs_with_any_firing_item": 0.3663,
+   "mean_of_per_doc_firing_item_rates": 0.0861,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6265,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5948,
+     0.6558
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6134,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6726,
+     "Creative Writing": 0.5386,
+     "Knowledge Article": null,
+     "News Article": 0.7109,
+     "Nonfiction Writing": 0.5143,
+     "Personal About Page": 0.6597,
+     "Personal Blog": 0.6162,
+     "User Reviews": 0.643
+    },
+    "mean_p_human_when_firing": 0.5471,
+    "mean_p_human_when_not_firing": 0.451,
+    "firing_minus_not_firing": 0.0961,
+    "firing_minus_not_firing_ci95": [
+     0.0705,
+     0.1219
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0521,
+     0.0746,
+     0.1175,
+     0.1329,
+     0.1445
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0047,
+    "Creative Writing": 0.106,
+    "Knowledge Article": 0.0,
+    "News Article": 0.05,
+    "Nonfiction Writing": 0.0235,
+    "Personal About Page": 0.0734,
+    "Personal Blog": 0.1749,
+    "User Reviews": 0.3077
+   }
+  },
+  {
+   "rank": 11,
+   "feature": "comparison_baseline_resolution",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 1308,
+   "firing_item_rate": 0.0961,
+   "firing_item_rate_ci95": [
+    0.088,
+    0.1047
+   ],
+   "value_counts": {
+    "0": 11399,
+    "1": 909,
+    "2": 1193,
+    "3": 115
+   },
+   "mean_value": 0.2673,
+   "share_of_docs_with_any_firing_item": 0.595,
+   "mean_of_per_doc_firing_item_rates": 0.0958,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6274,
+    "chance_firing_more_human_within_format_ci95": [
+     0.6077,
+     0.6466
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6375,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6309,
+     "Creative Writing": 0.6937,
+     "Knowledge Article": 0.6241,
+     "News Article": 0.5757,
+     "Nonfiction Writing": 0.6485,
+     "Personal About Page": 0.711,
+     "Personal Blog": 0.6308,
+     "User Reviews": 0.6161
+    },
+    "mean_p_human_when_firing": 0.5677,
+    "mean_p_human_when_not_firing": 0.4497,
+    "firing_minus_not_firing": 0.118,
+    "firing_minus_not_firing_ci95": [
+     0.102,
+     0.135
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0521,
+     0.0672,
+     0.0877,
+     0.1194,
+     0.1541
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.1239,
+    "Creative Writing": 0.0355,
+    "Knowledge Article": 0.1092,
+    "News Article": 0.1311,
+    "Nonfiction Writing": 0.1334,
+    "Personal About Page": 0.02,
+    "Personal Blog": 0.1016,
+    "User Reviews": 0.1049
+   }
+  },
+  {
+   "rank": 12,
+   "feature": "evidence_access_calibration",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 1184,
+   "firing_item_rate": 0.087,
+   "firing_item_rate_ci95": [
+    0.0784,
+    0.0956
+   ],
+   "value_counts": {
+    "0": 12264,
+    "1": 168,
+    "2": 1180,
+    "3": 4
+   },
+   "mean_value": 0.1865,
+   "share_of_docs_with_any_firing_item": 0.4913,
+   "mean_of_per_doc_firing_item_rates": 0.0812,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6229,
+    "chance_firing_more_human_within_format_ci95": [
+     0.601,
+     0.6436
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6285,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7422,
+     "Creative Writing": 0.5829,
+     "Knowledge Article": 0.7038,
+     "News Article": 0.6213,
+     "Nonfiction Writing": 0.576,
+     "Personal About Page": 0.6792,
+     "Personal Blog": 0.6399,
+     "User Reviews": 0.6029
+    },
+    "mean_p_human_when_firing": 0.561,
+    "mean_p_human_when_not_firing": 0.4515,
+    "firing_minus_not_firing": 0.1095,
+    "firing_minus_not_firing_ci95": [
+     0.0923,
+     0.1278
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0429,
+     0.0665,
+     0.0877,
+     0.1047,
+     0.1331
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0442,
+    "Creative Writing": 0.0882,
+    "Knowledge Article": 0.02,
+    "News Article": 0.1702,
+    "Nonfiction Writing": 0.034,
+    "Personal About Page": 0.0307,
+    "Personal Blog": 0.1022,
+    "User Reviews": 0.1791
+   }
+  },
+  {
+   "rank": 13,
+   "feature": "particularized_micro_observation",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 1162,
+   "firing_item_rate": 0.0853,
+   "firing_item_rate_ci95": [
+    0.0757,
+    0.0954
+   ],
+   "value_counts": {
+    "0": 8335,
+    "1": 4119,
+    "2": 1015,
+    "3": 147
+   },
+   "mean_value": 0.484,
+   "share_of_docs_with_any_firing_item": 0.36,
+   "mean_of_per_doc_firing_item_rates": 0.0823,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6187,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5928,
+     0.642
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.5901,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7249,
+     "Creative Writing": 0.5836,
+     "Knowledge Article": 0.728,
+     "News Article": 0.5734,
+     "Nonfiction Writing": 0.64,
+     "Personal About Page": 0.5494,
+     "Personal Blog": 0.6599,
+     "User Reviews": 0.6259
+    },
+    "mean_p_human_when_firing": 0.5305,
+    "mean_p_human_when_not_firing": 0.4546,
+    "firing_minus_not_firing": 0.0759,
+    "firing_minus_not_firing_ci95": [
+     0.0539,
+     0.0984
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0436,
+     0.0676,
+     0.0899,
+     0.1017,
+     0.1239
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0239,
+    "Creative Writing": 0.323,
+    "Knowledge Article": 0.0235,
+    "News Article": 0.0644,
+    "Nonfiction Writing": 0.0414,
+    "Personal About Page": 0.0414,
+    "Personal Blog": 0.0866,
+    "User Reviews": 0.0855
+   }
+  },
+  {
+   "rank": 14,
+   "feature": "residual_practical_friction",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 1103,
+   "firing_item_rate": 0.081,
+   "firing_item_rate_ci95": [
+    0.071,
+    0.0925
+   ],
+   "value_counts": {
+    "0": 11039,
+    "1": 1474,
+    "2": 1058,
+    "3": 45
+   },
+   "mean_value": 0.2736,
+   "share_of_docs_with_any_firing_item": 0.4662,
+   "mean_of_per_doc_firing_item_rates": 0.0758,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5689,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5423,
+     0.5966
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.5743,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5606,
+     "Creative Writing": 0.5703,
+     "Knowledge Article": 0.5908,
+     "News Article": 0.5192,
+     "Nonfiction Writing": 0.6241,
+     "Personal About Page": 0.6337,
+     "Personal Blog": 0.6335,
+     "User Reviews": 0.533
+    },
+    "mean_p_human_when_firing": 0.5182,
+    "mean_p_human_when_not_firing": 0.456,
+    "firing_minus_not_firing": 0.0622,
+    "firing_minus_not_firing_ci95": [
+     0.0416,
+     0.0828
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0484,
+     0.0723,
+     0.0877,
+     0.1014,
+     0.0953
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0617,
+    "Creative Writing": 0.132,
+    "Knowledge Article": 0.0434,
+    "News Article": 0.1035,
+    "Nonfiction Writing": 0.071,
+    "Personal About Page": 0.0127,
+    "Personal Blog": 0.0861,
+    "User Reviews": 0.1221
+   }
+  },
+  {
+   "rank": 15,
+   "feature": "diagnostic_evidence_bridge",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 1087,
+   "firing_item_rate": 0.0798,
+   "firing_item_rate_ci95": [
+    0.0719,
+    0.0884
+   ],
+   "value_counts": {
+    "0": 11169,
+    "1": 1360,
+    "2": 1068,
+    "3": 19
+   },
+   "mean_value": 0.2609,
+   "share_of_docs_with_any_firing_item": 0.4587,
+   "mean_of_per_doc_firing_item_rates": 0.0743,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6497,
+    "chance_firing_more_human_within_format_ci95": [
+     0.6253,
+     0.6741
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6603,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7397,
+     "Creative Writing": 0.6679,
+     "Knowledge Article": 0.6768,
+     "News Article": 0.5927,
+     "Nonfiction Writing": 0.6956,
+     "Personal About Page": 0.7002,
+     "Personal Blog": 0.6859,
+     "User Reviews": 0.6067
+    },
+    "mean_p_human_when_firing": 0.5875,
+    "mean_p_human_when_not_firing": 0.4501,
+    "firing_minus_not_firing": 0.1374,
+    "firing_minus_not_firing_ci95": [
+     0.1174,
+     0.1569
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0312,
+     0.0533,
+     0.0734,
+     0.1065,
+     0.135
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0925,
+    "Creative Writing": 0.0489,
+    "Knowledge Article": 0.0293,
+    "News Article": 0.1209,
+    "Nonfiction Writing": 0.0704,
+    "Personal About Page": 0.0207,
+    "Personal Blog": 0.0594,
+    "User Reviews": 0.1649
+   }
+  },
+  {
+   "rank": 16,
+   "feature": "exclusionary_evaluative_priority",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 1060,
+   "firing_item_rate": 0.0778,
+   "firing_item_rate_ci95": [
+    0.0713,
+    0.0851
+   ],
+   "value_counts": {
+    "0": 11368,
+    "1": 1188,
+    "2": 971,
+    "3": 89
+   },
+   "mean_value": 0.2495,
+   "share_of_docs_with_any_firing_item": 0.5425,
+   "mean_of_per_doc_firing_item_rates": 0.0754,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5837,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5583,
+     0.609
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.5876,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6038,
+     "Creative Writing": 0.6227,
+     "Knowledge Article": 0.578,
+     "News Article": 0.585,
+     "Nonfiction Writing": 0.5655,
+     "Personal About Page": 0.6464,
+     "Personal Blog": 0.588,
+     "User Reviews": 0.5612
+    },
+    "mean_p_human_when_firing": 0.5301,
+    "mean_p_human_when_not_firing": 0.4552,
+    "firing_minus_not_firing": 0.0748,
+    "firing_minus_not_firing_ci95": [
+     0.055,
+     0.0953
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0451,
+     0.0694,
+     0.08,
+     0.0859,
+     0.1089
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0518,
+    "Creative Writing": 0.0628,
+    "Knowledge Article": 0.0857,
+    "News Article": 0.0384,
+    "Nonfiction Writing": 0.0778,
+    "Personal About Page": 0.0527,
+    "Personal Blog": 0.1099,
+    "User Reviews": 0.1165
+   }
+  },
+  {
+   "rank": 17,
+   "feature": "constraint_conditioned_choice",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 1004,
+   "firing_item_rate": 0.0737,
+   "firing_item_rate_ci95": [
+    0.0676,
+    0.0797
+   ],
+   "value_counts": {
+    "0": 11897,
+    "1": 715,
+    "2": 980,
+    "3": 24
+   },
+   "mean_value": 0.2017,
+   "share_of_docs_with_any_firing_item": 0.5537,
+   "mean_of_per_doc_firing_item_rates": 0.0757,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6068,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5858,
+     0.6273
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6083,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5988,
+     "Creative Writing": 0.6412,
+     "Knowledge Article": 0.6188,
+     "News Article": 0.5554,
+     "Nonfiction Writing": 0.6196,
+     "Personal About Page": 0.6159,
+     "Personal Blog": 0.6192,
+     "User Reviews": 0.5831
+    },
+    "mean_p_human_when_firing": 0.5464,
+    "mean_p_human_when_not_firing": 0.4542,
+    "firing_minus_not_firing": 0.0921,
+    "firing_minus_not_firing_ci95": [
+     0.0749,
+     0.1095
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0389,
+     0.0558,
+     0.0749,
+     0.0889,
+     0.1103
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0547,
+    "Creative Writing": 0.0939,
+    "Knowledge Article": 0.0704,
+    "News Article": 0.0637,
+    "Nonfiction Writing": 0.0877,
+    "Personal About Page": 0.0387,
+    "Personal Blog": 0.0938,
+    "User Reviews": 0.0798
+   }
+  },
+  {
+   "rank": 18,
+   "feature": "bounded_credit_allocation",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 913,
+   "firing_item_rate": 0.0671,
+   "firing_item_rate_ci95": [
+    0.0582,
+    0.0766
+   ],
+   "value_counts": {
+    "0": 12209,
+    "1": 494,
+    "2": 889,
+    "3": 24
+   },
+   "mean_value": 0.1722,
+   "share_of_docs_with_any_firing_item": 0.4175,
+   "mean_of_per_doc_firing_item_rates": 0.0661,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6849,
+    "chance_firing_more_human_within_format_ci95": [
+     0.6572,
+     0.7098
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.666,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7774,
+     "Creative Writing": 0.6071,
+     "Knowledge Article": 0.7131,
+     "News Article": 0.5941,
+     "Nonfiction Writing": 0.6953,
+     "Personal About Page": 0.6409,
+     "Personal Blog": 0.7062,
+     "User Reviews": 0.7299
+    },
+    "mean_p_human_when_firing": 0.5956,
+    "mean_p_human_when_not_firing": 0.4514,
+    "firing_minus_not_firing": 0.1442,
+    "firing_minus_not_firing_ci95": [
+     0.1197,
+     0.1681
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0286,
+     0.0353,
+     0.0558,
+     0.0808,
+     0.135
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0297,
+    "Creative Writing": 0.0317,
+    "Knowledge Article": 0.0346,
+    "News Article": 0.118,
+    "Nonfiction Writing": 0.055,
+    "Personal About Page": 0.1408,
+    "Personal Blog": 0.0322,
+    "User Reviews": 0.1001
+   }
+  },
+  {
+   "rank": 19,
+   "feature": "condition_linked_heterogeneity",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 758,
+   "firing_item_rate": 0.0557,
+   "firing_item_rate_ci95": [
+    0.0494,
+    0.0623
+   ],
+   "value_counts": {
+    "0": 12698,
+    "1": 160,
+    "2": 756,
+    "3": 2
+   },
+   "mean_value": 0.1232,
+   "share_of_docs_with_any_firing_item": 0.4188,
+   "mean_of_per_doc_firing_item_rates": 0.0572,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5781,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5486,
+     0.607
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.5953,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6237,
+     "Creative Writing": 0.5959,
+     "Knowledge Article": 0.5999,
+     "News Article": 0.5867,
+     "Nonfiction Writing": 0.6258,
+     "Personal About Page": 0.603,
+     "Personal Blog": 0.5688,
+     "User Reviews": 0.5047
+    },
+    "mean_p_human_when_firing": 0.5386,
+    "mean_p_human_when_not_firing": 0.4565,
+    "firing_minus_not_firing": 0.0822,
+    "firing_minus_not_firing_ci95": [
+     0.0587,
+     0.1063
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0374,
+     0.0441,
+     0.051,
+     0.0698,
+     0.0761
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0867,
+    "Creative Writing": 0.0159,
+    "Knowledge Article": 0.0845,
+    "News Article": 0.0637,
+    "Nonfiction Writing": 0.0673,
+    "Personal About Page": 0.006,
+    "Personal Blog": 0.0455,
+    "User Reviews": 0.0656
+   }
+  },
+  {
+   "rank": 20,
+   "feature": "central_semantic_undercommitment",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 709,
+   "firing_item_rate": 0.0521,
+   "firing_item_rate_ci95": [
+    0.046,
+    0.0585
+   ],
+   "value_counts": {
+    "0": 11811,
+    "1": 1096,
+    "2": 694,
+    "3": 15
+   },
+   "mean_value": 0.1857,
+   "share_of_docs_with_any_firing_item": 0.4062,
+   "mean_of_per_doc_firing_item_rates": 0.0522,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3137,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2864,
+     0.3398
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3034,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.3549,
+     "Creative Writing": 0.3026,
+     "Knowledge Article": 0.293,
+     "News Article": 0.1833,
+     "Nonfiction Writing": 0.3095,
+     "Personal About Page": 0.2761,
+     "Personal Blog": 0.3096,
+     "User Reviews": 0.3526
+    },
+    "mean_p_human_when_firing": 0.3028,
+    "mean_p_human_when_not_firing": 0.4697,
+    "firing_minus_not_firing": -0.1669,
+    "firing_minus_not_firing_ci95": [
+     -0.1884,
+     -0.1455
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.1082,
+     0.0617,
+     0.0433,
+     0.0334,
+     0.0136
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0605,
+    "Creative Writing": 0.0431,
+    "Knowledge Article": 0.0411,
+    "News Article": 0.0109,
+    "Nonfiction Writing": 0.05,
+    "Personal About Page": 0.1134,
+    "Personal Blog": 0.0539,
+    "User Reviews": 0.0449
+   }
+  },
+  {
+   "rank": 21,
+   "feature": "expectation_observation_discrepancy",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 649,
+   "firing_item_rate": 0.0477,
+   "firing_item_rate_ci95": [
+    0.0405,
+    0.0554
+   ],
+   "value_counts": {
+    "0": 12414,
+    "1": 553,
+    "2": 633,
+    "3": 16
+   },
+   "mean_value": 0.1371,
+   "share_of_docs_with_any_firing_item": 0.3475,
+   "mean_of_per_doc_firing_item_rates": 0.044,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6042,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5748,
+     0.6351
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6066,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6597,
+     "Creative Writing": 0.5559,
+     "Knowledge Article": 0.7924,
+     "News Article": 0.5851,
+     "Nonfiction Writing": 0.674,
+     "Personal About Page": 0.6967,
+     "Personal Blog": 0.6473,
+     "User Reviews": 0.5757
+    },
+    "mean_p_human_when_firing": 0.5473,
+    "mean_p_human_when_not_firing": 0.4567,
+    "firing_minus_not_firing": 0.0906,
+    "firing_minus_not_firing_ci95": [
+     0.0665,
+     0.1155
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0249,
+     0.0312,
+     0.0573,
+     0.0573,
+     0.0677
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0204,
+    "Creative Writing": 0.0939,
+    "Knowledge Article": 0.0123,
+    "News Article": 0.0536,
+    "Nonfiction Writing": 0.0321,
+    "Personal About Page": 0.0113,
+    "Personal Blog": 0.0511,
+    "User Reviews": 0.0906
+   }
+  },
+  {
+   "rank": 22,
+   "feature": "goals_substituted_for_operations",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 606,
+   "firing_item_rate": 0.0445,
+   "firing_item_rate_ci95": [
+    0.0384,
+    0.0502
+   ],
+   "value_counts": {
+    "0": 12315,
+    "1": 695,
+    "2": 535,
+    "3": 71
+   },
+   "mean_value": 0.1453,
+   "share_of_docs_with_any_firing_item": 0.3237,
+   "mean_of_per_doc_firing_item_rates": 0.0458,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3458,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3213,
+     0.3706
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3472,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.364,
+     "Creative Writing": 0.4577,
+     "Knowledge Article": 0.3347,
+     "News Article": 0.3325,
+     "Nonfiction Writing": 0.3366,
+     "Personal About Page": 0.29,
+     "Personal Blog": 0.389,
+     "User Reviews": 0.3081
+    },
+    "mean_p_human_when_firing": 0.3366,
+    "mean_p_human_when_not_firing": 0.4668,
+    "firing_minus_not_firing": -0.1302,
+    "firing_minus_not_firing_ci95": [
+     -0.1513,
+     -0.1086
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0763,
+     0.0602,
+     0.0437,
+     0.0279,
+     0.0143
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0652,
+    "Creative Writing": 0.0102,
+    "Knowledge Article": 0.0634,
+    "News Article": 0.0123,
+    "Nonfiction Writing": 0.0649,
+    "Personal About Page": 0.074,
+    "Personal Blog": 0.0627,
+    "User Reviews": 0.0104
+   }
+  },
+  {
+   "rank": 23,
+   "feature": "explicit_tradeoff_cost",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 583,
+   "firing_item_rate": 0.0428,
+   "firing_item_rate_ci95": [
+    0.0379,
+    0.0479
+   ],
+   "value_counts": {
+    "0": 12779,
+    "1": 254,
+    "2": 573,
+    "3": 10
+   },
+   "mean_value": 0.105,
+   "share_of_docs_with_any_firing_item": 0.38,
+   "mean_of_per_doc_firing_item_rates": 0.0433,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5801,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5518,
+     0.6076
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.5856,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5754,
+     "Creative Writing": 0.6014,
+     "Knowledge Article": 0.557,
+     "News Article": 0.6049,
+     "Nonfiction Writing": 0.6277,
+     "Personal About Page": 0.5903,
+     "Personal Blog": 0.6212,
+     "User Reviews": 0.525
+    },
+    "mean_p_human_when_firing": 0.5308,
+    "mean_p_human_when_not_firing": 0.4579,
+    "firing_minus_not_firing": 0.0729,
+    "firing_minus_not_firing_ci95": [
+     0.0505,
+     0.0958
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0235,
+     0.0415,
+     0.0378,
+     0.0521,
+     0.0592
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0372,
+    "Creative Writing": 0.0584,
+    "Knowledge Article": 0.0352,
+    "News Article": 0.0362,
+    "Nonfiction Writing": 0.05,
+    "Personal About Page": 0.014,
+    "Personal Blog": 0.0522,
+    "User Reviews": 0.0522
+   }
+  },
+  {
+   "rank": 24,
+   "feature": "incidental_contingency",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 535,
+   "firing_item_rate": 0.0393,
+   "firing_item_rate_ci95": [
+    0.033,
+    0.0457
+   ],
+   "value_counts": {
+    "0": 12033,
+    "1": 1048,
+    "2": 535
+   },
+   "mean_value": 0.1556,
+   "share_of_docs_with_any_firing_item": 0.2162,
+   "mean_of_per_doc_firing_item_rates": 0.036,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6595,
+    "chance_firing_more_human_within_format_ci95": [
+     0.6299,
+     0.6901
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.634,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7218,
+     "Creative Writing": 0.6346,
+     "Knowledge Article": 0.7659,
+     "News Article": 0.6099,
+     "Nonfiction Writing": 0.6261,
+     "Personal About Page": 0.6236,
+     "Personal Blog": 0.7044,
+     "User Reviews": 0.6528
+    },
+    "mean_p_human_when_firing": 0.5694,
+    "mean_p_human_when_not_firing": 0.4566,
+    "firing_minus_not_firing": 0.1128,
+    "firing_minus_not_firing_ci95": [
+     0.0867,
+     0.139
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0128,
+     0.0228,
+     0.0426,
+     0.0521,
+     0.0662
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0006,
+    "Creative Writing": 0.1345,
+    "Knowledge Article": 0.0047,
+    "News Article": 0.0152,
+    "Nonfiction Writing": 0.0111,
+    "Personal About Page": 0.026,
+    "Personal Blog": 0.085,
+    "User Reviews": 0.0358
+   }
+  },
+  {
+   "rank": 25,
+   "feature": "inherited_constraint_dependence",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 527,
+   "firing_item_rate": 0.0387,
+   "firing_item_rate_ci95": [
+    0.0333,
+    0.0447
+   ],
+   "value_counts": {
+    "0": 12724,
+    "1": 365,
+    "2": 523,
+    "3": 4
+   },
+   "mean_value": 0.1045,
+   "share_of_docs_with_any_firing_item": 0.3412,
+   "mean_of_per_doc_firing_item_rates": 0.0407,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6278,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5966,
+     0.6561
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6315,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5978,
+     "Creative Writing": 0.629,
+     "Knowledge Article": 0.7066,
+     "News Article": 0.5846,
+     "Nonfiction Writing": 0.6342,
+     "Personal About Page": 0.6247,
+     "Personal Blog": 0.6153,
+     "User Reviews": 0.6314
+    },
+    "mean_p_human_when_firing": 0.5688,
+    "mean_p_human_when_not_firing": 0.4567,
+    "firing_minus_not_firing": 0.1121,
+    "firing_minus_not_firing_ci95": [
+     0.0863,
+     0.1372
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0183,
+     0.0264,
+     0.0371,
+     0.0481,
+     0.0636
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0617,
+    "Creative Writing": 0.0355,
+    "Knowledge Article": 0.0464,
+    "News Article": 0.0637,
+    "Nonfiction Writing": 0.0494,
+    "Personal About Page": 0.018,
+    "Personal Blog": 0.0283,
+    "User Reviews": 0.0173
+   }
+  },
+  {
+   "rank": 26,
+   "feature": "interest_bearing_source_relation",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 492,
+   "firing_item_rate": 0.0361,
+   "firing_item_rate_ci95": [
+    0.0318,
+    0.0408
+   ],
+   "value_counts": {
+    "0": 13103,
+    "1": 21,
+    "2": 486,
+    "3": 6
+   },
+   "mean_value": 0.0743,
+   "share_of_docs_with_any_firing_item": 0.2963,
+   "mean_of_per_doc_firing_item_rates": 0.0398,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.591,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5567,
+     0.6246
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.5907,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7117,
+     "Creative Writing": 0.4764,
+     "Knowledge Article": 0.5524,
+     "News Article": 0.6728,
+     "Nonfiction Writing": 0.7082,
+     "Personal About Page": 0.5798,
+     "Personal Blog": 0.4363,
+     "User Reviews": 0.5484
+    },
+    "mean_p_human_when_firing": 0.5362,
+    "mean_p_human_when_not_firing": 0.4582,
+    "firing_minus_not_firing": 0.078,
+    "firing_minus_not_firing_ci95": [
+     0.0492,
+     0.1061
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0202,
+     0.0323,
+     0.0345,
+     0.0437,
+     0.05
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0023,
+    "Creative Writing": 0.0032,
+    "Knowledge Article": 0.0065,
+    "News Article": 0.1419,
+    "Nonfiction Writing": 0.0136,
+    "Personal About Page": 0.0847,
+    "Personal Blog": 0.0261,
+    "User Reviews": 0.0345
+   }
+  },
+  {
+   "rank": 27,
+   "feature": "generic_symbolic_lesson",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 472,
+   "firing_item_rate": 0.0347,
+   "firing_item_rate_ci95": [
+    0.0284,
+    0.0418
+   ],
+   "value_counts": {
+    "0": 12948,
+    "1": 196,
+    "2": 392,
+    "3": 80
+   },
+   "mean_value": 0.0896,
+   "share_of_docs_with_any_firing_item": 0.2325,
+   "mean_of_per_doc_firing_item_rates": 0.0344,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3739,
+    "chance_firing_more_human_within_format_ci95": [
+     0.34,
+     0.4093
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3713,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.3634,
+     "Creative Writing": 0.3195,
+     "Knowledge Article": 0.3408,
+     "News Article": 0.2954,
+     "Nonfiction Writing": 0.4481,
+     "Personal About Page": 0.4233,
+     "Personal Blog": 0.3777,
+     "User Reviews": 0.4685
+    },
+    "mean_p_human_when_firing": 0.3548,
+    "mean_p_human_when_not_firing": 0.4649,
+    "firing_minus_not_firing": -0.1101,
+    "firing_minus_not_firing_ci95": [
+     -0.1381,
+     -0.0811
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.055,
+     0.0437,
+     0.0338,
+     0.0242,
+     0.0166
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0337,
+    "Creative Writing": 0.0742,
+    "Knowledge Article": 0.0129,
+    "News Article": 0.013,
+    "Nonfiction Writing": 0.034,
+    "Personal About Page": 0.042,
+    "Personal Blog": 0.0727,
+    "User Reviews": 0.0035
+   }
+  },
+  {
+   "rank": 28,
+   "feature": "inferential_scope_inflation",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 471,
+   "firing_item_rate": 0.0346,
+   "firing_item_rate_ci95": [
+    0.0308,
+    0.0386
+   ],
+   "value_counts": {
+    "0": 12788,
+    "1": 357,
+    "2": 469,
+    "3": 2
+   },
+   "mean_value": 0.0955,
+   "share_of_docs_with_any_firing_item": 0.34,
+   "mean_of_per_doc_firing_item_rates": 0.0357,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3886,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3569,
+     0.4202
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3875,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.386,
+     "Creative Writing": 0.3696,
+     "Knowledge Article": 0.2713,
+     "News Article": 0.2773,
+     "Nonfiction Writing": 0.4051,
+     "Personal About Page": 0.3234,
+     "Personal Blog": 0.437,
+     "User Reviews": 0.4942
+    },
+    "mean_p_human_when_firing": 0.3683,
+    "mean_p_human_when_not_firing": 0.4644,
+    "firing_minus_not_firing": -0.0961,
+    "firing_minus_not_firing_ci95": [
+     -0.1216,
+     -0.071
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0587,
+     0.0378,
+     0.0301,
+     0.0257,
+     0.0206
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0512,
+    "Creative Writing": 0.0228,
+    "Knowledge Article": 0.0229,
+    "News Article": 0.0268,
+    "Nonfiction Writing": 0.0494,
+    "Personal About Page": 0.036,
+    "Personal Blog": 0.0539,
+    "User Reviews": 0.0173
+   }
+  },
+  {
+   "rank": 29,
+   "feature": "unlocated_collective_reaction",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 417,
+   "firing_item_rate": 0.0306,
+   "firing_item_rate_ci95": [
+    0.0264,
+    0.0352
+   ],
+   "value_counts": {
+    "0": 12718,
+    "1": 481,
+    "2": 417
+   },
+   "mean_value": 0.0966,
+   "share_of_docs_with_any_firing_item": 0.2825,
+   "mean_of_per_doc_firing_item_rates": 0.0326,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.4199,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3801,
+     0.4618
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.4269,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.4378,
+     "Creative Writing": 0.4546,
+     "Knowledge Article": 0.3427,
+     "News Article": 0.4191,
+     "Nonfiction Writing": 0.5077,
+     "Personal About Page": 0.3887,
+     "Personal Blog": 0.5484,
+     "User Reviews": 0.3487
+    },
+    "mean_p_human_when_firing": 0.4014,
+    "mean_p_human_when_not_firing": 0.4629,
+    "firing_minus_not_firing": -0.0616,
+    "firing_minus_not_firing_ci95": [
+     -0.0922,
+     -0.0286
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0433,
+     0.0397,
+     0.0224,
+     0.0246,
+     0.0232
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0279,
+    "Creative Writing": 0.019,
+    "Knowledge Article": 0.0106,
+    "News Article": 0.0579,
+    "Nonfiction Writing": 0.0296,
+    "Personal About Page": 0.0287,
+    "Personal Blog": 0.0267,
+    "User Reviews": 0.044
+   }
+  },
+  {
+   "rank": 30,
+   "feature": "quantitative_inference_load",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 412,
+   "firing_item_rate": 0.0303,
+   "firing_item_rate_ci95": [
+    0.0252,
+    0.0356
+   ],
+   "value_counts": {
+    "0": 12348,
+    "1": 856,
+    "2": 393,
+    "3": 19
+   },
+   "mean_value": 0.1248,
+   "share_of_docs_with_any_firing_item": 0.2437,
+   "mean_of_per_doc_firing_item_rates": 0.0292,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6239,
+    "chance_firing_more_human_within_format_ci95": [
+     0.585,
+     0.6625
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6351,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6374,
+     "Creative Writing": 0.7384,
+     "Knowledge Article": 0.6606,
+     "News Article": 0.5416,
+     "Nonfiction Writing": 0.7123,
+     "Personal About Page": 0.6626,
+     "Personal Blog": 0.7083,
+     "User Reviews": 0.5643
+    },
+    "mean_p_human_when_firing": 0.5721,
+    "mean_p_human_when_not_firing": 0.4576,
+    "firing_minus_not_firing": 0.1146,
+    "firing_minus_not_firing_ci95": [
+     0.0808,
+     0.1482
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0103,
+     0.0253,
+     0.0305,
+     0.0382,
+     0.0471
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0244,
+    "Creative Writing": 0.0051,
+    "Knowledge Article": 0.0229,
+    "News Article": 0.0854,
+    "Nonfiction Writing": 0.0401,
+    "Personal About Page": 0.0073,
+    "Personal Blog": 0.03,
+    "User Reviews": 0.0324
+   }
+  },
+  {
+   "rank": 31,
+   "feature": "represented_knowledge_asymmetry",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 347,
+   "firing_item_rate": 0.0255,
+   "firing_item_rate_ci95": [
+    0.0212,
+    0.0299
+   ],
+   "value_counts": {
+    "0": 13015,
+    "1": 254,
+    "2": 288,
+    "3": 59
+   },
+   "mean_value": 0.074,
+   "share_of_docs_with_any_firing_item": 0.1925,
+   "mean_of_per_doc_firing_item_rates": 0.0245,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5899,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5465,
+     0.6305
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.565,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6237,
+     "Creative Writing": 0.586,
+     "Knowledge Article": 0.597,
+     "News Article": 0.5903,
+     "Nonfiction Writing": 0.5608,
+     "Personal About Page": 0.4671,
+     "Personal Blog": 0.6003,
+     "User Reviews": 0.5934
+    },
+    "mean_p_human_when_firing": 0.5135,
+    "mean_p_human_when_not_firing": 0.4597,
+    "firing_minus_not_firing": 0.0539,
+    "firing_minus_not_firing_ci95": [
+     0.0166,
+     0.0892
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0154,
+     0.0213,
+     0.025,
+     0.0301,
+     0.0357
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0145,
+    "Creative Writing": 0.1339,
+    "Knowledge Article": 0.0106,
+    "News Article": 0.0203,
+    "Nonfiction Writing": 0.0068,
+    "Personal About Page": 0.0027,
+    "Personal Blog": 0.0172,
+    "User Reviews": 0.0082
+   }
+  },
+  {
+   "rank": 32,
+   "feature": "guaranteed_independent_cobenefits",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 332,
+   "firing_item_rate": 0.0244,
+   "firing_item_rate_ci95": [
+    0.0209,
+    0.0282
+   ],
+   "value_counts": {
+    "0": 13131,
+    "1": 153,
+    "2": 325,
+    "3": 7
+   },
+   "mean_value": 0.0605,
+   "share_of_docs_with_any_firing_item": 0.2412,
+   "mean_of_per_doc_firing_item_rates": 0.0249,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.2735,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2449,
+     0.3041
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.2802,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.2571,
+     "Creative Writing": 0.2543,
+     "Knowledge Article": 0.2537,
+     "News Article": 0.3253,
+     "Nonfiction Writing": 0.2336,
+     "Personal About Page": 0.3215,
+     "Personal Blog": 0.276,
+     "User Reviews": 0.3074
+    },
+    "mean_p_human_when_firing": 0.2797,
+    "mean_p_human_when_not_firing": 0.4656,
+    "firing_minus_not_firing": -0.1858,
+    "firing_minus_not_firing_ci95": [
+     -0.2101,
+     -0.1613
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0576,
+     0.0331,
+     0.0162,
+     0.0107,
+     0.0044
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.032,
+    "Creative Writing": 0.0025,
+    "Knowledge Article": 0.0335,
+    "News Article": 0.0094,
+    "Nonfiction Writing": 0.0371,
+    "Personal About Page": 0.0227,
+    "Personal Blog": 0.0344,
+    "User Reviews": 0.0203
+   }
+  },
+  {
+   "rank": 33,
+   "feature": "interchangeable_remedy_bundle",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 331,
+   "firing_item_rate": 0.0243,
+   "firing_item_rate_ci95": [
+    0.0201,
+    0.0285
+   ],
+   "value_counts": {
+    "0": 12652,
+    "1": 633,
+    "2": 259,
+    "3": 72
+   },
+   "mean_value": 0.1004,
+   "share_of_docs_with_any_firing_item": 0.2087,
+   "mean_of_per_doc_firing_item_rates": 0.0239,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3349,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3022,
+     0.367
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3438,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.3341,
+     "Creative Writing": 0.3151,
+     "Knowledge Article": 0.3021,
+     "News Article": 0.3264,
+     "Nonfiction Writing": 0.3348,
+     "Personal About Page": 0.3412,
+     "Personal Blog": 0.3786,
+     "User Reviews": 0.2695
+    },
+    "mean_p_human_when_firing": 0.3313,
+    "mean_p_human_when_not_firing": 0.4643,
+    "firing_minus_not_firing": -0.1329,
+    "firing_minus_not_firing_ci95": [
+     -0.1587,
+     -0.1079
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0429,
+     0.0334,
+     0.0246,
+     0.0143,
+     0.0063
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0326,
+    "Creative Writing": 0.007,
+    "Knowledge Article": 0.0393,
+    "News Article": 0.0051,
+    "Nonfiction Writing": 0.0401,
+    "Personal About Page": 0.024,
+    "Personal Blog": 0.0422,
+    "User Reviews": 0.0056
+   }
+  },
+  {
+   "rank": 34,
+   "feature": "contingent_outcome_assurance",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 320,
+   "firing_item_rate": 0.0235,
+   "firing_item_rate_ci95": [
+    0.0202,
+    0.0269
+   ],
+   "value_counts": {
+    "0": 12989,
+    "1": 307,
+    "2": 285,
+    "3": 35
+   },
+   "mean_value": 0.0721,
+   "share_of_docs_with_any_firing_item": 0.265,
+   "mean_of_per_doc_firing_item_rates": 0.0236,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3808,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3464,
+     0.4179
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3798,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.3706,
+     "Creative Writing": 0.4137,
+     "Knowledge Article": 0.3158,
+     "News Article": 0.5178,
+     "Nonfiction Writing": 0.374,
+     "Personal About Page": 0.3349,
+     "Personal Blog": 0.4255,
+     "User Reviews": 0.3662
+    },
+    "mean_p_human_when_firing": 0.3612,
+    "mean_p_human_when_not_firing": 0.4634,
+    "firing_minus_not_firing": -0.1023,
+    "firing_minus_not_firing_ci95": [
+     -0.132,
+     -0.0709
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.037,
+     0.0297,
+     0.0209,
+     0.018,
+     0.0118
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0169,
+    "Creative Writing": 0.0273,
+    "Knowledge Article": 0.0252,
+    "News Article": 0.0116,
+    "Nonfiction Writing": 0.0247,
+    "Personal About Page": 0.028,
+    "Personal Blog": 0.0339,
+    "User Reviews": 0.0199
+   }
+  },
+  {
+   "rank": 35,
+   "feature": "unresolved_inquiry_residue",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 281,
+   "firing_item_rate": 0.0206,
+   "firing_item_rate_ci95": [
+    0.0157,
+    0.027
+   ],
+   "value_counts": {
+    "0": 13215,
+    "1": 120,
+    "2": 271,
+    "3": 10
+   },
+   "mean_value": 0.0508,
+   "share_of_docs_with_any_firing_item": 0.1737,
+   "mean_of_per_doc_firing_item_rates": 0.0184,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5935,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5553,
+     0.632
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6013,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7241,
+     "Creative Writing": 0.6361,
+     "Knowledge Article": 0.6929,
+     "News Article": 0.5032,
+     "Nonfiction Writing": 0.6192,
+     "Personal About Page": 0.7059,
+     "Personal Blog": 0.5574,
+     "User Reviews": 0.5609
+    },
+    "mean_p_human_when_firing": 0.5434,
+    "mean_p_human_when_not_firing": 0.4593,
+    "firing_minus_not_firing": 0.0841,
+    "firing_minus_not_firing_ci95": [
+     0.0533,
+     0.1153
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.011,
+     0.0125,
+     0.025,
+     0.0301,
+     0.0246
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0175,
+    "Creative Writing": 0.0311,
+    "Knowledge Article": 0.0094,
+    "News Article": 0.0434,
+    "Nonfiction Writing": 0.0142,
+    "Personal About Page": 0.0027,
+    "Personal Blog": 0.0172,
+    "User Reviews": 0.0293
+   }
+  },
+  {
+   "rank": 36,
+   "feature": "warrant_strength_upgrade",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 280,
+   "firing_item_rate": 0.0206,
+   "firing_item_rate_ci95": [
+    0.0178,
+    0.0233
+   ],
+   "value_counts": {
+    "0": 12920,
+    "1": 416,
+    "2": 274,
+    "3": 6
+   },
+   "mean_value": 0.0721,
+   "share_of_docs_with_any_firing_item": 0.2412,
+   "mean_of_per_doc_firing_item_rates": 0.0205,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.4152,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3793,
+     0.4513
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.4195,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5316,
+     "Creative Writing": 0.4493,
+     "Knowledge Article": 0.3329,
+     "News Article": 0.4213,
+     "Nonfiction Writing": 0.4432,
+     "Personal About Page": 0.3222,
+     "Personal Blog": 0.4334,
+     "User Reviews": 0.3781
+    },
+    "mean_p_human_when_firing": 0.3935,
+    "mean_p_human_when_not_firing": 0.4625,
+    "firing_minus_not_firing": -0.069,
+    "firing_minus_not_firing_ci95": [
+     -0.0994,
+     -0.0392
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0268,
+     0.0275,
+     0.0195,
+     0.0147,
+     0.0143
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0221,
+    "Creative Writing": 0.0108,
+    "Knowledge Article": 0.0147,
+    "News Article": 0.0145,
+    "Nonfiction Writing": 0.0253,
+    "Personal About Page": 0.024,
+    "Personal Blog": 0.0322,
+    "User Reviews": 0.0194
+   }
+  },
+  {
+   "rank": 37,
+   "feature": "moralized_causal_shortcut",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 281,
+   "firing_item_rate": 0.0206,
+   "firing_item_rate_ci95": [
+    0.0166,
+    0.0248
+   ],
+   "value_counts": {
+    "0": 13063,
+    "1": 272,
+    "2": 265,
+    "3": 16
+   },
+   "mean_value": 0.0624,
+   "share_of_docs_with_any_firing_item": 0.1825,
+   "mean_of_per_doc_firing_item_rates": 0.0211,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3866,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3484,
+     0.4265
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.374,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.3655,
+     "Creative Writing": 0.3556,
+     "Knowledge Article": 0.3608,
+     "News Article": 0.353,
+     "Nonfiction Writing": 0.4437,
+     "Personal About Page": 0.3529,
+     "Personal Blog": 0.3952,
+     "User Reviews": 0.5822
+    },
+    "mean_p_human_when_firing": 0.3555,
+    "mean_p_human_when_not_firing": 0.4633,
+    "firing_minus_not_firing": -0.1078,
+    "firing_minus_not_firing_ci95": [
+     -0.1392,
+     -0.0739
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0319,
+     0.0257,
+     0.0206,
+     0.0151,
+     0.0099
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0151,
+    "Creative Writing": 0.0324,
+    "Knowledge Article": 0.0123,
+    "News Article": 0.0087,
+    "Nonfiction Writing": 0.0229,
+    "Personal About Page": 0.0427,
+    "Personal Blog": 0.0344,
+    "User Reviews": 0.0035
+   }
+  },
+  {
+   "rank": 38,
+   "feature": "inferential_non_equivalence",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 276,
+   "firing_item_rate": 0.0203,
+   "firing_item_rate_ci95": [
+    0.0171,
+    0.0238
+   ],
+   "value_counts": {
+    "0": 13270,
+    "1": 70,
+    "2": 274,
+    "3": 2
+   },
+   "mean_value": 0.0458,
+   "share_of_docs_with_any_firing_item": 0.2037,
+   "mean_of_per_doc_firing_item_rates": 0.0212,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6074,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5715,
+     0.6432
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6187,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6957,
+     "Creative Writing": 0.6156,
+     "Knowledge Article": 0.6594,
+     "News Article": 0.4997,
+     "Nonfiction Writing": 0.5576,
+     "Personal About Page": 0.8466,
+     "Personal Blog": 0.5236,
+     "User Reviews": 0.5779
+    },
+    "mean_p_human_when_firing": 0.5588,
+    "mean_p_human_when_not_firing": 0.459,
+    "firing_minus_not_firing": 0.0997,
+    "firing_minus_not_firing_ci95": [
+     0.0702,
+     0.1293
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0088,
+     0.0154,
+     0.0213,
+     0.0261,
+     0.0298
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0448,
+    "Creative Writing": 0.0121,
+    "Knowledge Article": 0.0211,
+    "News Article": 0.0203,
+    "Nonfiction Writing": 0.0352,
+    "Personal About Page": 0.002,
+    "Personal Blog": 0.0228,
+    "User Reviews": 0.0065
+   }
+  },
+  {
+   "rank": 39,
+   "feature": "generic_redemptive_reframing",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 229,
+   "firing_item_rate": 0.0168,
+   "firing_item_rate_ci95": [
+    0.0132,
+    0.0205
+   ],
+   "value_counts": {
+    "0": 13302,
+    "1": 85,
+    "2": 213,
+    "3": 16
+   },
+   "mean_value": 0.0411,
+   "share_of_docs_with_any_firing_item": 0.1425,
+   "mean_of_per_doc_firing_item_rates": 0.0173,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3907,
+    "chance_firing_more_human_within_format_ci95": [
+     0.345,
+     0.4416
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3755,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.2862,
+     "Creative Writing": 0.2997,
+     "Knowledge Article": 0.2526,
+     "News Article": 0.718,
+     "Nonfiction Writing": 0.4874,
+     "Personal About Page": 0.4536,
+     "Personal Blog": 0.355,
+     "User Reviews": 0.5515
+    },
+    "mean_p_human_when_firing": 0.3562,
+    "mean_p_human_when_not_firing": 0.4628,
+    "firing_minus_not_firing": -0.1067,
+    "firing_minus_not_firing_ci95": [
+     -0.1443,
+     -0.0667
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0253,
+     0.0206,
+     0.0173,
+     0.0132,
+     0.0077
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0029,
+    "Creative Writing": 0.0438,
+    "Knowledge Article": 0.0035,
+    "News Article": 0.0029,
+    "Nonfiction Writing": 0.013,
+    "Personal About Page": 0.0307,
+    "Personal Blog": 0.0339,
+    "User Reviews": 0.0073
+   }
+  },
+  {
+   "rank": 40,
+   "feature": "uninstantiated_change_account",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 219,
+   "firing_item_rate": 0.0161,
+   "firing_item_rate_ci95": [
+    0.0135,
+    0.0189
+   ],
+   "value_counts": {
+    "0": 12735,
+    "1": 662,
+    "2": 219
+   },
+   "mean_value": 0.0808,
+   "share_of_docs_with_any_firing_item": 0.1837,
+   "mean_of_per_doc_firing_item_rates": 0.0168,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3108,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2728,
+     0.3528
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.2938,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.3285,
+     "Creative Writing": 0.2486,
+     "Knowledge Article": 0.3199,
+     "News Article": 0.4045,
+     "Nonfiction Writing": 0.3914,
+     "Personal About Page": 0.276,
+     "Personal Blog": 0.2768,
+     "User Reviews": 0.3907
+    },
+    "mean_p_human_when_firing": 0.2891,
+    "mean_p_human_when_not_firing": 0.4639,
+    "firing_minus_not_firing": -0.1748,
+    "firing_minus_not_firing_ci95": [
+     -0.208,
+     -0.1377
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0345,
+     0.0209,
+     0.0099,
+     0.0103,
+     0.0048
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0169,
+    "Creative Writing": 0.0203,
+    "Knowledge Article": 0.0106,
+    "News Article": 0.0058,
+    "Nonfiction Writing": 0.0154,
+    "Personal About Page": 0.0467,
+    "Personal Blog": 0.0128,
+    "User Reviews": 0.006
+   }
+  },
+  {
+   "rank": 41,
+   "feature": "boundary_free_construct",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 212,
+   "firing_item_rate": 0.0156,
+   "firing_item_rate_ci95": [
+    0.0118,
+    0.0197
+   ],
+   "value_counts": {
+    "0": 12664,
+    "1": 740,
+    "2": 210,
+    "3": 2
+   },
+   "mean_value": 0.0856,
+   "share_of_docs_with_any_firing_item": 0.13,
+   "mean_of_per_doc_firing_item_rates": 0.0158,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3549,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3012,
+     0.4103
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3506,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.3039,
+     "Creative Writing": 0.4502,
+     "Knowledge Article": 0.3986,
+     "News Article": 0.1508,
+     "Nonfiction Writing": 0.4281,
+     "Personal About Page": 0.3459,
+     "Personal Blog": 0.3007,
+     "User Reviews": 0.2229
+    },
+    "mean_p_human_when_firing": 0.3357,
+    "mean_p_human_when_not_firing": 0.463,
+    "firing_minus_not_firing": -0.1273,
+    "firing_minus_not_firing_ci95": [
+     -0.172,
+     -0.0817
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0253,
+     0.0231,
+     0.0114,
+     0.0121,
+     0.0059
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0204,
+    "Creative Writing": 0.0102,
+    "Knowledge Article": 0.0182,
+    "News Article": 0.0014,
+    "Nonfiction Writing": 0.0235,
+    "Personal About Page": 0.032,
+    "Personal Blog": 0.0211,
+    "User Reviews": 0.0017
+   }
+  },
+  {
+   "rank": 42,
+   "feature": "public_private_motive_divergence",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 205,
+   "firing_item_rate": 0.0151,
+   "firing_item_rate_ci95": [
+    0.0121,
+    0.018
+   ],
+   "value_counts": {
+    "0": 13374,
+    "1": 37,
+    "2": 200,
+    "3": 5
+   },
+   "mean_value": 0.0332,
+   "share_of_docs_with_any_firing_item": 0.1537,
+   "mean_of_per_doc_firing_item_rates": 0.0157,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6362,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5979,
+     0.6738
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6327,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6655,
+     "Creative Writing": 0.6344,
+     "Knowledge Article": 0.6337,
+     "News Article": 0.5947,
+     "Nonfiction Writing": 0.6325,
+     "Personal About Page": 0.7371,
+     "Personal Blog": 0.6388,
+     "User Reviews": 0.6362
+    },
+    "mean_p_human_when_firing": 0.5703,
+    "mean_p_human_when_not_firing": 0.4594,
+    "firing_minus_not_firing": 0.1109,
+    "firing_minus_not_firing_ci95": [
+     0.0763,
+     0.1462
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0048,
+     0.0092,
+     0.0151,
+     0.0231,
+     0.0232
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0151,
+    "Creative Writing": 0.0431,
+    "Knowledge Article": 0.0088,
+    "News Article": 0.0196,
+    "Nonfiction Writing": 0.0086,
+    "Personal About Page": 0.002,
+    "Personal Blog": 0.0139,
+    "User Reviews": 0.0117
+   }
+  },
+  {
+   "rank": 43,
+   "feature": "projection_without_dependency",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 186,
+   "firing_item_rate": 0.0137,
+   "firing_item_rate_ci95": [
+    0.0112,
+    0.0164
+   ],
+   "value_counts": {
+    "0": 13283,
+    "1": 147,
+    "2": 182,
+    "3": 4
+   },
+   "mean_value": 0.0384,
+   "share_of_docs_with_any_firing_item": 0.1575,
+   "mean_of_per_doc_firing_item_rates": 0.0155,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3359,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2885,
+     0.3856
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3447,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.3213,
+     "Creative Writing": 0.4222,
+     "Knowledge Article": 0.3531,
+     "News Article": 0.3998,
+     "Nonfiction Writing": 0.3134,
+     "Personal About Page": 0.226,
+     "Personal Blog": 0.3981,
+     "User Reviews": 0.3009
+    },
+    "mean_p_human_when_firing": 0.3313,
+    "mean_p_human_when_not_firing": 0.4628,
+    "firing_minus_not_firing": -0.1315,
+    "firing_minus_not_firing_ci95": [
+     -0.1727,
+     -0.0897
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.029,
+     0.0158,
+     0.0081,
+     0.0084,
+     0.007
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0134,
+    "Creative Writing": 0.0051,
+    "Knowledge Article": 0.0158,
+    "News Article": 0.0232,
+    "Nonfiction Writing": 0.0266,
+    "Personal About Page": 0.0153,
+    "Personal Blog": 0.0105,
+    "User Reviews": 0.0047
+   }
+  },
+  {
+   "rank": 44,
+   "feature": "reconstructible_evidence_procedure",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 173,
+   "firing_item_rate": 0.0127,
+   "firing_item_rate_ci95": [
+    0.0098,
+    0.0158
+   ],
+   "value_counts": {
+    "0": 12944,
+    "1": 499,
+    "2": 167,
+    "3": 6
+   },
+   "mean_value": 0.0625,
+   "share_of_docs_with_any_firing_item": 0.1212,
+   "mean_of_per_doc_firing_item_rates": 0.0131,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6631,
+    "chance_firing_more_human_within_format_ci95": [
+     0.6075,
+     0.7162
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6814,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7372,
+     "Creative Writing": 0.6034,
+     "Knowledge Article": 0.6819,
+     "News Article": 0.6325,
+     "Nonfiction Writing": 0.5771,
+     "Personal About Page": 0.9246,
+     "Personal Blog": 0.644,
+     "User Reviews": 0.5946
+    },
+    "mean_p_human_when_firing": 0.6158,
+    "mean_p_human_when_not_firing": 0.459,
+    "firing_minus_not_firing": 0.1567,
+    "firing_minus_not_firing_ci95": [
+     0.1091,
+     0.2036
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0037,
+     0.0084,
+     0.0099,
+     0.0195,
+     0.0221
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0396,
+    "Creative Writing": 0.0051,
+    "Knowledge Article": 0.007,
+    "News Article": 0.0123,
+    "Nonfiction Writing": 0.0093,
+    "Personal About Page": 0.0007,
+    "Personal Blog": 0.0117,
+    "User Reviews": 0.0134
+   }
+  },
+  {
+   "rank": 45,
+   "feature": "discriminating_counterevidence",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 165,
+   "firing_item_rate": 0.0121,
+   "firing_item_rate_ci95": [
+    0.0098,
+    0.0147
+   ],
+   "value_counts": {
+    "0": 13294,
+    "1": 157,
+    "2": 157,
+    "3": 8
+   },
+   "mean_value": 0.0364,
+   "share_of_docs_with_any_firing_item": 0.1388,
+   "mean_of_per_doc_firing_item_rates": 0.0129,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6479,
+    "chance_firing_more_human_within_format_ci95": [
+     0.6065,
+     0.6897
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.655,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6425,
+     "Creative Writing": 0.7281,
+     "Knowledge Article": 0.7668,
+     "News Article": 0.5889,
+     "Nonfiction Writing": 0.6576,
+     "Personal About Page": 0.413,
+     "Personal Blog": 0.6912,
+     "User Reviews": 0.5971
+    },
+    "mean_p_human_when_firing": 0.5913,
+    "mean_p_human_when_not_firing": 0.4594,
+    "firing_minus_not_firing": 0.1319,
+    "firing_minus_not_firing_ci95": [
+     0.0946,
+     0.1693
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0022,
+     0.0081,
+     0.0154,
+     0.0147,
+     0.0202
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0215,
+    "Creative Writing": 0.0133,
+    "Knowledge Article": 0.0047,
+    "News Article": 0.0232,
+    "Nonfiction Writing": 0.013,
+    "Personal About Page": 0.0027,
+    "Personal Blog": 0.0133,
+    "User Reviews": 0.0078
+   }
+  },
+  {
+   "rank": 46,
+   "feature": "authority_as_substitute",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 154,
+   "firing_item_rate": 0.0113,
+   "firing_item_rate_ci95": [
+    0.009,
+    0.0138
+   ],
+   "value_counts": {
+    "0": 13262,
+    "1": 200,
+    "2": 151,
+    "3": 3
+   },
+   "mean_value": 0.0375,
+   "share_of_docs_with_any_firing_item": 0.1263,
+   "mean_of_per_doc_firing_item_rates": 0.0124,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5332,
+    "chance_firing_more_human_within_format_ci95": [
+     0.476,
+     0.589
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.5064,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7301,
+     "Creative Writing": 0.8406,
+     "Knowledge Article": 0.4567,
+     "News Article": 0.5919,
+     "Nonfiction Writing": 0.5279,
+     "Personal About Page": 0.5644,
+     "Personal Blog": 0.5149,
+     "User Reviews": 0.4707
+    },
+    "mean_p_human_when_firing": 0.4695,
+    "mean_p_human_when_not_firing": 0.4609,
+    "firing_minus_not_firing": 0.0086,
+    "firing_minus_not_firing_ci95": [
+     -0.0355,
+     0.0521
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0106,
+     0.011,
+     0.0099,
+     0.0095,
+     0.0154
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0017,
+    "Creative Writing": 0.0006,
+    "Knowledge Article": 0.0023,
+    "News Article": 0.0043,
+    "Nonfiction Writing": 0.0056,
+    "Personal About Page": 0.0567,
+    "Personal Blog": 0.0072,
+    "User Reviews": 0.0142
+   }
+  },
+  {
+   "rank": 47,
+   "feature": "warranted_belief_revision",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 153,
+   "firing_item_rate": 0.0112,
+   "firing_item_rate_ci95": [
+    0.009,
+    0.0136
+   ],
+   "value_counts": {
+    "0": 13390,
+    "1": 73,
+    "2": 143,
+    "3": 10
+   },
+   "mean_value": 0.0286,
+   "share_of_docs_with_any_firing_item": 0.1263,
+   "mean_of_per_doc_firing_item_rates": 0.0115,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5705,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5257,
+     0.6135
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.5593,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6587,
+     "Creative Writing": 0.519,
+     "Knowledge Article": 0.7975,
+     "News Article": 0.5514,
+     "Nonfiction Writing": 0.5978,
+     "Personal About Page": 0.5374,
+     "Personal Blog": 0.5962,
+     "User Reviews": 0.5615
+    },
+    "mean_p_human_when_firing": 0.5097,
+    "mean_p_human_when_not_firing": 0.4605,
+    "firing_minus_not_firing": 0.0492,
+    "firing_minus_not_firing_ci95": [
+     0.0105,
+     0.0866
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0066,
+     0.0092,
+     0.0121,
+     0.0158,
+     0.0125
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0076,
+    "Creative Writing": 0.0273,
+    "Knowledge Article": 0.0018,
+    "News Article": 0.0065,
+    "Nonfiction Writing": 0.0062,
+    "Personal About Page": 0.0113,
+    "Personal Blog": 0.0178,
+    "User Reviews": 0.0112
+   }
+  },
+  {
+   "rank": 48,
+   "feature": "information_lineage_detail",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 145,
+   "firing_item_rate": 0.0106,
+   "firing_item_rate_ci95": [
+    0.0076,
+    0.014
+   ],
+   "value_counts": {
+    "0": 13078,
+    "1": 393,
+    "2": 145
+   },
+   "mean_value": 0.0502,
+   "share_of_docs_with_any_firing_item": 0.0975,
+   "mean_of_per_doc_firing_item_rates": 0.0111,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.7007,
+    "chance_firing_more_human_within_format_ci95": [
+     0.6535,
+     0.739
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.705,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7364,
+     "Creative Writing": 0.7187,
+     "Knowledge Article": 0.7337,
+     "News Article": 0.5169,
+     "Nonfiction Writing": 0.6881,
+     "Personal About Page": 0.5753,
+     "Personal Blog": 0.6919,
+     "User Reviews": 0.7132
+    },
+    "mean_p_human_when_firing": 0.6355,
+    "mean_p_human_when_not_firing": 0.4592,
+    "firing_minus_not_firing": 0.1764,
+    "firing_minus_not_firing_ci95": [
+     0.136,
+     0.2104
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0026,
+     0.0037,
+     0.0117,
+     0.014,
+     0.0213
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0209,
+    "Creative Writing": 0.0063,
+    "Knowledge Article": 0.0188,
+    "News Article": 0.0087,
+    "Nonfiction Writing": 0.008,
+    "Personal About Page": 0.0027,
+    "Personal Blog": 0.0161,
+    "User Reviews": 0.0039
+   }
+  },
+  {
+   "rank": 49,
+   "feature": "intrinsic_value_supersession",
+   "output_type": "binary_0_1",
+   "direction": "ai",
+   "items_firing": 137,
+   "firing_item_rate": 0.0101,
+   "firing_item_rate_ci95": [
+    0.0075,
+    0.0128
+   ],
+   "value_counts": {
+    "0": 13479,
+    "1": 137
+   },
+   "mean_value": 0.0101,
+   "share_of_docs_with_any_firing_item": 0.0963,
+   "mean_of_per_doc_firing_item_rates": 0.0103,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.4058,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3541,
+     0.4541
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3999,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.4187,
+     "Creative Writing": 0.4151,
+     "Knowledge Article": 0.4727,
+     "News Article": 0.478,
+     "Nonfiction Writing": 0.3635,
+     "Personal About Page": 0.5047,
+     "Personal Blog": 0.3671,
+     "User Reviews": 0.4784
+    },
+    "mean_p_human_when_firing": 0.375,
+    "mean_p_human_when_not_firing": 0.4619,
+    "firing_minus_not_firing": -0.0869,
+    "firing_minus_not_firing_ci95": [
+     -0.1287,
+     -0.0493
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0136,
+     0.011,
+     0.0132,
+     0.0092,
+     0.0033
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0052,
+    "Creative Writing": 0.0317,
+    "Knowledge Article": 0.0006,
+    "News Article": 0.0022,
+    "Nonfiction Writing": 0.0068,
+    "Personal About Page": 0.0093,
+    "Personal Blog": 0.0255,
+    "User Reviews": 0.0013
+   }
+  },
+  {
+   "rank": 50,
+   "feature": "abstract_complementarity_as_mechanism",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 136,
+   "firing_item_rate": 0.01,
+   "firing_item_rate_ci95": [
+    0.0083,
+    0.0118
+   ],
+   "value_counts": {
+    "0": 13025,
+    "1": 455,
+    "2": 132,
+    "3": 4
+   },
+   "mean_value": 0.0537,
+   "share_of_docs_with_any_firing_item": 0.1388,
+   "mean_of_per_doc_firing_item_rates": 0.0105,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.2157,
+    "chance_firing_more_human_within_format_ci95": [
+     0.1757,
+     0.2593
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.2162,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.201,
+     "Creative Writing": 0.1693,
+     "Knowledge Article": 0.1202,
+     "News Article": 0.4842,
+     "Nonfiction Writing": 0.2162,
+     "Personal About Page": 0.214,
+     "Personal Blog": 0.2176,
+     "User Reviews": 0.2462
+    },
+    "mean_p_human_when_firing": 0.2245,
+    "mean_p_human_when_not_firing": 0.4634,
+    "firing_minus_not_firing": -0.239,
+    "firing_minus_not_firing_ci95": [
+     -0.2734,
+     -0.2008
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0304,
+     0.0107,
+     0.0022,
+     0.004,
+     0.0026
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.014,
+    "Creative Writing": 0.0019,
+    "Knowledge Article": 0.01,
+    "News Article": 0.0058,
+    "Nonfiction Writing": 0.0161,
+    "Personal About Page": 0.0247,
+    "Personal Blog": 0.0067,
+    "User Reviews": 0.0039
+   }
+  },
+  {
+   "rank": 51,
+   "feature": "categorical_homogenization",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 134,
+   "firing_item_rate": 0.0098,
+   "firing_item_rate_ci95": [
+    0.0074,
+    0.0125
+   ],
+   "value_counts": {
+    "0": 12942,
+    "1": 540,
+    "2": 130,
+    "3": 4
+   },
+   "mean_value": 0.0596,
+   "share_of_docs_with_any_firing_item": 0.0975,
+   "mean_of_per_doc_firing_item_rates": 0.0095,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5553,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5001,
+     0.6213
+    ],
+    "leans": "human",
+    "matches_direction": false,
+    "chance_firing_more_human_pooled": 0.5505,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.4421,
+     "Creative Writing": 0.7179,
+     "Knowledge Article": 0.4411,
+     "News Article": 0.3413,
+     "Nonfiction Writing": 0.5874,
+     "Personal About Page": 0.5114,
+     "Personal Blog": 0.6663,
+     "User Reviews": 0.7346
+    },
+    "mean_p_human_when_firing": 0.5017,
+    "mean_p_human_when_not_firing": 0.4606,
+    "firing_minus_not_firing": 0.0411,
+    "firing_minus_not_firing_ci95": [
+     -0.0043,
+     0.0918
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0062,
+     0.0084,
+     0.0121,
+     0.0107,
+     0.0118
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0221,
+    "Creative Writing": 0.0146,
+    "Knowledge Article": 0.0117,
+    "News Article": 0.0007,
+    "Nonfiction Writing": 0.0117,
+    "Personal About Page": 0.006,
+    "Personal Blog": 0.0122,
+    "User Reviews": 0.0009
+   }
+  },
+  {
+   "rank": 52,
+   "feature": "contingent_exception",
+   "output_type": "binary_0_1",
+   "direction": "human",
+   "items_firing": 125,
+   "firing_item_rate": 0.0092,
+   "firing_item_rate_ci95": [
+    0.0071,
+    0.0115
+   ],
+   "value_counts": {
+    "0": 13491,
+    "1": 125
+   },
+   "mean_value": 0.0092,
+   "share_of_docs_with_any_firing_item": 0.1062,
+   "mean_of_per_doc_firing_item_rates": 0.0084,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.688,
+    "chance_firing_more_human_within_format_ci95": [
+     0.6406,
+     0.7341
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6981,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7455,
+     "Creative Writing": 0.6358,
+     "Knowledge Article": 0.7119,
+     "News Article": 0.7166,
+     "Nonfiction Writing": 0.5446,
+     "Personal About Page": 0.804,
+     "Personal Blog": 0.7441,
+     "User Reviews": 0.6553
+    },
+    "mean_p_human_when_firing": 0.6306,
+    "mean_p_human_when_not_firing": 0.4595,
+    "firing_minus_not_firing": 0.1712,
+    "firing_minus_not_firing_ci95": [
+     0.1297,
+     0.2116
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0022,
+     0.0044,
+     0.0084,
+     0.0125,
+     0.0184
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0023,
+    "Creative Writing": 0.0089,
+    "Knowledge Article": 0.0094,
+    "News Article": 0.0196,
+    "Nonfiction Writing": 0.0049,
+    "Personal About Page": 0.002,
+    "Personal Blog": 0.0139,
+    "User Reviews": 0.0121
+   }
+  },
+  {
+   "rank": 53,
+   "feature": "schematic_case_warrant",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 123,
+   "firing_item_rate": 0.009,
+   "firing_item_rate_ci95": [
+    0.0064,
+    0.0122
+   ],
+   "value_counts": {
+    "0": 13311,
+    "1": 182,
+    "2": 122,
+    "3": 1
+   },
+   "mean_value": 0.0315,
+   "share_of_docs_with_any_firing_item": 0.0938,
+   "mean_of_per_doc_firing_item_rates": 0.0085,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.4224,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3635,
+     0.4765
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.4205,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5178,
+     "Creative Writing": 0.3879,
+     "Knowledge Article": 0.1899,
+     "News Article": 0.1916,
+     "Nonfiction Writing": 0.5008,
+     "Personal About Page": 0.4435,
+     "Personal Blog": 0.3742,
+     "User Reviews": 0.4454
+    },
+    "mean_p_human_when_firing": 0.3933,
+    "mean_p_human_when_not_firing": 0.4617,
+    "firing_minus_not_firing": -0.0683,
+    "firing_minus_not_firing_ci95": [
+     -0.1175,
+     -0.022
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0128,
+     0.0095,
+     0.0095,
+     0.0081,
+     0.0051
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0058,
+    "Creative Writing": 0.0032,
+    "Knowledge Article": 0.0035,
+    "News Article": 0.0036,
+    "Nonfiction Writing": 0.0043,
+    "Personal About Page": 0.0153,
+    "Personal Blog": 0.01,
+    "User Reviews": 0.0211
+   }
+  },
+  {
+   "rank": 54,
+   "feature": "unearned_legacy_magnitude",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 121,
+   "firing_item_rate": 0.0089,
+   "firing_item_rate_ci95": [
+    0.007,
+    0.0109
+   ],
+   "value_counts": {
+    "0": 13200,
+    "1": 295,
+    "2": 115,
+    "3": 6
+   },
+   "mean_value": 0.0399,
+   "share_of_docs_with_any_firing_item": 0.1075,
+   "mean_of_per_doc_firing_item_rates": 0.0095,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.2505,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2062,
+     0.2974
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.237,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.2445,
+     "Creative Writing": 0.2514,
+     "Knowledge Article": 0.1995,
+     "News Article": 0.2745,
+     "Nonfiction Writing": 0.1876,
+     "Personal About Page": 0.2556,
+     "Personal Blog": 0.4279,
+     "User Reviews": 0.3278
+    },
+    "mean_p_human_when_firing": 0.2408,
+    "mean_p_human_when_not_firing": 0.463,
+    "firing_minus_not_firing": -0.2222,
+    "firing_minus_not_firing_ci95": [
+     -0.2574,
+     -0.1837
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0242,
+     0.0084,
+     0.0073,
+     0.0037,
+     0.0007
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.014,
+    "Creative Writing": 0.0057,
+    "Knowledge Article": 0.007,
+    "News Article": 0.0065,
+    "Nonfiction Writing": 0.0111,
+    "Personal About Page": 0.026,
+    "Personal Blog": 0.0028,
+    "User Reviews": 0.0022
+   }
+  },
+  {
+   "rank": 55,
+   "feature": "nonselective_analytic_agenda",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 116,
+   "firing_item_rate": 0.0085,
+   "firing_item_rate_ci95": [
+    0.0067,
+    0.0106
+   ],
+   "value_counts": {
+    "0": 13219,
+    "1": 281,
+    "2": 111,
+    "3": 5
+   },
+   "mean_value": 0.038,
+   "share_of_docs_with_any_firing_item": 0.1225,
+   "mean_of_per_doc_firing_item_rates": 0.0087,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.1828,
+    "chance_firing_more_human_within_format_ci95": [
+     0.14,
+     0.2321
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.1965,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.1965,
+     "Creative Writing": null,
+     "Knowledge Article": 0.2353,
+     "News Article": 0.0601,
+     "Nonfiction Writing": 0.1453,
+     "Personal About Page": 0.4707,
+     "Personal Blog": 0.0485,
+     "User Reviews": 0.1458
+    },
+    "mean_p_human_when_firing": 0.2055,
+    "mean_p_human_when_not_firing": 0.4632,
+    "firing_minus_not_firing": -0.2577,
+    "firing_minus_not_firing_ci95": [
+     -0.2945,
+     -0.2156
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0304,
+     0.0062,
+     0.0026,
+     0.0018,
+     0.0015
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0285,
+    "Creative Writing": 0.0,
+    "Knowledge Article": 0.0123,
+    "News Article": 0.0007,
+    "Nonfiction Writing": 0.013,
+    "Personal About Page": 0.0027,
+    "Personal Blog": 0.0056,
+    "User Reviews": 0.0043
+   }
+  },
+  {
+   "rank": 56,
+   "feature": "localized_uncertainty",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 112,
+   "firing_item_rate": 0.0082,
+   "firing_item_rate_ci95": [
+    0.006,
+    0.0107
+   ],
+   "value_counts": {
+    "0": 13284,
+    "1": 220,
+    "2": 105,
+    "3": 7
+   },
+   "mean_value": 0.0331,
+   "share_of_docs_with_any_firing_item": 0.0813,
+   "mean_of_per_doc_firing_item_rates": 0.0085,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5837,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5094,
+     0.656
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.5907,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7538,
+     "Creative Writing": 0.6642,
+     "Knowledge Article": 0.703,
+     "News Article": 0.4602,
+     "Nonfiction Writing": 0.5183,
+     "Personal About Page": 0.0621,
+     "Personal Blog": 0.5071,
+     "User Reviews": 0.4994
+    },
+    "mean_p_human_when_firing": 0.538,
+    "mean_p_human_when_not_firing": 0.4604,
+    "firing_minus_not_firing": 0.0776,
+    "firing_minus_not_firing_ci95": [
+     0.0158,
+     0.1406
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0055,
+     0.007,
+     0.0084,
+     0.0077,
+     0.0125
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.014,
+    "Creative Writing": 0.0076,
+    "Knowledge Article": 0.0065,
+    "News Article": 0.0282,
+    "Nonfiction Writing": 0.0062,
+    "Personal About Page": 0.0007,
+    "Personal Blog": 0.0056,
+    "User Reviews": 0.0022
+   }
+  },
+  {
+   "rank": 57,
+   "feature": "unbounded_future_extension",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 110,
+   "firing_item_rate": 0.0081,
+   "firing_item_rate_ci95": [
+    0.0064,
+    0.0099
+   ],
+   "value_counts": {
+    "0": 13264,
+    "1": 242,
+    "2": 105,
+    "3": 5
+   },
+   "mean_value": 0.0343,
+   "share_of_docs_with_any_firing_item": 0.115,
+   "mean_of_per_doc_firing_item_rates": 0.0089,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3182,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2628,
+     0.3762
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3219,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.281,
+     "Creative Writing": 0.3617,
+     "Knowledge Article": 0.2753,
+     "News Article": 0.3488,
+     "Nonfiction Writing": 0.3129,
+     "Personal About Page": 0.2443,
+     "Personal Blog": 0.4692,
+     "User Reviews": 0.2626
+    },
+    "mean_p_human_when_firing": 0.3113,
+    "mean_p_human_when_not_firing": 0.4623,
+    "firing_minus_not_firing": -0.151,
+    "firing_minus_not_firing_ci95": [
+     -0.1967,
+     -0.1037
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0191,
+     0.0084,
+     0.0037,
+     0.0059,
+     0.0033
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0064,
+    "Creative Writing": 0.0089,
+    "Knowledge Article": 0.0076,
+    "News Article": 0.0065,
+    "Nonfiction Writing": 0.0173,
+    "Personal About Page": 0.0093,
+    "Personal Blog": 0.0067,
+    "User Reviews": 0.0039
+   }
+  },
+  {
+   "rank": 58,
+   "feature": "lesson_template_anecdote",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 104,
+   "firing_item_rate": 0.0076,
+   "firing_item_rate_ci95": [
+    0.0057,
+    0.0097
+   ],
+   "value_counts": {
+    "0": 13439,
+    "1": 73,
+    "2": 93,
+    "3": 11
+   },
+   "mean_value": 0.0214,
+   "share_of_docs_with_any_firing_item": 0.0862,
+   "mean_of_per_doc_firing_item_rates": 0.0072,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3696,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3115,
+     0.4307
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3593,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5052,
+     "Creative Writing": 0.2433,
+     "Knowledge Article": 0.3296,
+     "News Article": 0.2252,
+     "Nonfiction Writing": 0.3652,
+     "Personal About Page": 0.2685,
+     "Personal Blog": 0.4342,
+     "User Reviews": 0.5048
+    },
+    "mean_p_human_when_firing": 0.3412,
+    "mean_p_human_when_not_firing": 0.462,
+    "firing_minus_not_firing": -0.1208,
+    "firing_minus_not_firing_ci95": [
+     -0.1693,
+     -0.0695
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.015,
+     0.0073,
+     0.0066,
+     0.0051,
+     0.004
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0052,
+    "Creative Writing": 0.0203,
+    "Knowledge Article": 0.0029,
+    "News Article": 0.0014,
+    "Nonfiction Writing": 0.0049,
+    "Personal About Page": 0.0073,
+    "Personal Blog": 0.0139,
+    "User Reviews": 0.0052
+   }
+  },
+  {
+   "rank": 59,
+   "feature": "costly_self_implication",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 84,
+   "firing_item_rate": 0.0062,
+   "firing_item_rate_ci95": [
+    0.0043,
+    0.0084
+   ],
+   "value_counts": {
+    "0": 13425,
+    "1": 107,
+    "2": 75,
+    "3": 9
+   },
+   "mean_value": 0.0209,
+   "share_of_docs_with_any_firing_item": 0.0663,
+   "mean_of_per_doc_firing_item_rates": 0.006,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.596,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5445,
+     0.6502
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.5931,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.728,
+     "Creative Writing": 0.6316,
+     "Knowledge Article": null,
+     "News Article": 0.7691,
+     "Nonfiction Writing": 0.6076,
+     "Personal About Page": 0.5946,
+     "Personal Blog": 0.5759,
+     "User Reviews": 0.3134
+    },
+    "mean_p_human_when_firing": 0.5367,
+    "mean_p_human_when_not_firing": 0.4606,
+    "firing_minus_not_firing": 0.0761,
+    "firing_minus_not_firing_ci95": [
+     0.0339,
+     0.1178
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0022,
+     0.0048,
+     0.007,
+     0.0092,
+     0.0077
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0023,
+    "Creative Writing": 0.0133,
+    "Knowledge Article": 0.0,
+    "News Article": 0.0022,
+    "Nonfiction Writing": 0.0019,
+    "Personal About Page": 0.0053,
+    "Personal Blog": 0.0239,
+    "User Reviews": 0.0009
+   }
+  },
+  {
+   "rank": 60,
+   "feature": "costless_tradeoff_resolution",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 84,
+   "firing_item_rate": 0.0062,
+   "firing_item_rate_ci95": [
+    0.0048,
+    0.0076
+   ],
+   "value_counts": {
+    "0": 13523,
+    "1": 9,
+    "2": 83,
+    "3": 1
+   },
+   "mean_value": 0.0131,
+   "share_of_docs_with_any_firing_item": 0.0875,
+   "mean_of_per_doc_firing_item_rates": 0.0067,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3304,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2724,
+     0.3916
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3355,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.2905,
+     "Creative Writing": 0.471,
+     "Knowledge Article": 0.3755,
+     "News Article": 0.3932,
+     "Nonfiction Writing": 0.3205,
+     "Personal About Page": 0.4294,
+     "Personal Blog": 0.3199,
+     "User Reviews": 0.2269
+    },
+    "mean_p_human_when_firing": 0.3228,
+    "mean_p_human_when_not_firing": 0.4619,
+    "firing_minus_not_firing": -0.1391,
+    "firing_minus_not_firing_ci95": [
+     -0.1871,
+     -0.0878
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0132,
+     0.0073,
+     0.0029,
+     0.0059,
+     0.0015
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0099,
+    "Creative Writing": 0.0019,
+    "Knowledge Article": 0.0059,
+    "News Article": 0.0043,
+    "Nonfiction Writing": 0.0105,
+    "Personal About Page": 0.0073,
+    "Personal Blog": 0.0067,
+    "User Reviews": 0.0035
+   }
+  },
+  {
+   "rank": 61,
+   "feature": "answerable_information_gap",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 79,
+   "firing_item_rate": 0.0058,
+   "firing_item_rate_ci95": [
+    0.0044,
+    0.0073
+   ],
+   "value_counts": {
+    "0": 13499,
+    "1": 38,
+    "2": 75,
+    "3": 4
+   },
+   "mean_value": 0.0147,
+   "share_of_docs_with_any_firing_item": 0.0825,
+   "mean_of_per_doc_firing_item_rates": 0.0054,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5415,
+    "chance_firing_more_human_within_format_ci95": [
+     0.4809,
+     0.6017
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.5466,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5258,
+     "Creative Writing": 0.667,
+     "Knowledge Article": 0.5472,
+     "News Article": 0.4477,
+     "Nonfiction Writing": 0.5591,
+     "Personal About Page": null,
+     "Personal Blog": 0.4419,
+     "User Reviews": 0.5778
+    },
+    "mean_p_human_when_firing": 0.4975,
+    "mean_p_human_when_not_firing": 0.4608,
+    "firing_minus_not_firing": 0.0367,
+    "firing_minus_not_firing_ci95": [
+     -0.0117,
+     0.0857
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0029,
+     0.0059,
+     0.0084,
+     0.0066,
+     0.0051
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0087,
+    "Creative Writing": 0.0095,
+    "Knowledge Article": 0.0035,
+    "News Article": 0.0101,
+    "Nonfiction Writing": 0.0068,
+    "Personal About Page": 0.0,
+    "Personal Blog": 0.0056,
+    "User Reviews": 0.0035
+   }
+  },
+  {
+   "rank": 62,
+   "feature": "circular_evaluative_warrant",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 77,
+   "firing_item_rate": 0.0057,
+   "firing_item_rate_ci95": [
+    0.0044,
+    0.007
+   ],
+   "value_counts": {
+    "0": 13333,
+    "1": 206,
+    "2": 76,
+    "3": 1
+   },
+   "mean_value": 0.0265,
+   "share_of_docs_with_any_firing_item": 0.0813,
+   "mean_of_per_doc_firing_item_rates": 0.0059,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3001,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2397,
+     0.3674
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.2951,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.3557,
+     "Creative Writing": 0.4267,
+     "Knowledge Article": 0.1399,
+     "News Article": null,
+     "Nonfiction Writing": 0.3113,
+     "Personal About Page": 0.2688,
+     "Personal Blog": 0.4102,
+     "User Reviews": 0.3007
+    },
+    "mean_p_human_when_firing": 0.2897,
+    "mean_p_human_when_not_firing": 0.462,
+    "firing_minus_not_firing": -0.1723,
+    "firing_minus_not_firing_ci95": [
+     -0.2231,
+     -0.1145
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0136,
+     0.004,
+     0.007,
+     0.0015,
+     0.0022
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0035,
+    "Creative Writing": 0.0006,
+    "Knowledge Article": 0.0023,
+    "News Article": 0.0,
+    "Nonfiction Writing": 0.008,
+    "Personal About Page": 0.0107,
+    "Personal Blog": 0.0022,
+    "User Reviews": 0.0142
+   }
+  },
+  {
+   "rank": 63,
+   "feature": "structural_analogy_yield",
+   "output_type": "ordinal_0_3",
+   "direction": "human",
+   "items_firing": 67,
+   "firing_item_rate": 0.0049,
+   "firing_item_rate_ci95": [
+    0.0034,
+    0.0069
+   ],
+   "value_counts": {
+    "0": 13380,
+    "1": 169,
+    "2": 67
+   },
+   "mean_value": 0.0223,
+   "share_of_docs_with_any_firing_item": 0.06,
+   "mean_of_per_doc_firing_item_rates": 0.0046,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.6007,
+    "chance_firing_more_human_within_format_ci95": [
+     0.5394,
+     0.6596
+    ],
+    "leans": "human",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.6058,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5807,
+     "Creative Writing": 0.6181,
+     "Knowledge Article": 0.9924,
+     "News Article": 0.6309,
+     "Nonfiction Writing": 0.564,
+     "Personal About Page": 0.6322,
+     "Personal Blog": 0.5895,
+     "User Reviews": 0.7469
+    },
+    "mean_p_human_when_firing": 0.5491,
+    "mean_p_human_when_not_firing": 0.4606,
+    "firing_minus_not_firing": 0.0884,
+    "firing_minus_not_firing_ci95": [
+     0.039,
+     0.136
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0026,
+     0.0033,
+     0.0055,
+     0.0073,
+     0.0059
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0128,
+    "Creative Writing": 0.0051,
+    "Knowledge Article": 0.0006,
+    "News Article": 0.0029,
+    "Nonfiction Writing": 0.0093,
+    "Personal About Page": 0.002,
+    "Personal Blog": 0.0067,
+    "User Reviews": 0.0009
+   }
+  },
+  {
+   "rank": 64,
+   "feature": "outcome_restating_condition",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 53,
+   "firing_item_rate": 0.0039,
+   "firing_item_rate_ci95": [
+    0.0027,
+    0.0052
+   ],
+   "value_counts": {
+    "0": 13384,
+    "1": 179,
+    "2": 51,
+    "3": 2
+   },
+   "mean_value": 0.0211,
+   "share_of_docs_with_any_firing_item": 0.055,
+   "mean_of_per_doc_firing_item_rates": 0.004,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.311,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2434,
+     0.3854
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.3227,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.3697,
+     "Creative Writing": 0.5943,
+     "Knowledge Article": 0.2345,
+     "News Article": null,
+     "Nonfiction Writing": 0.2848,
+     "Personal About Page": 0.2776,
+     "Personal Blog": 0.4054,
+     "User Reviews": 0.212
+    },
+    "mean_p_human_when_firing": 0.3123,
+    "mean_p_human_when_not_firing": 0.4616,
+    "firing_minus_not_firing": -0.1493,
+    "firing_minus_not_firing_ci95": [
+     -0.2035,
+     -0.0894
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0077,
+     0.0059,
+     0.0029,
+     0.0018,
+     0.0011
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0081,
+    "Creative Writing": 0.0006,
+    "Knowledge Article": 0.0076,
+    "News Article": 0.0,
+    "Nonfiction Writing": 0.0068,
+    "Personal About Page": 0.0027,
+    "Personal Blog": 0.0039,
+    "User Reviews": 0.0013
+   }
+  },
+  {
+   "rank": 65,
+   "feature": "framework_as_topic_catalog",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 45,
+   "firing_item_rate": 0.0033,
+   "firing_item_rate_ci95": [
+    0.0022,
+    0.0045
+   ],
+   "value_counts": {
+    "0": 13421,
+    "1": 150,
+    "2": 45
+   },
+   "mean_value": 0.0176,
+   "share_of_docs_with_any_firing_item": 0.04,
+   "mean_of_per_doc_firing_item_rates": 0.0035,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.437,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3304,
+     0.5393
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.4489,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5218,
+     "Creative Writing": null,
+     "Knowledge Article": 0.3794,
+     "News Article": null,
+     "Nonfiction Writing": 0.4219,
+     "Personal About Page": 0.4669,
+     "Personal Blog": 0.2275,
+     "User Reviews": 0.0579
+    },
+    "mean_p_human_when_firing": 0.4187,
+    "mean_p_human_when_not_firing": 0.4612,
+    "firing_minus_not_firing": -0.0425,
+    "firing_minus_not_firing_ci95": [
+     -0.1356,
+     0.0433
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0059,
+     0.0029,
+     0.0015,
+     0.0033,
+     0.0029
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0122,
+    "Creative Writing": 0.0,
+    "Knowledge Article": 0.0065,
+    "News Article": 0.0,
+    "Nonfiction Writing": 0.0031,
+    "Personal About Page": 0.0027,
+    "Personal Blog": 0.0017,
+    "User Reviews": 0.0004
+   }
+  },
+  {
+   "rank": 66,
+   "feature": "non_diagnostic_support",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 43,
+   "firing_item_rate": 0.0032,
+   "firing_item_rate_ci95": [
+    0.0021,
+    0.0043
+   ],
+   "value_counts": {
+    "0": 13443,
+    "1": 130,
+    "2": 43
+   },
+   "mean_value": 0.0159,
+   "share_of_docs_with_any_firing_item": 0.0437,
+   "mean_of_per_doc_firing_item_rates": 0.0034,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.4267,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3398,
+     0.5186
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.4266,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5537,
+     "Creative Writing": 0.4571,
+     "Knowledge Article": 0.4015,
+     "News Article": 0.3813,
+     "Nonfiction Writing": 0.4441,
+     "Personal About Page": 0.4502,
+     "Personal Blog": 0.5003,
+     "User Reviews": 0.3152
+    },
+    "mean_p_human_when_firing": 0.3994,
+    "mean_p_human_when_not_firing": 0.4612,
+    "firing_minus_not_firing": -0.0618,
+    "firing_minus_not_firing_ci95": [
+     -0.1339,
+     0.0117
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0029,
+     0.0055,
+     0.0026,
+     0.0026,
+     0.0022
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0017,
+    "Creative Writing": 0.0025,
+    "Knowledge Article": 0.0018,
+    "News Article": 0.0065,
+    "Nonfiction Writing": 0.0019,
+    "Personal About Page": 0.0047,
+    "Personal Blog": 0.0044,
+    "User Reviews": 0.0026
+   }
+  },
+  {
+   "rank": 67,
+   "feature": "unsupported_benign_rationalization",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 34,
+   "firing_item_rate": 0.0025,
+   "firing_item_rate_ci95": [
+    0.0017,
+    0.0034
+   ],
+   "value_counts": {
+    "0": 13559,
+    "1": 23,
+    "2": 34
+   },
+   "mean_value": 0.0067,
+   "share_of_docs_with_any_firing_item": 0.0387,
+   "mean_of_per_doc_firing_item_rates": 0.0027,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5119,
+    "chance_firing_more_human_within_format_ci95": [
+     0.4144,
+     0.6066
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.5052,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.7038,
+     "Creative Writing": 0.4034,
+     "Knowledge Article": 0.6387,
+     "News Article": 0.4402,
+     "Nonfiction Writing": 0.4474,
+     "Personal About Page": null,
+     "Personal Blog": 0.4289,
+     "User Reviews": 0.7837
+    },
+    "mean_p_human_when_firing": 0.464,
+    "mean_p_human_when_not_firing": 0.461,
+    "firing_minus_not_firing": 0.003,
+    "firing_minus_not_firing_ci95": [
+     -0.0784,
+     0.0813
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0022,
+     0.0029,
+     0.0018,
+     0.0037,
+     0.0018
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0012,
+    "Creative Writing": 0.0051,
+    "Knowledge Article": 0.0012,
+    "News Article": 0.0043,
+    "Nonfiction Writing": 0.0019,
+    "Personal About Page": 0.0,
+    "Personal Blog": 0.005,
+    "User Reviews": 0.0017
+   }
+  },
+  {
+   "rank": 68,
+   "feature": "automatic_social_convergence",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 33,
+   "firing_item_rate": 0.0024,
+   "firing_item_rate_ci95": [
+    0.0014,
+    0.0038
+   ],
+   "value_counts": {
+    "0": 13532,
+    "1": 51,
+    "2": 32,
+    "3": 1
+   },
+   "mean_value": 0.0087,
+   "share_of_docs_with_any_firing_item": 0.0288,
+   "mean_of_per_doc_firing_item_rates": 0.0024,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.37,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2324,
+     0.5052
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.3486,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.1109,
+     "Creative Writing": 0.2995,
+     "Knowledge Article": 0.4703,
+     "News Article": 0.5572,
+     "Nonfiction Writing": 0.0037,
+     "Personal About Page": 0.6002,
+     "Personal Blog": 0.9092,
+     "User Reviews": 0.5212
+    },
+    "mean_p_human_when_firing": 0.3311,
+    "mean_p_human_when_not_firing": 0.4614,
+    "firing_minus_not_firing": -0.1303,
+    "firing_minus_not_firing_ci95": [
+     -0.2419,
+     -0.02
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0044,
+     0.0015,
+     0.004,
+     0.0011,
+     0.0011
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0029,
+    "Creative Writing": 0.0082,
+    "Knowledge Article": 0.0006,
+    "News Article": 0.0007,
+    "Nonfiction Writing": 0.0012,
+    "Personal About Page": 0.006,
+    "Personal Blog": 0.0006,
+    "User Reviews": 0.0004
+   }
+  },
+  {
+   "rank": 69,
+   "feature": "thin_analogical_warrant",
+   "output_type": "binary_0_1",
+   "direction": "ai",
+   "items_firing": 28,
+   "firing_item_rate": 0.0021,
+   "firing_item_rate_ci95": [
+    0.0014,
+    0.0029
+   ],
+   "value_counts": {
+    "0": 13588,
+    "1": 28
+   },
+   "mean_value": 0.0021,
+   "share_of_docs_with_any_firing_item": 0.0312,
+   "mean_of_per_doc_firing_item_rates": 0.0019,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.4536,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3399,
+     0.5588
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.445,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.566,
+     "Creative Writing": 0.272,
+     "Knowledge Article": 0.1932,
+     "News Article": 0.7192,
+     "Nonfiction Writing": 0.308,
+     "Personal About Page": 0.7984,
+     "Personal Blog": 0.5673,
+     "User Reviews": 0.7868
+    },
+    "mean_p_human_when_firing": 0.4152,
+    "mean_p_human_when_not_firing": 0.4611,
+    "firing_minus_not_firing": -0.0459,
+    "firing_minus_not_firing_ci95": [
+     -0.1368,
+     0.0414
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0022,
+     0.0029,
+     0.0022,
+     0.0015,
+     0.0015
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0017,
+    "Creative Writing": 0.0063,
+    "Knowledge Article": 0.0006,
+    "News Article": 0.0007,
+    "Nonfiction Writing": 0.0025,
+    "Personal About Page": 0.0007,
+    "Personal Blog": 0.0033,
+    "User Reviews": 0.0009
+   }
+  },
+  {
+   "rank": 70,
+   "feature": "attention_as_substance",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 26,
+   "firing_item_rate": 0.0019,
+   "firing_item_rate_ci95": [
+    0.0012,
+    0.0027
+   ],
+   "value_counts": {
+    "0": 13423,
+    "1": 167,
+    "2": 17,
+    "3": 9
+   },
+   "mean_value": 0.0167,
+   "share_of_docs_with_any_firing_item": 0.0312,
+   "mean_of_per_doc_firing_item_rates": 0.0025,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.2687,
+    "chance_firing_more_human_within_format_ci95": [
+     0.1832,
+     0.3621
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.2835,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.0664,
+     "Creative Writing": 0.0766,
+     "Knowledge Article": 0.3068,
+     "News Article": 0.3392,
+     "Nonfiction Writing": 0.0006,
+     "Personal About Page": 0.3116,
+     "Personal Blog": 0.2813,
+     "User Reviews": 0.2254
+    },
+    "mean_p_human_when_firing": 0.278,
+    "mean_p_human_when_not_firing": 0.4614,
+    "firing_minus_not_firing": -0.1834,
+    "firing_minus_not_firing_ci95": [
+     -0.2591,
+     -0.1006
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0044,
+     0.0029,
+     0.0011,
+     0.0007,
+     0.0004
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0006,
+    "Creative Writing": 0.0013,
+    "Knowledge Article": 0.0006,
+    "News Article": 0.0087,
+    "Nonfiction Writing": 0.0006,
+    "Personal About Page": 0.0013,
+    "Personal Blog": 0.0033,
+    "User Reviews": 0.0004
+   }
+  },
+  {
+   "rank": 71,
+   "feature": "merit_substituted_for_rebuttal",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 15,
+   "firing_item_rate": 0.0011,
+   "firing_item_rate_ci95": [
+    0.0005,
+    0.0018
+   ],
+   "value_counts": {
+    "0": 13576,
+    "1": 25,
+    "2": 14,
+    "3": 1
+   },
+   "mean_value": 0.0041,
+   "share_of_docs_with_any_firing_item": 0.015,
+   "mean_of_per_doc_firing_item_rates": 0.001,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.57,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3895,
+     0.7244
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.5734,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.5261,
+     "Creative Writing": 0.5867,
+     "Knowledge Article": 0.219,
+     "News Article": null,
+     "Nonfiction Writing": 0.8078,
+     "Personal About Page": 0.2737,
+     "Personal Blog": 0.8443,
+     "User Reviews": 0.5197
+    },
+    "mean_p_human_when_firing": 0.5211,
+    "mean_p_human_when_not_firing": 0.461,
+    "firing_minus_not_firing": 0.0602,
+    "firing_minus_not_firing_ci95": [
+     -0.0815,
+     0.1899
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0007,
+     0.0011,
+     0.0004,
+     0.0018,
+     0.0015
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0012,
+    "Creative Writing": 0.0006,
+    "Knowledge Article": 0.0006,
+    "News Article": 0.0,
+    "Nonfiction Writing": 0.0006,
+    "Personal About Page": 0.0007,
+    "Personal Blog": 0.0017,
+    "User Reviews": 0.0026
+   }
+  },
+  {
+   "rank": 72,
+   "feature": "deferred_rule_content",
+   "output_type": "binary_0_1",
+   "direction": "ai",
+   "items_firing": 15,
+   "firing_item_rate": 0.0011,
+   "firing_item_rate_ci95": [
+    0.0005,
+    0.0018
+   ],
+   "value_counts": {
+    "0": 13601,
+    "1": 15
+   },
+   "mean_value": 0.0011,
+   "share_of_docs_with_any_firing_item": 0.0163,
+   "mean_of_per_doc_firing_item_rates": 0.0009,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3771,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2452,
+     0.5386
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.401,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.4829,
+     "Creative Writing": null,
+     "Knowledge Article": 0.3472,
+     "News Article": 0.4025,
+     "Nonfiction Writing": 0.0695,
+     "Personal About Page": null,
+     "Personal Blog": 0.8172,
+     "User Reviews": 0.0751
+    },
+    "mean_p_human_when_firing": 0.3759,
+    "mean_p_human_when_not_firing": 0.4611,
+    "firing_minus_not_firing": -0.0852,
+    "firing_minus_not_firing_ci95": [
+     -0.189,
+     0.0425
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0015,
+     0.0018,
+     0.0011,
+     0.0007,
+     0.0004
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0023,
+    "Creative Writing": 0.0,
+    "Knowledge Article": 0.0041,
+    "News Article": 0.0007,
+    "Nonfiction Writing": 0.0006,
+    "Personal About Page": 0.0,
+    "Personal Blog": 0.0006,
+    "User Reviews": 0.0004
+   }
+  },
+  {
+   "rank": 73,
+   "feature": "unanchored_effect_quantification",
+   "output_type": "fraction_0_1",
+   "direction": "ai",
+   "items_firing": 14,
+   "firing_item_rate": 0.001,
+   "firing_item_rate_ci95": [
+    0.0005,
+    0.0016
+   ],
+   "value_counts": {
+    "0": 13601,
+    "0.5": 1,
+    "1": 14
+   },
+   "mean_value": 0.0011,
+   "share_of_docs_with_any_firing_item": 0.0163,
+   "mean_of_per_doc_firing_item_rates": 0.0011,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.4143,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2798,
+     0.5567
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.4243,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.4028,
+     "Creative Writing": null,
+     "Knowledge Article": null,
+     "News Article": 0.4208,
+     "Nonfiction Writing": 0.7126,
+     "Personal About Page": 0.4736,
+     "Personal Blog": 0.2798,
+     "User Reviews": null
+    },
+    "mean_p_human_when_firing": 0.3997,
+    "mean_p_human_when_not_firing": 0.4611,
+    "firing_minus_not_firing": -0.0614,
+    "firing_minus_not_firing_ci95": [
+     -0.19,
+     0.073
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0015,
+     0.0011,
+     0.0015,
+     0.0004,
+     0.0007
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0017,
+    "Creative Writing": 0.0,
+    "Knowledge Article": 0.0,
+    "News Article": 0.0029,
+    "Nonfiction Writing": 0.0006,
+    "Personal About Page": 0.002,
+    "Personal Blog": 0.0017,
+    "User Reviews": 0.0
+   }
+  },
+  {
+   "rank": 74,
+   "feature": "missing_information_motive_inference",
+   "output_type": "binary_0_1",
+   "direction": "ai",
+   "items_firing": 13,
+   "firing_item_rate": 0.001,
+   "firing_item_rate_ci95": [
+    0.0004,
+    0.0016
+   ],
+   "value_counts": {
+    "0": 13603,
+    "1": 13
+   },
+   "mean_value": 0.001,
+   "share_of_docs_with_any_firing_item": 0.0138,
+   "mean_of_per_doc_firing_item_rates": 0.0007,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5712,
+    "chance_firing_more_human_within_format_ci95": [
+     0.4369,
+     0.6904
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.5653,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.6461,
+     "Creative Writing": 0.8244,
+     "Knowledge Article": 0.2361,
+     "News Article": 0.7884,
+     "Nonfiction Writing": 0.2948,
+     "Personal About Page": 0.5853,
+     "Personal Blog": 0.4136,
+     "User Reviews": 0.6485
+    },
+    "mean_p_human_when_firing": 0.5131,
+    "mean_p_human_when_not_firing": 0.461,
+    "firing_minus_not_firing": 0.0521,
+    "firing_minus_not_firing_ci95": [
+     -0.0529,
+     0.1512
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0004,
+     0.0011,
+     0.0004,
+     0.0022,
+     0.0007
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0006,
+    "Creative Writing": 0.0006,
+    "Knowledge Article": 0.0006,
+    "News Article": 0.0007,
+    "Nonfiction Writing": 0.0006,
+    "Personal About Page": 0.0013,
+    "Personal Blog": 0.0011,
+    "User Reviews": 0.0017
+   }
+  },
+  {
+   "rank": 75,
+   "feature": "gap_filling_from_archetype",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 9,
+   "firing_item_rate": 0.0007,
+   "firing_item_rate_ci95": [
+    0.0002,
+    0.0012
+   ],
+   "value_counts": {
+    "0": 13597,
+    "1": 10,
+    "2": 9
+   },
+   "mean_value": 0.0021,
+   "share_of_docs_with_any_firing_item": 0.01,
+   "mean_of_per_doc_firing_item_rates": 0.0007,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5554,
+    "chance_firing_more_human_within_format_ci95": [
+     0.2822,
+     0.8595
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.5161,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": null,
+     "Creative Writing": 0.9113,
+     "Knowledge Article": 0.1163,
+     "News Article": null,
+     "Nonfiction Writing": null,
+     "Personal About Page": 0.2486,
+     "Personal Blog": 0.6791,
+     "User Reviews": null
+    },
+    "mean_p_human_when_firing": 0.4778,
+    "mean_p_human_when_not_firing": 0.461,
+    "firing_minus_not_firing": 0.0168,
+    "firing_minus_not_firing_ci95": [
+     -0.2095,
+     0.2712
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0007,
+     0.0007,
+     0.0004,
+     0.0,
+     0.0015
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0,
+    "Creative Writing": 0.0019,
+    "Knowledge Article": 0.0006,
+    "News Article": 0.0,
+    "Nonfiction Writing": 0.0,
+    "Personal About Page": 0.002,
+    "Personal Blog": 0.0011,
+    "User Reviews": 0.0
+   }
+  },
+  {
+   "rank": 76,
+   "feature": "nondiscriminating_hedging",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 4,
+   "firing_item_rate": 0.0003,
+   "firing_item_rate_ci95": [
+    0.0001,
+    0.0006
+   ],
+   "value_counts": {
+    "0": 13545,
+    "1": 67,
+    "2": 3,
+    "3": 1
+   },
+   "mean_value": 0.0056,
+   "share_of_docs_with_any_firing_item": 0.005,
+   "mean_of_per_doc_firing_item_rates": 0.0003,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.3623,
+    "chance_firing_more_human_within_format_ci95": [
+     0.1574,
+     0.6543
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.3753,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": 0.1531,
+     "Creative Writing": null,
+     "Knowledge Article": 0.4316,
+     "News Article": null,
+     "Nonfiction Writing": null,
+     "Personal About Page": null,
+     "Personal Blog": 0.4311,
+     "User Reviews": null
+    },
+    "mean_p_human_when_firing": 0.3546,
+    "mean_p_human_when_not_firing": 0.4611,
+    "firing_minus_not_firing": -0.1064,
+    "firing_minus_not_firing_ci95": [
+     -0.2962,
+     0.144
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0007,
+     0.0,
+     0.0004,
+     0.0004,
+     0.0
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0006,
+    "Creative Writing": 0.0,
+    "Knowledge Article": 0.0012,
+    "News Article": 0.0,
+    "Nonfiction Writing": 0.0,
+    "Personal About Page": 0.0,
+    "Personal Blog": 0.0006,
+    "User Reviews": 0.0
+   }
+  },
+  {
+   "rank": 77,
+   "feature": "nominal_quantification_gap",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 3,
+   "firing_item_rate": 0.0002,
+   "firing_item_rate_ci95": [
+    0.0,
+    0.0006
+   ],
+   "value_counts": {
+    "0": 13603,
+    "1": 10,
+    "2": 2,
+    "3": 1
+   },
+   "mean_value": 0.0012,
+   "share_of_docs_with_any_firing_item": 0.0025,
+   "mean_of_per_doc_firing_item_rates": 0.0002,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.5917,
+    "chance_firing_more_human_within_format_ci95": [
+     0.3312,
+     0.7373
+    ],
+    "leans": "no clear relation",
+    "matches_direction": null,
+    "chance_firing_more_human_pooled": 0.5955,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": null,
+     "Creative Writing": null,
+     "Knowledge Article": 0.3576,
+     "News Article": null,
+     "Nonfiction Writing": 0.7149,
+     "Personal About Page": null,
+     "Personal Blog": null,
+     "User Reviews": null
+    },
+    "mean_p_human_when_firing": 0.5378,
+    "mean_p_human_when_not_firing": 0.461,
+    "firing_minus_not_firing": 0.0768,
+    "firing_minus_not_firing_ci95": [
+     -0.1226,
+     0.1793
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0,
+     0.0004,
+     0.0,
+     0.0007,
+     0.0
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0,
+    "Creative Writing": 0.0,
+    "Knowledge Article": 0.0006,
+    "News Article": 0.0,
+    "Nonfiction Writing": 0.0012,
+    "Personal About Page": 0.0,
+    "Personal Blog": 0.0,
+    "User Reviews": 0.0
+   }
+  },
+  {
+   "rank": 78,
+   "feature": "constructed_example_as_validation",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 1,
+   "firing_item_rate": 0.0001,
+   "firing_item_rate_ci95": [
+    0.0,
+    0.0002
+   ],
+   "value_counts": {
+    "0": 13613,
+    "1": 2,
+    "2": 1
+   },
+   "mean_value": 0.0003,
+   "share_of_docs_with_any_firing_item": 0.0013,
+   "mean_of_per_doc_firing_item_rates": 0.0,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.1069,
+    "chance_firing_more_human_within_format_ci95": [
+     0.0864,
+     0.1297
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.1625,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": null,
+     "Creative Writing": null,
+     "Knowledge Article": null,
+     "News Article": null,
+     "Nonfiction Writing": 0.1069,
+     "Personal About Page": null,
+     "Personal Blog": null,
+     "User Reviews": null
+    },
+    "mean_p_human_when_firing": 0.1786,
+    "mean_p_human_when_not_firing": 0.4611,
+    "firing_minus_not_firing": -0.2824,
+    "firing_minus_not_firing_ci95": [
+     -0.2915,
+     -0.2741
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0004,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0,
+    "Creative Writing": 0.0,
+    "Knowledge Article": 0.0,
+    "News Article": 0.0,
+    "Nonfiction Writing": 0.0006,
+    "Personal About Page": 0.0,
+    "Personal Blog": 0.0,
+    "User Reviews": 0.0
+   }
+  },
+  {
+   "rank": 79,
+   "feature": "elaboration_despite_missing_referent",
+   "output_type": "ordinal_0_3",
+   "direction": "ai",
+   "items_firing": 2,
+   "firing_item_rate": 0.0001,
+   "firing_item_rate_ci95": [
+    0.0,
+    0.0004
+   ],
+   "value_counts": {
+    "0": 13614,
+    "2": 2
+   },
+   "mean_value": 0.0003,
+   "share_of_docs_with_any_firing_item": 0.0025,
+   "mean_of_per_doc_firing_item_rates": 0.0002,
+   "p_human_relation": {
+    "chance_firing_more_human_within_format": 0.1935,
+    "chance_firing_more_human_within_format_ci95": [
+     0.0314,
+     0.3868
+    ],
+    "leans": "ai",
+    "matches_direction": true,
+    "chance_firing_more_human_pooled": 0.2131,
+    "chance_firing_more_human_by_format": {
+     "Academic Writing": null,
+     "Creative Writing": null,
+     "Knowledge Article": null,
+     "News Article": 0.3623,
+     "Nonfiction Writing": null,
+     "Personal About Page": 0.0381,
+     "Personal Blog": null,
+     "User Reviews": null
+    },
+    "mean_p_human_when_firing": 0.2168,
+    "mean_p_human_when_not_firing": 0.4611,
+    "firing_minus_not_firing": -0.2442,
+    "firing_minus_not_firing_ci95": [
+     -0.4066,
+     -0.0826
+    ],
+    "firing_item_rate_by_p_human_quintile": [
+     0.0004,
+     0.0004,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "firing_item_rate_by_format": {
+    "Academic Writing": 0.0,
+    "Creative Writing": 0.0,
+    "Knowledge Article": 0.0,
+    "News Article": 0.0007,
+    "Nonfiction Writing": 0.0,
+    "Personal About Page": 0.0007,
+    "Personal Blog": 0.0,
+    "User Reviews": 0.0
+   }
+  }
+ ]
+}

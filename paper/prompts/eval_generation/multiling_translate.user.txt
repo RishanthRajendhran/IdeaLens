@@ -1,0 +1,5 @@
+Source language: {{LANGUAGE}}
+
+<document>
+{{SEGMENTS}}
+</document>

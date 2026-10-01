@@ -1,0 +1,18 @@
+extends: extraction_flash_6shot.yaml
+# Stage 1 on gemini-3.8-flash. Identical to `extraction_flash_6shot` in every
+# respect except the model, so the swap is the only difference against every set
+# built on 3.7-flash.
+model: gemini-3.8-flash
+
+notes: >
+  CHANGING THE EXTRACTOR IS A DISTRIBUTION CHANGE, and this is now the THIRD
+  extractor in the suite: the 391k training corpus and everything before
+  2026-08-16 is gemini-3.1-pro, sets after it are gemini-3.7-flash, and this is
+  3.8-flash. The project's standing ruling is that the detector should be
+  extractor-invariant and that Test 4 measures the swap directly, so this is
+  deliberate — but the three must never be silently pooled. `extractor` is
+  recorded on every output file for exactly this reason.
+
+  Verify thinking_level was honoured (usage thoughts_token_count > 0) before
+  trusting the first batch: an unrecognised parameter is silently ignored, and
+  3.8-flash has not been run through this pipeline before.

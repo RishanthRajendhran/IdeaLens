@@ -1,0 +1,28 @@
+extends: _base.yaml
+name: Peer review, unseen generators
+number: 5
+group: Out of domain
+asks: Five writer models the detector never saw in training.
+upstream: >
+  IntelLabs/AI-Peer-Review-Detection-Benchmark. ICLR / NeurIPS peer reviews,
+  five generators. Upstream splits: calibration 75,824 / test 287,052 /
+  extended 426,108; our build is a sample of these.
+data_dir: test5_peer_review
+legacy_item_stem: test5_1k   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+legacy_npz_stem: test5   # the stem this eval's predictions were written under
+                        # before this repository existed; read by
+                        # scripts/data/import_results.py
+
+report:
+  group_by: [model, format]
+  # OOD: report BOTH conventions side by side. They diverge by roughly 4x here
+  # and that divergence is a finding about detector deployment, not a footnote.
+  in_set: true
+  baselines: [pangram_4]
+
+notes: >
+  Human reviews written after late 2022 are contaminated at an unknown rate.
+  Adding pre-2023 reviews as a clean negative class makes the year-stratified FPR
+  curve itself reportable. The eval's own format is asserted upstream as academic
+  writing -- run the classifier anyway before scoring a rebuild.

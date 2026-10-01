@@ -1,0 +1,31 @@
+# How each model's deployed thresholds are derived.
+#
+# THE CALIBRATION SPLIT IS HUMAN-ONLY. The operating point is a low quantile of
+# the human score distribution; AI documents contribute nothing to it. Making the
+# split human-only is what moves the reportable FPR floor down.
+#
+# ESTIMABILITY: a target q is reportable only when q * n_humans >= 25. Below that
+# the cut rests on a handful of documents and its own sampling error dwarfs the
+# difference being reported. `derive_thresholds.py` refuses to emit an
+# unestimable cut rather than emitting a noisy one.
+#
+# THREE SCHEMES, ALL FITTED ON THE CALIBRATION SPLIT ONLY:
+#   global   one cut per model
+#   format   one per document format, routed by the format classifier's label
+#   topic    one per topic
+# A document whose group has no cut is FILTERED and counted, never given the
+# global cut as a fallback -- a fallback silently mixes two operating points in
+# one column.
+
+targets: [0.001, 0.005, 0.01, 0.02, 0.05]
+primary: 0.01
+schemes: [global, format, topic]
+min_group_humans: 200
+# Per-group cuts are well determined at roughly 2,500 humans per group; below
+# that a raw cut overshoots the nominal FPR (nominal 1% landing at 1.13-1.18%).
+# Shrinkage toward the pooled cut with weight n/(n+2500) is mandatory.
+shrinkage: true
+shrinkage_target_n: 2500
+bootstrap:
+  n_boot: 1000       # resamples the CALIBRATION humans and refits the cut per
+                     # draw, so threshold uncertainty reaches the reported CI

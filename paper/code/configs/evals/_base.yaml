@@ -1,0 +1,36 @@
+# Defaults every eval inherits. Never loaded directly; override in the child.
+#
+# `metric` decides how the eval is read:
+#   tpr    both classes present -> TPR at a deployed cut, with realised FPR beside it
+#   fire   one true label throughout -> fire rate as the construction varies.
+#          There is no TPR on such a set and reporting one is a category error.
+
+metric: tpr
+positive: ai
+group: Out of domain
+
+# Has stage 2 (the de-leak paraphrase) been run on this set?
+#   done      normal, and comparable with every other de-leaked set
+#   not_run   scores are from UNTREATED outlines: an upper bound that partly
+#             measures wording lifted from the source. Such a set may be reported,
+#             clearly flagged, but must never be pooled with the de-leaked ones.
+#             The flag is printed by the manifest, the dataset README and the
+#             suite report, so it cannot be lost between here and a table.
+deleak_status: done
+
+pipeline:
+  extraction: extraction_flash_6shot
+  deleak: deleak_pro
+  format: format_llm_flash          # never assert a format; classify it
+
+report:
+  fpr_targets: [0.001, 0.005, 0.01, 0.02, 0.05]
+  primary_fpr: 0.01                 # the field standard, and our primary point
+  schemes: [global, format]         # calibration-derived cuts only
+  in_set: false                     # secondary convention, OOD sets only
+  group_by: [format]
+  n_boot: 1000
+
+scoring:
+  stage: deleak                     # what the models score; `extract` for Test 0
+  models: [nemotron_1m_full, modernbert_1m_full]

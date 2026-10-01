@@ -1,0 +1,12 @@
+Arm · length,Label,n,IdeaLens · outline (paraphrased),IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline (paraphrased),IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+source (a model's document) · >= 500,clear AI (TPR),263,98.1,98.5,100.0,92.4,94.3,99.2,77.2,53.6,73.4
+level 0 (type line) · < 500,clear AI (TPR),2,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,100.0
+level 0 (type line) · >= 500,clear AI (TPR),261,98.1,99.6,100.0,84.3,96.2,100.0,74.7,0.0,100.0
+level 1 (topic line) · < 500,clear AI (TPR),1,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,100.0
+level 1 (topic line) · >= 500,clear AI (TPR),262,98.5,100.0,100.0,88.9,96.6,100.0,72.5,0.0,100.0
+level 2 (themes) · >= 500,clear AI (TPR),263,99.2,100.0,100.0,88.2,96.2,100.0,75.7,0.0,100.0
+level 3 (themes and structure) · >= 500,clear AI (TPR),263,96.6,100.0,100.0,89.4,97.7,100.0,75.7,0.0,100.0
+level 4 (themes and full outline) · < 500,clear AI (TPR),3,100.0,100.0,100.0,66.7,33.3,100.0,100.0,0.0,100.0
+level 4 (themes and full outline) · >= 500,clear AI (TPR),260,98.8,100.0,100.0,94.2,98.5,100.0,78.1,0.0,100.0
+level 5 (the source's outline) · < 500,clear AI (TPR),12,100.0,100.0,100.0,83.3,91.7,100.0,83.3,0.0,100.0
+level 5 (the source's outline) · >= 500,clear AI (TPR),251,98.4,100.0,100.0,94.0,97.6,100.0,79.7,0.0,99.2

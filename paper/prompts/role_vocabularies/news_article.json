@@ -1,0 +1,693 @@
+{
+ "format_slug": "news_article",
+ "n_roles": 41,
+ "source": "role discovery, consolidation pass (role_consolidation_xhigh.json)",
+ "final_roles": [
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the principal new development, finding, decision, or condition that makes the article newsworthy.",
+   "definition": "States the principal new development, finding, decision, or newly salient condition that constitutes the article's primary news proposition.",
+   "distinguished_from": "Unlike Event Account, Central Development expresses the story's principal news proposition rather than merely one occurrence, and unlike Content Synopsis it does not compactly recap several points.",
+   "examples": [
+    {
+     "doc": "ai:a329906ebfd4f1102220050ee7e0671ccdae70b7b40b84896c57a1f7ac16f6ff",
+     "excerpt": "Liberia has secured a $36 million investment commitment from Cambodia-based agro-industrial group Mainland to develop local rubber processing and connect more smallholders to agricultural value chains.",
+     "item_id": 1
+    }
+   ],
+   "name": "Central Development",
+   "subsumes": [
+    "B01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily reports what happened or what actors did during a substantively unified occurrence or sequence.",
+   "definition": "Reports a distinct occurrence, action, or substantively unified sequence of events relevant to the story.",
+   "distinguished_from": "Unlike Situation Description, Event Account centers on change or action over time, while unlike Central Development it need not state the article's principal news proposition.",
+   "examples": [
+    {
+     "doc": "ai:7bc2c4110f8d91f84002ceaa321a3398f8b077ae98d662ba088a08a35db0691c",
+     "excerpt": "Property managers are responding by monitoring their online reputations and proactively advertising competitive advantages instead of waiting to answer comparisons.",
+     "item_id": 6
+    }
+   ],
+   "name": "Event Account",
+   "subsumes": [
+    "B02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a material account of how relevant circumstances presently stand rather than how they changed or arose.",
+   "definition": "Describes a current condition, arrangement, scale, status, or other material state relevant to the reported matter.",
+   "distinguished_from": "Unlike Event Account, Situation Description is organized around a state rather than an occurrence, and unlike Background Context it describes the matter as it currently stands.",
+   "examples": [
+    {
+     "doc": "ai:b5ec6b118dbe8f7c691926fe2b3483e64635318b2031663fd169c0bfc736283f",
+     "excerpt": "Rosamund Pike appears as a secretive figure whose knowledge of the Horsemen creates uncertainty about whether she is an adversary or ally.",
+     "item_id": 7
+    }
+   ],
+   "name": "Situation Description",
+   "subsumes": [
+    "B03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item is primarily needed to supply antecedent or surrounding information that makes the current report intelligible.",
+   "definition": "Supplies prior history, established circumstances, institutional context, or other orienting information needed to understand the current story.",
+   "distinguished_from": "Unlike Situation Description, Background Context supplies antecedent or surrounding circumstances rather than the current state itself, and unlike Mechanism Explanation it need not establish a causal or operational connection.",
+   "examples": [
+    {
+     "doc": "ai:8831268715a5d38e9c84ab2e31128e1b1b6ba9ceb2cbe7da7f17b048a2f4a0b8",
+     "excerpt": "Richard had lived in the landlord’s home, gained the family’s trust, and regularly transported the landlord’s wife to town with the landlord’s approval because work kept him away until late.",
+     "item_id": 3
+    }
+   ],
+   "name": "Background Context",
+   "subsumes": [
+    "B04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is explaining how a process operates or why a reported event, state, or result arose.",
+   "definition": "Explains the causes, mechanisms, or processes through which a situation, event, or outcome occurs.",
+   "distinguished_from": "Unlike Background Context, Mechanism Explanation establishes an explanatory connection, and unlike Interpretation it addresses causation or operation rather than broader significance.",
+   "examples": [
+    {
+     "doc": "human:a084da9fdb0faa67679caf1f1e0cec46a252b2e377df364e2a4be398f2f698f7",
+     "excerpt": "Less than 1% of clothing is recycled fibre-to-fibre because the technology remains under development, mixed fibres are difficult to separate into suitable feedstock, and recycled fabric costs more than new fabric.",
+     "item_id": 16
+    }
+   ],
+   "name": "Mechanism Explanation",
+   "subsumes": [
+    "B05"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the account of who or what is affected, how they are affected, or why the matter has practical stakes.",
+   "definition": "Identifies the realized, likely, or materially implicated effects and stakes attributable to a development or condition.",
+   "distinguished_from": "Unlike Outlook, Consequences focuses on attributable effects or stakes rather than the matter's general future course, and unlike Interpretation it emphasizes practical impact rather than inferred meaning.",
+   "examples": [
+    {
+     "doc": "human:35a71c1934a9767bbbec97d24578335b08082b9de4505829da50b96b59cac7b9",
+     "excerpt": "Because aluminum and other metals are used in products ranging from food and drink cans to vehicles and electronics, higher metal prices could spread across consumer markets.",
+     "item_id": 18
+    }
+   ],
+   "name": "Consequences",
+   "subsumes": [
+    "B06"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary job is to substantiate, corroborate, quantify, or test another proposition through factual material.",
+   "definition": "Presents data, records, observations, documents, or other factual material chiefly to support, measure, corroborate, or test a reported proposition.",
+   "distinguished_from": "Unlike Situation Description, Evidence Support is selected because the facts serve another proposition, while unlike Case Illustration it chiefly substantiates rather than makes a broader point tangible.",
+   "examples": [
+    {
+     "doc": "ai:909f6478868aac6c2801826082142f910ec6bd933c653076bba488a2356a6f41",
+     "excerpt": "NRC Group completed its first housing project in Mahalaxmi Nagar ahead of schedule, presenting the result as evidence of credibility and adherence to customer-focused timelines.",
+     "item_id": 5
+    }
+   ],
+   "name": "Evidence Support",
+   "subsumes": [
+    "B07"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when preserving an attributed source's perspective, reaction, allegation, judgment, or experience is more central than using the source merely as proof.",
+   "definition": "Reports an attributed person's or group's perspective, reaction, claim, judgment, or experience as a viewpoint relevant to the story.",
+   "distinguished_from": "Unlike Evidence Support, Source Viewpoint primarily represents a perspective rather than corroborates a proposition, while unlike Counterposition it need not challenge another account.",
+   "examples": [
+    {
+     "doc": "human:efcc9bb047a511b3195591f435b072a062a7a88337e8a234f01ef1491307c1fd",
+     "excerpt": "DiRomualdo remains skeptical of vendor claims, arguing that HR software companies are overstating generative AI because it is becoming a feature of their products.",
+     "item_id": 6
+    }
+   ],
+   "name": "Source Viewpoint",
+   "subsumes": [
+    "B08"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item is included chiefly to deny, rebut, limit, or materially challenge another claim or version of events.",
+   "definition": "Presents a denial, rebuttal, qualification, or competing account whose primary function is to challenge another position in the story.",
+   "distinguished_from": "Unlike Source Viewpoint, Counterposition is defined by opposition to another account, and unlike Claim Assessment it presents a challenge without itself adjudicating the claim's evidentiary status.",
+   "examples": [
+    {
+     "doc": "human:5caa1ab33a210216468d548143608a454d7e385333f459c402410f4ccff316a5",
+     "excerpt": "Apple warned, “If Epic prevails, other ecosystems will fall too,” and argued that Sony, Nintendo, and Microsoft use similar models and that antitrust law protects Apple’s choice to operate an integrated platform.",
+     "item_id": 14
+    }
+   ],
+   "name": "Counterposition",
+   "subsumes": [
+    "B09"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an inference about what reported facts mean, reveal, or signify rather than the facts themselves.",
+   "definition": "Draws out the meaning, significance, implications, or larger pattern represented by reported facts or developments.",
+   "distinguished_from": "Unlike Mechanism Explanation, Interpretation concerns significance rather than causal operation, while unlike Critical Appraisal it does not primarily judge a subject's quality or merit.",
+   "examples": [
+    {
+     "doc": "human:346b6dcc93165f044df3cb87494816fb86a72d5f39b4fefd539dd1de3e3c8f1f",
+     "excerpt": "Houston’s four-game winning streak is credited to defense and grit, with the team appearing especially motivated since Harden left.",
+     "item_id": 10
+    }
+   ],
+   "name": "Interpretation",
+   "subsumes": [
+    "B10"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary contribution is anticipating future developments, decisions, scenarios, or milestones.",
+   "definition": "Reports expectations, projections, possible scenarios, or forthcoming steps concerning how the matter may develop.",
+   "distinguished_from": "Unlike Consequences, Outlook forecasts the matter's future course or next steps rather than chiefly identifying effects attributable to an existing development.",
+   "examples": [
+    {
+     "doc": "ai:7ace3a38a4e878024ddc81cb9438ef57a1c6c0c225a50aa26c74d427068966de",
+     "excerpt": "Strong interest in the P4R could alter market dynamics and lead Realme to broaden its range, while consumers and investors assess whether the company can preserve its advantage.",
+     "item_id": 11
+    }
+   ],
+   "name": "Outlook",
+   "subsumes": [
+    "B11"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when a concrete case is included chiefly to make a broader pattern, claim, or impact understandable or tangible.",
+   "definition": "Presents a specific person, incident, place, or case chiefly as an instance of a broader issue, pattern, or effect.",
+   "distinguished_from": "Unlike Evidence Support, Case Illustration clarifies through a representative instance rather than chiefly proving a proposition, and unlike Narrative Scene it is defined by its exemplary relationship to a broader point.",
+   "examples": [
+    {
+     "doc": "ai:0c9ff470aaae3c110de3400e9e5068e839fbcb9fc56f45407b4a94995beea5c0",
+     "excerpt": "The Su-30MKI program exemplifies this partnership: HAL has manufactured more than 200 aircraft under license at Nashik, establishing the facility as a major fighter-production center.",
+     "item_id": 3
+    }
+   ],
+   "name": "Case Illustration",
+   "subsumes": [
+    "B12"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main job is to place readers within a particular moment or setting through narratively arranged observation and action.",
+   "definition": "Constructs a bounded scene through setting, participants, observation, or action to give readers an experiential anchor in the reported story.",
+   "distinguished_from": "Unlike Event Account, Narrative Scene prioritizes experiential staging and narrative presence, while unlike Case Illustration it need not exemplify a broader pattern.",
+   "examples": [
+    {
+     "doc": "human:9000be8de110448aad95d3e9d546a377e2b96ee4f111002eb3a2f6aa4c3d7aa1",
+     "excerpt": "Before dawn Monday, a violent storm shook Sago, and County Commissioner Donnie Tenney learned by telephone that an explosion at Sago Mine had trapped workers.",
+     "item_id": 1
+    }
+   ],
+   "name": "Narrative Scene",
+   "subsumes": [
+    "B13"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a coherent characterization of who or what a central subject is rather than merely one current fact about it.",
+   "definition": "Builds a coherent characterization of a central person, group, organization, place, or other subject through identity, traits, history, conduct, or reputation.",
+   "distinguished_from": "Unlike Situation Description, Subject Portrait develops an identifying or characterizing picture of the subject rather than reporting only its current condition, and unlike Work Overview it does not primarily summarize represented content.",
+   "examples": [
+    {
+     "doc": "human:3c0f51c7f218f8226750f2e6dfdb25372a10960dd92e756383407178cf4b831c",
+     "excerpt": "Texas Tech turfgrass graduate Ortmeier has worked at Champions Golf Club for 11 years and, as an ambassador since 2021, is paired with Rep. Michael McCaul of Texas.",
+     "item_id": 3
+    }
+   ],
+   "name": "Subject Portrait",
+   "subsumes": [
+    "B14"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's central commitment is a reasoned judgment about a claim's truth, support, reliability, or limitations rather than merely presenting evidence or opposition.",
+   "definition": "Evaluates the accuracy, reliability, evidentiary status, or material limitations of a claim, finding, or conclusion.",
+   "distinguished_from": "Unlike Counterposition, Claim Assessment adjudicates or qualifies evidentiary standing rather than merely opposing a claim, and unlike Evidence Support its primary contribution is the resulting judgment rather than the supporting material.",
+   "examples": [
+    {
+     "doc": "human:cf0d6aa50cf5de32744e8336b3bc1e284019399a7107fb4660431180b48eb148",
+     "excerpt": "The Met has claimed unproven ancillary benefits such as deterring or disrupting crime and reassuring communities, while the National Physical Laboratory’s 2019 conclusion that the trials would help stop dangerous people and make London safer offered no concrete supporting evidence.",
+     "item_id": 9
+    },
+    {
+     "doc": "human:c04e23d83a288a8e5c6a21ce7f0ff54936a71d2f7304617e9a7cfd93b78ce08c",
+     "excerpt": "The authors identify their principal limitation as the approximate, imperfect empirical removal of natural variability, which estimates effects from historical statistical relationships without requiring a physical model of the underlying processes.",
+     "item_id": 19
+    }
+   ],
+   "name": "Claim Assessment",
+   "subsumes": [
+    "B15",
+    "I-human:c04e23d83a288a8e5c6a21ce7f0ff54936a71d2f7304617e9a7cfd93b78ce08c-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main informational value lies in a deliberate side-by-side relationship among cases, periods, values, accounts, or alternatives.",
+   "definition": "Juxtaposes two or more relevant cases, periods, values, accounts, or alternatives to reveal similarities, differences, or relative standing.",
+   "distinguished_from": "Unlike Evidence Support, Comparison makes the relationship among the compared elements primary, and unlike Interpretation it need not infer their broader significance.",
+   "examples": [
+    {
+     "doc": "human:e05a5552b705f3cdc28176514c0e1eed3ebf4b29b3664e617a9dd061e46585ab",
+     "excerpt": "Osram contrasts the LEDs’ expected lifetime of at least 30,000 hours with its claim that quantum-dot sheets acquire a bluish tinge over time, and anticipates their use in televisions by the end of 2016.",
+     "item_id": 4
+    }
+   ],
+   "name": "Comparison",
+   "subsumes": [
+    "B16"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily enables readers to act, prepare, protect themselves, obtain something, or complete a relevant task.",
+   "definition": "Provides actionable steps, precautions, options, or practical directions that readers can apply in response to the reported matter.",
+   "distinguished_from": "Unlike Institutional Recommendation, Practical Guidance enables readers to act for their own purposes rather than advocating action by responsible organizations or officials, and unlike Outlook it directs rather than predicts.",
+   "examples": [
+    {
+     "doc": "ai:ac40a88f5fc99691ab85f1b6f7e912007756790e7cf099ade4008ccf5f22b459",
+     "excerpt": "Bermuda is preparing for tropical-storm-force winds and extremely rough seas later in the week; emergency managers advise securing property, avoiding boating, and preparing for dangerous conditions even if Erin remains offshore.",
+     "item_id": 9
+    }
+   ],
+   "name": "Practical Guidance",
+   "subsumes": [
+    "B17"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is establishing the meaning, scope, or usage of a term or concept required for understanding.",
+   "definition": "Clarifies the meaning, scope, or usage of a term, concept, category, or specialized expression relevant to the article.",
+   "distinguished_from": "Unlike Background Context, Definition establishes conceptual meaning rather than surrounding circumstances, and unlike Mechanism Explanation it does not primarily explain a process.",
+   "examples": [
+    {
+     "doc": "human:701485c1b5b95746b3bf4598dc2132c10e9413547e11f836698aaf2f14f97c9c",
+     "excerpt": "Muslim giving encompasses the required charitable contribution known as zakat and encouraged voluntary donations called sadaqa, practices Waraich situates within a wider ethic of caring for neighbors and communal well-being.",
+     "item_id": 6
+    }
+   ],
+   "name": "Definition",
+   "subsumes": [
+    "B18"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when a bounded unit primarily identifies the story's subject, scope, or editorial angle without developing the report or recapitulating several established points.",
+   "definition": "Provides a bounded orienting frame that identifies the article's subject, scope, or editorial angle for readers.",
+   "distinguished_from": "Unlike Central Development, Story Framing chiefly establishes angle and scope rather than developing the principal news proposition, and unlike Content Synopsis it does not primarily recap multiple points.",
+   "examples": [
+    {
+     "doc": "human:83fe9659d724657753d4da35ed6a18055356f01dab20318d283baf273447504b",
+     "excerpt": "The old-fashioned curse “May you live in interesting times” frames 2020 as turbulent before the surprising year-end conclusion that London’s top-end property market adapted well to the new normal.",
+     "item_id": 1
+    }
+   ],
+   "name": "Story Framing",
+   "subsumes": [
+    "B19"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the item would remove a deliberately compact overview of several important points from the current article rather than any one point's full development.",
+   "definition": "Condenses the current article's principal developments, findings, or takeaways into a bounded overview for rapid orientation.",
+   "distinguished_from": "Unlike Central Development, Content Synopsis summarizes multiple parts of the story rather than advancing one principal proposition, and unlike Work Overview it summarizes the news article rather than a work discussed within it.",
+   "examples": [
+    {
+     "doc": "ai:2208f2dd84b575d0e548905834b50ec3092eb0bd832a542e9e60f116dc06a25b",
+     "excerpt": "A key-point recap summarizes the opening, its emphasis on educational innovation, symbolic architecture, facilities, community partnerships, technologies, and expected workforce benefits.",
+     "item_id": 9
+    }
+   ],
+   "name": "Content Synopsis",
+   "subsumes": [
+    "B20"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the bounded component's primary purpose is to identify responsibility for reporting, writing, editing, production, or another editorial contribution.",
+   "definition": "Records who contributed to or bears editorial responsibility for producing the article and may identify each contributor's role.",
+   "distinguished_from": "Unlike Source Viewpoint, Authorship Attribution credits document production rather than representing a news source's perspective, and unlike Inquiry Contact it does not primarily enable follow-up communication.",
+   "examples": [
+    {
+     "doc": "human:04e60157342f653bbaaefff58dbbd312561c8290262a21565edac10b716a62b6",
+     "excerpt": "Laura Rigge is credited as the article’s author.",
+     "item_id": 1
+    }
+   ],
+   "name": "Authorship Attribution",
+   "subsumes": [
+    "B21"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the component would erase information documenting when, where, or in what version the article was issued or updated.",
+   "definition": "Records publication provenance such as issue time, update time, reporting location, edition, or version history as part of the article's documentary record.",
+   "distinguished_from": "Unlike Correction Record, Publication Record documents issuance or revision without necessarily acknowledging an error, and unlike Authorship Attribution it does not identify contributors.",
+   "examples": [
+    {
+     "doc": "human:e05a5552b705f3cdc28176514c0e1eed3ebf4b29b3664e617a9dd061e46585ab",
+     "excerpt": "A dated update notice records that the article was revised on December 3, 2015, to incorporate Osram’s responses.",
+     "item_id": 10
+    }
+   ],
+   "name": "Publication Record",
+   "subsumes": [
+    "B22"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when a bounded apparatus is included primarily to let readers identify, locate, or inspect the external materials on which the reporting relies.",
+   "definition": "Documents the external records, publications, datasets, or other sources underlying the article so readers can trace or inspect them.",
+   "distinguished_from": "Unlike Evidence Support, Source Documentation points to evidentiary provenance rather than developing the evidence itself, and unlike Related Coverage it documents sources rather than recommends additional journalism.",
+   "examples": [
+    {
+     "doc": "human:f096ffa309d48089c989dede9820efc3f7dc8f8636cbb8caa8140786b6896d4e",
+     "excerpt": "A closing publication reference identifies the study as ‘The St. John’s Hospital Cemetery and Environs, Cambridge: Contextualizing the Medieval Urban Dead’ in Archaeological Journal, Volume 172, Issue 1, with access through Taylor and Francis Online and source attribution to the University of Cambridge.",
+     "item_id": 16
+    }
+   ],
+   "name": "Source Documentation",
+   "subsumes": [
+    "B23"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the primary function of the item is to explain how the journalism was sourced, selected, verified, analyzed, or constrained.",
+   "definition": "Explains the journalistic methods, sourcing process, verification procedures, selection criteria, or reporting limitations relevant to the article's production.",
+   "distinguished_from": "Unlike Research Method, Reporting Transparency concerns production of the journalism rather than conduct of the underlying study, and unlike Source Documentation it explains process rather than merely identifying materials.",
+   "examples": [
+    {
+     "doc": "human:871184a2f0c66b6fd59de80be4003a5f4d18777413db0caa4f6c2e20df5622fa",
+     "excerpt": "Professor Joseph Ibrahim, head of a health law and ageing research unit and an experienced risk-management researcher, offered general guidance on aged-care smoking without knowing or commenting on Seach’s case.",
+     "item_id": 7
+    }
+   ],
+   "name": "Reporting Transparency",
+   "subsumes": [
+    "B24"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the component would conceal a relationship, incentive, sponsorship condition, assistance, or editorial circumstance relevant to evaluating the article's independence or provenance.",
+   "definition": "Declares sponsorship, conflicts of interest, financial relationships, automated assistance, or other editorial circumstances material to assessing the article.",
+   "distinguished_from": "Unlike Reporting Transparency, Editorial Disclosure reveals relevant relationships or production conditions rather than explaining journalistic methods, and unlike Legal Notice it serves evaluative transparency rather than establishing legal rights or liability.",
+   "examples": [
+    {
+     "doc": "human:701485c1b5b95746b3bf4598dc2132c10e9413547e11f836698aaf2f14f97c9c",
+     "excerpt": "A funding disclosure states that Associated Press religion coverage receives support through its collaboration with The Conversation US, funded by Lilly Endowment Inc., while AP retains sole responsibility for the content.",
+     "item_id": 20
+    }
+   ],
+   "name": "Editorial Disclosure",
+   "subsumes": [
+    "B25"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the bounded item exists chiefly to acknowledge and rectify an error or materially clarify an earlier published version.",
+   "definition": "Documents a correction, retraction, or material clarification that amends the article's prior public record.",
+   "distinguished_from": "Unlike Publication Record, Correction Record explicitly acknowledges and rectifies a substantive error or problem rather than merely documenting an update or version.",
+   "examples": [],
+   "name": "Correction Record",
+   "subsumes": [
+    "B26"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when a bounded item is included chiefly to identify, explain, or make interpretable accompanying visual, audio, or interactive material.",
+   "definition": "Provides the contextual identification or explanation needed to understand accompanying nontextual material as part of the article.",
+   "distinguished_from": "Unlike Event Account or Evidence Support, Media Context primarily serves the interpretability of associated media, although substantively independent reporting within such a component receives its substantive role.",
+   "examples": [
+    {
+     "doc": "ai:ab2bf340d772302ca91fb6d333894f581a25b7f27df676ae0868bb57719ff4a7",
+     "excerpt": "An embedded social-media post from Premiumerza dated August 6, 2024, identifies a featured speaker as Advocate Govinda Pramanik, General Secretary of the Bangladesh National Hindu Grand Alliance.",
+     "item_id": 2
+    }
+   ],
+   "name": "Media Context",
+   "subsumes": [
+    "B27"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the component's main document-level value is enabling quick consultation of organized facts rather than advancing a single assertion or argument.",
+   "definition": "Organizes a bounded collection of key facts, values, entities, chronology, or terms for efficient consultation and retrieval within the article.",
+   "distinguished_from": "Unlike Content Synopsis, Reference Aid organizes information for lookup rather than compressing the story's main message, and unlike Evidence Support its primary purpose is retrieval rather than substantiation.",
+   "examples": [
+    {
+     "doc": "ai:ea949f31e6b1060ba0de4b10167c1ddc4fc4e77b035b907e879b58ed4af08293",
+     "excerpt": "A specification summary presents a 30W six-core Zen 4 CPU, 110W RDNA 3 GPU with 8GB GDDR6, 16GB upgradeable DDR5, upgradeable 512GB or 2TB SSD options, extensive wired and wireless connectivity, RGB lighting, and a replaceable front plate.",
+     "item_id": 4
+    }
+   ],
+   "name": "Reference Aid",
+   "subsumes": [
+    "B28"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the bounded component would impair readers' ability to locate or move among portions of the same article or multipart presentation.",
+   "definition": "Provides a bounded means of locating and moving among sections, installments, or internal destinations in the article.",
+   "distinguished_from": "Unlike Related Coverage, Navigation Aid directs readers within the same article or multipart presentation rather than to separate journalism, and unlike Access Notice it does not explain a restriction on availability.",
+   "examples": [],
+   "name": "Navigation Aid",
+   "subsumes": [
+    "B29"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the component is included chiefly to direct readers to separate journalistic works for additional context, continuation, or depth.",
+   "definition": "Connects readers to separate reporting or analysis that extends their understanding of the article's subject.",
+   "distinguished_from": "Unlike Source Documentation, Related Coverage recommends additional journalism rather than records evidentiary provenance, and unlike Navigation Aid it points beyond the current article.",
+   "examples": [
+    {
+     "doc": "ai:a7b1510620b2d6ede300205fb18408357ec49435e7e4894b2136d519fa7d2cd6",
+     "excerpt": "Readers are directed to a related tracker covering continuing launch news, specifications, prices, and expectations for the Philippine market.",
+     "item_id": 8
+    }
+   ],
+   "name": "Related Coverage",
+   "subsumes": [
+    "B30"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the bounded item primarily tells readers that substantive content is restricted, unavailable, or conditional and explains the route or requirement for obtaining it.",
+   "definition": "Communicates a restriction, limitation, or prerequisite governing access to the article's substantive content and may indicate how access can be obtained.",
+   "distinguished_from": "Unlike Navigation Aid, Access Notice explains why content cannot presently be reached rather than helping readers move through available material, and unlike Editorial Disclosure it concerns availability rather than editorial circumstances.",
+   "examples": [],
+   "name": "Access Notice",
+   "subsumes": [
+    "B31"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the component's main purpose is to solicit information, experiences, questions, feedback, or another active contribution from readers.",
+   "definition": "Invites readers to contribute tips, experiences, questions, comments, reports, or other input connected to the reporting or public exchange.",
+   "distinguished_from": "Unlike Practical Guidance, Reader Participation requests an action that contributes back to the news organization or exchange, while unlike Inquiry Contact it actively solicits input rather than merely providing a contact channel.",
+   "examples": [
+    {
+     "doc": "human:ea3e1bb081b74864f5bc3c68915ed4f05a5df81cda1a977b578664b39a380eb2",
+     "excerpt": "The article closes by inviting readers to comment on the new map and other notable Season 4 additions.",
+     "item_id": 13
+    }
+   ],
+   "name": "Reader Participation",
+   "subsumes": [
+    "B32"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when a bounded component is included primarily to offer optional depth or extended material whose component-level purpose is ancillary rather than to advance one independent substantive move.",
+   "definition": "Supplies optional ancillary material that extends the report with added depth, detail, or documentation outside the main narrative flow.",
+   "distinguished_from": "Unlike Related Coverage, Supplementary Extension remains within the article package, and unlike Reference Aid or Source Documentation it is not chiefly organized for lookup or evidentiary provenance.",
+   "examples": [
+    {
+     "doc": "ai:4b81c463845766a9b4a6605b558fdcc94559272ada8ccb465d71494a7c18e64c",
+     "excerpt": "The report reproduces the ADC’s full statement to document the party’s criticism and policy standard in its own extended argument.",
+     "item_id": 4
+    }
+   ],
+   "name": "Supplementary Extension",
+   "subsumes": [
+    "B33"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the concise account of a referenced work's premise, contents, subject matter, or defining edition characteristics.",
+   "definition": "Provides a concise account of a referenced creative or published work's premise, narrative, subject matter, contents, or defining edition characteristics.",
+   "distinguished_from": "Unlike Content Synopsis, Work Overview summarizes a work discussed by the article rather than the article itself, and unlike Subject Portrait it focuses on the work's represented content or edition identity rather than a broader characterization.",
+   "examples": [
+    {
+     "doc": "human:0558c268b415424815bafaf5880690863a1ab3e75420d0f13d333414111e5577",
+     "excerpt": "The manga Elden Ring: The Road to the Erdtree, conceived by FromSoftware, Inc. and drawn by Nikiichi Tobita, recasts the video game’s foreboding world as an absurd comedy about inept Tarnished adventurer Aseo struggling through the Lands Between.",
+     "item_id": 24
+    },
+    {
+     "doc": "human:fb5add75bccfff30a93de163cbd75eff388560025126c9152a2331d017761bfb",
+     "excerpt": "Dark Horse describes The Change as following Isabel Frost, a scientifically educated grandmother and gamer dissatisfied with her life, who develops extraordinary powers and learns with help from her grandson and best friend to embrace both menopause and her new superhero identity.",
+     "item_id": 4
+    }
+   ],
+   "name": "Work Overview",
+   "subsumes": [
+    "I-human:0558c268b415424815bafaf5880690863a1ab3e75420d0f13d333414111e5577-01",
+    "I-human:fb5add75bccfff30a93de163cbd75eff388560025126c9152a2331d017761bfb-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an advocated course of action, policy, standard, reform, or priority directed to responsible actors rather than practical instructions for readers.",
+   "definition": "Advocates a course of action, policy, institutional arrangement, reform, standard, or governing priority for officials, organizations, professions, or other responsible actors.",
+   "distinguished_from": "Unlike Practical Guidance, Institutional Recommendation advocates what responsible actors should do rather than enabling readers to perform a personally applicable task, and unlike Outlook it prescribes rather than predicts.",
+   "examples": [
+    {
+     "doc": "ai:038fb3eed0e641f371c0113a3b56bebc14ea55f6b8ae41de808f477be3cb40d6",
+     "excerpt": "Lama proposed a consortium of universities from India, Nepal, Bhutan, and Bangladesh to provide policymakers with current data and recommendations through collaborative research on trade, policy, and infrastructure planning.",
+     "item_id": 12
+    },
+    {
+     "doc": "human:6f18f53f737e3e062154675c2d027112f0263aa1d6e78c20d98c10aaa0bf3607",
+     "excerpt": "Paul proposes a fiscal responsibility law to secure fiscal discipline, transparency, and the long-term sustainability of public finances.",
+     "item_id": 19
+    },
+    {
+     "doc": "human:cf0d6aa50cf5de32744e8336b3bc1e284019399a7107fb4660431180b48eb148",
+     "excerpt": "Because live facial recognition is powerful, intrusive, scalable, and susceptible to misuse affecting privacy, expression, assembly, and lawful public activity, police should face an exceptionally high evidentiary threshold and rigorously account for benefits, costs, and effects before its use can be justified.",
+     "item_id": 4
+    }
+   ],
+   "name": "Institutional Recommendation",
+   "subsumes": [
+    "I-ai:038fb3eed0e641f371c0113a3b56bebc14ea55f6b8ae41de808f477be3cb40d6-01",
+    "I-human:6f18f53f737e3e062154675c2d027112f0263aa1d6e78c20d98c10aaa0bf3607-01",
+    "I-human:cf0d6aa50cf5de32744e8336b3bc1e284019399a7107fb4660431180b48eb148-01",
+    "I-ai:53f0cd0466b22ab1f57abe0476fbb9819055566352467d6b7d9404e76434b9df-01",
+    "I-human:022139bf9a1bca05ff540dcac2a5ab6bbaa0dc70e7cb2ee02a10cb994a40337e-01",
+    "I-ai:2208f2dd84b575d0e548905834b50ec3092eb0bd832a542e9e60f116dc06a25b-01",
+    "I-ai:ab2bf340d772302ca91fb6d333894f581a25b7f27df676ae0868bb57719ff4a7-01",
+    "I-ai:c9acdf0dbda4c81206e43ad9baf79ab9332a7c0b8928d49cc715ac516598dae9-01",
+    "I-ai:cef7c42983f7fa4fe455539930af2644d417ffca78901aaeba3dbb53d7f44323-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the article's or designated critic's substantive judgment of a subject's quality, merit, performance, or suitability.",
+   "definition": "Expresses the article's or a designated critic's evaluative judgment of a subject's quality, merit, performance, or suitability based on observation or relevant criteria.",
+   "distinguished_from": "Unlike Source Viewpoint, Critical Appraisal advances the article's or designated reviewer's assessment rather than preserving an external source's perspective, and unlike Interpretation it evaluates quality rather than broader significance.",
+   "examples": [
+    {
+     "doc": "human:210de0af8008a4e06ba53721b759b9654b873f1515c8ca6d8269235782eba323",
+     "excerpt": "The meal seemed unusually suitable for calorie-conscious diners because its consistently tasty dishes were not fatty or oily, though some were slightly sweet.",
+     "item_id": 4
+    }
+   ],
+   "name": "Critical Appraisal",
+   "subsumes": [
+    "I-human:210de0af8008a4e06ba53721b759b9654b873f1515c8ca6d8269235782eba323-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a material account of how underlying research was designed, sampled, measured, conducted, or analyzed.",
+   "definition": "Describes the design, sample, measurements, procedures, data treatment, or analytical techniques through which substantive research reported in the article was conducted.",
+   "distinguished_from": "Unlike Reporting Transparency, Research Method describes the underlying study rather than production of the journalism, and unlike Evidence Support it explains how results were produced rather than chiefly presenting those results as proof.",
+   "examples": [
+    {
+     "doc": "human:c04e23d83a288a8e5c6a21ce7f0ff54936a71d2f7304617e9a7cfd93b78ce08c",
+     "excerpt": "The researchers applied a statistical technique first used in their 2011 paper to remove estimated ENSO, volcanic, and solar influences from five surface-temperature datasets: NASA, NOAA, HadCRUT5, Berkeley Earth, and Copernicus ERA5.",
+     "item_id": 4
+    },
+    {
+     "doc": "human:ead3ef8ec0643c427a823a0ce8200c440bda509226ee6f0657b86bb7c3c53d55",
+     "excerpt": "The analyzed participants—4,161 women and 3,646 men aged 68–70—reported daily physical activity, current height and weight, and weight at age 20; activities included dog walking, gardening, sports, and cycling to work.",
+     "item_id": 4
+    },
+    {
+     "doc": "ai:e2da1da25621a94bf424a5fa9a558b8ee696d97f068bf49f0d9df392f83bc1e8",
+     "excerpt": "Researchers tested the model with 2,520 participants performing restaurant-choice analogues that varied the number of remaining decisions, the quality of the best known option, and uncertainty about unexplored alternatives.",
+     "item_id": 6
+    }
+   ],
+   "name": "Research Method",
+   "subsumes": [
+    "I-human:c04e23d83a288a8e5c6a21ce7f0ff54936a71d2f7304617e9a7cfd93b78ce08c-01",
+    "I-human:ead3ef8ec0643c427a823a0ce8200c440bda509226ee6f0657b86bb7c3c53d55-01",
+    "I-human:bbf53eac1043890ced4af91c4c25d5e4cc413688c046f6e36959340cbfafd78b-01",
+    "I-ai:e2da1da25621a94bf424a5fa9a558b8ee696d97f068bf49f0d9df392f83bc1e8-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded item would remove an invitation to enter a purchase, sale, investment, employment, or other commercial transaction or relationship.",
+   "definition": "Solicits a purchase, sale, investment, employment response, or other commercial participation rather than reporting news.",
+   "distinguished_from": "Unlike Reader Participation, Commercial Solicitation seeks a transactional response rather than input contributing to reporting or public exchange, and unlike Practical Guidance it promotes a transaction rather than neutrally enabling action.",
+   "examples": [
+    {
+     "doc": "human:abc3dacd409e01b321c6b1e1542cd77f039ed03ca388ada479fc2ba023c4a341",
+     "excerpt": "A classified notice seeks a small-capital partner to market a new trade novelty and states that the investment would be secured.",
+     "item_id": 31
+    },
+    {
+     "doc": "human:abc3dacd409e01b321c6b1e1542cd77f039ed03ca388ada479fc2ba023c4a341",
+     "excerpt": "A promotional order form offers the January 1, 1917 New Year’s Oregonian annual edition for mailing to domestic or foreign recipients at specified copy and postage rates.",
+     "item_id": 39
+    }
+   ],
+   "name": "Commercial Solicitation",
+   "subsumes": [
+    "I-human:abc3dacd409e01b321c6b1e1542cd77f039ed03ca388ada479fc2ba023c4a341-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove the designated means for readers or media representatives to make follow-up inquiries.",
+   "definition": "Provides a designated communication channel for follow-up inquiries about the article or its subject.",
+   "distinguished_from": "Unlike Authorship Attribution, Inquiry Contact enables follow-up communication rather than crediting article production, and unlike Reader Participation it provides a contact route without primarily soliciting contributions.",
+   "examples": [
+    {
+     "doc": "human:8fa90352cb7b425d7f76d1fbb9162a466b893a1f30ee62d0c5fc7525a694b149",
+     "excerpt": "A media contact component identifies Leigh Greenfelder at lgreenfe@kent.edu and 330-672-7108.",
+     "item_id": 11
+    }
+   ],
+   "name": "Inquiry Contact",
+   "subsumes": [
+    "I-human:8fa90352cb7b425d7f76d1fbb9162a466b893a1f30ee62d0c5fc7525a694b149-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate identification of a material fact, relationship, or explanation that remains undetermined.",
+   "definition": "Identifies a material question, evidentiary gap, or unresolved aspect of the reported matter whose answer has not yet been established.",
+   "distinguished_from": "Unlike Situation Description, Open Question foregrounds what remains unknown rather than describing known circumstances, and unlike Outlook it does not primarily forecast how the uncertainty will be resolved.",
+   "examples": [
+    {
+     "doc": "human:d90172bb019df3b1e250a932043c13058c9b6fba4b10b752511e023e552546e5",
+     "excerpt": "Robinson’s occupation and the specific course of his apparent radicalization remain unclear.",
+     "item_id": 18
+    }
+   ],
+   "name": "Open Question",
+   "subsumes": [
+    "I-human:d90172bb019df3b1e250a932043c13058c9b6fba4b10b752511e023e552546e5-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove the article package's statement of legal responsibility, warranties, rights, liability, or complaint procedures.",
+   "definition": "Establishes legal responsibility, disclaims warranties or liability, identifies rights, or communicates procedures for legal complaints concerning published material.",
+   "distinguished_from": "Unlike Editorial Disclosure, Legal Notice establishes legal rights, responsibility, disclaimers, or complaint procedures rather than revealing relationships or production circumstances relevant to editorial evaluation.",
+   "examples": [
+    {
+     "doc": "ai:74cf65f5c67b9ca8fd21470b5c6c117fa417baa6465d64780d8070f085f84a10",
+     "excerpt": "The newswire publisher provides the release without warranties, disclaims responsibility for its accuracy, completeness, legality, licensing, reliability, and included media, and directs complaints or copyright concerns to the author.",
+     "item_id": 11
+    }
+   ],
+   "name": "Legal Notice",
+   "subsumes": [
+    "I-ai:74cf65f5c67b9ca8fd21470b5c6c117fa417baa6465d64780d8070f085f84a10-01"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+Arm · length,Label,n,IdeaLens · outline (raw),IdeaLens-ModernBERT-L · outline (raw)
+full document · AI · >= 500,AI (TPR),"1,196",96.5,88.6
+500-word excerpt · AI · < 500,AI (TPR),206,95.1,73.8
+500-word excerpt · AI · >= 500,AI (TPR),"1,853",90.9,71.3
+full document · human · >= 500,human (FPR),"1,153",3.1,2.8
+500-word excerpt · human · < 500,human (FPR),172,5.2,2.9
+500-word excerpt · human · >= 500,human (FPR),"1,873",2.6,1.9

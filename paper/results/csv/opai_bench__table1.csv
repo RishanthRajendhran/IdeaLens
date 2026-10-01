@@ -1,0 +1,6 @@
+Arm,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+v0: the human seed,human ideas (FPR),"4,145",0.3,0.0,0.0,1.6,0.0,0.1,0.0,0.2,0.0
+v1 to v8: AI-edited versions · mean over 8 versions,"human ideas, AI prose (FPR)","33,163",0.4,0.0,12.1,1.6,0.0,4.0,0.9,0.0,16.2
+v1 to v8: AI-edited versions · median over 8 versions,"human ideas, AI prose (FPR)",,0.4,0.0,10.1,1.6,0.0,3.0,0.3,0.0,4.7
+v1 to v8: AI-edited versions · min over 8 versions,"human ideas, AI prose (FPR)",,0.2 (v1),0.0 (v1),0.0 (v1),1.2 (v2),0.0 (v1),0.0 (v2),0.0 (v2),0.0 (v4),0.0 (v1)
+v1 to v8: AI-edited versions · max over 8 versions,"human ideas, AI prose (FPR)",,0.6 (v5),0.0 (v5),26.3 (v6),2.0 (v6),0.1 (v8),11.3 (v6),3.7 (v6),0.2 (v1),48.5 (v8)

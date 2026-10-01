@@ -1,0 +1,11 @@
+extends: format_llm_flash.yaml
+# Stage 0 on gemini-3.8-flash. Same WebOrganizer annotation config, same
+# zero-shot framing; only the model changes. No character cap (removed 2026-09-10;
+# windows classified before then were labelled from their first 6,000 characters).
+model: gemini-3.8-flash
+
+notes: >
+  The 6,000-char cap means a long window is classified from its opening ~1,000
+  words. That is the released config's own behaviour and is kept, but on the
+  `section` tiling it means a 9,725-word section is labelled from its first
+  tenth.

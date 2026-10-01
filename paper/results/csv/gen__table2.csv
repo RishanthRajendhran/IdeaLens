@@ -1,0 +1,9 @@
+Arm · length,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+clean human · < 500,human ideas (FPR),"2,027",0.3,0.0,0.0,0.5,0.0,0.2,0.0,0.1,0.0
+clean human · >= 500,human ideas (FPR),"1,028",0.9,0.0,0.0,1.5,0.0,0.1,0.0,0.0,0.0
+clean AI (model-written) · < 500,model ideas (TPR),314,81.2,83.1,96.2,59.2,12.4,88.5,49.7,0.0,98.1
+clean AI (model-written) · >= 500,model ideas (TPR),"3,732",97.0,99.7,99.9,85.4,77.9,99.8,72.7,21.3,100.0
+"model-edited (7 categories, adding_detail excluded) · < 500","human ideas, AI prose (FPR)","10,420",13.5,23.7,59.6,9.9,14.9,43.2,35.1,21.5,62.1
+"model-edited (7 categories, adding_detail excluded) · >= 500","human ideas, AI prose (FPR)","3,666",15.6,33.9,60.8,12.9,24.1,51.8,29.7,29.3,41.8
+adding_detail (model-edited) · < 500,"mixed, human-leaning (fire rate)",414,44.5,72.0,95.2,31.6,47.3,83.8,66.9,61.6,69.1
+adding_detail (model-edited) · >= 500,"mixed, human-leaning (fire rate)","1,501",34.1,76.1,93.2,26.0,51.4,83.6,40.8,54.8,67.0

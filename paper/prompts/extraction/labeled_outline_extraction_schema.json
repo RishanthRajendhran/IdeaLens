@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/labeled-outline.json",
+  "title": "Role-Labelled Document Outline",
+  "description": "A content-blind document description, global themes, and a flat ordered outline whose items each receive one primary functional role.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "document_description",
+    "global_themes",
+    "items"
+  ],
+  "properties": {
+    "format": {
+      "type": "string",
+      "const": "{{FORMAT}}",
+      "description": "The exact document format whose role vocabulary was used."
+    },
+    "document_description": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S",
+      "description": "A content-blind, source-independent description of the document type, venue, audience, and register."
+    },
+    "global_themes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "description": "The document's distinct highest-level substantive contributions.",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "description": "A flat list of role-labelled outline items in document order.",
+      "items": {
+        "$ref": "#/$defs/labelledOutlineItem"
+      }
+    }
+  },
+  "$defs": {
+    "labelledOutlineItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "content",
+        "verbatim",
+        "role_name"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The item's position in the outline. IDs must be consecutive integers beginning with 1."
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "A concise, source-independent statement of one substantive, rhetorical, or structural commitment."
+        },
+        "verbatim": {
+          "type": "boolean",
+          "description": "True only when the item intentionally preserves source wording whose exact form is substantive."
+        },
+        "role_name": {
+          "type": "string",
+          "enum": {{ROLE_NAMES_WITH_OTHER_JSON}},
+          "description": "The exact name of one supplied format-specific role or the reserved role Other."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+extends: _base.yaml
+name: Collaboration ladder
+number: 3
+group: Idea provenance
+asks: >
+  Every rung is AI-written prose and only the ideas differ. Does the verdict
+  track whose ideas they are?
+metric: fire
+positive: mixed
+upstream: Our own construction over the evaluation core.
+data_dir: test3_collaboration_ladder
+legacy_npz_stem: test3   # the stem this eval's predictions were written under
+                        # before this repository existed; read by
+                        # scripts/data/import_results.py
+
+generation:
+  brief_prompt: eval_generation/test3_ladder
+  generate_prompt: eval_generation/test3_ladder_generate
+  # Rungs run from "the AI was given almost nothing" to "the AI was given the
+  # human's whole outline". Prose is AI at every rung; only idea provenance moves.
+  rungs:
+    - {id: condition_1, gives: one-line premise,      saha_level: AI-BP}
+    - {id: condition_2, gives: 25-word brief,         saha_level: AI-BP}
+    - {id: condition_3, gives: 60-word brief,         saha_level: AI-EP}
+    - {id: condition_4, gives: global themes,         saha_level: AI-HI}
+    - {id: condition_5, gives: full role-labelled outline, saha_level: AI-HI}
+  brief_max_words: 60
+  # What a brief may NOT contain. Each prohibition closes a specific leak.
+  brief_prohibitions:
+    - no section names or headings
+    - no ordering language ("first ... then ...")
+    - no enumerated points
+    - no distinctive entities, numbers or facts unless present in the title
+    - no phrasing lifted from the document
+  target_length_band: 0.10
+  regenerate_outside: 0.15
+
+audits:
+  # THE SINGLE LARGEST VALIDITY THREAT IN THE SUITE. Low rungs must align at the
+  # random-pair baseline, computed explicitly. Meaningfully above it means the
+  # brief is leaking structure and the low rungs have quietly become high rungs.
+  alignment: {required: true, expect: rises_with_rung, random_baseline: true}
+  brief_leak: {required: true, ngram: 3}
+
+report:
+  rung_caption: "every rung is AI-written prose; only the ideas differ"
+  metric: fire
+  group_by: [level, format]
+  # Every row here is AI prose, so the eval carries no humans and no realised FPR
+  # is measurable on it. The human control arm (condition_0: the same source
+  # documents' own outlines) is what pins the operating point.
+  human_control_arm: condition_0
+
+notes: >
+  Read as a shape, not a score. A detector tracking prose is flat across the
+  rungs because the prose is AI throughout; a detector tracking ideas rises with
+  the rung. Our domain has no exogenous object the way peer review has the paper,
+  so the lowest rung is really "AI-EP with a minimal brief" rather than a clean
+  AI-BP analogue -- state that rather than claiming a mapping we do not have.

@@ -1,0 +1,30 @@
+extends: _base.yaml
+name: In-domain held-out test
+number: null
+group: In-domain
+asks: >
+  Does the detector separate human from AI writing on the distribution it was
+  trained on?
+upstream: >
+  Our own 1M de-leaked-outline corpus, held-out test slice. Labels are distilled
+  from a surface detector's document-level verdicts; state that head-on rather
+  than letting a reader discover it.
+data_dir: indomain
+legacy_item_stem: test   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+
+report:
+  # Per-format spread is roughly 3x at 1% FPR, so a pooled number alone hides
+  # most of what is happening. Topic is reported because the per-topic cut is one
+  # of the three calibration-derived schemes.
+  group_by: [format, topic]
+  in_set: false                     # NEVER in-set in domain: the calibration
+                                    # split exists precisely so it is not needed
+notes: >
+  The split design is three disjoint slices from one held-out budget:
+  val-select (checkpoint selection), calib (HUMAN ONLY, threshold derivation),
+  and test (headline reporting). Calibration is human-only because the operating
+  point is a low quantile of the human score distribution and AI documents
+  contribute nothing to it. Disjointness holds at the SOURCE-DOCUMENT level, not
+  the outline level: deduplicate before splitting, or a duplicate spanning calib
+  and test leaks the threshold into the test humans.

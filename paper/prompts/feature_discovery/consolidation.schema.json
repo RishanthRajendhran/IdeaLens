@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "required": ["canonical_features"],
+  "additionalProperties": false,
+  "properties": {
+    "canonical_features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "description", "direction", "tier", "output_type", "scope",
+                     "source_formats", "operationalization", "subsumes", "direction_conflict"],
+        "properties": {
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "direction": {"enum": ["human", "ai"]},
+          "tier": {"enum": ["programmatic", "judgment"]},
+          "output_type": {"enum": ["fraction_0_1", "binary_0_1", "ordinal_0_3", "count"]},
+          "scope": {"enum": ["universal", "format_specific"]},
+          "source_formats": {"type": "array", "items": {"type": "string"}},
+          "operationalization": {"type": "string"},
+          "subsumes": {"type": "array", "items": {"type": "string"}},
+          "direction_conflict": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}

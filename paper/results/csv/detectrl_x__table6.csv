@@ -1,0 +1,10 @@
+Plan,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+A,English · ai_none,992,87.0,99.1,100.0,68.9,85.3,97.9,92.0,27.3,99.9
+B,English · ai_none,"5,962",87.4,98.5,100.0,67.3,85.4,97.6,93.0,25.9,99.7
+C,English · ai_none,497,86.9,98.4,100.0,65.0,84.1,97.2,93.6,26.2,99.8
+C,English · ai_adversarial,"5,296",83.8,93.1,97.1,64.4,75.4,90.9,84.1,20.0,97.9
+A,English · human,950,4.6,4.3,11.7,2.0,1.2,6.2,1.1,11.4,3.5
+B,English · human,"5,745",4.9,4.1,11.2,2.4,1.1,6.2,1.0,11.4,3.2
+C,English · human,474,3.8,4.0,10.5,2.1,1.3,4.9,0.6,10.5,3.0
+A,non-English · ai_none,"6,865",86.8,95.6,99.9,73.2,–,–,73.8,4.0,98.5
+A,non-English · human,"6,594",0.3,0.1,0.2,0.3,–,–,0.0,0.0,0.0

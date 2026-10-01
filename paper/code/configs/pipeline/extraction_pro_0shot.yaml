@@ -1,0 +1,7 @@
+extends: extraction_flash_6shot.yaml
+# The zero-shot arm. Lifts noticeably less source wording than the few-shot arms
+# (roughly 2-3% against 10%+), because few-shot exemplars TEACH lifting by
+# example. If you use exemplars, make sure the demonstrated outlines are
+# themselves fully paraphrased or the model imitates the copying.
+model: gemini-3.1-pro-preview
+n_shots: 0

@@ -1,0 +1,34 @@
+extends: _base.yaml
+name: HART — content and expression decoupled
+number: 20
+group: Idea provenance
+asks: The closest prior work, on its own benchmark and its own task definition.
+metric: fire
+positive: mixed
+upstream: HART (Bao et al., 2025). Same content x expression decomposition, same hypothesis that content survives surface change.
+data_dir: test20_hart
+legacy_item_stem: hart   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: not_run   # STAGE 2 HAS NOT BEEN RUN ON THIS SET. Scores come
+                         # from UNTREATED outlines: an upper bound that partly
+                         # measures wording lifted from the source, and not
+                         # comparable with the de-leaked sets until it runs.
+                         # Fix with: scripts/pipeline/run_pipeline.py --stage 2
+report:
+  metric: fire
+  group_by: [arm]
+  in_set: true
+notes: >
+  THE CLOSEST PRIOR WORK, and the head-to-head that matters most. Their level-2
+  task — is the CONTENT AI? — is our labelling rule exactly: content origin
+  decides and expression rides along. Their best published level-2 result is
+  AUROC 0.855, so this is a directly comparable number rather than an analogy.
+
+  y = 1 when content origin is human, whatever was done to the prose afterwards,
+  and the mapping is verified against their own task-level-2 flag rather than
+  trusted.
+
+  We score `generation`, the actual document. Their `content` and `language`
+  fields are THEIR decompositions and are kept as metadata only — feeding those
+  into our pipeline would be scoring their intermediate representation, not the
+  document, and the comparison would no longer be head to head.

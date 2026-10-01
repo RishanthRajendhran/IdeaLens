@@ -1,0 +1,9 @@
+TwiceTold: instructions given to the writers
+
+Please write a 500-word story that follows the given outline as closely as possible. The outline includes the genre, a
+brief set of instructions (i.e. perspective, style, etc.), global themes and a list of 8-12 items describing the plot.
+1. Retain the original order of events
+2. Do not omit details provided in the outline
+3. You may add minimal details to make stories coherent
+
+Inputs: {{GENRE}}, {{DOCUMENT_DESCRIPTION}}, {{GLOBAL_THEMES}}, {{OUTLINE}}

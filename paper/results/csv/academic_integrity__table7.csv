@@ -1,0 +1,9 @@
+Arm,n,Pangram 3.2 (shipped),GPTZero (shipped)
+original__raw,289,0.0,0.0
+refine_abstract_only__raw,289,63.3,36.7
+refine_abstract_article__raw,289,79.2,44.3
+new_article_only__raw,289,97.2,83.4
+original__humanized,289,0.3,1.4
+refine_abstract_only__humanized,289,3.5,3.1
+refine_abstract_article__humanized,289,0.7,5.2
+new_article_only__humanized,289,0.0,3.5

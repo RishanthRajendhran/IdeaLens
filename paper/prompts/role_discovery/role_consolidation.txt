@@ -1,0 +1,611 @@
+# TASK
+
+Below are candidate role labels used while assigning one primary functional
+role to outline items across {{N_DOCS}} documents in the "{{FORMAT}}"
+format.
+
+The candidates come from two sources:
+
+1. BASE roles proposed from general knowledge of the format before any real
+   documents were examined;
+
+2. INVENTED roles proposed within individual documents when no base role
+   correctly captured an item's primary function.
+
+Your task is to consolidate these candidates into the FINAL role vocabulary
+for {{FORMAT}}.
+
+The final inventory must cover recurring substantive, rhetorical, and
+bounded structural functions while remaining parsimonious,
+cross-topic, single-label usable, and grounded in the supplied definitions,
+assignment tests, usage counts, and real outline-item examples.
+
+
+# FORMAT
+
+Format: {{FORMAT}}
+
+Documents examined: {{N_DOCS}}
+
+
+# INPUT CANDIDATES
+
+Each candidate is identified by a unique `candidate_id` and includes:
+
+- its origin: base or invented;
+- its original role name;
+- its usage count;
+- its definition;
+- its assignment test;
+- its nearest functional distinction;
+- up to several real examples of items assigned that role.
+
+Candidate IDs, rather than role names, are the authoritative identifiers.
+
+Different candidates may have the same name. A shared name is evidence of
+possible equivalence, but it does not prove equivalence. Compare their
+definitions, assignment tests, distinctions, and examples before merging
+them.
+
+Likewise, candidates with different names may describe the same underlying
+function and should be merged when the evidence supports doing so.
+
+
+# FUNCTIONAL PRINCIPLE
+
+A role names the primary substantive, rhetorical, communicative,
+information-bearing, or structural function that an outline item performs
+at its location in a document.
+
+The final roles must classify composition-level outline items, not:
+
+- topics;
+- named entities;
+- grammatical forms;
+- document positions;
+- visual containers;
+- formatting or markup conventions;
+- specific scenarios;
+- secondary rhetorical effects.
+
+Every final role must support assignment as an item's single primary role.
+
+
+# SINGLE-ROLE USABILITY
+
+The final vocabulary will later be used for single-label classification.
+
+Each final role must represent one coherent primary function.
+
+Roles need not be logically incapable of overlap, but their:
+
+- definitions;
+- assignment tests;
+- distinctions from nearby roles;
+
+must support a principled choice of one primary role in context.
+
+Do not create compound roles such as:
+
+- "Background/Evidence";
+- "Claim and Recommendation";
+- "Instruction/Warning";
+- "Finding plus Interpretation";
+- "Summary/Navigation";
+- "Attribution and Evidence."
+
+Do not solve ambiguity by joining several distinguishable functions into
+one compound label.
+
+
+# EVIDENCE AVAILABLE
+
+Use all of the following evidence:
+
+1. DEFINITIONS
+
+   What function each candidate was intended to represent.
+
+2. ASSIGNMENT TESTS
+
+   When each candidate was intended to be selected as an item's single
+   primary role.
+
+3. FUNCTIONAL DISTINCTIONS
+
+   How each candidate was intended to differ from its nearest competitors.
+
+4. REAL EXAMPLES
+
+   How the candidate was actually used on composition-level outline items.
+
+5. USAGE COUNTS
+
+   How often the candidate was assigned across the examined documents.
+
+No single source of evidence is decisive by itself.
+
+
+# COUNT ASYMMETRY
+
+Usage counts are meaningful but are not directly comparable across
+candidate origins.
+
+Base roles were available for reuse in every document and were explicitly
+preferred whenever they fit.
+
+Invented roles were created independently within individual documents only
+after the base vocabulary was judged inadequate. One recurring missing
+function may therefore be fragmented across several low-count invented
+roles with different names.
+
+Consequently:
+
+- do not treat a high base-role count as proof that its definition
+  correctly describes every assigned item;
+- do not treat a low invented-role count as proof that its function is
+  unimportant or overly narrow;
+- look for semantically equivalent invented candidates across documents
+  before judging recurrence;
+- consider the combined usage of candidates proposed for merger;
+- treat repeated independent invention of equivalent functions as evidence
+  that the base vocabulary lacked a recurring role;
+- use count as one signal, not as a substitute for semantic and functional
+  fit.
+
+
+# WHEN TO MERGE
+
+Merge candidates when one coherent final role can correctly describe all
+of their assigned examples and intended functions.
+
+A merge is appropriate when:
+
+- the candidates describe the same underlying primary function;
+- their differences are only terminological;
+- one is a topic-specific or scenario-specific version of the other;
+- one is a narrow special case fully covered by a broader functional role;
+- several independently invented candidates express the same missing
+  function;
+- different structural container names express the same underlying
+  document-level function.
+
+A valid merged role must have:
+
+- one coherent definition;
+- one usable assignment test;
+- one stable distinction from neighboring roles;
+- a natural relationship to every candidate it subsumes.
+
+Every real example associated with a merged candidate must remain a natural
+instance of the final role.
+
+
+# WHEN NOT TO MERGE
+
+Do not merge candidates merely because they:
+
+- are closely related;
+- frequently occur next to each other;
+- contribute to the same broad goal;
+- concern the same topic;
+- use similar words;
+- occur in similar document positions;
+- appear in the same kind of section or container;
+- share a broad family such as support, framing, instruction, narrative,
+  evidence, or structure;
+- would produce a smaller vocabulary if combined.
+
+Keep roles separate when the distinction changes the primary reason an item
+is present.
+
+In particular, preserve a distinction when:
+
+- the roles answer different assignment questions;
+- removing the corresponding items would remove different functions;
+- one role cannot naturally describe the other's real examples;
+- a later classifier would need the distinction to choose the correct
+  single primary role;
+- combining them would require a vague umbrella definition;
+- both functions are independently well attested and consistently used.
+
+Relatedness is not assignment equivalence.
+
+
+# BROADENING AND GENERALIZATION
+
+A candidate may be renamed or generalized without being merged when its
+original name is too topic-bound, scenario-bound, container-specific, or
+narrow.
+
+Generalize to the underlying recurring function.
+
+A generalized final role must still correctly describe every real item
+assigned to the original candidate. Do not generalize so far that the role
+becomes equivalent to:
+
+- "Information";
+- "Content";
+- "Supporting Material";
+- "Document Component";
+- "Other."
+
+Do not preserve an invented label unchanged when it merely names:
+
+- a particular subject;
+- a named entity;
+- one specialized technique;
+- one narrow event or scenario;
+- a visual container;
+- a section title;
+- a formatting or markup convention.
+
+Name the recurring function instead.
+
+
+# STRUCTURAL ROLES
+
+Some candidates may label bounded structural items rather than ordinary
+substantive or rhetorical moves.
+
+A structural role is valid when it names a recurring document-level
+function, such as:
+
+- summarizing content;
+- supporting navigation;
+- documenting sources;
+- defining reference terminology;
+- supplying supplementary material;
+- disclosing relevant information;
+- recording attribution or contribution;
+- organizing material for reference.
+
+These are examples of possible functions, not a required role list.
+
+For structural candidates:
+
+- identify what the component accomplishes for the document;
+- merge labels that merely name different containers performing the same
+  function;
+- do not retain roles based only on section names, visual forms, markup
+  commands, or document positions;
+- do not merge a structural role into a substantive role merely because
+  the component contains substantive material;
+- do not retain separate structural roles when their only difference is
+  whether the component appeared as a table, note, appendix, list, or other
+  container.
+
+Distinguish structural and substantive roles by the primary commitment
+represented by the real outline items.
+
+If an item primarily reports a result, presents evidence, gives an
+instruction, or advances a claim, its role is substantive even if it
+appeared inside a structural component.
+
+If an item primarily records that a bounded component documents,
+supplements, navigates, attributes, discloses, or otherwise supports the
+document, its role may be structural.
+
+
+# BASE-ROLE TREATMENT
+
+Base roles are top-down hypotheses, not automatically correct final roles.
+
+A base role with substantial coherent usage is evidence for retaining it,
+but usage alone does not prevent merger or revision when its function
+duplicates another role.
+
+A base role with low or zero usage may still represent a valid function
+that was absent from the examined sample.
+
+For every base candidate:
+
+- retain it as a distinct final role when it represents a coherent,
+  potentially useful function not covered elsewhere;
+- merge it when another final role genuinely and fully covers its
+  function;
+- place it in `unretained_base_roles` only when it has zero observed usage
+  and there is insufficient empirical basis to include it in the final
+  vocabulary.
+
+Do not place a used base candidate in `unretained_base_roles`.
+
+Do not force a zero-use base candidate into a semantically mismatched final
+role merely to preserve it.
+
+A zero-use base candidate retained in the final vocabulary may have no real
+example, but its definition and assignment test must still describe a
+distinct and plausible function for {{FORMAT}}.
+
+
+# INVENTED-ROLE TREATMENT
+
+An invented candidate is evidence that the base vocabulary may have missed
+a function, but it is not automatically a valid final role.
+
+For each invented candidate:
+
+- compare it with every semantically nearby base and invented candidate;
+- merge it when an existing or broader final role genuinely covers it;
+- generalize it when it is topic-bound or container-bound;
+- retain it distinctly when its examples show a recurring function not
+  captured elsewhere.
+
+Repeated independent inventions with similar definitions and examples are
+strong evidence for one missing recurring role, even when each individual
+candidate has a low count.
+
+Every invented candidate has observed usage and must be subsumed by exactly
+one final role.
+
+
+# FINAL ROLE NAMING
+
+Give each final role a concise one-to-three-word name in Title Case.
+
+The name must identify the function itself rather than:
+
+- a topic;
+- a named entity;
+- a document position;
+- a narrow scenario;
+- a visual container;
+- a markup convention;
+- multiple functions joined with a slash, ampersand, "and," or "plus."
+
+For structural roles, name the document-level function rather than the
+component's conventional title or surface form.
+
+Reuse a clear existing candidate name when appropriate. Rename candidates
+when a more general, precise, or consistent functional name is needed.
+
+
+# FINAL ROLE DEFINITION
+
+For each final role, write one sentence defining the content or component
+it labels.
+
+The definition must:
+
+- identify one coherent primary function;
+- cover every candidate and real example subsumed by the role;
+- remain general across topics;
+- apply at the outline-item level;
+- avoid relying on a particular document position, section name, entity,
+  scenario, or surface form;
+- remain specific enough to support classification.
+
+For a structural role, define what document-level function the bounded
+component performs rather than what the component is called or how it is
+formatted.
+
+
+# FINAL ASSIGNMENT TEST
+
+For each final role, write one sentence stating when it should be selected
+as an item's single primary role.
+
+Use this general test:
+
+"If this item were removed, what primary function would disappear from the
+document at this point?"
+
+The assignment test must:
+
+- identify the role's primary function;
+- help distinguish it from plausible alternatives;
+- apply naturally to all real examples subsumed by the role;
+- avoid merely repeating the definition.
+
+For a structural role, state what document-level function would be lost if
+the bounded component were omitted.
+
+
+# FINAL DISTINCTION
+
+For each final role, identify its nearest likely competitor or competitors
+and state the decisive functional difference in one sentence.
+
+Use distinctions that matter for single-label assignment.
+
+Do not distinguish roles merely by:
+
+- wording;
+- topic;
+- document position;
+- named entities;
+- formatting;
+- markup syntax;
+- container type;
+- the presence of citations, links, headings, tables, figures, or notes.
+
+If two proposed final roles cannot be distinguished by a stable assignment
+test, merge or redefine them.
+
+
+# COMPLETE CANDIDATE PARTITION
+
+Every input candidate must be accounted for exactly once.
+
+Each candidate with observed usage must appear in the `subsumes` array of
+exactly one final role.
+
+Each zero-use base candidate must appear exactly once in either:
+
+- the `subsumes` array of one final role; or
+- `unretained_base_roles`.
+
+No candidate may:
+
+- appear in more than one final role;
+- appear both in a final role and in `unretained_base_roles`;
+- be omitted from both locations.
+
+Use the exact `candidate_id` supplied in the input. Do not use the role name
+as the identifier.
+
+
+# EXAMPLES
+
+Every output example must be selected from the real examples supplied in
+the input candidates.
+
+Do not:
+
+- invent examples;
+- invent document or item IDs;
+- paraphrase example content;
+- combine fragments from different examples;
+- attribute an example to a candidate that did not supply it.
+
+Choose examples that:
+
+- clearly illustrate the final role;
+- represent the range of candidates subsumed by it;
+- help distinguish the role from nearby alternatives.
+
+A final role may have no examples only when all candidates it subsumes have
+zero observed usage.
+
+Use no more than three examples per final role.
+
+
+# CONSOLIDATION PROCEDURE
+
+Perform the consolidation in this order:
+
+1. Inspect all candidates, definitions, assignment tests, distinctions,
+   counts, and examples.
+
+2. Identify candidates that are clearly equivalent despite naming
+   differences.
+
+3. Identify independently invented candidates that collectively indicate
+   one recurring missing function.
+
+4. Identify topic-specific, scenario-specific, and container-specific
+   candidates that should be generalized.
+
+5. Identify candidates that are related but must remain separate for
+   single-label assignment.
+
+6. Identify structural candidates and distinguish their document-level
+   functions from the substantive content of their components.
+
+7. Form provisional final-role groups.
+
+8. For each group, verify that one definition and assignment test naturally
+   cover every candidate and example in the group.
+
+9. Compare every pair of provisional final roles for redundancy and stable
+   assignability.
+
+10. Decide whether each zero-use base candidate should be retained, merged
+    on semantic grounds, or listed as unretained.
+
+11. Verify the complete candidate partition.
+
+12. Return the final vocabulary.
+
+
+# FINAL SELF-CHECK
+
+Before returning the result, verify:
+
+1. Every final role represents one coherent primary function.
+
+2. Every final role is usable for single-label assignment.
+
+3. No final role is merely a topic, entity, position, container, formatting
+   convention, or surface form.
+
+4. No two final roles are synonyms or near-synonyms without a stable
+   assignment difference.
+
+5. No distinct, well-supported functions were merged merely to reduce the
+   inventory size.
+
+6. No low-count candidate was retained merely because it had a distinctive
+   name.
+
+7. No low-count invented candidate was dismissed without checking for
+   equivalent inventions elsewhere.
+
+8. Count asymmetry between base and invented candidates was taken into
+   account.
+
+9. Every merged role naturally describes all of its supplied examples.
+
+10. Every structural role names a document-level function rather than a
+    component type.
+
+11. Every used candidate appears in exactly one final role.
+
+12. Every zero-use base candidate appears in exactly one final role or in
+    `unretained_base_roles`.
+
+13. Every output example comes directly from the supplied candidate
+    evidence.
+
+14. All `candidate_id` values are reproduced exactly.
+
+
+# CANDIDATES
+
+{{CANDIDATES_BLOCK}}
+
+
+# OUTPUT FORMAT
+
+Return only valid JSON. Do not include Markdown, commentary, explanations,
+or fields outside this schema.
+
+{
+  "format": "{{FORMAT}}",
+  "final_roles": [
+    {
+      "name": "<one-to-three-word functional role name>",
+      "definition": "<one sentence defining the content or component this role labels>",
+      "assignment_test": "<one sentence stating when this should be the item's single primary role>",
+      "distinguished_from": "<one sentence identifying the nearest competing role or roles and the decisive difference>",
+      "subsumes": [
+        "<exact candidate_id>"
+      ],
+      "examples": [
+        {
+          "doc": "<exact supplied document identifier>",
+          "item_id": 1,
+          "excerpt": "<exact supplied outline-item content>"
+        }
+      ]
+    }
+  ],
+  "unretained_base_roles": [
+    {
+      "candidate_id": "<exact zero-use base candidate_id>",
+      "name": "<exact original base-role name>",
+      "reason": "<one sentence explaining why the role remains unvalidated rather than being retained or semantically merged>"
+    }
+  ]
+}
+
+Requirements:
+
+- `format` must be exactly `"{{FORMAT}}"`.
+- `final_roles` must be a non-empty array.
+- `unretained_base_roles` must be an array and may be empty.
+- Every final role must contain exactly `name`, `definition`,
+  `assignment_test`, `distinguished_from`, `subsumes`, and `examples`.
+- Every unretained base role must contain exactly `candidate_id`, `name`,
+  and `reason`.
+- Every candidate with usage greater than zero must appear in exactly one
+  `subsumes` array.
+- Every zero-use base candidate must appear exactly once in either a
+  `subsumes` array or `unretained_base_roles`.
+- No candidate may appear more than once across the complete output.
+- `subsumes` must contain exact candidate IDs, not role names.
+- Examples must be copied exactly from the supplied evidence.
+- Do not invent a target number of final roles.
+- Return a parsimonious vocabulary that preserves every recurring,
+  practically useful substantive, rhetorical, and structural distinction
+  supported by the evidence.

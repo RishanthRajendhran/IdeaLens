@@ -1,0 +1,27 @@
+extends: _base.yaml
+name: CoCoNUTS — six modes of human-AI collaboration on peer reviews
+number: 22
+group: Idea provenance
+asks: >
+  An external benchmark that already draws our line: it labels a person's review
+  that a model rewrote as HUMAN. Do we agree with it?
+metric: fire
+positive: mixed
+upstream: CoCoNUTS. A stratified slice of the 31,554-review test split, weighted onto the hard cell and its control, stratified by generator within each arm.
+data_dir: test22_coconuts
+legacy_item_stem: coconut1   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: done
+report:
+  rung_caption: "the benchmark's own collaboration modes"
+  metric: fire
+  group_by: [arm]
+  in_set: true
+notes: >
+  THE ONE EXTERNAL SET WHOSE LABELS NEED NO REINTERPRETATION. CoCoNUTS labels
+  model-transferred and model-polished human reviews as HUMAN — our idea-level
+  rule, adopted independently by another group for their own reasons. That makes
+  agreement with it evidence about the rule itself, not only about our detector.
+
+  Their `hwmg` arm is their own explicit mix class and should be reported as its
+  own row rather than folded into either side.

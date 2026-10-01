@@ -1,0 +1,46 @@
+extends: _base.yaml
+name: "Can LLMs Produce Novel Research Ideas? — expert reviews (contamination control)"
+number: 28
+group: Pipeline ablations
+asks: >
+  Every review here was written by a human expert, but each reviews an object of
+  known origin. Does the detector fire more on reviews OF model-generated ideas?
+metric: fire
+positive: human
+upstream: >
+  Si, Yang & Hashimoto: 518 expert reviews from the ideation and execution
+  studies, stratified by the origin of the thing being reviewed. Each review's
+  separate rationale fields are concatenated into one document, because a single
+  rationale is too short to yield a usable outline.
+data_dir: test28_research_ideas_reviews
+legacy_item_stem: airreviews   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: not_run   # STAGE 2 HAS NOT BEEN RUN ON THIS SET. Scores come
+                         # from UNTREATED outlines: an upper bound that partly
+                         # measures wording lifted from the source, and not
+                         # comparable with the de-leaked sets until it runs.
+                         # Fix with: scripts/pipeline/run_pipeline.py --stage 2
+
+report:
+  rung_caption: "every review was written by a human expert; the arm is what the review is ABOUT"
+  metric: fire
+  group_by: [arm, stage]
+  # `reviewed_condition` is the covariate under test: it names whose idea the
+  # review is ABOUT, never whose ideas the review itself commits to.
+  in_set: false
+
+notes: >
+  A CONTROL, NOT A DETECTION SET. Under the idea-level rule every row is HUMAN —
+  a human expert wrote every one — so every fire is a false positive and the
+  level is not the interesting quantity.
+
+  THE INTERESTING QUANTITY IS THE GAP. The reviews are stratified by the origin
+  of the reviewed object, so if the detector fires more on reviews of
+  model-generated ideas than on reviews of expert ones, it is reading content
+  bleed from the object being discussed rather than whose ideas the review itself
+  commits to. Criticising someone else's idea is not holding it.
+
+  **The null is a flat rate across conditions**, and a flat line here is a
+  precondition for reading Tests 26 and 27 at face value: without it, an apparent
+  idea-provenance signal in those tests could be topic bleed from the proposals.
+  Run and report this alongside them, never on its own.

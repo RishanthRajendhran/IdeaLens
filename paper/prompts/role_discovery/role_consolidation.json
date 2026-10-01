@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/role-consolidation.json",
+  "title": "Consolidated Role Taxonomy",
+  "description": "A final format-specific role vocabulary consolidating base and invented candidate roles.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "final_roles",
+    "unretained_base_roles"
+  ],
+  "properties": {
+    "format": {
+      "type": "string",
+      "const": "{{FORMAT}}",
+      "description": "The exact document-format label whose candidate roles were consolidated."
+    },
+    "final_roles": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "description": "The final consolidated role vocabulary.",
+      "items": {
+        "$ref": "#/$defs/finalRole"
+      }
+    },
+    "unretained_base_roles": {
+      "type": "array",
+      "uniqueItems": true,
+      "description": "Zero-use base roles left unvalidated rather than retained or semantically merged.",
+      "items": {
+        "$ref": "#/$defs/unretainedBaseRole"
+      }
+    }
+  },
+  "$defs": {
+    "finalRole": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "definition",
+        "assignment_test",
+        "distinguished_from",
+        "subsumes",
+        "examples"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[^\\s]+(?:\\s+[^\\s]+){0,2}$",
+          "description": "A unique one-to-three-word functional role name in Title Case."
+        },
+        "definition": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "One sentence defining the content or bounded component labelled by the final role."
+        },
+        "assignment_test": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "One sentence stating when the final role should be selected as an item's single primary role."
+        },
+        "distinguished_from": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "One sentence identifying the nearest competing role or roles and the decisive functional distinction."
+        },
+        "subsumes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Exact candidate IDs consolidated into this final role.",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "examples": {
+          "type": "array",
+          "maxItems": 3,
+          "uniqueItems": true,
+          "description": "Up to three unchanged examples selected from the evidence supplied for subsumed candidates.",
+          "items": {
+            "$ref": "#/$defs/roleExample"
+          }
+        }
+      }
+    },
+    "roleExample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "doc",
+        "item_id",
+        "excerpt"
+      ],
+      "properties": {
+        "doc": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "The exact supplied document identifier."
+        },
+        "item_id": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The exact supplied outline-item ID."
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "The exact supplied outline-item content, without paraphrase or alteration."
+        }
+      }
+    },
+    "unretainedBaseRole": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_id",
+        "name",
+        "reason"
+      ],
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "The exact candidate ID of a zero-use base role."
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "The exact original name of the unretained base role."
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "One sentence explaining why the zero-use base role remains unvalidated."
+        }
+      }
+    }
+  }
+}

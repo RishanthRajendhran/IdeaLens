@@ -1,0 +1,4 @@
+Arm · length,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+llm_draft · < 500,model ideas (TPR),283,96.5,98.6,100.0,67.8,66.4,99.3,97.9,46.6,99.3
+postedit · < 500,"model ideas, person-edited (TPR)",273,85.7,88.6,91.9,62.3,47.6,90.1,78.8,26.7,93.0
+control · < 500,human ideas (FPR),147,27.9,25.2,22.4,20.4,5.4,16.3,6.1,6.8,30.6

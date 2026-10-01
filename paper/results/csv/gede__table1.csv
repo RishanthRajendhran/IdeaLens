@@ -1,0 +1,8 @@
+Arm,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+human,human ideas (FPR),915,0.1,0.0,0.0,1.5,0.0,0.9,0.0,0.1,0.0
+"model rewrites of the student's essay (improve-human, rewrite-human)","human ideas, AI prose (FPR)","3,648",1.6,1.1,61.5,4.2,2.0,46.0,28.6,14.6,74.5
+"task (assignment only; task, task+resource)",model ideas (TPR),"1,870",99.4,99.9,100.0,93.3,98.9,100.0,100.0,96.7,100.0
+"from the student's summary (summary, task+summary)",model ideas (TPR),"3,550",94.8,99.5,100.0,86.3,94.3,100.0,100.0,91.8,99.9
+"attacks (dipper, rewrite_attack)",model ideas (TPR),"3,604",88.7,76.6,98.6,81.1,67.9,83.3,60.7,87.3,97.6
+"AUC, model ideas vs human",,,0.999,1.000,1.000,0.988,0.999,0.998,0.997,0.999,0.996
+"AUC, model ideas vs human + rewrites",,,0.995,0.996,0.966,0.978,0.984,0.915,0.891,0.958,0.983

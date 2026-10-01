@@ -1,0 +1,7 @@
+Extractor,Rows,n,IdeaLens: % unchanged,IdeaLens-ModernBERT-L: % unchanged
+gpt-5.6-luna,AI,321,98.8,93.5
+gpt-5.6-sol,AI,321,98.4,94.1
+gpt-5.6-terra,AI,321,97.8,91.6
+gpt-5.6-luna,human,304,99.3,99.7
+gpt-5.6-sol,human,303,99.3,98.7
+gpt-5.6-terra,human,304,99.3,99.0

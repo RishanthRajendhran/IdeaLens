@@ -1,0 +1,41 @@
+Arm,Model,0.1%,0.5%,2%,5%
+"proposals from model ideas (model_idea, model_idea_reranked)",IdeaLens · outline,68.0,93.8,100.0,100.0
+"proposals from model ideas (model_idea, model_idea_reranked)",IdeaLens · document,100.0,100.0,100.0,100.0
+"proposals from model ideas (model_idea, model_idea_reranked)",ProseLens,100.0,100.0,100.0,100.0
+"proposals from model ideas (model_idea, model_idea_reranked)",IdeaLens-ModernBERT-L · outline,12.4,54.6,92.8,96.9
+"proposals from model ideas (model_idea, model_idea_reranked)",IdeaLens-ModernBERT-L · document,94.8,95.9,100.0,100.0
+"proposals from model ideas (model_idea, model_idea_reranked)",ProseLens-ModernBERT-L,97.9,100.0,100.0,100.0
+"proposals from model ideas (model_idea, model_idea_reranked)",EditLens-Llama-3B (cal.),0.0,33.0,100.0,100.0
+"proposals from model ideas (model_idea, model_idea_reranked)",Binoculars (cal.),20.6,96.9,100.0,100.0
+proposals from expert ideas,IdeaLens · outline,0.0,8.3,18.8,37.5
+proposals from expert ideas,IdeaLens · document,4.2,6.2,27.1,62.5
+proposals from expert ideas,ProseLens,10.4,14.6,25.0,66.7
+proposals from expert ideas,IdeaLens-ModernBERT-L · outline,2.1,6.2,16.7,39.6
+proposals from expert ideas,IdeaLens-ModernBERT-L · document,6.2,12.5,25.0,79.2
+proposals from expert ideas,ProseLens-ModernBERT-L,6.2,12.5,33.3,64.6
+proposals from expert ideas,EditLens-Llama-3B (cal.),0.0,6.2,58.3,100.0
+proposals from expert ideas,Binoculars (cal.),2.1,10.4,20.8,33.3
+reviews (all),IdeaLens · outline,0.0,2.2,8.7,38.7
+reviews (all),IdeaLens · document,0.4,2.0,5.8,77.6
+reviews (all),ProseLens,2.2,2.2,10.1,71.6
+reviews (all),IdeaLens-ModernBERT-L · outline,0.2,2.4,11.7,49.2
+reviews (all),IdeaLens-ModernBERT-L · document,0.6,2.4,7.3,82.9
+reviews (all),ProseLens-ModernBERT-L,2.0,2.2,12.5,50.4
+reviews (all),EditLens-Llama-3B (cal.),0.0,2.2,12.3,35.1
+reviews (all),Binoculars (cal.),1.8,3.4,14.9,25.2
+papers from an expert idea,IdeaLens · outline,5.3,5.3,10.5,26.3
+papers from an expert idea,IdeaLens · document,0.0,5.3,52.6,78.9
+papers from an expert idea,ProseLens,0.0,10.5,21.1,36.8
+papers from an expert idea,IdeaLens-ModernBERT-L · outline,5.3,10.5,15.8,26.3
+papers from an expert idea,IdeaLens-ModernBERT-L · document,5.3,10.5,42.1,73.7
+papers from an expert idea,ProseLens-ModernBERT-L,15.8,26.3,31.6,57.9
+papers from an expert idea,EditLens-Llama-3B (cal.),0.0,0.0,15.8,47.4
+papers from an expert idea,Binoculars (cal.),0.0,0.0,5.3,5.3
+papers from a model idea,IdeaLens · outline,8.3,20.8,41.7,58.3
+papers from a model idea,IdeaLens · document,0.0,16.7,58.3,91.7
+papers from a model idea,ProseLens,0.0,12.5,33.3,50.0
+papers from a model idea,IdeaLens-ModernBERT-L · outline,4.2,20.8,37.5,50.0
+papers from a model idea,IdeaLens-ModernBERT-L · document,8.3,20.8,50.0,75.0
+papers from a model idea,ProseLens-ModernBERT-L,12.5,29.2,41.7,54.2
+papers from a model idea,EditLens-Llama-3B (cal.),0.0,0.0,12.5,54.2
+papers from a model idea,Binoculars (cal.),0.0,0.0,4.2,12.5

@@ -1,0 +1,11 @@
+extends: _base.yaml
+name: Logistic regression over text embeddings
+backend: logistic
+setting: full
+embedding_model: text-embedding-3-large
+sgd_epochs: 3
+notes: >
+  Cents to refit once the embeddings are cached, and the embedding cache is the
+  expensive artifact rather than the fit. Keep it: re-embedding a corpus is pure
+  waste. This is also the only arm that transfers off-English without an English
+  step, because the embedding is multilingual.

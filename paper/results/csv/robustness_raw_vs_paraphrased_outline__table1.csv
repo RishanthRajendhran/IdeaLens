@@ -1,0 +1,4 @@
+Rows,Label,n,IdeaLens: % unchanged,IdeaLens-ModernBERT-L: % unchanged
+all,AI + human,"10,000",98.6,96.7
+AI,AI,"4,993",97.9,94.0
+human,human,"5,007",99.2,99.4

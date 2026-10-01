@@ -1,0 +1,17 @@
+Source length,Arm,n,IdeaLens · outline (raw),IdeaLens-ModernBERT-L · outline (raw)
+1.2-2k,full document · AI,221,97.3,90.5
+2k+,full document · AI,244,98.0,88.1
+500-800,full document · AI,226,96.0,88.5
+800-1.2k,full document · AI,209,97.1,87.1
+1.2-2k,500-word excerpt · AI,442,93.9,72.6
+2k+,500-word excerpt · AI,488,94.3,76.2
+500-800,500-word excerpt · AI,289,92.7,71.3
+800-1.2k,500-word excerpt · AI,418,91.1,69.4
+1.2-2k,full document · human,224,3.1,2.7
+2k+,full document · human,254,2.4,1.2
+500-800,full document · human,203,3.4,2.5
+800-1.2k,full document · human,176,5.7,3.4
+1.2-2k,500-word excerpt · human,448,2.7,1.8
+2k+,500-word excerpt · human,508,3.0,2.0
+500-800,500-word excerpt · human,265,2.6,1.5
+800-1.2k,500-word excerpt · human,352,4.0,2.3

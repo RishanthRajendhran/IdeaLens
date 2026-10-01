@@ -1,0 +1,26 @@
+extends: _base.yaml
+name: Epoch AI — style imitation of named authors
+number: 21
+group: Adversarial robustness
+asks: A frontier model given five real passages by a named author and told to imitate them.
+upstream: Epoch AI author-imitation corpus. Every passage also carries Pangram, GPTZero and Originality.ai verdicts.
+data_dir: test21_epoch_style_imitation
+legacy_item_stem: epochimit   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: not_run   # STAGE 2 HAS NOT BEEN RUN ON THIS SET. Scores come
+                         # from UNTREATED outlines: an upper bound that partly
+                         # measures wording lifted from the source, and not
+                         # comparable with the de-leaked sets until it runs.
+                         # Fix with: scripts/pipeline/run_pipeline.py --stage 2
+report:
+  group_by: [arm]
+  in_set: true
+  baselines: [pangram_4]
+notes: >
+  THE CLEANEST SURFACE-ATTACK ARM WE HAVE. The ideas are the model's however well
+  it wears someone else's voice, so our rule calls it AI and every miss is a
+  false negative.
+
+  Because every passage already carries three commercial detectors' verdicts, the
+  comparison here is on IDENTICAL DOCUMENTS with no re-running and no
+  reimplementation — the strongest form a baseline comparison can take.

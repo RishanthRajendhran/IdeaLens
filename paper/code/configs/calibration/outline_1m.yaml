@@ -1,0 +1,11 @@
+extends: _base.yaml
+name: Outline-score calibration, 1M corpus
+input: outline
+split: calibration
+n_humans: 80000
+models: [nemotron_1m_full, modernbert_1m_full, logistic_1m_full,
+         nemotron_1m_items, modernbert_1m_items, nemotron_1m_rawout,
+         qwen_1m_full]
+notes: >
+  At 80,000 humans the estimable floor is 0.03%, so every target down to 0.1% is
+  reportable. Scores come from the models' own `_calibration` prediction files.

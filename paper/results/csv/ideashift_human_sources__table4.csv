@@ -1,0 +1,19 @@
+Generator,Arm,n,IdeaLens · outline (paraphrased),IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline (paraphrased),IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+gpt-5.6-luna,level 0 (type line),60,93.3,98.3,98.3,81.7,95.0,98.3,78.3,0.0,100.0
+gpt-5.6-sol,level 0 (type line),119,96.6,98.3,99.2,67.2,92.4,100.0,63.0,0.0,100.0
+gpt-5.6-terra,level 0 (type line),58,93.1,100.0,100.0,79.3,93.1,100.0,69.0,0.0,100.0
+gpt-5.6-luna,level 1 (topic line),60,91.7,98.3,98.3,78.3,90.0,98.3,73.3,1.7,100.0
+gpt-5.6-sol,level 1 (topic line),119,91.6,98.3,100.0,65.5,93.3,100.0,54.6,0.0,100.0
+gpt-5.6-terra,level 1 (topic line),58,89.7,98.3,100.0,67.2,93.1,100.0,55.2,0.0,100.0
+gpt-5.6-luna,level 2 (themes),60,91.7,95.0,96.7,78.3,91.7,96.7,61.7,0.0,100.0
+gpt-5.6-sol,level 2 (themes),119,85.7,97.5,99.2,63.9,87.4,100.0,52.9,0.0,100.0
+gpt-5.6-terra,level 2 (themes),58,81.0,98.3,100.0,56.9,87.9,98.3,60.3,0.0,100.0
+gpt-5.6-luna,level 3 (themes and structure),60,88.3,98.3,98.3,76.7,93.3,96.7,65.0,0.0,100.0
+gpt-5.6-sol,level 3 (themes and structure),119,71.4,96.6,100.0,57.1,88.2,99.2,47.1,0.0,99.2
+gpt-5.6-terra,level 3 (themes and structure),58,84.5,98.3,100.0,63.8,91.4,98.3,56.9,0.0,100.0
+gpt-5.6-luna,level 4 (themes and full outline),60,35.0,83.3,91.7,23.3,58.3,91.7,41.7,0.0,96.7
+gpt-5.6-sol,level 4 (themes and full outline),119,21.0,68.9,95.8,14.3,45.4,96.6,25.2,0.0,99.2
+gpt-5.6-terra,level 4 (themes and full outline),58,17.2,79.3,96.6,12.1,44.8,96.6,25.9,0.0,98.3
+gpt-5.6-luna,level 5 (the source's outline),60,8.3,70.0,86.7,6.7,41.7,78.3,18.3,0.0,95.0
+gpt-5.6-sol,level 5 (the source's outline),119,5.9,48.7,84.9,8.4,36.1,77.3,13.4,0.0,92.4
+gpt-5.6-terra,level 5 (the source's outline),58,6.9,50.0,89.7,3.4,31.0,81.0,19.0,0.0,89.7

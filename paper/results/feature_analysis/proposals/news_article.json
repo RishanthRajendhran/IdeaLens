@@ -1,0 +1,273 @@
+{
+ "features": [
+  {
+   "name": "bounded_empirical_commitment",
+   "description": "Measures whether the central assertion identifies a determinate fact or outcome that could be checked without first supplying missing substantive particulars.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Evaluate only this item's content, using its role_name only to clarify the asserted proposition. Assess checkability, not actual truth, plausibility, importance, or familiarity. Do not consult outside sources or score particular identities or historical periods. Score 0 when the item makes no empirically assessable commitment, offering only aspirations, praise, atmosphere, or abstract significance. Score 1 when an assessable proposition is suggested but its actor, action, object, or outcome remains substantially unspecified. Score 2 when the proposition is determinate but an important boundary needed for a decisive check is absent. Score 3 when an outside investigator would know what particular fact, relationship, occurrence, or outcome to verify. Require only particulars logically necessary for that assertion; names, dates, and numbers are not mandatory. A short attribution or publication record can score 3 if it states a definite, checkable relationship. Pure exhortations score 0. A prediction can score highly if its outcome and relevant conditions are sufficiently bounded.",
+   "rationale": "The contrast suggests a tendency, not a validated detection rule: human-source items more often preserve determinate commitments, while AI-source items often substitute general improvements or significance. Human 254 specifies an acquisition and intended integration; AI 1414 describes broad software improvements with fewer decisive particulars."
+  },
+  {
+   "name": "scope_changing_qualifiers",
+   "description": "Measures qualifications that materially restrict applicability rather than merely decorate or identify the assertion.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Identify conditions, exclusions, thresholds, jurisdictional boundaries, compatibility restrictions, or distinctions among affected groups stated inside the item. Count a qualification only if removing it would change who qualifies, when a rule applies, what works, or which conclusion follows. Score 0 for no such qualification; identifying a person, place, product, or publication date alone does not qualify. Score 1 for one substantive applicability restriction. Score 2 for two independent restrictions, or one explicit default-and-exception distinction. Score 3 when interacting restrictions or exceptions establish a differentiated outcome that would be misrepresented by a simple general statement. Do not reward lists of technical specifications unless they constrain applicability. Do not treat generic uncertainty as an applicability restriction. Very short items can score highly when their central idea is an exception. Pure paratext scores 0 unless it states substantive conditions governing matters such as permissions, access, or responsibility. Nonempirical rules may qualify if their applicability is genuinely specified.",
+   "rationale": "Source-dependent writing often retains inconvenient qualifications that generation smooths away. Human 172 distinguishes an entry-level accessory requirement from the wider product range; AI 55 instead presents broadly compatible design advantages without comparable boundaries."
+  },
+  {
+   "name": "evidence_traceability",
+   "description": "Measures how precisely the item connects an assertion to an identifiable source, artifact, or observation channel.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Evaluate the evidence route actually supplied, not the prestige or presumed authenticity of a source. Score 0 when no evidentiary source is given, or when authority is invoked without an identifiable origin. Score 1 when a source class or generic process is supplied, such as unnamed specialists, polling, or an investigation. Score 2 when a particular person, organization, document, dataset, or direct observer is connected to the assertion. Score 3 when the item additionally identifies a particular evidentiary occasion or artifact through such information as its date, version, location within a record, acquisition circumstances, or described contents. Extra names alone do not raise the score. A source can be anonymized and still score highly if the access route and artifact are specific. Ordinary bylines and copyright ownership score 0 unless they provide substantive provenance beyond naming the creator. Source-documentation paratext is eligible. Short items receive the highest level they explicitly support; assertions without verifiable content score 0.",
+   "rationale": "Human 764 traces a claim through application records and a dated reassignment. AI 3831 presents precise polling percentages without identifying the poll. The proposed signal is the recoverable evidence route, not the presence of a prestigious institution or a familiar name."
+  },
+  {
+   "name": "situated_experiential_warrant",
+   "description": "Measures whether a viewpoint is grounded in a source's particular encounter, action, or firsthand observation.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Determine whether the item explains what the speaker or observer encountered that supports the reported view. Score 0 for no experiential warrant, including credentials alone, generalized expertise, or an interchangeable opinion attributed to a named person. Score 1 for a claim of experience or observation without a particular episode or concrete finding. Score 2 for a specific encounter, action, or observed result explicitly supporting the viewpoint. Score 3 when the item identifies the particular cue, contrast, failed expectation, or access limitation through which that experience generated the conclusion. Do not infer firsthand access from an occupational title. Do not reward emotional intensity unless the experience producing it is specified. A brief item can score 3 if it contains the necessary connection. Pure biographical or authorship notes score 0 unless they explicitly connect a particular experience to the knowledge or judgment being asserted. An attributed subjective experience is eligible even when the evaluator cannot independently verify it.",
+   "rationale": "Human 146 explains a source's expectation through two customer reports about concrete retail behavior. AI 755 attaches an analyst to a general maxim about infrastructure fragility. The difference concerns what the attribution contributes epistemically."
+  },
+  {
+   "name": "method_scope_coupling",
+   "description": "Measures whether details of evidence production constrain the interpretation or reach of the resulting claim.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Consider any process that produces knowledge, including testing, interviewing, observation, document review, experimentation, and personal trials. Score 0 when no process is described, or the item merely assures the reader that checking was thorough. Score 1 when a concrete method is named but its selection rules, settings, or limitations are absent. Score 2 when the item specifies a sampling boundary, test configuration, exclusion, measurement condition, access restriction, or other design choice that could affect the evidence. Score 3 when it explicitly explains how that choice licenses, limits, or changes an inference. A list of many method names is not equivalent to a consequential design detail. Do not demand numerical sample sizes where they are unnecessary. Pure paratext is eligible only when it actually describes evidence production and its implications. Very short items can score 3; items with no knowledge-production claim score 0. Judge only the supplied connection, not whether the methodology is scientifically correct.",
+   "rationale": "Human 3302 connects nonprobability sampling to the inability to calculate a conventional sampling error. AI 1461 lists broad audit activities without comparable interpretation-changing conditions. Human-source reporting more often preserves how evidence was limited by its production."
+  },
+  {
+   "name": "operational_causal_resolution",
+   "description": "Measures how explicitly an explanation identifies the process connecting a cause or input to an outcome.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Evaluate explanatory content rather than the item's rhetorical label or technical vocabulary. Score 0 when the item only associates developments, announces benefits, or states an intended purpose. Score 1 when it names a broad causal factor or enabling technology but leaves the operative transformation unspecified. Score 2 when it describes a concrete action, transfer, interaction, or intermediate change connecting the input to the outcome. Score 3 when the allocation of functions, dependencies, or relevant conditions makes the causal pathway sufficiently explicit to explain why this outcome follows rather than a salient alternative. A simple mechanism may score 3 without multiple stages or specialist terminology. Do not reward complexity, lists of components, or claims of sophistication by themselves. Hypothetical mechanisms are eligible if their operation is explicit. Pure paratext and items containing no explanatory relationship score 0. Rate short explanations on supplied causal resolution, not length.",
+   "rationale": "Human 178 explains how uncached requests are forwarded within a system. AI 296 attributes improvements to sensors, AI guidance, and low-power mechanisms without similarly resolving their operation. The signal is causal detail, not technical subject matter."
+  },
+  {
+   "name": "constraint_coupled_tradeoff",
+   "description": "Measures whether competing considerations are causally coupled into a consequential choice rather than merely listed as advantages and disadvantages.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Identify a choice or outcome involving competing requirements. Score 0 when no tradeoff is present, or when unrelated positives and negatives are merely enumerated. Score 1 when competing objectives are identified but the item does not explain how pursuing one constrains the other. Score 2 when a particular improvement, decision, or resource allocation demonstrably sacrifices or limits another objective. Score 3 when an explicit threshold, comparison, rejected alternative, or circumstance explains why one side of the tradeoff was accepted. Quantification is optional. General statements that balance is important do not exceed 1. Do not infer costs or constraints from background knowledge. Recommendations, evaluations, descriptions, and attributed opinions are equally eligible. A short statement of a rejected option and its specific cost can score 3. Pure paratext scores 0 unless it describes a real conditional compromise, such as a permission granted only under a consequential restriction.",
+   "rationale": "Human 3439 explains why an error-correction improvement was rejected because of its added delay. Many AI-source appraisals, such as 875, list benefits and hazards without resolving an actual choice. Human writing more often retains the decision's friction."
+  },
+  {
+   "name": "contingent_exception",
+   "description": "Detects an outcome shaped by a particular inherited commitment, administrative irregularity, or contingency that produces an exception or workaround.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "operationalization": "Scope: universal. Return 1 only when the item explicitly connects a particular prior commitment, accidental circumstance, legacy arrangement, procedural mismatch, or unexpected event to a present exception, workaround, exclusion, or unusual allocation. Both the contingency and its consequence must be supplied within this item. Examples of the logical form include a fee waived because it was already paid for an unsuccessful application, or additional funding needed because an unforeseen tie changed an award allocation. Return 0 for ordinary historical background, a routine response to a broad challenge, or a generic assertion that circumstances changed. Do not assume that an arrangement is exceptional merely because it is unfamiliar. Events described within the item may have temporal relationships, but never use the item's placement or other items. Short statements and substantive legal or access paratext may qualify. Bare names, dates, credits, aspirations, and items with no stated contingency-to-exception relationship score 0.",
+   "rationale": "Human 493 preserves a fee exemption arising from an earlier unsuccessful application, and human 345 preserves funding consequences of an unexpected tie. Such path-dependent residues are harder to derive from a generic account of how the activity normally works."
+  },
+  {
+   "name": "proposition_level_adjudication",
+   "description": "Measures whether an assessment tests a specific proposition against evidence or a criterion rather than simply endorsing or opposing it.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Identify the proposition being evaluated and the basis for evaluating it, using only this item. Score 0 when there is no assessment, or only generalized approval, disapproval, or a warning to be skeptical. Score 1 when a specific proposition is accepted, denied, or corrected without an evidentiary connection. Score 2 when a particular observation, record, counterexample, or applicable criterion is set against that proposition. Score 3 when the item explains the inferential relationship: why the evidence defeats, narrows, qualifies, or supports the precise claim, including a category or scope distinction where relevant. Merely presenting opposing opinions does not exceed 1. An old value replaced with a new value is normally 1 unless the correction supplies its basis. Short items and correction paratext are eligible. No external fact checking is permitted, and an item does not score highly merely because its conclusion seems correct.",
+   "rationale": "Human 1823 distinguishes what an investigation was designed to test from what a company claimed it demonstrated. AI 4993 supplies a general lack-of-confirmation warning. The human-source tendency is toward adjudicating the actual inference rather than attaching a generic caveat."
+  },
+  {
+   "name": "quantitative_interpretability",
+   "description": "Measures whether quantitative claims supply the units, reference sets, and comparison bases needed to interpret their meaning.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Evaluate substantive quantities, not digits as surface forms. Exclude identifiers, telephone numbers, version labels, and standalone publication dates. For each eligible quantity, identify which interpretation requirements genuinely apply: the measured attribute and unit, affected object or population, relevant interval, denominator for a proportion, and baseline for a claimed change or comparison. Score 0 when no substantive quantity is present or its measured attribute is unintelligible. Score 1 when values and attributes are supplied but major required reference information is missing. Score 2 when most necessary information is supplied but at least one omission materially limits interpretation of a central quantitative claim. Score 3 when all central quantities are interpretable using the applicable requirements. Static capacities and fixed prices do not automatically require time intervals or population denominators. Do not score numerical precision, roundness, magnitude, or actual arithmetic correctness. Very short quantitative statements can score 3. Pure paratext normally scores 0, but substantive prices, allocation amounts, or eligibility thresholds remain eligible.",
+   "rationale": "Human 156 specifies the period, carrier population, revenue threshold, and comparison values for an attrition statistic. AI 3831 provides precise percentages without a defined surveyed population. The proposed distinction is measurement framing rather than numerical density."
+  },
+  {
+   "name": "status_boundary_preservation",
+   "description": "Detects an explicit distinction between adjacent evidentiary, procedural, or operational statuses that prevents a stronger interpretation.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "operationalization": "Scope: universal. Return 1 when the item explicitly distinguishes two statuses that could otherwise be conflated and thereby limits what may be concluded. Eligible forms include authorized versus carried out, allocated versus disbursed, recommended versus mandatory, theoretically supported versus actually tested, or absence of detection versus demonstrated absence. The distinction must concern the same claim, object, or process and must be meaningful within the item. Return 0 for merely reporting one status, listing unrelated stages, or adding a generic disclaimer that information is unconfirmed. Do not infer a distinction from wording conventions, occupational knowledge, or the existence of an earlier item. Ordinary prediction hedging alone scores 0. A very short correction such as a clarification that funds were reserved but not spent can score 1. Pure paratext is eligible when it preserves a consequential rights, provenance, or responsibility distinction; bare attribution and publication metadata score 0.",
+   "rationale": "Human 74 separates theoretical system support from hardware verification, while human 3966 separates earmarking from actual expenditure. The contrast suggests that human-source items more often retain these narrow status boundaries instead of collapsing them into a general capability or accomplishment."
+  },
+  {
+   "name": "localized_uncertainty",
+   "description": "Measures whether uncertainty is confined to an identifiable unknown and connected to a specific evidentiary limitation or resolution condition.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Evaluate the structure of uncertainty, not the frequency of cautious language. Score 0 when no uncertainty is expressed, or when the item merely poses a rhetorical or value question without an identifiable knowledge gap. Score 1 for a broad warning that claims are unconfirmed, outcomes remain unclear, or events may change. Score 2 when a particular unknown is separated from what is known and the item identifies why it remains unresolved or what interpretation depends on it. Score 3 when it additionally specifies the observation, test, document, decision, or condition that could resolve or materially narrow the unknown. Do not require the author to possess the missing evidence. Long lists of unknowns do not earn a higher score unless their boundaries and resolution logic are supplied. Short items can score at any level. Paratext may qualify if it identifies a concrete verification gap; bare metadata and unsupported declarations of complete certainty score 0.",
+   "rationale": "Human 1858 names the measurements needed to establish an inferred phenomenon, and human 1176 separates uncertainties across particular cases. AI-source items often supply blanket confirmation caveats. This feature deliberately allows detailed AI caveats to score highly."
+  },
+  {
+   "name": "unsupported_scope_expansion",
+   "description": "Measures the gap between the limited basis supplied and the breadth, permanence, or decisiveness of the conclusion drawn from it.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Compare the stated premise with the conclusion inside this item only. Score 0 when there is no scope-expanding inference, or when the supplied basis adequately matches the conclusion's reach. General definitions and broad claims do not score merely for being general. Score 1 for a modest expansion from a particular observation to a wider implication with limited support. Score 2 when a single event, product, result, or statement is used to establish a broad sectoral, societal, or institutional transformation without an adequate bridge. Score 3 when the same weak basis is treated as decisive proof of enduring dominance, permanent historical change, universal benefit, or another exceptionally expansive conclusion. Judge semantic reach, not emphatic vocabulary. Explicitly identifying an overreach in someone else's claim does not count as endorsing it. Short items can score highly if they contain the leap. Pure metadata scores 0; paratext containing a substantive transformational claim is eligible.",
+   "rationale": "AI 704 turns a disaster into a decisive historical juncture with permanent engineering consequences. Human 426 instead limits the significance of an intervention using its stated share of the larger problem. Generative elaboration appears more willing to enlarge significance beyond the supplied basis."
+  },
+  {
+   "name": "symbolic_lesson_substitution",
+   "description": "Measures whether an event or observation is converted primarily into a general moral, inspirational symbol, or lesson without adding a case-specific inference.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Ask what the item adds about its particular subject beyond assigning symbolic or moral meaning. Score 0 when it makes no such conversion, or offers a specific causal, evidentiary, or practical inference instead. Score 1 when a general lesson accompanies a substantial case-specific interpretation. Score 2 when the principal interpretive contribution is a broadly reusable lesson about virtues, responsibility, vigilance, progress, or similar values, with little case-specific reasoning. Score 3 when the event serves almost entirely as proof or embodiment of that lesson and the interpretation would remain essentially unchanged after replacing the case with another of the same broad kind. Do not score the political or moral position itself, religious subject matter, or positive sentiment alone. A normative argument can score 0 if it contains a specific warrant. Short items are eligible. Bare credits, dates, definitions, and paratext that merely identifies a document's theme score 0.",
+   "rationale": "AI 979 interprets a guilty plea as proof of official dedication and communal resolution. Human 950 derives a particular possible policy motivation from local institutional conditions. The hypothesized distinction is symbolic closure versus case-dependent interpretation, not optimism versus criticism."
+  },
+  {
+   "name": "unmeasured_collective_reaction",
+   "description": "Measures assertions of shared public feeling, attention, or consensus that lack a bounded observational basis.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Apply only when the item asserts attitudes or reactions of a group, audience, community, industry, or population. Score 0 when no collective reaction is asserted, when only an identified individual's experience is reported, or when the group claim is adequately bounded by described measurement or observation. Score 1 when reactions are attributed to a limited observed group or particular channel but the extension beyond those observations is uncertain. Score 2 when substantial enthusiasm, concern, outrage, division, or agreement is assigned to an unspecified or broadly defined group without an observation route. Score 3 when sweeping, intense, or near-universal collective sentiment is asserted without such a basis, especially across multiple populations. A single illustrative comment does not establish population-wide consensus. Do not reward or penalize any particular emotion. Short items can score highly. Pure paratext scores 0 unless it independently asserts a collective reaction; invitations to participate are not themselves evidence that participation occurred.",
+   "rationale": "AI 573 asserts immense fan excitement without showing how it was observed. Human 1076 ties reactions to interviews and reports from participants. The contrast concerns attribution of collective mental states, not whether audiences are mentioned."
+  },
+  {
+   "name": "outcome_restating_condition",
+   "description": "Measures conditional reasoning that restates success or failure rather than identifying an independently observable determinant.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Examine explicit or implicit claims that an outcome depends on some condition. Score 0 when no conditional reasoning is present, or when the determinant is independently identifiable and informative even if obvious. Score 1 when a real determinant is named but remains broad enough to support many interpretations. Score 2 when the main conditions are generalized competence, adaptability, favorable reception, effective execution, or similar qualities without indicators separating them from the outcome. Score 3 when the conditional is substantially circular: success depends on succeeding, remaining competitive depends on competing effectively, or overcoming difficulties depends on overcoming them. Do not treat specific necessary conditions, legal prerequisites, or resource constraints as circular merely because they are unsurprising. Evaluate meaning rather than particular expressions. Short items are fully eligible. Pure metadata and items with no outcome-condition relationship score 0; access or legal paratext may qualify if it actually contains such reasoning.",
+   "rationale": "Human 664 links expansion to a particular contamination outcome in a trial. AI 1675 makes commercial triumph depend broadly on favorable evaluations and continued improvements. AI-source forecasts more often provide plausible-sounding conditions with limited discriminatory content."
+  },
+  {
+   "name": "goal_level_prescription",
+   "description": "Measures whether recommendations remain at the level of desirable goals or broad intervention categories rather than specifying a meaningful implementable decision.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Apply to explicit recommendations or prescriptions, regardless of role_name. Score 0 when none is present, or when the item specifies a concrete action whose intended implementation is intelligible. Score 1 when an actionable intervention is identified but an important choice about its target, trigger, or application remains open. Score 2 when the recommendation consists primarily of broad intervention categories, such as more oversight, education, coordination, investment, or support, without selecting how they address the stated situation. Score 3 when it mainly urges universally desirable outcomes or comprehensive cooperation, leaving nearly all consequential implementation choices unspecified. Do not require a complete budget, timetable, or institutional plan for a narrow instruction to score 0. Numerical decoration and additional stakeholder groups do not by themselves make a prescription operational. Short normative items can score highly. Pure metadata scores 0; practical, legal, commercial, or access paratext is eligible if it prescribes action. Assess specificity, not the recommendation's merits.",
+   "rationale": "Human 579 advocates a particular change to a specified limit. AI 4460 recommends collaboration among broad stakeholder classes to achieve resilience. The contrast suggests a tendency toward concrete intervention choices in human items and agreeable goal packages in AI items."
+  },
+  {
+   "name": "assurance_without_demonstration",
+   "description": "Measures reliance on declared rigor, authority, or good intentions as a substitute for demonstrating correctness, reliability, safety, or fairness.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Identify whether the item asks the reader to accept a quality assurance on the strength of authority, self-certification, intentions, or an invoked process. Score 0 when no such assurance occurs, or when the assurance is bounded and directly supported by specific findings. Score 1 when some relevant process or evidence is described but supports only part of the assurance. Score 2 when reliability, accuracy, safety, fairness, or credibility is justified mainly by asserted expertise, commitment, thoroughness, or a named procedure without findings that demonstrate the property. Score 3 when these substitutes are treated as conclusive guarantees or comprehensive validation despite lacking a claim-specific demonstration. Merely naming an expert, reporting a job title, or describing a procedure does not qualify without the assurance relationship. Do not judge whether the authority is real or reputable. Very short items and verification or authorship paratext are eligible when they make substantive assurances; bare credits and dates score 0.",
+   "rationale": "AI 4210 announces comprehensive verification as assurance of exactness without exposing what was checked. Human 549 instead describes the actual access and interview conditions. The proposed behavior is displaying the basis of knowledge versus asserting the quality of that basis."
+  },
+  {
+   "name": "non_diagnostic_support",
+   "description": "Measures whether supplied evidence addresses a different property from the conclusion it is presented as establishing.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Identify an evidence-to-conclusion relationship explicitly made or clearly adopted by the item. Accept the supplied premises provisionally; do not fact-check them. Score 0 when no evidential inference is made, when the evidence directly bears on the conclusion, or when the item itself rejects the mismatch. Score 1 when a relevant but weak proxy is used without explaining the missing link. Score 2 when the evidence measures a substantially different property, such as attention offered as proof of effectiveness or processing speed offered as proof of output accuracy. Score 3 when a non-diagnostic proxy is treated as decisive validation, or the claimed support is circular or cannot discriminate between the competing interpretations identified in the item. A cautious modal does not erase a substantive mismatch, but explicit limitations can reduce it. Do not infer hidden evidence from another item. Short items are eligible. Pure metadata, unsupported opinions with no offered evidence, and purely normative claims score 0.",
+   "rationale": "AI 3215 treats faster image processing as establishing improvements in image content. Human 620 explicitly separates stated adoption intentions from realized deployments. This feature captures a reasoning mismatch rather than simply absence of sourcing or broad claim scope."
+  },
+  {
+   "name": "attention_as_substance",
+   "description": "Measures whether the informational substance is primarily that unspecified observers are interested, anticipating developments, or continuing to watch.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Evaluate assertions about attention or anticipation, not their position in a document. Score 0 when attention is not asserted, or when a concrete development, decision, result, or knowledge gap supplies the item's substance. Score 1 when generalized interest accompanies a substantial independently informative claim. Score 2 when observer interest or continued monitoring dominates and the object of that attention is described only broadly. Score 3 when the item contributes essentially only that people will watch, await, speculate, or remain interested, without specifying a substantive new development, a particular observer's analytical criterion, or a resolvable question. Do not score a direct instruction to subscribe, submit evidence, or consult a resource merely because it concerns attention; those are audience actions rather than claims of significance. Specific monitoring protocols also score 0. Very short anticipation statements may score 3. Bare paratext and items without an attention claim score 0.",
+   "rationale": "Human 632 provides a particular decision deadline, whereas AI 2063 mainly predicts that observers will follow a firm's future progress. AI-source outlooks often perform an attention-maintenance act in place of adding another substantive forecast."
+  },
+  {
+   "name": "particularized_micro_observation",
+   "description": "Measures concrete traces and small observable actions that individuate an episode beyond generic atmosphere and participant identification.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Scope: universal. Consider observable physical, behavioral, or digital particulars stated within the item; actual truth and firsthand access are not required for this feature. Score 0 when there is no observational content, or only abstract feelings and atmospheric characterization. Score 1 when an observable but generic action or condition is supplied, such as applause, evacuation, or a crowded setting. Score 2 when at least one fine-grained trace or micro-action is tied to a particular object or circumstance and meaningfully distinguishes the episode. Score 3 when two or more nonredundant fine-grained particulars are related within the episode, creating a specific configuration rather than a stock depiction. Names, dates, addresses, quantities alone, and generic sensory intensifiers are not micro-observations. Do not require unusual subject matter or compare rarity across domains. Very short items can score highly. Captions and other paratext qualify when they contain actual descriptive substance; bare media credits and publication records score 0.",
+   "rationale": "Human 2521 preserves the continued display of a departed official's name on multiple concrete objects. AI 184 relies more on a broadly evocative gaming atmosphere. Human-source items more often retain small material particulars instead of only the episode's expected emotional character."
+  }
+ ],
+ "uncomputable": [
+  "bounded_empirical_commitment: proposes a structural property that cannot be computed from a single item",
+  "contingent_exception: proposes a structural property that cannot be computed from a single item",
+  "proposition_level_adjudication: proposes a structural property that cannot be computed from a single item",
+  "symbolic_lesson_substitution: proposes a structural property that cannot be computed from a single item",
+  "attention_as_substance: proposes a structural property that cannot be computed from a single item"
+ ],
+ "contrast": {
+  "unit": "item",
+  "label_source": "model",
+  "format": "News Article",
+  "format_agnostic": false,
+  "role_matched": true,
+  "per_side": 5000,
+  "n_cells": 42,
+  "stamp": {
+   "generated": "2026-09-08T19:20:33",
+   "git_revision": "7c0bf67",
+   "config": {
+    "model": "gpt-5.6-sol",
+    "effort": "max",
+    "per_side": 5000,
+    "match_roles": true,
+    "seed": 0,
+    "schema": "feature_discovery/feature.schema.json",
+    "consolidate": true,
+    "name": "Item-level discovery, our outline-trained model labels",
+    "unit": "item",
+    "label_source": "model",
+    "format_agnostic": false,
+    "notes": "This is a variant of the corpus-labels feature, but with labels derived from our trained model rather than the corpus. The model is a detector trained on outlines, and the labels are determined for each idea. The idea is to see which features of each idea the model relies on when making AI vs. human detection decisions.\n",
+    "score_keys": [
+     "nemotron_1m_fullitem"
+    ]
+   },
+   "config_source": "configs/features/_base.yaml",
+   "eval": "indomain"
+  }
+ },
+ "usage": {
+  "completion_tokens": 16957,
+  "prompt_tokens": 509134,
+  "total_tokens": 526091,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": 0,
+   "audio_tokens": 0,
+   "reasoning_tokens": 10144,
+   "rejected_prediction_tokens": 0,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": 0,
+   "cache_write_tokens": 509131,
+   "cached_tokens": 0,
+   "image_tokens": null,
+   "text_tokens": null
+  }
+ },
+ "stamp": {
+  "generated": "2026-09-09T20:58:18",
+  "git_revision": "94b7ff4",
+  "config": {
+   "model": "gpt-6-astra",
+   "effort": "xhigh",
+   "per_side": 5000,
+   "match_roles": true,
+   "seed": 0,
+   "schema": "feature_discovery/feature.schema.json",
+   "consolidate": true,
+   "name": "Item-level discovery, our outline-trained model labels",
+   "unit": "item",
+   "label_source": "model",
+   "format_agnostic": false,
+   "notes": "This is a variant of the corpus-labels feature, but with labels derived from our trained model rather than the corpus. The model is a detector trained on outlines, and the labels are determined for each idea. The idea is to see which features of each idea the model relies on when making AI vs. human detection decisions.\n",
+   "score_keys": [
+    "nemotron_1m_fullitem"
+   ]
+  },
+  "config_source": "configs/features/_base.yaml"
+ }
+}

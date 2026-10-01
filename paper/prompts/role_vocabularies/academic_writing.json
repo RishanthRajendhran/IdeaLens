@@ -1,0 +1,1129 @@
+{
+ "format_slug": "academic_writing",
+ "n_roles": 52,
+ "source": "role discovery, consolidation pass (role_consolidation_xhigh.json)",
+ "final_roles": [
+  {
+   "assignment_test": "Select this role when removing the item would deprive readers of background, setting, history, or established conditions needed to understand the ensuing discussion.",
+   "definition": "Content that situates an inquiry or argument by supplying background, setting, history, or established conditions needed for understanding.",
+   "distinguished_from": "Unlike Descriptive Account, it primarily prepares readers for subsequent material rather than portraying the focal subject as substantive content.",
+   "examples": [
+    {
+     "doc": "ai:f832abcedf534c42e2297a2f34818e9ca874e3d03ec69a8c81f231e4b1959f41",
+     "excerpt": "Ethiopia entered this period with Christianity established since the 4th-century Axumite Kingdom and a culturally embedded Ethiopian Orthodox Tewahedo Church distinguished by its theology, Ge'ez scriptures, liturgy, monasticism, and customs; this identity and the country's decentralized politics conditioned resistance to Catholic influence.",
+     "item_id": 2
+    },
+    {
+     "doc": "human:c16e81777e15245f85c45d4f40ba7d7126753ce6fc83bdc67439cbe5f63fa701",
+     "excerpt": "Democratic elections ordinarily allow citizens to select officials, but campaigns require money and endorsements that can make successful candidates beholden to lobbyists and special-interest groups.",
+     "item_id": 21
+    }
+   ],
+   "name": "Contextualization",
+   "subsumes": [
+    "B01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item mainly establishes what the focal phenomenon, case, object, state, process, or development is like or what occurred.",
+   "definition": "Content that substantively portrays a phenomenon, case, object, state, process, or sequence of events.",
+   "distinguished_from": "Unlike Contextualization, it describes the focal subject as substantive content, and unlike Finding, it is not primarily presented as an outcome of the current inquiry.",
+   "examples": [
+    {
+     "doc": "human:dd69c2ad745a0739ddd804e282aa2558e4f5a11545367359e81b6b4edcf7f28c",
+     "excerpt": "Hook founded University Centers for Rational Alternatives and its newsletter Measure to oppose radical transformation of universities while balancing institutional continuity with rationally justified reform.",
+     "item_id": 78
+    },
+    {
+     "doc": "ai:5efa69fd3c7f6a8d5d306e2c597e90a2cbfa1a7ff0945eeacd71fe8d91f3a64c",
+     "excerpt": "Reputational damage, such as that caused by unsafe products or executive scandals, reduces trust, customers, and market value while signaling deficiencies in crisis management, transparency, communication, or ethical standards.",
+     "item_id": 16
+    }
+   ],
+   "name": "Descriptive Account",
+   "subsumes": [
+    "B02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate identification of the difficulty, tension, anomaly, or unresolved condition that calls for investigation or resolution.",
+   "definition": "Content that establishes an intellectual, practical, or social difficulty, tension, anomaly, or unresolved condition warranting attention.",
+   "distinguished_from": "Unlike Research Gap, it identifies the underlying issue rather than a deficiency in existing knowledge, and unlike Significance, it establishes what is wrong rather than why the issue matters.",
+   "examples": [
+    {
+     "doc": "ai:69a1580a1d220074f7517783567777ddf04fad96122fea896170dd0c751a6064",
+     "excerpt": "Managing the workload requires strategic allocation of time among scholarship, class preparation, assessment, meetings, and professional development, while overlapping obligations can erode boundaries between professional and personal life.",
+     "item_id": 11
+    },
+    {
+     "doc": "human:5f4ef125b088582cef8a6af8554b0d99775054cba711d9e5446334296aeb2740",
+     "excerpt": "Globalization has made football highly culturally diverse, but contact among different backgrounds does not automatically create tolerance or integration; misunderstanding, prejudice, and conflict can prevent organizations from realizing diversity’s potential benefits.",
+     "item_id": 8
+    }
+   ],
+   "name": "Problem",
+   "subsumes": [
+    "B03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly explains why a topic, question, or work merits attention or has value.",
+   "definition": "Content that establishes the importance, relevance, or prospective value of a topic, inquiry, argument, or capability.",
+   "distinguished_from": "Unlike Problem, it explains why something matters rather than what is wrong, and unlike Implication, it need not derive downstream consequences from completed reasoning or findings.",
+   "examples": [
+    {
+     "doc": "ai:0366669a257dffd22d34844a8bfe975739baa0fc8cead0e081a099ea7ed09364",
+     "excerpt": "Growing demand for credible visual evidence requires technically strong, reusable photography that differentiates organizations, validates achievements, and supports leadership positions across sectors and regions.",
+     "item_id": 6
+    },
+    {
+     "doc": "ai:ffb7c40e40c19d3474c6734fe098ecb361a4811a38fea9297247d3c584652c31",
+     "excerpt": "Accurate inflation forecasts preserve later bidding capacity and improve the balance between player quality and financial efficiency; inaccurate forecasts can leave participants unable to compete near the auction’s end.",
+     "item_id": 28
+    }
+   ],
+   "name": "Significance",
+   "subsumes": [
+    "B04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item mainly characterizes what identifiable prior scholars, theories, courts, regulators, or other authoritative sources have said, found, ruled, or established.",
+   "definition": "Content that characterizes the substantive positions, findings, approaches, rules, or development of identifiable prior scholarly or institutionally authoritative sources.",
+   "distinguished_from": "Unlike Literature Synthesis, it need not derive an integrated cross-source pattern, and unlike Source Documentation, it substantively discusses prior sources rather than recording them for retrieval.",
+   "examples": [
+    {
+     "doc": "human:00fe417b4b6366fa2ed00bd6bc88229665699495f5c026043e94fe7831cfd809",
+     "excerpt": "Feminist critic Lillian S. Robinson characterizes the canon as a product of privileged men, exposing its class and gender bias.",
+     "item_id": 10
+    },
+    {
+     "doc": "human:1863e8325858432207a378d90d97b9c159f34431d0be9c22a78dc0302e1c62bc",
+     "excerpt": "Carl Sauer attributed depopulation to interacting causes, including social and psychological disruption, reduced reproduction, overwork, starvation after imported organisms altered agriculture, and disease; he called the 1518 event the first recorded epidemic without excluding earlier unrecorded outbreaks.",
+     "item_id": 28
+    },
+    {
+     "doc": "ai:a78ed7ca7465abb6d4dbff38d36e4a8f3484e4d66631e286af25c52d9cd1a076",
+     "excerpt": "Five attributed decisions are said to shape Colorado doctrine: Fisher v. Bell on reasonable reliance, Smith v. Johnson on definite promises, Anderson v. Colorado Corp. on measurable detriment, Brown v. Eagle Enterprises on commercial limits, and Miller v. Denver Investments on good faith.",
+     "item_id": 8
+    }
+   ],
+   "name": "Prior Work",
+   "subsumes": [
+    "B05",
+    "I-ai:a78ed7ca7465abb6d4dbff38d36e4a8f3484e4d66631e286af25c52d9cd1a076-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is an integrated account of patterns, relationships, agreements, or tensions across multiple existing scholarly sources or traditions.",
+   "definition": "Content that combines multiple scholarly sources or traditions to derive an organized account of their collective patterns, relationships, or debates.",
+   "distinguished_from": "Unlike Prior Work, it produces a cross-source synthesis rather than primarily reporting identifiable sources separately, and unlike Analysis, its examined material is specifically the existing scholarly record.",
+   "examples": [
+    {
+     "doc": "human:630eff13aa071a3e8b2ab2172c302f26f9cb9ce56df4f20ed9c9cfe81828299f",
+     "excerpt": "Feminists disagree whether ending every form of oppression belongs intrinsically to feminism or is instead a moral duty and practical necessity for achieving a narrower feminist objective.",
+     "item_id": 14
+    },
+    {
+     "doc": "human:b043cbda6ae1f6fb1293193514955e6d7c63944b8420ca2149dd71bcf47174cf",
+     "excerpt": "Soil sensors support irrigation placement, real-time moisture and nutrient monitoring, landslide detection, and automated fertigation; such systems can reduce labor, fertilizer, pollution, and water use while maintaining quality, although tillage and mulching can alter respiration sensitivity.",
+     "item_id": 22
+    }
+   ],
+   "name": "Literature Synthesis",
+   "subsumes": [
+    "B06"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the stated omission, unresolved question, inconsistency, or inadequacy in existing scholarship or knowledge.",
+   "definition": "Content that identifies an omission, unresolved question, inconsistency, or inadequacy in the existing body of knowledge.",
+   "distinguished_from": "Unlike Problem, it concerns a deficiency in scholarship or knowledge, and unlike Contribution, it states what is missing rather than what the present work adds.",
+   "examples": [
+    {
+     "doc": "human:be87116ab591a9aa02c94fe8c2137be4818b8cf500169788e0fe891553b1d13d",
+     "excerpt": "Traditionalist criticism has emphasized liturgy, ecumenism, and religious liberty while comparatively neglecting the council’s allegedly heretical ecclesiology.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:dd69c2ad745a0739ddd804e282aa2558e4f5a11545367359e81b6b4edcf7f28c",
+     "excerpt": "Recent scholarship, especially Cheryl Misak’s, connects pragmatism continuously with analytic philosophy, yet Hook’s place in that history remains largely unexplored apart from preliminary treatment by Cornel West.",
+     "item_id": 87
+    }
+   ],
+   "name": "Research Gap",
+   "subsumes": [
+    "B07"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily states what the document, inquiry, or one of its parts intends to accomplish.",
+   "definition": "Content that states the aim, objective, or intended intellectual task of a work or one of its parts.",
+   "distinguished_from": "Unlike Research Question, it specifies an intended accomplishment rather than an issue to be answered, and unlike Central Claim, it does not assert the governing answer or position.",
+   "examples": [
+    {
+     "doc": "ai:0366669a257dffd22d34844a8bfe975739baa0fc8cead0e081a099ea7ed09364",
+     "excerpt": "Because photography can build long-term equity and relationships beyond an event, the article proposes examining how technical quality, strategic alignment, and stakeholder responsiveness can turn it into a sustainable competitive asset.",
+     "item_id": 8
+    },
+    {
+     "doc": "human:9dbbf9eaf35c1fabba1c9a0f71c1bfa8e29702b745a7ec83737eb61eefa98e6f",
+     "excerpt": "The study investigates what distinguishes GraphQL from other proposed improvements to REST and how fully it delivers its claimed advantages.",
+     "item_id": 3
+    }
+   ],
+   "name": "Purpose",
+   "subsumes": [
+    "B08"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary function is to formulate the explicit or functionally interrogative issue organizing the inquiry.",
+   "definition": "Content that articulates an explicit or functionally interrogative issue the work seeks to answer.",
+   "distinguished_from": "Unlike Purpose, it specifies what is to be answered rather than the activity to be undertaken, and unlike Hypothesis, it does not propose an expected answer.",
+   "examples": [
+    {
+     "doc": "human:2160532b4bf98e97a3cdb250086f80b3c8a072c8eb1a7c0e9aba556bd668243f",
+     "excerpt": "The inquiry extends beyond enfranchising older adolescents to ask whether all age thresholds should be abolished and whether even a six-year-old, as David Runciman proposes, has a defensible claim to vote.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:65e494eea0c5402686b0120bf276f28d8c435747e6602d586ebfdd856bfde407",
+     "excerpt": "Clay identifies three unresolved warship-design questions following his disagreement with French emphasis on deck arrangement: whether armor should cover the entire hull, whether wood or iron should support it, and how hull fouling should be prevented.",
+     "item_id": 1
+    }
+   ],
+   "name": "Research Question",
+   "subsumes": [
+    "B09"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item states the principal proposition whose acceptance would constitute the document's overall argumentative resolution.",
+   "definition": "Content that advances the overarching thesis, position, or answer governing the document's main argument.",
+   "distinguished_from": "Unlike Claim, it governs the document's overall argumentative burden, and unlike Conclusion, its identity depends on overarching scope rather than culminating placement after developed reasoning.",
+   "examples": [
+    {
+     "doc": "human:13ac79cf71ad67219f7e5193df19808156574e098bd8053945a14613e9c498b3",
+     "excerpt": "Historicism contains a central paradox: architecture is asked to embody a medieval national identity, but writers, historians, and ideologues must supply its associations, turning the façade into a text whose representational content may supersede constructional unity or practicality and completing print’s triumph precisely when buildings imitate the pre-print past.",
+     "item_id": 14
+    },
+    {
+     "doc": "human:18d329b4a0fb94eaad05f64a2088bbfc48ef7c6c6ee0e592a783a5c341a85146",
+     "excerpt": "Alongside prescriptive law and general narrative, the Talmud contains halakhic anecdotes describing later authorities implementing rules; discrepancies between rule and performance indicate that practical application required adjustment to life circumstances rather than merely demonstrating piety.",
+     "item_id": 1
+    }
+   ],
+   "name": "Central Claim",
+   "subsumes": [
+    "B10"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item advances a contestable proposition of local or intermediate scope for acceptance within the document's reasoning.",
+   "definition": "Content that advances a contestable proposition of local or intermediate scope within an argument or analysis.",
+   "distinguished_from": "Unlike Central Claim, it does not govern the document's overall argumentative burden, and unlike Evidence, it is the proposition advanced rather than material offered in support.",
+   "examples": [
+    {
+     "doc": "ai:ec32ed292d115d9d6b3824d7fe3fc39db67430deb2a7e3c913bd73e828df6bec",
+     "excerpt": "Identity has shifted from being primarily local and community-based to being distributed across networks and detached from physical context.",
+     "item_id": 12
+    },
+    {
+     "doc": "human:d20b6bf410da8edd9d43a2a24085ef07c85484c46e7a67a17fcc5fe4813d41a4",
+     "excerpt": "No technical or human moderation system can guarantee civil chat in fast-moving communities with changing membership; design should instead treat technical artifacts as politically consequential and chat as a set of social processes that can encourage, but not ensure, desired behavior.",
+     "item_id": 7
+    }
+   ],
+   "name": "Claim",
+   "subsumes": [
+    "B11"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item specifies in advance an expected relationship, outcome, or interpretation to be systematically examined against evidence or analysis.",
+   "definition": "Content that states a testable, assessable, or systematically examinable expectation about a relationship, outcome, or interpretation.",
+   "distinguished_from": "Unlike Research Question, it proposes an expected answer, and unlike Projection, it is posed for systematic assessment rather than prospective understanding.",
+   "examples": [
+    {
+     "doc": "human:99bc2fb4495774be3c136e6c49130ecf716933ea14cbcc7dd51c49fe9e30d080",
+     "excerpt": "The authors therefore hypothesize that lambda-like ST elevation could visually identify acute myocardial infarction patients at risk of fatal ventricular arrhythmia, cardiogenic shock, and sudden cardiac death.",
+     "item_id": 22
+    },
+    {
+     "doc": "ai:6464aa2f15c0d60f2b5ae094acc1430d1b69564ed47eeb91b4b4369d2301dbf3",
+     "excerpt": "Apatinib inhibits VEGFR-2-dependent tumor blood-vessel formation; investigators hypothesized that combining this mechanism with the DNA-disrupting actions of ifosfamide and etoposide would attack osteosarcoma through complementary pathways.",
+     "item_id": 3
+    }
+   ],
+   "name": "Hypothesis",
+   "subsumes": [
+    "B12"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily identifies the original knowledge, method, interpretation, resource, capability, or perspective supplied by the work.",
+   "definition": "Content that states the distinctive addition a work makes to scholarship, understanding, method, resources, or practice.",
+   "distinguished_from": "Unlike Research Gap, it states what the work adds rather than what was missing, and unlike Significance, it identifies the addition itself rather than why it matters.",
+   "examples": [
+    {
+     "doc": "human:b50d5ea07e5a2d1ae87cbef9da1a3410fcf57c968c599c9f8bc50b2c834636dd",
+     "excerpt": "Combining initial pathogen levels, storage tenacity, inactivation, Food Safety Objectives, and public-health targets created a predictive framework for evaluating controls and reducing outbreak risk.",
+     "item_id": 75
+    },
+    {
+     "doc": "human:b50d5ea07e5a2d1ae87cbef9da1a3410fcf57c968c599c9f8bc50b2c834636dd",
+     "excerpt": "The project increased awareness among producers, authorities, scientists, and consumers, identified needs for future research, surveillance, prevention, education, and training, and established a durable research network for continued work.",
+     "item_id": 80
+    }
+   ],
+   "name": "Contribution",
+   "subsumes": [
+    "B13"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily establishes the deliberate reach, exclusions, applicability, or boundaries of an inquiry or argument.",
+   "definition": "Content that delimits what a work covers, excludes, assumes within its remit, or claims to apply to.",
+   "distinguished_from": "Unlike Limitation, it sets intentional boundaries on reach or applicability rather than identifying a consequential weakness or constraint.",
+   "examples": [
+    {
+     "doc": "human:f7676a8563731b86fdddcbcd6d5bf7ab4405a5e68025086980a2f053effd7d9f",
+     "excerpt": "The second branch excludes data in motion because per-message session keys and forward secrecy make scalable access depend on retaining or linking keys, creating attractive targets and fundamentally weakening communications; the volume of independent keys further obstructs a balanced solution.",
+     "item_id": 33
+    },
+    {
+     "doc": "ai:ae46d16f668848a1569050cd753fe20d0f1f8efc4aef7ef7614581dc1008d90f",
+     "excerpt": "The inquiry has an outward focus on community heritage and an inward focus on practice transformation, motivated by the practitioner’s desired professional growth and by illustration’s emerging role in qualitative knowledge generation.",
+     "item_id": 9
+    }
+   ],
+   "name": "Scope",
+   "subsumes": [
+    "B14"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly fixes the meaning, criteria, or operational use of a term, category, variable, or concept needed by the discussion.",
+   "definition": "Content that establishes the meaning, criteria, or operational use of a term, category, variable, or concept.",
+   "distinguished_from": "Unlike Reference Aid, it performs a substantive local definitional act rather than organizing material for selective lookup, and unlike Conceptual Framework, it does not establish a larger system of conceptual relationships.",
+   "examples": [
+    {
+     "doc": "ai:1165ac88bb5a534a80fb84f371e8a76a6bf0bf17084b7119ca0bafc93a604779",
+     "excerpt": "Smart contracts are blockchain-stored programs that execute predetermined rules when conditions are satisfied, automating business logic and replacing some intermediary functions while inheriting on-chain immutability, transparency, and verifiability.",
+     "item_id": 15
+    },
+    {
+     "doc": "human:d20b6bf410da8edd9d43a2a24085ef07c85484c46e7a67a17fcc5fe4813d41a4",
+     "excerpt": "The platform adopts a participatory-citizenship ideal in which people engage actively in civic and social affairs, collaborate on community efforts, and build relationships, trust, shared understanding, and collective commitments through media curation.",
+     "item_id": 9
+    }
+   ],
+   "name": "Definition",
+   "subsumes": [
+    "B15"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item states a premise, idealization, or condition that the work takes as given rather than seeking to establish.",
+   "definition": "Content that makes explicit a premise, idealization, or condition accepted as a basis for reasoning, modeling, or inquiry.",
+   "distinguished_from": "Unlike Claim, it is stipulated or provisionally accepted rather than advanced for supported acceptance, and unlike Scope, it supplies a premise rather than a boundary of coverage.",
+   "examples": [
+    {
+     "doc": "human:cc6064739833d4791b25ec1b9bb196d436a206931a5deda79cf37cce7b201d81",
+     "excerpt": "The analysis assumes that participants can construct a distinct textual identity for each online setting.",
+     "item_id": 18
+    },
+    {
+     "doc": "ai:f1a42913f0869a7a528b66032ab20da057fb0cf0fea39f697bba3432d2ff57ee",
+     "excerpt": "Readers are invited to suspend objectivist materialism and consider that communication might cross dimensions, unfamiliar forms of intelligence might exist, and contact might depend on receptive listening rather than transmission.",
+     "item_id": 3
+    }
+   ],
+   "name": "Assumption",
+   "subsumes": [
+    "B16"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily establishes the theory, model, conceptual lens, or organized system through which the subject will be investigated or understood.",
+   "definition": "Content that establishes a theory, model, conceptual lens, or organized set of constructs governing analysis or interpretation.",
+   "distinguished_from": "Unlike Definition, it organizes relationships among concepts rather than fixing one concept's meaning, and unlike Analytic Method, it supplies an intellectual lens rather than a material-processing technique.",
+   "examples": [
+    {
+     "doc": "human:e0b309984d189a96055fdfd9f55f361459c079992c5fb4441fedc90ac5f6a12f",
+     "excerpt": "The Chinese triad of human, earth, and heaven, understood as harmony between humanity and nature, deliberately structured Nadam as a three-act sonic experience.",
+     "item_id": 17
+    },
+    {
+     "doc": "human:cc6064739833d4791b25ec1b9bb196d436a206931a5deda79cf37cce7b201d81",
+     "excerpt": "Because writers anticipate readers’ reactions and compose utterances to elicit responses, reader-response theory may help explain interaction in text chat.",
+     "item_id": 4
+    }
+   ],
+   "name": "Conceptual Framework",
+   "subsumes": [
+    "B17"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly specifies the overall investigative logic or architecture connecting questions, materials, procedures, and analysis.",
+   "definition": "Content that specifies the overall investigative strategy, methodological architecture, or logic by which an inquiry addresses its question or objective.",
+   "distinguished_from": "Unlike Procedure, Data Basis, and Analytic Method, it characterizes the inquiry's overall architecture rather than one operational element.",
+   "examples": [
+    {
+     "doc": "human:5ea63c8a183ab86a65a575d2ae1ab72657d789a894d5bedf646a7f6f791e646d",
+     "excerpt": "E3SM-LR uses 110 km atmosphere and 30–60 km ocean grids, while E3SM-HR uses 28 km atmosphere and 8–16 km ocean grids; both apply identical tuning and transient HighResMIP forcings for 1950–1969, with mesoscale eddy parameterization only in LR and no submesoscale scheme in either.",
+     "item_id": 13
+    },
+    {
+     "doc": "human:c05c2c317f2613631979925e27147f2aa725ff479a7ec53b26eed9ddceca7120",
+     "excerpt": "Phase II compares ice creams containing optimally extracted gel at 16.35%, 27.25%, or 37.8% (w/w) with controls containing either no stabilizer or 0.2% guar gum plus 0.15% carrageenan, producing five formulations overall.",
+     "item_id": 7
+    }
+   ],
+   "name": "Study Design",
+   "subsumes": [
+    "B18"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item mainly identifies or characterizes what was studied and how the materials, cases, participants, or observations were obtained or selected.",
+   "definition": "Content that identifies and characterizes the empirical, textual, archival, computational, or other materials examined, including their sources and selection criteria.",
+   "distinguished_from": "Unlike Evidence, it defines inputs to the inquiry rather than deploying material to support a proposition, and unlike Procedure, it concerns what was studied rather than actions performed on it.",
+   "examples": [
+    {
+     "doc": "human:d2447d34b1904e4ebe8502b93dd27a119a4e795b09ebbf5fd0d4bc9c0ebcd9dd",
+     "excerpt": "The study included 270 Singaporean children from low-income families, ages 10–15, and their caregivers in 2017–2019; caregiver reports measured 14 cumulative risks and behavioral problems, while children reported 18 adverse experiences and the number of people providing each of eight support types.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:e0b309984d189a96055fdfd9f55f361459c079992c5fb4441fedc90ac5f6a12f",
+     "excerpt": "Data collected from August 2018 through February 2019 comprised video observations, retrospective fieldnotes, and interviews; manual thematic coding and narrative analysis of video produced general themes and detailed descriptions rather than bare action records.",
+     "item_id": 6
+    }
+   ],
+   "name": "Data Basis",
+   "subsumes": [
+    "B19"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an account of operational actions undertaken to generate, collect, prepare, or implement the inquiry.",
+   "definition": "Content that describes ordered actions, protocols, interventions, or collection processes carried out in conducting scholarly work.",
+   "distinguished_from": "Unlike Study Design, it describes operational actions rather than overall investigative logic, and unlike Analytic Method, it concerns generating or preparing material rather than examining it for outcomes.",
+   "examples": [
+    {
+     "doc": "human:59180dfb64a2835c863335fe91a41db213b032ccf5b55f5623d4b93f2b72e137",
+     "excerpt": "Imputed expenditure records are edited again to ensure that imputation has not created outliers.",
+     "item_id": 25
+    },
+    {
+     "doc": "human:c05c2c317f2613631979925e27147f2aa725ff479a7ec53b26eed9ddceca7120",
+     "excerpt": "Phase I extracts gel at 20, 40, and 80 °C with seed-to-water ratios of 1:10, 1:20, and 1:30 (w/w), then uses linear regression analysis to assess dried-gel yield and apparent viscosity.",
+     "item_id": 5
+    }
+   ],
+   "name": "Procedure",
+   "subsumes": [
+    "B20"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily states how materials were processed, measured, coded, modeled, compared, or otherwise examined to obtain analytical outcomes.",
+   "definition": "Content that specifies the techniques, criteria, or procedures used to transform or examine materials and derive analytical outcomes.",
+   "distinguished_from": "Unlike Procedure, it concerns examination and derivation rather than collection or preparation, and unlike Analysis, it specifies how examination was conducted rather than performing the substantive examination.",
+   "examples": [
+    {
+     "doc": "human:91313a5783d6ab2050ad4b235a9ca563d27ca521eac527d5a79f33cb4193cd17",
+     "excerpt": "Eager compares corresponding actions through pattern matching so that differing events can be recognized as instances of one rule, such as moving successive buttons 80 pixels to the right.",
+     "item_id": 21
+    },
+    {
+     "doc": "human:211264af70bc91afa1613b011266f7878172a5a744b4099aa53333ae18efab69",
+     "excerpt": "A coding chart records each woman’s and man’s violence-proneness, male morbid jealousy, violence in each partner’s upbringing, relationship and abuse duration, premarital cohabitation violence, first-intercourse age and contraception, children, and suicide attempts, using numbers or yes/no values.",
+     "item_id": 25
+    }
+   ],
+   "name": "Analytic Method",
+   "subsumes": [
+    "B21"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary contribution is to report an outcome yielded by the present inquiry.",
+   "definition": "Content that reports an empirical, analytical, textual, computational, or theoretical outcome produced by the current work.",
+   "distinguished_from": "Unlike Evidence, it presents an outcome as a contribution of the inquiry rather than chiefly using material to support another proposition, and unlike Interpretation, it reports what was found rather than what the outcome means.",
+   "examples": [
+    {
+     "doc": "human:c1799ad16db924515648313810d38c1cd67d8f01f92da6403bdb1691270d3015",
+     "excerpt": "Ball-release speed during the seventh over was significantly lower than during overs one through four.",
+     "item_id": 9
+    },
+    {
+     "doc": "ai:ae46d16f668848a1569050cd753fe20d0f1f8efc4aef7ef7614581dc1008d90f",
+     "excerpt": "Sharing the menu illustration on a Mission community Facebook page prompted approximately twenty stories about Chinese food, family, nostalgia, routine, and belonging, closely echoing themes from the zine workshop.",
+     "item_id": 32
+    }
+   ],
+   "name": "Finding",
+   "subsumes": [
+    "B22"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly supplies observations, data, textual material, testimony, or other grounds intended to substantiate, test, or challenge a proposition.",
+   "definition": "Content that presents material used to substantiate, test, or challenge a claim, hypothesis, interpretation, or conclusion.",
+   "distinguished_from": "Unlike Finding, its primary function is support rather than reporting an inquiry outcome as such, and unlike Justification, it supplies grounds rather than the reasoning connecting those grounds to acceptance.",
+   "examples": [
+    {
+     "doc": "human:18d329b4a0fb94eaad05f64a2088bbfc48ef7c6c6ee0e592a783a5c341a85146",
+     "excerpt": "A bilingual excerpt from Tosefta Beṣah 3:17 prohibits sedan-chair use on a festival by both men and women, bars a blind person’s staff and a shepherd’s pack, and records an additional prohibition against leading an animal with a staff.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:3846a2c62c102d2f64e577a0a13546e08ee946d36b78e0bd41337657dd8cef43",
+     "excerpt": "Three captioned vase images provide visual evidence of open-handed striking and sparring, the extended left guard, and the competitive setting represented by a prize tripod.",
+     "item_id": 18
+    }
+   ],
+   "name": "Evidence",
+   "subsumes": [
+    "B23"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is to explain why a proposition, interpretation, assumption, methodological choice, or other scholarly decision is warranted.",
+   "definition": "Content that supplies reasoning warranting a claim, premise, interpretation, methodological choice, or other scholarly decision.",
+   "distinguished_from": "Unlike Evidence, it provides the inferential or practical rationale connecting considerations to acceptance, and unlike Explanation, it defends a proposition or choice rather than accounting for a phenomenon.",
+   "examples": [
+    {
+     "doc": "human:a2558428b4792d87d708efd110b3e67cc279189c91fe9f544d0c9d2d697f6bfc",
+     "excerpt": "The team selected a circle-packing enclosure chart because nested circles could represent the hierarchy while circle size represented aggregate values, and development began with the D3.js library.",
+     "item_id": 12
+    },
+    {
+     "doc": "human:5f4ef125b088582cef8a6af8554b0d99775054cba711d9e5446334296aeb2740",
+     "excerpt": "A diversity strategy is justified because cultural variety can advance unity, inclusion, dialogue, and organizational effectiveness, whereas previous sanctions have had insufficient impact; FIFA’s international objectives require different cultures to cooperate and treat diversity as cohesive rather than divisive.",
+     "item_id": 17
+    }
+   ],
+   "name": "Justification",
+   "subsumes": [
+    "B24"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when a particular instance, case, scenario, or demonstration is present chiefly to make a more general point concrete and understandable.",
+   "definition": "Content that supplies a representative instance, case, scenario, or demonstration primarily to clarify a general point.",
+   "distinguished_from": "Unlike Evidence, it primarily clarifies rather than proves, and unlike Descriptive Account, its particular case is subordinate to the general point illustrated.",
+   "examples": [
+    {
+     "doc": "human:9cb0e3c988dd70f2741297d1f46e358dd5a1287d0764752f27ce41dc298f67c1",
+     "excerpt": "Sega’s earlier Dreamcast demonstrated console networking through web access, score updates, and real-time competitive or cooperative games designed to minimize transmission delay.",
+     "item_id": 24
+    },
+    {
+     "doc": "human:7183f1e22881acb92d43c569334fa6ece53ee4263483a73c2f904ad0d7271b90",
+     "excerpt": "Rapid transport adds productive capacity by saving valuable travelers' time: if more than 500,000 annual Manchester–Liverpool railway passengers each save one hour, the economy gains 500,000 hours, or 50,000 ten-hour workdays, equivalent to 167 additional workers without added food consumption.",
+     "item_id": 23
+    }
+   ],
+   "name": "Illustration",
+   "subsumes": [
+    "B25"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main contribution is to align multiple objects, positions, cases, methods, or outcomes to establish their similarities, differences, correspondences, or trade-offs.",
+   "definition": "Content that places multiple objects of inquiry in relation to identify meaningful similarities, differences, correspondences, or trade-offs.",
+   "distinguished_from": "Unlike Analysis, it is specifically organized around relational alignment among alternatives or cases, and unlike Evaluation, it need not judge which is better or more valid.",
+   "examples": [
+    {
+     "doc": "ai:8eb657343b7ae2d0cfaca71a8dd566b6223e7b3c05afd87cf76a145e70d8c924",
+     "excerpt": "Comparative frameworks reflect national history, culture, and constitutional traditions: the United States uses specialized military tribunals for service-specific offenses, whereas the United Kingdom integrates military justice more closely with civil law; both must reconcile discipline, rights, accountability, and sovereignty under international norms.",
+     "item_id": 15
+    },
+    {
+     "doc": "human:5be26cfba72c6f2ed4d18f0d8a8822f989ecaf2ee47222132df8e0b99bd05646",
+     "excerpt": "Kamajor abuses differ in scale and pattern from AFRC/RUF atrocities but include horrific killings of suspected coalition members and supporters, sometimes involving disembowelment and ritual consumption of organs intended to transfer an enemy’s strength.",
+     "item_id": 55
+    }
+   ],
+   "name": "Comparison",
+   "subsumes": [
+    "B26"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item itself examines, decomposes, organizes, or relates material to derive a substantive pattern, structure, relationship, category, or inference.",
+   "definition": "Content that develops substantive understanding by examining, decomposing, organizing, or relating evidence, concepts, cases, or findings.",
+   "distinguished_from": "Unlike Analytic Method, it performs the intellectual examination rather than describing its technique, and unlike Interpretation, it derives patterns or relations rather than chiefly assigning meaning or significance.",
+   "examples": [
+    {
+     "doc": "human:36e59a0204bbdeb2888fec34c0691a3824a50cbf890cfc9048899c09c25f6398",
+     "excerpt": "National myths conceal class conflict and compete within nations, as shown by rival accounts of Irish, French, English, Greek, Turkish, and Jewish origins associated with different religious, dynastic, or cultural inheritances.",
+     "item_id": 29
+    },
+    {
+     "doc": "ai:af92e19bc3194918c37f282844efc863079a90c6a55d518b179fe87f7df22035",
+     "excerpt": "The cataloged reactions exemplify digital vigilantism: perceived injustice and anonymous collective action encourage theatrical, personalized harassment such as the proposed Archangel Michael scenario, while group participation diffuses individual responsibility and bypasses legal restraint.",
+     "item_id": 10
+    }
+   ],
+   "name": "Analysis",
+   "subsumes": [
+    "B27"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily accounts for why or how a phenomenon, event, relationship, or outcome occurs.",
+   "definition": "Content that proposes causes, mechanisms, processes, or reasons accounting for a phenomenon or observed outcome.",
+   "distinguished_from": "Unlike Analysis, it specifically accounts for why or how something occurs, and unlike Justification, it explains a phenomenon rather than defending a proposition or choice.",
+   "examples": [
+    {
+     "doc": "human:dd69c2ad745a0739ddd804e282aa2558e4f5a11545367359e81b6b4edcf7f28c",
+     "excerpt": "Hook’s economic views moved toward free-market theory after joining the Hoover Institution, but his broader political conservatism arose mainly from American social, cultural, and political controversies rather than economics alone.",
+     "item_id": 76
+    },
+    {
+     "doc": "ai:b6efa7ac54b9973ed5781fe52434517fd4d8d46ab66de7a7d1d564b922625d01",
+     "excerpt": "Game customization turns visual assets into expressions of identity; the engraved R8 Revolver skin in CS:GO illustrates how personalized aesthetics can shape a player’s representation within a digital world.",
+     "item_id": 14
+    }
+   ],
+   "name": "Explanation",
+   "subsumes": [
+    "B28"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly states what evidence, findings, patterns, texts, or events mean within a broader conceptual or scholarly context.",
+   "definition": "Content that assigns meaning, significance, or conceptual import to evidence, findings, patterns, texts, or events.",
+   "distinguished_from": "Unlike Finding, it explains the meaning of an outcome rather than reporting it, and unlike Implication, it interprets present significance rather than developing downstream consequences.",
+   "examples": [
+    {
+     "doc": "ai:b7907ffa7d9295d47702189c7dcdd655360298c63cf4c4d3fd644c2ca406bbc0",
+     "excerpt": "Orwell’s accessible language reflects the animals’ limited political understanding while conveying deeper characterization and anticipation; the tone moves from optimism about a better future toward unease about conflict and difficulty.",
+     "item_id": 8
+    },
+    {
+     "doc": "ai:4f19be85360dbe97c4ae8634e66275e99bd3cc7125beee75ea172778fe824101",
+     "excerpt": "Under President Quezon, the Commonwealth realized the institutional strategy by giving experienced legislative politicians extensive responsibility for departments, national policy, administration, and limited international affairs, thereby preparing the country for statehood.",
+     "item_id": 28
+    }
+   ],
+   "name": "Interpretation",
+   "subsumes": [
+    "B29"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily renders a reasoned judgment about the merit, adequacy, validity, quality, effectiveness, or value of something.",
+   "definition": "Content that assesses an argument, source, theory, method, case, outcome, or practice against explicit or implicit criteria.",
+   "distinguished_from": "Unlike Analysis, it reaches a judgment of merit or adequacy rather than merely deriving patterns, and unlike Counterposition, it need not introduce a challenge to the document's own position.",
+   "examples": [
+    {
+     "doc": "human:db1bcffd8ad1941fed3759367419356669ec9ccb58d06051cbc676c44316ef04",
+     "excerpt": "Print-based linear criticism cannot yet adequately explain database-driven digital objects characterized by ephemerality and continual reordering; digital archives enable collaboration, resource sharing, open access, and authentic pedagogy but may also reinforce national organization and reproduce economic and social restrictions.",
+     "item_id": 24
+    },
+    {
+     "doc": "human:abf37d15dbdd876f39aa05570bc2143a4a8c76f0b9261bfa61eb5a928795a959",
+     "excerpt": "C remains uncertain whether the superstition is true because a visitor sometimes arrives, while at other times nobody comes or the visitor does not match the prediction.",
+     "item_id": 5
+    }
+   ],
+   "name": "Evaluation",
+   "subsumes": [
+    "B30"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly introduces a credible objection, rival explanation, alternative interpretation, or competing position for consideration.",
+   "definition": "Content that presents an objection, rival explanation, alternative interpretation, or competing scholarly position relevant to the current argument.",
+   "distinguished_from": "Unlike Prior Work, it is included specifically as a challenge or alternative to the current reasoning, and unlike Rebuttal, it presents rather than answers that challenge.",
+   "examples": [
+    {
+     "doc": "human:211264af70bc91afa1613b011266f7878172a5a744b4099aa53333ae18efab69",
+     "excerpt": "A 1985 letter from the YWCA/Battered Women’s Services of San Diego argues that the violence-prone theory blames victims and could encourage punitive professional treatment, weaker criminal-justice and police responses, reduced medical sensitivity, and decreased shelter funding.",
+     "item_id": 12
+    },
+    {
+     "doc": "human:2160532b4bf98e97a3cdb250086f80b3c8a072c8eb1a7c0e9aba556bd668243f",
+     "excerpt": "A third objection claims that children’s susceptibility to parents, teachers, media, and other authorities prevents autonomous voting and would let adults appropriate children’s electoral power.",
+     "item_id": 6
+    }
+   ],
+   "name": "Counterposition",
+   "subsumes": [
+    "B31"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily answers, qualifies, accommodates, or overcomes an identified objection, rival explanation, or competing position.",
+   "definition": "Content that responds to a counterposition by refuting it, limiting its force, accommodating it, or showing why the current position remains preferable.",
+   "distinguished_from": "Unlike Counterposition, it answers rather than introduces a challenge, and unlike Justification, its reasoning is specifically directed against an identified alternative or objection.",
+   "examples": [
+    {
+     "doc": "ai:4f19be85360dbe97c4ae8634e66275e99bd3cc7125beee75ea172778fe824101",
+     "excerpt": "Critics argued that accepting another decade of American supremacy compromised independence and entrenched elite political power, but military inequality and revolutionary defeat made the Commonwealth route viable and ultimately successful.",
+     "item_id": 29
+    },
+    {
+     "doc": "human:7183f1e22881acb92d43c569334fa6ece53ee4263483a73c2f904ad0d7271b90",
+     "excerpt": "Even if restricting particular machinery were desirable, permitting other machinery exports makes selective enforcement impracticable because smugglers can calculate and accept the added risk.",
+     "item_id": 10
+    }
+   ],
+   "name": "Rebuttal",
+   "subsumes": [
+    "B32"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's central contribution is to identify a constraint that reduces confidence, reach, precision, completeness, feasibility, or generalizability.",
+   "definition": "Content that identifies a weakness, uncertainty, constraint, or source of restricted validity affecting a work, its materials, methods, findings, or claims.",
+   "distinguished_from": "Unlike Scope, it acknowledges a consequential constraint rather than setting an intentional boundary, and unlike Evaluation, it need not render an overall judgment of merit.",
+   "examples": [
+    {
+     "doc": "ai:023f7e3529d0f60c7cc2221e5cb0b8262d03b4c835c47cf23fd8c95db43cc591",
+     "excerpt": "Review reliability is threatened by fabricated or strategically distorted feedback, including owners inflating ratings and competitors or dissatisfied tenants posting unfair criticism.",
+     "item_id": 14
+    },
+    {
+     "doc": "ai:78a0f5667822ac0c17e0a827fa5c62e59c2f39b566a477c234f141fa99831fda",
+     "excerpt": "AI systems are being trained to estimate the cultural significance of typography, crest treatments, and campus imagery, though genuine emotional attachment to institutional symbols remains difficult to quantify.",
+     "item_id": 8
+    }
+   ],
+   "name": "Limitation",
+   "subsumes": [
+    "B33"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily develops what follows from a finding, claim, interpretation, or conclusion for understanding, practice, policy, theory, or future inquiry.",
+   "definition": "Content that states broader consequences or ramifications following from the work's findings, claims, interpretations, or conclusions.",
+   "distinguished_from": "Unlike Interpretation, it develops downstream consequences rather than present meaning, and unlike Recommendation, it need not advocate a specific action.",
+   "examples": [
+    {
+     "doc": "human:f66eab7159cc1e2a05159517d279770f9eff14cb44690623cb2a57b39eb28910",
+     "excerpt": "The proximity-assay work supports standardized multiplexed recombinant-binder readouts for basic biology, preclinical drug-response measurement, and potentially monitoring patient responses, while avoiding batch variation in commercial antibodies.",
+     "item_id": 44
+    },
+    {
+     "doc": "ai:d8dcbce4c600960102d049d02736875bcbc645b21c5247c3ad3efa498e40c695",
+     "excerpt": "Understanding traditional games and their stories encourages people to see sports as symbols of virtues and social values and to engage with them more consciously than they would with mere physical contests.",
+     "item_id": 21
+    }
+   ],
+   "name": "Implication",
+   "subsumes": [
+    "B34"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily advocates a specific action, change, practice, policy, design choice, or direction for future inquiry.",
+   "definition": "Content that proposes an action, change, practice, policy, design choice, or research direction on the basis of the document's reasoning or findings.",
+   "distinguished_from": "Unlike Implication, it prescribes or advocates action rather than merely identifying consequences, and unlike Requirements, its force comes from the document's reasoning rather than an imposed condition.",
+   "examples": [
+    {
+     "doc": "ai:47c6ce9e312518481ce9e91df8c8e87dd3f184c50fcae4b549d2f32ef98ba042",
+     "excerpt": "The opposition should replace the removal strategy with frequent oversight hearings, budget restrictions, and subpoenas, which can constrain executive conduct more precisely than an impeachment effort blocked by the Senate threshold.",
+     "item_id": 14
+    },
+    {
+     "doc": "ai:3e06d143ca29cf9bde0d42f7b2767d5aaf90d63639a009734dbd3335db43f7dd",
+     "excerpt": "Callao Cave and comparable sites require protection from erosion, earthquakes, tourism, vandalism, looting, and development through National Museum and local-government action supported by community involvement, vigilance, and adequate resources.",
+     "item_id": 25
+    }
+   ],
+   "name": "Recommendation",
+   "subsumes": [
+    "B35"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly provides the culminating resolution, final judgment, or answer produced by a completed line of reasoning or inquiry.",
+   "definition": "Content that closes a line of inquiry or argument by stating its resolved answer, final judgment, or culminating position.",
+   "distinguished_from": "Unlike Summary, it resolves rather than merely condenses, and unlike Central Claim, it primarily functions as the culmination of developed reasoning rather than as its governing proposition.",
+   "examples": [
+    {
+     "doc": "ai:3072822afc9e0b26f603ee3755a630af52bfaed6115b5aa46caa9064ceeb4d61",
+     "excerpt": "The final claim is that appropriately supported students can become active environmental and democratic leaders now, gaining the collaborative capacities and networks needed for sustained civic contribution throughout adulthood.",
+     "item_id": 57
+    },
+    {
+     "doc": "ai:4571045a88234acbccd368347339af2cca7eb739ea0bcc8e3d878d1cf14ccb08",
+     "excerpt": "The review concludes that progress depends on personalized, lifespan-oriented, culturally responsive research and practice centered on autistic perspectives, with the prospect of expanding inclusion, opportunity, satisfaction, and well-being worldwide.",
+     "item_id": 10
+    }
+   ],
+   "name": "Conclusion",
+   "subsumes": [
+    "B36"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main value is to provide a compressed representation of material developed elsewhere in the document or one of its parts.",
+   "definition": "Content that condenses the aims, content, methods, reasoning, findings, or conclusions of a larger unit into a selective overview.",
+   "distinguished_from": "Unlike Conclusion, it represents material without necessarily resolving it, and unlike Reference Aid, it supports overview rather than selective consultation.",
+   "examples": [
+    {
+     "doc": "human:dd69c2ad745a0739ddd804e282aa2558e4f5a11545367359e81b6b4edcf7f28c",
+     "excerpt": "Hook defended instrumentalist knowledge and objective ethical naturalism against correspondence and coherence epistemologies, moral absolutism, existentialist arbitrariness, and logical-positivist emotivism.",
+     "item_id": 2
+    },
+    {
+     "doc": "human:91313a5783d6ab2050ad4b235a9ca563d27ca521eac527d5a79f33cb4193cd17",
+     "excerpt": "An opening summary frames repetitive interaction as a consequence of personal computing, surveys ways to simplify routine work, and announces a detailed account of a system for automating iterative tasks.",
+     "item_id": 1
+    }
+   ],
+   "name": "Summary",
+   "subsumes": [
+    "B37"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a reasoned forecast of a probable, possible, or conditional future state, development, capability, or trajectory not posed for testing in the current inquiry.",
+   "definition": "Content that anticipates a probable, possible, or conditional future state, development, capability, outcome, or trajectory based on current conditions or informed expectations.",
+   "distinguished_from": "Unlike Hypothesis, it is not specified for systematic assessment by the current inquiry, and unlike Implication, it forecasts what may occur rather than tracing consequences that follow from completed reasoning.",
+   "examples": [
+    {
+     "doc": "ai:6d761d99fa7fcb7424db4e6133ff8754a131e019971fe4c15bd1a4b9de1ba84d",
+     "excerpt": "The medium-term trajectory will depend on geopolitics: sharper US-China competition could force Singapore to recalibrate its engagements, whereas regional stability could permit broader cooperation.",
+     "item_id": 16
+    },
+    {
+     "doc": "ai:6316db464f190ce1f01db4de7861676b4ce578e01b4a764b95f2df6fe48cef87",
+     "excerpt": "Industry reports anticipate continued global market growth as urbanization, disposable income, and health awareness increase.",
+     "item_id": 12
+    },
+    {
+     "doc": "ai:8eb657343b7ae2d0cfaca71a8dd566b6223e7b3c05afd87cf76a145e70d8c924",
+     "excerpt": "Future military justice is expected to combine digital transformation, cybersecurity, and greater data transparency with stronger human-rights protections, misconduct oversight, leadership training, and international harmonization, particularly for joint operations and peacekeeping, to improve fairness, accountability, and command effectiveness.",
+     "item_id": 17
+    }
+   ],
+   "name": "Projection",
+   "subsumes": [
+    "I-ai:6d761d99fa7fcb7424db4e6133ff8754a131e019971fe4c15bd1a4b9de1ba84d-01",
+    "I-ai:0366669a257dffd22d34844a8bfe975739baa0fc8cead0e081a099ea7ed09364-01",
+    "I-ai:6316db464f190ce1f01db4de7861676b4ce578e01b4a764b95f2df6fe48cef87-01",
+    "I-ai:5b77d39366757bc83b1f46903d95cfc6b323c687fa744f773b9043a205eec65d-01",
+    "I-ai:8190620f4456646433765f57fe7c9e752d2a9999e657e1603ba73f82945e7ff2-01",
+    "I-ai:8eb657343b7ae2d0cfaca71a8dd566b6223e7b3c05afd87cf76a145e70d8c924-01",
+    "I-ai:af1ee9810f78cb4b5ab053e21929652e61449b49e5d3735d36398a25bad81006-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily specifies mandatory or acceptance-defining criteria, limits, safeguards, capabilities, or conditions imposed on work, conduct, an artifact, or an implementation.",
+   "definition": "Content that states obligatory or acceptance-defining criteria, constraints, safeguards, capabilities, or performance conditions that work, conduct, an artifact, or an implementation must satisfy.",
+   "distinguished_from": "Unlike Recommendation, it records mandatory or acceptance-defining conditions rather than advocating action from the document's reasoning, and unlike Scope, it constrains acceptable completion or implementation rather than bounding an inquiry's coverage.",
+   "examples": [
+    {
+     "doc": "human:0fef5e6311f39de4d3c97cd3b7975933b4ff22b4249d8d86c6f3d82865f0c726",
+     "excerpt": "The paper must assess the potential disadvantages associated with the three traits.",
+     "item_id": 5
+    },
+    {
+     "doc": "ai:69b1183d333db976ba5932e808b229f02b8984142a9e7098e792c6d2af215ded",
+     "excerpt": "Environmental safety standards require nitrate-leaching assessments, monitoring in sensitive areas, groundwater protections, and hazardous-waste procedures for unused admixture, including containment and neutralization to prevent contamination.",
+     "item_id": 28
+    },
+    {
+     "doc": "human:a2558428b4792d87d708efd110b3e67cc279189c91fe9f544d0c9d2d697f6bfc",
+     "excerpt": "The solution had to add value without increasing cognitive burden, use the museum’s Pen and embedded NFC system, fit restricted power and spatial conditions, launch within two months, integrate with a nearly final exhibition design, and require almost no new equipment or outside labor.",
+     "item_id": 8
+    }
+   ],
+   "name": "Requirements",
+   "subsumes": [
+    "I-human:0fef5e6311f39de4d3c97cd3b7975933b4ff22b4249d8d86c6f3d82865f0c726-01",
+    "I-ai:69b1183d333db976ba5932e808b229f02b8984142a9e7098e792c6d2af215ded-01",
+    "I-human:a2558428b4792d87d708efd110b3e67cc279189c91fe9f544d0c9d2d697f6bfc-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the logistical, financial, administrative, access, or governance arrangements by which a proposed program, service, or initiative will operate.",
+   "definition": "Content that specifies the logistical, financial, administrative, access, or governance arrangements through which a proposed program, service, or initiative will be delivered.",
+   "distinguished_from": "Unlike Study Design, it organizes delivery of an initiative rather than the investigative logic of research, and unlike Recommendation, it specifies operational arrangements rather than merely advocating adoption.",
+   "examples": [
+    {
+     "doc": "human:eb9bef91864037db2c09816bfa30161cd4136169b437104fc0e5f9fc3bcf0e7b",
+     "excerpt": "To keep testing accessible, five-mouse cages are estimated at about $370 over 11 weeks and conventional 20-mouse control-treatment studies at $1,240 plus $237 per diem; CPRIT will subsidize 100 mice monthly for unfunded new investigators, while for-profit users will pay a 100% surcharge supporting otherwise unfunded studies.",
+     "item_id": 18
+    },
+    {
+     "doc": "human:eb9bef91864037db2c09816bfa30161cd4136169b437104fc0e5f9fc3bcf0e7b",
+     "excerpt": "A website will accept testing proposals documenting the therapeutic target, requested single-mouse or conventional method, target-validation evidence, and chemical structure; the SC will use this information to prioritize studies.",
+     "item_id": 19
+    }
+   ],
+   "name": "Implementation Plan",
+   "subsumes": [
+    "I-human:eb9bef91864037db2c09816bfa30161cd4136169b437104fc0e5f9fc3bcf0e7b-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate directions, precautions, or operational advice enabling readers to carry out an activity associated with the work.",
+   "definition": "Content that provides actionable directions, precautions, or operational information enabling readers to undertake an activity associated with the work.",
+   "distinguished_from": "Unlike Recommendation, it explains how readers can carry out an activity they may already intend to undertake, and unlike Procedure, it guides readers rather than documenting actions performed in the scholarly inquiry.",
+   "examples": [
+    {
+     "doc": "human:7771504de8866566ec7dbef13797cc14ae162d063dedfba4b046e33ea86d87dd",
+     "excerpt": "A roughly 3½-mile walk follows surviving railway features north from Oxford Road and requires sturdy footwear because some paths can be muddy.",
+     "item_id": 32
+    },
+    {
+     "doc": "human:7771504de8866566ec7dbef13797cc14ae162d063dedfba4b046e33ea86d87dd",
+     "excerpt": "Walkers must retrace the route to a descending path that demonstrates the embankment’s height and volume of imported spoil, then return west across the canal to its towpath.",
+     "item_id": 39
+    }
+   ],
+   "name": "Practical Guidance",
+   "subsumes": [
+    "I-human:7771504de8866566ec7dbef13797cc14ae162d063dedfba4b046e33ea86d87dd-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item or bounded component would primarily impair readers' ability to anticipate, locate, or follow the organization of the document.",
+   "definition": "Content or a bounded component that guides readers through a document by previewing its organization, mapping its components, or directing attention to relevant locations.",
+   "distinguished_from": "Unlike Summary, it primarily supports movement and orientation within the document rather than condensing substantive content.",
+   "examples": [
+    {
+     "doc": "human:4c26e4bfdfb0ca0547b11632a8dde3588201e736ca3d61fcf5f0e9c61d439307",
+     "excerpt": "The next installment will conclude the discussion of general principles by addressing financial transparency and port-infrastructure usage rights before the series turns to the Regulation’s detailed provisions.",
+     "item_id": 11
+    },
+    {
+     "doc": "human:583c7089d63c5dcb11e7e82f5e9d3300f16e5b9cf8f8125591e7b1cf5e71f321",
+     "excerpt": "Having established a strong statistical relationship between language and ratings, the analysis turns to how rating patterns changed over time.",
+     "item_id": 12
+    }
+   ],
+   "name": "Navigation",
+   "subsumes": [
+    "B38"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omission would remove the document's bounded record of external sources used by or relevant to the work for identification, retrieval, or verification.",
+   "definition": "A bounded documentary record that identifies external sources used by or relevant to a work and enables their retrieval or verification.",
+   "distinguished_from": "Unlike Evidence or Prior Work, it documents sources as a reference system rather than using or discussing them substantively, and unlike Attribution, it concerns external sources rather than participation in producing the work.",
+   "examples": [
+    {
+     "doc": "ai:c3a123f5b62080aa6633146499923d21cfbda759be4071f11fd849a48c10b1c5",
+     "excerpt": "A reference section documents four books on beauty culture, fashion theory, and cultural identity that provide broader conceptual background for the article.",
+     "item_id": 16
+    },
+    {
+     "doc": "human:dd69c2ad745a0739ddd804e282aa2558e4f5a11545367359e81b6b4edcf7f28c",
+     "excerpt": "A secondary-source bibliography collects memoirs, historical studies, interpretive essays, edited volumes, and scholarship concerning Hook and American pragmatism.",
+     "item_id": 90
+    }
+   ],
+   "name": "Source Documentation",
+   "subsumes": [
+    "B39"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting a bounded component would eliminate a lookup resource for selectively retrieving terminology, direct answers, or recurring substantive information.",
+   "definition": "A bounded component that organizes terminology, direct answers, or recurring substantive entities, attributes, and relationships for selective consultation.",
+   "distinguished_from": "Unlike Definition, it organizes information for repeated lookup rather than making one local definitional move, and unlike Summary, it supports selective retrieval rather than a continuous overview.",
+   "examples": [
+    {
+     "doc": "human:f42930b903f09766f3ac6de9df89924a52f593fdf0a42c1d21fa60af42e300bf",
+     "excerpt": "A character-reference component restates the four principal correspondences: Mike seeks clan loyalty through Hanuman’s Honour quest, McGrath seeks survival through Kans’s Preservation quest, Lockwood seeks domination through Circe’s Power quest, and Armando seeks justice through Prometheus’s Idealism quest.",
+     "item_id": 14
+    },
+    {
+     "doc": "ai:3e06d143ca29cf9bde0d42f7b2767d5aaf90d63639a009734dbd3335db43f7dd",
+     "excerpt": "A frequently asked questions component provides concise reference answers about the 67,000-year date, non-sapiens classification, Callao Cave location, recovered bones, uranium-series dating, comparison with Homo floresiensis, migration implications, Cagayan Valley’s importance, the revised settlement history, and uncertain prospects for recovering ancient DNA.",
+     "item_id": 28
+    }
+   ],
+   "name": "Reference Aid",
+   "subsumes": [
+    "B40",
+    "I-human:f42930b903f09766f3ac6de9df89924a52f593fdf0a42c1d21fa60af42e300bf-01",
+    "I-ai:3e06d143ca29cf9bde0d42f7b2767d5aaf90d63639a009734dbd3335db43f7dd-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily represents the inclusion of ancillary material that preserves useful detail, documentation, or tools while remaining separable from the main exposition.",
+   "definition": "A bounded body of ancillary material that extends, documents, or enables use of the main work without being necessary to its continuous exposition.",
+   "distinguished_from": "Unlike Evidence, Procedure, or Finding, it is selected when the component's separable ancillary function is primary, and unlike Reference Aid, it need not be organized chiefly for selective lookup.",
+   "examples": [
+    {
+     "doc": "human:59180dfb64a2835c863335fe91a41db213b032ccf5b55f5623d4b93f2b72e137",
+     "excerpt": "Associated questionnaires, reporting guides, and methodology documentation are made available to support interpretation and use of the survey.",
+     "item_id": 2
+    },
+    {
+     "doc": "ai:3f5e18d1c799fb4201ddd85abb933dfce8713cead97715edd358d3e16039b5b2",
+     "excerpt": "A six-question FAQ defines vegan pizza by excluding animal products; cautions that healthfulness varies; notes variable gluten-free availability; identifies common cashew, almond, and commercial mozzarella substitutes; recommends dedicated preparation areas and utensils; and explains that specialized ingredients may increase prices, although discounts can offset the difference.",
+     "item_id": 37
+    }
+   ],
+   "name": "Supplementation",
+   "subsumes": [
+    "B41"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omission would remove the record of who created, contributed to, enabled, translated, or bears responsibility for the work.",
+   "definition": "A record of credit, responsibility, authorship, contribution, assistance, translation, or other participation in producing a work.",
+   "distinguished_from": "Unlike Contributor Profile, it records participation rather than supplying biographical or credentialing context, and unlike Document Identification, it allocates credit or responsibility rather than identifying the work itself.",
+   "examples": [
+    {
+     "doc": "human:a2558428b4792d87d708efd110b3e67cc279189c91fe9f544d0c9d2d697f6bfc",
+     "excerpt": "The author managed the project and designed its user experience and interactions with developer Rachel Nackman; Interface Studio Architects contributed to the concept and environmental graphics.",
+     "item_id": 4
+    },
+    {
+     "doc": "human:8435792edf946f84eac69371317c9af16ac00d31932a234410986e09288f2753",
+     "excerpt": "A translator credit attributes the English version to Thomas Cooper.",
+     "item_id": 42
+    }
+   ],
+   "name": "Attribution",
+   "subsumes": [
+    "B42"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting a bounded component would eliminate a reader-facing account of a contributor's background, qualifications, relevant experience, or professional activities.",
+   "definition": "A bounded account of a work contributor's biographical background, qualifications, relevant experience, standing, or professional activities.",
+   "distinguished_from": "Unlike Attribution, it contextualizes a contributor's background or credibility rather than merely recording participation, and unlike Contextualization, its subject is the contributor's qualification rather than the work's topic.",
+   "examples": [
+    {
+     "doc": "human:18d329b4a0fb94eaad05f64a2088bbfc48ef7c6c6ee0e592a783a5c341a85146",
+     "excerpt": "An author biography identifies Judith Hauptman’s emerita professorship, research in textual history and women’s history, major publications and scholarly recognition, and establishment of a free walk-in High Holiday service for young adults.",
+     "item_id": 34
+    },
+    {
+     "doc": "human:211264af70bc91afa1613b011266f7878172a5a744b4099aa53333ae18efab69",
+     "excerpt": "The article establishes the author’s experience through founding Chiswick Women’s Aid in London in 1971, operating it until 1982, and publishing the 1974 book Scream Quietly or the Neighbours Will Hear.",
+     "item_id": 4
+    }
+   ],
+   "name": "Contributor Profile",
+   "subsumes": [
+    "I-human:18d329b4a0fb94eaad05f64a2088bbfc48ef7c6c6ee0e592a783a5c341a85146-01",
+    "I-human:211264af70bc91afa1613b011266f7878172a5a744b4099aa53333ae18efab69-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the bounded item primarily supplies transparency needed to assess the work's independence, compliance, accessibility, provenance, or conditions of use.",
+   "definition": "A record of relevant transparency information about funding, competing interests, ethical oversight, permissions, availability, prior versions, or comparable conditions affecting assessment or use of a work.",
+   "distinguished_from": "Unlike Attribution, it discloses assessment-relevant conditions rather than chiefly assigning credit, and unlike Resource Access, it reports availability or use conditions rather than providing the mechanism or pathway for obtaining a resource.",
+   "examples": [
+    {
+     "doc": "human:2160532b4bf98e97a3cdb250086f80b3c8a072c8eb1a7c0e9aba556bd668243f",
+     "excerpt": "A closing acknowledgment credits Grant Agency of the Czech Academy of Sciences support for the project “Taking age discrimination seriously” (17-26629S), awarded to the Institute of State and Law’s Centre for Law and Public Affairs under long-term development funding RVO: 68378122.",
+     "item_id": 17
+    },
+    {
+     "doc": "human:db1bcffd8ad1941fed3759367419356669ec9ccb58d06051cbc676c44316ef04",
+     "excerpt": "A note discloses that portions of an earlier version appeared in Matthias Oppermann’s 2010 chapter on digital culture and American studies.",
+     "item_id": 26
+    }
+   ],
+   "name": "Disclosure",
+   "subsumes": [
+    "B43"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the bounded component would primarily impair the ability to identify, cite, distinguish, or administratively locate the work as a document.",
+   "definition": "A bounded component that establishes a work's bibliographic or administrative identity through identifying metadata such as title, date, version, institutional context, or publication status.",
+   "distinguished_from": "Unlike Attribution, it identifies the work rather than primarily crediting contributors, and unlike Subject Indexing, it supports precise identification rather than thematic classification and discovery.",
+   "examples": [
+    {
+     "doc": "human:a917e18216b87f5dfaeb353b9b2f56387dba985dd0a1ae77a4f6b8b1299cf2e5",
+     "excerpt": "An editor’s note identifies the article as a two-part adaptation of a paper presented at TechTextil North America in Atlanta in March 2000 and distinguishes this installment’s mechanical and fabrication topics from the environmental, maintenance, safety, and aesthetic topics reserved for part two.",
+     "item_id": 1
+    },
+    {
+     "doc": "human:583d22df473b602dd29b35dbe910318f05d97e8500bc7ca8f0f2900be68290fc",
+     "excerpt": "The title identifies the work as “Waterfields Guide To Computer Software 1998.”",
+     "item_id": 1
+    }
+   ],
+   "name": "Document Identification",
+   "subsumes": [
+    "B44"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the document-level mechanism, invitation, requirements, or administrative pathway through which readers can obtain a work, material, service, data, or associated resource.",
+   "definition": "A bounded mechanism or administrative pathway that enables intended users to obtain, download, request, or otherwise retrieve a work or associated scholarly resource.",
+   "distinguished_from": "Unlike Disclosure, it enables acquisition rather than merely stating availability, and unlike Practical Guidance, it concerns obtaining a resource rather than carrying out the substantive activity associated with the work.",
+   "examples": [
+    {
+     "doc": "human:6b2d31b2c29a2068ffb7ae6ee8575dbe76e7333bfcbed99b2a5d520e50fd80b9",
+     "excerpt": "The page offers the 2012 publication On Location: Heritage Cities and Sites for download.",
+     "item_id": 1
+    },
+    {
+     "doc": "human:eb9bef91864037db2c09816bfa30161cd4136169b437104fc0e5f9fc3bcf0e7b",
+     "excerpt": "Academic investigators may request PDX samples by completing the attached form and returning it to houghtonp@uthscsa.edu, after which the office will provide a material transfer agreement for an authorized institutional official to sign.",
+     "item_id": 6
+    }
+   ],
+   "name": "Resource Access",
+   "subsumes": [
+    "I-human:6b2d31b2c29a2068ffb7ae6ee8575dbe76e7333bfcbed99b2a5d520e50fd80b9-01",
+    "I-human:eb9bef91864037db2c09816bfa30161cd4136169b437104fc0e5f9fc3bcf0e7b-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting a bounded metadata component would eliminate explicit thematic descriptors used to classify and discover the work.",
+   "definition": "A bounded metadata component that assigns thematic descriptors to classify a work and support subject-based discovery.",
+   "distinguished_from": "Unlike Document Identification, it characterizes the work topically for classification and discovery rather than establishing its unique bibliographic or administrative identity.",
+   "examples": [
+    {
+     "doc": "human:8435792edf946f84eac69371317c9af16ac00d31932a234410986e09288f2753",
+     "excerpt": "A keyword component identifies the article’s principal subjects and analytical categories for indexing.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:d7420da1c21f599331d3699d6a2465f9b455176973ef4d1e7f075ed8808e4984",
+     "excerpt": "A keyword component indexes the article under nursing education, the First Czechoslovak Republic, nursing schools, healthcare, and qualitative research.",
+     "item_id": 9
+    }
+   ],
+   "name": "Subject Indexing",
+   "subsumes": [
+    "I-human:8435792edf946f84eac69371317c9af16ac00d31932a234410986e09288f2753-01",
+    "I-human:d7420da1c21f599331d3699d6a2465f9b455176973ef4d1e7f075ed8808e4984-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting a bounded component would primarily remove provisions that structure readers' learning, participation, practice, credit, review, application, or self-assessment.",
+   "definition": "A bounded component that configures a document for structured learning through educational objectives, participation or credit provisions, or active review and self-assessment tasks.",
+   "distinguished_from": "Unlike Purpose, it structures the reader's educational activity rather than stating the scholarship's aim, and unlike Summary, it elicits or organizes learning rather than merely condensing content.",
+   "examples": [
+    {
+     "doc": "human:c69c2b37e7a8b29ce743b279156588c5d8092751af7d6002b4c9c11aa2ceed99",
+     "excerpt": "A self-instructional continuing-education component offers subscribers 2 credit hours and sets objectives covering surgical-guide types and limitations, available robotic devices, haptic stereotactic guidance, and observation of a robot-assisted implant case.",
+     "item_id": 1
+    },
+    {
+     "doc": "ai:2d99825e7f5cf4243acb07c3bbb1388e48f703ae7455bf0cb966f86f97cac892",
+     "excerpt": "A study-question collection asks readers to explain atoms and void, emergent qualia, nature versus convention, the respective roles of sense and reason, the connection between physics and ethics, the critique of uncontrolled desire, and the place of regulated pleasure within tranquility.",
+     "item_id": 8
+    }
+   ],
+   "name": "Learning Support",
+   "subsumes": [
+    "I-human:c69c2b37e7a8b29ce743b279156588c5d8092751af7d6002b4c9c11aa2ceed99-01",
+    "I-ai:2d99825e7f5cf4243acb07c3bbb1388e48f703ae7455bf0cb966f86f97cac892-01"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+extends: _base.yaml
+name: Nemotron 30B LoRA, full outlines
+backend: nemotron_tinker
+base_model: nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16
+setting: full
+lora_rank: 64
+lr: 4.0e-4
+batch_size: 128
+# NO CAP BELOW WHAT THE DATA NEEDS. The model emits ONE token, so bounding the
+# input gains nothing -- billing and compute track real tokens either way, and a
+# cap only throws information away. Measured on 4,000 in-domain outlines: median
+# 593 tokens, p99 1,860, max 3,538. A 4096 cap truncated 0.00%; 2048 truncated
+# 0.75%. Long fiction is the case this protects.
+max_len: 65536
+warmup_frac: 0.03
+probe_n: 4000
+zero_shot_n: 1000
+
+notes: >
+  Training runs on the provider's hardware, so the launcher needs no GPU.
+  Checkpoint names must be UNIQUE: reusing one raises, and that failure poisons
+  the training client so every later request in the run dies. Suffix with the step.
+
+  Prices are polled at run time, never hard-coded. Scoring bills the PREFILL
+  meter -- computing log-probabilities generates nothing.

@@ -1,0 +1,713 @@
+{
+ "format_slug": "personal_blog",
+ "n_roles": 43,
+ "source": "role discovery, consolidation pass (role_consolidation_xhigh.json)",
+ "final_roles": [
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an attention-generating entry that draws readers toward the subject rather than substantive development of that subject.",
+   "definition": "An item that chiefly arouses curiosity, surprise, identification, or anticipation to draw readers into the post's subject.",
+   "distinguished_from": "Unlike Purpose Framing, Problem Framing, or Event Account, Attention Hook generates initial interest rather than stating the agenda, establishing a motivating issue, or contributing a substantive episode.",
+   "examples": [
+    {
+     "doc": "ai:4c83d57c556755eea20a004d4ed475e13f00fa2a5d2f70c05234230bf9f6cd2a",
+     "excerpt": "The article frames secret access to private Instagram accounts as an alluring internet rumor and asks whether the promised capability is genuine or deceptive.",
+     "item_id": 1
+    }
+   ],
+   "name": "Attention Hook",
+   "subsumes": [
+    "B01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the clearest statement of what the post intends to discuss, accomplish, or delimit.",
+   "definition": "An item that announces the post's subject, aim, occasion, scope, or intended direction so readers know what to expect.",
+   "distinguished_from": "Unlike Content Overview or Context, Purpose Framing states the communicative agenda rather than compactly mapping the contents or supplying prerequisite circumstances.",
+   "examples": [
+    {
+     "doc": "ai:cfaf60ac3f1dc24e652b369c480754f4df9b272a13d6c7b18e873d066c82d1b9",
+     "excerpt": "The discussion reframes product shopping around what collagen can realistically accomplish and how Pakistani consumers can choose an option suited to their bodies and lifestyles.",
+     "item_id": 2
+    }
+   ],
+   "name": "Purpose Framing",
+   "subsumes": [
+    "B02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item is needed chiefly to orient readers to surrounding circumstances or prior developments before they encounter the focal material.",
+   "definition": "An item that supplies surrounding circumstances, prior developments, or situational information needed to understand other material.",
+   "distinguished_from": "Unlike Description or Factual Report, Context orients readers around focal material rather than characterizing the focal subject or presenting facts as an independent knowledge contribution.",
+   "examples": [
+    {
+     "doc": "human:949e5c29fc77fe51bf4f4cc7ab4ec1454e62a5bbeb64316c1dbfcf90fc7df225",
+     "excerpt": "After finishing work on the house, the family chose a May trip to Charleston because it was easy and relatively inexpensive, had pleased them before, seemed suitable for James, and promised better weather than August.",
+     "item_id": 1
+    }
+   ],
+   "name": "Context",
+   "subsumes": [
+    "B03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the post's account of who the author is, where the author is coming from, or why the author's perspective matters.",
+   "definition": "An item that presents the author's identity, background, values, experience, preferences, or standpoint to position the document's personal voice.",
+   "distinguished_from": "Unlike Attribution or Disclosure, Self-Presentation develops the author's identity and perspective rather than merely recording responsibility for content or revealing publication-related interests and conditions.",
+   "examples": [
+    {
+     "doc": "ai:52cec9ffe17286a9b466ee8e123e407bdebb614dc718f24eaefbd88568beeeb6",
+     "excerpt": "An expertise disclosure identifies the writer as an Athens-born engineer coordinating a five-person Greek travel team with more than 50 combined years of field experience, including specialists in tours, transfers, hotels, and regional tourism across Greece.",
+     "item_id": 33
+    }
+   ],
+   "name": "Self-Presentation",
+   "subsumes": [
+    "B04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would erase the central difficulty, unmet need, tension, decision, or open question that gives the surrounding discussion its reason to proceed.",
+   "definition": "An item that establishes a difficulty, unmet need, tension, decision, or open question as the issue motivating discussion, inquiry, advice, or action.",
+   "distinguished_from": "Unlike Context or Claim, Problem Framing makes a need for resolution central rather than merely supplying circumstances or advancing a proposition.",
+   "examples": [
+    {
+     "doc": "ai:fae23d91321fe66a89400ef38cd930b3854af104d39b79659c3a607ad99ce0b7",
+     "excerpt": "AI can reproduce instructional frameworks and provide free advice without human empathy, causing some customers to undervalue mentorship and making premium pricing dependent on a strong personal connection.",
+     "item_id": 8
+    }
+   ],
+   "name": "Problem Framing",
+   "subsumes": [
+    "B05"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a substantive occurrence, action, encounter, or sequence from the narrative record.",
+   "definition": "An item that recounts a substantively unified occurrence, action, encounter, or sequence as part of the author's or another person's experience.",
+   "distinguished_from": "Unlike Outcome or Illustration, Event Account foregrounds what happened rather than the resulting state or a case used chiefly to clarify a general point.",
+   "examples": [
+    {
+     "doc": "human:6b97289f15d95673075e11220dc56024df417038d30c8ed6ae0c6e3cc7123d6a",
+     "excerpt": "The writer and Steve, both contenders for leadership recognition, were paired with John and tacitly assumed he would complete the obstacles when required.",
+     "item_id": 14
+    }
+   ],
+   "name": "Event Account",
+   "subsumes": [
+    "B06"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's chief contribution is to portray what a subject is like or what condition it is in.",
+   "definition": "An item that characterizes the qualities, appearance, arrangement, condition, atmosphere, or other salient attributes of a focal subject.",
+   "distinguished_from": "Unlike Explanation or Event Account, Description portrays attributes or states rather than accounting for causes or narrating changes and actions over time.",
+   "examples": [
+    {
+     "doc": "human:0b562a156588a35804e60707225cd4084b8a0266c3bb75e6febb94c49f0eb6fc",
+     "excerpt": "By December, the cachi’s glossy orange, rounded fruit stands against bare branches like a low-burning sun and ripens progressively with each night’s frost.",
+     "item_id": 4
+    }
+   ],
+   "name": "Description",
+   "subsumes": [
+    "B07"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the author's principal emotional, sensory, preferential, or immediate subjective response to what was encountered.",
+   "definition": "An item that expresses the author's emotions, sensations, preferences, or immediate subjective response to an experience, situation, or subject.",
+   "distinguished_from": "Unlike Reflection or Evaluation, Personal Reaction foregrounds felt response rather than deriving broader significance or rendering a reasoned judgment.",
+   "examples": [
+    {
+     "doc": "human:fda960bc4a8acb80387c7c6ae716f84cece747ca81a9e37b71f2b0deb9fc9852",
+     "excerpt": "The writer unsuccessfully opposed the decision and felt trapped by the mandated platform and language.",
+     "item_id": 5
+    }
+   ],
+   "name": "Personal Reaction",
+   "subsumes": [
+    "B08"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main job is to state what resulted, how matters were resolved, or what state a preceding action, decision, experiment, or process produced.",
+   "definition": "An item that reports the consequence, resolution, achieved result, or current state produced by an event, decision, experiment, or process.",
+   "distinguished_from": "Unlike Event Account or Evaluation, Outcome foregrounds the resulting state or consequence rather than the actions leading to it or a judgment of its merit.",
+   "examples": [
+    {
+     "doc": "human:b17213e7cb2412a63b5a5fb8d329be9c8d1d6410aea0f0429444c5ac9c835491",
+     "excerpt": "The completed shelters exceeded expectations: campers expressed pride, children climbed over the structures, families offered thanks, and pleased town officials requested another project for the following year’s camp.",
+     "item_id": 13
+    }
+   ],
+   "name": "Outcome",
+   "subsumes": [
+    "B09"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an insight, realization, lesson, or statement of significance derived from experience or prior discussion.",
+   "definition": "An item that interprets experiences, observations, or preceding material to articulate their personal or broader significance, insight, realization, or lesson.",
+   "distinguished_from": "Unlike Explanation or Synthesis, Reflection interprets what experience means or teaches rather than clarifying a mechanism or chiefly consolidating several points into an overall conclusion.",
+   "examples": [
+    {
+     "doc": "ai:351e05e62adb9b13e1ee2e9b2778772036f411a998b8adc6cbb3065631a3ae79",
+     "excerpt": "An April essay for World Autism Acceptance Day framed entrepreneurship as an expression of identity, choice, integrity, and autonomy; the year-end reflection now identifies alignment among work, purpose, and self as the defining thread of 2025.",
+     "item_id": 1
+    }
+   ],
+   "name": "Reflection",
+   "subsumes": [
+    "B10"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary contribution is a proposition, interpretation, prediction, or stance that readers are asked to accept as true or reasonable.",
+   "definition": "An item that advances a debatable assertion, opinion, interpretation, prediction, or position as part of the author's view of a subject.",
+   "distinguished_from": "Unlike Evaluation, Support, or Factual Report, Claim advances the proposition at issue without necessarily judging merit, substantiating another assertion, or neutrally recording facts.",
+   "examples": [
+    {
+     "doc": "ai:70018d2ec36f1bca7b26d06d9b2bd7015d06a1f6cb72f74c86c449da6037df1d",
+     "excerpt": "Drawing on 15 years of ministry and coaching, the author argues that social media does more than affect singles’ emotions: it reshapes what they expect relationships to be.",
+     "item_id": 2
+    }
+   ],
+   "name": "Claim",
+   "subsumes": [
+    "B11"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the post's principal judgment about a subject's quality, value, effectiveness, suitability, strengths, or weaknesses.",
+   "definition": "An item that assesses the quality, value, effectiveness, suitability, strengths, or weaknesses of a subject according to explicit or implicit standards.",
+   "distinguished_from": "Unlike Description or Recommendation, Evaluation judges a subject rather than merely portraying it or advocating a subsequent choice or action.",
+   "examples": [
+    {
+     "doc": "human:584e330be6b421ae74a48d32e14d3375fc128e683db06c167fda1b0fe2b50a87",
+     "excerpt": "Firestone Walker Brewing’s Paso Robles production site and restaurant paired very good food with a well-regarded Luponic Distortion IPA at dinner.",
+     "item_id": 24
+    }
+   ],
+   "name": "Evaluation",
+   "subsumes": [
+    "B12"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's chief contribution is to make a cause, mechanism, relationship, process, or reasoning chain understandable.",
+   "definition": "An item that clarifies how or why something happens, works, follows, or should be understood by presenting causal, logical, conceptual, or process relationships.",
+   "distinguished_from": "Unlike Support or Description, Explanation primarily produces understanding of relationships or mechanisms rather than increasing confidence in another claim or portraying attributes.",
+   "examples": [
+    {
+     "doc": "ai:1201046d06e470e8c667ab696e94cf5eaaa5ca697576906563cfd6f13e0c036b",
+     "excerpt": "Combining sights, sounds, and smells, as in a bustling market, creates a layered sensory environment and anchors emotions to experiences, especially when a sensation recalls a meaningful memory.",
+     "item_id": 12
+    }
+   ],
+   "name": "Explanation",
+   "subsumes": [
+    "B13"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the statement that fixes how a term, measure, phrase, category, or concept is meant to be understood.",
+   "definition": "An item that establishes the meaning, scope, boundaries, or relevant usage of a term, phrase, category, measure, or concept.",
+   "distinguished_from": "Unlike Explanation or Reference Aid, Definition fixes the meaning of a concept in one substantive move rather than explaining broader relationships or organizing a collection for lookup.",
+   "examples": [
+    {
+     "doc": "human:273a85cff985da2c88399887d1569f1b90f89638707c83adfb7c51c417d046cb",
+     "excerpt": "The last-on-the-bus (LOTB) value measures each gene’s unique contribution by subtracting the score achieved after deleting that gene from the complete genome’s score; a positive value means the encoded player supplies a necessary contribution not duplicated by teammates.",
+     "item_id": 5
+    }
+   ],
+   "name": "Definition",
+   "subsumes": [
+    "B14"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's organizing purpose is to reveal meaningful similarities, differences, trade-offs, or relative standing among two or more subjects.",
+   "definition": "An item that systematically relates two or more subjects to clarify their similarities, differences, trade-offs, or relative standing.",
+   "distinguished_from": "Unlike Evaluation or Description, Comparison organizes information around relationships among subjects rather than chiefly judging one subject or portraying it independently.",
+   "examples": [
+    {
+     "doc": "ai:df3e1e7f412b5435756af9f0dac695e2c3ba8e9ff83a6b70a2da78b7c308d8d9",
+     "excerpt": "Low, central battery placement improves balance and cornering at speed, while rear-rack placement makes the bicycle feel back-heavy when lifted or maneuvered through tight turns.",
+     "item_id": 12
+    }
+   ],
+   "name": "Comparison",
+   "subsumes": [
+    "B15"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item is present chiefly to make another assertion, evaluation, interpretation, or recommendation more credible or justified through evidentiary material.",
+   "definition": "An item that substantiates a claim, evaluation, interpretation, or recommendation by providing reasons, facts, experience, testimony, research, or other evidence.",
+   "distinguished_from": "Unlike Illustration or Source Documentation, Support justifies a proposition rather than chiefly clarifying it with a case or documenting source provenance at the document level.",
+   "examples": [
+    {
+     "doc": "human:d3cfd564c64b0bc7428ebb9d98da73b6adde1ba15114332b4a7e948935cf74f6",
+     "excerpt": "Studies report mixed cholesterol patterns in autism: a small Asperger syndrome trial found higher total and LDL cholesterol, another childhood study found no significant differences, and an AGRE analysis found about one-fifth of autistic participants below the population’s fifth cholesterol centile.",
+     "item_id": 5
+    }
+   ],
+   "name": "Support",
+   "subsumes": [
+    "B16"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when a concrete case, scenario, analogy, or instance is included mainly to help readers grasp a broader or more abstract point.",
+   "definition": "An item that supplies a concrete case, scenario, analogy, or instance to make a broader idea easier to understand.",
+   "distinguished_from": "Unlike Support or Event Account, Illustration chiefly clarifies a general point rather than establishing its truth or contributing an episode for its own narrative substance.",
+   "examples": [
+    {
+     "doc": "ai:22f33d6a1ab7f57a93f5a83a3c6538a7939b25248e29fa50e741ec8581b4e9a9",
+     "excerpt": "Other ordinary objects similarly convey quiet messages: painted rocks may carry encouragement or coded meanings, rainbow porch lights can express LGBTQ+ support, and color-coded doormats may promote awareness of issues such as food allergies.",
+     "item_id": 11
+    }
+   ],
+   "name": "Illustration",
+   "subsumes": [
+    "B17"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate substantive consideration of an opposing view, objection, competing explanation, or contrary factor.",
+   "definition": "An item that introduces an alternative position, objection, competing interpretation, or contrary consideration relevant to the surrounding discussion.",
+   "distinguished_from": "Unlike Qualification, Counterpoint gives substantive space to a distinct competing consideration rather than narrowing or conditioning the author's own statement.",
+   "examples": [
+    {
+     "doc": "ai:f9c87b581d52aa00f47806365b5b991193c266f573eb6c5f65d5125f3e28d11c",
+     "excerpt": "Humanoids also face severe challenges in balance, dexterity, locomotion, energy use, human safety, cost, maintenance, and reliability, so the likely future combines cheaper, dependable specialized robots in structured sectors with humanoids in selected human-oriented spaces if their economics and performance improve.",
+     "item_id": 15
+    }
+   ],
+   "name": "Counterpoint",
+   "subsumes": [
+    "B18"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily establishes a boundary on how strongly, broadly, certainly, or completely nearby material should be understood, applied, predicted, or disclosed.",
+   "definition": "An item that limits the certainty, scope, applicability, force, generality, or disclosed coverage of a claim, evaluation, recommendation, prediction, or account.",
+   "distinguished_from": "Unlike Counterpoint or Warning, Qualification constrains the author's own statement or coverage rather than presenting a competing position or foregrounding an adverse consequence.",
+   "examples": [
+    {
+     "doc": "ai:a90632a67cb1b844f2c0c77a5aed6abaded1b6608f82b46fd9b0c48a9be228c6",
+     "excerpt": "Any prediction is qualified by the inherent uncertainty of NFL games, where injuries, turnovers, penalties, and luck can abruptly change momentum; each team’s recent form and confidence should therefore inform the assessment.",
+     "item_id": 14
+    },
+    {
+     "doc": "human:ec59621ecaa6f27a2701e8d18d5f4f5c6e11af338ca4225e294dbd44151142d7",
+     "excerpt": "The review deliberately withholds the showdown’s details while revealing that the story does not end tragically for Craig and Lacey and jokingly imagines an uncertain happily-ever-after.",
+     "item_id": 19
+    }
+   ],
+   "name": "Qualification",
+   "subsumes": [
+    "B19",
+    "I-human:ec59621ecaa6f27a2701e8d18d5f4f5c6e11af338ca4225e294dbd44151142d7-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's central function is to advocate what readers or another relevant audience should choose, try, avoid, or prioritize for their own purposes.",
+   "definition": "An item that advises or endorses a course of action, option, practice, or choice for the reader or another relevant audience.",
+   "distinguished_from": "Unlike Procedure or Promotion, Recommendation advocates a choice without chiefly detailing its execution or seeking uptake for a commercial or creator-supporting goal.",
+   "examples": [
+    {
+     "doc": "ai:5cb8142c3a75d050eab050c196a7bf3b6f550c7d15c68e620c6ec01b042ac6af",
+     "excerpt": "AI complexity should remain hidden behind conventional controls such as search bars, dashboards, forms, and buttons, improving familiar interactions without becoming the interaction itself.",
+     "item_id": 7
+    }
+   ],
+   "name": "Recommendation",
+   "subsumes": [
+    "B20"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily identifies what must be available, true, known, prepared, or completed for an activity or intended result.",
+   "definition": "An item that specifies the inputs, prerequisites, resources, preparations, or conditions needed to undertake a task or obtain an intended result.",
+   "distinguished_from": "Unlike Procedure or Warning, Requirements establishes what successful performance needs rather than directing the actions themselves or emphasizing possible harm or failure.",
+   "examples": [
+    {
+     "doc": "human:0b562a156588a35804e60707225cd4084b8a0266c3bb75e6febb94c49f0eb6fc",
+     "excerpt": "For each kilogram of cachi, use 400 grams of sugar and 2 tablespoons of honey; additional sugar is possible but unnecessary given the fruit’s natural sweetness.",
+     "item_id": 9
+    }
+   ],
+   "name": "Requirements",
+   "subsumes": [
+    "B21"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate directions readers need to perform a task or achieve a result.",
+   "definition": "An item that instructs readers to carry out an action or ordered set of actions, including operative conditions attached to those actions.",
+   "distinguished_from": "Unlike Recommendation, Requirements, or Method Account, Procedure explains what readers should do in execution rather than merely endorsing a choice, listing prerequisites, or documenting how another actor works.",
+   "examples": [
+    {
+     "doc": "ai:f4bd92d77951c9e375ef5cc47f9ce49bb74b5233c7ddfaa5205a76fc642856b6",
+     "excerpt": "After selecting a default, keep bulk ingredients continuously available and prepare reusable elements in advance, such as chopped fruit or portioned oats and spices, so mornings require assembly rather than fresh planning.",
+     "item_id": 16
+    }
+   ],
+   "name": "Procedure",
+   "subsumes": [
+    "B22"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when preventing harm, failure, misuse, or another significant undesirable consequence is the item's dominant purpose.",
+   "definition": "An item that alerts readers to a significant risk, hazard, failure mode, misuse, or adverse consequence requiring caution or avoidance.",
+   "distinguished_from": "Unlike Qualification or Requirements, Warning foregrounds a potential adverse consequence rather than restricting a statement's interpretation or specifying conditions for success.",
+   "examples": [
+    {
+     "doc": "ai:5cb8142c3a75d050eab050c196a7bf3b6f550c7d15c68e620c6ec01b042ac6af",
+     "excerpt": "Novel conversational, generative, or autonomous-agent interfaces may appear impressive but impose a new working method whose learning cost is unacceptable to busy non-technical teams.",
+     "item_id": 13
+    }
+   ],
+   "name": "Warning",
+   "subsumes": [
+    "B23"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly records what the author intends, hopes, commits, aims, or expects to do in the future.",
+   "definition": "An item that states the author's intended future action, commitment, goal, or projected course.",
+   "distinguished_from": "Unlike Recommendation or Claim, Plan concerns the author's prospective conduct rather than advising the audience or primarily asserting what is true.",
+   "examples": [
+    {
+     "doc": "human:f8f726a7741b8bb9c0131f1695ad884cc7621b1dfa8566279b7c3d48b7402a4b",
+     "excerpt": "Upcoming work includes resuming the CASSIEL’S SERVANT cover, learning acrylic painting through studies that may produce new Kushiel art, and continuing homework for Maggie Steiftvater’s novel-writing class.",
+     "item_id": 17
+    }
+   ],
+   "name": "Plan",
+   "subsumes": [
+    "B24"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the integrative takeaway, resolution, overall judgment, or closing perspective drawn from multiple earlier points.",
+   "definition": "An item that consolidates preceding points or experiences into a coherent overall takeaway, resolution, judgment, or concluding perspective.",
+   "distinguished_from": "Unlike Content Overview or Reflection, Synthesis advances an integrated conclusion from earlier material rather than compactly mapping the document or chiefly interpreting the significance of an experience.",
+   "examples": [
+    {
+     "doc": "ai:2b80cb4840cd9593d816b862c75d31f06b59749b816bddc56f5366beb147d139",
+     "excerpt": "The conclusion recommends understandable symbols, meaningful reward timing, and plain language, arguing that small design details create positive experiences only when they protect users’ time, attention, and trust.",
+     "item_id": 15
+    }
+   ],
+   "name": "Synthesis",
+   "subsumes": [
+    "B25"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main value is an interpersonal act of welcome, thanks, praise, reassurance, encouragement, apology, acknowledgment, or well-wishing rather than subject-matter development.",
+   "definition": "An item that builds or maintains social relationships by greeting, thanking, praising, reassuring, encouraging, apologizing to, acknowledging, or wishing well to readers or people connected with the post.",
+   "distinguished_from": "Unlike Participation Prompt or Attribution, Social Rapport performs relational acknowledgment rather than requesting audience interaction or formally recording responsibility for content.",
+   "examples": [
+    {
+     "doc": "ai:70018d2ec36f1bca7b26d06d9b2bd7015d06a1f6cb72f74c86c449da6037df1d",
+     "excerpt": "The author assures singles that God is preparing them not for an externally perfect relationship but for a personally fitting love characterized by messiness, ordinariness, faithfulness, and reality.",
+     "item_id": 15
+    },
+    {
+     "doc": "human:334f8e08ff5c9bf6da8c979e5f2e582c21682566ea7efb57eb5fc82ef00df6bd",
+     "excerpt": "Current team members Louise Reid, Gemma Hill Cert RP, and Beth Long are praised for balancing genuine care for the work with achieving results, following many other valued employees over the years.",
+     "item_id": 11
+    }
+   ],
+   "name": "Social Rapport",
+   "subsumes": [
+    "B26",
+    "I-human:334f8e08ff5c9bf6da8c979e5f2e582c21682566ea7efb57eb5fc82ef00df6bd-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item chiefly asks readers to respond, share, contribute, join a discussion, or otherwise participate in the blog's audience community.",
+   "definition": "An item that invites readers to contribute a response, interaction, or community-oriented action connected to the post or blog.",
+   "distinguished_from": "Unlike Recommendation, Promotion, or Self-Assessment, Participation Prompt seeks outward audience interaction rather than subject-matter benefit, uptake of an offering, or private appraisal.",
+   "examples": [
+    {
+     "doc": "human:f18c6edd7dad954a7829196886f7adbab1c780a1d3d589419c389b45e54a871c",
+     "excerpt": "The writer closes by identifying these as the tools used for client creative work and invites readers to suggest alternative tools for solving creative problems.",
+     "item_id": 8
+    }
+   ],
+   "name": "Participation Prompt",
+   "subsumes": [
+    "B27"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's dominant purpose is to generate interest in, traffic toward, or uptake of an offering, service, event, channel, or creator-supported opportunity.",
+   "definition": "An item that seeks to persuade readers to engage with an offering or opportunity in a way that advances a commercial, promotional, or creator-supporting goal.",
+   "distinguished_from": "Unlike Recommendation or Participation Prompt, Promotion is oriented chiefly toward uptake or creator benefit rather than neutral advice or audience discussion.",
+   "examples": [
+    {
+     "doc": "human:ee5fbad193d40c43c1f24f47bf6bd83737e10336d3ec6c51a597718b18e88d9b",
+     "excerpt": "The writer invites readers interested in exploring their strengths to schedule a free 10-minute session intended to determine whether personal support would be useful.",
+     "item_id": 16
+    }
+   ],
+   "name": "Promotion",
+   "subsumes": [
+    "B28"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary contribution is a reader's or participant's conversational reaction, reply, question, acknowledgment, or added perspective on existing content.",
+   "definition": "An item or bounded collection contributed by readers or other participants chiefly to react, reply, question, acknowledge, or add perspective within the resulting discussion.",
+   "distinguished_from": "Unlike Participation Prompt or Factual Report, Audience Response is the contribution made in reply to existing content rather than the invitation for such participation or an independently framed information report.",
+   "examples": [
+    {
+     "doc": "human:d9c17dedd7e58fa611cac72f0ee9bff817f21929dc848f4d71fe268f671a057c",
+     "excerpt": "A bounded collection of reactions from the Depths Discord contributes community perspectives on leading with Forest.",
+     "item_id": 6
+    }
+   ],
+   "name": "Audience Response",
+   "subsumes": [
+    "B29"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove a compact means of grasping the post's scope, organization, features, or principal points without reading the full development.",
+   "definition": "A bounded component that condenses or maps the post's substantive contents to provide rapid orientation, preview, or review beyond mere visual organization.",
+   "distinguished_from": "Unlike Purpose Framing, Synthesis, or Navigation, Content Overview represents the document's substance compactly rather than stating its agenda, deriving a takeaway, or facilitating movement among locations.",
+   "examples": [
+    {
+     "doc": "ai:1335e1aa47613d31aee8bcb1bafe4f2aeab3d6b959760a0e3bc889d9bcebb95b",
+     "excerpt": "A summary display characterizes the guide by its faith-based approach, suitability for individual or group use, practical applications, structured questions, and integration of spiritual growth with mental wellness.",
+     "item_id": 13
+    }
+   ],
+   "name": "Content Overview",
+   "subsumes": [
+    "B30"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would materially impair readers' ability to locate, move among, or discover relevant content in the post, series, or blog.",
+   "definition": "A bounded component whose document-level function is to help readers locate, move among, or discover content within the post or across connected blog material.",
+   "distinguished_from": "Unlike Content Overview or Reference Aid, Navigation facilitates movement and discovery rather than summarizing substance or collecting reusable information for consultation.",
+   "examples": [
+    {
+     "doc": "human:f901c67f338b0764591796468d1f052b5478fb992e9325699a25bad8f453bfcb",
+     "excerpt": "Readers still uncertain whether they need a web application or mobile site are directed to the related post “Is that your website or an app on your mobile phone?”",
+     "item_id": 15
+    }
+   ],
+   "name": "Navigation",
+   "subsumes": [
+    "B31"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove the document's consolidated record of where claims, quotations, facts, or borrowed material came from.",
+   "definition": "A bounded component that records external sources so the post's borrowed material or evidentiary basis can be verified, traced, or consulted.",
+   "distinguished_from": "Unlike Support or Reference Aid, Source Documentation provides document-level provenance rather than directly justifying a proposition or organizing general information for lookup.",
+   "examples": [
+    {
+     "doc": "human:fcb532e1310249a7776b541e91939b73249d8c6036c7b462f8a79b22452ef751",
+     "excerpt": "A concluding source list identifies SPRI Debenham MS 279/1-4;BJ Journals (1910–1912), The Quiet Land edited by June Debenham Back, and Isobel Williams’s Captain Scott’s Invaluable Assistant as the principal archival and published sources.",
+     "item_id": 35
+    }
+   ],
+   "name": "Source Documentation",
+   "subsumes": [
+    "B32"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove an intentionally organized resource designed for convenient lookup or later use outside the main reading flow.",
+   "definition": "A bounded component that organizes definitions, key details, resources, answers, or reusable information for convenient consultation independently of the main reading flow.",
+   "distinguished_from": "Unlike Definition, Content Overview, or Source Documentation, Reference Aid is a lookup-oriented collection rather than a single clarification, a synopsis of the post, or a provenance record.",
+   "examples": [
+    {
+     "doc": "ai:52cec9ffe17286a9b466ee8e123e407bdebb614dc718f24eaefbd88568beeeb6",
+     "excerpt": "An at-a-glance planning panel recommends May–June or September–October, allows 3–5 days and €45–120 daily, notes a 5.5-hour drive from Athens or flights to nearby airports, and identifies beach enthusiasts, road trippers, and authenticity seekers as the best audience.",
+     "item_id": 5
+    }
+   ],
+   "name": "Reference Aid",
+   "subsumes": [
+    "B33"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would erase the document's explicit record of who created, supplied, edited, or otherwise contributed its material.",
+   "definition": "A bounded component that records authorship, creative responsibility, or another contribution so credit and accountability are preserved at the document level.",
+   "distinguished_from": "Unlike Self-Presentation or Social Rapport, Attribution records responsibility or credit rather than developing personal perspective or expressing relational appreciation.",
+   "examples": [
+    {
+     "doc": "ai:5b5a60704e918cd46baae9424a3894ea0f378f6f599fca2e29ca2295b73697ec",
+     "excerpt": "An authorship note identifies the essay as a guest contribution from a maintenance planner employed by a Factory AI customer.",
+     "item_id": 31
+    }
+   ],
+   "name": "Attribution",
+   "subsumes": [
+    "B34"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would conceal a relationship, interest, limitation, sponsorship, compensation arrangement, conflict, or publication condition readers need to assess the post.",
+   "definition": "A bounded component that reveals relationships, interests, sponsorship, compensation, conflicts, limitations, or other conditions relevant to interpreting the post or its publication.",
+   "distinguished_from": "Unlike Qualification or Self-Presentation, Disclosure documents circumstances surrounding authorship or publication rather than limiting a substantive statement or establishing the author's perspective.",
+   "examples": [
+    {
+     "doc": "human:b685885b65b072ea717d3bbc96c9f5ea53bff99ff7c1c80236eb22ae1c2c20c3",
+     "excerpt": "Readers may purchase selected books through the Amazon affiliate advertisement or AStore; the site receives a small commission from purchases made through these links to help fund its operation.",
+     "item_id": 6
+    }
+   ],
+   "name": "Disclosure",
+   "subsumes": [
+    "B35"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove optional elaboration, documentation, resources, or ancillary material while leaving the post's main communicative line substantially intact.",
+   "definition": "A bounded component that supplies optional elaboration, documentation, resources, or ancillary material extending the post beyond its main communicative line.",
+   "distinguished_from": "Unlike Reference Aid or Creative Presentation, Supplement chiefly enriches another main line with optional material rather than organizing information for lookup or making a creative work itself focal content.",
+   "examples": [
+    {
+     "doc": "human:f8f726a7741b8bb9c0131f1695ad884cc7621b1dfa8566279b7c3d48b7402a4b",
+     "excerpt": "The monthly Studio Hangout and AMA is available as a video with captions, a written summary, and an attached transcript.",
+     "item_id": 1
+    }
+   ],
+   "name": "Supplement",
+   "subsumes": [
+    "B36"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove the document's record of its publication timing, revision state, edition, status, or archival placement.",
+   "definition": "A bounded component that records the post's publication identity, timing, revision history, status, edition, or archival context for documentary tracking.",
+   "distinguished_from": "Unlike Attribution, Disclosure, or Navigation, Publication Record documents the content instance's publication state rather than who contributed it, relevant publication interests, or how readers move through content.",
+   "examples": [
+    {
+     "doc": "human:53ed967ba4baef50da20c386741a015795914353289518ca4eedc81069c02d5e",
+     "excerpt": "An editorial note explains that the post was originally written on September 24, later updated, and retains an earlier emotional tone better superseded by the preceding post.",
+     "item_id": 1
+    }
+   ],
+   "name": "Publication Record",
+   "subsumes": [
+    "B37"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a self-contained factual update or historical record presented as knowledge in its own right rather than as orientation, evidence, or narrative.",
+   "definition": "An item that reports factual observations, historical details, current information, or documentary facts as an independent contribution to the reader's knowledge.",
+   "distinguished_from": "Unlike Context, Support, or Event Account, Factual Report presents information for its own informational value rather than orienting later material, substantiating another proposition, or narrating an experience.",
+   "examples": [
+    {
+     "doc": "human:4623e57a07996e1342bc5af26f373d08af4e8e5dfd4eb9a678fdc392682bdd1d",
+     "excerpt": "Leatherock also reports that Oklahoma’s first commercial telephone line connected Fort Gibson and Tahlequah three years after Alexander Graham Bell’s invention, under a Cherokee Council act that authorized construction, imposed taxes, and dedicated the revenue to common schools.",
+     "item_id": 25
+    }
+   ],
+   "name": "Factual Report",
+   "subsumes": [
+    "I-human:4623e57a07996e1342bc5af26f373d08af4e8e5dfd4eb9a678fdc392682bdd1d-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a direct devotional address to a deity expressing worship, gratitude, petition, intercession, confession, or blessing.",
+   "definition": "An item that directly addresses a deity to express worship, gratitude, petition, intercession, confession, or blessing as a devotional act within the document.",
+   "distinguished_from": "Unlike Social Rapport or Recommendation, Prayer directs its relational or petitionary act toward a deity rather than maintaining a bond with people or advising religious practice.",
+   "examples": [
+    {
+     "doc": "human:bba43b0b8b5231f3104340d1b32a4bff6d9f837becb59fadefecc976c5054b8e",
+     "excerpt": "An opening prayer thanks God for the gathering and asks him to teach and bless the congregation as it meditates on his word.",
+     "item_id": 3
+    }
+   ],
+   "name": "Prayer",
+   "subsumes": [
+    "I-human:bba43b0b8b5231f3104340d1b32a4bff6d9f837becb59fadefecc976c5054b8e-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the account of the approach, design, or recurring workflow actually used by an actor to accomplish work or conduct an investigation.",
+   "definition": "An item that describes the approach, design, materials, operations, or recurring workflow used by the author or another actor to accomplish a task or conduct an investigation without primarily instructing readers.",
+   "distinguished_from": "Unlike Procedure, Event Account, or Explanation, Method Account documents how work or inquiry is carried out rather than directing readers, narrating a particular episode, or chiefly explaining why a process works.",
+   "examples": [
+    {
+     "doc": "human:f18c6edd7dad954a7829196886f7adbab1c780a1d3d589419c389b45e54a871c",
+     "excerpt": "The finishing workflow assembles graphical elements in Fireworks and places them into OmniGraffle; infographics may combine OmniGraffle, Fireworks, and charts produced in Excel, with Fireworks used to make the imported visuals stand out.",
+     "item_id": 7
+    },
+    {
+     "doc": "human:49ac9fb2bf01c27a06dab1d95a34813294f886d8c47938505419b442c43dca76",
+     "excerpt": "The experiment repeatedly asked ChatGPT to invent people with specified characteristics, such as founders or caregivers, and examined recurring patterns in the resulting biographies.",
+     "item_id": 3
+    }
+   ],
+   "name": "Method Account",
+   "subsumes": [
+    "I-human:f18c6edd7dad954a7829196886f7adbab1c780a1d3d589419c389b45e54a871c-01",
+    "I-human:49ac9fb2bf01c27a06dab1d95a34813294f886d8c47938505419b442c43dca76-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove the operative means by which readers can perform an activity, experiment, simulation, or interaction central to the post.",
+   "definition": "A bounded component that supplies readers with the operative means to perform an activity, experiment, simulation, or interaction central to the post.",
+   "distinguished_from": "Unlike Participation Prompt, Procedure, or Navigation, Activity Enablement provides a usable mechanism rather than merely inviting participation, explaining actions, or directing readers to other content.",
+   "examples": [
+    {
+     "doc": "human:273a85cff985da2c88399887d1569f1b90f89638707c83adfb7c51c417d046cb",
+     "excerpt": "An embedded interactive lab, with an alternative access option for readers unable to use the embed, enables participation in the fixed-fitness experiment.",
+     "item_id": 10
+    }
+   ],
+   "name": "Activity Enablement",
+   "subsumes": [
+    "I-human:273a85cff985da2c88399887d1569f1b90f89638707c83adfb7c51c417d046cb-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's chief contribution is to present an original or reproduced creative work for readers' aesthetic, expressive, thematic, or entertainment experience.",
+   "definition": "An item that presents an original or reproduced creative work or substantial excerpt as focal content for aesthetic, expressive, thematic, or entertainment value.",
+   "distinguished_from": "Unlike Supplement, Illustration, or Description, Creative Presentation makes the creative work itself the focal contribution rather than using it as optional ancillary material, a clarifying example, or an object of characterization.",
+   "examples": [
+    {
+     "doc": "human:4623e57a07996e1342bc5af26f373d08af4e8e5dfd4eb9a678fdc392682bdd1d",
+     "excerpt": "The newsletter identifies “Pennies from Heaven” as a 1936 song by composer Arthur Johnston and lyricist Johnny Burke, introduced by Bing Crosby in the film of the same name, and reproduces its full lyrics portraying rain and thunder as necessary sources of fortune and desired blessings.",
+     "item_id": 30
+    }
+   ],
+   "name": "Creative Presentation",
+   "subsumes": [
+    "I-human:4623e57a07996e1342bc5af26f373d08af4e8e5dfd4eb9a678fdc392682bdd1d-02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate questions or criteria chiefly intended to help readers privately diagnose or appraise their own circumstances, behavior, or condition.",
+   "definition": "An item that prompts readers to evaluate their own circumstances, behavior, priorities, or condition through diagnostic questions or criteria.",
+   "distinguished_from": "Unlike Procedure, Participation Prompt, or Evaluation, Self-Assessment elicits a private appraisal by the reader rather than directing task execution, requesting a public response, or supplying the author's own judgment.",
+   "examples": [
+    {
+     "doc": "ai:7dc66f22b42de02856e30cec75a00ace4e594ec2e41ed6e3fd7488bba6e9ee26",
+     "excerpt": "A self-assessment asks whether gambling now consumes more time and thought than creative projects, whether creativity has declined, and whether betting substitutes a quick feeling of achievement for making something.",
+     "item_id": 14
+    }
+   ],
+   "name": "Self-Assessment",
+   "subsumes": [
+    "I-ai:7dc66f22b42de02856e30cec75a00ace4e594ec2e41ed6e3fd7488bba6e9ee26-01"
+   ]
+  }
+ ]
+}

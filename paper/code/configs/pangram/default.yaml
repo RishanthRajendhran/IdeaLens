@@ -1,0 +1,34 @@
+# The Pangram surface-detector baseline.
+#
+# TWO USES, KEPT DISTINCT:
+#   baseline   score DOCUMENTS and report Pangram's OWN deployed verdict rule.
+#   leakage    score OUTLINES to ask whether they read machine-written. That is
+#              the de-leak study, not the baseline, and it must be labelled as such.
+model: pangram-4
+bulk: true                # bulk is cheaper than per-text; never loop single calls
+unit: document            # `outline` only for the leakage study
+timeout: 7200
+submit_timeout: 300       # the bulk POST itself. The SDK default of 10s cannot
+                          # upload a multi-MB payload and a lost response leaves a
+                          # PAID job that no API can enumerate.
+
+verdict_rule:             # Pangram's production rule, applied unchanged
+  human_if_fraction_human_at_least: 0.90
+  ai_if_fraction_ai_at_least: 0.80
+  else: mixed
+
+notes: >
+  "Pangram as deployed flags these" is a far stronger claim than "Pangram flags
+  these at a threshold we chose", and it removes the rebuttal that we tuned them
+  into failure.
+
+  Their own reports are asymmetric and it matters which you are entering: verdict
+  metrics use the fixed rule above with no per-benchmark tuning, but every
+  published AUROC and TPR@X%FPR of theirs is RECALIBRATED per benchmark, i.e.
+  in-set. Entering our deployed numbers against their in-set rows understates us
+  by roughly 4x for no reason. Match the convention and say which was used.
+
+  Billing: Pangram 4 bills per 100 words, Pangram 3 per 1,000. Outline items
+  average about 25 words, below one billing unit, so per-item submission costs
+  several times more AND asks the classifier to judge fragments far shorter than
+  anything it was trained on. Submit whole outlines.

@@ -1,0 +1,22 @@
+extends: _base.yaml
+# Stage 0: format classification via LLM, over WebOrganizer's own annotation
+# config -- the same system message and 24 category definitions given to the
+# large model whose labels their released encoder was distilled from.
+stage: format
+backend: llm
+model: gemini-3.7-flash
+n_shots: 0
+max_chars: 0          # no cap: the whole document is classified (was 6000)
+max_output_tokens: 1024
+
+notes: >
+  Zero-shot deliberately: a pilot showed the five demonstrations do not change
+  the labels while restating the 1,297-token taxonomy five more times.
+
+  Order rows so identical system prefixes sit consecutively -- that is what earns
+  the cached-input discount, and on one corpus it took the job from about $51 to
+  about $11.
+
+  Duplicate ids silently drop rows, because results come back keyed by id. The
+  builder aborts on duplicates rather than proceeding; one corpus numbered its
+  reviews per paper and 326 rows shared the id "0".

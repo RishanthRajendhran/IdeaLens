@@ -1,0 +1,9 @@
+Level,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+vanilla · mean,model ideas,297,97.9,99.7,100.0,86.6,94.1,99.7,–,–,100.0
+vanilla · median,model ideas,297,99.5,99.9,100.0,97.8,99.8,100.0,–,–,100.0
+style_transfer · mean,"mixed, AI-leaning",297,68.5,82.8,90.2,38.3,44.9,86.9,–,–,97.1
+style_transfer · median,"mixed, AI-leaning",297,84.3,98.7,99.9,23.6,34.0,99.2,–,–,100.0
+style_transfer · min,"mixed, AI-leaning",297,0.0,0.0,0.0,0.0,0.0,0.0,–,–,0.0
+style_transfer · max,"mixed, AI-leaning",297,100.0,100.0,100.0,100.0,100.0,100.0,–,–,100.0
+human · mean,human ideas,495,4.7,0.3,0.1,6.4,0.1,0.4,–,–,0.0
+human · median,human ideas,495,1.5,0.1,0.0,1.5,0.1,0.0,–,–,0.0

@@ -1,0 +1,73 @@
+Arm,Model,0.1%,0.5%,2%,5%
+English · clear AI (ai_plain),IdeaLens · outline,74.4,92.6,98.8,99.6
+English · clear AI (ai_plain),IdeaLens · document,71.1,91.8,99.5,99.9
+English · clear AI (ai_plain),ProseLens,99.2,99.8,100.0,100.0
+English · clear AI (ai_plain),IdeaLens-ModernBERT-L · outline,44.1,74.2,93.6,98.6
+English · clear AI (ai_plain),IdeaLens-ModernBERT-L · document,27.6,68.3,95.6,99.7
+English · clear AI (ai_plain),ProseLens-ModernBERT-L,82.1,98.6,100.0,100.0
+English · clear AI (ai_plain),EditLens-Llama-3B (cal.),0.0,88.1,98.6,99.5
+English · clear AI (ai_plain),Binoculars (cal.),42.1,68.5,82.5,85.7
+English · attacked AI (humanized),IdeaLens · outline,61.1,80.0,89.0,92.5
+English · attacked AI (humanized),IdeaLens · document,47.4,70.6,89.9,95.1
+English · attacked AI (humanized),ProseLens,87.4,91.4,95.2,97.6
+English · attacked AI (humanized),IdeaLens-ModernBERT-L · outline,36.8,61.7,81.9,91.4
+English · attacked AI (humanized),IdeaLens-ModernBERT-L · document,20.4,42.5,77.8,94.5
+English · attacked AI (humanized),ProseLens-ModernBERT-L,61.6,81.2,92.3,97.0
+English · attacked AI (humanized),EditLens-Llama-3B (cal.),0.0,49.6,82.2,91.7
+English · attacked AI (humanized),Binoculars (cal.),1.3,11.0,28.9,36.3
+English · rephrase (h2l_rephrase),IdeaLens · outline,0.8,2.9,9.7,21.0
+English · rephrase (h2l_rephrase),IdeaLens · document,0.8,2.4,13.0,38.6
+English · rephrase (h2l_rephrase),ProseLens,25.2,36.1,57.7,80.3
+English · rephrase (h2l_rephrase),IdeaLens-ModernBERT-L · outline,0.7,3.4,11.6,29.8
+English · rephrase (h2l_rephrase),IdeaLens-ModernBERT-L · document,0.3,2.3,13.8,56.2
+English · rephrase (h2l_rephrase),ProseLens-ModernBERT-L,7.7,22.0,55.7,81.9
+English · rephrase (h2l_rephrase),EditLens-Llama-3B (cal.),0.0,7.9,41.2,78.0
+English · rephrase (h2l_rephrase),Binoculars (cal.),1.3,7.1,24.7,37.7
+English · clear human,IdeaLens · outline,0.2,0.3,1.8,7.5
+English · clear human,IdeaLens · document,0.1,0.1,0.4,7.5
+English · clear human,ProseLens,0.2,0.3,0.7,6.6
+English · clear human,IdeaLens-ModernBERT-L · outline,0.1,0.5,3.3,15.2
+English · clear human,IdeaLens-ModernBERT-L · document,0.0,0.0,0.6,21.6
+English · clear human,ProseLens-ModernBERT-L,0.1,0.2,2.1,15.6
+English · clear human,EditLens-Llama-3B (cal.),0.0,0.1,1.0,4.0
+English · clear human,Binoculars (cal.),0.1,0.3,2.8,7.8
+non-English · clear AI (ai_plain),IdeaLens · outline,72.2,88.4,97.0,99.0
+non-English · clear AI (ai_plain),IdeaLens · document,46.2,75.2,98.1,99.9
+non-English · clear AI (ai_plain),ProseLens,94.7,98.2,99.9,99.9
+non-English · clear AI (ai_plain),IdeaLens-ModernBERT-L · outline,49.1,76.9,93.5,98.9
+non-English · clear AI (ai_plain),IdeaLens-ModernBERT-L · document,–,–,–,–
+non-English · clear AI (ai_plain),ProseLens-ModernBERT-L,–,–,–,–
+non-English · clear AI (ai_plain),EditLens-Llama-3B (cal.),0.0,60.5,96.6,98.7
+non-English · clear AI (ai_plain),Binoculars (cal.),7.3,27.8,51.3,57.9
+non-English · attacked AI (humanized),IdeaLens · outline,57.4,74.3,84.9,89.5
+non-English · attacked AI (humanized),IdeaLens · document,30.3,55.3,84.7,91.2
+non-English · attacked AI (humanized),ProseLens,79.0,85.2,90.1,94.3
+non-English · attacked AI (humanized),IdeaLens-ModernBERT-L · outline,38.0,62.1,79.5,88.2
+non-English · attacked AI (humanized),IdeaLens-ModernBERT-L · document,–,–,–,–
+non-English · attacked AI (humanized),ProseLens-ModernBERT-L,–,–,–,–
+non-English · attacked AI (humanized),EditLens-Llama-3B (cal.),0.0,28.3,80.1,90.0
+non-English · attacked AI (humanized),Binoculars (cal.),0.0,2.6,15.4,25.2
+non-English · rephrase (h2l_rephrase),IdeaLens · outline,0.1,0.8,5.8,16.3
+non-English · rephrase (h2l_rephrase),IdeaLens · document,0.0,0.1,4.6,22.4
+non-English · rephrase (h2l_rephrase),ProseLens,2.6,6.3,28.3,65.3
+non-English · rephrase (h2l_rephrase),IdeaLens-ModernBERT-L · outline,0.1,0.6,4.4,17.1
+non-English · rephrase (h2l_rephrase),IdeaLens-ModernBERT-L · document,–,–,–,–
+non-English · rephrase (h2l_rephrase),ProseLens-ModernBERT-L,–,–,–,–
+non-English · rephrase (h2l_rephrase),EditLens-Llama-3B (cal.),0.0,0.6,17.4,56.3
+non-English · rephrase (h2l_rephrase),Binoculars (cal.),0.0,0.7,6.7,16.0
+non-English · clear human,IdeaLens · outline,0.0,0.1,2.8,11.4
+non-English · clear human,IdeaLens · document,0.0,0.0,0.0,6.5
+non-English · clear human,ProseLens,0.0,0.0,0.2,10.3
+non-English · clear human,IdeaLens-ModernBERT-L · outline,0.0,0.1,1.5,10.0
+non-English · clear human,IdeaLens-ModernBERT-L · document,–,–,–,–
+non-English · clear human,ProseLens-ModernBERT-L,–,–,–,–
+non-English · clear human,EditLens-Llama-3B (cal.),0.0,0.0,0.2,7.3
+non-English · clear human,Binoculars (cal.),0.0,0.2,2.2,5.9
+English · ai_human_edited (a person rewrote model content),IdeaLens · outline,67.3,89.9,98.8,99.6
+English · ai_human_edited (a person rewrote model content),IdeaLens · document,37.1,73.8,99.6,100.0
+English · ai_human_edited (a person rewrote model content),ProseLens,92.7,98.4,100.0,100.0
+English · ai_human_edited (a person rewrote model content),IdeaLens-ModernBERT-L · outline,44.8,72.2,94.0,98.4
+English · ai_human_edited (a person rewrote model content),IdeaLens-ModernBERT-L · document,22.6,54.4,92.3,100.0
+English · ai_human_edited (a person rewrote model content),ProseLens-ModernBERT-L,51.6,84.7,99.6,100.0
+English · ai_human_edited (a person rewrote model content),EditLens-Llama-3B (cal.),0.0,39.5,89.5,98.4
+English · ai_human_edited (a person rewrote model content),Binoculars (cal.),8.5,22.6,52.0,62.5

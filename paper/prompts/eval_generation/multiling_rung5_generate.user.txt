@@ -1,0 +1,16 @@
+FORMAT: ___FORMAT___
+
+LANGUAGE: ___LANGUAGE___
+
+TARGET LENGTH: approximately ___TARGET___
+
+DOCUMENT DESCRIPTION: ___DESCRIPTION___
+
+GLOBAL THEMES:
+___THEMES___
+
+OUTLINE (in order):
+___OUTLINE___
+
+Write the full document realizing this outline exactly, following the rules.
+Write it in ___LANGUAGE___.

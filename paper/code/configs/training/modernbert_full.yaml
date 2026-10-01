@@ -1,0 +1,26 @@
+extends: _base.yaml
+name: ModernBERT-large, full outlines
+backend: hf_encoder
+base_model: answerdotai/ModernBERT-large
+setting: full
+lr: 2.0e-5
+token_budget: 16384        # dynamic batching by token count, not row count
+grad_accum: 4
+warmup_frac: 0.06
+probes: 10
+save_every: 1000
+max_length: 8192
+human_index: 1
+
+slurm:
+  partition: <gpu-partition>
+  gpus: 1
+  constraint: <bf16-capable-gpu>
+  time: "04:00:00"
+  mem: 64G
+  cpus: 8
+
+notes: >
+  Runs on one GPU. `--constraint=bf16` is not optional on a mixed cluster: some
+  partitions include cards old enough that bf16 silently misbehaves rather than
+  failing loudly.

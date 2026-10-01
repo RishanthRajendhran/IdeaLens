@@ -1,0 +1,49 @@
+extends: _base.yaml
+name: Multilingual ladder
+number: 9
+group: Idea provenance
+asks: >
+  Nine languages. The outline is English even when the source is not. Does idea
+  provenance survive the language boundary?
+metric: fire
+positive: mixed
+upstream: >
+  FineWeb2 pre-2022 per-language subsets for the human side, plus our own
+  generated ladder for the AI side.
+data_dir: test9_multilingual
+legacy_npz_stem: multiling   # the stem this eval's predictions were written under
+                        # before this repository existed; read by
+                        # scripts/data/import_results.py
+
+pipeline:
+  # The released format encoder is trained on English web text and is unusable
+  # off-English, so the LLM backend is not optional here.
+  format: format_llm_flash
+
+variants:
+  - {id: V1, pipeline: "document -> English translation -> extract -> de-leak", tests: "the deployment answer; everything downstream stays in distribution"}
+  - {id: V2, pipeline: "document -> source-language outline -> translate outline -> de-leak", tests: "cheaper; moves the bottleneck earlier, but the extraction exemplars are English"}
+  - {id: V3, pipeline: "fully source-language: extract, paraphrase and classify", tests: "the strongest surface-independence claim, and the one that may fail outright"}
+
+report:
+  rung_caption: "the ladder rung, per language"
+  group_by: [lang, level]
+  # Always state n per language. Class sizes are uneven by construction and one
+  # language's n is small enough that a rate without it is misleading.
+  require_group_n: true
+
+notes: >
+  ROLE LABELS STAY IN ENGLISH in every variant; only item content carries the
+  source language. The labels are a small closed vocabulary the classifier keys
+  on heavily, and translating them discards in-distribution structure while
+  confounding the variable.
+
+  The confound that ruins most multilingual detection evals: if humans come from
+  a pre-2022 corpus and the AI side is generated now, topic and temporal drift is
+  detectable and you measure that instead of authorship. So the AI side is
+  generated NATIVELY in each language from briefs derived from the MATCHED human
+  documents -- never by translating English AI text into position.
+
+  An English-only encoder is a clean negative control on V3, not an
+  embarrassment. Run the cheap logistic pilot on two languages first: it tells
+  you whether V3 is alive before anything is built.

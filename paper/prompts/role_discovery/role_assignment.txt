@@ -1,0 +1,474 @@
+# TASK
+
+Assign one primary functional role to every outline item in one
+{{FORMAT}} document.
+
+The outline may contain:
+
+- substantive items;
+- rhetorical items;
+- bounded structural items.
+
+The base role vocabulary below was proposed from general knowledge of the
+format before any example documents were examined. Prefer a base role
+whenever it correctly captures an item's primary function.
+
+Invent a new candidate role only when the base vocabulary contains a
+genuine functional gap and every base role would misstate what the item is
+primarily doing.
+
+
+# FORMAT
+
+Format: {{FORMAT}}
+
+Description: {{FORMAT_DESCRIPTION}}
+
+
+# FUNCTIONAL PRINCIPLE
+
+A role names the primary substantive, rhetorical, communicative,
+information-bearing, or structural job that an outline item performs at its
+location in the document.
+
+Determine the role contextually by considering:
+
+- what the item contributes;
+- why it appears at that point;
+- how it relates to preceding and following items;
+- how it advances the document's overall communicative, informational, or
+  documentary purpose;
+- for a bounded component, what document-level function would disappear if
+  the component were omitted.
+
+The same kind of information may receive different roles in different
+contexts.
+
+For example, factual material could orient the reader, support a claim,
+illustrate an idea, report an outcome, provide a comparison, or document a
+source. Its role depends on how it is used.
+
+Likewise, the same kind of document component may perform different
+functions. A table may report a finding, present evidence, compare
+alternatives, define values, or organize reference information. Its visual
+or structural form does not determine its role.
+
+
+# KINDS OF OUTLINE ITEM
+
+An outline item may represent:
+
+1. SUBSTANTIVE CONTENT
+
+   A claim, fact, event, example, method, finding, decision,
+   recommendation, instruction, or other content contribution.
+
+2. RHETORICAL FUNCTION
+
+   A move that frames, motivates, qualifies, supports, contrasts,
+   interprets, or concludes other content.
+
+3. STRUCTURAL FUNCTION
+
+   A bounded component included to organize, navigate, attribute, document,
+   supplement, disclose, summarize, or otherwise support the document's
+   communicative purpose.
+
+These categories guide interpretation only. Do not output them as
+additional labels.
+
+Classify every item according to its single primary function, regardless of
+which broad category that function belongs to.
+
+
+# SINGLE PRIMARY ROLE
+
+Assign exactly one role to each item.
+
+Choose the role representing the item's primary composition-level or
+structural function: the main job that would disappear at that point if the
+item were removed.
+
+An item may have secondary rhetorical, substantive, or structural effects.
+Do not assign or invent additional roles for those effects.
+
+If several roles appear plausible, choose the one that best explains why
+the item is present at that particular point, rather than merely describing:
+
+- what kind of information it contains;
+- what topic it concerns;
+- what section it appears in;
+- what visual or markup form it uses.
+
+Do not create compound roles such as:
+
+- "Background/Evidence";
+- "Claim and Recommendation";
+- "Instruction/Warning";
+- "Finding plus Interpretation";
+- "Summary/Navigation";
+- "Attribution and Evidence";
+- "Supplement and Method."
+
+
+# STRUCTURAL ITEMS
+
+A structural role is appropriate when the primary commitment represented by
+the item is the inclusion and document-level function of a bounded
+component.
+
+Possible structural functions include:
+
+- summarizing content;
+- enabling navigation;
+- documenting sources;
+- defining terminology for reference;
+- supplying supplementary material;
+- disclosing relevant information;
+- recording attribution or contribution;
+- organizing material for later reference.
+
+These are examples of possible functions, not a mandatory role list.
+
+Do not assign a structural role merely because an item:
+
+- appears inside a table, figure, note, appendix, source section, list, or
+  other component;
+- contains a citation, link, cross-reference, or source name;
+- corresponds to a heading or section;
+- has a particular visual or markup form;
+- occurs at the beginning or end of the document.
+
+When a bounded component contains substantive material, choose the role
+that best explains the extracted item's primary commitment.
+
+For example:
+
+- If an item primarily reports a result, use the relevant result or finding
+  role even if the result appeared in a table.
+- If an item primarily presents support for a claim, use the relevant
+  evidence role even if the material appeared in a figure or note.
+- If an item primarily describes a procedure, use the relevant procedural
+  or method role even if the material appeared in an appendix.
+- If an item primarily records that a bounded component documents sources,
+  supplies supplementary material, enables navigation, or performs another
+  document-level function, use the corresponding structural role.
+
+Classify by function rather than container.
+
+
+# BASE ROLE VOCABULARY
+
+{{STARTING_ROLES_BLOCK}}
+
+
+# DOCUMENT CONTEXT
+
+Global themes:
+
+{{GLOBAL_THEMES_BLOCK}}
+
+Ordered outline items:
+
+{{ITEMS_BLOCK}}
+
+
+# ASSIGNMENT PROCEDURE
+
+First inspect the complete ordered item list and the global themes.
+
+Do not classify each item in isolation.
+
+Then:
+
+1. Determine the primary function of each item in the context of the
+   complete document.
+
+2. Determine whether the item's primary commitment is substantive,
+   rhetorical, or structural, without outputting that broad category.
+
+3. Compare the function with the definitions, assignment tests, and
+   distinctions in the base vocabulary.
+
+4. Use the exact name of the best-fitting base role when one correctly
+   captures the function.
+
+5. Identify any genuine substantive, rhetorical, or structural functions
+   that the base vocabulary does not cover.
+
+6. Consolidate equivalent missing functions into one candidate role before
+   assigning invented roles to items.
+
+7. Recheck all items after identifying invented roles so that an invented
+   role discovered later is also used for earlier items with the same
+   primary function.
+
+8. Return assignments in the original item order.
+
+
+# USING BASE ROLES
+
+Use a base role when its definition and assignment test correctly capture
+the item's primary function.
+
+Do not invent a role merely because:
+
+- a base role is broader than the item's specific content;
+- the item concerns an unusual topic, entity, or scenario;
+- the item has secondary effects not named by the role;
+- the item occurs in an unusual document position;
+- two base roles appear plausible;
+- a narrower label could be created for this particular item;
+- the item appears in a distinctive visual or structural container;
+- the item contains a citation, source name, link, table, note, heading, or
+  other surface marker;
+- a structural component has a conventional name not used by the base
+  vocabulary.
+
+When two base roles appear plausible, use their definitions,
+`assignment_test` fields, and `distinguished_from` fields to choose the
+better primary role.
+
+For a base role:
+
+- reproduce its name exactly;
+- set `is_invented` to `false`.
+
+
+# DISTINGUISHING SUBSTANTIVE AND STRUCTURAL ROLES
+
+When both a substantive role and a structural role appear plausible, ask:
+
+"What does this outline item primarily commit the reconstructed document to
+include?"
+
+Use a substantive or rhetorical role when the item primarily commits the
+document to:
+
+- make a claim;
+- report a fact, event, observation, or result;
+- present evidence;
+- give an example;
+- describe a method or procedure;
+- offer an interpretation;
+- issue an instruction or recommendation;
+- perform another content-level move.
+
+Use a structural role when the item primarily commits the document to
+include a bounded component for a document-level purpose, such as:
+
+- collecting sources;
+- supporting navigation;
+- providing supplementary material;
+- recording disclosures or attributions;
+- organizing reference information;
+- summarizing another portion of the document as a component.
+
+Do not classify by the component's name alone.
+
+A component may have a structural function even when it contains
+substantive material, but that structural function should be selected only
+when it is the primary commitment represented by the outline item.
+
+
+# INVENTING A ROLE
+
+Invent a role only when every base role would mischaracterize the item's
+primary function.
+
+An invented role may represent a missing substantive, rhetorical, or
+structural function.
+
+Every invented role must:
+
+- name a recurring communicative, information-bearing, rhetorical, or
+  document-level structural function;
+- be general across topics;
+- apply to complete composition-level or structural outline items;
+- be distinct from every base role and every other invented role;
+- avoid referring to the item's specific subject matter;
+- use a short one-to-three-word name;
+- not combine multiple independently assignable functions.
+
+An invented structural role must:
+
+- name what a bounded component accomplishes for the document;
+- remain meaningful across different topics within {{FORMAT}};
+- be more than the conventional name of a section, container, or markup
+  form;
+- not be created solely because an item uses a particular visual format,
+  citation style, or structural marker.
+
+Do not invent a role merely to name:
+
+- a bibliography, appendix, table, figure, footnote, heading, list, or
+  other container as such;
+- an individual citation, link, reference entry, label, or marker;
+- a formatting or markup convention;
+- a component's position in the document.
+
+Instead, identify the underlying function that the component performs.
+
+Do not target any particular invention rate. Prefer a base role whenever
+it fits, but do not force-fit an item when the inventory has a genuine
+functional gap.
+
+Before finalizing invented roles:
+
+- merge synonymous or near-duplicate inventions;
+- use the same invented role for every item with the same primary function;
+- verify that no base role already covers the function;
+- verify that the role is not merely a narrower topic-specific or
+  container-specific subtype of a base role;
+- define how the invention differs from its nearest base or invented role.
+
+For every invented role, supply:
+
+- `name`;
+- `definition`;
+- `assignment_test`;
+- `distinguished_from`.
+
+
+# INVENTED ROLE DEFINITION
+
+For an invented substantive or rhetorical role, `definition` must state
+what content-level function the role labels.
+
+For an invented structural role, `definition` must state:
+
+- what bounded commitment the role labels;
+- what document-level function the component performs;
+- why the function is not merely formatting, position, or container type.
+
+The definition must be one sentence and remain general across topics.
+
+
+# INVENTED ROLE ASSIGNMENT TEST
+
+The `assignment_test` must state when the invented role should be selected
+as an item's single primary role.
+
+Use this general test:
+
+"If this item were removed, what primary substantive, rhetorical, or
+structural function would disappear at this point?"
+
+For an invented structural role, explain what document-level function would
+be lost if the bounded component were omitted.
+
+The assignment test must prevent selection based only on visual form,
+markup, component name, or document position.
+
+
+# INVENTED ROLE DISTINCTION
+
+The `distinguished_from` field must identify the nearest base or invented
+competitor and state the decisive functional difference.
+
+For a structural role, distinguish it from:
+
+- substantive roles that may appear inside the component;
+- other structural roles serving different document-level purposes;
+- surface forms or containers that do not independently determine
+  function.
+
+Do not distinguish roles merely by wording, topic, position, formatting,
+markup syntax, citation presence, or container name.
+
+
+# CONSISTENCY ACROSS ITEMS
+
+Use the same role for items that perform the same primary function, even
+when they:
+
+- concern different topics or entities;
+- appear in different sections;
+- use different kinds of evidence or examples;
+- are realized through different visual forms;
+- occur inside different kinds of bounded components.
+
+Do not use the same role merely because items:
+
+- share a topic;
+- use the same kind of container;
+- contain similar keywords;
+- occur in similar positions;
+- include citations or links.
+
+Functional equivalence, not surface similarity, determines role reuse.
+
+
+# SELF-CHECK
+
+Before returning the assignments, verify:
+
+1. Every outline item has exactly one role.
+
+2. Every non-invented role name exactly matches a base role.
+
+3. Every invented role represents a genuine functional gap rather than a
+   narrower topic-specific, position-specific, or container-specific
+   subtype of a base role.
+
+4. No invented roles are synonymous or near-duplicates.
+
+5. Items performing the same primary function use the same role.
+
+6. No compound or multi-label roles appear.
+
+7. Assignments reflect the complete document context rather than isolated
+   keywords or item content.
+
+8. Structural roles are assigned by document-level function rather than
+   visual form, markup, section name, or container type.
+
+9. An item inside a structural component receives a substantive role when
+   its primary commitment is substantive.
+
+10. A bounded component receives a structural role when its inclusion and
+    document-level function are the primary commitment represented by the
+    item.
+
+11. The presence of citations, links, tables, figures, notes, headings,
+    appendices, or source lists has not by itself determined any role.
+
+12. Every invented structural role states what function the component
+    performs rather than merely naming the component.
+
+13. Item IDs and order match the supplied outline exactly.
+
+
+# OUTPUT FORMAT
+
+Return only valid JSON. Do not include Markdown, commentary, explanations,
+or fields outside this schema.
+
+{
+  "invented_roles": [
+    {
+      "name": "<one-to-three-word functional role name>",
+      "definition": "<one sentence defining the content or component this role labels>",
+      "assignment_test": "<one sentence stating when this should be the item's single primary role>",
+      "distinguished_from": "<one sentence identifying its nearest base or invented competitor and the decisive difference>"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "role_name": "<exact base or invented role name>",
+      "is_invented": false
+    }
+  ]
+}
+
+Requirements:
+
+- `invented_roles` must be an array and may be empty.
+- Define each invented role exactly once.
+- `items` must contain exactly one entry for every supplied outline item.
+- Item IDs and order must match the input.
+- `role_name` must exactly match a base role or a role defined in
+  `invented_roles`.
+- `is_invented` must be `true` exactly when `role_name` refers to a role in
+  `invented_roles`.

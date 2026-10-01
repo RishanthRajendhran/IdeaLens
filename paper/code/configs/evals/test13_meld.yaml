@@ -1,0 +1,22 @@
+extends: _base.yaml
+name: MELD — long-form writing, five unseen models
+number: 13
+group: Out of domain
+asks: Five writer models and five domains never seen in training, all documents 500 words or longer.
+upstream: MELD-eval (Li et al.). The full benchmark is 220,136 evaluations; we sample.
+data_dir: test13_meld
+legacy_item_stem: pilot_meld   # directory suffix of the sharded per-item
+                        # predictions; read by scripts/data/import_results.py
+deleak_status: done
+report:
+  group_by: [model, domain]
+  in_set: true
+notes: >
+  DO NOT run the full benchmark through extraction — take a sample per arm.
+
+  For the attack battery, report OUTLINE-IDENTITY RATE, not only a TPR delta. For
+  homoglyph, whitespace, zero-width and case-flip attacks our extracted outlines
+  should be byte-identical to the clean ones, and "the attack surface these
+  methods defend against does not exist in our representation" is a better result
+  than a 99.99% we cannot beat. Synonym and number perturbation DO move the
+  outline and are the informative arms.

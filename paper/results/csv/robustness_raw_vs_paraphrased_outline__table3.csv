@@ -1,0 +1,7 @@
+Rows,Model,0.1%,0.5%,2%,5%
+all,IdeaLens,96.4,98.2,99.1,98.8
+all,IdeaLens-ModernBERT-L,95.7,95.9,97.6,97.9
+AI,IdeaLens,93.2,97.1,99.0,99.5
+AI,IdeaLens-ModernBERT-L,91.6,92.4,96.4,98.8
+human,IdeaLens,99.6,99.4,99.3,98.2
+human,IdeaLens-ModernBERT-L,99.9,99.5,98.8,96.9

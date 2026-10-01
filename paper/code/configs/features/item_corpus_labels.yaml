@@ -1,0 +1,12 @@
+extends: _base.yaml
+name: Item-level discovery, corpus labels
+unit: item
+label_source: corpus
+per_side: 2500
+format_agnostic: true      # formats mixed on purpose; a feature must survive all
+notes: >
+  One idea at a time. Structural features are IMPOSSIBLE here and the prompt says
+  so: no ordering, no neighbours, no document-level shape. What remains is the
+  nature of the idea itself -- what it commits to, how it is warranted, how
+  specific it is. Role matching is essential, because items inherit their label
+  from their parent document and the classes use roles at different rates.

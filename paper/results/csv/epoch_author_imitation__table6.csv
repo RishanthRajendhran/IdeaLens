@@ -1,0 +1,7 @@
+Generator,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+claude,vanilla,99,97.0 / 100.0,100.0 / 100.0,100.0 / 100.0,66.7 / 67.7,86.9 / 93.9,99.0 / 100.0,97.0 / 85.9,3.0 / –,100.0
+gemini,vanilla,99,97.0 / 97.0,100.0 / 97.0,100.0 / 100.0,65.7 / 63.6,90.9 / 89.9,100.0 / 99.0,98.0 / 85.9,5.1 / –,100.0
+gpt,vanilla,99,99.0 / 99.0,100.0 / 100.0,100.0 / 100.0,64.6 / 56.6,77.8 / 91.9,100.0 / 100.0,86.9 / 75.8,1.0 / –,100.0
+claude,style_transfer,99,58.6 / 63.6,73.7 / 79.8,93.9 / 96.0,15.2 / 16.2,28.3 / 50.5,84.8 / 90.9,21.2 / 54.5,0.0 / –,100.0
+gemini,style_transfer,99,45.5 / 49.5,62.6 / 63.6,92.9 / 86.9,14.1 / 18.2,35.4 / 52.5,78.8 / 78.8,57.6 / 59.6,0.0 / –,91.9
+gpt,style_transfer,99,40.4 / 52.5,73.7 / 72.7,91.9 / 92.9,9.1 / 10.1,14.1 / 32.3,81.8 / 87.9,17.2 / 49.5,0.0 / –,99.0

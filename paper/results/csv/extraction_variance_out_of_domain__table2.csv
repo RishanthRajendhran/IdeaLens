@@ -1,0 +1,2 @@
+Condition,documents,same verdict in all 5 runs,pairwise agreement,mean per-document SD of P(AI),TPR range over runs,FPR range over runs
+(a) extractor only,400,73.2%,86.8%,0.058,79.4–83.8,3.3–5.7

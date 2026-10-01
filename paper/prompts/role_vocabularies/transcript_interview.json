@@ -1,0 +1,555 @@
+{
+ "format_slug": "transcript_interview",
+ "n_roles": 32,
+ "source": "role discovery, consolidation pass (role_consolidation_xhigh.json)",
+ "final_roles": [
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the particulars needed to identify the specific record rather than merely reduce contextual understanding.",
+   "definition": "A bounded item establishes which recorded work or event the document represents through identifying particulars such as its title, date, occasion, venue, episode, or version.",
+   "distinguished_from": "Unlike Orientation, Record Identification establishes the record's identity, and unlike Participant Attribution, it does not chiefly assign people to contributory roles.",
+   "examples": [
+    {
+     "doc": "human:96676beabfbb1c44f0246062d914c29916f3971921c0f9beb491110623ed99a2",
+     "excerpt": "The program identifies itself as the September 2, 2020 daily CyberWire summary.",
+     "item_id": 2
+    }
+   ],
+   "name": "Record Identification",
+   "subsumes": [
+    "B01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would leave unclear who participated in or contributed to the record and in what capacity.",
+   "definition": "A bounded item identifies participants or contributors and associates them with their roles, credentials, perspectives, or responsibility for the recorded material.",
+   "distinguished_from": "Unlike Record Identification, Participant Attribution identifies the people responsible for the exchange or record rather than which recorded work it is, and unlike Orientation, it assigns capacities rather than supplying general background.",
+   "examples": [
+    {
+     "doc": "human:d5e425a4922c22800a5f0446c49abd456cb59f184461abbd39304124a02cff68",
+     "excerpt": "The 24 March discussion features Commonplace’s Jen Miller and Benjy Meyer alongside Watford Borough Council’s Semeta Bloomfield, attributing the perspectives of the platform provider and council implementation team.",
+     "item_id": 3
+    }
+   ],
+   "name": "Participant Attribution",
+   "subsumes": [
+    "B02"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would deprive the audience of background, setting, purpose, circumstances, or stakes needed to understand the ensuing material.",
+   "definition": "An item situates the exchange, discourse, or represented events by supplying relevant background, setting, purpose, circumstances, or stakes.",
+   "distinguished_from": "Unlike Record Identification, Orientation makes the content intelligible rather than merely identifying the record, and unlike Content Summary, it contextualizes rather than condenses the principal material.",
+   "examples": [
+    {
+     "doc": "human:0020abca95ee1474dafeaff22103522ffc4b5acd384c15e882d0504f894be4a0",
+     "excerpt": "The opening frames the practical challenge of requesting employer funding for professional memberships, courses, and events such as EA Ignite or the Administrative Professionals Conference.",
+     "item_id": 1
+    }
+   ],
+   "name": "Orientation",
+   "subsumes": [
+    "B03"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly eliminate a greeting, welcome, thanks, apology, congratulation, farewell, or other act of interpersonal courtesy.",
+   "definition": "An item establishes or maintains rapport, courtesy, acknowledgment, or ceremonial connection among participants or with the audience.",
+   "distinguished_from": "Unlike Exchange Management, Social Exchange manages interpersonal relations rather than participation mechanics, and unlike Direct Response, it does not chiefly satisfy a substantive prompt.",
+   "examples": [
+    {
+     "doc": "ai:11270efbfab50b9511983cf0402f51c0fa915ff450ed9d04158af444f2bd7411",
+     "excerpt": "Wise congratulates the Class of 2026 and sends its members forward to construct lives defined by meaning.",
+     "item_id": 15
+    }
+   ],
+   "name": "Social Exchange",
+   "subsumes": [
+    "B04"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item is primarily intended to obtain information, confirmation, clarification, elaboration, or reflection from another participant or the audience.",
+   "definition": "An item elicits information or discourse by posing a question or otherwise inviting a participant or audience to supply, clarify, confirm, or expand content.",
+   "distinguished_from": "Unlike Challenge, Inquiry primarily seeks a response rather than contesting a premise or contribution, and unlike Directive, it solicits information rather than conduct.",
+   "examples": [
+    {
+     "doc": "human:2572c19935823cf1180fa1e53df74fb981acd04ccad662745d56a5b23cecebf7",
+     "excerpt": "The host frames Cubic Transportation Systems as an alternative case of progression toward advanced services and asks Mike Gosling to introduce his background, company, journey, lessons, and future direction.",
+     "item_id": 2
+    }
+   ],
+   "name": "Inquiry",
+   "subsumes": [
+    "B05"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when satisfying an immediate prompt through an answer, confirmation, denial, refusal, or admission of uncertainty is more important than any developed account or explanation.",
+   "definition": "An item directly resolves an immediate conversational demand by answering, confirming, denying, declining, or indicating inability to answer without substantial further development.",
+   "distinguished_from": "Unlike Account or Explanation, Direct Response is defined by immediate conversational resolution and applies only when a more developed informative function does not dominate.",
+   "examples": [
+    {
+     "doc": "human:2572c19935823cf1180fa1e53df74fb981acd04ccad662745d56a5b23cecebf7",
+     "excerpt": "Asked whether the rapid outcomes transition required new employment contracts, Gosling cannot answer definitively; he believes changes were likely, particularly because recording personal information required GDPR and PII review, and promises to investigate.",
+     "item_id": 29
+    }
+   ],
+   "name": "Direct Response",
+   "subsumes": [
+    "B06"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly remove an informative report of what is, was, occurred, was experienced, or was observed rather than support for a separate proposition.",
+   "definition": "An item informatively reports facts, observations, experiences, conditions, characteristics, plans, or outcomes concerning a subject or situation.",
+   "distinguished_from": "Unlike Narrative Development, Account need not advance an unfolding sequence, and unlike Claim or Evidence, its chief purpose is reporting rather than securing acceptance of another proposition.",
+   "examples": [
+    {
+     "doc": "ai:24aa7f94d2c4be1e550cbd00e100b59953fa4a9f7497dbe8699a8f85c8a18f26",
+     "excerpt": "Responsive seeks technological leadership by favoring deep solutions to high-impact customer problems over pursuing every AI trend, designing extensible products that can adapt as markets change, and anticipating enterprise requirements 18 to 24 months ahead rather than attaching AI superficially.",
+     "item_id": 15
+    }
+   ],
+   "name": "Account",
+   "subsumes": [
+    "B07"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would break the progression of a recounted or represented sequence of actions, experiences, turning points, or consequences.",
+   "definition": "An item advances a story or represented situation through temporally or causally connected actions, experiences, turning points, or consequences.",
+   "distinguished_from": "Unlike Account, Narrative Development chiefly advances an unfolding sequence, and unlike Illustration, that sequence is not primarily subordinate to exemplifying a separate general point.",
+   "examples": [
+    {
+     "doc": "human:d8d769d5fa6f41293ad6703985f6ea633719a1b05635e2c78311c1958bf51b23",
+     "excerpt": "After further coaling, the Oregon joins operations off Cuba; the sailor hears his first shot of the war at Santiago on June 1, participates in an unproductive pursuit, and then settles into monotonous blockade duty outside the harbor.",
+     "item_id": 23
+    }
+   ],
+   "name": "Narrative Development",
+   "subsumes": [
+    "B08"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's central commitment is a thesis, stance, conclusion, forecast, or interpretation presented for acceptance.",
+   "definition": "An item advances a proposition or position about what is true, significant, desirable, or likely.",
+   "distinguished_from": "Unlike Account, Claim seeks acceptance of a proposition rather than chiefly reporting information, and unlike Evidence, it is the proposition advanced rather than material offered to establish one.",
+   "examples": [
+    {
+     "doc": "ai:61282e24b31b7cf4cf137caf2a890cb238238f469a249554208533f7812e88ba",
+     "excerpt": "The feature concludes that maintaining wellness while traveling depends on small, consistent choices that accumulate over time and allow enjoyment without sacrificing health.",
+     "item_id": 9
+    }
+   ],
+   "name": "Claim",
+   "subsumes": [
+    "B09"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate the account of how or why something occurs, works, follows, or matters.",
+   "definition": "An item makes a matter intelligible by explaining its cause, operation, rationale, implication, meaning, or significance.",
+   "distinguished_from": "Unlike Evidence, Explanation primarily makes a matter understandable rather than proving it, and unlike Terminology Definition, it extends beyond fixing the meaning of a term or label.",
+   "examples": [
+    {
+     "doc": "ai:fc31b01f431c5e1b16691aa00976fc8b2f81eeb0af7f159cdf87c77ce9a5417f",
+     "excerpt": "Tax-deferred contributions postpone rather than eliminate taxation; traditional-account withdrawals, taxable Social Security, IRMAA surcharges, and growing required minimum distributions can interact in a self-reinforcing increase in taxes and costs.",
+     "item_id": 3
+    }
+   ],
+   "name": "Explanation",
+   "subsumes": [
+    "B10"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would leave the intended meaning or usage of a term, label, abbreviation, category, or expression unspecified.",
+   "definition": "An item establishes the meaning or intended usage of terminology for interpreting or referring to content in the transcript.",
+   "distinguished_from": "Unlike Explanation, Terminology Definition fixes linguistic or conceptual meaning rather than accounting for causes or mechanisms, and unlike Orientation, it clarifies a specific expression rather than the broader context.",
+   "examples": [
+    {
+     "doc": "ai:f004214f33cb162d13608970601992832fbfd9de4637ece491e827fe4830f91b",
+     "excerpt": "“Destination within a destination” denotes an operating philosophy under which the property should be sufficiently complete and engaging that guests need not seek experiences elsewhere.",
+     "item_id": 6
+    }
+   ],
+   "name": "Terminology Definition",
+   "subsumes": [
+    "B11"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly reduce confidence in another proposition by taking away reasons, data, testimony, observations, or corroboration offered for it.",
+   "definition": "An item substantiates a proposition by supplying reasons, facts, observations, testimony, data, or other corroborating material.",
+   "distinguished_from": "Unlike Account, Evidence reports material primarily to establish another proposition, and unlike Source Documentation, it supplies substantive support rather than merely recording provenance.",
+   "examples": [
+    {
+     "doc": "human:b03dad7f5314bc1cde7b1995afbb995a194dc5c542f911213efe30ad2284808e",
+     "excerpt": "Unauthorized streaming undercuts experimentation with digital sports distribution because entire live games appear on social media and other platforms; one study found that 54% of millennials had watched illegal sports streams and one-third did so regularly.",
+     "item_id": 6
+    }
+   ],
+   "name": "Evidence",
+   "subsumes": [
+    "B12"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a concrete case, anecdote, scenario, or demonstration used chiefly to make a broader idea clear or vivid.",
+   "definition": "An item clarifies or exemplifies a broader point through a concrete case, anecdote, scenario, or demonstration.",
+   "distinguished_from": "Unlike Evidence, Illustration chiefly makes a point concrete rather than substantiating it, and unlike Narrative Development, any story-like sequence serves a separate general idea.",
+   "examples": [
+    {
+     "doc": "ai:dd5a974cb02c3f9c8d81f2379addd0c69b4645e358831b4957e07286abfc1e4b",
+     "excerpt": "A hypothetical oncology case illustrates quantum sensing detecting faint metabolic or magnetic signatures from a few abnormal cells before conventional imaging can reveal a tumor, potentially shifting care from reactive treatment toward preventive intervention.",
+     "item_id": 5
+    }
+   ],
+   "name": "Illustration",
+   "subsumes": [
+    "B13"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's organizing purpose is to relate two or more subjects, periods, positions, or alternatives through similarities, differences, correspondences, contrasts, or tradeoffs.",
+   "definition": "An item clarifies subjects or alternatives by identifying meaningful similarities, differences, contrasts, correspondences, or tradeoffs among them.",
+   "distinguished_from": "Unlike Evaluation, Comparison primarily establishes relations among subjects rather than judging one against a standard, and unlike Explanation, it need not account for why those relations exist.",
+   "examples": [
+    {
+     "doc": "ai:f004214f33cb162d13608970601992832fbfd9de4637ece491e827fe4830f91b",
+     "excerpt": "Traditional luxury emphasizes exclusion, formality, restrained spaces, and unobtrusive service; modern luxury instead offers uncompromised quality on personal terms, recognition rather than generic service, and access to exceptional experiences without social intimidation.",
+     "item_id": 13
+    }
+   ],
+   "name": "Comparison",
+   "subsumes": [
+    "B14"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an appraisal of merit, quality, importance, effectiveness, acceptability, credibility, or impact.",
+   "definition": "An item judges or appraises a person, idea, action, work, condition, capability, or outcome against explicit or implicit standards.",
+   "distinguished_from": "Unlike Claim, Evaluation is specifically organized around appraisal, and unlike Recommendation, it judges what exists rather than chiefly advocating what should be done.",
+   "examples": [
+    {
+     "doc": "ai:1b4516c3cdac193e90ae3bab5e5b147271f03356f178a40868bc324d5df1afdf",
+     "excerpt": "Although recognized for vision, dribbling, and composure, Fernández wants to convert more chances and become physically stronger for competition against top-level defenders.",
+     "item_id": 3
+    }
+   ],
+   "name": "Evaluation",
+   "subsumes": [
+    "B15"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's chief contribution is to limit, condition, correct, soften, or specify the scope or certainty of a nearby assertion or account.",
+   "definition": "An item refines another contribution by adding a caveat, exception, correction, condition, limitation, or degree of uncertainty.",
+   "distinguished_from": "Unlike Challenge, Qualification adjusts the scope or force of content rather than primarily opposing it, and unlike Claim, its function depends on refining another commitment.",
+   "examples": [
+    {
+     "doc": "human:38c63f4e1af545d023468894d56a214ac998f8c84d6ae6d689b706209caeca0f",
+     "excerpt": "Early use produced fewer assignment complaints, but Schinkel withholds a firm conclusion because post-vacation evaluations and sufficient results were not yet available.",
+     "item_id": 31
+    }
+   ],
+   "name": "Qualification",
+   "subsumes": [
+    "B16"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an attempt to contest, rebut, test, expose a weakness in, or demand justification for another contribution.",
+   "definition": "An item opposes or critically tests an assertion, assumption, inference, procedure, position, or participant's credibility.",
+   "distinguished_from": "Unlike Inquiry, Challenge is chiefly adversarial or corrective rather than information-seeking, and unlike Qualification, it contests content rather than merely limiting its scope.",
+   "examples": [
+    {
+     "doc": "human:c37b9ff4baccdaebeac73ddf87186f1a71212673eb0b23d72aef525ba8076b36",
+     "excerpt": "Schiel rejects naive comparisons between a new trial’s response rate and historical literature because nominally similar eligibility criteria do not ensure comparable patients, centers, practices, or conduct; indirect comparisons and matching can instead reveal poor overlap, sometimes leaving only a small effective sample.",
+     "item_id": 13
+    }
+   ],
+   "name": "Challenge",
+   "subsumes": [
+    "B17"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item primarily advocates that someone adopt, avoid, consider, or prefer a future course without making its execution an operational requirement.",
+   "definition": "An item proposes or endorses a course of action, choice, policy, or practice as desirable or prudent.",
+   "distinguished_from": "Unlike Directive, Recommendation advocates a course rather than instructing or requiring its execution, and unlike Evaluation, it focuses on what should be done rather than merely judging what exists.",
+   "examples": [
+    {
+     "doc": "human:c7e913ddf4570cc0dc7bddb1cb7ce787429abf08bfd04c3df5356b10cfe16440",
+     "excerpt": "Vaziri recommends Star Trek II: The Wrath of Khan as an accessible first scary film, including for older children, because it combines unsettling creatures and performances with emotional storytelling.",
+     "item_id": 44
+    }
+   ],
+   "name": "Recommendation",
+   "subsumes": [
+    "B18"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's main force is to tell, require, request, or operationally guide someone to perform an action or follow a procedure.",
+   "definition": "An item directs conduct by issuing an instruction, command, operational request, rule, or required procedural step.",
+   "distinguished_from": "Unlike Recommendation, Directive presents action as to be performed or followed rather than merely favored, and unlike Inquiry, it seeks conduct rather than information.",
+   "examples": [
+    {
+     "doc": "ai:59a381f1bf28a2dd3fa12e52dcb7fe48e3763a30c6fa8b15919239ca8d01e4c5",
+     "excerpt": "Closing engagement requests invite listeners to share their experiences or questions, rate and review the podcast, subscribe for weekly career-independence material, and forward the episode to someone who may benefit.",
+     "item_id": 13
+    }
+   ],
+   "name": "Directive",
+   "subsumes": [
+    "B19"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item itself establishes an authoritative or collectively reached decision, finding, ruling, agreement, or resolved choice in the recorded interaction.",
+   "definition": "An item settles an issue or establishes an outcome by announcing a decision, finding, ruling, agreement, or resolved conclusion reached in the recorded context.",
+   "distinguished_from": "Unlike Claim, Determination has decision-setting force within the interaction, and unlike Account, it establishes the outcome rather than merely reporting a decision made elsewhere.",
+   "examples": [
+    {
+     "doc": "human:eac173d5c7e03ca1bb1b8098bede8765a09b48e457a28424c6d6a8c87f32fd4d",
+     "excerpt": "After further review and staff responses to council questions, the council unanimously adopted Resolution 03-03 amending Resolution 02-21 and the fiscal year 2002–2003 budget.",
+     "item_id": 22
+    }
+   ],
+   "name": "Determination",
+   "subsumes": [
+    "B20"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when the item's primary value is condensing multiple points, exchanges, findings, themes, or events from a larger portion into a shorter integrated representation.",
+   "definition": "An item synthesizes the principal content, conclusions, events, or themes of a larger portion of the transcript or its source recording.",
+   "distinguished_from": "Unlike Orientation, Content Summary condenses substantive material rather than supplying background, and unlike Discourse Signposting, it communicates a synthesis rather than merely marking organization.",
+   "examples": [
+    {
+     "doc": "ai:699eb1a90f32cb5b17a33652a9da80065a03dfee32b66b9c9ec2fa54ccdfd9d6",
+     "excerpt": "An opening summary previews discussion of the 22.8% rise in abandonments, Strait of Hormuz disruptions, distinctions among stressed-project categories, 12.6% annualized input-cost inflation, public-sector stability, normalization of private projects on hold, and strategic responses for contractors.",
+     "item_id": 2
+    }
+   ],
+   "name": "Content Summary",
+   "subsumes": [
+    "B21"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate guidance about where the discourse is going, what stage has been reached, or how the current topic connects to adjacent stages.",
+   "definition": "An item guides comprehension of the discourse plan by previewing, sequencing, shifting, resuming, or closing topics or stages.",
+   "distinguished_from": "Unlike Navigation Aid, Discourse Signposting is an in-discourse organizational move rather than a reusable locator, and unlike Exchange Management, it organizes subject progression rather than participation mechanics.",
+   "examples": [
+    {
+     "doc": "human:ef397ef4b0de1d114572eceabde83287254339d6431e9e13630155ec9429e15d",
+     "excerpt": "The post shifts from the photographers’ perspective to a question-and-answer interview intended to introduce Stroman more fully as a small-business owner.",
+     "item_id": 7
+    }
+   ],
+   "name": "Discourse Signposting",
+   "subsumes": [
+    "B22"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate control or documentation of turns, timing, breaks, audibility, recording logistics, formal procedure, or other interaction mechanics.",
+   "definition": "An item coordinates the conduct of the exchange by managing participation, sequence, timing, technical conditions, or procedural order.",
+   "distinguished_from": "Unlike Discourse Signposting, Exchange Management governs how the interaction proceeds rather than how its ideas are organized, and unlike Directive, any requested conduct serves exchange administration rather than an independent task.",
+   "examples": [
+    {
+     "doc": "human:eac173d5c7e03ca1bb1b8098bede8765a09b48e457a28424c6d6a8c87f32fd4d",
+     "excerpt": "The council entered closed session at 3:28 p.m. to confer with legal counsel about one potential-litigation matter under Government Code section 54956.9; no reportable action resulted.",
+     "item_id": 27
+    }
+   ],
+   "name": "Exchange Management",
+   "subsumes": [
+    "B23"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate a local cue about nonverbal behavior, sound, delivery, scene conditions, audibility, omitted material, imagery, or editorial intervention needed to interpret nearby content.",
+   "definition": "A locally bounded item documents nonverbal, acoustic, performative, scene, audibility, visual, omission, or editorial conditions relevant to adjacent recorded material.",
+   "distinguished_from": "Unlike Narrative Development, Record Annotation documents local interpretive context rather than advancing represented events, and unlike Disclosure, it concerns a nearby condition rather than a document-level practice or limitation.",
+   "examples": [
+    {
+     "doc": "human:aaf15574683d0a26cecb4aad638a856979bf4d68a13a522c1871524f0e7955ea",
+     "excerpt": "An accompanying image identifies Horwitz with a person named Dan near the transition to discussion of other cartoonists’ work.",
+     "item_id": 24
+    }
+   ],
+   "name": "Record Annotation",
+   "subsumes": [
+    "B24"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove a systematic, reusable means of locating portions of the transcript or recording.",
+   "definition": "A bounded component enables readers or listeners to locate and move among transcript segments by mapping topics, speakers, chapters, scenes, or time positions to places in the record.",
+   "distinguished_from": "Unlike Discourse Signposting, Navigation Aid provides a reusable document-level locator rather than an in-discourse transition, and unlike Content Summary, it primarily facilitates access rather than condensing content.",
+   "examples": [
+    {
+     "doc": "human:1f2c5d010e01f02e6ee3d5d5065196f6457d0b643dc47b19d448dc5bac826caf",
+     "excerpt": "A timestamped chapter guide enables navigation among the editorial segment, Rogojan’s career and technical discussion, consulting guidance, two acquisition updates, closing remarks, and the next-episode preview.",
+     "item_id": 3
+    }
+   ],
+   "name": "Navigation Aid",
+   "subsumes": [
+    "B25"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the bounded item would eliminate the recorded origins, citations, references, underlying recordings, or supporting records needed for provenance or verification.",
+   "definition": "A bounded item documents external sources, cited works, underlying recordings, exhibits, or reference records so that provenance or verification is possible.",
+   "distinguished_from": "Unlike Evidence, Source Documentation records where supporting material comes from rather than itself making the substantive case, and unlike Supplementary Resources, its primary purpose is verification rather than optional extension.",
+   "examples": [
+    {
+     "doc": "human:9256df4f0f4c746ce896abb2b5f497aef2dfbe53e0e688e823f72309a549c5f7",
+     "excerpt": "An editorial note identifies the piece as the translator’s English version of “Links in a chain,” originally published by Rapaport Magazine and Jewelry Connoisseur, and directs readers to the original article.",
+     "item_id": 1
+    }
+   ],
+   "name": "Source Documentation",
+   "subsumes": [
+    "B26"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the bounded notice would conceal a material condition, interest, limitation, warning, right, or production practice affecting interpretation, availability, fidelity, or responsible use.",
+   "definition": "A bounded notice makes transparent conditions or interests affecting the record's production, fidelity, interpretation, availability, rights, or responsible use.",
+   "distinguished_from": "Unlike Record Annotation, Disclosure concerns document-level conditions rather than a local interpretive cue, and unlike Source Documentation, it communicates limitations or interests rather than documenting external origins.",
+   "examples": [
+    {
+     "doc": "ai:b96e45408da147b03f1f35d130196d644a260a41fbf9cc5ce2371841e11579be",
+     "excerpt": "A regulatory disclaimer states that the FDA has not evaluated the discussed products, which are not intended to diagnose, treat, cure, or prevent disease; the information is educational rather than medical advice, and readers should consult a qualified clinician before beginning supplements or wellness programs, especially with existing conditions or concerns.",
+     "item_id": 14
+    }
+   ],
+   "name": "Disclosure",
+   "subsumes": [
+    "B27"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded component would remove optional materials for deeper exploration, practical follow-up, or continued use without removing the record's provenance or core content.",
+   "definition": "A bounded component extends the transcript's usefulness by collecting or directing the audience to optional related materials, contacts, tools, links, recordings, or follow-up resources.",
+   "distinguished_from": "Unlike Source Documentation, Supplementary Resources enables extension or follow-up rather than provenance, and unlike Promotion, it chiefly supplies optional utility rather than persuading the audience to take up an offering.",
+   "examples": [
+    {
+     "doc": "human:40c692e212313ba1eb7906d44349733094ce895b300ee97fde2f323bf024eceb",
+     "excerpt": "A promotional resource offers listeners a free diagnostic tool for examining their attitudes toward money.",
+     "item_id": 2
+    }
+   ],
+   "name": "Supplementary Resources",
+   "subsumes": [
+    "B28"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate an informative account of what a practical task requires or how it is carried out, without an instruction to execute it being the dominant force.",
+   "definition": "An item describes the materials, tools, criteria, steps, workflow, or repeatable technique by which a practical task is carried out or an objective is achieved.",
+   "distinguished_from": "Unlike Explanation, Method specifies operational means rather than chiefly accounting for why they work, and unlike Directive, it describes requirements or practices without making compliance its primary force.",
+   "examples": [
+    {
+     "doc": "ai:237e21dce0d6cf4904823d3480bd650566fe4f12658cf7e9939693e5e93655fa",
+     "excerpt": "Ubersuggest and Google Keyword Planner identify relevant terms with manageable competition, informing topic selection and article structure to improve rankings and organic traffic.",
+     "item_id": 6
+    },
+    {
+     "doc": "ai:0619bde3229b8f84252e85a90498dd681d711b33b693791719023d3d34169cba",
+     "excerpt": "Individuals can create free petitions through services such as Change.org or Care2 by opening an account, drafting the appeal, and promoting it through social media and other channels to gather signatures.",
+     "item_id": 9
+    },
+    {
+     "doc": "human:17feeb5114fdac615cc673e178e2a5250ce9020fb68f422b308d5c9da0b77953",
+     "excerpt": "The lumberjack cake ingredient list specifies 500g Granny Smith apples, 1 cup (200g) dates, 1 teaspoon bicarbonate of soda, 1 cup (250ml) boiling water, 125g softened butter, 1 teaspoon vanilla essence, 1 cup (220g) caster sugar, 1½ cups (225g) plain flour, ½ cup (100g) brown sugar, ½ cup (125ml) milk, and 1 cup (75g) shredded coconut.",
+     "item_id": 15
+    }
+   ],
+   "name": "Method",
+   "subsumes": [
+    "I-ai:237e21dce0d6cf4904823d3480bd650566fe4f12658cf7e9939693e5e93655fa-01",
+    "I-ai:edf02daefed87968b01b0531c2cc60bc75e6ae8e67c8c18bba86b91ed9b2fa13-01",
+    "I-human:17feeb5114fdac615cc673e178e2a5250ce9020fb68f422b308d5c9da0b77953-01",
+    "I-ai:0619bde3229b8f84252e85a90498dd681d711b33b693791719023d3d34169cba-01",
+    "I-ai:1452a1b6133333845c59f58989f1fd5e85cfc06953a3833c656814086e383a48-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would chiefly eliminate a deliberately humorous performance rather than a literal report, answer, argument, social courtesy, or clarifying example.",
+   "definition": "An item primarily entertains through jokes, wit, absurdity, parody, playful misdirection, comic reactions, or nonliteral invention.",
+   "distinguished_from": "Unlike Illustration, Comic Performance chiefly aims to amuse rather than make a separate general point concrete, and unlike Social Exchange, it performs entertainment rather than primarily maintaining rapport.",
+   "examples": [
+    {
+     "doc": "human:aaf15574683d0a26cecb4aad638a856979bf4d68a13a522c1871524f0e7955ea",
+     "excerpt": "Horwitz identifies primarily as a cartoonist and turns the alternative category “something else” into a story about posing as a platypus at Elaine’s, receiving help from Gay Talese, and nevertheless being expelled; an accompanying illustration depicts him as the animal.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:8ccc6499815e4636b24c558bb350c9089d32b438588d04b41bbaae5d91c9560a",
+     "excerpt": "The host shifts into a comedy segment, searching for and reacting to cheesy pickup lines, rejecting most as awkward or threatening and escalating toward deliberately explicit examples while inviting audience contributions.",
+     "item_id": 24
+    }
+   ],
+   "name": "Comic Performance",
+   "subsumes": [
+    "I-human:aaf15574683d0a26cecb4aad638a856979bf4d68a13a522c1871524f0e7955ea-01",
+    "I-human:8ccc6499815e4636b24c558bb350c9089d32b438588d04b41bbaae5d91c9560a-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when removing the item would eliminate persuasive publicity whose primary aim is to generate attention, uptake, purchase, subscription, attendance, patronage, or engagement for an offering or organization.",
+   "definition": "A bounded item promotes a product, service, program, event, organization, publication, channel, or other offering through persuasive publicity intended to attract audience uptake or engagement.",
+   "distinguished_from": "Unlike Recommendation, Promotion serves audience acquisition or uptake rather than advising a course on substantive grounds, and unlike Supplementary Resources or Disclosure, it persuades rather than neutrally extending the record or acknowledging support.",
+   "examples": [
+    {
+     "doc": "human:38c63f4e1af545d023468894d56a214ac998f8c84d6ae6d689b706209caeca0f",
+     "excerpt": "A sponsor message promotes Stache Studio as a quality streetwear brand whose positive message emphasizes resilience and finding hope in difficult circumstances.",
+     "item_id": 5
+    },
+    {
+     "doc": "human:71afff4c832731f00c7d924c4924b259e0e416549587ce86e1c6ceb30d45149b",
+     "excerpt": "A promotional component presents the Mighty Pod Model coaching program and free cheat sheet as resources for converting an owner-dependent solo service business into a profitable, streamlined agency that provides greater freedom.",
+     "item_id": 3
+    },
+    {
+     "doc": "human:6ccc553038bb360ea7e23fcd501b51f6c082358f0e2c3e57ee118e49eb2c3d71",
+     "excerpt": "A promotional outro offers a free one-to-one KeywordsPeopleUse demonstration, encourages subscriptions and sharing, advertises a free quick-tips guide and product access, and supplies channels for contacting the host.",
+     "item_id": 21
+    }
+   ],
+   "name": "Promotion",
+   "subsumes": [
+    "I-human:38c63f4e1af545d023468894d56a214ac998f8c84d6ae6d689b706209caeca0f-01",
+    "I-human:71afff4c832731f00c7d924c4924b259e0e416549587ce86e1c6ceb30d45149b-01",
+    "I-human:476cb494d4245af7e740b8a6e384d1a313750e7aae7b8891f39e78ef27887682-01",
+    "I-human:6ccc553038bb360ea7e23fcd501b51f6c082358f0e2c3e57ee118e49eb2c3d71-01",
+    "I-ai:00ca705011410c44fb0b0611966744281a7f3f4e19424b0881888d7fe6c994b2-01",
+    "I-ai:c225b05f69b92d87f4ba5ddaaa6effac875f4a8036b277aee6b81d0448505a09-01",
+    "I-ai:f6fb1ee5407ec7e1583a5aacd872b1b5db69f68d8c729fa77de69f3217d6e371-01"
+   ]
+  },
+  {
+   "assignment_test": "Select this role when omitting the bounded item would remove the formal attestation, approval, or certification establishing the record as officially verified or adopted.",
+   "definition": "A bounded item formally attests, approves, or certifies a record so that its official verification, validity, or adoption is documented.",
+   "distinguished_from": "Unlike Participant Attribution, Record Authentication establishes official validity rather than merely identifying contributors, and unlike Determination, it validates the record itself rather than settling a substantive issue within it.",
+   "examples": [
+    {
+     "doc": "human:eac173d5c7e03ca1bb1b8098bede8765a09b48e457a28424c6d6a8c87f32fd4d",
+     "excerpt": "The minutes identify Susan M. Condon as city clerk and Bert Hack as mayor and record formal adoption on February 19, 2003.",
+     "item_id": 29
+    }
+   ],
+   "name": "Record Authentication",
+   "subsumes": [
+    "I-human:eac173d5c7e03ca1bb1b8098bede8765a09b48e457a28424c6d6a8c87f32fd4d-01"
+   ]
+  }
+ ]
+}

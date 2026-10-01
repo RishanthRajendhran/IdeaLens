@@ -1,0 +1,272 @@
+{
+ "features": [
+  {
+   "name": "claim_adjudicability",
+   "description": "Measures whether the item's substantive commitment is sufficiently determinate for an independent reader to identify what would confirm or contradict it.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess the resolvability of the proposition, not its actual truth or the reputation of its subject.",
+   "rationale": "Human-source research records, technical assessments, and biographical notices commonly preserve adjudicable commitments, whereas AI-source counterparts often retain a subject label but offer an indeterminate characterization. Both classes can score highly; the proposed directions require validation within formats and roles, with source-document separation and held-out domains, rather than being treated as established detection accuracies."
+  },
+  {
+   "name": "load_bearing_specificity",
+   "description": "Measures whether particulars materially constrain the item's explanation, evaluation, recommendation, or reported result rather than merely decorating it.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify the central commitment and ask whether changing a stated particular would change its substantive interpretation. Score 0 when there are no particulars, or when specifics only identify the subject without affecting the argument. Score 1 when a particular supplies context but the substantive conclusion would remain unchanged across most substitutions. Score 2 when a particular affects the conclusion or the circumstances in which it applies. Score 3 when the item makes the dependency clear: changing the particular would reverse a recommendation, invalidate an inference, alter eligibility, or produce a different result. Numbers and names receive no automatic credit; an unquantified distinction can earn 3. Judge only relationships stated or directly entailed within this item. A short conditional instruction can score highly. For pure paratext, score substantive conditions on use or interpretation, not merely the presence of dates, names, or identifiers. Return 0 if no dependency is expressed.",
+   "rationale": "Human examples connect software-version differences to documentation requirements, fuel-consumption discrepancies to purchasing advice, and material limitations to methodological choices. AI examples frequently attach detail to benefits that would survive unchanged without it. The signal is the function of specificity, not its amount or domain."
+  },
+  {
+   "name": "evidence_traceability",
+   "description": "Measures how clearly the item identifies the origin, acquisition, or production of the evidence supporting its commitment.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Read only this item's role_name and content and locate any evidential basis it supplies. Score 0 when no evidential basis is given; this includes a bare factual assertion and is not itself evidence of AI authorship. Score 1 when support is attributed to a generic source class, unspecified experience, or a method named without a bounded application. Score 2 when support points to an identifiable source artifact or a concretely delimited observation, interview, test, or dataset. Score 3 when the item additionally makes the acquisition, selection, transformation, or testing conditions clear enough to understand how the cited evidence came into being. Do not verify sources externally or infer authenticity from prestigious institutions or unfamiliar names. A named speaker alone is not equivalent to an identifiable supporting investigation. For paratext, a specific derivation or reproduction history can qualify; a simple byline normally does not. Short items can earn any level if they contain the necessary information.",
+   "rationale": "Human-source items describe such evidence routes as particular interview arrangements, personally acquired test samples, and archival derivations. AI-source items often substitute assurances of rigorous research or extensive testing. This distinction appears across scholarship, reporting, reviews, and personal accounts."
+  },
+  {
+   "name": "evidence_access_calibration",
+   "description": "Measures whether the item distinguishes what an observer could directly establish from what is inferred, reported secondhand, or unavailable.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Evaluate whether the item's degree of commitment is calibrated to a specified route of access. Score 0 when no observation–inference or access distinction is present, including simple attribution without calibration. Score 1 when the item acknowledges indirect knowledge or incomplete access but leaves its implications unclear. Score 2 when a particular assertion is identified as observed, inferred, secondhand, or inaccessible, with a meaningful distinction between those statuses. Score 3 when the access distinction explicitly determines which conclusions can be drawn, which remain unresolved, or which substitute source must be used. Do not reward generic disclaimers, general skepticism, or first-person presentation by themselves. Apply the same test to a fictional character's knowledge without assuming that fictional events must be empirically real. Pure paratext can score highly if it explains a concrete inspection or sourcing limitation; licensing language alone scores 0. A very short item can score highly when the epistemic boundary is explicit.",
+   "rationale": "Human items sometimes allocate different measurements to different sources because direct inspection was impossible, or distinguish witnessed conduct from suspected motives. AI items more often present seamless knowledge or nonspecific caution. The human tendency is situated access, not simply more hedging."
+  },
+  {
+   "name": "authority_as_substitute",
+   "description": "Measures whether status, acclaim, or assurances of scientific rigor substitute for substantive support of the proposition.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "First determine whether the item uses an authority cue as a reason to accept a claim, rather than merely identifying a person or institution. If not, score 0. Score 1 when an unelaborated authority appeal contributes to support but meaningful independent reasons are also supplied. Score 2 when reputation, unspecified research validation, unidentified awards, or generalized professional approval supplies the principal warrant without indicating the relevant findings or grounds. Score 3 when that status is treated as sufficient to establish strong conclusions such as proven efficacy, guaranteed reliability, exceptional superiority, or freedom from bias. Do not judge whether the named authority is real, famous, qualified, or trustworthy using external knowledge. A sourced quotation is not automatically an authority appeal: assess how its content is used. Pure bylines, factual credential records, and award announcements score 0 unless the item explicitly converts them into a broader unsupported validation. Shortness alone must not raise the score.",
+   "rationale": "AI-source evaluations and profiles frequently validate effectiveness or excellence through generic scientific backing and professional esteem. Human-source items more often supply the specific achievement, finding, or evaluative reason. This feature does not equate attribution itself with weak reasoning."
+  },
+  {
+   "name": "unanchored_effect_quantification",
+   "description": "Measures the proportion of quantitative effect claims whose numerical precision exceeds the measurement information supplied.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "fraction_0_1",
+   "operationalization": "Identify quantitative propositions asserting measured improvement, deterioration, comparative advantage, association, or effectiveness. Treat two endpoints describing one change as one proposition; treat distinct outcomes as separate propositions. Exclude dates, identifiers, prices, physical specifications, sample sizes, simple event counts, and explicitly hypothetical calculations not presented as empirical support. For each eligible proposition, determine whether the item identifies an interpretable outcome, an intelligible baseline or comparison population, and enough observational context to understand the application of the number. Mark it unanchored when interpreting the effect requires inventing a crucial denominator, comparison, measurement meaning, population, or observation window. Do not require raw data, full methods, or a citation when the statement is otherwise interpretable. Do not penalize rounding, large effects, or decimal precision themselves. Return the number marked unanchored divided by the number eligible. Return 0 when none are eligible, including nonquantitative and most paratext items. Use only this item; never presume missing information is absent from its source document.",
+   "rationale": "AI examples often attach exact percentage gains to loosely defined efficiency, engagement, or well-being outcomes. Human examples more often specify the compared measurements, cohorts, or test conditions. This targets evidential precision rather than the superficial presence or shape of numbers."
+  },
+  {
+   "name": "boundary_condition_precision",
+   "description": "Measures how explicitly the item defines conditions that change the applicability of a claim, rule, recommendation, or capability.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify any condition, exception, exclusion, or applicability boundary expressed within the item. Score 0 when none is given. Score 1 when the boundary is broad and nonselective, such as suitability depending on unspecified needs or outcomes differing among unspecified individuals. Score 2 when a reader can identify a meaningful condition under which the claim or action applies differently. Score 3 when the item specifies both the discriminating condition and its consequence, allowing a definite choice, exclusion, adjusted prediction, or alternative action. Numerical thresholds are optional; categorical distinctions can be equally precise. Do not reward caveat language itself. Distinguish an applicability condition from an incidental date or descriptive attribute. Pure paratext can qualify through edition-specific applicability, permissions exceptions, or concrete validity limits; a publication timestamp alone scores 0. A short item can earn 3. If the item contains no factual claim but states a precisely conditional fictional, normative, or hypothetical rule, assess that rule on the same basis.",
+   "rationale": "Human-source items frequently preserve awkward exceptions involving particular users, versions, jurisdictions, materials, or evidential scopes. AI-source qualifications more often remain broadly portable. The predictor concerns the selectivity of the qualification, not whether a qualification role occurs."
+  },
+  {
+   "name": "nondiscriminating_hedging",
+   "description": "Measures whether uncertainty is expressed in ways that avoid excluding possibilities or committing to informative expectations.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess only an explicit uncertain prediction, explanation, interpretation, or qualification. Score 0 if none is present, or if uncertainty is localized to a specific missing fact with clear implications. Score 1 when uncertainty is broad but the item still favors an identifiable possibility or gives a useful constraint. Score 2 when the item lists generic influences or alternatives without prioritization, discriminating evidence, observable conditions, or a way to distinguish their consequences. Score 3 when it explicitly declines adjudication while preserving a conclusion compatible with essentially every outcome, or replaces the requested commitment with an unfalsifiable assurance of complexity, significance, or continuing interest. A single possibility marker does not suffice. Do not penalize justified suspension of judgment, clearly specified scenario analysis, or uncertainty inherent in a precisely stated measurement. Generic legal or medical disclaimers without an inferential claim score 0. Very short items should receive high scores only when evasiveness is substantively explicit, not merely because details are absent.",
+   "rationale": "The AI contrasts repeatedly replace predictions with generic dependencies or reaffirm significance regardless of the result. Human forecasts and interpretations more often accept a bounded risk of being wrong or identify a particular obstacle to knowing."
+  },
+  {
+   "name": "residual_practical_friction",
+   "description": "Measures whether the item preserves a concrete limitation, cost, failure, or unfinished obligation that remains consequential rather than being dissolved into a positive account.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Look for a concrete encountered constraint or loss, not merely a generic warning about possible difficulties. Score 0 when none is reported, or when the difficulty is wholly abstract. Score 1 when a particular difficulty is mentioned but its continuing practical consequence is unspecified. Score 2 when a specific impediment remains unresolved, reduces capability, consumes resources, or forces a compromise. Score 3 when the item explicitly preserves that consequence despite a success, workaround, favorable judgment, or partial repair, preventing the account from becoming an unqualified success story. A still-pending result can qualify when its concrete consequence is stated. Do not infer hidden costs or punish optimistic content automatically. In fiction, assess actual constraints in the represented situation, not realism of the world. Paratext can qualify when an unavailable component, incomplete record, or access restriction remains materially consequential. Short items can earn high scores; return 0 when no applicable constraint is expressed.",
+   "rationale": "Human accounts preserve limitations such as unavailable evidence, incomplete functionality, ongoing maintenance, and gains accompanied by unrecovered losses. AI accounts frequently smooth the same kinds of obstacles into satisfying progress narratives. This is not a negativity or sentiment feature."
+  },
+  {
+   "name": "condition_linked_heterogeneity",
+   "description": "Measures whether the item represents a nonuniform result through concrete differences between conditions, components, or subgroups.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Determine whether the item reports differentiated outcomes within a shared comparison or observation frame. Score 0 when there is only one result, uniform success or failure, or a generic mixture of unrelated advantages and disadvantages. Score 1 when variation is acknowledged but the differing outcomes or the conditions separating them remain vague. Score 2 when distinct outcomes are assigned to identifiable conditions, components, or subgroups on a common substantive dimension. Score 3 when the asymmetry also constrains a generalization, identifies an exception, or supports a condition-dependent interpretation. A favorable and an unfavorable adjective on different attributes do not suffice. Do not require numerical results or multiple sentences. For fictional material, comparable characters or situations may qualify if the conditional asymmetry is concrete rather than merely thematic. For paratext, differential completeness or verification across defined components can qualify; a simple inventory cannot. Return 0 for items with no applicable variation, without treating that zero as evidence of the opposite class.",
+   "rationale": "Human research findings, field trials, reviews, and institutional records often retain selective successes, failures, and null outcomes. AI-source items more often describe uniform benefits or interchangeable pros and cons. The signal is structured heterogeneity, not the number of reported observations."
+  },
+  {
+   "name": "discriminating_counterevidence",
+   "description": "Measures whether the item uses a specific fact or logical constraint to discriminate between competing claims or explanations.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify a competing proposition and any evidence or reasoning directed against it, using only the item. Score 0 when no competing claim is identifiable, or when the item merely endorses complexity or balanced consideration. Score 1 when a definite rival claim is challenged but the objection is chiefly assertion or evaluation. Score 2 when a concrete observation, counterexample, or rule is supplied that favors the challenge. Score 3 when the item explains why that evidence is incompatible with, unexpected under, or excluded by the rival account, or shows why one account explains a fact that the other cannot. Do not reward hostility, confidence, named opponents, or disagreement alone. Assess the represented inferential relationship without checking factual premises externally. A short counterexample can earn 3. Pure paratext normally scores 0, but an explanatory correction may qualify. Fictional reasoning can qualify when the character's alternatives and discriminating evidence are supplied within the item.",
+   "rationale": "Human-source criticism frequently turns on a narrow counterexample or inconsistency, as in disputed historical interpretations, institutional explanations, and technical claims. AI-source rebuttals more often reaffirm broad value or call for nuance without resolving the particular objection."
+  },
+  {
+   "name": "warranted_belief_revision",
+   "description": "Measures whether the item records a substantive correction or revision of a position tied to an identifiable reason.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "binary_0_1",
+   "operationalization": "Return 1 only when this item contains all three elements: a sufficiently identifiable earlier belief, assertion, recommendation, or interpretation; a different replacement position; and a concrete observation, correction, changed circumstance, or logical reason linking the two. The earlier and replacement positions may be summarized rather than quoted, and the revising agent may be the author, another person, or a fictional character. Return 0 for ordinary changes in circumstances without a revised position, generic claims of learning, declarations that something was updated, unspecified admissions of error, and routine product-version changes. Do not consult earlier items or infer an earlier position from document location. Pure paratext earns 1 only when the substance and basis of the correction are recoverable from this item itself. Very short items can earn 1 if all elements are present. No external factual verification is required, but the stated reason must actually bear on the revision rather than merely accompany it.",
+   "rationale": "Human items preserve corrections with identifiable stakes: a forecast withdrawn after roster changes, an approval claim corrected after its source was reinterpreted, or a recommendation narrowed by testing. AI items often describe generalized maturation or improvement without a comparably specific belief update."
+  },
+  {
+   "name": "mechanism_specificity",
+   "description": "Measures whether the item explains an outcome through a concrete mediating operation rather than through a generic association or benefit.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Locate a claimed causal or enabling relationship. Score 0 when no explanation is attempted, or when the supposed cause merely restates the outcome. Score 1 when a plausible cause is named but the mechanism remains at the category level, such as technology improving efficiency or commitment producing success. Score 2 when the item specifies what a component, actor, process, or rule does that produces the outcome. Score 3 when the mechanism additionally explains a constraint, failure mode, conditional difference, unexpected result, or counterfactual dependency. Do not award points simply for technical terminology, named software, or an elaborate causal claim. Legal, social, material, psychological, and fictional mechanisms are eligible on equal terms; do not demand naturalistic realism from fiction. Judge the causal account as represented, without external fact-checking. Pure paratext scores 0 unless it explains an actual production or access mechanism. A single precise causal sentence can earn 3.",
+   "rationale": "Human examples describe particular interfaces, material interactions, institutional rules, and behavioral constraints that explain outcomes. AI counterparts often substitute generic innovation, collaboration, or sophistication. The distinction concerns explanatory resolution rather than technical subject matter."
+  },
+  {
+   "name": "exclusionary_evaluative_priority",
+   "description": "Measures whether the item applies a concrete evaluative priority that genuinely excludes otherwise plausible choices.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify any criterion that determines a preference, recommendation, acceptance, or rejection. Score 0 when there is no evaluation or when only universally desirable qualities are invoked without selecting among alternatives. Score 1 when a use case or preference is named but its effect on the choice is weak or unspecified. Score 2 when a particular criterion clearly makes an option unsuitable or preferable for a defined purpose, despite that option having other merits. Score 3 when the item makes a consequential, nondefault priority explicit, such as rejecting the technically strongest option, declining an acclaimed object, accepting a known defect, or excluding a conventionally relevant activity because a specific need takes precedence. The priority need not be unusual in the wider world; its discriminating effect must be visible locally. Do not use political orientation, taste category, or the mere presence of strong opinion. Pure paratext normally scores 0. Short, fictional, and normative items can qualify if the actual selection logic is explicit.",
+   "rationale": "Human-source judgments often commit to situated priorities, including praising a device while refusing to buy it or preferring an imperfect tool for a narrow task. AI-source judgments more often preserve broad appeal through an unspecified balance of desirable attributes."
+  },
+  {
+   "name": "goals_substituted_for_operations",
+   "description": "Measures whether an item presents desired outcomes or general categories as though they constituted an executable method.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Apply this feature only when the item purports to provide a method, implementation plan, analytic framework, or operational procedure. Otherwise return 0. Score 0 when the stated means meaningfully constrain what to do, inspect, measure, or choose, even if the procedure is brief or incomplete. Score 1 when concrete means are present but some purported operations remain outcome descriptions. Score 2 when the main method consists of broadly transferable imperatives or analytic dimensions without useful decision rules, observable tests, specified transformations, or constrained inputs. Score 3 when virtually the entire operational content redescribes the goal: achieving quality by ensuring quality, producing understanding by examining relevant factors, or securing success through optimization and appropriate action. Do not score the existence, ordering, or length of a list. Do not penalize an item that explicitly states only an objective or provides only navigational paratext. Named techniques alone need not constitute usable operations, but full reproducibility is not required.",
+   "rationale": "AI-source methods frequently sound complete while supplying categories of desirable activity rather than operational commitments. Human methods more often specify the actual adaptation, selection rule, instrument use, or procedural exception. This applies to practical, analytic, and creative work without relying on formatting."
+  },
+  {
+   "name": "inferential_scope_inflation",
+   "description": "Measures whether a conclusion extends beyond the population, duration, outcome, or causal reach supported by the premise stated in the item.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Assess a support-to-conclusion relationship available within this item; do not infer what evidence may exist elsewhere. Score 0 when no such relationship is expressed, when the conclusion remains within its stated basis, or when the proposition is explicitly hypothetical or definitional. Score 1 when there is a modest extension beyond the premise but the conclusion remains bounded and tentative. Score 2 when a local observation or unspecified achievement is used to support substantially broader claims about populations, effectiveness, historical impact, or causal influence. Score 3 when the item moves from that limited basis to universal, permanent, irreversible, or system-wide consequences without an intervening argument. Magnitude, abstraction, enthusiasm, and future tense alone are not sufficient. In fiction, distinguish a directly narrated world fact from a general lesson or lasting consequence inferred from one incident. Pure paratext normally scores 0 unless it contains the relevant inference. A very short item can score highly if the scope jump is explicit.",
+   "rationale": "AI contrasts repeatedly elevate individual encounters, product improvements, and modest accomplishments into enduring societal or personal transformations. Human conclusions more often retain the scale of their particular evidence, even when forcefully expressed."
+  },
+  {
+   "name": "circular_evaluative_warrant",
+   "description": "Measures whether the reason offered for an evaluation merely reproduces that evaluation without adding an independent ground.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify the evaluative conclusion and the reason offered for it. Return 0 if no justification is attempted, or if the reason adds an independently assessable property, observation, criterion, or consequence. Score 1 when part of the justification is substantively repetitive but an informative independent ground remains. Score 2 when the principal support is an evaluative restatement, such as establishing excellence chiefly through assertions of outstanding quality or importance through assertions of significance. Score 3 when the entire argument is self-validating or closed: the subject's greatness proves its influence, while its asserted influence is the sole reason for its greatness. Judge semantic dependence, never repetition of words. Distinguish circularity from an unsupported but genuinely different reason: responsiveness offered as a reason for service quality is not inherently circular. A bare endorsement, title, or credential listing scores 0. Short and paratext items qualify only if an actual reason–conclusion relationship is present.",
+   "rationale": "AI evaluations and profiles often recycle acclaim into apparent justification. Human-source evaluations more often introduce an independent basis such as a particular design choice, omission, comparison, or observed performance. This feature separates circular support from mere lack of support."
+  },
+  {
+   "name": "generic_redemptive_reframing",
+   "description": "Measures whether a difficulty or ordinary experience is converted into a broadly uplifting lesson without a specific learning mechanism or changed practice.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Look for an interpretive move that recasts an experience as personal, communal, or moral growth. Score 0 when no such move occurs, or when the lesson is a concrete correction tied to a particular mistake, mechanism, or changed behavior. Score 1 when an uplifting generalization accompanies an otherwise specific account of what was learned or changed. Score 2 when generalized resilience, authenticity, connection, or comparable development is the principal meaning assigned to the experience, without explaining the substantive learning. Score 3 when hardship or an ordinary encounter is presented as necessarily transformative, permanently healing, or sufficient to establish an enduring moral identity, while its practical consequences are absorbed into the uplifting interpretation. Do not score positive sentiment, religious content, or moral subject matter themselves. Fictional and nonfictional experiences use the same rubric, but a plainly stated moral maxim without an experiential reframing scores 0. Pure paratext usually scores 0; short items can qualify when the reframing is explicit.",
+   "rationale": "AI-source customer complaints become lessons in endurance, routine travel becomes identity transformation, and career obstacles become universal growth. Human accounts more often preserve instrumental outcomes or identify a particular lesson. The signal is automatic redemptive interpretation, not the presence of optimism."
+  },
+  {
+   "name": "costless_tradeoff_resolution",
+   "description": "Measures whether the item claims to reconcile an acknowledged tension without specifying the mechanism, limits, or remaining sacrifice.",
+   "direction": "ai",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "First identify a tension expressly represented in the item, such as competing goals, resource limits, or a stated need to avoid sacrificing one benefit for another. If none is present, return 0; do not invent a tradeoff merely because two favorable attributes coexist. Score 0 when the resolution specifies a meaningful mechanism and its limits or acknowledges a remaining sacrifice. Score 1 when a concrete bridge is offered but the extent of reconciliation is partly unspecified. Score 2 when the tension is declared resolved chiefly through generic balance, innovation, cooperation, customization, or another unelaborated capacity. Score 3 when the item claims simultaneous maximization or elimination of the tradeoff, with no mechanism or limiting condition sufficient to explain that result. Do not use particular words as triggers. A genuine technical explanation can score 0 even when it removes a tradeoff. Pure paratext and very short items score only on an explicit tension and resolution; otherwise return 0.",
+   "rationale": "AI-source items commonly promise affordability with premium quality, automation with full individuality, or modernization with uncompromised heritage through asserted harmony. Human-source counterparts more often explain what makes the compromise possible or retain the cost of choosing."
+  },
+  {
+   "name": "inherited_constraint_dependence",
+   "description": "Measures whether a present choice or outcome is explained by a concrete inherited arrangement that limits otherwise plausible alternatives.",
+   "direction": "human",
+   "tier": "judgment",
+   "output_type": "ordinal_0_3",
+   "operationalization": "Identify a pre-existing rule, artifact, commitment, installed system, relationship, or material condition that constrains the situation described in this item. Score 0 when none is present, or when historical background merely supplies chronology or inspiration. Score 1 when a prior arrangement is mentioned as relevant but its limiting effect is vague. Score 2 when that arrangement clearly restricts an available option or explains a particular workaround, delay, or uneven implementation. Score 3 when the item shows why an otherwise attractive or standard alternative cannot be adopted, or can be adopted only at a specified cost, because of the inherited arrangement. Do not score dates, duration, historical references, or event order themselves. Childhood experiences inspiring a vocation do not qualify unless an actual constraint on choices is identified. Fictional and normative settings are eligible under the same logic. Pure paratext can qualify through concrete preservation or compatibility constraints. Use only dependencies recoverable from this item, and allow short items to score highly.",
+   "rationale": "Human-source ideas are often shaped by existing contracts, incompatible tools, incomplete collections, or prior commitments rather than idealized clean-slate choices. AI-source ideas more often describe a generally desirable process without the particular historical constraint that makes an imperfect choice necessary."
+  }
+ ],
+ "uncomputable": [
+  "claim_adjudicability: proposes a structural property that cannot be computed from a single item",
+  "authority_as_substitute: proposes a structural property that cannot be computed from a single item",
+  "unanchored_effect_quantification: proposes a structural property that cannot be computed from a single item",
+  "boundary_condition_precision: proposes a structural property that cannot be computed from a single item",
+  "nondiscriminating_hedging: proposes a structural property that cannot be computed from a single item",
+  "residual_practical_friction: proposes a structural property that cannot be computed from a single item",
+  "discriminating_counterevidence: proposes a structural property that cannot be computed from a single item",
+  "warranted_belief_revision: proposes a structural property that cannot be computed from a single item",
+  "goals_substituted_for_operations: proposes a structural property that cannot be computed from a single item",
+  "inferential_scope_inflation: proposes a structural property that cannot be computed from a single item",
+  "circular_evaluative_warrant: proposes a structural property that cannot be computed from a single item",
+  "generic_redemptive_reframing: proposes a structural property that cannot be computed from a single item",
+  "inherited_constraint_dependence: proposes a structural property that cannot be computed from a single item"
+ ],
+ "contrast": {
+  "unit": "item",
+  "label_source": "model",
+  "format": null,
+  "format_agnostic": true,
+  "role_matched": true,
+  "per_side": 5000,
+  "n_cells": 388,
+  "stamp": {
+   "generated": "2026-09-08T19:17:29",
+   "git_revision": "7c0bf67",
+   "config": {
+    "model": "gpt-5.6-sol",
+    "effort": "max",
+    "per_side": 5000,
+    "match_roles": true,
+    "seed": 0,
+    "schema": "feature_discovery/feature.schema.json",
+    "consolidate": true,
+    "name": "Item-level discovery, our outline-trained model labels",
+    "unit": "item",
+    "label_source": "model",
+    "format_agnostic": true,
+    "notes": "This is a variant of the corpus-labels feature, but with labels derived from our trained model rather than the corpus. The model is a detector trained on outlines, and the labels are determined for each idea. The idea is to see which features of each idea the model relies on when making AI vs. human detection decisions.\n",
+    "score_keys": [
+     "nemotron_1m_fullitem"
+    ]
+   },
+   "config_source": "configs/features/_base.yaml",
+   "eval": "indomain"
+  }
+ },
+ "usage": {
+  "completion_tokens": 15987,
+  "prompt_tokens": 584454,
+  "total_tokens": 600441,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": 0,
+   "audio_tokens": 0,
+   "reasoning_tokens": 9630,
+   "rejected_prediction_tokens": 0,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": 0,
+   "cache_write_tokens": 584451,
+   "cached_tokens": 0,
+   "image_tokens": null,
+   "text_tokens": null
+  }
+ },
+ "stamp": {
+  "generated": "2026-09-09T18:01:20",
+  "git_revision": "94b7ff4",
+  "config": {
+   "model": "gpt-6-astra",
+   "effort": "xhigh",
+   "per_side": 5000,
+   "match_roles": true,
+   "seed": 0,
+   "schema": "feature_discovery/feature.schema.json",
+   "consolidate": true,
+   "name": "Item-level discovery, our outline-trained model labels",
+   "unit": "item",
+   "label_source": "model",
+   "format_agnostic": false,
+   "notes": "This is a variant of the corpus-labels feature, but with labels derived from our trained model rather than the corpus. The model is a detector trained on outlines, and the labels are determined for each idea. The idea is to see which features of each idea the model relies on when making AI vs. human detection decisions.\n",
+   "score_keys": [
+    "nemotron_1m_fullitem"
+   ]
+  },
+  "config_source": "configs/features/_base.yaml"
+ }
+}

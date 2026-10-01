@@ -1,0 +1,6 @@
+Generator,Arm,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+claude_sonnet_4_6,"AI, five StoryScope models","1,383",95.5 / 97.4,99.9 / 99.9,99.4 / 99.8,71.1 / 80.5,89.9 / 98.6,99.7 / 99.8,1.7 / 82.6,2.6 / –,99.9
+deepseek_v3_2,"AI, five StoryScope models","1,380",98.5 / 99.1,99.6 / 99.9,99.9 / 99.9,95.1 / 97.8,99.3 / 99.7,99.9 / 99.9,37.5 / 98.6,2.0 / –,99.9
+gemini,"AI, five StoryScope models","1,380",98.0 / 98.9,99.9 / 99.9,99.9 / 99.9,90.8 / 94.5,99.7 / 99.9,99.9 / 99.9,25.1 / 98.3,42.4 / –,99.9
+gpt_5_4,"AI, five StoryScope models","1,384",97.4 / 98.9,99.9 / 100.0,99.7 / 99.9,91.8 / 95.4,97.0 / 99.7,99.9 / 100.0,2.7 / 80.7,0.1 / –,100.0
+kimi_k2_5,"AI, five StoryScope models","1,384",95.8 / 98.0,100.0 / 100.0,100.0 / 100.0,84.2 / 89.7,98.9 / 99.9,100.0 / 100.0,41.3 / 99.1,1.7 / –,100.0

@@ -1,0 +1,13 @@
+Level,Label,n,IdeaLens · outline,IdeaLens · document,ProseLens,IdeaLens-ModernBERT-L · outline,IdeaLens-ModernBERT-L · document,ProseLens-ModernBERT-L,EditLens-Llama-3B (cal.),Binoculars (own),Pangram 4 (own)
+synthetic_reviews · mean,model ideas,798,81.2,94.0,97.7,86.6,91.8,97.3,–,–,81.0
+synthetic_reviews · median,model ideas,798,92.8,98.8,99.7,96.6,98.5,99.7,–,–,95.7
+hybrid · mean,mixed,866,62.8,74.8,77.2,70.0,73.2,77.4,–,–,62.5
+hybrid · median,mixed,866,82.5,98.7,99.7,92.7,98.5,99.8,–,–,83.3
+hybrid · min,mixed,866,0.0,0.0,0.0,0.0,0.0,0.0,–,–,0.0
+hybrid · max,mixed,866,100.0,100.0,100.0,100.0,100.0,100.0,–,–,100.0
+expanded · mean,"mixed, human-leaning",846,39.8,57.9,59.2,48.6,49.8,61.0,–,–,54.8
+expanded · median,"mixed, human-leaning",846,23.8,86.9,95.6,45.5,46.8,98.2,–,–,64.1
+expanded · min,"mixed, human-leaning",846,0.0,0.0,0.0,0.0,0.0,0.0,–,–,0.0
+expanded · max,"mixed, human-leaning",846,99.9,100.0,100.0,100.0,100.0,100.0,–,–,100.0
+human · mean,human ideas,671,4.0,2.9,2.7,19.4,10.5,3.1,–,–,1.2
+human · median,human ideas,671,0.2,0.0,0.0,7.9,1.8,0.0,–,–,0.0

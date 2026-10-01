@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/unlabelled-outline.json",
+  "title": "Unlabelled Document Outline",
+  "description": "A content-blind document description, global themes, and a flat ordered outline of substantive, rhetorical, and structural commitments.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "document_description",
+    "global_themes",
+    "items"
+  ],
+  "properties": {
+    "document_description": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S",
+      "description": "A non-empty, content-blind description of the document's specific type, venue, audience, and register."
+    },
+    "global_themes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "description": "One substantive sentence for each genuinely distinct global theme.",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "description": "A flat list of outline items in document order. IDs must be consecutive integers beginning with 1.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "content",
+          "verbatim"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "The item's position in the outline. IDs must be consecutive integers beginning with 1."
+          },
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S",
+            "description": "A concise, source-independent statement of one substantive, rhetorical, or structural commitment, normally one sentence and no more than 60 words."
+          },
+          "verbatim": {
+            "type": "boolean",
+            "description": "True only when the content intentionally preserves source wording whose exact form is substantive."
+          }
+        }
+      }
+    }
+  }
+}

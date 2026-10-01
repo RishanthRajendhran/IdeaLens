@@ -1,0 +1,33 @@
+Arm,Model,0.1%,0.5%,2%,5%
+clean human,IdeaLens · outline,0.1,0.4,1.0,3.1
+clean human,IdeaLens · document,0.0,0.0,0.0,0.6
+clean human,ProseLens,0.0,0.0,0.0,0.3
+clean human,IdeaLens-ModernBERT-L · outline,0.1,0.4,2.3,8.1
+clean human,IdeaLens-ModernBERT-L · document,0.0,0.0,0.3,10.9
+clean human,ProseLens-ModernBERT-L,0.0,0.0,0.8,8.7
+clean human,EditLens-Llama-3B (cal.),0.0,0.0,0.0,0.4
+clean human,Binoculars (cal.),0.0,0.1,2.3,7.0
+clean AI (model-written),IdeaLens · outline,89.7,94.7,97.4,98.2
+clean AI (model-written),IdeaLens · document,95.8,98.0,98.7,99.0
+clean AI (model-written),ProseLens,98.9,99.3,99.9,100.0
+clean AI (model-written),IdeaLens-ModernBERT-L · outline,58.8,76.1,90.6,95.7
+clean AI (model-written),IdeaLens-ModernBERT-L · document,61.9,68.4,82.0,95.2
+clean AI (model-written),ProseLens-ModernBERT-L,87.7,96.7,99.7,99.9
+clean AI (model-written),EditLens-Llama-3B (cal.),0.0,28.8,93.4,99.3
+clean AI (model-written),Binoculars (cal.),8.6,20.0,29.9,36.7
+"model-edited (7 categories, adding_detail excluded)",IdeaLens · outline,3.9,10.6,20.7,29.8
+"model-edited (7 categories, adding_detail excluded)",IdeaLens · document,11.6,19.7,37.6,50.6
+"model-edited (7 categories, adding_detail excluded)",ProseLens,44.4,53.6,68.8,81.7
+"model-edited (7 categories, adding_detail excluded)",IdeaLens-ModernBERT-L · outline,2.3,6.7,18.8,34.0
+"model-edited (7 categories, adding_detail excluded)",IdeaLens-ModernBERT-L · document,6.5,11.5,30.3,60.2
+"model-edited (7 categories, adding_detail excluded)",ProseLens-ModernBERT-L,16.9,32.4,64.5,86.7
+"model-edited (7 categories, adding_detail excluded)",EditLens-Llama-3B (cal.),0.0,13.9,55.7,82.9
+"model-edited (7 categories, adding_detail excluded)",Binoculars (cal.),7.6,24.1,48.7,62.3
+adding_detail (model-edited),IdeaLens · outline,15.4,30.5,45.6,57.0
+adding_detail (model-edited),IdeaLens · document,46.7,65.6,85.4,92.7
+adding_detail (model-edited),ProseLens,86.0,91.3,95.8,97.4
+adding_detail (model-edited),IdeaLens-ModernBERT-L · outline,5.8,19.2,40.1,58.1
+adding_detail (model-edited),IdeaLens-ModernBERT-L · document,20.3,35.7,70.5,87.4
+adding_detail (model-edited),ProseLens-ModernBERT-L,37.9,70.3,92.4,97.0
+adding_detail (model-edited),EditLens-Llama-3B (cal.),0.0,24.2,69.6,91.0
+adding_detail (model-edited),Binoculars (cal.),19.5,57.0,83.6,88.9
