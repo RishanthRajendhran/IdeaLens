@@ -98,18 +98,18 @@ which read the document itself.
 
 | Model | Reads | Backends |
 |---|---|---|
-| **IdeaLens** (default) | outline | vllm, hf |
-| ProseLens | document | vllm, hf |
-| IdeaLens-NoParaphrase | outline | vllm, hf |
-| IdeaLens-Qwen3.5-9B | outline | hf |
-| IdeaLens-Qwen3.5-9B-PerItem | each outline item | hf |
-| IdeaLens-ModernBERT-L | outline | hf |
-| IdeaLens-ModernBERT-L-NoParaphrase | outline | hf |
-| IdeaLens-ModernBERT-L-RolesOnly | the outline's role sequence | hf |
-| IdeaLens-ModernBERT-L-PerItem | each outline item | hf |
-| ProseLens-ModernBERT-L | document | hf |
-| IdeaLens-LogisticClassifier | outline | logistic |
-| IdeaLens-LogisticClassifier-PerItem | each outline item | logistic |
+| **[IdeaLens](https://huggingface.co/rishanthrajendhran/IdeaLens)** (default) | outline | vllm, hf |
+| [ProseLens](https://huggingface.co/rishanthrajendhran/ProseLens) | document | vllm, hf |
+| [IdeaLens-NoParaphrase](https://huggingface.co/rishanthrajendhran/IdeaLens-NoParaphrase) | outline | vllm, hf |
+| [IdeaLens-Qwen3.5-9B](https://huggingface.co/rishanthrajendhran/IdeaLens-Qwen3.5-9B) | outline | hf |
+| [IdeaLens-Qwen3.5-9B-PerItem](https://huggingface.co/rishanthrajendhran/IdeaLens-Qwen3.5-9B-PerItem) | each outline item | hf |
+| [IdeaLens-ModernBERT-L](https://huggingface.co/rishanthrajendhran/IdeaLens-ModernBERT-L) | outline | hf |
+| [IdeaLens-ModernBERT-L-NoParaphrase](https://huggingface.co/rishanthrajendhran/IdeaLens-ModernBERT-L-NoParaphrase) | outline | hf |
+| [IdeaLens-ModernBERT-L-RolesOnly](https://huggingface.co/rishanthrajendhran/IdeaLens-ModernBERT-L-RolesOnly) | the outline's role sequence | hf |
+| [IdeaLens-ModernBERT-L-PerItem](https://huggingface.co/rishanthrajendhran/IdeaLens-ModernBERT-L-PerItem) | each outline item | hf |
+| [ProseLens-ModernBERT-L](https://huggingface.co/rishanthrajendhran/ProseLens-ModernBERT-L) | document | hf |
+| [IdeaLens-LogisticClassifier](https://huggingface.co/rishanthrajendhran/IdeaLens-LogisticClassifier) | outline | logistic |
+| [IdeaLens-LogisticClassifier-PerItem](https://huggingface.co/rishanthrajendhran/IdeaLens-LogisticClassifier-PerItem) | each outline item | logistic |
 
 Per-item models score each item and pool the item scores by their mean log-odds. Each model uses its own backend
 unless you pass `--backend`.
@@ -174,7 +174,7 @@ OpenAI, Anthropic); not every model is served by it.
 | Model | Needs |
 |---|---|
 | IdeaLens, ProseLens, IdeaLens-NoParaphrase | one 80 GB GPU (A100 80GB or H100 80GB); the weights take 59 GiB; about 60 GiB of CPU RAM while loading |
-| IdeaLens-Qwen3.5-9B models | one GPU; the weights take about 19 GB in bf16 (tested on 80 GB GPUs) |
+| IdeaLens-Qwen3.5-9B models | one GPU; the weights take about 16 GB in bf16 (tested on 80 GB GPUs) |
 | ModernBERT models | any GPU; a CPU works for small jobs |
 | Logistic models | CPU only |
 
