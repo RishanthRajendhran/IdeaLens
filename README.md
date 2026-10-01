@@ -91,6 +91,125 @@ prov = make("openai", "gpt-6-sol")
 outlines = il.extract(texts, formats, provider=prov, mode="batch")
 ```
 
+## Ways to use idealens
+
+### Which detector?
+
+| You want | Use |
+|---|---|
+| The paper's main idea-level detector | `IdeaLens` (one 80 GB GPU) |
+| The idea-level detector trained on outlines exactly as this package extracts them | `IdeaLens-NoParaphrase` |
+| Idea-level detection on a small GPU or a CPU | `IdeaLens-ModernBERT-L` (or `-NoParaphrase`) |
+| Idea-level detection with no GPU at all | `IdeaLens-LogisticClassifier` (needs OpenAI embeddings) |
+| A score for every outline item, not just the document | the `-PerItem` models (`item_p_human` in each record) |
+| How much the outline's structure alone gives away | `IdeaLens-ModernBERT-L-RolesOnly` (reads only the role sequence) |
+| Who wrote the prose, for comparison | `ProseLens`, `ProseLens-ModernBERT-L` (no outline, no LLM calls) |
+
+### 1. From documents, end to end
+
+`idealens run` classifies each document's format, extracts its outline and scores it. This is the route the published
+thresholds assume when the extractor is `gemini-3.7-flash` (the default).
+
+```bash
+idealens run docs.jsonl -o scores.jsonl --model IdeaLens
+```
+
+### 2. Extract once, score with several detectors
+
+Extraction is the expensive step. Keep its output and score it with as many outline models as you like:
+
+```bash
+idealens classify docs.jsonl     -o formats.jsonl
+idealens extract  formats.jsonl  -o outlines.jsonl
+idealens score outlines.jsonl -o idealens.jsonl  --model IdeaLens
+idealens score outlines.jsonl -o modernbert.jsonl --model IdeaLens-ModernBERT-L
+idealens score outlines.jsonl -o per_item.jsonl   --model IdeaLens-ModernBERT-L-PerItem
+```
+
+### 3. Score outlines you already have
+
+The `outline` field (or the field named by `--input-field`) can hold the extractor's JSON object or plain text with one
+`[Role] content` line per item:
+
+```json
+{"id": "doc1", "format": "News Article", "outline": "[Central Development] The council approved the new pipeline.\n[Background Context] The reservoir has been shrinking for three summers."}
+```
+
+```python
+with il.Detector("IdeaLens-NoParaphrase") as det:
+    records = det.score_outlines(["[Central Development] ...\n[Background Context] ..."], format=["News Article"])
+```
+
+Roles must come from the format's role vocabulary for the scores to mean what they meant in training; the extractor
+in this package uses it.
+
+### 4. Score documents directly
+
+The prose detectors read the document itself, so no outline and no LLM call is needed:
+
+```bash
+idealens score docs.jsonl -o prose.jsonl --model ProseLens
+```
+
+### 5. Choose the LLM that classifies and extracts
+
+Any provider in [Credentials](#credentials) works for `classify`, `extract`, `run` and `calibrate`, online or as a batch
+job (`--mode batch`, half price where the provider has a batch API). That includes a model you serve yourself behind an
+OpenAI-compatible endpoint (vLLM, Ollama, ...):
+
+```bash
+idealens run docs.jsonl -o scores.jsonl --provider openai   --llm-model gpt-6-sol --mode batch
+idealens run docs.jsonl -o scores.jsonl --provider compatible --base-url http://localhost:8000/v1 --llm-model <served model>
+```
+
+The published thresholds were fitted on `gemini-3.7-flash` outlines. With another extractor every record carries a
+warning, and calibrating on your own human documents (step 8) restores a known false-positive rate.
+
+### 6. Give formats yourself, or classify locally
+
+A record's `format` field, or `--format` for the whole file, skips classification. A format outside the eight is
+refused unless you pass `--force-fit`, which maps it to the closest one. `--method weborganizer` classifies with
+WebOrganizer's encoder on your own machine instead of an LLM (`pip install "idealens[weborganizer]"`).
+
+```bash
+idealens run reviews.jsonl -o scores.jsonl --format "User Reviews"
+idealens classify docs.jsonl -o formats.jsonl --method weborganizer --device cuda
+```
+
+### 7. Choose how the model runs
+
+| Backend | When |
+|---|---|
+| `vllm` (default for the Nemotron models) | fastest; one 80 GB GPU |
+| `hf` | transformers; for the Nemotron models, `--hf-mode adapter` downloads the base model plus a 3 GB adapter instead of the merged weights |
+| `logistic` | the two logistic models; `Detector(..., embed=fn)` takes your own `text-embedding-3-large` vectors (for example, cached ones) instead of calling OpenAI |
+
+`--weights PATH` scores with a local copy of a model's weights instead of downloading them (a directory, or the
+`.npz` file for the logistic models). In Python, `Detector`
+passes extra keyword arguments to the backend, e.g. `il.Detector("IdeaLens", tensor_parallel_size=2)`.
+
+### 8. Choose the operating point, or calibrate your own
+
+Every record carries verdicts at all calibrated false-positive rates and schemes (see
+[Verdicts and thresholds](#verdicts-and-thresholds)); `--fpr` and `--scheme` pick the default one. For a new domain,
+fit cuts on human documents from it and score against them:
+
+```bash
+idealens calibrate my_humans.jsonl --save-as my_domain --model IdeaLens --group-by source
+idealens score outlines.jsonl -o scores.jsonl --thresholds my_domain --group-by source --scheme group:source
+```
+
+### 9. Large jobs
+
+`--dry-run` prices a run before anything is sent; `idealens cost out.jsonl` totals a finished one. Every command
+appends to its output and can be re-run after an interruption: finished records are skipped and failed provider calls
+are retried. `--chunk` sets how many records are scored per write, `--workers` how many online requests run at once.
+
+### 10. Without this package
+
+Each model card on Hugging Face shows how to load the weights with transformers or vLLM and read P(human) directly,
+and each model repo holds its `thresholds.json`.
+
 ## Models
 
 `idealens models` lists them. All read the output of the same extraction step, except the two ProseLens models,
