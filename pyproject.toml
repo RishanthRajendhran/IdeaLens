@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "idealens"
-version = "0.1.1"
+version = "0.1.2"
 description = "Detect whether a document's ideas came from a person or an AI model (IdeaLens), and related detectors."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -36,6 +36,7 @@ Homepage = "https://github.com/RishanthRajendhran/IdeaLens"
 Source = "https://github.com/RishanthRajendhran/IdeaLens"
 Model = "https://huggingface.co/rishanthrajendhran/IdeaLens"
 Corpus = "https://huggingface.co/datasets/rishanthrajendhran/WildOutlines"
+Collection = "https://huggingface.co/collections/rishanthrajendhran/idealens-6abee785ce6196fc0be9200f"
 
 [project.scripts]
 idealens = "idealens.cli:main"

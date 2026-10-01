@@ -15,7 +15,8 @@ Models: [IdeaLens](https://huggingface.co/rishanthrajendhran/IdeaLens) and the o
 [Models](#models). Data: [WildOutlines](https://huggingface.co/datasets/rishanthrajendhran/WildOutlines) (training
 corpus), [IdeaShift](https://huggingface.co/datasets/rishanthrajendhran/IdeaShift),
 [IdeaShift-X](https://huggingface.co/datasets/rishanthrajendhran/IdeaShift-X) and
-[TwiceTold](https://huggingface.co/datasets/rishanthrajendhran/TwiceTold) (evaluation sets).
+[TwiceTold](https://huggingface.co/datasets/rishanthrajendhran/TwiceTold) (evaluation sets). All of them are in the
+[IdeaLens collection](https://huggingface.co/collections/rishanthrajendhran/idealens-6abee785ce6196fc0be9200f).
 
 ## Install
 
