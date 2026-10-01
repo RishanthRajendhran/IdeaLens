@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "idealens"
+version = "0.1.0"
+description = "Detect whether a document's ideas came from a person or an AI model (IdeaLens), and related detectors."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Rishanth Rajendhran" }]
+keywords = ["ai-text-detection", "idea-provenance", "machine-generated-text"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["numpy>=1.24", "huggingface_hub>=0.30"]
+
+[project.optional-dependencies]
+# transformers 5.x is needed by both backends (nemotron_h support; the adapter merge relies on 5.x's fused expert
+# tensors). xgrammar 0.2.5 caps transformers < 5, so pin the last release without that cap.
+hf = ["torch>=2.4", "transformers>=5.15", "safetensors>=0.4", "accelerate>=1.0"]
+vllm = ["vllm==0.21.*", "transformers>=5.15", "xgrammar==0.2.1"]
+vertex = ["google-auth>=2.20", "google-cloud-storage>=2.10"]
+openai = ["openai>=1.40"]
+anthropic = ["anthropic>=1.0"]
+weborganizer = ["torch>=2.4", "transformers>=5.15"]
+dev = ["pytest>=8"]
+all = ["idealens[hf,vllm,vertex,weborganizer,openai,anthropic]"]
+
+[project.urls]
+Homepage = "https://github.com/RishanthRajendhran/IdeaLens"
+Source = "https://github.com/RishanthRajendhran/IdeaLens"
+Model = "https://huggingface.co/rishanthrajendhran/IdeaLens"
+Corpus = "https://huggingface.co/datasets/rishanthrajendhran/WildOutlines"
+
+[project.scripts]
+idealens = "idealens.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"idealens.assets" = ["*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["gpu: needs a GPU and the model weights"]

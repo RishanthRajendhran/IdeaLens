@@ -1,0 +1,51 @@
+{
+ "system": "Your task is to classify the format of web pages into one of the following 24 categories:\nA. Academic Writing\n - Examples: a research paper, a paper abstract, a thesis, a literature review\n - This does not include other web pages that have academia and research only as their topic\nB. Content Listing\n - The page contains an overview of content and is used for navigation\n - Examples: sitemap, product catalog, search results, news listings with short snippets of articles, web directory\n - Note that hyperlinks are not visible from the text content and you have to deduce which parts of the page contain hyperlinks\nC. Creative Writing\n - The page content consists of a short story, chapters from a novel, a poem or song lyrics\n - This does not include other web pages (e.g. forums or news articles) that have literature and fiction only as their topic\nD. Customer Support Page\n - Content by an organization and for a general audience\n - Examples: a troubleshooting guide\n - For customer support pages in the specific format of FAQs, choose 'FAQs' instead\nE. Discussion Forum / Comment Section\n - Community sites like reddit or comment sections on news article or blog posts\n - Has to contain multiple posts or comments\nF. FAQs\n - The page content is in the Frequently Asked Questions format\nG. Incomplete Content\n - The page contents are truncated, pay-walled, or require a login to access\n - If the page has multiple snippets of truncated articles, choose 'Content Listing' instead\n - Also includes multimedia web pages where the web page text primarily describes and supplements the audiovisual content, e.g., a YouTube video description or image gallery\nH. Knowledge Article\n - Written in an objective and neutral style\n - Published on a moderated platform (like Wikipedia) or by a reputable source\nI. Legal Notices\n - Examples: terms of service, legal disclaimers, privacy policy, license agreement\n - This does not include other web pages that only have law-related topics\nJ. Listicle\n - A blog or article that presents content in the form of a list\n - Examples: Buzzfeed-style articles, \"Top 10\" lists, \"7 things you didn't know about Y\", \"4 best places to visit in Z\"\n - If the list is meant to give an overview of the site contents and facilitate navigation, choose 'Content Listing' instead\nK. News Article\n - Written by journalists on current events and published by news organizations\n - For long reads, profiles, editorials, and journalistic essays, choose 'Nonfiction Writing' instead\n - For newspaper interviews, choose 'Transcript / Interview' instead\nL. Nonfiction Writing\n - Long reads, profiles, editorials, essays, obituaries, memoirs and other forms of nonfiction writing\n - Written by journalists and other professional writers\nM. Organizational About Page\n - Typically contains a self-description or introduction by an organization such as a company, university, government agency, non-profit organization\n - Note that the content may appear similar to a 'Knowledge Article' in some cases, but is not verified and may contain self-promotion\nN. Organizational Announcement\n - Examples: a press release, a blog post by an organization such as a company, university, government agency, non-profit organization\nO. Personal About Page\n - An \"About Page\" on a personal website or hobby website\n - Typically contains a self-description, introduction or profile information\nP. Personal Blog\n - Written by an individual typically relating personal experiences and opinions\n - If the blog's comment section is longer than the blog post, choose 'Discussion Forum / Comment Section' instead\nQ. Product Page\n - Typically contains descriptions and promotions for a product or service\n - Also includes products in a wider sense, for example university course descriptions\n - If most of the page content consists of user reviews, choose 'User Reviews' instead\nR. Q&A Forum\n - A user forum with an explicit question & answer format, e.g., Quora, Stack Exchange\nS. Spam / Ads\n - The page consists primarily of spam content, SEO keyword stuffing, or short online ads for other pages, products or services\n - Also choose this category if the page has no apparent purpose\nT. Structured Data\n - Multiple data entries with a common structure\n - Examples: a table, datasheet, movie database, glossary, dictionary, json file, csv, xml\nU. Technical Writing\n - Examples: API documentation, README files, source code\n - If the page only contains a link to documentation, choose a different category instead\n - Unlike 'Customer Support Page', this content is meant for developers and experts, rather than end-users\nV. Transcript / Interview\n - A written record of spoken language\n - Examples: interviews (e.g. in a newspaper), the transcript of a court hearing, movie, podcast, lecture or speech\nW. Tutorial / How-To Guide\n - Examples: cooking recipes, DIY instructions, a WikiHow page, a Khan Academy course\n - The page must contain the actual content of the tutorial / how-to guide\n - If the page only contains a brief description or promotion of the tutorial, choose a different category instead\n - If the guide is specific to products or services from the same website, choose 'Customer Support Page' instead\nX. User Reviews\n - Reviews posted by users, e.g., on Yelp, TripAdvisor\n\nChoose which format from the above list is the best match for describing the style, purpose and origin of the web page content. If the content has multiple formats, choose the one that is most prominent.\nRemember to focus on the format, and not the topic, e.g., a research paper about legal issues does not count as 'Legal Notices'.\nThe URL might help you understand the content. Avoid shortcuts such as word overlap between the page and the format descriptions or simple patterns in the URL, for example `.../blog/...` may also occur for organizational announcements, comment sections, and other formats.\nStart your response with the single-letter ID of the correct format followed by an explanation.",
+ "user_template": "Consider the following web page:\n\nURL: `{url}`\nContent: ```\n{text}\n```\n\n",
+ "labels": [
+  "Academic Writing",
+  "Content Listing",
+  "Creative Writing",
+  "Customer Support Page",
+  "Discussion Forum / Comment Section",
+  "FAQs",
+  "Incomplete Content",
+  "Knowledge Article",
+  "Legal Notices",
+  "Listicle",
+  "News Article",
+  "Nonfiction Writing",
+  "Organizational About Page",
+  "Organizational Announcement",
+  "Personal About Page",
+  "Personal Blog",
+  "Product Page",
+  "Q&A Forum",
+  "Spam / Ads",
+  "Structured Data",
+  "Technical Writing",
+  "Transcript / Interview",
+  "Tutorial / How-To Guide",
+  "User Reviews"
+ ],
+ "generation": {
+  "maxOutputTokens": 1024
+ },
+ "force_fit_system": "You are shown a web document and a list of EIGHT document formats. Assign the document to exactly one of them.\n\nThe document may not fit any of the eight well. That is expected: choose the CLOSEST fit regardless, based on the document's purpose and structure rather than its topic. Do not decline, do not answer with any label outside the list, and do not explain.\n\nFormats:\nA. Academic Writing\n - Examples: a research paper, a paper abstract, a thesis, a literature review\n - This does not include other web pages that have academia and research only as their topic\nB. Creative Writing\n - The page content consists of a short story, chapters from a novel, a poem or song lyrics\n - This does not include other web pages (e.g. forums or news articles) that have literature and fiction only as their topic\nC. Knowledge Article\n - Written in an objective and neutral style\n - Published on a moderated platform (like Wikipedia) or by a reputable source\nD. News Article\n - Written by journalists on current events and published by news organizations\n - For long reads, profiles, editorials, and journalistic essays, choose 'Nonfiction Writing' instead\nE. Nonfiction Writing\n - Long reads, profiles, editorials, essays, obituaries, memoirs and other forms of nonfiction writing\n - Written by journalists and other professional writers\nF. Personal About Page\n - An \"About Page\" on a personal website or hobby website\n - Typically contains a self-description, introduction or profile information\nG. Personal Blog\n - Written by an individual typically relating personal experiences and opinions\nH. User Reviews\n - Reviews posted by users, e.g., on Yelp, TripAdvisor\n\nAnswer with the single letter of the closest format.",
+ "force_fit_labels": [
+  "Academic Writing",
+  "Creative Writing",
+  "Knowledge Article",
+  "News Article",
+  "Nonfiction Writing",
+  "Personal About Page",
+  "Personal Blog",
+  "User Reviews"
+ ],
+ "seed": 1865679507,
+ "model": "gemini-3.7-flash",
+ "sha256": {
+  "system": "e0e048a2e3c81416d4fef247316d1581adc3df0ca03cb942903f604b5a5ca37b",
+  "user_template": "ddef1665ab9f4198d0044b791c6cf13a885c46ed266e06b05566b40edc409197",
+  "force_fit_system": "2dcf27978138352103ceb9af250b5b0af3036171c3cdaf73f4b11f199f5b97d1"
+ }
+}
