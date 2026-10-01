@@ -116,10 +116,25 @@ def _dry_run(a, records, need_classify, extract=True):
     r = estimate(texts, fmts, need_classify=need_classify, provider=a.provider, model=_default_model(a) or "?",
                  few_shot=not getattr(a, "no_few_shot", False), mode=a.mode, extract=extract,
                  price_in=a.price_in, price_out=a.price_out, price_cached=a.price_cached,
-                 scoring_backend=getattr(a, "backend", "vllm"))
+                 scoring_backend=_scoring_backend(a), detector_input=_detector_input(a))
     print(format_report(r))
     if a.dry_run_json:
         Path(a.dry_run_json).write_text(json.dumps(r, indent=1))
+
+
+def _scoring_backend(a):
+    """The backend scoring would use: --backend, else the model's own (commands without scoring options: vllm)."""
+    from . import registry
+    if getattr(a, "backend", None):
+        return a.backend
+    model = getattr(a, "model", None)
+    return registry.get(model).backends[0] if model else "vllm"
+
+
+def _detector_input(a):
+    from . import registry
+    model = getattr(a, "model", None)
+    return registry.get(model).input if model else "outline"
 
 
 def _detector(a):
@@ -322,8 +337,9 @@ def build_parser():
 
     def scoring(p):
         p.add_argument("--model", default="IdeaLens")
-        p.add_argument("--backend", default=None, choices=["vllm", "hf", "logistic"],
-                       help="default: the model's own (vllm for the Nemotron models, hf for ModernBERT and Qwen)")
+        p.add_argument("--backend", default=None, choices=["vllm", "hf", "tinker", "logistic"],
+                       help="default: the model's own (vllm for the Nemotron models, hf for ModernBERT and Qwen); "
+                            "tinker scores IdeaLens and ProseLens on Tinker's servers, no GPU needed")
         p.add_argument("--hf-mode", choices=["merged", "adapter"])
         p.add_argument("--weights", help="local weights directory instead of the model repo")
         p.add_argument("--fpr", type=float, default=0.01)

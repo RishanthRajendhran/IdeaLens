@@ -239,3 +239,26 @@ def test_cli_backend_defaults_to_the_models_own(monkeypatch):
     a = cli.build_parser().parse_args(["score", "x.jsonl", "-o", "y.jsonl", "--model", "IdeaLens-LogisticClassifier"])
     cli._detector(a)
     assert seen["backend"] is None
+
+
+def test_dry_run_scoring_estimate_backends():
+    """`run --dry-run` must work when --backend is left to the model, and price Tinker scoring in dollars."""
+    from idealens import cli, cost
+    docs = ["word " * 400] * 10
+    for argv, want in ((["run", "x.jsonl", "-o", "y.jsonl"], "vllm"),
+                       (["run", "x.jsonl", "-o", "y.jsonl", "--model", "IdeaLens-ModernBERT-L"], "hf"),
+                       (["run", "x.jsonl", "-o", "y.jsonl", "--backend", "tinker"], "tinker")):
+        a = cli.build_parser().parse_args(argv)
+        assert cli._scoring_backend(a) == want
+    r = cost.estimate(docs, ["News Article"] * 10, scoring_backend="tinker")
+    assert r["scoring"]["backend"] == "tinker" and 0 < r["scoring"]["usd"] < 0.1
+    r = cost.estimate(docs, ["News Article"] * 10, scoring_backend=None, detector_input="document")
+    assert r["scoring"]["gpu_minutes_one_a100"] > 0
+    assert "on Tinker" in cost.format_report(cost.estimate(docs, ["News Article"] * 10, scoring_backend="tinker"))
+
+
+def test_public_tinker_checkpoints():
+    from idealens import registry
+    assert registry.get("IdeaLens").extra["tinker_path"].startswith("tinker://")
+    assert registry.get("ProseLens").extra["tinker_path"].startswith("tinker://")
+    assert not registry.get("IdeaLens-NoParaphrase").extra.get("tinker_path")

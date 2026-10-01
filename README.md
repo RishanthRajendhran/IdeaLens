@@ -27,6 +27,7 @@ pip install "idealens[openai]"        # OpenAI, OpenRouter or any OpenAI-compati
 pip install "idealens[anthropic]"     # Claude
 pip install "idealens[vertex]"        # Gemini on Vertex AI (batch mode also needs a GCS bucket)
 pip install "idealens[weborganizer]"  # WebOrganizer's encoder for format classification
+pip install "idealens[tinker]"        # score IdeaLens and ProseLens on Tinker's servers: no GPU needed
 pip install "idealens[all]"
 ```
 
@@ -46,6 +47,7 @@ The model repos are gated: request access on the model's Hugging Face page, then
 | `compatible` | `--base-url` and, if the endpoint needs one, `--api-key` |
 
 The logistic models embed outlines with OpenAI's `text-embedding-3-large`, so they also need `OPENAI_API_KEY`.
+Tinker scoring (`--backend tinker`) needs `TINKER_API_KEY`.
 
 ## Quick start
 
@@ -94,11 +96,30 @@ outlines = il.extract(texts, formats, provider=prov, mode="batch")
 
 ## Ways to use idealens
 
+### Without a GPU: Tinker
+
+IdeaLens and ProseLens are also published on [Tinker](https://thinkingmachines.ai/tinker/), which runs the models on
+its own servers, so any laptop works. Tinker bills your account per token: scoring with IdeaLens costs about $0.50 per
+1,000 documents at list price (the outline extraction costs more; `--dry-run` prices both).
+
+1. Sign up at [auth.thinkingmachines.ai/sign-up](https://auth.thinkingmachines.ai/sign-up) and create an API key in the
+   Tinker console.
+2. Install and run:
+
+```bash
+pip install "idealens[tinker]"
+export TINKER_API_KEY=...       # your Tinker key
+export GEMINI_API_KEY=...       # for outline extraction (or another provider, see Credentials)
+idealens run docs.jsonl -o scores.jsonl --backend tinker
+```
+
+In Python, `il.Detector("IdeaLens", backend="tinker")`. ProseLens works the same way (`--model ProseLens`).
+
 ### Which detector?
 
 | You want | Use |
 |---|---|
-| The paper's main idea-level detector | `IdeaLens` (one 80 GB GPU) |
+| The paper's main idea-level detector | `IdeaLens` (one 80 GB GPU, or no GPU with `--backend tinker`) |
 | The idea-level detector trained on outlines exactly as this package extracts them | `IdeaLens-NoParaphrase` |
 | Idea-level detection on a small GPU or a CPU | `IdeaLens-ModernBERT-L` (or `-NoParaphrase`) |
 | Idea-level detection with no GPU at all | `IdeaLens-LogisticClassifier` (needs OpenAI embeddings) |
@@ -182,6 +203,7 @@ idealens classify docs.jsonl -o formats.jsonl --method weborganizer --device cud
 | Backend | When |
 |---|---|
 | `vllm` (default for the Nemotron models) | fastest; one 80 GB GPU |
+| `tinker` | IdeaLens and ProseLens on Tinker's servers; no GPU, billed per token to your Tinker account |
 | `hf` | transformers; for the Nemotron models, `--hf-mode adapter` downloads the base model plus a 3 GB adapter instead of the merged weights |
 | `logistic` | the two logistic models; `Detector(..., embed=fn)` takes your own `text-embedding-3-large` vectors (for example, cached ones) instead of calling OpenAI |
 
@@ -293,7 +315,7 @@ OpenAI, Anthropic); not every model is served by it.
 
 | Model | Needs |
 |---|---|
-| IdeaLens, ProseLens, IdeaLens-NoParaphrase | one 80 GB GPU (A100 80GB or H100 80GB); the weights take 59 GiB; about 60 GiB of CPU RAM while loading |
+| IdeaLens, ProseLens, IdeaLens-NoParaphrase | one 80 GB GPU (A100 80GB or H100 80GB); the weights take 59 GiB; about 60 GiB of CPU RAM while loading. IdeaLens and ProseLens also run on Tinker with no GPU (`--backend tinker`) |
 | IdeaLens-Qwen3.5-9B models | one GPU; the weights take about 16 GB in bf16 (tested on 80 GB GPUs) |
 | ModernBERT models | any GPU; a CPU works for small jobs |
 | Logistic models | CPU only |

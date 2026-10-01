@@ -44,6 +44,11 @@ PRICES = {
 }
 # measured scoring throughput (one A100 80GB, IdeaLens-NoParaphrase calibration outlines)
 SCORING_TOKENS_PER_S = {"vllm": 26_585, "hf": 2.79 * 640}
+# Tinker bills prefill per token; the backend reads each input twice (once per label). List price for
+# Nemotron-3.5-Lightning-30B-A3B as of 2026-10-02 (tinker-docs.thinkingmachines.ai/tinker/models/); Tinker sometimes runs
+# discounts, so this is an upper bound.
+TINKER_PREFILL_USD_PER_M = 0.39
+TINKER_PASSES = 2
 
 
 @lru_cache(maxsize=None)
@@ -99,7 +104,7 @@ def _cost(e: StageEstimate, p: dict | None, batch: bool) -> dict:
 
 def estimate(texts, formats=None, need_classify=None, provider="gemini", model="gemini-3.7-flash", few_shot=True,
              mode="batch", force_fit_share=0.15, extract=True, price_in=None, price_out=None, price_cached=None,
-             scoring_backend="vllm") -> dict:
+             scoring_backend="vllm", detector_input="outline") -> dict:
     """Estimate tokens and cost. formats: one per document (None where it must be classified)."""
     st = usage_stats()
     texts = list(texts)
@@ -157,11 +162,18 @@ def estimate(texts, formats=None, need_classify=None, provider="gemini", model="
         e.cost = _cost(e, p, batch)
     total = {k: sum(e.cost.get(k, 0) for e in stages) for k in ("no_cache", "cached", "no_cache_p90_output")} if p else {}
     avg_outline_tokens = 640  # WildOutlines calibration outlines with the prompt
-    score_tok = n * avg_outline_tokens
+    # a document model reads the text itself: about 4 characters per token, plus the prompt
+    score_tok = (n * avg_outline_tokens if detector_input != "document"
+                 else sum(len(t) for t in texts) / 4 + 60 * n)
+    scoring_backend = scoring_backend or "vllm"
+    if scoring_backend == "tinker":
+        scoring = {"backend": "tinker", "tokens": score_tok,
+                   "usd": score_tok * TINKER_PASSES * TINKER_PREFILL_USD_PER_M / 1e6}
+    else:
+        scoring = {"backend": scoring_backend, "gpu_minutes_one_a100": score_tok / SCORING_TOKENS_PER_S.get(scoring_backend, SCORING_TOKENS_PER_S["hf"]) / 60}
     return {"documents": n, "provider": provider, "model": model, "mode": mode, "few_shot": few_shot,
             "prices": p, "stages": [asdict(e) for e in stages], "total_usd": total,
-            "scoring": {"backend": scoring_backend, "gpu_minutes_one_a100":
-                        score_tok / SCORING_TOKENS_PER_S[scoring_backend] / 60},
+            "scoring": scoring,
             "notes": _notes(provider, model, p, batch, max_prompt)}
 
 
@@ -210,8 +222,13 @@ def format_report(r: dict) -> str:
         pr = r["prices"]
         lines.append(f"prices per 1M tokens: in ${pr['in']}, cached ${pr['cached_in']}, out ${pr['out']} "
                      f"({pr['source']}){'; batch = half' if r['mode'] == 'batch' and pr.get('batch') else ''}")
-    lines.append(f"scoring: about {r['scoring']['gpu_minutes_one_a100']:.1f} GPU-minutes on one A100 "
-                 f"({r['scoring']['backend']}), plus ~2 minutes to load the model")
+    sc = r["scoring"]
+    if sc["backend"] == "tinker":
+        lines.append(f"scoring: about ${sc['usd']:,.2f} on Tinker (no GPU needed; at most "
+                     f"${TINKER_PREFILL_USD_PER_M}/M prefill tokens, each input read twice)")
+    else:
+        lines.append(f"scoring: about {sc['gpu_minutes_one_a100']:.1f} GPU-minutes on one A100 "
+                     f"({sc['backend']}), plus ~2 minutes to load the model")
     lines += [f"note: {x}" for x in r["notes"]]
     return "\n".join(lines)
 

@@ -1,6 +1,7 @@
 """Tinker: score with the training checkpoints on Tinker's servers (pip install tinker; TINKER_API_KEY).
 
-Pass the checkpoint as weights="tinker://..."; only accounts that can read it can use it (no checkpoint is published). The readout is the one
+IdeaLens and ProseLens use their published checkpoints (registry.TINKER_PUBLIC): any Tinker account can score with them,
+billed to that account. For another checkpoint pass weights="tinker://...". The readout is the one
 that produced the paper's Tinker scores: each label token is appended to the prompt and
 its log-probability read from compute_logprobs, one pass per label; the prompt body is cut to fit a 65,536-token
 window, never the answer suffix. Billed at Tinker's prefill rate.
