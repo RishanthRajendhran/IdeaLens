@@ -344,7 +344,9 @@ The tests need no GPU, network or API key.
 
 ## License
 
-The code is released under the Apache License 2.0. Each model has its own license, given on its model page.
+The code, prompts and results in this repository are released under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/):
+free to share and adapt for non-commercial purposes, with attribution and under the same license. Versions 0.1.0 to
+0.1.3 were released under Apache 2.0. Each model and dataset has its own license, given on its page.
 
 ## Citation
 
