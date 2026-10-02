@@ -5,7 +5,8 @@ vocabularies, and the code that produced the numbers. The trained models are on 
 [IdeaLens](https://huggingface.co/rishanthrajendhran/IdeaLens) and [ProseLens](https://huggingface.co/rishanthrajendhran/ProseLens)), as are the training corpus
 [WildOutlines](https://huggingface.co/datasets/rishanthrajendhran/WildOutlines) and the evaluation sets we constructed ([IdeaShift](https://huggingface.co/datasets/rishanthrajendhran/IdeaShift),
 [IdeaShift-X](https://huggingface.co/datasets/rishanthrajendhran/IdeaShift-X), [TwiceTold](https://huggingface.co/datasets/rishanthrajendhran/TwiceTold)); the
-[IdeaLens collection](https://huggingface.co/collections/rishanthrajendhran/idealens-6abee785ce6196fc0be9200f) gathers them all. To run the detectors on new documents, use the
+[IdeaLens collection](https://huggingface.co/collections/rishanthrajendhran/idealens-6abee785ce6196fc0be9200f) gathers them all, and the
+demo (link: TBD) runs IdeaLens and ProseLens in the browser. To run the detectors on new documents, use the
 `idealens` package at the root of this repository.
 
 ## Layout
