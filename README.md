@@ -98,6 +98,10 @@ outlines = il.extract(texts, formats, provider=prov, mode="batch")
 
 ## Ways to use idealens
 
+**Step-by-step scenarios** (laptop without a GPU, your own GPU server or Slurm cluster, large collections, keeping
+documents on your own machines, other languages, ideas vs. prose, calibrating on your own domain, notebooks, and
+troubleshooting) are in the [usage guide](https://github.com/RishanthRajendhran/IdeaLens/blob/main/docs/USAGE.md). The summary below lists the building blocks.
+
 ### Without a GPU: Tinker
 
 IdeaLens and ProseLens are also published on [Tinker](https://thinkingmachines.ai/tinker/), which runs the models on
@@ -270,7 +274,7 @@ cut: the score below which 1% of the human calibration documents fall. Each reco
 |---|---|
 | `p_human` | the detector's P(human) |
 | `verdict` | the default verdict: `fpr`, `scheme`, `cut`, `ai` |
-| `verdicts` | every calibrated false-positive rate (0.1%, 0.5%, 1%, 2%, 5%) under each scheme: `global`, `per_format`, `per_topic`, and `group:<field>` for cuts you fitted yourself |
+| `verdicts` | every calibrated false-positive rate (0.1% to 5% for every model, also 10% and 20% for some) under each scheme: `global`, `per_format`, `per_topic`, and `group:<field>` for cuts you fitted yourself |
 | `warnings` | departures from how the cuts were fitted, such as a different extractor model |
 | `item_p_human` | per-item scores (per-item models) |
 
