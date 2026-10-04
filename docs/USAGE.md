@@ -37,7 +37,7 @@ If your text column has another name, you can also pass `--text-field body` inst
 
 ## 1. Check a few documents in the browser
 
-The IdeaLens & ProseLens demo (link: TBD) scores pasted text with both detectors, with nothing to install and no keys.
+The [IdeaLens & ProseLens demo](http://ideadetector.ai/) scores pasted text with both detectors, with nothing to install and no keys.
 Use it to get a feel for the detectors; use the package below for anything you need to record or repeat.
 
 ---

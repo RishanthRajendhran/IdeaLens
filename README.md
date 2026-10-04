@@ -18,7 +18,7 @@ corpus), [IdeaShift](https://huggingface.co/datasets/rishanthrajendhran/IdeaShif
 [TwiceTold](https://huggingface.co/datasets/rishanthrajendhran/TwiceTold) (evaluation sets). All of them are in the
 [IdeaLens collection](https://huggingface.co/collections/rishanthrajendhran/idealens-6abee785ce6196fc0be9200f).
 
-**Try it in your browser:** the IdeaLens & ProseLens demo (link: TBD) scores your own text, with no installation or keys.
+**Try it in your browser:** the [IdeaLens & ProseLens demo](http://ideadetector.ai/) scores your own text, with no installation or keys.
 
 ## Install
 
