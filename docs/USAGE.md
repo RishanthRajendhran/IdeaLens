@@ -19,9 +19,9 @@ threshold scheme); this page is the "how do I actually do X" companion.
 
 Before you start, two things hold in every scenario:
 
-- **The models are gated.** Request access on each model's Hugging Face page (for example
-  [IdeaLens](https://huggingface.co/rishanthrajendhran/IdeaLens)), then run `huggingface-cli login` once. With the
-  Tinker backend (scenario 2) you need access only to download the thresholds.
+- **The models are public.** Every model and dataset downloads from its Hugging Face page (for example
+  [IdeaLens](https://huggingface.co/rishanthrajendhran/IdeaLens)) with no access request and no login. With the
+  Tinker backend (scenario 2) the thresholds are the only download.
 - **Input is JSONL**, one document per line, with a `text` field. `id` is optional but recommended; `format` and
   `topic` are optional (see [Formats](../README.md#formats)).
 
@@ -319,7 +319,6 @@ for r, o in zip(records, outlines):
 
 | Symptom | Cause and fix |
 |---|---|
-| `401` / `GatedRepoError` when loading a model | request access on the model page, then `huggingface-cli login` |
 | "the weights take 59 GiB, but vLLM may use ..." | the GPU is too small: use an 80 GB GPU, `--backend tinker`, or a smaller model |
 | "no Vertex credentials" | `gcloud auth application-default login` and `GOOGLE_CLOUD_PROJECT`, or set `VERTEX_API_KEY` |
 | every record has a `warnings` entry about the extractor | you are not using Gemini 3.7 Flash; results are still valid, but calibrate on your domain for a guaranteed false-positive rate |

@@ -37,7 +37,7 @@ pip install "idealens[all]"
 
 Python 3.10 or later. The vLLM extra pins `vllm==0.21.*`, `transformers>=5.15` and `xgrammar==0.2.1`.
 
-The model repos are gated: request access on the model's Hugging Face page, then `huggingface-cli login`.
+The models and datasets are public: no access request and no Hugging Face login are needed to download them.
 
 ## Credentials
 
