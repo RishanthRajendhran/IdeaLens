@@ -262,3 +262,11 @@ def test_public_tinker_checkpoints():
     assert registry.get("IdeaLens").extra["tinker_path"].startswith("tinker://")
     assert registry.get("ProseLens").extra["tinker_path"].startswith("tinker://")
     assert not registry.get("IdeaLens-NoParaphrase").extra.get("tinker_path")
+
+
+def test_help_and_package_carry_the_citation():
+    import idealens
+    from idealens import cli
+    assert "arXiv:2610.06778" in idealens.CITATION and "Rajendhran" in idealens.CITATION
+    help_text = cli.build_parser().format_help()
+    assert "https://arxiv.org/abs/2610.06778" in help_text and "@article{idealens2026" in help_text

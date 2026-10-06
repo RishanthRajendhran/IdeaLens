@@ -20,6 +20,16 @@ from .outline import Outline
 from .registry import MODELS, DEFAULT_MODEL
 from .thresholds import Thresholds
 
-__version__ = "0.1.5"
-__all__ = ["calibrate", "estimate_cost", "classify", "force_fit", "extract", "run", "Detector", "Outline", "Thresholds", "FORMATS", "FormatAssignment", "FormatError", "OutOfScopeFormat",
+__version__ = "0.1.6"
+CITATION = r"""@article{idealens2026,
+  title         = {IdeaLens: Detecting AI Ideas in Long-form Writing},
+  author        = {Rajendhran, Rishanth and Choi, Minjoon and Russell, Jenna and Namuduri, Ramya and B{\"o}l{\"o}ni-Turgut, Deniz and Karpinska, Marzena and Wieting, John and Iyyer, Mohit},
+  journal       = {arXiv preprint arXiv:2610.06778},
+  year          = {2026},
+  eprint        = {2610.06778},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2610.06778}
+}"""
+__all__ = ["CITATION", "calibrate", "estimate_cost", "classify", "force_fit", "extract", "run", "Detector", "Outline", "Thresholds", "FORMATS", "FormatAssignment", "FormatError", "OutOfScopeFormat",
            "MODELS", "DEFAULT_MODEL"]

@@ -300,7 +300,9 @@ def _merge(inp: dict, rec: dict) -> dict:
 
 # ---------------------------------------------------------------------------------------------------------- parser
 def build_parser():
-    ap = argparse.ArgumentParser(prog="idealens", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    from . import CITATION
+    ap = argparse.ArgumentParser(prog="idealens", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter,
+                                 epilog="If you use IdeaLens, please cite the paper (https://arxiv.org/abs/2610.06778):\n\n" + CITATION)
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("models", help="list the detectors").set_defaults(fn=cmd_models)
 
