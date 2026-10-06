@@ -20,6 +20,8 @@ corpus), [IdeaShift](https://huggingface.co/datasets/rishanthrajendhran/IdeaShif
 
 **Try it in your browser:** the [IdeaLens & ProseLens demo](http://ideadetector.ai/) scores your own text, with no installation or keys.
 
+**Paper:** [IdeaLens: Detecting AI Ideas in Long-form Writing](https://arxiv.org/abs/2610.06778) (arXiv:2610.06778).
+
 ## Install
 
 ```bash
@@ -354,4 +356,17 @@ free to share and adapt for non-commercial purposes, with attribution and under 
 
 ## Citation
 
-A citation will be added here once the paper is on arXiv.
+If you use IdeaLens, ProseLens or the datasets, please cite the paper ([arXiv:2610.06778](https://arxiv.org/abs/2610.06778)):
+
+```bibtex
+@article{idealens2026,
+  title         = {IdeaLens: Detecting AI Ideas in Long-form Writing},
+  author        = {Rajendhran, Rishanth and Choi, Minjoon and Russell, Jenna and Namuduri, Ramya and B{\"o}l{\"o}ni-Turgut, Deniz and Karpinska, Marzena and Wieting, John and Iyyer, Mohit},
+  journal       = {arXiv preprint arXiv:2610.06778},
+  year          = {2026},
+  eprint        = {2610.06778},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2610.06778}
+}
+```

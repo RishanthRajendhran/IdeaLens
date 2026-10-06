@@ -1,6 +1,6 @@
 # IdeaLens: the paper's results, prompts and code
 
-This folder holds what the paper's appendix points to: every evaluation's full result tables, the prompts and role
+This folder holds what the [paper](https://arxiv.org/abs/2610.06778)'s appendix points to: every evaluation's full result tables, the prompts and role
 vocabularies, and the code that produced the numbers. The trained models are on Hugging Face (starting from
 [IdeaLens](https://huggingface.co/rishanthrajendhran/IdeaLens) and [ProseLens](https://huggingface.co/rishanthrajendhran/ProseLens)), as are the training corpus
 [WildOutlines](https://huggingface.co/datasets/rishanthrajendhran/WildOutlines) and the evaluation sets we constructed ([IdeaShift](https://huggingface.co/datasets/rishanthrajendhran/IdeaShift),
